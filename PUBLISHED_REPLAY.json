@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "started_utc": "2026-10-24T18:06:26.574081+00:00",
+  "source_manifest_sha256": "6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee",
+  "project_build_initially_empty": true,
+  "lake_artifact_cache": "disabled with LAKE_ARTIFACT_CACHE=false for every subprocess",
+  "project_source_module_count": 5032,
+  "external_objects": "Pinned toolchain and external package caches reused; external objects were not freshly rebuilt.",
+  "v42_correspondence_checked": false,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "verify_release.py"
+      ],
+      "started_utc": "2026-10-24T18:06:26.576546+00:00",
+      "log": "build-logs/source-before.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-24T18:06:27.570650+00:00",
+      "log_sha256": "cc219a9f53a10cf1a0e30dbbea6203205101b61f60ae20ab8cc9a98b1a73d0f9"
+    },
+    {
+      "command": [
+        "lake",
+        "build",
+        "CurrentAdditive"
+      ],
+      "started_utc": "2026-10-24T18:06:27.571244+00:00",
+      "log": "build-logs/build.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-24T21:31:41.125177+00:00",
+      "log_sha256": "74e3b31a832a67dc0a0b392f605dc65e35429250d767a69f5bb70f5b0662db86"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "AxiomAudit.lean"
+      ],
+      "started_utc": "2026-10-24T21:31:41.132086+00:00",
+      "log": "build-logs/axiom-audit.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-24T21:32:01.977775+00:00",
+      "log_sha256": "42d002d234e59a9e20d3b74c52c8aa5734183298ae9fede5e7f5246868d047b3"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "RawProofAudit.lean"
+      ],
+      "started_utc": "2026-10-24T21:32:01.978337+00:00",
+      "log": "build-logs/raw-audit.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-24T21:32:23.664906+00:00",
+      "log_sha256": "e5d37903eb15c85c613d31daf0104fc079d6eead99892a821e3b978db054ae88"
+    },
+    {
+      "command": [
+        "python",
+        "check_replay.py",
+        "build-logs/raw-audit.log"
+      ],
+      "started_utc": "2026-10-24T21:32:23.668174+00:00",
+      "log": "build-logs/providers.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-24T21:32:30.076877+00:00",
+      "log_sha256": "f172afdaee4055d7dfa75f164b9aa22e816a1a86636c75d3bf4d13d5b541ad5d"
+    },
+    {
+      "command": [
+        "python",
+        "verify_release.py"
+      ],
+      "started_utc": "2026-10-24T21:32:30.077845+00:00",
+      "log": "build-logs/source-after.log",
+      "exit_code": 0,
+      "finished_utc": "2026-10-24T21:32:31.736991+00:00",
+      "log_sha256": "cc219a9f53a10cf1a0e30dbbea6203205101b61f60ae20ab8cc9a98b1a73d0f9"
+    }
+  ],
+  "finished_utc": "2026-10-24T21:32:31.739628+00:00"
+}

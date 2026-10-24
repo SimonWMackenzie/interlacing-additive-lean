@@ -1,0 +1,663 @@
+{
+  "version": "v40",
+  "main": "main.tex",
+  "active_source_files": [
+    "main.tex"
+  ],
+  "inactive_source_files": [
+    "references.bib"
+  ],
+  "formal_blocks": [
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 222,
+      "labels": [
+        "thm:quantitative"
+      ],
+      "body_sha256": "a092bc6543be7616ccddf82767ef27caed231d78779e542fcdc32b5b66955b87",
+      "normalized_body_sha256": "5eba85df9bcb7930eb5ede223d7667eec564d9d82cfcfbf2f376900b553c5121"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 231,
+      "labels": [
+        "det:eth"
+      ],
+      "body_sha256": "a741dc475c85374404eae9351be5b5adba7bd09364516a22d4b3da00abbf668f",
+      "normalized_body_sha256": "fb9b313289f9bb64c30d943ef263165e195b16af426b1736bad7ecda5651f8b8"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 243,
+      "labels": [
+        "intro:deterministic"
+      ],
+      "body_sha256": "907157068fcb012dda6e441fa6eecc74df33fabec33249259d27c4a38af51d9a",
+      "normalized_body_sha256": "6fb3237a49a2c481e732e4672553d2c818b1497e5e0411657be81f2658c8a256"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 256,
+      "labels": [
+        "yao:main"
+      ],
+      "body_sha256": "9c10a4acf5558f7da6cd49883620cc423361f2325aab52d9f2cae8600985054c",
+      "normalized_body_sha256": "a96348c7480bfaba32412ccdaf95330ee1481e755f2022cb6d8429e04c950a5d"
+    },
+    {
+      "environment": "corollary",
+      "source": "main.tex",
+      "line": 288,
+      "labels": [
+        "yao:bpp"
+      ],
+      "body_sha256": "4e4de3491337125f06e05c3ac27e1423ff7da7c0ff8ea969650271b980bc51d6",
+      "normalized_body_sha256": "59f5c084a95351ba1833da8d9bc8d9c26464dbbe23312772568781109f767972"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 498,
+      "labels": [
+        "def:table-estimation"
+      ],
+      "body_sha256": "eb79830b287e1d958f586048795ed3fb672eb0b559570ad9c9b46e453d92a630",
+      "normalized_body_sha256": "3679ab8b4989921ad025eb0c7ff5b1debf81cdcb9fcd9f8d39fa98685207e996"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 517,
+      "labels": [
+        "yao:model"
+      ],
+      "body_sha256": "158ff6b04500cff225ae812406259bfa1ba6d28a95abaada8c55d50c22a2a34c",
+      "normalized_body_sha256": "6931c87119ead3c4917fd3534a4a55e8ba0cc50fac67aca7db9c028444b03d83"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 533,
+      "labels": [
+        "def:reth"
+      ],
+      "body_sha256": "8feedd07f3b9ed0276627a541b173dd00f9c58e44dc336a2a0cbd033c9efc50a",
+      "normalized_body_sha256": "4451db69a60683a98fd9aca2b1580a76df138a326a9ee5e3e58d70a825d6f6a0"
+    },
+    {
+      "environment": "corollary",
+      "source": "main.tex",
+      "line": 578,
+      "labels": [
+        "cor:dyadic-padding"
+      ],
+      "body_sha256": "7596fb68648085c2ff36577206c8163dfe33f31b5418521b5ecf699dbcbec5a3",
+      "normalized_body_sha256": "623defe9bef8bf33ba8ca41acb494e1305490cda1f5da7a24164c14792c9fcd1"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 688,
+      "labels": [
+        "def:interlace"
+      ],
+      "body_sha256": "80bd27add19e120cb7ebbce0e224241a1f78b14b51d4375d462a113e130e360c",
+      "normalized_body_sha256": "84f59fbbfae532626a54b183a81f94ede44a0344cea967c7052799147f02e9bc"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 699,
+      "labels": [
+        "def:exact-tuples"
+      ],
+      "body_sha256": "e3e3d8804d9a2cfc05c5930dcbf0cffc8fc83e2ac58a702e1d464b3d1bb0c7f6",
+      "normalized_body_sha256": "7f4a0e73615d3c60111aca716102bb61103fd535ed612c3f8dcb93b522651abe"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 731,
+      "labels": [
+        "def:profile"
+      ],
+      "body_sha256": "97adc7a60dbea6acf8beffc64901b78572bac5d19b08f1f1576269fbad60b289",
+      "normalized_body_sha256": "7584b602a422255f0d23d8ca83f7902613a9a9bb6b738380ff2484c85a77b4db"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 752,
+      "labels": [
+        "src:gap-colouring"
+      ],
+      "body_sha256": "1067db5d2470495e1380985ff3fed82b2d12e9dd4a5edad0abca1a4c54840932",
+      "normalized_body_sha256": "42cbaabff3ac178b0a62e463664bbfb85d62465a86b85803db72342ba8a2fa8e"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 773,
+      "labels": [
+        "thm:amplifier"
+      ],
+      "body_sha256": "0341bf7a23d2759decfb8aa9142a22db165eec5a35f0f28ca36fce4996740fc5",
+      "normalized_body_sha256": "a5aed386ff047e8eac2a58dc1eb11ab34cb7b5abe3808dbe9ab8691de12e48e4"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 810,
+      "labels": [
+        "cl:seed"
+      ],
+      "body_sha256": "178d9ac29bc0fa648f09d3d14b89f25e7fdf7c0bf44d8e76cec846088e9ed3d2",
+      "normalized_body_sha256": "6b6168948b688756251ce653c4124e08e3a2ab3287952d2a38734cf0472b1fb5"
+    },
+    {
+      "environment": "proposition",
+      "source": "main.tex",
+      "line": 822,
+      "labels": [
+        "prop:iteration"
+      ],
+      "body_sha256": "96b22bb10cd02421709a6993c8e173fdae9dc89cad8ba10120a000f169955c29",
+      "normalized_body_sha256": "0464c5163ebf9a176511899b4b09aa9a092788e022cfeb12b25fa788ffde4251"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 850,
+      "labels": [
+        "def:compatibility"
+      ],
+      "body_sha256": "6e5015e18b49f64aabaf96e63a5bd4eb655f44566381b1d12623e4015cc57f4d",
+      "normalized_body_sha256": "b1e95a01995fd1734687734748a4079d2702f902402ba906171385398549ffd2"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 957,
+      "labels": [
+        "thm:rank-count",
+        "eq:rank-count"
+      ],
+      "body_sha256": "4db6bd38efe5064317595017889cd4390dcabf8e59d74976596c9d464c235a03",
+      "normalized_body_sha256": "5cc4ae4dff502e042d62f7035730dc41cf4ae20ad8eba8ea26479cb358c01af3"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 997,
+      "labels": [
+        "thm:compression"
+      ],
+      "body_sha256": "3a8d4c2c7c9377aa59d14bdfee80e5606a376e3054f7885fa20e4de2386f08aa",
+      "normalized_body_sha256": "93b4273a03efde991452119f9f1ce95a6eeab380b0cfe39d1dcfd6b9c79e914e"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1066,
+      "labels": [
+        "lem:sample-access"
+      ],
+      "body_sha256": "7a338873cadf15203ff11de8b4e080f6ab328e01b2c67144b6668afef02c237c",
+      "normalized_body_sha256": "24099fb0c13081c2f79f6a47e2ddb8703a773cca64bab0ff6763a0ba60c358aa"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 1080,
+      "labels": [
+        "thm:uniform-reduction"
+      ],
+      "body_sha256": "5a871f78caf51f467d98af0e9c2d43df3c7d13ea8b1621b9895d94694df10a0c",
+      "normalized_body_sha256": "6c54ca6fcf4ef97b88ffa9df36e0e020ddb604d8accfa3dc04cf38346980818b"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 1196,
+      "labels": [
+        "def:source-matrix"
+      ],
+      "body_sha256": "2688d599d4071dd4eeab39578ea25b8307684e479854221c11c7924c6b00dc20",
+      "normalized_body_sha256": "b7c6e60f5e1b8f87cb1f116e4fc1a2773919865624cacbd6f6b93e753fa87c58"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1353,
+      "labels": [
+        "src:item-witness"
+      ],
+      "body_sha256": "c0013d7ae6c78e6bc96b7e7a1f9b307fea29a03d531c45ea3795c989b723aeea",
+      "normalized_body_sha256": "30b871651a38635499cbe3b1f8cab04155153f3fd07fd531b6a26885ea6b9b9e"
+    },
+    {
+      "environment": "proposition",
+      "source": "main.tex",
+      "line": 1368,
+      "labels": [
+        "src:upper"
+      ],
+      "body_sha256": "4976c6e68016ad20474081d56c3e13a104e4b285c944b336b258cd5b2d91a1a1",
+      "normalized_body_sha256": "5fa23840a12ae8ff6efd0b5857fed44596a66a8cb42578be218c8164ccafe818"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1459,
+      "labels": [
+        "lem:product-blocks"
+      ],
+      "body_sha256": "6a441a8418088b3d026c7ec31b9954fc07e4740b397889faa5cee2e96fb09c3e",
+      "normalized_body_sha256": "2f23587ac5200b92603a10cfc25aa4e00b349a1db69d4e13a6e180ab55ff8103"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1468,
+      "labels": [
+        "lem:many-product-blocks"
+      ],
+      "body_sha256": "80b209a837ee5d5a10e14b69668b49469ef83454a4daeb1b0f4cc8fdfa9380ed",
+      "normalized_body_sha256": "bb97b2aee1c8fa60748390c3d5b5cc720a0b3186c117405331590382656b11ad"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1479,
+      "labels": [
+        "src:profiles"
+      ],
+      "body_sha256": "6ad7df7d1df2db76ff1790e82f3560f486e729c8a8599c3fb9596e183b431d81",
+      "normalized_body_sha256": "c566e70103341e2bf2f3ad6d38f40b183f130e4af9318d62326ea5875cedbf97"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1503,
+      "labels": [
+        "lem:collision-tracking"
+      ],
+      "body_sha256": "5cf2a91ace817606410b4201f8b76c686627c7a3c9459f0aad37310901577030",
+      "normalized_body_sha256": "da1ade63f6d89c47976f1296172170d36229b99e510cf9eac338f77f552e6835"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 1560,
+      "labels": [
+        "src:near-full"
+      ],
+      "body_sha256": "e65d76b7f873b8467d6b92732d668dfcb6d17b376666dbc211f6761daa873fc0",
+      "normalized_body_sha256": "891004c95e33cbbed0d29b7d2846da7875da0f0d292a34948c55aee801308dba"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1710,
+      "labels": [
+        "det:conditioning"
+      ],
+      "body_sha256": "29527a4270aaf13e5c55f812a0b89fc9d6f252e501767fbbd5f1437e60a5d1a6",
+      "normalized_body_sha256": "7e68fd85a2907226e98b75ece009ba074ef12f1cee301fbe09bc85c04df1dc1a"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1746,
+      "labels": [
+        "det:exact"
+      ],
+      "body_sha256": "72ed2d5fc557a3b15f3a5d06fdcb4ab514574931f48fe7e108bf2a12724e7e1d",
+      "normalized_body_sha256": "1b11d4de09173dd317f491d39c85c6a8b78cbf859a244271e367b2d91235d882"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 1755,
+      "labels": [
+        "det:rareboost"
+      ],
+      "body_sha256": "5504803051e0af6c8844221d24743e71799dd526b2fa500cedd3372c7d36003c",
+      "normalized_body_sha256": "b6bf4b5f99146bd87933b781b3e0efb96a4948ab8f5e277a0d781fa7cde999cc"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1837,
+      "labels": [
+        "res:destinations"
+      ],
+      "body_sha256": "3f0e84718195a1562753429874bce947d58aaec594e65bca73f5c25d2e393473",
+      "normalized_body_sha256": "a1852cc2c49a19e26ecddeb0bd364b7a49f48b64f405276a5851c745293631cd"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1899,
+      "labels": [
+        "res:incoming"
+      ],
+      "body_sha256": "d8c044f3a5cef4e07a67633f0e26f151d395096334fe334108dad9d6300c5542",
+      "normalized_body_sha256": "e8fa593d04efd3bf164d9d89989c65813d213d6168f7bafb20e950e44d4f2ce3"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1906,
+      "labels": [
+        "res:foreign"
+      ],
+      "body_sha256": "d4cddac9a50c99bf70e020640e6b533e36dc7123fa3e0881dc1ebc977b6fd762",
+      "normalized_body_sha256": "e3be426482687e03f5cf2bc4a039c8cb180fd0fc41a3e43c19f8e4f93297a14b"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 1915,
+      "labels": [
+        "lem:protected-accounting"
+      ],
+      "body_sha256": "11e3e39c13e2d78c888412f4cc041a3887e727529c97762b22d06480357fe4be",
+      "normalized_body_sha256": "0c781d4a6fef51a353fa8eede357fa035a6f05c8595df05a195391d9ee9e2a26"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 1996,
+      "labels": [
+        "res:alignment"
+      ],
+      "body_sha256": "ddc8686b73d8328a46cf56f10e746a68922a9ae100497d0d957dfc7e1ec5a17f",
+      "normalized_body_sha256": "11d5e3b533d40ad79f985ae6a002c3e5bc127aad3b29cfdf3297f9ebf0df206b"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 2060,
+      "labels": [
+        "cl:bridge"
+      ],
+      "body_sha256": "fe9d09db069bdf993fbad41b47521d3e53c3d7605770ff32c24272cbeea50abb",
+      "normalized_body_sha256": "5589c492f9c49452d7840309fb2fa349d159ccdac7986468207c9f973d7e7088"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 2076,
+      "labels": [
+        "lem:amplifier-rank"
+      ],
+      "body_sha256": "34d6cdbaadb6032f5d3eacc5e4e06bc690848744ffb5848baa17826424ed7e89",
+      "normalized_body_sha256": "a8ab7811edc95df219dc6bae52e86999e67fd1a790b161599dde2d862a0312a4"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 2154,
+      "labels": [
+        "det:code"
+      ],
+      "body_sha256": "1b7cb680eae1fbe19495ea0f8c978d33e8f675427d76c71de1339036ef9af612",
+      "normalized_body_sha256": "06e4cfca6aa67fbb910de5ce5dc45d4b1286fac03a32be08d4a1a2c18af77cfe"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 2172,
+      "labels": [
+        "det:restore"
+      ],
+      "body_sha256": "d0add47c406f8c0d421eb36cbb409842521e6f6fdbfc8c8e480801232b232fd4",
+      "normalized_body_sha256": "082b276eb2568b9c3aa5340a7a3b9dc206ee72bcd64eaff84d16f81a04091d2b"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 2261,
+      "labels": [
+        "det:amplifier"
+      ],
+      "body_sha256": "dfea955ac39e55b9203845c085d02fbca68f321af253af3b643d775995c0185d",
+      "normalized_body_sha256": "e42e30a2cab6745d7610b631bd9903091f178c13548974a44dce6ae601e142d7"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 2292,
+      "labels": [
+        "det:flat"
+      ],
+      "body_sha256": "737fb2a5ce8bad7275aa89a582405d0c48c96105052947926367bebdaadfbc1a",
+      "normalized_body_sha256": "cc49a4ef2ca54667b1671b42aeed7136b6db5d1ecdd1d1be5da656fc04dd067e"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 2324,
+      "labels": [
+        "det:construction"
+      ],
+      "body_sha256": "4217a3246cdb564c8a52c79e7223142a5e3dd0a71d0b25c770f3e8a0260996b8",
+      "normalized_body_sha256": "d2002cffd09f1ee0f26dcfe6c31d8ebaeac7d8c654bf71075061348e92047b0f"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 2388,
+      "labels": [
+        "det:profiles"
+      ],
+      "body_sha256": "ce78851c294b431009e3a2c3eed3f410448d1e88f4a577fe25eaa6a84ee24c47",
+      "normalized_body_sha256": "62ce8c40ec9eed5508106669af79901ed0123c1d93348a33601fc13c7e2a054e"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 2534,
+      "labels": [
+        "det:reduction"
+      ],
+      "body_sha256": "7842e55c02ddad05cc89ed1f20e4933ce024b4f77091f075d1f7ad350f7560b0",
+      "normalized_body_sha256": "fe6a8d9a2b46cb264e33d0d4e1ff358fbb15c2f82c6edb0d6171106142cc8223"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 2697,
+      "labels": [
+        "yao:comparison"
+      ],
+      "body_sha256": "914a314ff48c617d5027f73f3bf12f9e12393426cdf8b127a4826c63ae43081d",
+      "normalized_body_sha256": "f1ec40a6304ab63dc4994f495ee6fbbfb34a50350bfd296572441d40ee3acd2f"
+    },
+    {
+      "environment": "proposition",
+      "source": "main.tex",
+      "line": 2729,
+      "labels": [
+        "yao:source"
+      ],
+      "body_sha256": "9743a149c1e21319276fd74df30e222f358465a1563952b0abc56923e708c85d",
+      "normalized_body_sha256": "7f14b3cabc196dbb1b6d3d2cfeb37681e2f02e08eabef83c11898fb54cec5bbb"
+    },
+    {
+      "environment": "definition",
+      "source": "main.tex",
+      "line": 2750,
+      "labels": [
+        "def:alternating-table"
+      ],
+      "body_sha256": "2e4acf290413a63f5222cffa43ea1cf67aabcf8afeaec462f0fc3de72daa1014",
+      "normalized_body_sha256": "a1c95ff5a057f334be27287e26ce553e58c9260dda1e4fe8bd11310134c0cb7f"
+    },
+    {
+      "environment": "proposition",
+      "source": "main.tex",
+      "line": 2846,
+      "labels": [
+        "prop:alternating-upper"
+      ],
+      "body_sha256": "a1d72aab7dac6e2320902254112b910aca24672175563fb568c01bf85bcf5595",
+      "normalized_body_sha256": "865f914edbf67334832b20a6f1f1e658198d6a9add4e2b84c326d6c7810c7003"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 2921,
+      "labels": [
+        "yao:small-bias-escape"
+      ],
+      "body_sha256": "75656699da5eec171a2e4719bbe77bdcdac9a7d42fa09202eb3b75a55a5b3778",
+      "normalized_body_sha256": "b998a2033cd5ae43045fc3b365d91d7d76c3ce8e3fd2a1eba6959ed5d7d7355a"
+    },
+    {
+      "environment": "corollary",
+      "source": "main.tex",
+      "line": 2975,
+      "labels": [
+        "yao:array-list"
+      ],
+      "body_sha256": "40d9f2f25fe1944c8deb60dc537002087ef8f0f532db19902a523a840091c689",
+      "normalized_body_sha256": "4e7e47e5b139d442a779421b603b1dcf5d9c81673165cab7b6ea382474faf316"
+    },
+    {
+      "environment": "proposition",
+      "source": "main.tex",
+      "line": 2990,
+      "labels": [
+        "yao:lift"
+      ],
+      "body_sha256": "b24a8e7755955598a5a7efc9f92c6bb3c41ca7b325fe8c45ca4ed01d4cd7a5d8",
+      "normalized_body_sha256": "112ed7a29927f6b0fcfe2ddae6b46049cd3922c3283949bd114f9c07a5cf6e1c"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 3113,
+      "labels": [
+        "cl:projection"
+      ],
+      "body_sha256": "1fd1b9af909fb3888fe2b21ddc9fd50793a550867ec2e9da5af2ca3485ac5995",
+      "normalized_body_sha256": "65f3564c477c5bb7caf7ed18f1e00cf9a5b6e76f4d93666927dc8a5fef41e017"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 3182,
+      "labels": [
+        "lem:small-blocks"
+      ],
+      "body_sha256": "d9db1622a5904ced989a8b4bf47a80d1e4434e8496e02d9bb225c5e157024a0d",
+      "normalized_body_sha256": "c0112928388265627a53b7e36ad39776f0c8a45f9ee875f68cd44c6b5c93d843"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 3240,
+      "labels": [
+        "cl:separation"
+      ],
+      "body_sha256": "fccb061703025184f49bec82c5e2e75a46446869d5fd06b5b7595d072d76721c",
+      "normalized_body_sha256": "fbc40e39f5739c74fdf4d652493b00de0b55eb3d6d52f3fe19e0697c8f604d18"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 3290,
+      "labels": [
+        "cl:defect-induction"
+      ],
+      "body_sha256": "8f5510c9fc71b3251737f15b1a72d99958d2e54d6a171c389e1ed89f0c809a67",
+      "normalized_body_sha256": "8a74b125b78faefc00a4c04cd07aa7aab5225d32b45288cfd8f20eeb2d05a632"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 3603,
+      "labels": [
+        "res:paired"
+      ],
+      "body_sha256": "a1dd54703c4454b63d54f0ccffc3ad6255d3851eb99cd2c38f71f71d868c09a5",
+      "normalized_body_sha256": "078747e7df36197def1b9dfa7cdf23e7ddbb1042f4f5ac01bcd8f0033c7d71fd"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 3894,
+      "labels": [
+        "lem:conditioning-moment"
+      ],
+      "body_sha256": "f556bf5a869ed104e726a8db3853632f38a4839b9ca3d474b2102adbde29ba74",
+      "normalized_body_sha256": "ad3762df7c705ded8bd40aac369820148609aea41fcd6bdd194b9cd094745115"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 3946,
+      "labels": [
+        "lem:pair-projections"
+      ],
+      "body_sha256": "5abbb6abdccb391a340fb09b1c3bd05789915d6a8309e4ee5f94249c530155dd",
+      "normalized_body_sha256": "cc038d4d67815f6e8f72519a14dfaa94e442f7114ccb2cf2a7ab234b37cf8fb4"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 4073,
+      "labels": [
+        "det:suffix"
+      ],
+      "body_sha256": "4d9829a377ddcca71daac239d9cfab8fd16901a035290651b10d34f5825dd9d9",
+      "normalized_body_sha256": "21f076a1b5f68b770afef8b53cdfd3a83009fb42707724df22a390f82d3aba45"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 4454,
+      "labels": [
+        "lem:full-schedule"
+      ],
+      "body_sha256": "fdbbea7ea5984c3d94bc75e4d33ca2c14f1e09cf0ed0c540320ae066190c5d6a",
+      "normalized_body_sha256": "80d5fad7a71e5def9b4eb160c78c2743c6c66d04b6c6d51d19ff46b516071ba1"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 4540,
+      "labels": [
+        "lem:generated-schedule"
+      ],
+      "body_sha256": "324009755e19403ab39b17bf3c26e989a95241d892af2ff5021a1dce025255b5",
+      "normalized_body_sha256": "5d085436491da818999ad0d1a86bf97217ac9e94c92166ad3b207db509fb1d3e"
+    },
+    {
+      "environment": "theorem",
+      "source": "main.tex",
+      "line": 4738,
+      "labels": [
+        "yao:gl"
+      ],
+      "body_sha256": "1b7a3ce208a490d9278343c3dc2d37a915d8651e3d7fe916585c25a2959e6f81",
+      "normalized_body_sha256": "a2eafffbcd2ac2d839a76cccdcae2ea0399bd75322e49361722e1e9cf92b01e0"
+    },
+    {
+      "environment": "lemma",
+      "source": "main.tex",
+      "line": 4797,
+      "labels": [
+        "yao:finite-field-list"
+      ],
+      "body_sha256": "b814f8c0ecc88ba5e47ebb7694dca116cff5ca5d01d07bdb14a788e3f4b34fde",
+      "normalized_body_sha256": "a1bb1d23cbbd00eb41c0e1a3e4f5c0eeebf8efc532627f96bda43eff0f2b095f"
+    }
+  ]
+}

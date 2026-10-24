@@ -1,0 +1,43 @@
+name = "eth-communication-complexity"
+version = "0.1.0"
+keywords = ["communication-complexity", "ETH", "formalization"]
+defaultTargets = ["CurrentAdditive"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.30.0"
+
+[[lean_lib]]
+name = "Workspace"
+srcDir = "vendor/npc-cc"
+
+[[lean_lib]]
+name = "NPCC"
+srcDir = "vendor/npc-cc"
+
+[[lean_lib]]
+name = "EthBridge"
+srcDir = "vendor/npc-cc"
+
+[[lean_lib]]
+name = "LegacyNPCC"
+srcDir = "src"
+
+[[lean_lib]]
+name = "EthInapproximability"
+srcDir = "src"
+
+[[lean_lib]]
+name = "Paper2"
+srcDir = "papers/randomized-additive-hardness/formalization/lean"
+
+[[lean_lib]]
+name = "CurrentAdditive"
+srcDir = "papers/randomized-additive-hardness/formalization/current-v27/lean"

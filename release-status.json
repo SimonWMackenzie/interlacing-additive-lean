@@ -1,0 +1,21 @@
+{
+  "updated_on": "2026-10-25",
+  "status": "public_code_release_in_preparation",
+  "repository": "https://github.com/SimonWMackenzie/interlacing-additive-lean",
+  "code_released": false,
+  "public_package_replay_complete": false,
+  "v42_correspondence_checked": false,
+  "earlier_local_completion": {
+    "record_date": "2026-10-22",
+    "manuscript_version": "v40",
+    "manuscript_source_sha256": "8cfdd735e5703682f98c840df96397dea74ef2795716f7bdddb3b7e562e64cb0",
+    "scope": "Relative to explicit external hardness interfaces; not a verification of v42"
+  },
+  "remaining": [
+    "Package the exact local source closure with pinned dependencies and attribution",
+    "Verify the public package with a fresh build and theorem-dependency audit",
+    "Publish the covered source snapshot and statement correspondence",
+    "Check correspondence with the revised manuscript"
+  ]
+}
+

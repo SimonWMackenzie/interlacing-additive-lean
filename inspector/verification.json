@@ -1,0 +1,31 @@
+{
+  "scope": "Complete v42 statement correspondence relative to the explicitly named source-theorem records and complexity assumptions. All 66 source blocks and eight construction checks have reviewed provider links and recorded imported-build authority; final publication identity/audit gates are separate.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "build": {
+    "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+    "canonical_checked_build_complete": true,
+    "public_package_replay_complete": false,
+    "checked_build_receipt_sha256": "03e34e74316fb9fe87192921e09898974fb2d5da1d12174726c5bdfc325d982d",
+    "checked_build_receipt_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/blob/bff03274f57796d986e788f95e0d553a71312936/PUBLISHED_CHECKED_BUILD.json",
+    "full_coverage_receipt_sha256": "a2abbf982816f953952c38c98471bc144724e62b935b2e4eddbf97621f22cfdb",
+    "source_manifest_sha256": "e7498396e21d0320d3fcdd1e024908a58633b72336a8a7b22bd665b7444ea077"
+  },
+  "input_mapping_sha256": "17a755e684c35fa8aa1bb63de4ccbae7a78abe8dd8cf6c07288a5212fce9f3c1",
+  "paper_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "paper_pdf_sha256": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
+  "mapping_sha256": "2d717d36ec8382588544477198955f19aaeb1eeea82d867f9a0716d5ad8ca3bc",
+  "pending": [],
+  "mode": "reviewed mappings",
+  "module_count": 5194,
+  "declaration_count": 70280,
+  "compiler_index_count": 5194,
+  "missing_indexes": [],
+  "trace_issues": [],
+  "explanations_sha256": "27163571eba4cf2e92587dd27fe1d97e972e56bd900069c074826357c4a2ede1",
+  "note": "Compiler reference arrows are source references, not kernel proof-term dependencies. Mapping status is supplied by the source-bound review; this website does not run Lean."
+}

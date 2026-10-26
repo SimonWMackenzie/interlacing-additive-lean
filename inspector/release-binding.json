@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+  "archive_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/archive/bff03274f57796d986e788f95e0d553a71312936.zip",
+  "input_hashes": {
+    "paper_source": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+    "paper_pdf": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
+    "paper_aux": "e7c299fe2d441d30cf8940466850ecd69587141583653ceee1ea8c1f6e2c713d",
+    "mapping": "17a755e684c35fa8aa1bb63de4ccbae7a78abe8dd8cf6c07288a5212fce9f3c1",
+    "module_inventory": "4e5c4e483a4b2906865825afc0055ddad34be1d3d44d6a72f929780dee52396c",
+    "endpoints": "6bea5ffc5075af736f729fd766eb8c804a0f5277c00156c27806892acd7758f2",
+    "explanations": "27163571eba4cf2e92587dd27fe1d97e972e56bd900069c074826357c4a2ede1",
+    "references": "6b94fecc586f68128b2e136f1fce08e474095ee9dd11235c86fba91f0d70f878"
+  },
+  "bound_mapping_sha256": "2d717d36ec8382588544477198955f19aaeb1eeea82d867f9a0716d5ad8ca3bc",
+  "build": {
+    "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+    "canonical_checked_build_complete": true,
+    "public_package_replay_complete": false,
+    "checked_build_receipt_sha256": "03e34e74316fb9fe87192921e09898974fb2d5da1d12174726c5bdfc325d982d",
+    "checked_build_receipt_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/blob/bff03274f57796d986e788f95e0d553a71312936/PUBLISHED_CHECKED_BUILD.json",
+    "full_coverage_receipt_sha256": "a2abbf982816f953952c38c98471bc144724e62b935b2e4eddbf97621f22cfdb",
+    "source_manifest_sha256": "e7498396e21d0320d3fcdd1e024908a58633b72336a8a7b22bd665b7444ea077"
+  },
+  "publication_performed_by_runner": false,
+  "mapping_transformation": {
+    "changed_fields": [
+      "lean_archive_url",
+      "verification.build",
+      "verification.input_mapping_sha256"
+    ],
+    "archive_url_before": null,
+    "statements_unchanged": true,
+    "statement_records_sha256": "8aa5bed32004b018a4c59d167a9223999cd5911745020cd441433276fc5a3952"
+  }
+}

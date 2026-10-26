@@ -1,0 +1,860 @@
+{
+  "intro:deterministic": {
+    "id": "intro:deterministic",
+    "page": 4,
+    "x0": 0.10993952532998877,
+    "y0": 0.40241896504103536,
+    "x1": 0.8872453278186274,
+    "y1": 0.5103425305299084,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "yao:main": {
+    "id": "yao:main",
+    "page": 4,
+    "x0": 0.10993952532998877,
+    "y0": 0.5422118986495817,
+    "x1": 0.8872453278186274,
+    "y1": 0.6501354641384549,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "yao:bpp": {
+    "id": "yao:bpp",
+    "page": 4,
+    "x0": 0.11135947782229753,
+    "y0": 0.750720785121725,
+    "x1": 0.8872930987987643,
+    "y1": 0.8378665808475378,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "thm:quantitative": {
+    "id": "thm:quantitative",
+    "page": 5,
+    "x0": 0.1099395377963197,
+    "y0": 0.09134891779735835,
+    "x1": 0.8900549396190768,
+    "y1": 0.1787112457583649,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:eth": {
+    "id": "det:eth",
+    "page": 5,
+    "x0": 0.1117973826289956,
+    "y0": 0.23385128830418442,
+    "x1": 0.8877000995710784,
+    "y1": 0.28801632890797624,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "def:table-estimation": {
+    "id": "def:table-estimation",
+    "page": 13,
+    "x0": 0.11208496841729856,
+    "y0": 0.5222510520857994,
+    "x1": 0.8907548493030024,
+    "y1": 0.7294372404464567,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "yao:model": {
+    "id": "yao:model",
+    "page": 13,
+    "x0": 0.11274509803921569,
+    "y0": 0.7673628065321181,
+    "x1": 0.8897544511782578,
+    "y1": 0.9060470889313053,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "def:reth": {
+    "id": "def:reth",
+    "page": 14,
+    "x0": 0.11183660170611213,
+    "y0": 0.13699265682336056,
+    "x1": 0.8907403883591197,
+    "y1": 0.20713929455689709,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "def:interlace": {
+    "id": "def:interlace",
+    "page": 15,
+    "x0": 0.11183660170611213,
+    "y0": 0.23391644641606493,
+    "x1": 0.8893427630655126,
+    "y1": 0.35892841069385256,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "def:exact-tuples": {
+    "id": "def:exact-tuples",
+    "page": 16,
+    "x0": 0.11274509803921569,
+    "y0": 0.17102881152220448,
+    "x1": 0.8897512597975388,
+    "y1": 0.3611077202690972,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "obs:representatives": {
+    "id": "obs:representatives",
+    "page": 16,
+    "x0": 0.11132352492388557,
+    "y0": 0.41624770501647335,
+    "x1": 0.8899971955741932,
+    "y1": 0.5719334766118214,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "def:profile": {
+    "id": "def:profile",
+    "page": 16,
+    "x0": 0.11210294486650454,
+    "y0": 0.7868243130770597,
+    "x1": 0.8879425447750715,
+    "y1": 0.9019322250828599,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "src:gap-colouring": {
+    "id": "src:gap-colouring",
+    "page": 17,
+    "x0": 0.1113790873608558,
+    "y0": 0.17102881152220448,
+    "x1": 0.889712464575674,
+    "y1": 0.36085648970170453,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "thm:amplifier": {
+    "id": "thm:amplifier",
+    "page": 17,
+    "x0": 0.11132352492388557,
+    "y0": 0.5357489537711095,
+    "x1": 0.8897339066648795,
+    "y1": 0.8069106593276515,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "cl:seed": {
+    "id": "cl:seed",
+    "page": 18,
+    "x0": 0.11157843645881205,
+    "y0": 0.17800525703815498,
+    "x1": 0.8897241330614277,
+    "y1": 0.2950319232362689,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "prop:iteration": {
+    "id": "prop:iteration",
+    "page": 18,
+    "x0": 0.11137913722617954,
+    "y0": 0.33306460910373265,
+    "x1": 0.8872584922640931,
+    "y1": 0.438683326798256,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "def:amplification-parameters": {
+    "id": "def:amplification-parameters",
+    "page": 18,
+    "x0": 0.11210294486650454,
+    "y0": 0.715140371611624,
+    "x1": 0.887307759203942,
+    "y1": 0.9037099510732324,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "def:source-matrix": {
+    "id": "def:source-matrix",
+    "page": 19,
+    "x0": 0.1099395377963197,
+    "y0": 0.3365628791577888,
+    "x1": 0.8907234341490502,
+    "y1": 0.8947360876834753,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "src:item-witness": {
+    "id": "src:item-witness",
+    "page": 21,
+    "x0": 0.11132352492388557,
+    "y0": 0.4216651916503906,
+    "x1": 0.8872560987285539,
+    "y1": 0.5447895165645715,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "src:upper": {
+    "id": "src:upper",
+    "page": 21,
+    "x0": 0.10928758608749489,
+    "y0": 0.5826437208387587,
+    "x1": 0.8867684158624387,
+    "y1": 0.6187541846073035,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:many-product-blocks": {
+    "id": "lem:many-product-blocks",
+    "page": 22,
+    "x0": 0.11126960804259856,
+    "y0": 0.6986866189975931,
+    "x1": 0.8897227368323631,
+    "y1": 0.7690129906240136,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "src:profiles": {
+    "id": "src:profiles",
+    "page": 22,
+    "x0": 0.11132352492388557,
+    "y0": 0.8584758874141809,
+    "x1": 0.8872644761029411,
+    "y1": 0.9135037817136206,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:kraft-count": {
+    "id": "lem:kraft-count",
+    "page": 23,
+    "x0": 0.1113790873608558,
+    "y0": 0.29415934013597894,
+    "x1": 0.8899937050015319,
+    "y1": 0.3834801490860756,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:collision-tracking": {
+    "id": "lem:collision-tracking",
+    "page": 23,
+    "x0": 0.10993952532998877,
+    "y0": 0.5837674381757023,
+    "x1": 0.8897666183172488,
+    "y1": 0.8352326672486584,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "src:near-full": {
+    "id": "src:near-full",
+    "page": 24,
+    "x0": 0.11126960804259856,
+    "y0": 0.22242345713605785,
+    "x1": 0.889720143835529,
+    "y1": 0.3782150191490096,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:conditioning": {
+    "id": "det:conditioning",
+    "page": 26,
+    "x0": 0.11132352492388557,
+    "y0": 0.3439130686750316,
+    "x1": 0.8873017753650939,
+    "y1": 0.4714056843459004,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:exact": {
+    "id": "det:exact",
+    "page": 26,
+    "x0": 0.11132352492388557,
+    "y0": 0.6578356039644492,
+    "x1": 0.8890366897084354,
+    "y1": 0.7452693130030776,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:rareboost": {
+    "id": "det:rareboost",
+    "page": 26,
+    "x0": 0.11126960804259856,
+    "y0": 0.8100844103880603,
+    "x1": 0.8897198446435866,
+    "y1": 0.9146253797743056,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "res:destinations": {
+    "id": "res:destinations",
+    "page": 27,
+    "x0": 0.1113790873608558,
+    "y0": 0.8547477336845013,
+    "x1": 0.8900017831839767,
+    "y1": 0.909043206108941,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "res:incoming": {
+    "id": "res:incoming",
+    "page": 28,
+    "x0": 0.1113790873608558,
+    "y0": 0.8201108990293561,
+    "x1": 0.8872549019607843,
+    "y1": 0.8733286231455176,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "res:foreign": {
+    "id": "res:foreign",
+    "page": 29,
+    "x0": 0.11157843645881205,
+    "y0": 0.09145603757916075,
+    "x1": 0.8871869853898591,
+    "y1": 0.17698646314216382,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "res:alignment": {
+    "id": "res:alignment",
+    "page": 29,
+    "x0": 0.11165196287865732,
+    "y0": 0.6529876246596827,
+    "x1": 0.8871945649190666,
+    "y1": 0.7497693456784643,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "cl:bridge": {
+    "id": "cl:bridge",
+    "page": 30,
+    "x0": 0.1113790873608558,
+    "y0": 0.7977182407571812,
+    "x1": 0.8897277233647365,
+    "y1": 0.9146253797743056,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:amplifier-rank": {
+    "id": "lem:amplifier-rank",
+    "page": 31,
+    "x0": 0.11157843645881205,
+    "y0": 0.17964284106938525,
+    "x1": 0.8872803332758885,
+    "y1": 0.23272512416646937,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:code": {
+    "id": "det:code",
+    "page": 32,
+    "x0": 0.1106601291232639,
+    "y0": 0.43818032621133207,
+    "x1": 0.8872881122663909,
+    "y1": 0.5256140352499605,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:restore": {
+    "id": "det:restore",
+    "page": 32,
+    "x0": 0.1113790873608558,
+    "y0": 0.6692510277333886,
+    "x1": 0.8900199341618158,
+    "y1": 0.9146253797743056,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:amplifier": {
+    "id": "det:amplifier",
+    "page": 34,
+    "x0": 0.1099395377963197,
+    "y0": 0.13449890444977114,
+    "x1": 0.8899936052708844,
+    "y1": 0.26907109732579704,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:flat": {
+    "id": "det:flat",
+    "page": 34,
+    "x0": 0.1113790873608558,
+    "y0": 0.41718920312746605,
+    "x1": 0.8897704080818525,
+    "y1": 0.5248109836771031,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:construction": {
+    "id": "det:construction",
+    "page": 34,
+    "x0": 0.11274509803921569,
+    "y0": 0.6306209756870462,
+    "x1": 0.890757741491779,
+    "y1": 0.9168690382832229,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:reduction": {
+    "id": "det:reduction",
+    "page": 35,
+    "x0": 0.1113790873608558,
+    "y0": 0.6158179466170494,
+    "x1": 0.8872604868770425,
+    "y1": 0.8613840738932291,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "def:compatibility": {
+    "id": "def:compatibility",
+    "page": 37,
+    "x0": 0.11274509803921569,
+    "y0": 0.2990583362001361,
+    "x1": 0.8879311754812602,
+    "y1": 0.4034208432592527,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "obs:compatible-protocol": {
+    "id": "obs:compatible-protocol",
+    "page": 37,
+    "x0": 0.11159640044168709,
+    "y0": 0.41284699873490766,
+    "x1": 0.8893736795662275,
+    "y1": 0.48203447129991317,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "thm:rank-count": {
+    "id": "thm:rank-count",
+    "page": 38,
+    "x0": 0.11137903749553207,
+    "y0": 0.5126176699243411,
+    "x1": 0.8893444584865197,
+    "y1": 0.61906984117296,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "thm:compression": {
+    "id": "thm:compression",
+    "page": 39,
+    "x0": 0.11157843645881205,
+    "y0": 0.19703256240998857,
+    "x1": 0.8900046753727533,
+    "y1": 0.4058539265334004,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:sample-access": {
+    "id": "lem:sample-access",
+    "page": 40,
+    "x0": 0.1099395377963197,
+    "y0": 0.15399287445376617,
+    "x1": 0.8897224376404208,
+    "y1": 0.2413551253501815,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "thm:uniform-reduction": {
+    "id": "thm:uniform-reduction",
+    "page": 40,
+    "x0": 0.11159640044168709,
+    "y0": 0.33060270367246686,
+    "x1": 0.8873011769812091,
+    "y1": 0.5132956841979364,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "yao:comparison": {
+    "id": "yao:comparison",
+    "page": 41,
+    "x0": 0.11274509803921569,
+    "y0": 0.8646946146030619,
+    "x1": 0.8000131744185305,
+    "y1": 0.9180307099313447,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "yao:source": {
+    "id": "yao:source",
+    "page": 42,
+    "x0": 0.10993952532998877,
+    "y0": 0.3633710302487768,
+    "x1": 0.8872735515918607,
+    "y1": 0.5411279081094145,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "def:alternating-table": {
+    "id": "def:alternating-table",
+    "page": 42,
+    "x0": 0.11210294486650454,
+    "y0": 0.6379808368104877,
+    "x1": 0.8873072605507046,
+    "y1": 0.9146253797743056,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "prop:alternating-upper": {
+    "id": "prop:alternating-upper",
+    "page": 43,
+    "x0": 0.11126960804259856,
+    "y0": 0.6354745421746765,
+    "x1": 0.8858990638084661,
+    "y1": 0.6920975964478772,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "yao:small-bias-escape": {
+    "id": "yao:small-bias-escape",
+    "page": 44,
+    "x0": 0.11157843645881205,
+    "y0": 0.47271069613370026,
+    "x1": 0.8899947023080066,
+    "y1": 0.6782680472942314,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "yao:array-list": {
+    "id": "yao:array-list",
+    "page": 45,
+    "x0": 0.1113235373902165,
+    "y0": 0.30453635707046045,
+    "x1": 0.88726806640625,
+    "y1": 0.38293834647747,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "yao:lift": {
+    "id": "yao:lift",
+    "page": 45,
+    "x0": 0.11157839905981924,
+    "y0": 0.5116967480592053,
+    "x1": 0.88731374304279,
+    "y1": 0.6619963983092645,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "cl:projection": {
+    "id": "cl:projection",
+    "page": 47,
+    "x0": 0.10930065080231312,
+    "y0": 0.3795866918082189,
+    "x1": 0.8872560987285539,
+    "y1": 0.6131670402758049,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:small-blocks": {
+    "id": "lem:small-blocks",
+    "page": 48,
+    "x0": 0.1113790873608558,
+    "y0": 0.34234068128797746,
+    "x1": 0.8872690637127246,
+    "y1": 0.4771342036700008,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "cl:separation": {
+    "id": "cl:separation",
+    "page": 49,
+    "x0": 0.11126960804259856,
+    "y0": 0.09127751745358863,
+    "x1": 0.8873091554330066,
+    "y1": 0.21292592058278093,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "cl:defect-induction": {
+    "id": "cl:defect-induction",
+    "page": 49,
+    "x0": 0.1113790873608558,
+    "y0": 0.648176559294113,
+    "x1": 0.8877607358047386,
+    "y1": 0.7848589348070549,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "res:paired": {
+    "id": "res:paired",
+    "page": 54,
+    "x0": 0.10993947546466504,
+    "y0": 0.44492401739563603,
+    "x1": 0.889720143835529,
+    "y1": 0.7071354413273359,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "cl:two-stream": {
+    "id": "cl:two-stream",
+    "page": 55,
+    "x0": 0.11126960804259856,
+    "y0": 0.1712073316477766,
+    "x1": 0.8897207422194138,
+    "y1": 0.4395104610558712,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:conditioning-moment": {
+    "id": "lem:conditioning-moment",
+    "page": 58,
+    "x0": 0.10970261517693014,
+    "y0": 0.5133545615456321,
+    "x1": 0.8897653218188317,
+    "y1": 0.7157568112768308,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:pair-projections": {
+    "id": "lem:pair-projections",
+    "page": 59,
+    "x0": 0.1099395377963197,
+    "y0": 0.4631822374131944,
+    "x1": 0.8872651742174734,
+    "y1": 0.6922276044132734,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "det:suffix": {
+    "id": "det:suffix",
+    "page": 60,
+    "x0": 0.10993955026265063,
+    "y0": 0.7077097266611426,
+    "x1": 0.8897211411420036,
+    "y1": 0.8994562168314,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:common-schedule": {
+    "id": "lem:common-schedule",
+    "page": 64,
+    "x0": 0.11132352492388557,
+    "y0": 0.4149514785920731,
+    "x1": 0.8872633790658191,
+    "y1": 0.4852011324179293,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:full-schedule": {
+    "id": "lem:full-schedule",
+    "page": 65,
+    "x0": 0.1099395377963197,
+    "y0": 0.7336411909623579,
+    "x1": 0.8897203432968239,
+    "y1": 0.9146253797743056,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "lem:generated-schedule": {
+    "id": "lem:generated-schedule",
+    "page": 66,
+    "x0": 0.1094477161083346,
+    "y0": 0.4788918543343592,
+    "x1": 0.8873084573184743,
+    "y1": 0.6414738664723406,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "yao:finite-field-list": {
+    "id": "yao:finite-field-list",
+    "page": 68,
+    "x0": 0.11177940617978963,
+    "y0": 0.6831108632713857,
+    "x1": 0.8859378590303308,
+    "y1": 0.7811102048315183,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  }
+}

@@ -1,0 +1,1605 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Interlacing and Additive Inapproximability · Paper and Lean</title></head><body><p id="load-error" role="alert" hidden></p><p id="load-progress" role="status">Opening the manuscript and recorded Lean source…</p><script src="extras.js"></script><style>
+  :root{
+    --ground:#0e1218; --panel:#151b24; --panel2:#1b2431; --line:#26313f;
+    --ink:#dce3ec; --muted:#8a97a9; --faint:#5a6572;
+    --proved:#4bbf73; --def:#6ea8fe; --axiom:#e0a458; --accent:#a78bfa; --reused:#48c4d6;
+    --proved-dim:#2b5a3f; --def-dim:#2f4a6e; --axiom-dim:#6a5330; --reused-dim:#2a5a63;
+    --mono:ui-monospace,"Cascadia Code","JetBrains Mono","SF Mono",Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--ground);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow:hidden}
+  #app{display:flex;flex-direction:column;height:100vh;min-height:0}
+
+  /* ================= command bar ================= */
+  header{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:11px 18px;
+    border-bottom:1px solid var(--line);background:linear-gradient(180deg,#121821,#0e1218)}
+  .brand{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+  .brand h1{margin:0;font-size:14.5px;font-weight:650;letter-spacing:-.01em;white-space:nowrap}
+  .brand .sub{font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+  .modes{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:3px;gap:3px}
+  .modes button{font-family:var(--mono);font-size:11px;color:var(--muted);background:transparent;border:0;
+    border-radius:6px;padding:6px 12px;cursor:pointer;white-space:nowrap}
+  .modes button.on{background:var(--panel2);color:#fff;box-shadow:inset 0 0 0 1px var(--accent)}
+  .modes button:hover:not(.on){color:var(--ink)}
+  .routes{display:flex;align-items:center;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:3px 3px 3px 9px}
+  .routes .rlbl{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-right:2px}
+  .routes button{font-family:var(--mono);font-size:11px;color:var(--muted);background:transparent;border:0;border-radius:6px;padding:5px 10px;cursor:pointer}
+  .routes button.on{background:var(--panel2);color:#fff;box-shadow:inset 0 0 0 1px var(--accent)}
+  .routes button:hover:not(.on){color:var(--ink)}
+  .stats{display:flex;gap:16px;margin-left:auto;flex-wrap:wrap}
+  .stat{display:flex;flex-direction:column;line-height:1.15}
+  .stat b{font-family:var(--mono);font-size:15px;font-weight:600;font-variant-numeric:tabular-nums}
+  .stat span{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+  .stat.ok b{color:var(--proved)} .stat.ax b{color:var(--axiom)} .stat.reused b{color:var(--reused)}
+  .uical{display:flex;align-items:center;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:3px 5px}
+  .uical .ul{font-family:var(--mono);font-size:9px;letter-spacing:.08em;color:var(--faint);text-transform:uppercase;padding:0 2px}
+  .uical button{font-family:var(--mono);font-size:14px;line-height:1;color:var(--muted);background:var(--panel2);border:1px solid var(--line);border-radius:5px;width:22px;height:22px;cursor:pointer;padding:0}
+  .uical button:hover{color:#fff;border-color:var(--accent)}
+  .uical #ui-pct{font-family:var(--mono);font-size:11px;color:var(--ink);min-width:38px;text-align:center;cursor:pointer;font-variant-numeric:tabular-nums}
+  .uical #ui-pct:hover{color:var(--accent)}
+  .dlbtn{display:flex;align-items:center;gap:9px;background:var(--panel2);border:1px solid var(--reused-dim);border-radius:9px;padding:6px 12px;cursor:pointer;text-decoration:none;transition:border-color .12s,background .12s;-webkit-user-select:none;user-select:none}
+  .dlbtn:hover{border-color:var(--reused);background:#0e2429}
+  .dlbtn:active{transform:translateY(1px)}
+  .dlbtn .dl-ic{font-size:15px;color:var(--reused);line-height:1}
+  .dlbtn .dl-tx{display:flex;flex-direction:column;line-height:1.18}
+  .dlbtn .dl-tx b{font-family:var(--mono);font-size:11px;color:var(--ink);font-weight:600}
+  .dlbtn .dl-tx span{font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:.03em}
+  .search{display:flex;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:6px 10px}
+  .search input{background:transparent;border:0;color:var(--ink);font-family:var(--mono);font-size:12px;width:170px;outline:none}
+  .search input::placeholder{color:var(--faint)}
+  .search kbd{font-family:var(--mono);font-size:9.5px;color:var(--faint);border:1px solid var(--line);border-radius:4px;padding:1px 4px}
+
+  /* ================= workspace ================= */
+  .work{flex:1;display:flex;min-height:0}
+  .graphwrap{position:relative;flex:1;min-width:0;overflow:hidden;background:
+    radial-gradient(1200px 700px at 30% 20%,#131a24 0,var(--ground) 70%)}
+  svg#graph{width:100%;height:100%;display:block;cursor:grab;touch-action:none}
+  svg#graph.grabbing{cursor:grabbing}
+  .edge{fill:none;stroke:#2b3644;stroke-width:1.2}
+  .edge.hl{stroke:var(--accent);stroke-width:2;opacity:.95}
+  .edge.up{stroke:var(--def);stroke-width:1.9}
+  .edge.dim{opacity:.1}
+  .node{cursor:pointer}
+  .node rect{rx:6;stroke-width:1.4;transition:filter .12s}
+  .node text{font-family:var(--mono);pointer-events:none}
+  .node .l1{font-size:9px;letter-spacing:.09em;text-transform:uppercase;fill:var(--muted)}
+  .node .l2{font-size:11px;fill:var(--ink)}
+  .node.dim{opacity:.18}
+  .node:hover rect{filter:brightness(1.3)}
+  .k-prop rect{fill:#16241b;stroke:var(--proved)} .k-prop .l1{fill:#7fae90}
+  .k-def rect{fill:#152131;stroke:var(--def)} .k-def .l1{fill:#8fb2e6}
+  .k-axiom rect{fill:#241d10;stroke:var(--axiom)} .k-axiom .l1{fill:var(--axiom)}
+  .k-thm rect{fill:#0f2a1c;stroke:#7ee0a0;stroke-width:2.2}
+  .k-thm .l2{fill:#eafff2;font-weight:600} .k-thm .l1{fill:#7ee0a0}
+  .k-reused rect{fill:#0e2a30;stroke:var(--reused);stroke-dasharray:4 2} .k-reused .l1{fill:#7fd6e0}
+  .node.sel rect{stroke:var(--accent)!important;stroke-width:2.6}
+
+  .fab{position:absolute;right:14px;bottom:14px;display:flex;gap:8px}
+  .fab button,.pindex-btn{font-family:var(--mono);font-size:11px;color:var(--ink);background:var(--panel2);
+    border:1px solid var(--line);border-radius:7px;padding:7px 11px;cursor:pointer}
+  .fab button:hover,.pindex-btn:hover{border-color:var(--accent);color:#fff}
+  .legend{position:absolute;left:14px;bottom:14px;display:flex;flex-direction:column;gap:5px;
+    background:rgba(16,21,28,.85);border:1px solid var(--line);border-radius:8px;padding:9px 11px;backdrop-filter:blur(4px)}
+  .legend .row{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--muted)}
+  .legend .sw{width:11px;height:11px;border-radius:3px;border:1.4px solid}
+  .legend .rt{margin-top:7px;padding-top:8px;border-top:1px solid var(--line)}
+  .rtbtn{font-family:var(--mono);font-size:10px;letter-spacing:.04em;padding:3px 9px;border-radius:14px;
+    border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer}
+  .rtbtn.on{color:var(--accent);border-color:var(--accent)}
+  .rtbtn:hover{border-color:var(--accent)}
+  .node.offroute{opacity:.15}
+  .pnote{font-size:11px;color:#9c8b63;margin:10px 2px 6px;line-height:1.5}
+  .hint{position:absolute;left:50%;top:12px;transform:translateX(-50%);font-family:var(--mono);
+    font-size:11px;color:var(--faint);pointer-events:none;transition:opacity .4s;text-align:center}
+
+  /* ================= resize handles ================= */
+  .vres{flex:0 0 14px;cursor:col-resize;position:relative;z-index:30;background:transparent;touch-action:none}
+  .vres::after{content:"";position:absolute;top:0;bottom:0;left:6px;width:2px;background:var(--line);transition:background .12s,width .12s,left .12s}
+  .vres::before{content:"⋮";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--muted);font-size:16px;line-height:1;background:var(--panel);padding:5px 2px;border-radius:6px;border:1px solid var(--line);transition:color .12s,border-color .12s}
+  .vres:hover::after,.vres.dragging::after{left:5px;width:3px;background:var(--accent)}
+  .vres:hover::before,.vres.dragging::before{color:var(--accent);border-color:var(--accent)}
+
+  /* ================= inspector ================= */
+  aside{width:440px;min-width:300px;max-width:72vw;flex-shrink:0;background:var(--panel);
+    display:flex;flex-direction:column;min-height:0}
+  .insp-empty{margin:auto;padding:30px;text-align:center;color:var(--muted);font-size:13px;max-width:300px;line-height:1.65}
+  .insp-empty .big{font-family:var(--mono);color:var(--faint);font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+  .insp{display:none;flex-direction:column;min-height:0;height:100%;overflow-y:auto}
+  .insp.on{display:flex}
+  .insp-head{padding:15px 18px 12px;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:6;background:var(--panel)}
+  .badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+  .badge{font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:20px;border:1px solid}
+  .badge.status{color:var(--proved);border-color:var(--proved-dim);background:#12241a}
+  .badge.kind{color:var(--muted);border-color:var(--line);background:var(--panel2)}
+  .badge.file{color:var(--def);border-color:var(--def-dim);background:#141f2e}
+  .badge.ax{color:var(--axiom);border-color:var(--axiom-dim);background:#221b0f}
+  .badge.reused{color:var(--reused);border-color:var(--reused-dim);background:#0d2429}
+  .prov{margin:0 18px 12px;font-size:11.5px;line-height:1.5;color:#9bdae2;background:#0d2429;border:1px solid var(--reused-dim);border-radius:7px;padding:8px 11px;display:none}
+  .prov b{color:var(--reused);font-weight:600}
+  .insp-head h2{margin:0;font-size:16px;font-weight:650;letter-spacing:-.01em;text-wrap:balance}
+  .idline{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:5px;word-break:break-all}
+  .idline b{color:var(--accent);font-weight:500}
+  .summary{padding:13px 18px;font-size:13px;line-height:1.66;color:#c6d0dc;border-bottom:1px solid var(--line);background:#131a23}
+  .insp-body{padding:2px 0 22px}
+  .sec{padding:14px 18px 4px}
+  .sec-t{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .sec-t::after{content:"";flex:1;height:1px;background:var(--line)}
+  /* paper locator card */
+  .ploc{display:flex;align-items:center;gap:12px;background:#1c1911;border:1px solid var(--axiom-dim);border-radius:8px;padding:11px 13px}
+  .ploc .where{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .ploc .where b{font-size:13px;color:#f0d9b0;font-weight:600}
+  .ploc .where span{font-family:var(--mono);font-size:10.5px;color:#a89468}
+  .ploc button{margin-left:auto;font-family:var(--mono);font-size:11px;color:#1c1911;background:var(--axiom);
+    border:0;border-radius:6px;padding:8px 12px;cursor:pointer;font-weight:600;white-space:nowrap}
+  .ploc button:hover{filter:brightness(1.12)}
+  .ploc.none{background:var(--panel2);border-color:var(--line)}
+  .ploc.none .where b{color:var(--muted);font-weight:500;font-size:12px}
+  pre.code{margin:0;background:#0b0f15;border:1px solid var(--line);border-radius:8px;padding:12px 13px;
+    overflow-x:auto;font-family:var(--mono);font-size:11.5px;line-height:1.55;color:#c9d3e0;white-space:pre;max-height:340px;overflow-y:auto}
+  pre.code .kw{color:#c792ea} pre.code .ty{color:#82aaff} pre.code .cm{color:#5a6572;font-style:italic}
+  pre.code .lit{color:#f78c6c} pre.code .op{color:#89ddff}
+  /* ---- term inspector: clickable identifiers + draggable definition windows ---- */
+  .idl{cursor:pointer;border-bottom:1px dotted rgba(167,139,250,.5);border-radius:2px}
+  .idl:hover{background:rgba(167,139,250,.18)}
+  .idl.ty{border-bottom:0}   /* Mathlib/core types read as syntax: hover+click, no underline */
+  pre.code .kw[data-k],pre.code .op[data-k],pre.code .ty[data-k]{cursor:help;border-radius:2px}
+  pre.code .kw[data-k]:hover,pre.code .op[data-k]:hover,pre.code .ty[data-k]:hover{background:rgba(137,221,255,.14)}
+  /* per-block Lean explainers: ONE code scrollbar + fixed right-gutter ? icons */
+  .codebox{position:relative}
+  .codebox .ccode{width:100%}
+  .codebox.hasgut .ccode{width:calc(100% - 24px);border-top-right-radius:0;border-bottom-right-radius:0;border-right:0}
+  .cgut{position:absolute;top:0;right:0;width:24px;height:100%;overflow:hidden;background:#0b0f15;
+      border:1px solid var(--line);border-top-right-radius:8px;border-bottom-right-radius:8px}
+  .cgi{position:absolute;top:0;left:0;width:100%}
+  .cgut .lq{position:absolute;right:3px;width:18px;height:18px;line-height:16px;text-align:center;padding:0;
+      border:1px solid rgba(167,139,250,.45);border-radius:50%;background:rgba(167,139,250,.16);
+      color:var(--accent);font-family:var(--sans);font-size:11px;font-weight:700;cursor:help;opacity:.85;transition:opacity .12s,transform .12s,background .12s}
+  .codebox:hover .cgut .lq{opacity:1}
+  .cgut .lq:hover,.cgut .lq:focus{background:var(--accent);color:#0b0f15;border-color:var(--accent);opacity:1;outline:none;transform:scale(1.14)}
+  #lqpop{position:fixed;z-index:99999;max-width:340px;background:#141a24;border:1px solid var(--accent);
+      border-radius:8px;padding:9px 12px;box-shadow:0 10px 30px rgba(0,0,0,.55);font-family:var(--sans);
+      font-size:12.5px;line-height:1.5;color:var(--ink)}
+  #lqpop .lqp-h{font-family:var(--mono);font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+  .gchips{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px;flex:0 0 auto}
+  .gchips .gc-t{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);width:100%;margin-bottom:-1px}
+  .gchip{font-family:var(--mono);font-size:10px;color:#b9a7f0;background:#1b1930;border:1px solid #3a3560;border-radius:12px;padding:2px 8px;cursor:pointer}
+  .gchip:hover{border-color:var(--accent);color:#fff}
+  .trustcard{margin-bottom:12px;background:#101c22;border:1px solid var(--reused-dim);border-left:3px solid var(--reused);border-radius:8px;padding:11px 13px}
+  .trustcard h4{margin:0 0 6px;font-size:11px;color:var(--reused);font-family:var(--mono);letter-spacing:.09em;text-transform:uppercase}
+  .trustcard .tc-intro{font-size:11.5px;color:#9fb4c0;line-height:1.5;margin-bottom:8px}
+  .trustcard ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+  .trustcard li{font-size:12px;line-height:1.45;color:#c6d0dc}
+  .trustcard li b{color:#7fd6e0;cursor:pointer;font-family:var(--mono);font-size:11.5px;font-weight:600}
+  .trustcard li b:hover{text-decoration:underline}
+  /* draggable definition windows (several can be open at once) */
+  #gwrap{position:fixed;inset:0;z-index:900;pointer-events:none}
+  .gwin{position:absolute;width:min(470px,92vw);max-height:min(72vh,640px);min-width:280px;overflow:hidden;display:flex;flex-direction:column;pointer-events:auto;
+    background:#12181f;border:1px solid #3a4a5c;border-radius:10px;box-shadow:0 12px 48px rgba(0,0,0,.65)}
+  /* bottom-right corner grip: drag to resize the window (zoom-aware, mirrors the drag) */
+  .gwin-rz{position:absolute;right:0;bottom:0;width:18px;height:18px;cursor:nwse-resize;z-index:3;touch-action:none}
+  .gwin-rz::after{content:"";position:absolute;right:3px;bottom:3px;width:8px;height:8px;
+    border-right:2px solid var(--faint);border-bottom:2px solid var(--faint);border-bottom-right-radius:3px;transition:border-color .12s}
+  .gwin-rz:hover::after{border-color:var(--accent)}
+  .gwin.flash{animation:gwflash .55s ease 1}
+  @keyframes gwflash{0%{box-shadow:0 0 0 3px var(--accent)}100%{box-shadow:0 12px 48px rgba(0,0,0,.65)}}
+  .gwin-h{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--line);cursor:grab;
+    -webkit-user-select:none;user-select:none;touch-action:none}
+  .gwin-h:active{cursor:grabbing}
+  .gwin-h .t{font-family:var(--mono);font-size:12.5px;color:#e6d7ff;font-weight:600;flex:1;word-break:break-all}
+  .gwin-h button{background:var(--panel2);border:1px solid var(--line);border-radius:6px;color:var(--muted);font-family:var(--mono);font-size:11px;padding:3px 9px;cursor:pointer;flex-shrink:0}
+  .gwin-h button:hover{color:#fff;border-color:var(--accent)}
+  .gwin-b{overflow-y:auto;padding:11px 13px;display:flex;flex-direction:column;gap:12px}
+  /* once the window has been resized to an explicit height, let the body fill + scroll */
+  .gwin.rsz > .gwin-b{flex:1 1 auto;min-height:0}
+  /* "what the code does, and how" card */
+  .ghow{font-size:12px;line-height:1.55;color:#cbd8cf;background:#132019;border-left:3px solid var(--proved);border-radius:6px;padding:8px 10px}
+  .ghow .ghow-t{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#79b98d;margin-bottom:3px}
+  /* collapsed source docstring (auditor's faithfulness note) — a prominent amber chip
+     (audit colour), not faint grey, so it's easy to find. */
+  .gdt{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--axiom);cursor:pointer;
+    -webkit-user-select:none;user-select:none;display:inline-flex;align-items:center;gap:6px;align-self:flex-start;
+    border:1px solid var(--axiom-dim);border-radius:6px;padding:5px 11px;background:#221b0f}
+  .gdt:hover{border-color:var(--axiom);background:#2d240f;color:#f0c078}
+  .gdt.open::before{content:"▾"} .gdt::before{content:"▸"}
+  /* hover card: abridged definition on mouse-over */
+  .ghover{position:fixed;z-index:1500;display:none;max-width:330px;background:#1a212b;border:1px solid #46586c;border-radius:8px;
+    padding:8px 11px;box-shadow:0 8px 30px rgba(0,0,0,.55);pointer-events:none;font-size:11.5px;line-height:1.5;color:#cfd9e4}
+  .ghover b{font-family:var(--mono);color:#e6d7ff;font-size:11.5px}
+  .ghover .hk{font-family:var(--mono);font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em;margin-left:6px}
+  /* NB: class is .ghint (NOT .hint) — .hint is the graph's absolutely-positioned pan/zoom
+     caption, and reusing it here dragged this line on top of the card title. */
+  .ghover .ghint{margin-top:8px;padding-top:7px;border-top:1px solid var(--line);
+    font-family:var(--mono);font-size:10px;color:var(--accent);display:flex;align-items:center;gap:6px}
+  .ghover .ghint::before{content:"⤢";font-size:12px;opacity:.9}
+  .ghover .ghbody{margin-top:4px;max-height:6.4em;overflow:hidden}
+  /* fade only when the text is actually clipped (there's more) — not when it fully fits */
+  .ghover .ghbody.clipped{-webkit-mask-image:linear-gradient(#000 74%,transparent);mask-image:linear-gradient(#000 74%,transparent)}
+  /* ---- typeset mathematics (native MathML from build-time latex2mathml) ---- */
+  math{font-size:1.04em;font-style:normal}
+  math[display="block"]{display:block;margin:4px 0}
+  .gplain math,.ghow math,.gdoc math,#i-summary math,#td-summary math,.trustcard li math,.ghbody math{color:inherit}
+  /* wide formulas scroll rather than break the panel */
+  .gplain,.ghow,.trustcard li{overflow-x:auto;overflow-y:hidden}
+  /* summaries: allow wide math to scroll horizontally, but NEVER shrink/clip vertically
+     (they sit above the scrollable body in a flex column) */
+  #i-summary,#td-summary{overflow-x:auto;flex:0 0 auto}
+  .mfail{font-family:var(--mono);color:#e0a458;background:#221b0f;border-radius:3px;padding:0 3px}
+  code.lc{font-family:var(--mono);font-size:.9em;color:#cdd8e6;background:rgba(120,142,170,.14);border:1px solid var(--line);border-radius:4px;padding:0 4px;white-space:nowrap}
+  .gent{display:flex;flex-direction:column;gap:7px;border-bottom:1px dashed var(--line);padding-bottom:11px}
+  .gent:last-child{border-bottom:0;padding-bottom:0}
+  .gent .gkind{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+  .gent .gplain{font-size:12.5px;line-height:1.55;color:#d8e2ec;background:#16222b;border-left:3px solid var(--reused);border-radius:6px;padding:8px 10px}
+  .gent .gdoc{font-size:11px;line-height:1.5;color:#8a97a9;font-style:italic}
+  .gent pre.code{max-height:240px;font-size:11px}
+  .gent .gmeta{font-family:var(--mono);font-size:10px;color:var(--faint);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .gent .gmeta .gnode{color:var(--accent);cursor:pointer;border:1px solid var(--accent-dim,var(--accent));
+    border-radius:14px;padding:3px 10px;font-weight:600;background:rgba(120,150,255,.08)}
+  .gent .gmeta .gnode:hover{background:var(--accent);color:#0d1117}
+  pre.tex{margin:0;background:#141210;border:1px solid #2e2a20;border-left:2px solid var(--axiom);border-radius:6px;
+    padding:11px 13px;font-family:var(--mono);font-size:11px;line-height:1.6;color:#cfc7b8;
+    white-space:pre-wrap;word-break:break-word;max-height:280px;overflow-y:auto}
+  .deps{display:flex;flex-direction:column;gap:5px}
+  .dep{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--ink);
+    background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 10px;cursor:pointer;text-align:left;width:100%}
+  .dep:hover{border-color:var(--accent);color:#fff;transform:translateX(2px)}
+  .dep .tick{width:7px;height:7px;border-radius:2px;flex-shrink:0}
+  .dep .dtitle{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .dep .dnum{font-family:var(--mono);font-size:9.5px;color:var(--faint);margin-left:auto;flex-shrink:0}
+  .none{color:var(--faint);font-family:var(--mono);font-size:11px;padding:2px 0}
+  footer{padding:8px 18px;border-top:1px solid var(--line);font-family:var(--mono);font-size:10.5px;
+    color:var(--faint);display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  footer b{color:var(--muted);font-weight:500}
+  .axfoot{color:var(--axiom)}
+
+  /* ================= PDF / paper-index overlay ================= */
+  .overlay{position:fixed;inset:0;background:rgba(5,8,12,.72);backdrop-filter:blur(3px);z-index:40;
+    display:none;align-items:stretch;justify-content:flex-end}
+  .overlay.on{display:flex}
+  .sheet-res{flex:0 0 13px;cursor:col-resize;position:relative;z-index:30;touch-action:none;display:flex;align-items:center;justify-content:center}
+  .sheet-res::after{content:"";position:absolute;top:0;bottom:0;right:0;width:1px;background:var(--line);transition:background .12s,width .12s}
+  .sheet-res::before{content:"⋮⋮";writing-mode:vertical-rl;text-orientation:upright;letter-spacing:-4px;font-size:10px;
+    color:var(--faint);background:var(--panel2);border:1px solid var(--line);border-radius:7px;padding:9px 3px;transition:color .12s,border-color .12s}
+  .sheet-res:hover::before,.sheet-res.dragging::before{color:var(--accent);border-color:var(--accent)}
+  .sheet-res:hover::after,.sheet-res.dragging::after{background:var(--accent);width:3px;right:-1px}
+  .sheet{width:min(1560px,97vw);min-width:640px;max-width:100vw;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;min-width:640px}
+  .sheet-head{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--line)}
+  .sheet-head .t{display:flex;flex-direction:column;gap:2px;min-width:0}
+  .sheet-head .t b{font-size:14px}
+  .sheet-head .t span{font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+  .sheet-head .close{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--muted);
+    background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer}
+  .sheet-head .close:hover{color:#fff;border-color:var(--accent)}
+  .sheet-body{flex:1;display:flex;min-height:0}
+  .pidx{width:min(340px,24vw);min-width:180px;flex-shrink:0;display:flex;flex-direction:column;min-height:0}
+  .pidx .pfind{padding:10px 12px;border-bottom:1px solid var(--line)}
+  .pidx .pfind input{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:6px;
+    color:var(--ink);font-family:var(--mono);font-size:12px;padding:7px 10px;outline:none}
+  .pidx .list{flex:1;overflow-y:auto;padding:6px}
+  .prow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:transparent;border:0;
+    border-radius:6px;padding:7px 9px;cursor:pointer;color:var(--ink)}
+  .prow:hover{background:var(--panel2)}
+  .prow.on{background:var(--panel2);box-shadow:inset 0 0 0 1px var(--accent)}
+  .prow .pg{font-family:var(--mono);font-size:10px;color:var(--axiom);width:36px;flex-shrink:0;font-variant-numeric:tabular-nums}
+  .prow .nm{font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .prow .env{font-family:var(--mono);font-size:9px;color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-left:auto;flex-shrink:0}
+  .prow .lean-link{font-family:var(--mono);font-size:9.5px;color:var(--accent);flex-shrink:0}
+  .tkey{display:flex;gap:13px;margin-left:6px;font-family:var(--mono);font-size:10px;color:var(--muted)}
+  .tkey .k{display:flex;align-items:center;gap:5px}
+  .tkey .kb{width:10px;height:10px;border-radius:2px;border:1.4px solid}
+  .tgap{width:min(680px,90%);margin:2px auto;text-align:center;font-family:var(--mono);font-size:10px;
+    color:var(--faint);border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);padding:7px 10px}
+  .tracepane{flex:1;min-width:0;overflow:auto;background:#0a0d12;padding:22px 0 40px;position:relative}
+  .pages{display:flex;flex-direction:column;align-items:center;gap:20px;min-width:min-content}
+  .tpage{position:relative;width:var(--pgw,820px);max-width:none;background:#fff;box-shadow:0 2px 20px rgba(0,0,0,.55);border-radius:2px;flex-shrink:0}
+  .zoombar{position:sticky;top:10px;z-index:12;display:flex;justify-content:flex-end;padding:0 16px;height:0}
+  .zoombar .zb{display:flex;align-items:center;gap:5px;background:rgba(24,31,42,.97);border:1px solid #46586c;
+    border-radius:11px;padding:6px 8px;backdrop-filter:blur(6px);box-shadow:0 6px 20px rgba(0,0,0,.6)}
+  .zoombar .zlabel{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:0 4px 0 2px}
+  .zoombar button{font-family:var(--mono);font-size:18px;font-weight:600;width:34px;height:31px;color:#eef3fa;
+    background:var(--panel2);border:1px solid #3a4757;border-radius:8px;cursor:pointer;line-height:1;
+    display:flex;align-items:center;justify-content:center;transition:background .12s,border-color .12s,color .12s}
+  .zoombar button:hover{background:var(--accent);border-color:var(--accent);color:#12151c}
+  .zoombar button:active{transform:translateY(1px)}
+  .zoombar .zpct{font-family:var(--mono);font-size:14px;font-weight:600;color:#fff;min-width:56px;text-align:center;font-variant-numeric:tabular-nums;letter-spacing:.01em}
+  .zoombar #z-fit{width:auto;padding:0 12px;font-size:12.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+  .tpage .pnum{position:absolute;top:-15px;left:2px;font-family:var(--mono);font-size:10px;color:var(--faint)}
+  .tpage > img{display:block;width:100%;border-radius:2px}
+  .thl{position:absolute;cursor:pointer;border-radius:3px;border:1.5px solid;transition:background .12s,box-shadow .12s}
+  .thl:hover{box-shadow:0 0 0 2px rgba(167,139,250,.55)}
+  .thl .chip{position:absolute;left:-1px;top:-16px;font-family:var(--mono);font-size:9px;padding:1px 5px;border-radius:3px;
+    white-space:nowrap;color:#fff;opacity:0;transition:opacity .12s;pointer-events:none;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+  .thl:hover .chip,.thl.sel .chip{opacity:1}
+  .thl.sel{box-shadow:0 0 0 2.5px var(--accent),0 0 22px rgba(167,139,250,.45)}
+  @keyframes hlpulse{0%,100%{box-shadow:0 0 0 2px var(--accent)}50%{box-shadow:0 0 0 6px var(--accent),0 0 28px rgba(167,139,250,.7)}}
+  .thl.pulse{animation:hlpulse 1s ease 2}
+  .tdetail{width:min(365px,27vw);min-width:280px;max-width:60vw;flex-shrink:0;background:var(--panel);display:flex;flex-direction:column;min-height:0}
+  .tdetail-empty{margin:auto;padding:28px;text-align:center;color:var(--muted);font-size:13px;line-height:1.65;max-width:295px}
+  .tdetail-empty .big{font-family:var(--mono);color:var(--faint);font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+  .tdetail-on{display:none;flex-direction:column;min-height:0;height:100%}
+  .tdetail-on.on{display:flex}
+  .td-head{padding:15px 17px 12px;border-bottom:1px solid var(--line)}
+  .td-head h3{margin:7px 0 0;font-size:15px;font-weight:650;text-wrap:balance}
+  /* single scroll container: header (.td-head) is a fixed sibling above this, so the
+     whole detail body scrolls as one — summary, trust panel, code, graph button — instead
+     of the old nested model where only pre.code scrolled and a long trust panel/summary
+     had nowhere to go. pre.code keeps its own 340px cap from the base rule. */
+  .td-scroll{flex:1;min-height:0;overflow-y:auto}
+  .td-scroll > .sec{padding-bottom:12px}
+  .td-scroll > .td-graph{margin-bottom:14px}
+  .td-scroll .summary{border-bottom:1px solid var(--line)}
+  .td-graph{margin:14px 17px 4px;width:calc(100% - 34px);font-family:var(--mono);font-size:12px;color:#fff;background:var(--panel2);
+    border:1px solid var(--accent);border-radius:7px;padding:10px;cursor:pointer}
+  .td-graph:hover{background:#241f3a}
+  @media (max-width:900px){ #aside{display:none} .pidx{width:240px} .tdetail{display:none} }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div id="app">
+  <header>
+    <div class="brand">
+      <div class="eyebrow">Paper and Lean · v42</div>
+      <h1>Interlacing and Additive Inapproximability</h1>
+      <div class="sub">Gaspers · He · Mackenzie — v42 · paper ⇄ Lean inspector</div>
+      <div class="sub scopecaveat" id="scope-note"></div>
+    </div>
+    <div class="modes" role="tablist">
+      <button id="m-spine" class="on">Paper spine</button>
+      <button id="m-full">Everything</button>
+      <button id="m-pidx" class="pindex-btn" style="border:0">📄 Trace the paper</button>
+    </div>
+    <div class="routes" role="group" title="Which dependency arrows to draw between statements">
+      <span class="rlbl">arrows</span>
+      <button id="r-lean" class="on" title="Compiler-recorded source references, projected through helper declarations">Lean references</button>
+      <button id="r-paper" title="Arrows show which statements the paper’s prose cites — the two routes differ in places">Paper citations</button>
+    </div>
+    <a class="dlbtn" id="dl-lean" role="button" tabindex="0" title="Download the recorded Lean source release">
+      <span class="dl-ic">⬇</span>
+      <span class="dl-tx"><b>Lean code</b><span id="dl-sub">Source release</span></span>
+    </a>
+    <div class="stats">
+      <div class="stat ok"><b id="s-proved">—</b><span>matched</span></div>
+      <div class="stat reused"><b id="s-reused">0</b><span>definitions</span></div>
+      <div class="stat ax"><b id="s-axioms">0</b><span>external</span></div>
+      <div class="stat"><b id="s-shown">—</b><span>shown</span></div>
+      <div class="stat ax"><b id="s-pending">0</b><span>pending</span></div>
+    </div>
+    <div class="uical" title="Calibrate the whole UI size for your screen (click the % to reset)">
+      <span class="ul">UI size</span>
+      <button id="ui-dn" title="smaller">−</button>
+      <span id="ui-pct" title="click to reset to 100%">100%</span>
+      <button id="ui-up" title="larger">+</button>
+    </div>
+    <div class="search">
+      <span style="color:var(--faint);font-family:var(--mono);font-size:12px">⌕</span>
+      <input id="q" placeholder="Search statements, topics, or labels…" aria-label="Search statements" autocomplete="off" spellcheck="false">
+      <kbd>/</kbd>
+    </div>
+  </header>
+
+  <div class="work">
+    <div class="graphwrap">
+      <svg id="graph"></svg>
+      <div class="hint" id="hint">drag to pan · scroll to zoom · click a statement to inspect it<br>arrows point toward the statement that uses the reference</div>
+      <div class="legend" id="legend"></div>
+      <div class="fab">
+        <button id="fit">Fit</button>
+        <button id="headline">Headline theorem →</button>
+      </div>
+    </div>
+    <div class="vres" id="res-insp" title="drag to resize"></div>
+    <aside id="aside">
+      <div class="insp-empty" id="empty">
+        <div class="big">Inspector</div>
+        Click any statement to see, side by side: what it says in plain English, the exact Lean theorem, the paper's own statement, and <b>where it lives in the PDF</b>. Use <b>📄 Paper index</b> to go the other way — from a page of the paper to its Lean object.
+      </div>
+      <div class="insp" id="insp">
+        <div class="insp-head">
+          <div class="badges" id="i-badges"></div>
+          <h2 id="i-title"></h2>
+          <div class="idline"><span id="i-id"></span> · <b id="i-lean"></b></div>
+        </div>
+        <div class="summary" id="i-summary"></div>
+        <div class="prov" id="i-prov"></div>
+        <div class="insp-body">
+          <div class="sec"><div class="sec-t">In the paper</div><div id="i-ploc"></div></div>
+          <div class="sec"><div class="sec-t">Linked Lean declaration</div><div id="i-trust"></div><div class="codebox" id="i-code"></div><div class="gchips" id="i-chips"></div></div>
+          <div class="sec" id="i-tex-sec"><div class="sec-t">Paper statement (LaTeX source<span id="i-texline"></span>)</div><pre class="tex" id="i-tex"></pre></div>
+          <div class="sec"><div class="sec-t" id="i-deps-t">Built from</div><div class="deps" id="i-deps"></div></div>
+          <div class="sec"><div class="sec-t" id="i-dependents-t">Feeds into</div><div class="deps" id="i-dependents"></div></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <span id="axiom-footprint">Recorded axiom audit</span>
+    <a class="axfoot" href="verification.json">Scope and verification</a>
+    <span style="margin-left:auto">Recorded proof snapshot · <span id="f-count"></span> paper items</span>
+  </footer>
+</div>
+
+<!-- PDF tracer overlay -->
+<div class="overlay" id="overlay">
+  <div class="sheet-res" id="res-sheet" title="drag to widen / narrow the panel"></div>
+  <div class="sheet">
+    <div class="sheet-head">
+      <div class="t"><b>Trace the paper</b><span id="o-sub">v42 — the 50 formalized statements are highlighted; click one to see its formalization</span></div>
+      <div class="tkey" id="tkey"></div>
+      <button class="close" id="o-close">Close ✕</button>
+    </div>
+    <div class="sheet-body">
+      <div class="pidx">
+        <div class="pfind"><input id="pq" placeholder="Filter statements or page numbers…" aria-label="Filter paper statements" autocomplete="off" spellcheck="false"></div>
+        <div class="list" id="plist"></div>
+      </div>
+      <div class="vres" id="res-pidx" title="drag to resize"></div>
+      <div class="tracepane" id="tracepane">
+        <div class="zoombar"><div class="zb">
+          <span class="zlabel">zoom</span>
+          <button id="z-out" title="zoom out (Ctrl+scroll)">−</button>
+          <span class="zpct" id="z-pct">100%</span>
+          <button id="z-in" title="zoom in (Ctrl+scroll)">+</button>
+          <button id="z-fit" title="fit page width">fit</button>
+        </div></div>
+        <div class="pages" id="tracePages"></div>
+      </div>
+      <div class="vres" id="res-tdetail" title="drag to resize"></div>
+      <aside class="tdetail" id="tdetail">
+        <div class="tdetail-empty" id="tdEmpty">
+          <div class="big">Formalization</div>
+          Click a highlighted statement in the paper (or a row on the left) to read its plain-English summary and linked Lean statement here — then jump to it in the dependency graph.
+        </div>
+        <div class="tdetail-on" id="tdOn">
+          <div class="td-head">
+            <div class="badges" id="td-badges"></div>
+            <h3 id="td-title"></h3>
+            <div class="idline"><span id="td-id"></span> · <b id="td-lean"></b></div>
+          </div>
+          <div class="td-scroll">
+            <div class="summary" id="td-summary"></div>
+            <div class="prov" id="td-prov"></div>
+            <div class="sec"><div class="sec-t">Lean statement</div><div id="td-trust"></div><div class="codebox" id="td-code"></div><div class="gchips" id="td-chips"></div></div>
+            <button class="td-graph" id="td-graph">Open in dependency graph →</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- term-inspector: draggable definition windows + hover card -->
+<div id="gwrap"></div>
+<div class="ghover" id="ghover"></div>
+
+<script id="data" type="application/json">{}</script>
+<script id="trace" type="application/json">{}</script>
+<script id="dl" type="application/json">{}</script>
+<script id="gloss" type="application/json">{}</script>
+<script id="explainers" type="application/json">{}</script>
+<script>
+(async function(){
+  "use strict";
+  async function loadPayload(){var r=await fetch("payload.json.gz");if(!r.ok)throw new Error("Proof index download failed");if(typeof DecompressionStream!=="undefined")return JSON.parse(await new Response(r.body.pipeThrough(new DecompressionStream("gzip"))).text());var plain=await fetch("payload.json");if(!plain.ok)throw new Error("Proof index unavailable");return plain.json();}
+  var PDF_MODE = "local"; // "local" (sibling paper.pdf) or "arxiv"
+  var PDF_LOCAL = "paper.pdf";
+  var PDF_ARXIV = "paper.pdf";
+  var PAYLOAD = await loadPayload();
+  [ ["data","graph"],["trace","trace"],["dl","downloads"],["gloss","glossary"],["explainers","explainers"] ].forEach(function(p){document.getElementById(p[0]).textContent=JSON.stringify(PAYLOAD[p[1]]);});
+  var DATA = PAYLOAD.graph;
+  var DL = JSON.parse(document.getElementById("dl").textContent);
+  // ---- download: the complete Lean project, embedded and decoded client-side ----
+  // (strict CSP blocks external fetches, so the zip ships inside the page as base64
+  // for the hosted copy, or as a sibling file for the repo copy.)
+  (function(){
+    var sub = document.getElementById("dl-sub");
+    if(DL && DL.lean && DL.lean.kb) sub.textContent = ".zip · " + DL.lean.kb + " KB";
+    function downloadLean(){
+      try{
+        var L = DL && DL.lean; if(!L) return;
+        var a = document.createElement("a"); a.download = L.name || "lean.zip";
+        if(L.b64){
+          var bin = atob(L.b64), n = bin.length, u = new Uint8Array(n);
+          for(var i=0;i<n;i++) u[i] = bin.charCodeAt(i);
+          a.href = URL.createObjectURL(new Blob([u], {type:"application/zip"}));
+        } else { a.href = L.file; }
+        document.body.appendChild(a); a.click();
+        setTimeout(function(){ a.remove(); if(a.href.indexOf("blob:")===0) URL.revokeObjectURL(a.href); }, 8000);
+      }catch(e){ alert("Download failed: " + (e && e.message ? e.message : e)); }
+    }
+    var btn = document.getElementById("dl-lean");
+    btn.addEventListener("click", downloadLean);
+    btn.addEventListener("keydown", function(e){ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); downloadLean(); } });
+  })();
+  // ---- UI size calibration: scale the whole app via CSS zoom (reflows, so nothing
+  //      breaks — fixed overlays, dragging, and box alignment all stay consistent).
+  //      Persisted per-browser; click the % to reset. ----
+  (function(){
+    var MINS = 60, MAXS = 200, KEY = "additive-v42-ui-scale";
+    var pct = 100;
+    try { var v = parseInt(localStorage.getItem(KEY), 10); if(v >= MINS && v <= MAXS) pct = v; } catch(e){}
+    var readout = document.getElementById("ui-pct");
+    var appEl = document.getElementById("app");
+    function fitAppToZoom(){
+      // CSS zoom scales the 100vh app past the viewport, pushing bottom-anchored UI
+      // (legend, Fit/Headline fabs) off-screen. Shrink the app's layout height by the
+      // zoom factor so it fills — not overflows — the real viewport at any UI size.
+      var z = pct / 100;
+      appEl.style.height = (pct === 100 ? "" : (window.innerHeight / z) + "px");
+    }
+    function apply(){
+      document.documentElement.style.zoom = (pct === 100 ? "" : (pct / 100));
+      readout.textContent = pct + "%";
+      fitAppToZoom();
+      try { localStorage.setItem(KEY, pct); } catch(e){}
+    }
+    window.addEventListener("resize", fitAppToZoom);
+    function bump(d){ pct = Math.max(MINS, Math.min(MAXS, pct + d)); apply(); }
+    document.getElementById("ui-up").addEventListener("click", function(){ bump(10); });
+    document.getElementById("ui-dn").addEventListener("click", function(){ bump(-10); });
+    readout.addEventListener("click", function(){ pct = 100; apply(); });
+    if(pct !== 100) apply(); else readout.textContent = "100%";
+  })();
+  var NS = "http://www.w3.org/2000/svg";
+  var byId = {}; DATA.nodes.forEach(function(n){ byId[n.id] = n; });
+  // Current UI zoom factor (visual px / layout px). Pointer coords + getBoundingClientRect
+  // are VISUAL; offsetWidth/style.width/clientWidth are LAYOUT. Divide a pointer delta by
+  // this to convert it to the layout space that style.* writes into, so drags/resizes track
+  // the cursor exactly at any UI-size setting. Returns 1 at 100%.
+  var docEl = document.documentElement;
+  function uiZ(){ var lw = docEl.clientWidth; return lw ? (docEl.getBoundingClientRect().width / lw) : 1; }
+
+  function statusLabel(n){ return {verified:"checked correspondence",external:"external input",pending:"correspondence pending",definition:"definition",editorial:"context"}[n.status]||n.status; }
+  function role(n){
+    if(n.status==="pending" || n.status==="external") return "k-axiom";
+    if(n.reused) return "k-reused";
+    if(n.kind === "axiom-decl") return "k-axiom";
+    if(/^thm:/.test(n.id)) return "k-thm";
+    if(n.kind === "def" || n.kind === "port-check") return "k-def";
+    return "k-prop";
+  }
+  function envShort(e){ return {lemma:"Lem",theorem:"Thm",corollary:"Cor",definition:"Def",proposition:"Prop",remark:"Rem",observation:"Obs",assumption:"Assumption",claim:"Claim"}[e] || e; }
+  function nodeEyebrow(n){
+    if(n.kind === "axiom-decl") return "external input";
+    if(n.paper) return envShort(n.paper.env) + " " + n.paper.num + " · p." + n.paper.page;
+    if(/^thm:/.test(n.id)) return "theorem · in proof of Thm 1";
+    return n.kind === "def" ? "definition" : "internal lemma";
+  }
+  function nodeTitle(n){ return (n.title || (n.paper && n.paper.name) || n.id).replace(/\$/g, ""); }
+  function shortFile(f){ return f ? f.replace(/^NPCC\//,"").replace(/\.lean$/,"") : ""; }
+
+  // ================= graph build (per view) =================
+  var svg = document.getElementById("graph");
+  var root = document.createElementNS(NS,"g"); svg.appendChild(root);
+  var view = "spine";
+  // arrows route: "lean" = what the machine-checked proof is built from (default);
+  // "paper" = which statements the paper's PROSE (statement/proof text) cites.
+  var route = "lean";
+  var NW = 218, NH = 42;
+  var nodeEls = {}, edgeEls = [];
+  var selId = null;
+
+  // a node "belongs to" the paper route if it is a paper statement/def/axiom or has any
+  // paper-route edge; Lean-only intermediates (no paper presence) are hidden on that route.
+  function onPaperNode(n){ return !!(n.paper || (n.paperDeps&&n.paperDeps.length) || (n.paperDependents&&n.paperDependents.length)); }
+  function buildGraph(){
+    while(root.firstChild) root.removeChild(root.firstChild);
+    nodeEls = {}; edgeEls = [];
+    var defs=document.createElementNS(NS,"defs");defs.innerHTML='<marker id="dependency-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#8ba3cc"/></marker>';root.appendChild(defs);var gE = document.createElementNS(NS,"g"); root.appendChild(gE);
+    var gN = document.createElementNS(NS,"g"); root.appendChild(gN);
+    var nodes = view === "spine" ? DATA.nodes.filter(function(n){return n.spine;}) : DATA.nodes;
+    // On the PAPER route, hide Lean-only nodes with no paper presence (e.g. the
+    // Reduction Gap Theorem, which the Lean proof factors through but the paper never
+    // states) so the paper route reads as a clean graph of the paper's own statements.
+    if(route === "paper") nodes = nodes.filter(onPaperNode);
+    var vis = {}; nodes.forEach(function(n){ vis[n.id]=1; });
+    // Both routes use edge sets built the SAME way (transitive-reduced + spine-contracted)
+    // so they are directly comparable — Lean = machine-proof deps, paper = the paper's
+    // dependency structure (definitions via notation + \cref'd lemmas).
+    var edges = route === "paper"
+      ? (view === "spine" ? DATA.edgesPaperSpine : DATA.edgesPaperFull)
+      : (view === "spine" ? DATA.edgesSpine : DATA.edgesFull);
+    var X = function(n){ return view === "spine" ? n.sx : n.x; };
+    var Y = function(n){ return view === "spine" ? n.sy : n.y; };
+    edges.forEach(function(e){
+      var a = byId[e[0]], b = byId[e[1]]; if(!a || !b) return;
+      if(!vis[e[0]] || !vis[e[1]]) return;  // only draw edges between visible nodes
+      var p = document.createElementNS(NS,"path");
+      var x1 = X(a)+NW, y1 = Y(a)+NH/2, x2 = X(b), y2 = Y(b)+NH/2, mx = (x1+x2)/2;
+      p.setAttribute("d","M"+x1+" "+y1+" C"+mx+" "+y1+" "+mx+" "+y2+" "+x2+" "+y2);
+      p.setAttribute("class","edge");p.setAttribute("marker-end","url(#dependency-arrow)");
+      gE.appendChild(p);
+      edgeEls.push({el:p, from:e[0], to:e[1]});
+    });
+    nodes.forEach(function(n){
+      var g = document.createElementNS(NS,"g");
+      g.setAttribute("class","node "+role(n)); g.setAttribute("tabindex","0"); g.setAttribute("role","button"); g.setAttribute("aria-label",nodeTitle(n)); g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();select(n.id,true);}});
+      g.setAttribute("transform","translate("+X(n)+","+Y(n)+")");
+      var r = document.createElementNS(NS,"rect");
+      r.setAttribute("width",NW); r.setAttribute("height",NH); r.setAttribute("rx",6);
+      g.appendChild(r);
+      var t1 = document.createElementNS(NS,"text");
+      t1.setAttribute("class","l1"); t1.setAttribute("x",11); t1.setAttribute("y",16);
+      t1.textContent = nodeEyebrow(n);
+      g.appendChild(t1);
+      var t2 = document.createElementNS(NS,"text");
+      t2.setAttribute("class","l2"); t2.setAttribute("x",11); t2.setAttribute("y",32);
+      var tt = nodeTitle(n);
+      t2.textContent = tt.length > 30 ? tt.slice(0,29) + "…" : tt;
+      g.appendChild(t2);
+      g.addEventListener("click",function(ev){ ev.stopPropagation(); if(moved) return; select(n.id,false); });
+      g.addEventListener("mouseenter",function(){ if(!selId) highlight(n.id); });
+      g.addEventListener("mouseleave",function(){ if(!selId) clearHl(); });
+      var tooltip=document.createElementNS(NS,"title");tooltip.textContent=nodeTitle(n)+(n.summary?" — "+n.summary:"")+" ("+statusLabel(n)+")";g.appendChild(tooltip);gN.appendChild(g);
+      nodeEls[n.id] = g;
+    });
+    document.getElementById("s-shown").textContent = nodes.length;
+  }
+
+  // ================= pan / zoom =================
+  var tx=0, ty=0, scale=1;
+  function apply(){ root.setAttribute("transform","translate("+tx+","+ty+") scale("+scale+")"); }
+  function dims(){ return view==="spine" ? DATA.spine : DATA.full; }
+  function fit(){
+    var vw = svg.clientWidth, vh = svg.clientHeight, d = dims();
+    var sw = vw/(d.width+80), sh = vh/(d.height+80);
+    if(sw < 0.45 && sh > sw*1.6){
+      // wide ribbon: fit height, open at the foundations (left edge), pan right to the headline
+      scale = Math.max(.3, Math.min(sh, .95));
+      tx = 24; ty = (vh - d.height*scale)/2; apply();
+      return;
+    }
+    var s = Math.min(sw, sh);
+    scale = Math.max(.1, Math.min(s, 1.1));
+    tx = (vw - d.width*scale)/2; ty = (vh - d.height*scale)/2; apply();
+  }
+  // NB: do NOT setPointerCapture on the svg — in Chromium that re-targets the
+  // subsequent click to the svg and swallows clicks on the node <g> children.
+  // Track the drag on window instead, with a movement threshold to tell a
+  // click (select a node) from a drag (pan).
+  var drag = null, moved = false;
+  svg.addEventListener("pointerdown",function(e){ if(e.button && e.button!==0) return; drag={x:e.clientX,y:e.clientY,tx:tx,ty:ty}; moved=false; svg.classList.add("grabbing"); });
+  window.addEventListener("pointermove",function(e){ if(!drag) return; var Z=uiZ(), dx=(e.clientX-drag.x)/Z, dy=(e.clientY-drag.y)/Z; if(!moved && (Math.abs(dx)+Math.abs(dy))>4) moved=true; if(moved){ tx=drag.tx+dx; ty=drag.ty+dy; apply(); } });
+  window.addEventListener("pointerup",function(){ if(!drag) return; drag=null; svg.classList.remove("grabbing"); });
+  svg.addEventListener("wheel",function(e){
+    e.preventDefault();
+    var rect = svg.getBoundingClientRect(), Z = uiZ(), mx = (e.clientX-rect.left)/Z, my = (e.clientY-rect.top)/Z;
+    var f = Math.exp(-e.deltaY*0.0015), ns = Math.max(.07, Math.min(scale*f, 3));
+    tx = mx-(mx-tx)*(ns/scale); ty = my-(my-ty)*(ns/scale); scale = ns; apply();
+  },{passive:false});
+  svg.addEventListener("click",function(){ if(moved) return; if(selId){ selId=null; clearHl(); showEmpty(); } });
+  function centerOn(n){
+    var vw = svg.clientWidth, vh = svg.clientHeight;
+    var X = view==="spine" ? n.sx : n.x, Y = view==="spine" ? n.sy : n.y;
+    if(X == null){ return; }
+    var s = Math.max(scale, 1); scale = s;
+    tx = vw*0.42-(X+NW/2)*s; ty = vh/2-(Y+NH/2)*s; apply();
+  }
+
+  // ================= highlight (proof cone) =================
+  function neighborhood(id){
+    var up={}, down={}, stack, cur;
+    var kd = route==="paper" ? "paperDeps" : "deps", ku = route==="paper" ? "paperDependents" : "dependents";
+    stack=[id]; while(stack.length){ cur=stack.pop(); (byId[cur][kd]||[]).forEach(function(d){ if(!up[d]){up[d]=1;stack.push(d);} }); }
+    stack=[id]; while(stack.length){ cur=stack.pop(); (byId[cur][ku]||[]).forEach(function(d){ if(!down[d]){down[d]=1;stack.push(d);} }); }
+    return {up:up, down:down};
+  }
+  function highlight(id){
+    var nb = neighborhood(id); var keep={}; keep[id]=1;
+    Object.keys(nb.up).forEach(function(k){keep[k]=1;});
+    Object.keys(nb.down).forEach(function(k){keep[k]=1;});
+    Object.keys(nodeEls).forEach(function(nid){ nodeEls[nid].classList.toggle("dim", !keep[nid]); });
+    edgeEls.forEach(function(e){
+      var on = keep[e.from] && keep[e.to];
+      e.el.classList.remove("hl","up","dim");
+      if(!on){ e.el.classList.add("dim"); return; }
+      if(nb.up[e.to] || (e.to===id && nb.up[e.from])) e.el.classList.add("up"); else e.el.classList.add("hl");
+    });
+  }
+  function clearHl(){
+    Object.keys(nodeEls).forEach(function(nid){ nodeEls[nid].classList.remove("dim"); });
+    edgeEls.forEach(function(e){ e.el.classList.remove("hl","up","dim"); });
+  }
+
+  // ================= Lean / LaTeX rendering =================
+  // Glossary of every declaration in the compiled Lean project (extracted from
+  // source by build-glossary.py). Identifiers in rendered statements that
+  // resolve here become clickable — the term inspector shows their definition.
+  var GLOSS = JSON.parse(document.getElementById("gloss").textContent);
+  var EXPLAINERS = (function(){ try { return JSON.parse(document.getElementById("explainers").textContent); } catch(e){ return {}; } })();
+  var GD = GLOSS.decls, GB = GLOSS.builtins;
+  var leanToNode = {}; DATA.nodes.forEach(function(n){ (n.leanDeclarations||[]).forEach(function(d){leanToNode[d.name]=n.id;}); });
+  var LEANKW = {};
+  ("theorem lemma def axiom structure instance abbrev noncomputable by fun let have show match with if then else do open namespace end where deriving class Prop Type Sort exact intro obtain refine classical").split(" ").forEach(function(k){ LEANKW[k]=1; });
+  var TYNAMES = {"Nat":1,"Int":1,"Bool":1,"Real":1,"Fin":1,"Finset":1,"List":1,"Set":1,"Sum":1,"Prod":1,"Function":1,"Fintype":1};
+  function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+  // Resolve an identifier token to up to 3 glossary keys ("__b:Name" = builtin).
+  // Handles: exact fq; unique short name; dotted suffix (Params.q1 -> NPCC.Params.q1);
+  // value.method (vbp_np_hard.toVBP -> the def AND the package field);
+  // binder.method (G.IsYes -> every structure owning an IsYes).
+  // Mathlib top-level namespaces → a plain-English "operates on …" hint, so ANY
+  // library name (Finset.*, Nat.*, …) is at least generically inspectable.
+  var MATHNS = {Finset:"finite sets", Nat:"natural numbers", Int:"integers", Real:"real numbers",
+    Rat:"rational numbers", Sum:"tagged unions A ⊕ B", Prod:"pairs A × B", Function:"functions",
+    List:"lists", Set:"sets", Multiset:"multisets", Fin:"the finite index type Fin n",
+    Classical:"classical logic (choice / excluded middle)", Fintype:"finite types",
+    Equiv:"equivalences (bijections with inverse)", Subtype:"subtypes {x // p x}",
+    Order:"orders", Quot:"quotients", Option:"optional values", Finsupp:"finitely-supported functions",
+    Sigma:"dependent pairs", Embedding:"embeddings", Sym:"symmetric powers", Matrix:"matrices",
+    Or:"the logical OR (P ∨ Q)", And:"the logical AND (P ∧ Q)", Iff:"the logical iff (P ↔ Q)",
+    Exists:"existence (∃)", ExistsUnique:"unique existence (∃!)", Dvd:"divisibility (a ∣ b)",
+    Eq:"equality", Ne:"inequality (≠)", Not:"negation (¬)", HEq:"heterogeneous equality", Quotient:"quotients"};
+  // Resolve an identifier token to up to 3 glossary keys. Prefixes:
+  //   (none) = project decl / builtin ;  "__b:" = builtin ;  "__m:" = generic Mathlib name.
+  // With generic=true, unresolved names fall back to a Mathlib-namespace card, or to
+  // their trailing method (so `R.filter` resolves via `.filter`).
+  var identCache=Object.create(null),suffixIndex=Object.create(null);
+  Object.keys(GD).forEach(function(name){var p=name.split(".");for(var i=1;i<p.length-1;i++){var s=p.slice(i).join(".");(suffixIndex[s]||(suffixIndex[s]=[])).push(name);}});
+  function resolveIdent(tok, generic){
+    var cacheKey=(generic?"1:":"0:")+tok;if(identCache[cacheKey])return identCache[cacheKey];
+    if(tok.length < 2 && tok !== "D") return [];
+    var res = [];
+    function push(k){ if(k && (GD[k] || (k.slice(0,4)==="__b:" && GB[k.slice(4)]) || k.slice(0,4)==="__m:") && res.indexOf(k)<0 && res.length<3) res.push(k); }
+    push(GD[tok] ? tok : null);
+    push(GD["NPCC."+tok] ? "NPCC."+tok : null);
+    if(!res.length && tok.indexOf(".") < 0){
+      var ss = GLOSS.shorts[tok];
+      if(ss && ss.length <= 2) ss.forEach(push);
+    }
+    if(!res.length && tok.indexOf(".") >= 0){
+      var sfx = "." + tok;
+      (suffixIndex[tok]||[]).slice(0,2).forEach(push);
+    }
+    if(!res.length && tok.indexOf(".") >= 0){
+      var parts = tok.split(".");
+      var hs = GLOSS.shorts[parts[0]];
+      if(hs && hs.length === 1) push(hs[0]);
+      var mo = GLOSS.methods[parts[parts.length-1]];
+      if(mo) mo.slice(0,2).forEach(function(o){ push(o + "." + parts[parts.length-1]); });
+    }
+    if(GB[tok]) push("__b:" + tok);
+    if(!res.length && generic){
+      var p = tok.split(".");
+      if(p.length >= 2 && MATHNS[p[0]] !== undefined) push("__m:" + tok);
+      if(!res.length){ var lastSeg = p[p.length-1]; if(GB[lastSeg]) push("__b:" + lastSeg); }
+    }
+    identCache[cacheKey]=res;return res;
+  }
+  // Lean-syntax dictionary for readers who do not know Lean: every keyword /
+  // symbol below is hoverable (abridged) and clickable (full card) — s = short,
+  // l = longer explanation. Syntax tokens are NOT underlined (unlike project terms).
+  var GSYN = {
+    "def":{s:"Introduces a named definition. After ‘:’ comes its type; after ‘:=’ comes its value.",l:"Example: `def n : ℕ := 5` names the number 5. Lean checks that the defining expression has the declared type. Definitions can also contain proof terms."},
+    "theorem":{s:"A declaration of a mathematical statement and its proof.",l:"The displayed signature gives the precise claim, including its hypotheses. Read the source module for its proof and Verification and assumptions for the recorded build and manuscript correspondence."},
+    "lemma":{s:"Same as `theorem`: a proved statement (the name is just a convention for smaller results)."},
+    "axiom":{s:"A statement assumed without proof. Lean records it in the axiom footprint of dependent declarations.",l:"See Verification and assumptions for the audited scope of this source snapshot. External mathematical inputs may also be explicit theorem parameters."},
+    "structure":{s:"A record type: bundles named fields (data and/or required proofs). A value of the type supplies every field.",l:"Proof-valued fields make invalid values unrepresentable: you cannot build the record without proving the condition."},
+    "inductive":{s:"A datatype given by its constructors — every value is a finite tree of constructor applications.",l:"Example: the Protocol type has three constructors (leaf, aNode, bNode), so a protocol IS a finite binary tree of questions ending in answers."},
+    "abbrev":{s:"A transparent shorthand: identical to what it abbreviates, just shorter to write."},
+    "instance":{s:"Registers a fact for automatic lookup by the elaborator (e.g. ‘this type is finite’)."},
+    "class":{s:"A typeclass: an interface a type can implement (e.g. Fintype = ‘has finitely many elements’)."},
+    "noncomputable":{s:"The definition exists mathematically but provides no algorithm to evaluate it.",l:"Typically because it uses a least element (sInf) or a choice principle. Harmless for theorems: proofs never need to RUN the definition, only reason about it."},
+    "where":{s:"Starts the field list of a structure, or the definition body of a record value."},
+    "fun":{s:"An anonymous function: `fun x => body` is the function sending x to body."},
+    "let":{s:"Gives a local name to an expression, used in what follows."},
+    "have":{s:"Introduces an intermediate fact (with its proof) for use in the rest of the statement/proof."},
+    "show":{s:"Restates the current goal explicitly."},
+    "by":{s:"Enters tactic mode: what follows is a proof script; the kernel checks the proof object it produces."},
+    "match":{s:"Case analysis on a value — one branch per constructor pattern."},
+    "with":{s:"Separates the scrutinee from the branches in a `match` (and names hypotheses elsewhere)."},
+    "if":{s:"Conditional expression."},"then":{s:"Conditional expression."},"else":{s:"Conditional expression."},
+    "Prop":{s:"The type of propositions — statements that can be proved or disproved."},
+    "Type":{s:"A universe of types. `Type*` means ‘any universe’, i.e. maximal generality."},
+    "Sort":{s:"The ladder containing Prop and the Type universes."},
+    "Fintype":{s:"Typeclass: the type has finitely many elements (enables counting via Fintype.card)."},
+    "DecidableEq":{s:"Typeclass: equality of these values can be decided by computation (needed to filter/count)."},
+    "Sum.elim":{s:"Case-split on a tagged union: give one function for left-tagged values and one for right-tagged values."},
+    "∀":{s:"‘for all’ — the statement holds for every value of the quantified variable."},
+    "∃":{s:"‘there exists’ — some value of the variable makes the statement true."},
+    "∧":{s:"‘and’ — both sides hold."},
+    "∨":{s:"‘or’ — at least one side holds."},
+    "¬":{s:"‘not’."},
+    "↔":{s:"‘if and only if’ — the two sides are equivalent."},
+    "→":{s:"Between propositions: implies. Between types: a function from the left type to the right.",l:"`f : X → Y → Bool` reads: f takes an X and a Y and returns a Boolean — exactly a matrix entry function."},
+    "≤":{s:"less than or equal."},"≥":{s:"greater than or equal."},"≠":{s:"not equal."},
+    "∈":{s:"‘is an element of’."},"⊆":{s:"‘is a subset of’."},
+    "×":{s:"Pair type: X × Y is the type of ordered pairs (x, y). (Numeric multiplication is written *, not ×.)"},
+    "⊕":{s:"Tagged union type: a value comes from the left type OR the right type, and remembers which side.",l:"Unlike a plain set union, the tag is part of the value — `Sum.elim` uses it to case-split. M₄’s rows are R3 ⊕ Fin n: template rows vs item rows."},
+    "ℕ":{s:"The natural numbers 0, 1, 2, …"},
+    "ℝ":{s:"The real numbers."},
+    ":=":{s:"‘is defined as’ — binds the name to the value (or the theorem to its proof)."},
+    "≃":{s:"An equivalence: an explicit one-to-one correspondence together with its inverse."},
+    "⌈":{s:"⌈r⌉₊ is the ceiling of the real r as a natural number: round up, floored at 0."},
+    "⌉₊":{s:"⌈r⌉₊ is the ceiling of the real r as a natural number: round up, floored at 0."},
+    "⌉":{s:"⌈r⌉₊ is the ceiling of the real r as a natural number: round up, floored at 0."},
+    // ---- proof tactics (they appear inside displayed `:= by …` definition bodies) ----
+    "rfl":{s:"A proof by reflexivity: the two sides are equal (often definitionally)."},
+    "exact":{s:"Tactic: close the goal by supplying a term of exactly the right type."},
+    "intro":{s:"Tactic: introduce a variable or hypothesis (peel off a ∀ or →)."},
+    "obtain":{s:"Tactic: destructure an existence / conjunction, naming its parts."},
+    "refine":{s:"Tactic: give a partial proof term with holes (?_) to fill next."},
+    "apply":{s:"Tactic: reduce the goal by applying a lemma or hypothesis."},
+    "rw":{s:"Tactic: rewrite the goal using an equation — replace equals by equals."},
+    "simp":{s:"Tactic: simplify the goal using a database of rewrite rules."},
+    "simpa":{s:"Tactic: simplify the goal (and, with `using e`, the term `e`) by `simp`, then close the goal by matching them."},
+    "dsimp":{s:"Tactic: simplify using only definitional (rfl-provable) rewrites — changes the goal up to definitional equality."},
+    "unfold":{s:"Tactic: replace a definition by its body."},
+    "omega":{s:"Tactic: automatically decides linear arithmetic over integers/naturals."},
+    "norm_num":{s:"Tactic: evaluate and verify concrete numeric goals."},
+    "push_cast":{s:"Tactic: push numeric coercions (ℕ→ℝ, …) inward to simplify."},
+    "ring":{s:"Tactic: prove ring identities by normalizing both sides."},
+    "field_simp":{s:"Tactic: clear denominators in a field expression."},
+    "positivity":{s:"Tactic: prove a goal of the form 0 < e, 0 ≤ e, or e ≠ 0 from the structure of e."},
+    "gcongr":{s:"Tactic: prove an inequality by monotonicity / congruence of its parts."},
+    "linarith":{s:"Tactic: derive the goal from linear arithmetic over an ordered field."},
+    "nlinarith":{s:"Tactic: `linarith` with extra nonlinear hints."},
+    "constructor":{s:"Tactic: apply the goal’s (first) constructor, leaving its arguments as new goals — for an ∧ this yields the two conjuncts to prove.",l:"For a multi-constructor goal it commits to the FIRST constructor: on an ∨ goal it proves the left side (Or.inl), not both — use `left`/`right` or `rcases` to choose or case-split."},
+    "cases":{s:"Tactic: case-split on a value or hypothesis."},
+    "rcases":{s:"Tactic: recursively destructure a hypothesis into named pieces."},
+    "subst":{s:"Tactic: substitute a variable via an equation and eliminate it."},
+    "convert":{s:"Tactic: close the goal up to differences, which become new subgoals."},
+    "congr":{s:"Tactic: reduce an equality of applications to equalities of the parts."},
+    "ext":{s:"Tactic: prove two functions/sets equal by comparing them pointwise."},
+    "calc":{s:"A calculation block: a chain of steps (=, ≤, …) proving how the endpoints relate."},
+    "decide":{s:"Tactic: settle a decidable proposition by computation."},
+    "trivial":{s:"Tactic: close a goal that is immediate."},
+    "classical":{s:"Tactic: enable classical reasoning (excluded middle / choice) in this proof."},
+    "using":{s:"Supplies the term/lemmas a tactic should finish with, e.g. `simpa using h`."},
+    "at":{s:"Directs a tactic to act on a hypothesis, e.g. `rw [h] at hyp`."},
+    "forall":{s:"‘for all’ (the ASCII form of ∀) — the statement holds for every value of the bound variable."}
+  };
+  function ops(s){
+    return s.replace(/(:=|-&gt;|→|↔|≃|≤|≥|≠|∧|∨|¬|∀|∃|⊆|∈|×|⊕|ℕ|ℝ|⌉₊|⌈|⌉|⟺)/g, function(_, m){
+      return '<span class="op"'+(GSYN[m] ? ' data-k="'+m+'"' : '')+'>'+m+'</span>';
+    });
+  }
+  function hlLean(src){
+    if(!src) return "";
+    return src.split("\n").map(function(line){
+      var cm = "";
+      var ci = line.indexOf("--");
+      if(ci >= 0){ cm = '<span class="cm">'+esc(line.slice(ci))+'</span>'; line = line.slice(0, ci); }
+      var out = "", re = /[A-Za-z_][A-Za-z0-9_']*(?:\.[A-Za-z_][A-Za-z0-9_']*)*/g, last = 0, m;
+      while((m = re.exec(line))){
+        out += ops(esc(line.slice(last, m.index)));
+        var tok = m[0];
+        var nc = line.charCodeAt(re.lastIndex);           // subscripted names (D₁) are
+        var sub = (nc >= 0x2080 && nc <= 0x209C);         // NOT the glossary identifier
+        var tyc = TYNAMES[tok.split(".")[0]] ? " ty" : "";
+        var kAttr = GSYN[tok] ? ' data-k="'+esc(tok)+'"' : '';
+        if(LEANKW[tok]) out += '<span class="kw"'+kAttr+'>'+tok+'</span>';
+        else if(sub) out += (tyc ? '<span class="ty">'+esc(tok)+'</span>' : esc(tok));   // subscripted name — leave plain
+        else if(resolveIdent(tok, false).length) out += '<span class="idl'+tyc+'" data-t="'+esc(tok)+'">'+esc(tok)+'</span>';
+        else if(tok.indexOf(".") >= 0){
+          // chained / method name that isn't one known unit: make each meaningful segment clickable
+          var segs = tok.split("."), acc = [];
+          for(var pi=0; pi<segs.length; pi++){
+            var seg = segs[pi], cum = segs.slice(0,pi+1).join("."), hd = segs[0]+"."+seg, key = null;
+            // prefer a SPECIFIC card (head.method, then cumulative, then segment); fall back to generic
+            if(pi>0 && resolveIdent(hd, false).length) key = hd;
+            else if(pi>0 && resolveIdent(cum, false).length) key = cum;
+            else if(resolveIdent(seg, false).length) key = seg;
+            else if(pi>0 && resolveIdent(cum, true).length) key = cum;
+            else if(pi>0 && resolveIdent(hd, true).length) key = hd;
+            else if(resolveIdent(seg, true).length) key = seg;
+            var styc = TYNAMES[seg] ? " ty" : "";
+            acc.push(key ? '<span class="idl'+styc+'" data-t="'+esc(key)+'">'+esc(seg)+'</span>'
+                         : (styc ? '<span class="ty">'+esc(seg)+'</span>' : esc(seg)));
+          }
+          out += acc.join(".");
+        }
+        else if(resolveIdent(tok, true).length) out += '<span class="idl'+tyc+'" data-t="'+esc(tok)+'">'+esc(tok)+'</span>';
+        else if(tyc || kAttr) out += '<span class="'+(tyc?"ty":"kw")+'"'+kAttr+'>'+esc(tok)+'</span>';
+        else out += esc(tok);
+        last = re.lastIndex;
+      }
+      out += ops(esc(line.slice(last)));
+      return out + cm;
+    }).join("\n");
+  }
+  // strip docstring block for display compactness? keep — it explains. Keep as-is but grey docstrings:
+  function hlLeanWithDoc(src){
+    if(!src) return "";
+    var parts = src.split(/(\/--[\s\S]*?-\/)/);
+    return parts.map(function(p){
+      if(/^\/--/.test(p)) return '<span class="cm">'+esc(p)+'</span>';
+      return hlLean(p);
+    }).join("");
+  }
+  // ---- per-block "what does this do?" explainers (right-gutter ? icons) ----
+  function attrEsc(s){ return esc(s).replace(/"/g,"&quot;"); }
+  // Render the Lean statement into the panel: one scrolling <pre> + (if the node has
+  // explainers) a fixed right gutter of ? icons that scroll VERTICALLY with the code
+  // but never horizontally — so there is exactly one scrollbar for the whole box.
+  function showLean(id, n){
+    var el = document.getElementById(id); if(!el) return;
+    var src = (n && n.leanStmt) || "— no registered statement —";
+    var blocks = ((n && EXPLAINERS[n.id]) || []).filter(function(b){ return b && Number.isInteger(b.line) && b.line>=0 && b.concept; }).sort(function(a,b){ return a.line-b.line; });
+    el.classList.toggle("hasgut", blocks.length>0);
+    el.innerHTML = '<pre class="code ccode">'+hlLeanWithDoc(src)+'</pre>' + (blocks.length ? '<div class="cgut"><div class="cgi"></div></div>' : '');
+    if(blocks.length) placeGutter(el, blocks);
+  }
+  function placeGutter(el, blocks){
+    var ccode = el.querySelector('.ccode'), cgi = el.querySelector('.cgi');
+    if(!ccode || !cgi) return;
+    var cs = getComputedStyle(ccode);
+    var lh = parseFloat(cs.lineHeight); if(!lh || isNaN(lh)) lh = (parseFloat(cs.fontSize)||11.5)*1.55;
+    var pt = parseFloat(cs.paddingTop) || 12;
+    cgi.innerHTML = '';
+    blocks.forEach(function(b){
+      var btn = document.createElement('button');
+      btn.className='lq'; btn.textContent='?'; btn.tabIndex=0;
+      btn.setAttribute('aria-label','Explain this block');
+      btn.dataset.label = b.label||''; btn.dataset.concept = b.concept;
+      btn.style.top = Math.round(pt + b.line*lh + (lh-18)/2) + 'px';
+      cgi.appendChild(btn);
+    });
+    ccode.onscroll = function(){ cgi.style.transform = 'translateY('+(-ccode.scrollTop)+'px)'; };
+  }
+  // shared floating popover for the ? icons
+  var lqPop=null, lqPinned=false;
+  function ensureLqPop(){ if(lqPop) return lqPop; lqPop=document.createElement("div"); lqPop.id="lqpop"; lqPop.style.display="none"; document.body.appendChild(lqPop); return lqPop; }
+  function showLqPop(el){
+    var p=ensureLqPop();
+    p.innerHTML=(el.dataset.label?'<div class="lqp-h">'+esc(el.dataset.label)+'</div>':"")+'<div class="lqp-b">'+esc(el.dataset.concept)+'</div>';
+    p.style.display="block";
+    var r=el.getBoundingClientRect(), pw=Math.min(340, window.innerWidth-24);
+    p.style.width=pw+"px";
+    var left=Math.min(r.right-pw, window.innerWidth-pw-10); if(left<8) left=8;
+    var top=r.bottom+6;
+    if(top+p.offsetHeight>window.innerHeight-8) top=Math.max(8, r.top-p.offsetHeight-6);
+    p.style.left=left+"px"; p.style.top=top+"px";
+  }
+  function hideLqPop(force){ if(lqPop && (force||!lqPinned)){ lqPop.style.display="none"; if(force) lqPinned=false; } }
+  document.addEventListener("mouseover", function(e){ var q=e.target.closest&&e.target.closest(".lq"); if(q && !lqPinned) showLqPop(q); });
+  document.addEventListener("mouseout", function(e){ var q=e.target.closest&&e.target.closest(".lq"); if(q && !lqPinned) hideLqPop(); });
+  document.addEventListener("click", function(e){ var q=e.target.closest&&e.target.closest(".lq"); if(q){ e.stopPropagation(); if(lqPinned){ hideLqPop(true); } else { lqPinned=true; showLqPop(q); } } else if(!(e.target.closest&&e.target.closest("#lqpop"))){ hideLqPop(true); } });
+
+  // ================= term inspector: draggable definition windows =================
+  var gwrap = document.getElementById("gwrap"), ghover = document.getElementById("ghover");
+  var gwins = [], gz = 901;
+  function kindLabel(k){ return {field:"structure field", mathlib:"Mathlib / core"}[k] || k; }
+  function gEntryHTML(key){
+    if(key.slice(0,4) === "__m:"){         // generic Mathlib-namespace card
+      var nm = key.slice(4), head = nm.split(".")[0], hint = MATHNS[head] || "the standard library";
+      return '<div class="gent"><div class="gkind"><span class="badge kind">Mathlib / core</span>' +
+        '<span class="badge file">' + esc(nm) + '</span></div>' +
+        '<div class="gplain">A standard <b>Mathlib</b> library name operating on ' + esc(hint) +
+        '. It is part of the proof plumbing (not notation specific to this paper); the statement it helps prove is what matters.</div></div>';
+    }
+    if(key.slice(0,4) === "__b:"){
+      var b = GB[key.slice(4)];
+      return '<div class="gent">' +
+        '<div class="gkind"><span class="badge kind">' + kindLabel(b.kind) + '</span>' +
+        '<span class="badge file">' + esc(key.slice(4)) + '</span></div>' +
+        (b.plain ? '<div class="gplain">' + b.plain + '</div>' : '') + '</div>';
+    }
+    var e = GD[key]; if(!e) return "";
+    var h = '<div class="gent">';
+    h += '<div class="gkind"><span class="badge kind">' + kindLabel(e.kind) + '</span>';
+    if(e.kind === "axiom") h += '<span class="badge ax">cited axiom — read this, it is assumed</span>';
+    h += '<span class="badge file">' + esc(e.file) + ":" + e.line + '</span></div>';
+    if(e.plain) h += '<div class="gplain">' + e.plain + '</div>';
+    if(e.how) h += '<div class="ghow"><span class="ghow-t">what the code does, and how</span>' + e.how + '</div>';
+    h += '<pre class="code">' + hlLean(e.code || "") + '</pre>';
+    if(e.sourceUrl) h += '<button class="source-link" data-module="'+attrEsc(e.file)+'" data-line="'+e.line+'">Read full module at line '+e.line+' →</button>';
+    if(e.fields && e.fields.length){
+      h += '<div class="gchips"><span class="gc-t">fields — click to inspect</span>' + e.fields.map(function(f){
+        return '<span class="gchip" data-push="' + esc(key + "." + f) + '">' + esc(f) + '</span>';
+      }).join("") + '</div>';
+    }
+    // the raw source docstring is the auditor's faithfulness note — useful, but
+    // tucked away so the reader-facing explanation stays front and center
+    if(e.doc) h += '<div class="gdt">source docstring (auditor’s faithfulness note)</div><div class="gdoc" style="display:none">' + esc(e.doc) + '</div>';
+    var meta = [];
+    if(e.owner) meta.push('<span class="gchip" data-push="' + esc(e.owner) + '">↰ ' + esc(e.owner.split(".").pop()) + ' (owner)</span>');
+    if(leanToNode[key]) meta.push('<span class="gnode" data-node="' + esc(leanToNode[key]) + '">this is a tracked statement — open its node →</span>');
+    if(meta.length) h += '<div class="gmeta">' + meta.join("") + '</div>';
+    return h + '</div>';
+  }
+  function gSynHTML(tok){
+    var s = GSYN[tok];
+    return '<div class="gent"><div class="gkind"><span class="badge kind">Lean syntax</span></div>' +
+      '<div class="gplain">' + esc(s.s) + '</div>' +
+      (s.l ? '<div class="ghow"><span class="ghow-t">more</span>' + esc(s.l) + '</div>' : '') + '</div>';
+  }
+  function bringFront(el){ el.style.zIndex = ++gz; }
+  function closeWin(w){ w.el.remove(); var i = gwins.indexOf(w); if(i >= 0) gwins.splice(i, 1); }
+  function openWin(tok, px, py){
+    var ex = gwins.find(function(w){ return w.tok === tok; });
+    if(ex){ bringFront(ex.el); ex.el.classList.remove("flash"); void ex.el.offsetWidth; ex.el.classList.add("flash"); return; }
+    var hits = resolveIdent(tok, true);
+    var body = hits.length
+      ? (hits.length > 1 ? '<div class="gdoc" style="font-style:normal">' + hits.length + ' possible matches — inspect the full names:</div>' : '') + hits.map(gEntryHTML).join("")
+      : (GSYN[tok] ? gSynHTML(tok)
+                   : '<div class="gdoc">no definition found for “' + esc(tok) + '”.</div>');
+    var el = document.createElement("div");
+    el.className = "gwin";
+    el.innerHTML = '<div class="gwin-h"><div class="t">' + esc(tok) + '</div><button class="gw-close" title="close (Esc closes the front window)">✕</button></div>' +
+                   '<div class="gwin-b">' + body + '</div>' +
+                   '<div class="gwin-rz" title="drag to resize"></div>';
+    gwrap.appendChild(el);
+    // work in LAYOUT px: viewport = docEl.client{Width,Height}; click coords are visual -> /Z
+    var Z = uiZ(), vw = docEl.clientWidth, vh = docEl.clientHeight;
+    var W = Math.min(470, vw * 0.92);
+    var x = (px != null) ? px / Z + 16 : (vw - W - 18 - gwins.length * 28);
+    var y = (py != null) ? py / Z - 12 : (64 + gwins.length * 28);
+    el.style.left = Math.max(8, Math.min(x, vw - W - 8)) + "px";
+    el.style.top = Math.max(8, Math.min(y, vh - el.offsetHeight - 8)) + "px";
+    bringFront(el);
+    var w = { tok: tok, el: el };
+    gwins.push(w);
+    if(gwins.length > 8) closeWin(gwins[0]);
+    el.querySelector(".gw-close").addEventListener("click", function(){ closeWin(w); });
+    el.addEventListener("pointerdown", function(){ bringFront(el); });
+    // drag by the header (window-level move/up listeners; no pointer capture)
+    var hd = el.querySelector(".gwin-h");
+    hd.addEventListener("pointerdown", function(e){
+      if(e.target.closest("button")) return;
+      var sx = e.clientX, sy = e.clientY, ox = el.offsetLeft, oy = el.offsetTop, Zd = uiZ();
+      function mv(ev){
+        el.style.left = Math.max(-W + 70, Math.min(ox + (ev.clientX - sx) / Zd, docEl.clientWidth - 46)) + "px";
+        el.style.top  = Math.max(0, Math.min(oy + (ev.clientY - sy) / Zd, docEl.clientHeight - 40)) + "px";
+      }
+      function up(){ window.removeEventListener("pointermove", mv); window.removeEventListener("pointerup", up); }
+      window.addEventListener("pointermove", mv); window.addEventListener("pointerup", up);
+      e.preventDefault();
+    });
+    // resize by the bottom-right grip (same zoom-aware LAYOUT-px math as the drag)
+    var rz = el.querySelector(".gwin-rz");
+    rz.addEventListener("pointerdown", function(e){
+      e.stopPropagation(); bringFront(el);
+      var sx = e.clientX, sy = e.clientY, Zr = uiZ();
+      var sw = el.offsetWidth, sh = el.offsetHeight, ol = el.offsetLeft, ot = el.offsetTop;
+      // pin the current rendered size, THEN switch to fill mode (order matters: adding
+      // .rsz first would collapse the auto-height body before we captured sh).
+      el.style.width = sw + "px"; el.style.height = sh + "px";
+      el.style.maxHeight = "none";  // release the initial content cap so it can grow
+      el.classList.add("rsz");      // body now fills the explicit height and scrolls
+      function mv(ev){
+        el.style.width  = Math.max(280, Math.min(sw + (ev.clientX - sx) / Zr, docEl.clientWidth  - ol - 8)) + "px";
+        el.style.height = Math.max(120, Math.min(sh + (ev.clientY - sy) / Zr, docEl.clientHeight - ot - 8)) + "px";
+      }
+      function up(){ window.removeEventListener("pointermove", mv); window.removeEventListener("pointerup", up); }
+      window.addEventListener("pointermove", mv); window.addEventListener("pointerup", up);
+      e.preventDefault();
+    });
+  }
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && gwins.length){
+      var top = gwins.reduce(function(a, b){ return (+a.el.style.zIndex || 0) > (+b.el.style.zIndex || 0) ? a : b; });
+      closeWin(top); e.stopPropagation(); e.preventDefault();
+    }
+  }, true);
+  // ---- hover card: abridged definition on mouse-over (identifiers AND Lean syntax)
+  var hoverTimer = null;
+  function hoverInfo(el){
+    var tok = el.dataset.t, isSyn = !tok;
+    if(isSyn) tok = el.dataset.k;
+    if(!isSyn){
+      var hits = resolveIdent(tok, true);
+      if(hits.length){
+        var k = hits[0], e;
+        if(k.slice(0,4) === "__m:"){
+          var head = k.slice(4).split(".")[0];
+          e = { kind: "mathlib", plain: esc("A standard Mathlib library name (operates on " + (MATHNS[head] || "the library") + ").") };
+        } else if(k.slice(0,4) === "__b:"){ e = GB[k.slice(4)]; }
+        else { e = GD[k]; }
+        // e.plain / e.how are already MathML-bearing HTML; e.doc / e.code are raw
+        var html = e.plain || e.how || (e.doc ? esc(e.doc) : "") || (e.code ? esc(e.code.split("\n")[0]) : "");
+        return { title: tok, kind: kindLabel(e.kind || "mathlib"), html: html, more: hits.length > 1 };
+      }
+    }
+    var s = GSYN[tok];
+    if(s) return { title: tok, kind: "Lean syntax", html: esc(s.s), more: false };
+    return null;
+  }
+  function hideHover(){ clearTimeout(hoverTimer); ghover.style.display = "none"; }
+  document.addEventListener("pointerover", function(e){
+    var el = e.target.closest ? e.target.closest(".idl,[data-k]") : null;
+    if(!el){ hideHover(); return; }
+    clearTimeout(hoverTimer);
+    hoverTimer = setTimeout(function(){
+      var h = hoverInfo(el); if(!h) return;
+      ghover.innerHTML = '<b>' + esc(h.title) + '</b><span class="hk">' + esc(h.kind) + '</span>' +
+        '<div class="ghbody">' + h.html + '</div>' +
+        '<div class="ghint"></div>';
+      ghover.style.display = "block";
+      // fade + "full definition" hint only when the text is actually clipped
+      var gb = ghover.querySelector(".ghbody"), clipped = gb.scrollHeight > gb.clientHeight + 1;
+      gb.classList.toggle("clipped", clipped);
+      ghover.querySelector(".ghint").textContent = (clipped || h.more)
+        ? ("click for the full definition" + (h.more ? " — multiple meanings" : ""))
+        : "click to open in a window";
+      // r is VISUAL; ghover is position:fixed so its left/top are LAYOUT px -> /Z
+      var Zh = uiZ(), r = el.getBoundingClientRect(), vw = docEl.clientWidth, vh = docEl.clientHeight;
+      var x = Math.min(r.left / Zh, vw - 344), y = r.bottom / Zh + 7;
+      ghover.style.left = Math.max(6, x) + "px"; ghover.style.top = "0px";
+      var hh = ghover.offsetHeight;
+      if(y + hh > vh - 10) y = r.top / Zh - hh - 7;
+      ghover.style.top = y + "px";
+    }, 120);
+  }, true);
+  document.addEventListener("pointerout", function(e){
+    var el = e.target.closest ? e.target.closest(".idl,[data-k]") : null;
+    if(el) hideHover();
+  }, true);
+  document.addEventListener("scroll", hideHover, true);
+  // ---- one delegated click handler: node links, doc toggles, and every openable token
+  document.addEventListener("click", function(e){
+    hideHover();
+    var nd = e.target.closest ? e.target.closest(".gnode") : null;
+    if(nd){
+      var ov = document.getElementById("overlay");
+      if(ov.classList.contains("on")) ov.classList.remove("on");
+      select(nd.dataset.node, true);
+      return;
+    }
+    var dt = e.target.closest ? e.target.closest(".gdt") : null;
+    if(dt){
+      var nx = dt.nextElementSibling;
+      nx.style.display = nx.style.display === "none" ? "block" : "none";
+      dt.classList.toggle("open");
+      return;
+    }
+    var t = e.target.closest ? e.target.closest(".idl,[data-push],[data-push0],[data-k]") : null;
+    if(t){
+      e.stopPropagation();
+      openWin(t.dataset.t || t.dataset.push || t.dataset.push0 || t.dataset.k, e.clientX, e.clientY);
+    }
+  });
+  // key-term chips + "what to check" trust panel, rendered under both inspectors
+  function statementTerms(n){
+    var seen = {}, out = [];
+    (n.leanStmt || "").replace(/\/--[\s\S]*?-\//g, "").replace(/--[^\n]*/g, "")
+      .replace(/[A-Za-z_][A-Za-z0-9_']*(?:\.[A-Za-z_][A-Za-z0-9_']*)*/g, function(tok){
+        if(!seen[tok] && !LEANKW[tok] && resolveIdent(tok).length){ seen[tok] = 1; out.push(tok); }
+        return tok;
+      });
+    return out.slice(0, 14);
+  }
+  function renderTermExtras(n, prefix){
+    var chips = document.getElementById(prefix + "-chips"), trust = document.getElementById(prefix + "-trust");
+    if(!chips || !trust) return;
+    var terms = statementTerms(n);
+    chips.innerHTML = terms.length
+      ? '<span class="gc-t">terms in this statement — click for the definition</span>' + terms.map(function(t){
+          return '<span class="gchip" data-push0="' + esc(t) + '">' + esc(t) + '</span>';
+        }).join("")
+      : "";
+    var tc = GLOSS.trust[n.id];
+    trust.innerHTML = tc && tc.length
+      ? '<div class="trustcard"><h4>Check these translations by hand</h4>' +
+        '<div class="tc-intro">The proof below this line is machine-checked by Lean’s kernel. To believe the theorem says what the paper claims, a reader only needs to check that these definitions mean what the paper means — click each one:</div>' +
+        '<ol>' + tc.map(function(it){
+          var e = GD[it.term] || {};
+          return '<li><b data-push0="' + esc(it.term) + '">' + esc(it.term.split(".").slice(-2).join(".")) + '</b> — ' + it.why + '</li>';
+        }).join("") + '</ol></div>'
+      : "";
+  }
+  function prettyTex(t){
+    if(!t) return "";
+    return t
+      .replace(/\\begin\{(lemma|theorem|corollary|proposition|definition|remark)\*?\}(\[[^\]]*\])?/g, function(_,e,ti){ return (ti? ti.slice(1,-1)+" — ":""); })
+      .replace(/\\end\{[a-z*]+\}/g,"")
+      .replace(/\\label\{[^}]*\}/g,"")
+      .replace(/\\begin\{(align\*?|equation\*?|gather\*?)\}/g,"").replace(/\\end\{(align\*?|equation\*?|gather\*?)\}/g,"")
+      .replace(/\\begin\{enumerate\}(\[[^\]]*\])?/g,"").replace(/\\end\{enumerate\}/g,"")
+      .replace(/\\item/g,"\n •")
+      .replace(/\\texorpdfstring\{([^{}]*)\}\{[^{}]*\}/g,"$1")
+      .replace(/\\Cref\{([^}]*)\}/g,"[$1]").replace(/\\cref\{([^}]*)\}/g,"[$1]")
+      .replace(/\\(?:mathrm|mathsf|textsf|text|mathit|operatorname)\{([^{}]*)\}/g,"$1")
+      .replace(/\\comp\{([^{}]*)\}/g,"comp($1)")
+      .replace(/\\ceil\{([^{}]*)\}/g,"⌈$1⌉").replace(/\\floor\{([^{}]*)\}/g,"⌊$1⌋")
+      .replace(/\\le\b/g,"≤").replace(/\\ge\b/g,"≥").replace(/\\ne(q)?\b/g,"≠")
+      .replace(/\\in\b/g,"∈").replace(/\\subseteq\b/g,"⊆").replace(/\\times\b/g,"×")
+      .replace(/\\sqcup\b/g,"⊔").replace(/\\cup\b/g,"∪").replace(/\\cap\b/g,"∩")
+      .replace(/\\infty\b/g,"∞").replace(/\\alpha\b/g,"α").replace(/\\beta\b/g,"β")
+      .replace(/\\gamma\b/g,"γ").replace(/\\delta\b/g,"δ").replace(/\\eta\b/g,"η")
+      .replace(/\\sigma\b/g,"σ").replace(/\\rho\b/g,"ρ").replace(/\\nu\b/g,"ν").replace(/\\ell\b/g,"ℓ")
+      .replace(/\\lVert/g,"‖").replace(/\\rVert/g,"‖").replace(/\\sum\b/g,"Σ")
+      .replace(/\\left|\\right/g,"").replace(/\\bigl|\\bigr|\\Bigl|\\Bigr/g,"")
+      .replace(/\\,|\\;|\\:|\\!/g," ").replace(/\\qquad|\\quad/g,"   ")
+      .replace(/\\\\/g,"\n").replace(/[\$]/g,"")
+      .replace(/\\([A-Z][a-zA-Z]*)\b/g,"$1").replace(/\\([a-z][a-zA-Z]*)\b/g,"$1")
+      .replace(/[{}]/g,"")
+      .split("\n").map(function(l){return l.replace(/\s+$/,"");}).join("\n")
+      .replace(/\n{3,}/g,"\n\n").trim();
+  }
+
+  // ================= PDF tracer =================
+  var TRACE = JSON.parse(document.getElementById("trace").textContent);
+  var overlay = document.getElementById("overlay");
+  var tracePages = document.getElementById("tracePages");
+  var tracepane = document.getElementById("tracepane");
+  var plist = document.getElementById("plist");
+  var pageEls = {}, hlEls = {}, traceBuilt = false, selStmt = null;
+
+  function pageSrc(p){ return (PDF_MODE === "local") ? p.file : p.data; }
+  function hlRGB(n){
+    if(n.status==="pending" || n.status==="external") return "224,164,88";
+    if(n.reused) return "72,199,214";
+    return n.kind==="axiom-decl" ? "224,164,88" : (/^thm:/.test(n.id) ? "126,224,160" :
+      (n.kind==="def"||n.kind==="port-check" ? "110,168,254" : "75,191,115"));
+  }
+  function buildTracer(){
+    if(traceBuilt) return; traceBuilt = true;
+    var byPage = {};
+    TRACE.locations.forEach(function(b){ (byPage[b.page]=byPage[b.page]||[]).push(b); });
+    var gap = [];   // consecutive pages we cannot show (hosted variant: no inline data)
+    function flushGap(){
+      if(!gap.length) return;
+      var d = document.createElement("div"); d.className = "tgap";
+      d.textContent = "· · ·  page" + (gap.length>1 ? "s "+gap[0]+"–"+gap[gap.length-1] : " "+gap[0]) +
+        " — no formalized statements (see the repo copy for the full paper)  · · ·";
+      tracePages.appendChild(d); gap = [];
+    }
+    TRACE.pages.forEach(function(p){
+      var src = pageSrc(p);
+      if(!src){ gap.push(p.page); return; }
+      flushGap();
+      var wrap = document.createElement("div"); wrap.className = "tpage"; wrap.dataset.page = p.page;
+      // aspect-ratio (NOT padding-top: padding-% resolves against the PARENT's
+      // width, which broke highlight alignment at every zoom except exact fit)
+      wrap.style.aspectRatio = p.w + " / " + p.h;
+      var pn = document.createElement("div"); pn.className = "pnum"; pn.textContent = "PDF page " + p.page;pn.title="PDF page numbers include the title page."; wrap.appendChild(pn);
+      var img = document.createElement("img"); img.loading = "lazy"; img.alt = "PDF page " + p.page;
+      img.style.cssText = "position:absolute;inset:0;width:100%;height:100%";
+      img.src = src; wrap.appendChild(img);
+      (byPage[p.page]||[]).forEach(function(b){
+        var id=b.id, n = byId[id]; if(!n) return;
+        var h = document.createElement("div"); h.className = "thl"; h.dataset.id = id; h.tabIndex=0; h.setAttribute("role","button"); h.setAttribute("aria-label",nodeTitle(n)); h.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();selectStmt(id,false);}});
+        var c = hlRGB(n);
+        h.style.left = (b.x0*100)+"%"; h.style.top = (b.y0*100)+"%";
+        h.style.width = ((b.x1-b.x0)*100)+"%"; h.style.height = ((b.y1-b.y0)*100)+"%";
+        h.style.borderColor = "rgba("+c+",.92)"; h.style.background = "rgba("+c+",.14)";
+        var chip = document.createElement("span"); chip.className = "chip"; chip.style.background = "rgba("+c+",.95)";
+        chip.textContent = (n.paper ? envShort(n.paper.env)+" "+n.paper.num+"  " : "") + nodeTitle(n);
+        h.appendChild(chip);
+        h.addEventListener("click", function(e){ e.stopPropagation(); selectStmt(id, false); });
+        wrap.appendChild(h); if(!hlEls[id]) hlEls[id] = h;
+      });
+      tracePages.appendChild(wrap); pageEls[p.page] = wrap;
+    });
+    // legend in the tracer head
+    var tk = document.getElementById("tkey");
+    [["75,191,115","lemma"],["110,168,254","definition"],["126,224,160","theorem"],["224,164,88","pending / external"]].forEach(function(it){
+      var k = document.createElement("span"); k.className="k";
+      var kb = document.createElement("span"); kb.className="kb"; kb.style.borderColor="rgb("+it[0]+")"; kb.style.background="rgba("+it[0]+",.2)";
+      k.appendChild(kb); k.appendChild(document.createTextNode(it[1])); tk.appendChild(k);
+    });
+    var nBox = Object.keys(TRACE.boxes).length;
+    var nReused = Object.keys(TRACE.boxes).filter(function(id){ return byId[id] && byId[id].reused; }).length;
+    document.getElementById("o-sub").textContent = "v42 · " + nBox + " highlighted statements · amber means pending or external";
+  }
+  function selectStmt(id, scroll){
+    var n = byId[id]; if(!n) return; selStmt = id;
+    document.querySelectorAll(".thl").forEach(function(h){h.classList.toggle("sel",h.dataset.id===id);});
+    var h = hlEls[id];
+    if(h){ h.classList.remove("pulse"); void h.offsetWidth; h.classList.add("pulse");
+      if(scroll !== false) h.scrollIntoView({block:h.getBoundingClientRect().height>document.getElementById("tracepane").clientHeight*.75?"start":"center", behavior:"smooth"}); }
+    markPlist(id);
+    document.getElementById("tdEmpty").style.display = "none";
+    document.getElementById("tdOn").classList.add("on");
+    document.getElementById("td-title").textContent = nodeTitle(n);
+    document.getElementById("td-id").textContent = n.id;
+    document.getElementById("td-lean").textContent = n.lean || "";
+    var bd = document.getElementById("td-badges"); bd.innerHTML = "";
+    function badge(cls,txt){ var s=document.createElement("span"); s.className="badge "+cls; s.textContent=txt; bd.appendChild(s); }
+    if(n.paper) badge("file", envShort(n.paper.env)+" "+n.paper.num+" · p."+n.paper.page);
+    badge(n.status==="verified"?"status":"ax",statusLabel(n));
+    badge("kind", n.kind);
+    if(n.reused) badge("reused","reused · M&S");
+    var tprov=document.getElementById("td-prov");
+    if(n.scope_note){ tprov.style.display="block"; tprov.textContent=n.scope_note; }
+    else if(n.reused){ tprov.style.display="block"; tprov.innerHTML='<b>Reused, sorry-free.</b> Proved in the imported Mackenzie–Saffidine Lean layer (<code>'+n.file+'</code>), which compiles as part of this build.'; }
+    else tprov.style.display="none";
+    var tdsm = document.getElementById("td-summary"), tdM = GLOSS.summaries && GLOSS.summaries[n.id];
+    if(tdM) tdsm.innerHTML = tdM; else tdsm.textContent = n.summary || "";
+    showLean("td-code", n);
+    renderTermExtras(n, "td"); window.ExplorerExtras.renderSources(n,"td-code");
+  }
+  var traceSized = false;
+  function openTrace(id){
+    buildTracer();
+    overlay.classList.add("on");
+    renderPlist();
+    if(!traceSized){ traceSized = true; requestAnimationFrame(function(){ fitPgw(); }); }
+    var target = (id && byId[id] && TRACE.boxes[id]) ? id : selStmt;
+    if(target){ requestAnimationFrame(function(){ requestAnimationFrame(function(){ selectStmt(target, true); }); }); }
+  }
+  document.getElementById("o-close").addEventListener("click", function(){ overlay.classList.remove("on"); });
+  document.getElementById("m-pidx").addEventListener("click", function(){
+    openTrace(selId && byId[selId] && TRACE.boxes[selId] ? selId : null);
+  });
+  document.getElementById("td-graph").addEventListener("click", function(){
+    if(selStmt){ overlay.classList.remove("on"); select(selStmt, true); }
+  });
+
+  var pq = document.getElementById("pq");
+  function renderPlist(){
+    var f = (pq.value||"").trim().toLowerCase();
+    plist.innerHTML = "";
+    DATA.paperIndex.forEach(function(p){
+      var n = byId[p.id];
+      var hay = (envShort(p.env)+" "+p.num+" "+(p.name||"")+" "+(n.title||"")+" p."+p.page+" page "+p.page+" "+p.id).toLowerCase();
+      var pageFilter=f.match(/^(?:pdf\s*)?(?:p\.?|page)\s*(\d+)$/);if(pageFilter ? p.page!==Number(pageFilter[1]) : (f && hay.indexOf(f)<0)) return;
+      var b = document.createElement("button"); b.className = "prow"; b.dataset.id = p.id;
+      var pg = document.createElement("span"); pg.className="pg"; pg.textContent = "p."+p.page;pg.title="PDF page "+p.page+" (including the title page)";
+      var nm = document.createElement("span"); nm.className="nm";
+      nm.textContent = envShort(p.env)+" "+p.num+" · "+(n.title || p.name || p.id);
+      b.appendChild(pg); b.appendChild(nm);
+      b.addEventListener("click", function(){ selectStmt(p.id, true); });
+      plist.appendChild(b);
+    });
+  }
+  function markPlist(id){
+    [].forEach.call(plist.children, function(el){ el.classList.toggle("on", el.dataset.id === id); });
+    var on = plist.querySelector(".prow.on"); if(on) on.scrollIntoView({block:"nearest"});
+  }
+  pq.addEventListener("input", renderPlist);
+
+  // ================= inspector =================
+  var empty = document.getElementById("empty"), insp = document.getElementById("insp");
+  function showEmpty(){
+    insp.classList.remove("on"); empty.style.display = "block";
+    Object.keys(nodeEls).forEach(function(nid){ nodeEls[nid].classList.remove("sel"); });
+  }
+  function depRow(id, container){
+    var n = byId[id]; if(!n) return;
+    var b = document.createElement("button"); b.className = "dep";
+    var tick = document.createElement("span"); tick.className = "tick";
+    tick.style.background = n.status==="pending" || n.status==="external" ? "var(--axiom)" : n.reused ? "var(--reused)" : (n.kind==="axiom-decl" ? "var(--axiom)" :
+      (/^thm:/.test(n.id) ? "#7ee0a0" : (n.kind==="def"||n.kind==="port-check" ? "var(--def)" : "var(--proved)")));
+    var lab = document.createElement("span"); lab.className="dtitle"; lab.textContent = nodeTitle(n);
+    var num = document.createElement("span"); num.className="dnum";
+    num.textContent = n.paper ? envShort(n.paper.env)+" "+n.paper.num : (n.kind==="axiom-decl" ? "axiom" : "internal");
+    b.appendChild(tick); b.appendChild(lab); b.appendChild(num);
+    b.addEventListener("click",function(){ select(id,true); });
+    container.appendChild(b);
+  }
+  function paperNote(container, text){
+    var d = document.createElement("div"); d.className = "pnote"; d.textContent = text;
+    container.appendChild(d);
+  }
+  function select(id, center){
+    var n = byId[id]; if(!n) return;
+    // if node not in current view, switch to full view
+    if(view === "spine" && !n.spine) setView("full", true);
+    selId = id;
+    empty.style.display = "none"; insp.classList.add("on");
+    Object.keys(nodeEls).forEach(function(nid){ nodeEls[nid].classList.toggle("sel", nid === id); });
+    highlight(id);
+    document.getElementById("i-title").textContent = nodeTitle(n);
+    document.getElementById("i-id").textContent = n.id;
+    document.getElementById("i-lean").textContent = n.lean || "";
+    var bd = document.getElementById("i-badges"); bd.innerHTML = "";
+    function badge(cls, txt){ var s=document.createElement("span"); s.className="badge "+cls; s.textContent=txt; bd.appendChild(s); }
+    badge(n.status==="verified"?"status":"ax",statusLabel(n));
+    badge("kind", n.kind);
+    if(n.file) badge("file", shortFile(n.file));
+    if(n.reused) badge("reused","reused · M&S");
+    var iprov=document.getElementById("i-prov");
+    if(n.scope_note){ iprov.style.display="block"; iprov.textContent=n.scope_note; }
+    else if(n.reused){ iprov.style.display="block"; iprov.innerHTML='<b>Reused, sorry-free.</b> Proved in the imported Mackenzie–Saffidine Lean layer (<code>'+n.file+'</code>), which compiles as part of this build.'; }
+    else iprov.style.display="none";
+    var sm = document.getElementById("i-summary"), smM = GLOSS.summaries && GLOSS.summaries[n.id];
+    if(smM){ sm.innerHTML = smM; sm.style.display = "block"; }
+    else { sm.textContent = n.summary || ""; sm.style.display = n.summary ? "block" : "none"; }
+    // paper locator
+    var pl = document.getElementById("i-ploc"); pl.innerHTML = "";
+    if(n.paper){
+      var d = document.createElement("div"); d.className = "ploc";
+      var w = document.createElement("div"); w.className = "where";
+      var b1 = document.createElement("b");
+      b1.textContent = n.paper.env.charAt(0).toUpperCase()+n.paper.env.slice(1)+" "+n.paper.num+
+        (n.paper.name ? " — "+n.paper.name : "");
+      var s1 = document.createElement("span");
+      s1.textContent = "page "+n.paper.page+" of v42"+(n.texLine? " · main.tex:"+n.texLine : "");
+      w.appendChild(b1); w.appendChild(s1);
+      var btn = document.createElement("button"); btn.textContent = "Trace in PDF → p."+n.paper.page;
+      btn.addEventListener("click",function(){ openTrace(n.id); });
+      d.appendChild(w); d.appendChild(btn); pl.appendChild(d);
+    } else {
+      var d2 = document.createElement("div"); d2.className = "ploc none";
+      var w2 = document.createElement("div"); w2.className = "where";
+      var b2 = document.createElement("b");
+      b2.textContent = "Internal scaffolding — no single paper statement; it supports the labeled results it feeds into.";
+      w2.appendChild(b2); d2.appendChild(w2); pl.appendChild(d2);
+    }
+    showLean("i-code", n);
+    renderTermExtras(n, "i"); window.ExplorerExtras.renderSources(n,"i-code");
+    var texSec = document.getElementById("i-tex-sec"), tex = document.getElementById("i-tex");
+    if(n.tex){ tex.textContent = prettyTex(n.tex);
+      document.getElementById("i-texline").textContent = n.texLine ? " · line "+n.texLine : "";
+      texSec.style.display = "block";
+    } else texSec.style.display = "none";
+    var dc = document.getElementById("i-deps"); dc.innerHTML = "";
+    var deps = (n.deps||[]).filter(function(d){ return byId[d]; });
+    document.getElementById("i-deps-t").textContent = "Built from ("+deps.length+")";
+    if(deps.length) deps.forEach(function(d){ depRow(d,dc); });
+    else dc.innerHTML = '<div class="none">nothing — a foundation (definition or axiom)</div>';
+    var pdeps = (n.paperDeps||[]).filter(function(d){ return byId[d] && deps.indexOf(d)<0; });
+    if(pdeps.length){ paperNote(dc, "The paper’s prose additionally cites (the Lean proof routes differently):"); pdeps.forEach(function(d){ depRow(d,dc); }); }
+    var uc = document.getElementById("i-dependents"); uc.innerHTML = "";
+    var us = (n.dependents||[]).filter(function(d){ return byId[d]; });
+    document.getElementById("i-dependents-t").textContent = "Feeds into ("+us.length+")";
+    if(us.length) us.forEach(function(d){ depRow(d,uc); });
+    else if(n.id === "intro:deterministic") uc.innerHTML = '<div class="none">nothing — this is the headline</div>';
+    else if(n.leanTerminal && n.paper) uc.innerHTML = '<div class="none">nothing: neither the machine-checked assembly nor the paper’s prose cites this statement after it is proved — it stands as a self-contained, kernel-verified record.</div>';
+    else if(n.leanTerminal) uc.innerHTML = '<div class="none">nothing in the compiled proof — this was proved as scaffolding en route, and the final assembly took a different path. It remains a kernel-checked fact about the definitions.</div>';
+    else uc.innerHTML = '<div class="none">nothing here — its consumers are outside the current graph slice</div>';
+    var pus = (n.paperDependents||[]).filter(function(d){ return byId[d] && us.indexOf(d)<0; });
+    if(pus.length){ paperNote(uc, "In the paper’s prose it is cited by:"); pus.forEach(function(d){ depRow(d,uc); }); }
+    if(center) centerOn(n);
+    hideHint();
+  }
+
+  // ================= view toggle =================
+  function setView(v, keepSel){
+    if(view === v) return;
+    view = v;
+    document.getElementById("m-spine").classList.toggle("on", v==="spine");
+    document.getElementById("m-full").classList.toggle("on", v==="full");
+    var keep = keepSel ? selId : null;
+    selId = null;
+    buildGraph(); fit();
+    if(keep){ select(keep, true); }
+    else showEmpty();
+  }
+  document.getElementById("m-spine").addEventListener("click",function(){ setView("spine"); });
+  document.getElementById("m-full").addEventListener("click",function(){ setView("full"); });
+
+  // ================= arrows route toggle (Lean proof structure vs paper's prose) =====
+  function setRoute(r2){
+    if(route === r2) return;
+    route = r2;
+    document.getElementById("r-lean").classList.toggle("on", r2==="lean");
+    document.getElementById("r-paper").classList.toggle("on", r2==="paper");
+    var keep = selId; selId = null;
+    buildGraph();
+    if(keep) select(keep, false); else clearHl();
+  }
+  document.getElementById("r-lean").addEventListener("click",function(){ setRoute("lean"); });
+  document.getElementById("r-paper").addEventListener("click",function(){ setRoute("paper"); });
+
+  // ================= legend / search / fabs =================
+  var legendItems = [
+    ["var(--proved)","checked correspondence"],
+    ["var(--def)","definition / construction"],
+    ["#7ee0a0","headline theorem"],
+    ["var(--axiom)","pending correspondence / external input"]];
+  var lg = document.getElementById("legend");
+  legendItems.forEach(function(it){
+    var r = document.createElement("div"); r.className="row";
+    var sw = document.createElement("span"); sw.className="sw"; sw.style.borderColor=it[0]; sw.style.background="transparent";
+    var txt = document.createElement("span"); txt.textContent = it[1];
+    r.appendChild(sw); r.appendChild(txt); lg.appendChild(r);
+  });
+
+  var q = document.getElementById("q");
+  function match(n, v){
+    var pm = v.match(/^(?:pdf\s*)?(?:p\.?|page)\s*(\d+)$/);
+    if(pm) return n.paper && n.paper.page === parseInt(pm[1],10);
+    var hay = (n.id+" "+(n.lean||"")+" "+(n.title||"")+" "+(n.paper? envShort(n.paper.env)+" "+n.paper.num+" "+n.paper.env+" "+n.paper.num+" p."+n.paper.page:"")).toLowerCase();
+    return hay.indexOf(v) >= 0;
+  }
+  q.addEventListener("input",function(){
+    var v = q.value.trim().toLowerCase();
+    var shown = view==="spine" ? DATA.nodes.filter(function(n){return n.spine;}) : DATA.nodes;
+    if(!v){ clearHl(); return; }
+    var hit = null;
+    shown.forEach(function(n){
+      var m = match(n, v);
+      if(nodeEls[n.id]) nodeEls[n.id].classList.toggle("dim", !m);
+      if(m && !hit) hit = n;
+    });
+    if(hit) centerOn(hit);
+  });
+  q.addEventListener("keydown",function(e){
+    if(e.key === "Enter"){
+      var v = q.value.trim().toLowerCase();
+      var hit = DATA.nodes.find(function(n){ return match(n, v); });
+      if(hit) select(hit.id, true);
+    }
+  });
+  document.addEventListener("keydown",function(e){
+    if(e.defaultPrevented || document.querySelector("dialog[open]")) return;
+    if(e.key === "/" && !e.target.closest("input,textarea,select,[contenteditable]") && document.activeElement !== q && document.activeElement !== pq){ e.preventDefault(); q.focus(); }
+    if(e.key === "Escape"){
+      if(overlay.classList.contains("on")){ overlay.classList.remove("on"); return; }
+      q.value=""; q.blur(); selId=null; clearHl(); showEmpty();
+      Object.keys(nodeEls).forEach(function(nid){ nodeEls[nid].classList.remove("dim"); });
+    }
+  });
+
+  document.getElementById("fit").addEventListener("click",function(){ selId=null; clearHl(); showEmpty(); fit(); });
+  document.getElementById("headline").addEventListener("click",function(){ select("intro:deterministic", true); });
+  document.getElementById("f-count").textContent = DATA.meta.nodes;
+  document.getElementById("s-proved").textContent = DATA.meta.counts.proved || 0;
+  document.getElementById("s-reused").textContent = DATA.meta.counts.reused || 0;
+  document.getElementById("s-axioms").textContent = DATA.meta.counts.axioms || 0;
+  var hint = document.getElementById("hint");
+  var hintTimer = setTimeout(hideHint, 7000);
+  function hideHint(){ hint.style.opacity = "0"; clearTimeout(hintTimer); }
+
+  // ================= panel resizing =================
+  // Drag a handle to resize its panel. side: which side of the HANDLE the
+  // panel sits on ("right" = panel to the right grows when dragging left).
+  function makeResizer(handleId, panel, min, maxFrac, side, onend){
+    var h = document.getElementById(handleId); if(!h) return;
+    h.addEventListener("pointerdown", function(e){
+      e.preventDefault();
+      var startX = e.clientX, startW = panel.offsetWidth, Z = uiZ();
+      h.classList.add("dragging");
+      document.body.style.cursor = "col-resize";
+      document.body.style.userSelect = "none";
+      function mv(ev){
+        var dx = (ev.clientX - startX) / Z;   // visual delta -> layout px
+        var w = side === "left" ? startW + dx : startW - dx;
+        var max = docEl.clientWidth * maxFrac;
+        w = Math.max(min, Math.min(w, max));
+        panel.style.width = w + "px";
+      }
+      function up(){
+        window.removeEventListener("pointermove", mv);
+        window.removeEventListener("pointerup", up);
+        h.classList.remove("dragging");
+        document.body.style.cursor = ""; document.body.style.userSelect = "";
+        if(onend) onend();
+      }
+      window.addEventListener("pointermove", mv);
+      window.addEventListener("pointerup", up);
+    });
+  }
+  makeResizer("res-insp", document.getElementById("aside"), 300, .72, "right");
+  makeResizer("res-tdetail", document.getElementById("tdetail"), 280, .60, "right");
+  makeResizer("res-pidx", document.querySelector(".pidx"), 180, .45, "left");
+  // Resize the whole tracer sheet from its left edge; re-fit the pages to the new
+  // width on release. Highlight boxes ride the page cards' aspect-ratio, so this
+  // cannot desync them.
+  makeResizer("res-sheet", document.querySelector(".sheet"), 640, .995, "right", function(){ if(traceBuilt) fitPgw(); });
+
+  // ================= tracer zoom =================
+  var PGW_BASE = 820, pgw = PGW_BASE;
+  function setPgw(w, anchor){
+    w = Math.max(420, Math.min(w, 2200));
+    if(w === pgw) return;
+    var f = null;
+    if(anchor !== false && tracepane.scrollHeight > 0)
+      f = (tracepane.scrollTop + tracepane.clientHeight/2) / tracepane.scrollHeight;
+    pgw = w;
+    tracePages.style.setProperty("--pgw", pgw + "px");
+    document.getElementById("z-pct").textContent = Math.round(pgw / PGW_BASE * 100) + "%";
+    if(f !== null) requestAnimationFrame(function(){
+      tracepane.scrollTop = f * tracepane.scrollHeight - tracepane.clientHeight/2;
+    });
+  }
+  function fitPgw(){ setPgw(Math.max(420, tracepane.clientWidth - 56)); }
+  document.getElementById("z-in").addEventListener("click", function(){ setPgw(pgw * 1.18); });
+  document.getElementById("z-out").addEventListener("click", function(){ setPgw(pgw / 1.18); });
+  document.getElementById("z-fit").addEventListener("click", fitPgw);
+  tracepane.addEventListener("wheel", function(e){
+    if(!e.ctrlKey) return;
+    e.preventDefault();
+    setPgw(pgw * Math.exp(-e.deltaY * 0.0018));
+  }, {passive:false});
+
+  window.ExplorerExtras.init({DATA:DATA,PAYLOAD:PAYLOAD,select:select,openTrace:openTrace,openWin:openWin,hlLean:hlLean});
+  // ================= boot =================
+  buildGraph(); fit(); renderPlist();
+  window.ExplorerExtras.ready();
+  var reduce = window.matchMedia("(prefers-reduced-motion:reduce)").matches;
+  if(!reduce){
+    Object.keys(nodeEls).forEach(function(nid){
+      var g = nodeEls[nid]; g.style.opacity = "0"; g.style.transition = "opacity .5s";
+      setTimeout(function(){ g.style.opacity = ""; }, 120 + (byId[nid].level||0)*80);
+    });
+    edgeEls.forEach(function(e){ e.el.style.opacity = "0"; e.el.style.transition = "opacity .6s"; });
+    setTimeout(function(){ edgeEls.forEach(function(e){ e.el.style.opacity = ""; }); }, 120 + 20*80);
+  }
+})().catch(function(error){document.getElementById("load-error").hidden=false;document.getElementById("load-error").textContent="The proof index could not be opened: "+error.message;});
+</script>
+<link rel="stylesheet" href="extras.css"></body></html>

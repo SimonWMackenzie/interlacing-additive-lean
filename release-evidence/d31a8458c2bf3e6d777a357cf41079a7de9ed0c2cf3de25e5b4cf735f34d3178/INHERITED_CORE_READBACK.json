@@ -1,0 +1,1268 @@
+{
+  "schema": "v42-inherited-core-readback-v1",
+  "author": "/root/v42_formal_core_diff",
+  "scope": "Bounded source/declaration readback; no production changes, shared builds or new compiler claims.",
+  "source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "hash_convention": "file_sha256 hashes raw bytes; source blocks LF text; readback slices from declaration start until next top-level declaration/end/print (may include following doc comment); statement hash is prefix before first :=, UTF8 LF.",
+  "rows": [
+    {
+      "id": "lem:many-product-blocks",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 1690,
+        "last_line": 1696,
+        "block_sha256_lf": "501c86cd07ac073b0c9b375250bbdf79430ce8a9de6e30754132a575d4661aa9",
+        "text": "\\begin{lemma}\\label{lem:many-product-blocks}\nSuppose $\\RP{M}{x}{H}$ holds for a rationally weighted matrix $M$, where\n$H\\ge3$. Let $u\\ge16$ be dyadic with $ux\\le1$. Every full-product interlace\nrestriction retaining at least $9u/16$ blocks, each of base row weight at least\n$ux$, and a column set of weight at least $2^{-u/1024}$, has cost at least\n$H+\\log u$.\n\\end{lemma}\n"
+      },
+      "readback_status": "sufficient_general_provider",
+      "source_domain": "Arbitrary finite Boolean matrix with positive rational input laws; H>=3; u=2^a>=16; ux<=1; arbitrary ambient width p and correlated retained original tuple set.",
+      "correspondence": "rational_many_blocks uses exactly Fin2 profile, row floors 2^a*x, original iid column mass 2^(-2^a/1024), any Good of cardinality>=copies a, and concludes H+a on the same retained parent fullInterlace. copies_eq identifies copies a=9*2^a/16 for a>=4. The selected block map is injective and chosen internally.",
+      "provider_set": [
+        {
+          "declaration": "Paper2.V38StrongSeed.rational_many_blocks",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38ManyBlocks.lean",
+          "line": 34,
+          "last_line": 55,
+          "file_sha256": "cb369f999e7fb229df7ae170b7a48b11a14c5ef56fa50614745a0b080f319a58",
+          "readback_slice_sha256": "36929cda1718b07905015bce64242f68b97295461967bc0cf711ab2fcd902977",
+          "statement_sha256": "09a16fab8cbba4d72020aa4c54e8deeac53a02643e219630b2c80580c198fc6e",
+          "statement": "theorem rational_many_blocks\n    (μ : PositiveRationalLaw X) (ν : PositiveRationalLaw Y)\n    (F : X → Y → Bool) (H a p : ℕ) (hH : 3 ≤ H) (ha : 4 ≤ a)\n    (θ : ℝ) (hθ : 0 < θ) (hscale : (2 : ℝ) ^ a * θ ≤ 1)\n    (hprofile : V38RestrictionProfiles.TwoThresholdProfile F\n      μ.toFiniteLaw ν.toFiniteLaw θ (H : ℤ))\n    (U : Set (Fin p × X)) (V : Set (Fin p → Y))\n    (Good : Finset (Fin p)) (hGood : copies a ≤ Good.card)\n    (hU : ∀ i ∈ Good, (2 : ℝ) ^ a * θ ≤\n      μ.toFiniteLaw.prob (fun x => (i, x) ∈ U))\n    (hV : (2 : ℝ) ^ (-((2 : ℝ) ^ a / 1024)) ≤\n      (ν.toFiniteLaw.iid p).prob (· ∈ V)) :\n    H + a ≤ Compression.restrictionD (fullInterlace F p) U V",
+          "imports": [
+            "CurrentAdditive.V38StrongSeed"
+          ],
+          "module": "CurrentAdditive.V38ManyBlocks",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38ManyBlocks"
+          ]
+        },
+        {
+          "declaration": "Paper2.V38StrongSeed.rational_selected",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38ManyBlocks.lean",
+          "line": 11,
+          "last_line": 33,
+          "file_sha256": "cb369f999e7fb229df7ae170b7a48b11a14c5ef56fa50614745a0b080f319a58",
+          "readback_slice_sha256": "04f532560fcdc4ca9958e9742c655be8f866ff129005c6b81795f958961c08a0",
+          "statement_sha256": "35761dcab0d3d88da024c746361de46f5e781a4104cb8e4d164900196183b06b",
+          "statement": "theorem rational_selected\n    (μ : PositiveRationalLaw X) (ν : PositiveRationalLaw Y)\n    (F : X → Y → Bool) (H a p : ℕ) (hH : 3 ≤ H) (ha : 4 ≤ a)\n    (θ : ℝ) (hθ : 0 < θ) (hscale : (2 : ℝ) ^ a * θ ≤ 1)\n    (hprofile : V38RestrictionProfiles.TwoThresholdProfile F\n      μ.toFiniteLaw ν.toFiniteLaw θ (H : ℤ))\n    (U : Set (Fin p × X)) (V : Set (Fin p → Y))\n    (e : Fin (copies a) → Fin p) (he : Function.Injective e)\n    (hU : ∀ i, (2 : ℝ) ^ a * θ ≤\n      μ.toFiniteLaw.prob (fun x => (e i, x) ∈ U))\n    (hV : (2 : ℝ) ^ (-((2 : ℝ) ^ a / 1024)) ≤\n      (ν.toFiniteLaw.iid p).prob (· ∈ V)) :\n    H + a ≤ Compression.restrictionD (fullInterlace F p) U V",
+          "imports": [
+            "CurrentAdditive.V38StrongSeed"
+          ],
+          "module": "CurrentAdditive.V38ManyBlocks",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38ManyBlocks"
+          ]
+        },
+        {
+          "declaration": "Paper2.StrongSeed.copies_eq",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/StrongSeed.lean",
+          "line": 26,
+          "last_line": 30,
+          "file_sha256": "027696b4a7ed914182b008f8178f28ee02c537115b12063e175e35cd50afc5aa",
+          "readback_slice_sha256": "b3984fbdd03966a39282870674966b5cacd66fc86b6197050fd4697e6979dc6a",
+          "statement_sha256": "10a20b99bdf7032a0bd7f2870d8c7ba355b367b9f469359694e7624d91a8ca50",
+          "statement": "theorem copies_eq (a : ℕ) (ha : 4 ≤ a) : copies a = 9 * 2 ^ a / 16",
+          "imports": [
+            "Paper2.DefectInductionRational"
+          ],
+          "module": "Paper2.StrongSeed",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38StrongSeed",
+            "Paper2.StrongSeed"
+          ]
+        }
+      ],
+      "limits": ""
+    },
+    {
+      "id": "lem:collision-tracking",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 1758,
+        "last_line": 1777,
+        "block_sha256_lf": "13e769870d5d6bab8314ad3cda4222adc2050678fbf7c902127053d06e6791c8",
+        "text": "\\begin{lemma}[Following collision witnesses]\\label{lem:collision-tracking}\nLet $q\\ge2$ be dyadic, let $0\\le b<q$ be an integer, and let $x>0$\nsatisfy $2qx\\le1/8$.\nSuppose a protocol with at most\n$H+\\log q$ bits left has $q-b$ indices, each with a retained set of\nlist inputs of weight at least $3/4$. Each set consists of inputs with that\nfixed index. Mark $w_0>b$ of these sets as collision witnesses.\nAssume the following lower bounds, where all set weights are computed from\nthe original input weights.\n\\begin{enumerate}\n\\item[(i)] Until Alice speaks, a set of retained lists at one index with weight at least $x$, against the\nunchanged set of Alice's inputs, costs at least $H>0$.\n\\item[(ii)] At the first Alice bit, one child retains a set of Alice's inputs on which,\nfor every dyadic $u\\ge2$ with $ux\\le1$, retained sets at any $u/2+1$ distinct indices, each\nof weight at least $ux$, cost at least $H+\\log u$.\n\\item[(iii)] A marked set retaining weight greater than $1/2$ costs at least\n$H+1$ before Alice speaks.\n\\end{enumerate}\nThen no such protocol exists.\n\\end{lemma}\n"
+      },
+      "readback_status": "sufficient_general_provider",
+      "source_domain": "Arbitrary actual finite protocol; dyadic q>=2, b<q; q-b indexed supports of original mass>=3/4 and more than b marked supports; the three source local lower bounds.",
+      "correspondence": "no_short_actual_protocol takes an actual initial State with q-b active indices, marked subset, original finite-law supports and input reachability. Its three callbacks are exactly (i),(ii),(iii); lowerAfterAlice chooses a single child before k, indices and support family, preserving source quantifier order. It constructs the Bob tracking run and overload internally and concludes False. No overloaded frontier or desired conclusion is supplied. Set carriers can be the source retained Alice carrier, so correctness on all A is the intended retained-row domain.",
+      "provider_set": [
+        {
+          "declaration": "CurrentAdditive.V38Collision.no_short_actual_protocol",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38CollisionConservation.lean",
+          "line": 113,
+          "last_line": 344,
+          "file_sha256": "c0571f01b6c46306accd360d81aa59fd9d9439bbf08bba355941fb53a0a2916a",
+          "readback_slice_sha256": "4a4852a2753c9d392312b65181784d728d6c645369db33b561c5e28247fb7369",
+          "statement_sha256": "5bf628f6351979d2a6fea34efb8a178e82da7d96f7ec346be1675ca8841fa513",
+          "statement": "theorem no_short_actual_protocol\n    (μ : Paper2.FiniteLaw W) (input : I → W → C) (F : A → C → Bool)\n    (q b ell H : ℕ) (hq : q = 2 ^ ell) (_hq2 : 2 ≤ q)\n    (_hb : b < q)\n    (initial : State A C I W)\n    (hH : 0 < H) (hcount : initial.coordinates.card + b = q)\n    (hexcess : b < initial.attachments.card)\n    (x : ℝ) (hx : 0 < x) (hsmall : 2 * (q : ℝ) * x ≤ 1 / 8)\n    (hcost : initial.protocol.cost ≤ H + ell)\n    (hcorrect : ∀ a c, c ∈ initial.columns →\n      initial.protocol.eval a c = F a c)\n    (hmarked : initial.attachments ⊆ initial.coordinates)\n    (hmass : ∀ i ∈ initial.coordinates, (3 / 4 : ℝ) ≤ mass μ (initial.support i))\n    (hreaches : ∀ i ∈ initial.coordinates, ∀ w ∈ initial.support i,\n      input i w ∈ initial.columns)\n    (lowerBeforeAlice : ∀ (U : Set C) (P : Protocol A U Bool),\n      P.Computes (fun a u => F a u.val) →\n      ∀ (i : I) (S : Finset W),\n        (∀ w ∈ S, input i w ∈ U) → x ≤ mass μ S → H ≤ P.cost)\n    (lowerAfterAlice : ∀ (U : Set C) (query : A → Bool),\n      ∃ bit : Bool, ∀ (k : ℕ), 1 ≤ k → (2 : ℝ) ^ k * x ≤ 1 →\n        ∀ (Q : Finset I) (S : I → Finset W),\n          2 ^ (k - 1) + 1 ≤ Q.card →\n          (∀ i ∈ Q, (2 : ℝ) ^ k * x ≤ mass μ (S i) ∧\n            ∀ w ∈ S i, input i w ∈ U) →\n          ∀ child : Protocol {a : A // query a = bit} U Bool,\n            child.Computes (fun a u => F a.val u.val) →\n            H + k ≤ child.cost)\n    (lowerMarked : ∀ (U : Set C) (P : Protocol A U Bool),\n      P.Computes (fun a u => F a u.val) →\n      ∀ i ∈ initial.attachments, ∀ S : Finset W,\n        S ⊆ initial.support i →\n        (∀ w ∈ S, input i w ∈ U) →\n        (1 / 2 : ℝ) < mass μ S → H + 1 ≤ P.cost) :\n    False",
+          "imports": [
+            "Paper2.SourceSupportFrontierActive",
+            "Paper2.SourceSupportSchedule",
+            "Paper2.SourceRemainingConversationNumerics",
+            "Workspace.UpperBound"
+          ],
+          "module": "CurrentAdditive.V38CollisionConservation",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38CollisionConservation"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V38Collision.run_conserved_demand",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38CollisionConservation.lean",
+          "line": 23,
+          "last_line": 51,
+          "file_sha256": "c0571f01b6c46306accd360d81aa59fd9d9439bbf08bba355941fb53a0a2916a",
+          "readback_slice_sha256": "ca82d3b9aa1ebf2355b4029cd58c9d5504b33b6411d7f84133aa78e83aed4a38",
+          "statement_sha256": "f6455d94eb4881d203483d5d411b6dd820086ae2bf584a642100b112484eafb0",
+          "statement": "theorem run_conserved_demand (μ : Paper2.FiniteLaw W) (input : I → W → C)\n    (floor : ℕ → ℝ) (fuel : ℕ) (initial : State A C I W)\n    (hmarked : initial.attachments ⊆ initial.coordinates) :\n    let T",
+          "imports": [
+            "Paper2.SourceSupportFrontierActive",
+            "Paper2.SourceSupportSchedule",
+            "Paper2.SourceRemainingConversationNumerics",
+            "Workspace.UpperBound"
+          ],
+          "module": "CurrentAdditive.V38CollisionConservation",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38CollisionConservation"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V38Collision.run_conserved_overload",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38CollisionConservation.lean",
+          "line": 52,
+          "last_line": 94,
+          "file_sha256": "c0571f01b6c46306accd360d81aa59fd9d9439bbf08bba355941fb53a0a2916a",
+          "readback_slice_sha256": "e8e3dce5e1a7d4ebfb9c932981d548ba8642d8b9b6fdd01ecd6b4466af32e29b",
+          "statement_sha256": "cf65dd77faa302cfade27a3ba1cf0c5148deb5fdf9f88bf37ddbfe6780625a0a",
+          "statement": "theorem run_conserved_overload (μ : Paper2.FiniteLaw W) (input : I → W → C)\n    (floor : ℕ → ℝ) (fuel : ℕ) (initial : State A C I W)\n    (hmarked : initial.attachments ⊆ initial.coordinates)\n    (q b : ℕ) (hcount : initial.coordinates.card + b = q)\n    (hexcess : b < initial.attachments.card) :\n    let T",
+          "imports": [
+            "Paper2.SourceSupportFrontierActive",
+            "Paper2.SourceSupportSchedule",
+            "Paper2.SourceRemainingConversationNumerics",
+            "Workspace.UpperBound"
+          ],
+          "module": "CurrentAdditive.V38CollisionConservation",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38CollisionConservation"
+          ]
+        }
+      ],
+      "limits": ""
+    },
+    {
+      "id": "cl:projection",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 3577,
+        "last_line": 3593,
+        "block_sha256_lf": "0fa266c9077c286ed9aa4c7103670863eb4eeecbc1b406430eee55df13b1f44e",
+        "text": "\\begin{lemma}\\label{cl:projection}\nLet $K\\subseteq Y^p$ be nonempty, and write $\\pi_JK$ for its projection onto the\ncoordinates in $J\\subseteq[p]$. Then\n\\begin{align*}\n \\Delta_{\\card J}(\\pi_JK)&\\le\\Delta_p(K),\\\\\n \\Delta_{\\card{J_0}}(\\pi_{J_0}K)+\\Delta_{\\card{J_1}}(\\pi_{J_1}K)\n &\\le\\Delta_p(K) &&(J_0\\sqcup J_1=[p]).\n\\end{align*}\nFor every integer $1\\le l\\le p$, some $l$-element set $J$ satisfies\n\\[\n\\Delta_l(\\pi_JK)\\le\\frac lp\\Delta_p(K).\n\\]\nViewing $K$ as a column set of $\\Int{p}{M}$, the interlace on the blocks in\n$J$, restricted to the columns $\\pi_JK$ and to any retained rows of these\nblocks, is a restriction of $\\Int{p}{M}$ with columns in $K$ and the same\nblock row weights (\\cref{obs:representatives}).\n\\end{lemma}\n"
+      },
+      "readback_status": "sufficient_general_provider_set",
+      "source_domain": "Nonempty K in Y^p, positive rational column law; specified/disjoint partition projections, chosen l-element projection and original retained-row matrix comparison.",
+      "correspondence": "ProjectionDefect.specified and split work for arbitrary independent finite laws and positive parent mass (nonempty K under positive rational laws). rational_averaged_projection in AAvgProjectionJ gives exactly selected J.card=l and defect<=l/p parent defect with original rational iid weights. V38SmallBlocks.projected_blocks_cost_le gives the actual projected matrix as a cost-lower restriction on arbitrary retained rows. Its row set is exactly preimage of the selected blocks, preserving per-block weights. This provider set avoids the historical rational_monotonicity_member lookup entirely.",
+      "provider_set": [
+        {
+          "declaration": "Paper2.ProjectionDefect.specified",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ProjectionDefect.lean",
+          "line": 57,
+          "last_line": 64,
+          "file_sha256": "299a1b7b0f7187dc27ce160dfa0f43640c97f5c11b8c76adeb79b220df973478",
+          "readback_slice_sha256": "3ae1fd5d2878422b28deec0c7454e0ea77d1fd72329f52df4784e0fe1373120e",
+          "statement_sha256": "f8a82c279437edea23e9a812c99c16a0afd5a292f39f4e3437f680ef191ebf32",
+          "statement": "theorem specified (μ : ι → FiniteLaw A) (Z : (ι → A) → Prop)\n    (hZ : 0 < (FiniteLaw.pi μ).prob Z) (S : Finset ι) :\n    defect (ProductProjections.projectionMass μ Z S) ≤\n      defect ((FiniteLaw.pi μ).prob Z)",
+          "imports": [
+            "Paper2.ProductProjections",
+            "Paper2.ClassicalCapacities",
+            "EthBridge.Induction",
+            "Mathlib.Analysis.SpecialFunctions.Log.Base"
+          ],
+          "module": "Paper2.ProjectionDefect",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.DeterministicSuffixMid",
+            "Paper2.AAvgProjectionJ",
+            "Paper2.ProjectionDefect"
+          ]
+        },
+        {
+          "declaration": "Paper2.ProjectionDefect.split",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ProjectionDefect.lean",
+          "line": 65,
+          "last_line": 93,
+          "file_sha256": "299a1b7b0f7187dc27ce160dfa0f43640c97f5c11b8c76adeb79b220df973478",
+          "readback_slice_sha256": "1179d90c313c9322d63a5a743b15d3ea47878398a1d05fe1c2e4efc00ceebd8d",
+          "statement_sha256": "39b5dd47510c13baf8e1db2cf1bf248b64d1461ef90c6d46f8c5ae81921ba9ce",
+          "statement": "theorem split (μ : ι → FiniteLaw A) (Z : (ι → A) → Prop)\n    (hZ : 0 < (FiniteLaw.pi μ).prob Z) (S T : Finset ι)\n    (hST : Disjoint S T) :\n    defect (ProductProjections.projectionMass μ Z S) +\n      defect (ProductProjections.projectionMass μ Z T) ≤\n        defect ((FiniteLaw.pi μ).prob Z)",
+          "imports": [
+            "Paper2.ProductProjections",
+            "Paper2.ClassicalCapacities",
+            "EthBridge.Induction",
+            "Mathlib.Analysis.SpecialFunctions.Log.Base"
+          ],
+          "module": "Paper2.ProjectionDefect",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.DeterministicSuffixMid",
+            "Paper2.AAvgProjectionJ",
+            "Paper2.ProjectionDefect"
+          ]
+        },
+        {
+          "declaration": "Paper2.AveragedProjection.rational_averaged_projection",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/AAvgProjectionJ.lean",
+          "line": 393,
+          "last_line": 411,
+          "file_sha256": "4e03cb03c4e45b06f0c7e5bf0e5fb99c9821f76c87dc81bd67305c5469f22bb3",
+          "readback_slice_sha256": "5e83fd2593967a1e5ba049395ecc053040fb046f5e86e582cd8f2252f38bea01",
+          "statement_sha256": "52e48396c7624db492e2e88af74b0f6f4f4232c102f8de496d1c9641817d66c4",
+          "statement": "theorem rational_averaged_projection (ν : PositiveRationalLaw Y)\n    (p l : ℕ) (hl : 1 ≤ l) (hlp : l ≤ p) (K : Finset (Fin p → Y))\n    (hK : K.Nonempty) :\n    ∃ (J : Finset (Fin p)) (hJ : J.card = l),\n      defect ((ν.toFiniteLaw.iid l).prob\n          (· ∈ K.image (fun c : Fin p → Y => fun i : Fin l =>\n            c (J.orderEmbOfFin hJ i)))) ≤\n        ((l : ℝ) / (p : ℝ)) * defect ((ν.toFiniteLaw.iid p).prob (· ∈ K))",
+          "imports": [
+            "Paper2.ProjectionDefect",
+            "Paper2.DefectInductionRational",
+            "Workspace.Projections",
+            "NPCC.Twin"
+          ],
+          "module": "Paper2.AAvgProjectionJ",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.DeterministicSuffixMid",
+            "Paper2.AAvgProjectionJ"
+          ]
+        },
+        {
+          "declaration": "Paper2.V38SmallBlocks.projected_blocks_cost_le",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38BlockProjection.lean",
+          "line": 12,
+          "last_line": 28,
+          "file_sha256": "0e8263d49266ccafc159ed770d85b55e1c52035a567bc728eb7f1e452a3d0cb4",
+          "readback_slice_sha256": "e1730e64a10906df7740227a5f8d3d3927f1d33d3e9aa4a73bdb7319e0d91898",
+          "statement_sha256": "094f4fd44135c092a0dd73916a82e8568189504ff3751497594a3c4cf4c5588f",
+          "statement": "theorem projected_blocks_cost_le (F : X → Y → Bool) (p l : ℕ)\n    (U : Set (Fin p × X)) (V : Set (Fin p → Y))\n    (e : Fin l → Fin p) :\n    Compression.restrictionD (fullInterlace F l)\n      {s | (e s.1, s.2) ∈ U}\n      ((fun z : Fin p → Y => fun i : Fin l => z (e i)) '' V) ≤\n      Compression.restrictionD (fullInterlace F p) U V",
+          "imports": [
+            "CurrentAdditive.V38TwoHigh",
+            "Paper2.AAvgProjectionJ"
+          ],
+          "module": "CurrentAdditive.V38BlockProjection",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38BlockProjection"
+          ]
+        }
+      ],
+      "limits": ""
+    },
+    {
+      "id": "lem:small-blocks",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 3639,
+        "last_line": 3652,
+        "block_sha256_lf": "dabd978ae1779c77d72294465829f97e5bbb439efb26280fbf984d515346ef06",
+        "text": "\\begin{lemma}[Small block bounds]\\label{lem:small-blocks}\nSuppose $\\RP{M}{x}{H}$ with $H\\ge2$. Restrictions of a full-product interlace of $M$ with the\nfollowing numbers of blocks, row weights and product column weights have at\nleast the indicated costs whenever the displayed row threshold is $\\le1$. Here we measure row weight separately in each block.\n\\[\n\\begin{array}{c|c|c|c}\n\\text{blocks}&\\text{row weight per block}&\\text{product column weight}&\\text{cost}\\\\\n\\hline\n2&2x&9/50&H\\\\\n2&2x&9/25&H+1\\\\\n3&4x&9/50&H+1\n\\end{array}\n\\]\n\\end{lemma}\n"
+      },
+      "readback_status": "sufficient_general_provider_set",
+      "source_domain": "Arbitrary finite matrix, H>=2, current Fin2 profile; original full product retained columns and per-block row mass. Rational source column laws are supported.",
+      "correspondence": "two_block_low proves H for 2 blocks, rowfloor2x and columnmass9/50; two_block_high proves H+1 for rowfloor2x and mass9/25; three_block_middle proves H+1 for 3 blocks,rowfloor4x,mass9/50. First two admit arbitrary finite laws; third admits arbitrary finite row law and positive rational column law. Displayed rowfloor<=1 is not needed as a separate hypothesis because it follows from nonempty valid row floors; stronger generality is harmless.",
+      "provider_set": [
+        {
+          "declaration": "Paper2.V38SmallBlocks.two_block_low",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38TwoLow.lean",
+          "line": 41,
+          "last_line": 73,
+          "file_sha256": "d64a7569c88069aafe2ef9d21ea564737d8450ac4479235318b6c4c2ed6621ac",
+          "readback_slice_sha256": "aa51cf5441b10e6684d3833305888905ebba0e08cc514e8d5fe224f106e6209a",
+          "statement_sha256": "9f573fdb6b7d148ebdc61c6d230c1c9bb9f519287d7188c0e03a436f45876b84",
+          "statement": "theorem two_block_low (F : X → Y → Bool)\n    (μ : FiniteLaw X) (ν : FiniteLaw Y) (θ : ℝ) (H : ℕ)\n    (hH : 2 ≤ H) (hθ : 0 < θ)\n    (hp : V38RestrictionProfiles.TwoThresholdProfile F μ ν θ (H : ℤ))\n    (U : Set (Fin 2 × X)) (V : Set (Fin 2 → Y))\n    (hrow : ∀ i : Fin 2, 2 * θ ≤ μ.prob (fun x => (i, x) ∈ U))\n    (hcol : (9 / 50 : ℝ) ≤ (ν.iid 2).prob (· ∈ V)) :\n    H ≤ Compression.restrictionD (fullInterlace F 2) U V",
+          "imports": [
+            "CurrentAdditive.V38ChildCost"
+          ],
+          "module": "CurrentAdditive.V38TwoLow",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38TwoLow"
+          ]
+        },
+        {
+          "declaration": "Paper2.V38SmallBlocks.two_block_high",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38TwoHigh.lean",
+          "line": 21,
+          "last_line": 52,
+          "file_sha256": "f1670c629b6b7ba63cef67ea7a9ac58877976f651757a5294d051feb7f9d4fdd",
+          "readback_slice_sha256": "2e57337d8a0fa7b2b18e45ddf00d49ee3f3b272ec29b6638bd33aaf9b84d0baa",
+          "statement_sha256": "fedebfc83d0290b66b8c6c345373bca05a31f5588beca8d6636e4cf9e729f91b",
+          "statement": "theorem two_block_high (F : X → Y → Bool)\n    (μ : FiniteLaw X) (ν : FiniteLaw Y) (θ : ℝ) (H : ℕ)\n    (hH : 2 ≤ H) (hθ : 0 < θ)\n    (hp : V38RestrictionProfiles.TwoThresholdProfile F μ ν θ (H : ℤ))\n    (U : Set (Fin 2 × X)) (V : Set (Fin 2 → Y))\n    (hrow : ∀ i : Fin 2, 2 * θ ≤ μ.prob (fun x => (i, x) ∈ U))\n    (hcol : (9 / 25 : ℝ) ≤ (ν.iid 2).prob (· ∈ V)) :\n    H + 1 ≤ Compression.restrictionD (fullInterlace F 2) U V",
+          "imports": [
+            "CurrentAdditive.V38TwoLow"
+          ],
+          "module": "CurrentAdditive.V38TwoHigh",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38TwoHigh"
+          ]
+        },
+        {
+          "declaration": "Paper2.V38SmallBlocks.three_block_middle",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38ThreeMiddle.lean",
+          "line": 39,
+          "last_line": 86,
+          "file_sha256": "d7caeb5a2ec6be34a2cac30272bcd4a1449da5b5d66b5a0f5e70cfacbc23b6af",
+          "readback_slice_sha256": "04122bf85bc4c86875d8895e3e4002f916b9e9e778875e6f7ac2f6aa96b21fa9",
+          "statement_sha256": "f5b50a6e4c1134df47e9536c39f4d89b3e6d438e14250df349384ad09b66d283",
+          "statement": "theorem three_block_middle (F : X → Y → Bool)\n    (μ : FiniteLaw X) (ν : PositiveRationalLaw Y) (θ : ℝ) (H : ℕ)\n    (hH : 2 ≤ H) (hθ : 0 < θ)\n    (hp : V38RestrictionProfiles.TwoThresholdProfile F μ ν.toFiniteLaw θ (H : ℤ))\n    (U : Set (Fin 3 × X)) (V : Set (Fin 3 → Y))\n    (hrow : ∀ i : Fin 3, 4 * θ ≤ μ.prob (fun x => (i, x) ∈ U))\n    (hcol : (9 / 50 : ℝ) ≤ (ν.toFiniteLaw.iid 3).prob (· ∈ V)) :\n    H + 1 ≤ Compression.restrictionD (fullInterlace F 3) U V",
+          "imports": [
+            "CurrentAdditive.V38ThreeBlocks"
+          ],
+          "module": "CurrentAdditive.V38ThreeMiddle",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38ThreeMiddle"
+          ]
+        }
+      ],
+      "limits": ""
+    },
+    {
+      "id": "cl:separation",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 3688,
+        "last_line": 3700,
+        "block_sha256_lf": "0a2aad9bdde766f1f818ae6ffea1dc00de6c899d21d4c6bdd0365e301b8d0deb",
+        "text": "\\begin{theorem}\\label{cl:separation}\nSuppose $\\RP{M}{\\rho}{d}$ with $d\\ge2$. Let $u\\ge2$ be dyadic and\n$1\\ge\\xi>2u\\rho$. Interlace $M$ at width $u$ using an exactly eight-wise independent\ntuple list with the base-column marginal, as in \\cref{def:exact-tuples}.\nEvery restriction retaining base row weight at least $\\xi$ in every block\nand tuple-label weight at least $18/25$ has the following property: every\nprotocol of depth at most $d+\\log u$ for it begins with $\\log u$ Alice bits\nalong every path.\nThe $u$ nodes at depth $\\log u$ are in bijection with the blocks: each such\nnode retains more\nthan $\\xi-2(u-1)\\rho$ of its assigned block and less than $2\\rho$ of every\nother block. Full products are a special case, and fixed bits count as transmitted bits.\n\\end{theorem}\n"
+      },
+      "readback_status": "sufficient_general_provider",
+      "source_domain": "Arbitrary positive rational row/column laws, arbitrary exactly8-wise finite tuple-label source, dyadic u>=2,d>=2,rho>0,xi>2u*rho, label mass>=18/25; all protocols with retained-domain correctness and cost<=d+logu.",
+      "correspondence": "V38Fin2Exact.separation returns CompleteAlicePrefix on the actual protocol plus a bijection dom from every depth-logu history to blocks, each foreign row mass<2rho and assigned mass>xi-2(u-1)rho. It keeps source labels and original laws. Extra hscale u*rho<=1 follows from source xi<=1 and 2u*rho<xi. A protocol initially typed only on retained carriers is extended without pruning using ArbitraryPrefix extension; the theorem already requires correctness only on retained Rows/K. Fixed bits count in structural Protocol.cost.",
+      "provider_set": [
+        {
+          "declaration": "CurrentAdditive.V38Fin2Exact.separation",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38Fin2SourceSeparation.lean",
+          "line": 15,
+          "last_line": 47,
+          "file_sha256": "dc6c66c218c08c98150f65c56c35eaa4066493ef61363acfadc77203e24da425",
+          "readback_slice_sha256": "5cc13c0d2bb44e199312b56ad4d3378af862f2ca2d0b265b27d2ddd22536235c",
+          "statement_sha256": "a22f59609badf9cbbe4e6d19415ad75bc8323c90eb66f3ec2ccf7dfdabc83183",
+          "statement": "theorem separation\n    (μ : PositiveRationalLaw X) (ν : PositiveRationalLaw Z)\n    (F : X → Z → Bool) (source : FiniteLaw S)\n    (decode : S → Fin (2^t) → Z)\n    (hwise : IsDWise 8 source decode ν.toFiniteLaw)\n    (Rows : Fin (2^t) → Set X) (K : Set S)\n    (d : ℕ) (ρ z : ℝ)\n    (ht : 1 ≤ t) (hd : 2 ≤ d) (hρ : 0 < ρ)\n    (hscale : (2 : ℝ)^t*ρ ≤ 1)\n    (hprofile : V38RestrictionProfiles.TwoThresholdProfile F\n      μ.toFiniteLaw ν.toFiniteLaw ρ (d : ℤ))\n    (hrow : ∀ i, z ≤ μ.toFiniteLaw.prob (· ∈ Rows i))\n    (hgap : 2*(2 : ℝ)^t*ρ < z)\n    (hK : (18/25 : ℝ) ≤ source.prob (· ∈ K))\n    (P : Protocol (Fin (2^t) × X) S Bool)\n    (hcost : P.cost ≤ d+t)\n    (heval : ∀ i, ∀ x ∈ Rows i, ∀ s ∈ K,\n      P.eval (i,x) s = F x (decode s i)) :\n    SourceProtocolPrefixTree.CompleteAlicePrefix t P ∧\n    ∃ dom : Fin (2^t) ≃ Fin (2^t),\n      (∀ w, z/(2 : ℝ)^t ≤ μ.toFiniteLaw.prob\n        (fun x => x ∈ Rows (dom w) ∧\n          NPCC.Protocol.prefixCodeRaw t P (dom w,x) = w)) ∧\n      (∀ w j, j ≠ dom w → μ.toFiniteLaw.prob\n        (fun x => x ∈ Rows j ∧ NPCC.Protocol.prefixCodeRaw t P (j,x) = w) < 2*ρ) ∧\n      (∀ w, z-2*((2^t : ℕ)-1 : ℕ)*ρ < μ.toFiniteLaw.prob\n        (fun x => x ∈ Rows (dom w) ∧\n          NPCC.Protocol.prefixCodeRaw t P (dom w,x) = w))",
+          "imports": [
+            "CurrentAdditive.V38Fin2Exact",
+            "CurrentAdditive.V38Fin2Separation"
+          ],
+          "module": "CurrentAdditive.V38Fin2SourceSeparation",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38Fin2SourceSeparation"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.ArbitraryPrefix.extend_restriction_protocol",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/ArbitraryPrefix.lean",
+          "line": 294,
+          "last_line": 310,
+          "file_sha256": "448df61f3eef5b51c5a6f721a0291d5dd728b0aeb7ce158873349dbb52091e52",
+          "readback_slice_sha256": "34507560f95ee89bd309d8c65f16ee174d7cf418d66b341ae8d438b721e93370",
+          "statement_sha256": "43d52ade849c1a058b9436909839c7a67eccd80d3f92a99bb2195e337c39efe7",
+          "statement": "theorem extend_restriction_protocol\n    (U : Set (I × X)) (V : Set S)\n    (hU : U.Nonempty) (hV : V.Nonempty)\n    (P : Protocol U V Z) :\n    ∃ Pfull : Protocol (I × X) S Z,\n      Pfull.cost = P.cost ∧\n      (∀ a (ha : a ∈ U) s (hs : s ∈ V),\n        Pfull.eval a s = P.eval ⟨a, ha⟩ ⟨s, hs⟩)",
+          "imports": [
+            "Paper2.FiniteSampling",
+            "NPCC.Control"
+          ],
+          "module": "CurrentAdditive.ArbitraryPrefix",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.ArbitraryPrefix"
+          ]
+        }
+      ],
+      "limits": ""
+    },
+    {
+      "id": "cl:defect-induction",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 3739,
+        "last_line": 3751,
+        "block_sha256_lf": "31d91ebad3cb5b14e653699ec9ee6c6aa02e5f4763edce46eb39c9670c302f40",
+        "text": "\\begin{lemma}\\label{cl:defect-induction}\nLet $C\\ge3$, $0<\\theta\\le1/4$, and $0<\\delta\\le1/64$.\nSuppose $\\RP{M}{\\theta}{C-1}$ (\\cref{def:profile}) and every restriction of $M$ retaining row\nweight at least $\\theta$ and column weight at least $1-\\delta$ has cost at least $C$.\nLet $e\\in\\{0,1\\}$, let $a\\ge2e$ be an integer with $2^a\\theta\\le1$, and let\n$p>2^{a-1}$ be an integer. If a restriction $G$ of $\\Int{p}{M}$ retains base\nrow weight at least $2^a\\theta$ in every block and its nonempty column set $K$ satisfies\n\\[\n\\Delta_p(K)\\le(p-2^{a-1})\\delta+\\frac{4e}{3},\n\\]\nthen $\\D(G)\\ge C+a-e$. Here $C$ is only a lower bound, and we do not assume\n$\\D(M)=C$.\n\\end{lemma}\n"
+      },
+      "readback_status": "sufficient_general_provider_set",
+      "source_domain": "Arbitrary positive rational input laws; C>=3,0<theta<=1/4,0<delta<=1/64,e in{0,1},a>=2e,2^a*theta<=1,2^a<2p; nonempty arbitrary correlated K.",
+      "correspondence": "rational_defect_induction and set-based rational_defect_restriction use exact Fin2 profile at C-1 and only a near-full lower bound C, never D(M)=C. Exact original iid defect budget is (p-2^(a-1))*delta+4e/3; conclusion C+a-e on the same retained matrix. Small-block bounds are proved dependencies rather than additional callbacks.",
+      "provider_set": [
+        {
+          "declaration": "Paper2.V38DefectInduction.rational_defect_induction",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38DefectRational.lean",
+          "line": 63,
+          "last_line": 107,
+          "file_sha256": "c11f90b78a7f7dd457db42c59db7abca7aa9de2761a56bb0ade44370d8c08e9b",
+          "readback_slice_sha256": "f4e916c4081cb2c76ae73704b6d99b6481aa76fb5287143f812e1f89a129b5f6",
+          "statement_sha256": "d6be30fb4d5dbb95bc59d8c8656cbecbdf53f8f08cded827e21f6944cd406c59",
+          "statement": "theorem rational_defect_induction\n    (μ : PositiveRationalLaw X) (ν : PositiveRationalLaw Y)\n    (F : X → Y → Bool) (C p a e : ℕ) (θ δ : ℝ)\n    (hC : 3 ≤ C) (hθ : 0 < θ) (hθ1 : θ ≤ 1 / 4)\n    (hδ : 0 < δ) (hδ1 : δ ≤ 1 / 64)\n    (he : e ≤ 1) (ha : 2 * e ≤ a)\n    (hp : 2 ^ a < 2 * p) (hscale : (2 : ℝ) ^ a * θ ≤ 1)\n    (hnear : RestrictionLowerBound F μ.toFiniteLaw ν.toFiniteLaw\n      θ (1 - δ) (C : ℤ))\n    (hprofile : V38RestrictionProfiles.TwoThresholdProfile F\n      μ.toFiniteLaw ν.toFiniteLaw θ ((C : ℤ) - 1))\n    (R : Finset (Fin p × X)) (K : Finset (Fin p → Y)) (hK : K.Nonempty)\n    (hR : ∀ i, (2 : ℝ) ^ a * θ ≤ μ.toFiniteLaw.prob (fun x => (i, x) ∈ R))\n    (hdef : ProjectionDefect.defect ((ν.toFiniteLaw.iid p).prob (· ∈ K)) ≤\n      ((p : ℝ) - (2 : ℝ) ^ ((a : ℤ) - 1)) * δ + (e : ℝ) * (4 / 3)) :\n    C + a - e ≤ D (NPCC.subgame (fullInterlace F p) R K)",
+          "imports": [
+            "CurrentAdditive.V38FixedDefectInduction",
+            "CurrentAdditive.V38UniformFive"
+          ],
+          "module": "CurrentAdditive.V38DefectRational",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38DefectRational"
+          ]
+        },
+        {
+          "declaration": "Paper2.V38DefectInduction.rational_defect_restriction",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38DefectRational.lean",
+          "line": 108,
+          "last_line": 134,
+          "file_sha256": "c11f90b78a7f7dd457db42c59db7abca7aa9de2761a56bb0ade44370d8c08e9b",
+          "readback_slice_sha256": "863931fc6a5f16e41fdf8aad95d6012568b18f6d9f961b3b60450d4ba067a721",
+          "statement_sha256": "ff26269dec769a8d91bbf32aba0e0ea756526e45749f457649be07f030d33992",
+          "statement": "theorem rational_defect_restriction\n    (μ : PositiveRationalLaw X) (ν : PositiveRationalLaw Y)\n    (F : X → Y → Bool) (C p a e : ℕ) (θ δ : ℝ)\n    (hC : 3 ≤ C) (hθ : 0 < θ) (hθ1 : θ ≤ 1 / 4)\n    (hδ : 0 < δ) (hδ1 : δ ≤ 1 / 64)\n    (he : e ≤ 1) (ha : 2 * e ≤ a)\n    (hp : 2 ^ a < 2 * p) (hscale : (2 : ℝ) ^ a * θ ≤ 1)\n    (hnear : RestrictionLowerBound F μ.toFiniteLaw ν.toFiniteLaw\n      θ (1 - δ) (C : ℤ))\n    (hprofile : V38RestrictionProfiles.TwoThresholdProfile F\n      μ.toFiniteLaw ν.toFiniteLaw θ ((C : ℤ) - 1))\n    (U : Set (Fin p × X)) (V : Set (Fin p → Y)) (hV : V.Nonempty)\n    (hU : ∀ i, (2 : ℝ) ^ a * θ ≤ μ.toFiniteLaw.prob (fun x => (i, x) ∈ U))\n    (hdef : ProjectionDefect.defect ((ν.toFiniteLaw.iid p).prob (· ∈ V)) ≤\n      ((p : ℝ) - (2 : ℝ) ^ ((a : ℤ) - 1)) * δ + (e : ℝ) * (4 / 3)) :\n    C + a - e ≤ Compression.restrictionD (fullInterlace F p) U V",
+          "imports": [
+            "CurrentAdditive.V38FixedDefectInduction",
+            "CurrentAdditive.V38UniformFive"
+          ],
+          "module": "CurrentAdditive.V38DefectRational",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38DefectRational"
+          ]
+        }
+      ],
+      "limits": ""
+    },
+    {
+      "id": "cl:seed",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 1303,
+        "last_line": 1312,
+        "block_sha256_lf": "b768bafc5d1c017647343c99fabdc73779243819c3965774b24f7dff73d4ea3c",
+        "text": "\\begin{lemma}[Initial matrix]\\label{cl:seed}\nFor $L\\ge1$, let $p_0=\\operatorname{pow}_2(64(L+1))$ and\n$R_0(z,j)=z_j$ on $\\{0,1\\}^{p_0}\\times[p_0]$, with uniform input weights. Then\n\\[\nd_0:=\\log p_0+1,\\qquad \\D(R_0)=d_0,\\qquad\n\\rank(R_0)=p_0=2^{d_0-1},\\qquad \\RP{R_0}{2^{-L}}{d_0}.\n\\]\nFor $L=\\ceil{\\log n}$ and $n\\ge4$, the initial matrix has polynomial size in $n$\nand can be printed in polynomial time.\n\\end{lemma}\n"
+      },
+      "readback_status": "sufficient_general_provider_set",
+      "source_domain": "Every natural L>=1, exact p0=least power of2>=64(L+1), Boolean cube rows/index columns with uniform laws; for n>=4,L=clog2n, polynomial size and actual polynomial-time table printer.",
+      "correspondence": "LookupSeed.selected_seed_finite holds for all natural L and gives exact D=exponent+1, exact rank=width and stronger historical Fin3 profile. Restricting the already proved Fin3 universal statement to j:Fin2 gives the exact current profile, with no stronger premise asked of a caller. width/exponent definitions are the source pow2ceil/clog recipe. rows_source_bound gives2^p<n^256 and width_source_bound givesp<256log2n; hence table bits polynomial. seed_truth_table_physical supplies one fixed BitMachine printing the literal LookupSeed truth table within C(n+1)^E on unary n>=4; seedRow is bijective so every cube row occurs. It consumes actual SeedTableFinal program/output proof, not a runtime certificate premise.",
+      "provider_set": [
+        {
+          "declaration": "Paper2.LookupSeed.selected_seed_finite",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/LookupSeed.lean",
+          "line": 295,
+          "last_line": 304,
+          "file_sha256": "7f2d7d264bd2d92859c635c831a174972ba7c8decea56eefef86a4343318edd9",
+          "readback_slice_sha256": "e1965b66eb68c2746e1136461cf58dc4f6ca3de6a798ae9c1a5e5a7991eafb7e",
+          "statement_sha256": "10fd95f0bff8140b4461151189078e203380f227dd987095ef0e36972cf6fd8b",
+          "statement": "theorem selected_seed_finite (L : ℕ) :\n    D (matrix (width L)) = exponent L + 1 ∧\n    RestrictionProfile (matrix (width L)) (rowLaw (width L)).toFiniteLaw\n      (columnLaw (width L) (Nat.two_pow_pos (exponent L))).toFiniteLaw\n      ((1 / 2 : ℝ) ^ L) ((exponent L : ℤ) + 1) ∧\n    (realMatrix (matrix (width L))).rank = width L",
+          "imports": [
+            "Paper2.RestrictionProfiles",
+            "Paper2.InterlaceProtocol",
+            "Paper2.ProtocolLeafRank"
+          ],
+          "module": "Paper2.LookupSeed",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.SeedPhysicalBinding",
+            "Paper2.LookupSeed"
+          ]
+        },
+        {
+          "declaration": "Paper2.LookupSeed.width",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/LookupSeed.lean",
+          "line": 272,
+          "last_line": 273,
+          "file_sha256": "7f2d7d264bd2d92859c635c831a174972ba7c8decea56eefef86a4343318edd9",
+          "readback_slice_sha256": "80276ace45c784b3444d92712225230e0dfe2f047b2b9a38fe909802abc4abcb",
+          "statement_sha256": "c1c21bd9fc71b867c9f2162d30207e02da42f4d705e199ba174bf09205806360",
+          "statement": "def width (L : ℕ) : ℕ",
+          "imports": [
+            "Paper2.RestrictionProfiles",
+            "Paper2.InterlaceProtocol",
+            "Paper2.ProtocolLeafRank"
+          ],
+          "module": "Paper2.LookupSeed",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.SeedPhysicalBinding",
+            "Paper2.LookupSeed"
+          ]
+        },
+        {
+          "declaration": "Paper2.LookupSeed.exponent",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/LookupSeed.lean",
+          "line": 270,
+          "last_line": 271,
+          "file_sha256": "7f2d7d264bd2d92859c635c831a174972ba7c8decea56eefef86a4343318edd9",
+          "readback_slice_sha256": "e439b57609f88ed5797273c16b954e17a590dfeb29f11b9b97b26daa7ad79132",
+          "statement_sha256": "8c098458e63a4ca9f5528a8aeb6eb4b1668f8b028bb2ca23701489c2678ebacc",
+          "statement": "def exponent (L : ℕ) : ℕ",
+          "imports": [
+            "Paper2.RestrictionProfiles",
+            "Paper2.InterlaceProtocol",
+            "Paper2.ProtocolLeafRank"
+          ],
+          "module": "Paper2.LookupSeed",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.SeedPhysicalBinding",
+            "Paper2.LookupSeed"
+          ]
+        },
+        {
+          "declaration": "Paper2.LookupSeed.rows_source_bound",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/LookupSeed.lean",
+          "line": 326,
+          "last_line": 340,
+          "file_sha256": "7f2d7d264bd2d92859c635c831a174972ba7c8decea56eefef86a4343318edd9",
+          "readback_slice_sha256": "ca93e86f211c4a50511413e610af7770aa905c3ec2c689d19086c5ceeecf4d72",
+          "statement_sha256": "5cde53e2e5c89b9c32ac31a38e81c5481d0f23f2f965653b95fc90cf234ffa8f",
+          "statement": "theorem rows_source_bound (n : ℕ) (hn : 4 ≤ n) :\n    2 ^ width (Nat.clog 2 n) < n ^ 256",
+          "imports": [
+            "Paper2.RestrictionProfiles",
+            "Paper2.InterlaceProtocol",
+            "Paper2.ProtocolLeafRank"
+          ],
+          "module": "Paper2.LookupSeed",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.SeedPhysicalBinding",
+            "Paper2.LookupSeed"
+          ]
+        },
+        {
+          "declaration": "Paper2.LookupSeed.width_source_bound",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/LookupSeed.lean",
+          "line": 305,
+          "last_line": 325,
+          "file_sha256": "7f2d7d264bd2d92859c635c831a174972ba7c8decea56eefef86a4343318edd9",
+          "readback_slice_sha256": "197f45fa062cc219d92917417e5a8a010a2d301c46f676b5e0adf96838f6e24e",
+          "statement_sha256": "7f97f180c3f54f0e284ac6b2e9cb4d6b3c1adb394f4bd33fa4a58bdd4b4b4a6b",
+          "statement": "theorem width_source_bound (n : ℕ) (hn : 4 ≤ n) :\n    (width (Nat.clog 2 n) : ℝ) < 256 * Real.logb 2 (n : ℝ)",
+          "imports": [
+            "Paper2.RestrictionProfiles",
+            "Paper2.InterlaceProtocol",
+            "Paper2.ProtocolLeafRank"
+          ],
+          "module": "Paper2.LookupSeed",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.SeedPhysicalBinding",
+            "Paper2.LookupSeed"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.DeterministicSeedPhysical.seed_truth_table_physical",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/SeedPhysicalBinding.lean",
+          "line": 12,
+          "last_line": 28,
+          "file_sha256": "41e12e9db6ec106e4268fda68763b4d15f3764f7a148bf7b0628d25d0ffc96f5",
+          "readback_slice_sha256": "dd7674c605ed2766f1e3079739a1a204bb9d149671e09b33957915bdd16b6d81",
+          "statement_sha256": "e3a6ac5e636b3e5b3a18384d0d12bf7d1140d55700d71202ef9680e44f41b078",
+          "statement": "theorem seed_truth_table_physical :\n    ∃ M : BitMachine.Machine, ∃ C E : ℕ, ∀ n : ℕ, 4 ≤ n →\n      let L",
+          "imports": [
+            "Paper2.SeedTableFinal",
+            "Paper2.LookupSeed"
+          ],
+          "module": "CurrentAdditive.SeedPhysicalBinding",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.SeedPhysicalBinding"
+          ]
+        },
+        {
+          "declaration": "SeedT45.SeedTableFinal.seed_table_machine",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/SeedTableFinal.lean",
+          "line": 21,
+          "last_line": 37,
+          "file_sha256": "6674f57dc49c5318fedc9608cde9fed11f82632ba4f983dfd11ab0024c8e5beb",
+          "readback_slice_sha256": "caadba9fb8313ff1d9b1659e05a5a1d065bbe1c7627b15e104e6b79344092560",
+          "statement_sha256": "f0e3ec619df83c363d26b12efba79c5009938b9bbc5477f236f327453a03475a",
+          "statement": "theorem seed_table_machine :\n    ∃ M : BitMachine.Machine, ∃ C E : ℕ, ∀ n : ℕ, 4 ≤ n →\n      M.OutputsWithin (List.replicate n true)\n        (MatrixMaterialization.rowMajor\n          (fun (k : Fin (2 ^ Paper2.LookupSeed.width (Nat.clog 2 n)))\n               (j : Fin (Paper2.LookupSeed.width (Nat.clog 2 n))) =>\n            Paper2.LookupSeed.matrix (Paper2.LookupSeed.width (Nat.clog 2 n))\n              (seedRow (Paper2.LookupSeed.width (Nat.clog 2 n)) k) j))\n        (C * (n + 1) ^ E)",
+          "imports": [
+            "Paper2.SeedTableMachine",
+            "Paper2.SeedTableClock"
+          ],
+          "module": "Paper2.SeedTableFinal",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.SeedPhysicalBinding",
+            "Paper2.SeedTableFinal"
+          ]
+        },
+        {
+          "declaration": "SeedT45.SeedTableFinal.seed_input_sets",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/SeedTableFinal.lean",
+          "line": 38,
+          "last_line": 43,
+          "file_sha256": "6674f57dc49c5318fedc9608cde9fed11f82632ba4f983dfd11ab0024c8e5beb",
+          "readback_slice_sha256": "40b5c8133f4088275fe038c05c6f7e768c0f2c484dd4200d1906333c09b7ee4f",
+          "statement_sha256": "57ef233ba48a70a6eeef7c3e355fd769d39cbe2e1b38e55008772430cb66db37",
+          "statement": "theorem seed_input_sets (p : ℕ) :\n    Function.Bijective (seedRow p) ∧\n    ∀ (k : Fin (2 ^ p)) (j : Fin p),\n      (MatrixMaterialization.rowMajor (seedTable p))[k.val * p + j.val]? = some (seedRow p k j)",
+          "imports": [
+            "Paper2.SeedTableMachine",
+            "Paper2.SeedTableClock"
+          ],
+          "module": "Paper2.SeedTableFinal",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.SeedPhysicalBinding",
+            "Paper2.SeedTableFinal"
+          ]
+        }
+      ],
+      "limits": ""
+    },
+    {
+      "id": "obs:compatible-protocol",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 2812,
+        "last_line": 2820,
+        "block_sha256_lf": "082d35da37e348e39eb9f72430d1f1008f6729f95e46695b33e9999f02b9c151",
+        "text": "\\begin{observation}[Short protocols as containments]\\label{obs:compatible-protocol}\nFor retained sets $U\\subseteq X$, $V\\subseteq Y$ and an integer $t\\ge0$, with correctness on an empty restriction understood\nvacuously,\n\\begin{equation}\\label{eq:compatibility}\n \\D(F[U,V])\\le t\n \\quad\\Longleftrightarrow\\quad\n V\\subseteq G_P(U)\\text{ for some depth-}t\\text{ protocol tree }P\\text{ of this kind}.\n\\end{equation}\n\\end{observation}\n"
+      },
+      "readback_status": "sufficient_general_provider",
+      "source_domain": "Arbitrary Boolean F, retained row/column sets U,V (including empty), arbitrary integer t>=0.",
+      "correspondence": "PartialProtocol.D_restriction_le_iff_complete is the literal iff with a structurally complete depth-t tree and V subset compatible F U. It obtains an optimal protocol by nonempty achievable costs, extends Alice maps to all rows, and pads short paths by fixed dummy Alice bits internally. Reverse direction constructs canonical Bob completion from pointwise compatibility. There is no Nonempty U/V premise, so empty restrictions are covered vacuously.",
+      "provider_set": [
+        {
+          "declaration": "Paper2.PartialProtocol.D_restriction_le_iff_complete",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ProtocolDomains.lean",
+          "line": 348,
+          "last_line": 359,
+          "file_sha256": "51981fe1451e4062d2f8b97515d02b571c96baae623e5f1b46f3b186f26347ca",
+          "readback_slice_sha256": "477ffe77fbdf1f23f73383db6900c72a2135df56ab1cfd847700c28b7f294b26",
+          "statement_sha256": "e29e5b6489cbee7464e52d8909a0075edd4075d69a42df033c333eb2f1d61dea",
+          "statement": "theorem D_restriction_le_iff_complete\n    (F : X → Y → Bool) (U : Set X) (V : Set Y)\n    [Fintype U] [Fintype V] (t : ℕ) :\n    D (fun (x : U) (y : V) => F x.1 y.1) ≤ t ↔\n      ∃ P : PartialProtocol X, P.IsComplete t ∧ V ⊆ P.compatible F U",
+          "imports": [
+            "Workspace.UpperBound"
+          ],
+          "module": "Paper2.ProtocolDomains",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.RestrictionBridge",
+            "Paper2.Compression",
+            "Paper2.ProtocolDomains"
+          ]
+        },
+        {
+          "declaration": "Paper2.PartialProtocol.D_restriction_le_iff",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ProtocolDomains.lean",
+          "line": 257,
+          "last_line": 278,
+          "file_sha256": "51981fe1451e4062d2f8b97515d02b571c96baae623e5f1b46f3b186f26347ca",
+          "readback_slice_sha256": "abcc94aae26472381e5f4489dc1953252659149f5629ffa115a09eac9ab40b5e",
+          "statement_sha256": "41ab62cd1f2be18acb2a952a6652544fe50faf2bc9b61d2d10dff79ee21659ac",
+          "statement": "theorem D_restriction_le_iff\n    (F : X → Y → Bool) (U : Set X) (V : Set Y)\n    [Fintype U] [Fintype V] (t : ℕ) :\n    D (fun (x : U) (y : V) => F x.1 y.1) ≤ t ↔\n      ∃ P : PartialProtocol X, P.cost ≤ t ∧ V ⊆ P.compatible F U",
+          "imports": [
+            "Workspace.UpperBound"
+          ],
+          "module": "Paper2.ProtocolDomains",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.RestrictionBridge",
+            "Paper2.Compression",
+            "Paper2.ProtocolDomains"
+          ]
+        },
+        {
+          "declaration": "Paper2.PartialProtocol.compatible_pad",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ProtocolDomains.lean",
+          "line": 303,
+          "last_line": 312,
+          "file_sha256": "51981fe1451e4062d2f8b97515d02b571c96baae623e5f1b46f3b186f26347ca",
+          "readback_slice_sha256": "7678cafcc47fd657cc38a89ade96a60e0a0e92ab252a842b8e9d48e5cbb191d7",
+          "statement_sha256": "12576762755c51f50f2c559c707900e4dcd460a2f2051e09e99ea68beec0af0e",
+          "statement": "theorem compatible_pad (F : X → Y → Bool) (P : PartialProtocol X)\n    (t : ℕ) (U : Set X) : (P.pad t).compatible F U = P.compatible F U",
+          "imports": [
+            "Workspace.UpperBound"
+          ],
+          "module": "Paper2.ProtocolDomains",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.RestrictionBridge",
+            "Paper2.Compression",
+            "Paper2.ProtocolDomains"
+          ]
+        }
+      ],
+      "limits": ""
+    },
+    {
+      "id": "res:destinations",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 2075,
+        "last_line": 2096,
+        "block_sha256_lf": "c009bfe11b77764ab5bbe1fb97dde771699ebbd9df65e807274b5259dbb289e3",
+        "text": "\\begin{lemma}\\label{res:destinations}\nUnder the common hypotheses above, suppose a restriction of $U$ retains row\nweight at least $1-\\delta_U$ and a tuple event $Y'$ of original weight at least\n$\\theta$, with a protocol of depth at most $C+\\log w-1$.\nApply \\cref{det:conditioning} to this one event with cap $\\eta/2$, removing\nat most $E_{\\rm exc}/2$ copies. At an Alice node of depth $r$, put\n$\\kappa=w2^{-r}$ and follow each remaining set of $\\Omega$-rows from one copy,\nof normalized weight at least $2\\kappa x$, into every child retaining weight\nat least $\\kappa x$. We count these row sets as follows. An unsplit row set\ncontributes one. Once a row set first splits into two children meeting the\nthreshold, each descendant contributes one-half. We add these\ncontributions at each node. They count row sets and are not input weight.\n\nStop at the first node where Bob speaks or at depth $\\log w$, whichever comes first.\nThe latter stopping condition applies regardless of the next speaker.\nComplete paths without row sets by fixed Alice bits. At a node where Bob\nfirst speaks with $\\kappa\\ge2$, the total contribution is at most $\\kappa/2$.\nA node at depth $\\log w$ has at most one row set. At least $w-E_{\\rm exc}$\nnodes at that depth are reached by unsplit row sets from distinct copies. Assign each\nsuch node to the copy of its row set. Over all other stopping nodes,\nthe sum of $\\kappa$ is at most $E_{\\rm exc}$.\n\\end{lemma}\n"
+      },
+      "readback_status": "sufficient_constructive_provider_set_readback",
+      "source_domain": "Actual first interlace over the common H1-H4 source structure, fixed event Yevent of original mass>=theta, retained rowmass1-eta/(16w), actual protocol cost<=C+logw-1; one fixed exception set from that event.",
+      "correspondence": "choose_exception_before_nodes fixes one E with |E|<=e(theta,eta/2), gives every <=8-coordinate conditional projection bound and unconditioned singleton image mass. local_obstructions constructs both exact local stopping conclusions from the reference Fin2 profile and the same E/event. initialState pads only Alice paths, initializes outside-E unsplit supports, units=2(w-|E|). run_owner_count returns the SHARP w-2e0 owner count and exceptional capacity<=2e0, not merely the weaker3w/4 displayed by owner_frontier. Set e0=e(theta,eta/2),Eexc=2e0. Its natural units equal twice the source contribution (unsplit=1,splitdescendant=1/2); thus hbob units<=kappa means contribution<=kappa/2. Final activecard<=1 is local_obstructions first clause. ReferenceOwners.run_origin_injective gives distinct copies. The actual run has thresholds ReferenceSchedule.floor w x and stops first Bob/depthr. All local callbacks are discharged by named source-profile/conditioning proofs; no desired owner-count premise.",
+      "provider_set": [
+        {
+          "declaration": "CurrentAdditive.V39SharedReceiptJoin.choose_exception_before_nodes",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39SharedReceiptJoin.lean",
+          "line": 32,
+          "last_line": 83,
+          "file_sha256": "9bade2f053d1cec302c1bc23fed1312d84962bc10a37fe92d79eb52887966c7d",
+          "readback_slice_sha256": "84d394a66dd0d7b976d7987a8bc10a94c6f7bdd5fe32d594a23d7029778ab090",
+          "statement_sha256": "5d1401985a0ef74e68dc151040f8d129c8897334fd654df79a8d977f5ce95774",
+          "statement": "theorem choose_exception_before_nodes\n    (R₀ : X → Y → Bool)\n    (activity : (G × (V ⊕ Aux)) → Fin q₂ → Option (Fin s)) (ξ₀ : Tail s Y)\n    (Yevent : Set (InternalLabel src streams))\n    (H ell b : ℕ) (hH : 2 ≤ H) (hq : q₂=2^ell) (hs : s=2^b)\n    (x θ η : ℝ) (hx : 0 < x) (hθ : 0 < θ) (hη : 0 < η)\n    (hY : θ ≤ streams.law.toFiniteLaw.prob (· ∈ Yevent))\n    (hA : V38RestrictionProfiles.TwoThresholdProfile (A src R₀)\n      src.gamma.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₁)).prod μX).toFiniteLaw x (H : ℤ))\n    (hT : V38RestrictionProfiles.TwoThresholdProfile (T src R₀)\n      src.inner.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₂)).prod src.gamma.law).toFiniteLaw\n      x ((H+ell : ℕ) : ℤ))\n    (hfloor : 2*s*x ≤ 1-η*(s : ℝ)/(2*(255/256 : ℝ)))\n    (hmargin : 49/64+2*s*x <\n      ((99/100 : ℝ)+(255/256 : ℝ)^2-1)/(255/256 : ℝ)^2)\n    (hsmall : 2*s*x ≤ 1/8) (hpairsmall : 2*q₂*x ≤ 1/8) :\n    ∃ E : Finset (Fin w), E.card ≤ V38Moments.exceptionCount θ (η/2) ∧\n      (∀ J : Finset (Fin w), J ⊆ Finset.univ \\ E → J.card ≤ 8 →\n        projectionTV (condition streams.law.toFiniteLaw (· ∈ Yevent) (hθ.trans_le hY))\n          (rowLaw src μI).toFiniteLaw (InternalStreams.decode src streams) J ≤\n            conditioningEpsilonR 1024 θ (η/2)) ∧\n      (∀ i : Fin w, i ∉ E →\n        1-η/2 ≤ (rowLaw src μI).toFiniteLaw.prob\n          (· ∈ (fun t => InternalStreams.decode src streams t i) '' Yevent)) ∧\n      (∀ i j : Fin w, i ≠ j → i ∉ E → j ∉ E →\n        (99/100 : ℝ) <\n          ((rowLaw src μI).toFiniteLaw.prod (rowLaw src μI).toFiniteLaw).prob\n            (· ∈ (fun t => (InternalStreams.decode src streams t i,\n              InternalStreams.decode src streams t j)) '' Yevent)) ∧\n      (∀ (Rnode : Set (Fin w × V38IndexedTwoTag.Column src)) (ε : ℝ)\n        (i j : Fin w), i ≠ j → i ∉ E → j ∉ E →\n        (1-ε ≤ (ordinaryLaw src).toFiniteLaw.prob\n          (fun o => (i,.inl o) ∈ Rnode)) →\n        (Compression.restrictionD (actualW src streams R₀ activity ξ₀) Yevent Rnode ≤\n          H+ell+b) →\n        (1/256 : ℝ)*\n          (PairedSelectorPopulation.columnLaw src.gamma.law).toFiniteLaw.prob\n            (fun f => (j,.inr f) ∈ Rnode) ≤ (1/256 : ℝ)*(2*q₂*x+4*ε))",
+          "imports": [
+            "CurrentAdditive.V39SharedConditioning",
+            "CurrentAdditive.V39ForeignSameException",
+            "CurrentAdditive.V39IndexedIncomingLocal"
+          ],
+          "module": "CurrentAdditive.V39SharedReceiptJoin",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39SharedReceiptJoin"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39IndexedOwnerObstructions.initial_floor",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IndexedOwnerObstructions.lean",
+          "line": 26,
+          "last_line": 46,
+          "file_sha256": "864e2c6e7d4112816c520db846066de0f17962807859cc0ba281e949a7e0c618",
+          "readback_slice_sha256": "ee61b41ab123c3c3cbd3913b0e401cef22d16dd58efc67dcc1b54df8ca8b8a06",
+          "statement_sha256": "f94adcbb10036ec9f774bc282e4aa9bef6e380db033a941dd68e21d23da44851",
+          "statement": "theorem initial_floor\n    (R : Set (Rows src (w",
+          "imports": [
+            "CurrentAdditive.V39IndexedTwoFamilyRun",
+            "CurrentAdditive.V39OwnerLiveLeaf",
+            "Paper2.ReferenceRunCorrectness",
+            "CurrentAdditive.GeneratedOwnerTuple"
+          ],
+          "module": "CurrentAdditive.V39IndexedOwnerObstructions",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39IndexedOwnerObstructions"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39IndexedOwnerObstructions.local_obstructions",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IndexedOwnerObstructions.lean",
+          "line": 47,
+          "last_line": 151,
+          "file_sha256": "864e2c6e7d4112816c520db846066de0f17962807859cc0ba281e949a7e0c618",
+          "readback_slice_sha256": "cf2a87bf54e5b88c7efb863a082de41b91c467d9be1c4b027bf903cd8a390b54",
+          "statement_sha256": "8c549a60fecda4a0c17710bca19608e8b2ef71c212e41b1853d8df3b57df70a0",
+          "statement": "theorem local_obstructions\n    (ν : PositiveRationalLaw (Row (I",
+          "imports": [
+            "CurrentAdditive.V39IndexedTwoFamilyRun",
+            "CurrentAdditive.V39OwnerLiveLeaf",
+            "Paper2.ReferenceRunCorrectness",
+            "CurrentAdditive.GeneratedOwnerTuple"
+          ],
+          "module": "CurrentAdditive.V39IndexedOwnerObstructions",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39IndexedOwnerObstructions"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39IndexedTwoFamilyRun.initialState",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IndexedTwoFamilyRun.lean",
+          "line": 38,
+          "last_line": 45,
+          "file_sha256": "9c7e53c0ae428fe65cc0bf0097e1c735beabd7b2214e483b5f246a56211767a7",
+          "readback_slice_sha256": "3cd253f2f65eb87f942a1352bf24cce051a591527a1b2d04c3dca15b33190bd8",
+          "statement_sha256": "757adec617c92c2901448196123d3e2d7ce454207166765cdfffa4a4f8bd11a7",
+          "statement": "noncomputable def initialState\n    (R : Set (Rows src (w",
+          "imports": [
+            "CurrentAdditive.V39ReferenceOwnersSharp",
+            "CurrentAdditive.V39IndexedTwoFamilySummation",
+            "Paper2.ReferenceOwnerLoss",
+            "Paper2.RestorationRowPartition"
+          ],
+          "module": "CurrentAdditive.V39IndexedTwoFamilyRun",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39IndexedTwoFamilyRun"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39IndexedTwoFamilyRun.initial_valid",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IndexedTwoFamilyRun.lean",
+          "line": 46,
+          "last_line": 50,
+          "file_sha256": "9c7e53c0ae428fe65cc0bf0097e1c735beabd7b2214e483b5f246a56211767a7",
+          "readback_slice_sha256": "7b3577aba33371dc1b581085f8b1d46fd8a33714d917b4b4147b98233f96aded",
+          "statement_sha256": "dbdf9b885c344e0deea33cb3aef9c241baf763d45e2e9bdd1b4c2701256f50b6",
+          "statement": "theorem initial_valid\n    (R : Set (Rows src (w",
+          "imports": [
+            "CurrentAdditive.V39ReferenceOwnersSharp",
+            "CurrentAdditive.V39IndexedTwoFamilySummation",
+            "Paper2.ReferenceOwnerLoss",
+            "Paper2.RestorationRowPartition"
+          ],
+          "module": "CurrentAdditive.V39IndexedTwoFamilyRun",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39IndexedTwoFamilyRun"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39IndexedTwoFamilyRun.initial_units",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IndexedTwoFamilyRun.lean",
+          "line": 59,
+          "last_line": 64,
+          "file_sha256": "9c7e53c0ae428fe65cc0bf0097e1c735beabd7b2214e483b5f246a56211767a7",
+          "readback_slice_sha256": "523e8f06904e296adcdd3910e703c241ab4aeaa27519f4a131a1a12dc660f6ae",
+          "statement_sha256": "625fff4c66f88323c782e845cefff02fa894b9870b9793f98110f9d9b59cebf0",
+          "statement": "theorem initial_units\n    (R : Set (Rows src (w",
+          "imports": [
+            "CurrentAdditive.V39ReferenceOwnersSharp",
+            "CurrentAdditive.V39IndexedTwoFamilySummation",
+            "Paper2.ReferenceOwnerLoss",
+            "Paper2.RestorationRowPartition"
+          ],
+          "module": "CurrentAdditive.V39IndexedTwoFamilyRun",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39IndexedTwoFamilyRun"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39ReferenceOwnersSharp.run_owner_count",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39ReferenceOwnersSharp.lean",
+          "line": 62,
+          "last_line": 90,
+          "file_sha256": "fa4fbe6741980cda071537c4cf6a2bde055205077642ccf1493d1c5278b483bb",
+          "readback_slice_sha256": "325c7c33e6da074a1b332175ca8972701aee813c7da65adbfce6ea9bd9b92388",
+          "statement_sha256": "0a74b8d2567868a2962970a694111ff928bda9c77657412b632dea1937ae2f1c",
+          "statement": "theorem run_owner_count (μ : FiniteLaw W) (input : I → W → A)\n    (floor : ℕ → ℝ) (r : ℕ) (state : State A C I W) (n e0 : ℕ)\n    (hvalid : state.family.unsplit ⊆ state.family.active)\n    (hprefix : Paper2.ReferencePrefix.NoEarlyLeaf r state.protocol)\n    (hinitial : 2^r ≤ n+e0) (hunits : 2*n ≤ units state.family)\n    (hfinal : ∀ v : (run μ input floor 0 r state).Leaves,\n      ((run μ input floor 0 r state).route v).length = r →\n      ((run μ input floor 0 r state).state v).family.active.card ≤ 1)\n    (hbob : ∀ v : (run μ input floor 0 r state).Leaves,\n      ((run μ input floor 0 r state).route v).length ≠ r →\n      units ((run μ input floor 0 r state).state v).family ≤\n        2^(r-((run μ input floor 0 r state).route v).length)) :\n    let T",
+          "imports": [
+            "Paper2.ReferenceOwners"
+          ],
+          "module": "CurrentAdditive.V39ReferenceOwnersSharp",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39ReferenceOwnersSharp"
+          ]
+        },
+        {
+          "declaration": "Paper2.ReferenceOwners.run_origin_injective",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ReferenceOwners.lean",
+          "line": 188,
+          "last_line": 194,
+          "file_sha256": "4dd8cf622dfe498040965eeee2197e7f024bb7eba4416664eb7efc5cab840b74",
+          "readback_slice_sha256": "9ca88645ec979cbb12c9527f89eb77d7a1bf6033216256ae2779fc76b3486abe",
+          "statement_sha256": "f86144a7a6ab998476979811d07f18010dcbb47fc3e848e67ba30125e068521b",
+          "statement": "theorem run_origin_injective (μ : FiniteLaw W) (input : I → W → A)\n    (floor : ℕ → ℝ) (r : ℕ) (s : State A C I W) :\n    Function.Injective (origin\n      (fun v : (run μ input floor 0 r s).Leaves => ((run μ input floor 0 r s).state v).family)\n      (fun v => ((run μ input floor 0 r s).route v).length = r))",
+          "imports": [
+            "Paper2.ReferenceCertificateProtocol"
+          ],
+          "module": "Paper2.ReferenceOwners",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.IndexedOwnerRun",
+            "Paper2.ReferenceOwners"
+          ]
+        },
+        {
+          "declaration": "Paper2.ReferenceCertificateTree.run_floor",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ReferenceCertificateTree.lean",
+          "line": 91,
+          "last_line": 105,
+          "file_sha256": "32af4a369c144ee763ef5a678ce7857220347b3d5d43b41325569477b734047b",
+          "readback_slice_sha256": "0fdcba21ac44ba719e536a6955c4dc84f0035e85172ad010f1bfe6f43082fed3",
+          "statement_sha256": "acf9d53916d48850120c9fd383af42a204208ed72bc63abb7d7826838db54a1a",
+          "statement": "theorem run_floor (μ : FiniteLaw W) (input : I → W → A)\n    (floor : ℕ → ℝ) (hhalf : ∀ d, floor d = 2 * floor (d + 1))\n    (d fuel : ℕ) (s : State A C I W)\n    (hs : ∀ i ∈ s.family.active, floor d ≤ SourceSupportStep.mass μ (s.family.support i)) :\n    ∀ v : (run μ input floor d fuel s).Leaves,\n      ∀ i ∈ ((run μ input floor d fuel s).state v).family.active,\n        floor (d + ((run μ input floor d fuel s).route v).length) ≤\n          SourceSupportStep.mass μ (((run μ input floor d fuel s).state v).family.support i)",
+          "imports": [
+            "Paper2.ReferenceCertificates",
+            "Paper2.SourceSupportFrontierTree",
+            "Workspace.Types.Protocol"
+          ],
+          "module": "Paper2.ReferenceCertificateTree",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.QuarticSourceDestinations",
+            "Paper2.ReferenceSourceInitial",
+            "Paper2.ReferenceCertificateTree"
+          ]
+        }
+      ],
+      "limits": "This is a declaration-set join readback, not a newly compiled standalone destinations wrapper. owner_frontier ALONE is insufficient: its public count is only3w/4 and it takes local callbacks. The sharp generic run_owner_count plus independently proved local_obstructions is required."
+    },
+    {
+      "id": "res:foreign",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 2156,
+        "last_line": 2165,
+        "block_sha256_lf": "c74c4ea4dec6620c993151ad5081c3955b4d121492565d558e0444ad2fbaace2",
+        "text": "\\begin{lemma}\\label{res:foreign}\nIn the same protocol, for each copy $i$ with an assigned node, let\n$\\varepsilon_i$ be the normalized weight of copy $i$'s $\\Omega$-rows missing\nat that node. Every\nother copy that has an assigned node sends at most $\\mu\\delta_i$ weight from\n$\\mathcal D$ to the node assigned to copy $i$, where\n\\[\n \\delta_i=2q_2x+4\\varepsilon_i.\n\\]\n\\end{lemma}\n"
+      },
+      "readback_status": "sufficient_constructive_provider_set_readback",
+      "source_domain": "The same actual protocol/event and assigned distinct copies outside one fixed E from res:destinations; actual ordinary missing mass epsilon_i at the destination owner.",
+      "correspondence": "choose_exception_before_nodes provides a single E before any Rnode, and its final universally quantified clause is already the exact actualW retained-restriction foreign mass bound mu*(2q2x+4epsilon). owner_to_owner_receipt_from_same_E derives all singleton/pair image information from the same conditional projection bound; no hgood/hOther is donated. owner_to_owner_receipt_from_projections contradicts excessive actual retained diagonal mass by setting delta to that very mass (<=1), so strict internal delta>2q2x+4epsilon yields the source non-strict cap with coefficient4. For assigned nodes, origin_mem_initial gives both copies outsideE, distinctness is origin_injective; depthr makes remainingcost<=C-1=H1+ell+b, supplied by remaining_cost and computes_on_original_rectangle. actualW is definitionally transpose of the source internal matrix. Normalized ordinary law and mu=1/256 match source.",
+      "provider_set": [
+        {
+          "declaration": "CurrentAdditive.V39SharedReceiptJoin.choose_exception_before_nodes",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39SharedReceiptJoin.lean",
+          "line": 32,
+          "last_line": 83,
+          "file_sha256": "9bade2f053d1cec302c1bc23fed1312d84962bc10a37fe92d79eb52887966c7d",
+          "readback_slice_sha256": "84d394a66dd0d7b976d7987a8bc10a94c6f7bdd5fe32d594a23d7029778ab090",
+          "statement_sha256": "5d1401985a0ef74e68dc151040f8d129c8897334fd654df79a8d977f5ce95774",
+          "statement": "theorem choose_exception_before_nodes\n    (R₀ : X → Y → Bool)\n    (activity : (G × (V ⊕ Aux)) → Fin q₂ → Option (Fin s)) (ξ₀ : Tail s Y)\n    (Yevent : Set (InternalLabel src streams))\n    (H ell b : ℕ) (hH : 2 ≤ H) (hq : q₂=2^ell) (hs : s=2^b)\n    (x θ η : ℝ) (hx : 0 < x) (hθ : 0 < θ) (hη : 0 < η)\n    (hY : θ ≤ streams.law.toFiniteLaw.prob (· ∈ Yevent))\n    (hA : V38RestrictionProfiles.TwoThresholdProfile (A src R₀)\n      src.gamma.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₁)).prod μX).toFiniteLaw x (H : ℤ))\n    (hT : V38RestrictionProfiles.TwoThresholdProfile (T src R₀)\n      src.inner.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₂)).prod src.gamma.law).toFiniteLaw\n      x ((H+ell : ℕ) : ℤ))\n    (hfloor : 2*s*x ≤ 1-η*(s : ℝ)/(2*(255/256 : ℝ)))\n    (hmargin : 49/64+2*s*x <\n      ((99/100 : ℝ)+(255/256 : ℝ)^2-1)/(255/256 : ℝ)^2)\n    (hsmall : 2*s*x ≤ 1/8) (hpairsmall : 2*q₂*x ≤ 1/8) :\n    ∃ E : Finset (Fin w), E.card ≤ V38Moments.exceptionCount θ (η/2) ∧\n      (∀ J : Finset (Fin w), J ⊆ Finset.univ \\ E → J.card ≤ 8 →\n        projectionTV (condition streams.law.toFiniteLaw (· ∈ Yevent) (hθ.trans_le hY))\n          (rowLaw src μI).toFiniteLaw (InternalStreams.decode src streams) J ≤\n            conditioningEpsilonR 1024 θ (η/2)) ∧\n      (∀ i : Fin w, i ∉ E →\n        1-η/2 ≤ (rowLaw src μI).toFiniteLaw.prob\n          (· ∈ (fun t => InternalStreams.decode src streams t i) '' Yevent)) ∧\n      (∀ i j : Fin w, i ≠ j → i ∉ E → j ∉ E →\n        (99/100 : ℝ) <\n          ((rowLaw src μI).toFiniteLaw.prod (rowLaw src μI).toFiniteLaw).prob\n            (· ∈ (fun t => (InternalStreams.decode src streams t i,\n              InternalStreams.decode src streams t j)) '' Yevent)) ∧\n      (∀ (Rnode : Set (Fin w × V38IndexedTwoTag.Column src)) (ε : ℝ)\n        (i j : Fin w), i ≠ j → i ∉ E → j ∉ E →\n        (1-ε ≤ (ordinaryLaw src).toFiniteLaw.prob\n          (fun o => (i,.inl o) ∈ Rnode)) →\n        (Compression.restrictionD (actualW src streams R₀ activity ξ₀) Yevent Rnode ≤\n          H+ell+b) →\n        (1/256 : ℝ)*\n          (PairedSelectorPopulation.columnLaw src.gamma.law).toFiniteLaw.prob\n            (fun f => (j,.inr f) ∈ Rnode) ≤ (1/256 : ℝ)*(2*q₂*x+4*ε))",
+          "imports": [
+            "CurrentAdditive.V39SharedConditioning",
+            "CurrentAdditive.V39ForeignSameException",
+            "CurrentAdditive.V39IndexedIncomingLocal"
+          ],
+          "module": "CurrentAdditive.V39SharedReceiptJoin",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39SharedReceiptJoin"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39SharedReceiptJoin.actualW_eq_internal_transpose",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39SharedReceiptJoin.lean",
+          "line": 27,
+          "last_line": 31,
+          "file_sha256": "9bade2f053d1cec302c1bc23fed1312d84962bc10a37fe92d79eb52887966c7d",
+          "readback_slice_sha256": "a74b07f790e765b818d7cf80dbff146fbb8e48da5e8354bc79549a45c8a652c4",
+          "statement_sha256": "b6c643f6464138bb6969d8eb1dd80930ba96a50f0d8d07800cfa27324aaf881c",
+          "statement": "theorem actualW_eq_internal_transpose (R₀ : X → Y → Bool)\n    (activity : (G × (V ⊕ Aux)) → Fin q₂ → Option (Fin s)) (ξ₀ : Tail s Y) :\n    actualW src streams R₀ activity ξ₀ =\n      fun t row => V39IndexedIncomingLocal.internal src streams R₀ activity ξ₀ row t",
+          "imports": [
+            "CurrentAdditive.V39SharedConditioning",
+            "CurrentAdditive.V39ForeignSameException",
+            "CurrentAdditive.V39IndexedIncomingLocal"
+          ],
+          "module": "CurrentAdditive.V39SharedReceiptJoin",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39SharedReceiptJoin"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39ForeignSameException.owner_to_owner_receipt_from_same_E",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39ForeignSameException.lean",
+          "line": 24,
+          "last_line": 128,
+          "file_sha256": "04f2a72db88ef069e712c218be8ffc11afe29c8712462e65003aa1f46b2a4f83",
+          "readback_slice_sha256": "3849c025a6af1495483a21a5134b75c47539e2dfdd8880deca0115ec95886775",
+          "statement_sha256": "19ba7fc92b73b64de02caa9830c1701a7a555df8063be9365024ae3968138a3d",
+          "statement": "theorem owner_to_owner_receipt_from_same_E\n    {w : ℕ} (streams : InternalStreams src μI w)\n    (R₀ : X → Y → Bool)\n    (activity : (G × (V ⊕ Aux)) → Fin q₂ → Option (Fin s))\n    (ξ₀ : Tail s Y)\n    (Yevent : Set (InternalLabel src streams))\n    (Vrows : Set (Fin w × V38IndexedTwoTag.Column src))\n    (E : Finset (Fin w))\n    (H ell a : ℕ) (hH : 2 ≤ H)\n    (hq : q₂ = 2^ell) (hs : s = 2^a)\n    (x : ℝ) (hx : 0 < x)\n    (hA : V38RestrictionProfiles.TwoThresholdProfile (A src R₀)\n      src.gamma.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₁)).prod μX).toFiniteLaw\n      x (H : ℤ))\n    (hT : V38RestrictionProfiles.TwoThresholdProfile (T src R₀)\n      src.inner.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₂)).prod src.gamma.law).toFiniteLaw\n      x ((H+ell : ℕ) : ℤ))\n    (θ η : ℝ) (hθ : 0 < θ)\n    (hY : θ ≤ streams.law.toFiniteLaw.prob (· ∈ Yevent))\n    (hη : 0 < η)\n    (hTV : ∀ J : Finset (Fin w),\n      J ⊆ Finset.univ \\ E → J.card ≤ 8 →\n      projectionTV\n        (condition streams.law.toFiniteLaw (· ∈ Yevent)\n          (hθ.trans_le hY)) (rowLaw src μI).toFiniteLaw\n        (InternalStreams.decode src streams) J ≤\n          CurrentAdditive.conditioningEpsilonR 1024 θ (η/2))\n    (hfloor : 2*s*x ≤ 1 - η * (s : ℝ) / (2 * (255/256 : ℝ)))\n    (hmargin : 49/64 + 2*s*x <\n      ((99 / 100 : ℝ) + (255 / 256 : ℝ)^2 - 1) /\n        (255 / 256 : ℝ)^2)\n    (ε : ℝ)\n    (hsmall : 2*s*x ≤ 1/8) (hpairsmall : 2*q₂*x ≤ 1/8) :\n    ∀ i j : Fin w, i ≠ j → i ∉ E → j ∉ E →\n      (1-ε ≤ (ordinaryLaw src).toFiniteLaw.prob\n        (fun o => (i, .inl o) ∈ Vrows)) →\n      (Compression.restrictionD\n        (V39TwoTagOwnerEmbedding.actualW src streams R₀ activity ξ₀) Yevent Vrows ≤ H+ell+a) →\n      (1/256 : ℝ) *\n        (PairedSelectorPopulation.columnLaw src.gamma.law).toFiniteLaw.prob\n          (fun f => (j,.inr f) ∈ Vrows) ≤\n        (1/256 : ℝ)*(2*q₂*x+4*ε)",
+          "imports": [
+            "CurrentAdditive.V39ForeignReceipt",
+            "CurrentAdditive.IndexedOwnerFixedEReceipt"
+          ],
+          "module": "CurrentAdditive.V39ForeignSameException",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39ForeignSameException"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39ForeignReceipt.owner_to_owner_receipt_from_projections",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39ForeignReceipt.lean",
+          "line": 24,
+          "last_line": 79,
+          "file_sha256": "3944e878c82b151383d52f61407e188b13e3956c54875d1d1c851be41fb22253",
+          "readback_slice_sha256": "20a687e33074d7219d87f7185d40eb44fec22c962a609ca9781a5cffa8f904f8",
+          "statement_sha256": "31c5f13192bf479a275c38e734e665469f14d9465647faf7fc223ff3d1bfa745",
+          "statement": "theorem owner_to_owner_receipt_from_projections\n    {w : ℕ} (streams : InternalStreams src μI w)\n    (R₀ : X → Y → Bool)\n    (activity : (G × (V ⊕ Aux)) → Fin q₂ → Option (Fin s)) (ξ₀ : Tail s Y)\n    (i j : Fin w) (U : Set (InternalLabel src streams))\n    (Vrows : Set (Fin w × V38IndexedTwoTag.Column src))\n    (H ell a : ℕ) (hH : 2 ≤ H) (hq : q₂ = 2^ell) (hs : s = 2^a)\n    (x : ℝ) (hx : 0 < x) (hD : 8 ≤ D)\n    (hA : V38RestrictionProfiles.TwoThresholdProfile (A src R₀)\n      src.gamma.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₁)).prod μX).toFiniteLaw x (H : ℤ))\n    (hT : V38RestrictionProfiles.TwoThresholdProfile (T src R₀)\n      src.inner.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₂)).prod src.gamma.law).toFiniteLaw\n      x ((H+ell : ℕ) : ℤ))\n    (hgood : (99/100 : ℝ) ≤\n      ((rowLaw src μI).toFiniteLaw.prod (rowLaw src μI).toFiniteLaw).prob\n        (· ∈ (fun t => (InternalStreams.decode src streams t i,\n          InternalStreams.decode src streams t j)) '' U))\n    (hmargin : 49/64+2*s*x <\n      ((99/100 : ℝ)+(255/256 : ℝ)^2-1)/(255/256 : ℝ)^2)\n    (hOther : ∀ p b : Fin s, b ≠ p →\n      2*s*x ≤ src.inner.law.toFiniteLaw.prob\n        (fun z => ∃ t ∈ U, streams.metadataStream.decode t.1 i = .inl b ∧\n          streams.selectorStream.decode t.2.2 i = z))\n    (ε : ℝ)\n    (hO : 1-ε ≤ (ordinaryLaw src).toFiniteLaw.prob\n      (fun o => (i,.inl o) ∈ Vrows))\n    (hsmall : 2*s*x ≤ 1/8) (hpairsmall : 2*q₂*x ≤ 1/8)\n    (hupper : Compression.restrictionD\n      (actualW src streams R₀ activity ξ₀) U Vrows ≤ H+ell+a) :\n    (1/256 : ℝ) *\n      (PairedSelectorPopulation.columnLaw src.gamma.law).toFiniteLaw.prob\n        (fun f => (j,.inr f) ∈ Vrows) ≤\n      (1/256 : ℝ)*(2*q₂*x+4*ε)",
+          "imports": [
+            "CurrentAdditive.V39OwnerForeign",
+            "CurrentAdditive.GeneratedOwnerEpsilonCapsClean"
+          ],
+          "module": "CurrentAdditive.V39ForeignReceipt",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39ForeignReceipt"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39OwnerLocalCost.owner_node_restriction_le_protocol",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39OwnerLocalCost.lean",
+          "line": 307,
+          "last_line": 336,
+          "file_sha256": "6e558b510373aa49f05fea345edc512ac4e6d128b936d412942daa57b6e1ff44",
+          "readback_slice_sha256": "e8caa3fb72355418436166f3cf9a9522de4e17fd981131c552cd13f5964573cd",
+          "statement_sha256": "30f148109a23234a706cbf67a631c740f1cb9d7cea52c44d10a11c62e9b3cc0f",
+          "statement": "theorem owner_node_restriction_le_protocol\n    (R₀ : X → Y → Bool) (activity : I → Fin q₂ → Option (Fin s))\n    (ξ₀ : Paper2.SourceMatrix.Tail s Y)\n    (R : Set (Fin w × V38IndexedTwoTag.Column src))\n    (Yevent : Set (streams.metadataStream.Label ×\n      (streams.baseStream.Label × streams.selectorStream.Label)))\n    (P : Workspace.Types.Protocol.Protocol\n      (Fin w × V38IndexedTwoTag.Column src)\n      (streams.metadataStream.Label ×\n        (streams.baseStream.Label × streams.selectorStream.Label)) Bool)\n    (hcompute : ∀ row ∈ R, ∀ t ∈ Yevent,\n      P.eval row t = internalMatrix src streams R₀ activity ξ₀ row t) :\n    Paper2.Compression.restrictionD\n      (fun row t => internalMatrix src streams R₀ activity ξ₀ row t) R Yevent ≤ P.cost",
+          "imports": [
+            "CurrentAdditive.V38IndexedTwoTag",
+            "CurrentAdditive.V39RareBoost",
+            "CurrentAdditive.IndexedIncomingBound",
+            "Paper2.ReferencePrefix",
+            "Paper2.ReferenceCertificates",
+            "Paper2.ReferenceTerminalCapacity"
+          ],
+          "module": "CurrentAdditive.V39OwnerLocalCost",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39OwnerLocalCost"
+          ]
+        },
+        {
+          "declaration": "Paper2.SourceProjection.restrictionD_transpose",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/SourceProjection.lean",
+          "line": 46,
+          "last_line": 53,
+          "file_sha256": "c352d60ed659ea5a4e1f5a1a88f32f363603129912c38e348e917686c6034c92",
+          "readback_slice_sha256": "cc1c43fbe1e9b800ad955b380fcf221aaa775ef0d92885640011a4e54c014c71",
+          "statement_sha256": "1fd83e3c73e88693dd18905bde76e7511c774f8f3df82a0f38b7fe528486a945",
+          "statement": "theorem restrictionD_transpose [Fintype A] [Fintype B]\n    (F : A → B → Bool) (U : Set A) (V : Set B) :\n    Compression.restrictionD (fun b a => F a b) V U = Compression.restrictionD F U V",
+          "imports": [
+            "Paper2.SourceLawBinding",
+            "Paper2.ProductProjections",
+            "Paper2.RestrictionProfiles"
+          ],
+          "module": "Paper2.SourceProjection",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.DeterministicSuffixSmall",
+            "Paper2.SourceProjection"
+          ]
+        },
+        {
+          "declaration": "Paper2.ReferenceOwners.run_origin_mem_initial",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ReferenceOwners.lean",
+          "line": 195,
+          "last_line": 203,
+          "file_sha256": "4dd8cf622dfe498040965eeee2197e7f024bb7eba4416664eb7efc5cab840b74",
+          "readback_slice_sha256": "9a70e38570b487ada0dd4599c453b18462b869f019373440ce527729296054ed",
+          "statement_sha256": "830cf3fc5e44a9da0405658c6c727c6c65dc11868c3e0f4993203d7b2c31f925",
+          "statement": "theorem run_origin_mem_initial (μ : FiniteLaw W) (input : I → W → A)\n    (floor : ℕ → ℝ) (r : ℕ) (s : State A C I W)\n    (v : {v : (run μ input floor 0 r s).Leaves // v ∈ ownerNodes\n      (fun z => ((run μ input floor 0 r s).state z).family)\n      (fun z => ((run μ input floor 0 r s).route z).length = r)}) :\n    origin (fun z => ((run μ input floor 0 r s).state z).family)\n      (fun z => ((run μ input floor 0 r s).route z).length = r) v ∈ s.family.unsplit",
+          "imports": [
+            "Paper2.ReferenceCertificateProtocol"
+          ],
+          "module": "Paper2.ReferenceOwners",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.IndexedOwnerRun",
+            "Paper2.ReferenceOwners"
+          ]
+        },
+        {
+          "declaration": "Paper2.ReferenceOwners.run_origin_injective",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ReferenceOwners.lean",
+          "line": 188,
+          "last_line": 194,
+          "file_sha256": "4dd8cf622dfe498040965eeee2197e7f024bb7eba4416664eb7efc5cab840b74",
+          "readback_slice_sha256": "9ca88645ec979cbb12c9527f89eb77d7a1bf6033216256ae2779fc76b3486abe",
+          "statement_sha256": "f86144a7a6ab998476979811d07f18010dcbb47fc3e848e67ba30125e068521b",
+          "statement": "theorem run_origin_injective (μ : FiniteLaw W) (input : I → W → A)\n    (floor : ℕ → ℝ) (r : ℕ) (s : State A C I W) :\n    Function.Injective (origin\n      (fun v : (run μ input floor 0 r s).Leaves => ((run μ input floor 0 r s).state v).family)\n      (fun v => ((run μ input floor 0 r s).route v).length = r))",
+          "imports": [
+            "Paper2.ReferenceCertificateProtocol"
+          ],
+          "module": "Paper2.ReferenceOwners",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.IndexedOwnerRun",
+            "Paper2.ReferenceOwners"
+          ]
+        },
+        {
+          "declaration": "Paper2.ReferenceRunCorrectness.remaining_cost",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ReferenceRunCorrectness.lean",
+          "line": 53,
+          "last_line": 62,
+          "file_sha256": "ab9c332f8a25cce6f7585e09ea328b2404c3ef2789c016a7425bdb928c92620f",
+          "readback_slice_sha256": "90a3cc11947a6b56b91849fb87e92c4f07b9842c98363e1a422325416d0ae505",
+          "statement_sha256": "7017c0acc9e97d47d39fd1e4771486c70f54880b579510eb2741e7b387dfd85b",
+          "statement": "theorem remaining_cost (μ : FiniteLaw W) (input : I → W → A)\n    (floor : ℕ → ℝ) (r H : ℕ) (s : State A C I W)\n    (hcost : s.protocol.cost ≤ H + r)\n    (v : (run μ input floor 0 r s).Leaves) :\n    ((run μ input floor 0 r s).state v).protocol.cost ≤\n      H + (r - ((run μ input floor 0 r s).route v).length)",
+          "imports": [
+            "Paper2.ReferenceCertificateProtocol"
+          ],
+          "module": "Paper2.ReferenceRunCorrectness",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.GeneratedWAlignmentOwnerCost",
+            "Paper2.ReferenceRunCorrectness"
+          ]
+        },
+        {
+          "declaration": "Paper2.ReferenceRunCorrectness.computes_on_original_rectangle",
+          "path": "papers/randomized-additive-hardness/formalization/lean/Paper2/ReferenceRunCorrectness.lean",
+          "line": 35,
+          "last_line": 45,
+          "file_sha256": "ab9c332f8a25cce6f7585e09ea328b2404c3ef2789c016a7425bdb928c92620f",
+          "readback_slice_sha256": "53f037185cee2bd0af3b3019e974ad47bb9f2d4dc8300e3b31a8d889b300aa2e",
+          "statement_sha256": "f7b31132615b92c08428d9cefa816039ca2b51e6a98259d8e6fe4dca51a108ce",
+          "statement": "theorem computes_on_original_rectangle (μ : FiniteLaw W) (input : I → W → A)\n    (floor : ℕ → ℝ) (d fuel : ℕ) (s : State A C I W)\n    (M : A → C → Bool) (O : Set C)\n    (hP : ∀ a ∈ s.rows, ∀ c ∈ O, s.protocol.eval a c = M a c)\n    (v : (run μ input floor d fuel s).Leaves) :\n    ∀ a ∈ ((run μ input floor d fuel s).state v).rows, ∀ c ∈ O,\n      ((run μ input floor d fuel s).state v).protocol.eval a c = M a c",
+          "imports": [
+            "Paper2.ReferenceCertificateProtocol"
+          ],
+          "module": "Paper2.ReferenceRunCorrectness",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.GeneratedWAlignmentOwnerCost",
+            "Paper2.ReferenceRunCorrectness"
+          ]
+        }
+      ],
+      "limits": "This covers the exact common-source scope, not arbitrary independent A/So/Sf of standalone res:paired. Actual same-source paired application remains valid through its specialized theorem even while universal paired row is open."
+    },
+    {
+      "id": "cl:two-stream",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 4134,
+        "last_line": 4157,
+        "block_sha256_lf": "7bdb1ee561c54b4825d424b03aea0eaedc85bb1c1c23210c4f06c2befcfb013a",
+        "text": "\\begin{claim}\\label{cl:two-stream}\nUse the common source weights and deletion bounds of \\cref{sec:internal-interlace}, and put\n$\\lambda_0=2q_2x$, $\\tau_0=2sx$, $C=H_2+\\log s+1$, and\n\\[\na_{\\min}=\\frac{99/100+\\lambda^2-1}{\\lambda^2}.\n\\]\nRetain columns of normalized $\\Omega$-weight at least\n$1-\\varepsilon$, and separately tagged other-copy columns whose\nweight-preserving map $(\\operatorname{tail}(\\gamma),j,\\ldots,j)\\mapsto j$ to $J_2$\nhas retained image weight at least $\\delta$.\nNumber the bins so that the distinguished bin is bin one. It retains a set\n$P_*\\subseteq S^2$ of pairs $(z_o,z_f)$ of product weight at least $a_{\\min}$, and every other bin retains\na set of labels of $S$-weight at least $\\tau_0$. Write coordinates of a column in $\\Omega$ as\n$Z=(\\xi,j_1,\\ldots,j_s)$, where $\\xi\\in Y^{s+1}$ and $j_p=(\\alpha_p,\\gamma_p)\\in J_2$. Require entries\n\\[\n\\begin{array}{c|cc}\n & Z\\in\\Omega&\\text{other-copy image }(\\alpha,\\gamma)\\\\ \\hline\n(z_o,z_f)\\in P_*&A(\\gamma_1,(z_o)_{\\alpha_1})&A(\\gamma,(z_f)_\\alpha)\\\\\n(p,z),\\ p\\ne1&A(\\gamma_p,z_{\\alpha_p})&\\text{arbitrary}.\n\\end{array}\n\\]\nIf $\\varepsilon\\ge0$, $0<\\delta\\le1$, and $\\delta>\\lambda_0+4\\varepsilon$, then every such matrix\nrequires at least $C$ bits.\n\\end{claim}\n"
+      },
+      "readback_status": "sufficient_constructive_provider_set_readback",
+      "source_domain": "Common source weights/profiles of internal interlace; arbitrary matrix on retained rows, ordinaryOmega columns and separately tagged foreign-image columns, prescribed distinguished pair-bin entries and arbitrary foreign entries in all other bins.",
+      "correspondence": "V39TwoStreamImageObstruction.generated_two_stream_image_restriction_lower admits arbitrary row carrier Rw,foreign carrier F,matrix M and image map psi; hforeign prescribes entries ONLY at distinguished pair representatives. hordinary is source T on every bin, while foreign entries elsewhere are unconstrained. Choose E=pairlabels,kappaE=innerlaw prod innerlaw,zeta=id,P0=P*,iota=inclusion to instantiate source distinguished rows; hpair is original pair first-projection mass. ownerPairFirst_mass and ownerPair_retention derive hpair and the quantified survivingpair requirement from pairmass>=a_min with a_min>49/64+tau0 (common numeric margin; V39ForeignReceipt.pair_margin). Every other bin has the exact source floor tau0=2sx. Parameters use H=H1,ell=logq2,a=logs, so conclusion H+ell+a+1=C. hslack is exactly2q2x+4epsilon<delta, small guards follow source margins. No complete-tuple iid claim or non-distinguished foreign formula is introduced.",
+      "provider_set": [
+        {
+          "declaration": "CurrentAdditive.V39TwoStreamImageObstruction.generated_two_stream_image_restriction_lower",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39TwoStreamImageObstruction.lean",
+          "line": 137,
+          "last_line": 193,
+          "file_sha256": "4b35d4c063bd46b5ce1a2793a83b8b09b3782d78d1248ad9e49e8facc15a68cc",
+          "readback_slice_sha256": "f671436fd71972b3e36809c6fe4d99c5091cd518d1a5b84034cc95811d62b54f",
+          "statement_sha256": "1f592141063e55a574f0489297b6d34185bc737bf965178addb39d9174047d04",
+          "statement": "theorem generated_two_stream_image_restriction_lower\n    (R₀ : X → Y → Bool)\n    (M : Rw → ((src.outer.Label × src.gamma.Label) ⊕ F) → Bool)\n    (H ell a : ℕ) (hH : 2 ≤ H) (hq : q₂ = 2^ell) (hs : s = 2^a)\n    (x : ℝ) (hx : 0 < x) (hD : 8 ≤ D)\n    (hA : V38RestrictionProfiles.TwoThresholdProfile (A src R₀)\n      src.gamma.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₁)).prod μX).toFiniteLaw\n      x (H : ℤ))\n    (hT : V38RestrictionProfiles.TwoThresholdProfile (T src R₀)\n      src.inner.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₂)).prod src.gamma.law).toFiniteLaw\n      x ((H+ell : ℕ) : ℤ))\n    (κE : FiniteLaw E)\n    (bin : Rw → Fin s) (selector : Rw → src.inner.Label)\n    (ψ : F → J src)\n    (hordinary : ∀ row c, M row (.inl c) =\n      T src R₀ (selector row) (src.outer.decode c.1 (bin row)))\n    (ι : E → Rw) (ζ : E → src.inner.Label × src.inner.Label)\n    (hζ : κE.PushesTo\n      (src.inner.law.toFiniteLaw.prod src.inner.law.toFiniteLaw) ζ)\n    (star : Fin s) (P0 : Finset E) (R : Set Rw)\n    (O : Set (src.outer.Label × src.gamma.Label)) (G : Set F)\n    (hι : ∀ e ∈ P0, ι e ∈ R)\n    (hstar : ∀ e ∈ P0,\n      bin (ι e) = star ∧ selector (ι e) = (ζ e).1)\n    (hforeign : ∀ e ∈ P0, ∀ f,\n      M (ι e) (.inr f) = T src R₀ (ζ e).2 (ψ f))\n    (hpair : 2*s*x ≤ src.inner.law.toFiniteLaw.prob\n      (· ∈ (fun e => (ζ e).1) '' (P0 : Set E)))\n    (hrow : ∀ i ≠ star, 2*s*x ≤ src.inner.law.toFiniteLaw.prob\n      (fun z => ∃ r ∈ R, bin r = i ∧ selector r = z))\n    (hretain : ∀ P' : Finset E, P' ⊆ P0 →\n      SourceSupportStep.mass κE (P0 \\ P') < 2*s*x →\n      (49/64 : ℝ) ≤\n        (src.inner.law.toFiniteLaw.prod src.inner.law.toFiniteLaw).prob\n          (· ∈ ζ '' (P' : Set E)))\n    (ε δ : ℝ)\n    (hO : 1-ε ≤ (ordinaryLaw src).toFiniteLaw.prob (· ∈ O))\n    (hF : δ ≤\n      (Paper2.PairedSelectorPopulation.columnLaw src.gamma.law).toFiniteLaw.prob\n        (· ∈ ψ '' G)) (hδ : δ ≤ 1)\n    (hslack : 2*q₂*x+4*ε < δ)\n    (hsmall : 2*s*x ≤ 1/8) (hpairsmall : 2*q₂*x ≤ 1/8) :\n    H+ell+a+1 ≤ Compression.restrictionD M R (retainedColumns O G)",
+          "imports": [
+            "CurrentAdditive.V39TwoStreamConversation",
+            "Paper2.TwoStreamOriginalInputs"
+          ],
+          "module": "CurrentAdditive.V39TwoStreamImageObstruction",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39TwoStreamImageObstruction"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.DeterministicIndexedMatrix.Sources.ownerPairFirst_mass",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/GeneratedOwnerPair.lean",
+          "line": 125,
+          "last_line": 137,
+          "file_sha256": "d214397825d26ebcc33be64e9be099c350611f1e7545e8b84a36c521ad680e7d",
+          "readback_slice_sha256": "438ad45e4d4ae16b3477812e8b3f49013c47f5b0e3a0104fa6c9eaaa0fe3e862",
+          "statement_sha256": "4b185a51a7fd496935015c2a2991755c063b02db6e8f1a3fd8987f66af332507",
+          "statement": "theorem ownerPairFirst_mass\n    (P0 : Finset (src.inner.Label × src.inner.Label)) (a : ℝ)\n    (ha : a ≤ (src.inner.law.toFiniteLaw.prod src.inner.law.toFiniteLaw).prob\n      (· ∈ (P0 : Set _))) :\n    a ≤ src.inner.law.toFiniteLaw.prob\n      (· ∈ (fun z : src.inner.Label × src.inner.Label => z.1) '' (P0 : Set _))",
+          "imports": [
+            "CurrentAdditive.GeneratedOwnerTuple"
+          ],
+          "module": "CurrentAdditive.GeneratedOwnerPair",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.GeneratedOwnerPair"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.DeterministicIndexedMatrix.Sources.ownerPair_retention",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/GeneratedOwnerPair.lean",
+          "line": 138,
+          "last_line": 171,
+          "file_sha256": "d214397825d26ebcc33be64e9be099c350611f1e7545e8b84a36c521ad680e7d",
+          "readback_slice_sha256": "683da3f3588d6de1ad3321b5ff67394bbb0d70c16fd0e55310a5eba944d4a2ea",
+          "statement_sha256": "6290ba14450e8a72c30c3256ad878622a9a12665d52788788ef3d3bdfe8ac0d4",
+          "statement": "theorem ownerPair_retention\n    (P0 : Finset (src.inner.Label × src.inner.Label)) (a τ : ℝ)\n    (ha : a ≤ (src.inner.law.toFiniteLaw.prod src.inner.law.toFiniteLaw).prob\n      (· ∈ (P0 : Set _)))\n    (hmargin : 49/64+τ < a) :\n    ∀ P' : Finset (src.inner.Label × src.inner.Label), P' ⊆ P0 →\n      SourceSupportStep.mass\n        (src.inner.law.toFiniteLaw.prod src.inner.law.toFiniteLaw) (P0 \\ P') < τ →\n      (49/64 : ℝ) ≤\n        (src.inner.law.toFiniteLaw.prod src.inner.law.toFiniteLaw).prob\n          (· ∈ (P' : Set _))",
+          "imports": [
+            "CurrentAdditive.GeneratedOwnerTuple"
+          ],
+          "module": "CurrentAdditive.GeneratedOwnerPair",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.GeneratedOwnerPair"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V39ForeignReceipt.pair_margin",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39ForeignReceipt.lean",
+          "line": 80,
+          "last_line": 85,
+          "file_sha256": "3944e878c82b151383d52f61407e188b13e3956c54875d1d1c851be41fb22253",
+          "readback_slice_sha256": "3675dc37db23305c95b3a90ddcbf042d79060800ac076c4352c7673a9d006745",
+          "statement_sha256": "c48b745ae9fabbadb18fe5822e28eb073be5f71f6e43335abecbb60d5c4ef1bb",
+          "statement": "theorem pair_margin (s : ℕ) (x : ℝ) (hsmall : 2*s*x ≤ 1/1000) :\n    49/64+2*s*x <\n      ((99/100 : ℝ)+(255/256 : ℝ)^2-1)/(255/256 : ℝ)^2",
+          "imports": [
+            "CurrentAdditive.V39OwnerForeign",
+            "CurrentAdditive.GeneratedOwnerEpsilonCapsClean"
+          ],
+          "module": "CurrentAdditive.V39ForeignReceipt",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39ForeignReceipt"
+          ]
+        }
+      ],
+      "limits": "The generic source current statement uses the COMMON source structure, so Sources/A specialization is appropriate here, unlike res:paired. A wrapper that directly supplies pair carrier inclusion and id image can be written without new mathematics; this packet does not claim a new compiler replay of that wrapper."
+    },
+    {
+      "id": "res:paired",
+      "source": {
+        "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+        "full_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+        "line": 4087,
+        "last_line": 4107,
+        "block_sha256_lf": "00f862e9aa4bce87495202a73b3960a123c7934beb32bfd524bcf3b1091eb85b",
+        "text": "\\begin{lemma}[Two template inputs]\\label{res:paired}\nLet $A:\\Gamma\\times J\\to\\{0,1\\}$ satisfy $\\RP{A}{x}{H_1}$ with $H_1\\ge2$,\nand let $q_2$ be dyadic with $2q_2x\\le1/8$. Take two weighted lists $S_o,S_f$ of words in $J^{q_2}$, each\nexactly eight-wise independent with the base-column marginal, and use\nproduct weights on $S_o\\times S_f$. Put $H_2=H_1+\\log q_2$ and give\n$J_2=[q_2]\\times\\Gamma$ the product of uniform index weights and the row weights of $A$ on $\\Gamma$.\nRows are pairs of template labels $(z_o,z_f)\\in S_o\\times S_f$. The columns form two separately tagged copies of $J_2$, with entries\n\\[\nA(\\gamma,(z_o)_\\alpha)\\quad\\text{and}\\quad\nA(\\gamma,(z_f)_\\alpha),\n\\]\nrespectively. The tags remain distinct even when the inner indices coincide.\nRetain a set of pairs of original product weight at least $49/64$, columns reading $z_o$\nof normalized weight at least $1-\\varepsilon$, and columns reading $z_f$ of\nnormalized weight at least $\\delta$, each tagged copy of $J_2$ having total weight one, where\n\\[\n\\varepsilon\\ge0,\\qquad 0<\\delta\\le1,\\qquad\n\\delta>2q_2x+\\varepsilon.\n\\]\nThen the retained matrix requires at least $H_2+1$ bits.\n\\end{lemma}\n"
+      },
+      "readback_status": "real_universal_scope_gap_assigned_elsewhere",
+      "source_domain": "Arbitrary A:Gamma×J, arbitrary two independently weighted exact8 tuple lists So,Sf (possibly different carriers/laws), original product-law pair set mass>=49/64, two distinct tagged copies of J2, strictdelta>2q2x+epsilon.",
+      "correspondence": "V39PairedObstruction.paired_restriction_lower is sufficient only for actual A src R0 and same src.inner law twice. Its conclusion and thresholds match, but those specializations do not establish this standalone universal source statement. Paper2.PairedSelectorObstruction.restriction_lower is generic A but only full-product selectors, historical Fin3 profile and stronger slack; not a remedy. Needed proof: concatenate two arbitrary independent exact8 sources, count>=q2+1 heavy tagged groups from1-epsilon+delta>1+2q2x, apply current V38Fin2Exact.exactboost with a=ell+1 on transposed retained actual matrix and original pairlaw. Root assigned new generic proof to alignment_integration; independent weighted_moment review assigned. Permit q2=1 (ell=0).",
+      "provider_set": [
+        {
+          "declaration": "CurrentAdditive.V39PairedObstruction.paired_restriction_lower",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39PairedObstruction.lean",
+          "line": 75,
+          "last_line": 106,
+          "file_sha256": "1cd6d4df6d5e0249a09b46daa65771c26b709a9d7f7245ef1e644fca7a675552",
+          "readback_slice_sha256": "be8083c96a79bde7b93d4447a598694abc570034943e31ae543973bb7a7bfc7c",
+          "statement_sha256": "fee584f3f872273b856fb5bed34e7732d712179cdfef91bbec0f57107408bc05",
+          "statement": "theorem paired_restriction_lower\n    (R₀ : X → Y → Bool) (H ell : ℕ) (hH : 2 ≤ H)\n    (hq : q₂ = 2 ^ ell) (x : ℝ) (hx : 0 < x) (hD : 8 ≤ D)\n    (hprofile : V38RestrictionProfiles.TwoThresholdProfile (A src R₀)\n      src.gamma.law.toFiniteLaw\n      ((PositiveRationalLaw.uniform (Fin q₁)).prod μX).toFiniteLaw\n      x (H : ℤ))\n    (K : Set (src.inner.Label × src.inner.Label))\n    (O F : Set (Fin q₂ × src.gamma.Label)) (ε δ : ℝ)\n    (hK : (49/64 : ℝ) ≤\n      (src.inner.law.toFiniteLaw.prod src.inner.law.toFiniteLaw).prob (· ∈ K))\n    (hO : 1-ε ≤ (Paper2.PairedSelectorPopulation.columnLaw src.gamma.law).toFiniteLaw.prob (· ∈ O))\n    (hF : δ ≤ (Paper2.PairedSelectorPopulation.columnLaw src.gamma.law).toFiniteLaw.prob (· ∈ F))\n    (hδpos : 0 < δ) (hδ : δ ≤ 1)\n    (hsmall : 2*q₂*x ≤ 1/8)\n    (hε : 0 ≤ ε) (hslack : 2*q₂*x + ε < δ) :\n    H+ell+1 ≤ Compression.restrictionD\n      (fun z c => pairedIndexed src R₀ z (c.1.1, (c.1.2, c.2)))\n      K (columns O F)",
+          "imports": [
+            "CurrentAdditive.V39PairedConversation",
+            "CurrentAdditive.V39TaggedFibrePopulation",
+            "Paper2.PairedSelectorInitial"
+          ],
+          "module": "CurrentAdditive.V39PairedObstruction",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V39PairedObstruction"
+          ]
+        },
+        {
+          "declaration": "CurrentAdditive.V38Fin2Exact.exactboost",
+          "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38Fin2Exact.lean",
+          "line": 36,
+          "last_line": 73,
+          "file_sha256": "2ed804e0c410002e00d05288a695544b1a8e99640e8ca67471d4a19a43a8fe90",
+          "readback_slice_sha256": "5a03060d9ee131e9a30a6968837dd06836261784941521838dd74c6128ae2664",
+          "statement_sha256": "ef587add3373f9d79c8b56000d9bf8e8b1885db8ee006b022cd5a64a6a87325d",
+          "statement": "theorem exactboost\n    (μ : PositiveRationalLaw X) (ν : PositiveRationalLaw Z)\n    (F : X → Z → Bool) (source : FiniteLaw S)\n    {q : ℕ} (decode : S → Fin q → Z)\n    (hwise : IsDWise 8 source decode ν.toFiniteLaw)\n    (Good : Finset (Fin q)) (Rows : Fin q → Set X) (K : Set S)\n    (d a : ℕ) (x : ℝ)\n    (ha : 1 ≤ a) (hd : 2 ≤ d) (hx : 0 < x)\n    (hscale : (2 : ℝ)^a*x ≤ 1)\n    (hprofile : V38RestrictionProfiles.TwoThresholdProfile F\n      μ.toFiniteLaw ν.toFiniteLaw x (d : ℤ))\n    (hcount : 2^(a-1)+1 ≤ Good.card)\n    (hrow : ∀ i ∈ Good, (2 : ℝ)^a*x ≤ μ.toFiniteLaw.prob (· ∈ Rows i))\n    (hK : (9/25 : ℝ) ≤ source.prob (· ∈ K)) :\n    d+a ≤ Compression.restrictionD\n      (fun a s => F a.2 (decode s a.1)) (rowRectangle Good Rows) K",
+          "imports": [
+            "CurrentAdditive.V39SuffixShort",
+            "CurrentAdditive.V38ExactSuffixLong",
+            "CurrentAdditive.V38Fin2PrefixGeneric"
+          ],
+          "module": "CurrentAdditive.V38Fin2Exact",
+          "current_additive_import_path": [
+            "CurrentAdditive",
+            "CurrentAdditive.V38Fin2Exact"
+          ]
+        }
+      ],
+      "limits": "NOT sufficient for universal source row. Keep inventory pending until new generic packet and independent review are accepted."
+    }
+  ]
+}

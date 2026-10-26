@@ -1,0 +1,1614 @@
+{
+  "modules": [
+    {
+      "module": "CurrentAdditive.V42WeightedMoment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WeightedMoment.lean",
+      "sha256": "ebb907f1ea28971b1738ccff098207506f69729cf1f0b140a8eb90702dca5521",
+      "reviewed_private_sha256": "ebb907f1ea28971b1738ccff098207506f69729cf1f0b140a8eb90702dca5521",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/5281bf8fb7763a87b00382d36d6c9a812b7792268c57c702112158fc500a8988/FIRST_REVIEW.md",
+      "review_sha256": "5281bf8fb7763a87b00382d36d6c9a812b7792268c57c702112158fc500a8988",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42AlternatingLookup",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AlternatingLookup.lean",
+      "sha256": "0a5654f81be3450df5056c94448558333954c8ae3e2265649ce09c81a4f4fbe6",
+      "reviewed_private_sha256": "0a5654f81be3450df5056c94448558333954c8ae3e2265649ce09c81a4f4fbe6",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/5281bf8fb7763a87b00382d36d6c9a812b7792268c57c702112158fc500a8988/FIRST_REVIEW.md",
+      "review_sha256": "5281bf8fb7763a87b00382d36d6c9a812b7792268c57c702112158fc500a8988",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullIidRestoration",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullIidRestoration.lean",
+      "sha256": "db49b654c2b1ed3b3a9a60f20f88090bcff75d310022b9d574046eaa60e527a2",
+      "reviewed_private_sha256": "db49b654c2b1ed3b3a9a60f20f88090bcff75d310022b9d574046eaa60e527a2",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/48e492cf190600b8d081325d3f052be205f0467651e9a03af0ff4fcaef1266f0/RESTORATION_REVIEW.md",
+      "review_sha256": "48e492cf190600b8d081325d3f052be205f0467651e9a03af0ff4fcaef1266f0",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneralWeightedMoment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneralWeightedMoment.lean",
+      "sha256": "b3d1d9cc88a69597316a78ebdc1a26bd06d9fd61f604a7416f85c32e74ea0686",
+      "reviewed_private_sha256": "b3d1d9cc88a69597316a78ebdc1a26bd06d9fd61f604a7416f85c32e74ea0686",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/26833b6494c98f8a0bdd9d6a074c7fa3a18a4956d349281632f71c2c7c07d095/GENERAL_WEIGHTED_MOMENT_REVIEW.md",
+      "review_sha256": "26833b6494c98f8a0bdd9d6a074c7fa3a18a4956d349281632f71c2c7c07d095",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ExceptionBudget",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ExceptionBudget.lean",
+      "sha256": "12abffc9652c35f08a01912f95da5f859ec0d846d3432f997e46a05805dd43f9",
+      "reviewed_private_sha256": "12abffc9652c35f08a01912f95da5f859ec0d846d3432f997e46a05805dd43f9",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/c50fbfa0cbc339e62dbbe0b46c5d355f9b41f1dc68ab2e0a4f2e0ae83f0147bc/EXCEPTION_BUDGET_REVIEW.md",
+      "review_sha256": "c50fbfa0cbc339e62dbbe0b46c5d355f9b41f1dc68ab2e0a4f2e0ae83f0147bc",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingWeightedSection",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingWeightedSection.lean",
+      "sha256": "b499e0df1dec3cbbeb0b453acc3ffc91a32f26ba9b4a967c68292702ee1a1fce",
+      "reviewed_private_sha256": "b499e0df1dec3cbbeb0b453acc3ffc91a32f26ba9b4a967c68292702ee1a1fce",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734/INCOMING_REVIEW.md",
+      "review_sha256": "3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingHeavyFibres",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingHeavyFibres.lean",
+      "sha256": "7bbe5511c8d4882c1faa5d73b33fbf50bbdf93e45f82622fc5b7a98c7b5bf52c",
+      "reviewed_private_sha256": "a23ccd4dc163865eb3ec94d3e8ba3a9599cac0bad007c87a58ff2888bdb6ed50",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734/INCOMING_REVIEW.md",
+      "review_sha256": "3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingSelection",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingSelection.lean",
+      "sha256": "b57960d5f735b3ef7d85eaa623f0c2f690ae33c504ae1730b76dca0eb789b215",
+      "reviewed_private_sha256": "97635e547636bb79d60968862272af4b4d636d6be7c67c95c3fc0606ab236016",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734/INCOMING_REVIEW.md",
+      "review_sha256": "3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingWeightedTail",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingWeightedTail.lean",
+      "sha256": "318fb229f280091776044ba48487ed8010f48614c72cc3bb28b32f8ff356d549",
+      "reviewed_private_sha256": "917427fff2640971f5f7f3647a827f907ec3438d98bc822089d168e86101ac8f",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734/INCOMING_REVIEW.md",
+      "review_sha256": "3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingSharpBound",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingSharpBound.lean",
+      "sha256": "17991f6eb61b655d80590d5e6630f05260b43958181cfde47c72d9dcd7047cd0",
+      "reviewed_private_sha256": "ef19e17d8881cf5d0e2790b2f441479767401325c8843bba1ad2361b1a7d2139",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734/INCOMING_REVIEW.md",
+      "review_sha256": "3ff9a8a2c773d23b37a738521e8d65f32a7cbdeac2bd8451af5bc0462c87d734",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingGuard",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingGuard.lean",
+      "sha256": "cd0a588443cc4bf663991590dbdd867e49d09835a152a1c4930ae8910d66ce27",
+      "reviewed_private_sha256": "cd0a588443cc4bf663991590dbdd867e49d09835a152a1c4930ae8910d66ce27",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingBob",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingBob.lean",
+      "sha256": "b1243afdc961b9ff1beff4d2590357e14abb9f1eef2279d3f04fcb9c6425dd12",
+      "reviewed_private_sha256": "da121bd6d362efd9717c861792c628a9132c7685587f1f0262c15010ca96b095",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137/ALIGNMENT_REVIEW.md",
+      "review_sha256": "196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedAlignmentProtocol",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedAlignmentProtocol.lean",
+      "sha256": "689257323ad5620324f4d5eaef56ddd77864d10aec35ca0f73eb3e6fcca76e7e",
+      "reviewed_private_sha256": "349dac84e76ffa24a84148bb1b46bd0b887ebb744e43ced12ef433b79e41c693",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137/ALIGNMENT_REVIEW.md",
+      "review_sha256": "196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedAlignment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedAlignment.lean",
+      "sha256": "1c1992662f99d7659c2fed8965dcb262833c41a0e52e8ddd7dc79088a8fc645f",
+      "reviewed_private_sha256": "08bbed5e04a69fbbdfe66c0fb662027d0074db2ebfbbb18f96159fd48aab0c85",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137/ALIGNMENT_REVIEW.md",
+      "review_sha256": "196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullProductAlignment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullProductAlignment.lean",
+      "sha256": "bdc8f8a024057c9d46780d38ff14ae05689924af09cedbfd0a26cd389cbd7998",
+      "reviewed_private_sha256": "4b71d047fb51e96603f4fbdd7986f940959ab32728f32435ead584f1fbd636b6",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137/ALIGNMENT_REVIEW.md",
+      "review_sha256": "196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ActualItemStreams",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualItemStreams.lean",
+      "sha256": "6563d4209fcda3b81510a324593de402c0ba201a4bc0256a2dbc0716cd894f73",
+      "reviewed_private_sha256": "1da283c499009159d905700fd4e44e4b8b5e7c705b9cd5ca577f819b1f5a0df4",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137/ALIGNMENT_REVIEW.md",
+      "review_sha256": "196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ActualInternal",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualInternal.lean",
+      "sha256": "a9790c00fd5f85bcaf453381eabe619fa90b7a3b13a99833902a119c5d54fdad",
+      "reviewed_private_sha256": "b0aa2c8ceff0b6ed26afd450c005361e4c09ed8b23d358f036bbf3f957a6ec7c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137/ALIGNMENT_REVIEW.md",
+      "review_sha256": "196c5a27e9b32a0acbe2d9755c29893370a2e853aa0ea5128e8b680fe80e5137",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42Schedule",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42Schedule.lean",
+      "sha256": "8ec1afe59d8b716ef5d2d804b8c6dc334529b1508aaa13ca9ffd3498999944b4",
+      "reviewed_private_sha256": "8ec1afe59d8b716ef5d2d804b8c6dc334529b1508aaa13ca9ffd3498999944b4",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42CommonMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42CommonMargins.lean",
+      "sha256": "f7ff9d07313cf3c8ff88891eb3e3cb31837fa4580801c2974f3929cb29c1e75f",
+      "reviewed_private_sha256": "4c66571eb21410b4cac0ba65f66085a479c04ef8ec614f2e5b291e16cdaad458",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ExceptionMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ExceptionMargins.lean",
+      "sha256": "0039261a83a25797615a40c643f3f3b540c92bf06739322e760e438394185ed6",
+      "reviewed_private_sha256": "031b557553e110a6a6882f603f57ac7e03226b318f4e36f5c5611743f031954b",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42SourceWidths",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceWidths.lean",
+      "sha256": "03ab1154ea0ffcf2dfd6e66a4980299427ed7690d1a3f0009e460158c8f5f4be",
+      "reviewed_private_sha256": "b65f28094b5cb1c596fd03d581961a0b2e50ee945ede7096995bfee7eda947d1",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42NearFullMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42NearFullMargins.lean",
+      "sha256": "e856a89e5d7a3cbd458ef044da897201db3610060ecb90c86fddba22750df441",
+      "reviewed_private_sha256": "c6a8794950753d540ac696bf9ffd4cd5913740d9bedf68601b9c38fddf5d42b3",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42AlignmentGuards",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AlignmentGuards.lean",
+      "sha256": "ab1cf4ab54605a42f9d773d670cd784f5f6f77097f0a39cb8a77220138fa46e5",
+      "reviewed_private_sha256": "ae10a4b20541c1f2b5e8834f0a86f15763f4232a959d47d50c7cd1bdb6767179",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FixedPromiseCutoff",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FixedPromiseCutoff.lean",
+      "sha256": "dc6b1e53ec43286176837313ee155ed3a79b091391e9e85eb6b1e3a4cc0cc646",
+      "reviewed_private_sha256": "b7208fc4281fbd5e554f81d1968e4fd1165cb8dc7661921d041bd2453ef08299",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RestorationGuards",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RestorationGuards.lean",
+      "sha256": "5e692dd5abc8b5c87c828d515929a11887e744d1f2bdf22881cd862de1aca21e",
+      "reviewed_private_sha256": "f2004be886a5bc708f4732cae49c4c6a24ae0288f6e4c0af01615e72bbcad0aa",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PublicSchedule",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PublicSchedule.lean",
+      "sha256": "2b220f42aa54935da05cadc52165105365ae009941492fab9be06cfc619ab9b1",
+      "reviewed_private_sha256": "eef0803cc9ee45ad481dea5649a33023ac4fdc29688bcdaf7ee22d921a62f6f2",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PublicCutoff",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PublicCutoff.lean",
+      "sha256": "e4c0a50cb35f8a7455c5737718a21ca2faae390b31489ca807f973d114072af3",
+      "reviewed_private_sha256": "260435baf15e881374d21e4e8af4adf40b3f9b049c63fac0846b772f6399b9ee",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PublicSize",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PublicSize.lean",
+      "sha256": "9d2e09d8cb24c42f9aec439e65cde2649eaaef7295c0af677aad786d54370725",
+      "reviewed_private_sha256": "deaafca1e44e09ee83587ada8461533a8b64f14a4f3ba353860903c8236e43f2",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde/SCHEDULE_REVIEW.md",
+      "review_sha256": "aef5f81835afd7847ab797e3d7c45da592d538a4099f73a6ff5a22a1eddeccde",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedProfileGuards",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedProfileGuards.lean",
+      "sha256": "fa8acfffefdd1d104c838400635bf93eb1a6f680b81c9188c31568fb7fdd00f0",
+      "reviewed_private_sha256": "105eb42402d758eb5962ef99a9862b8f20c8a097a1328a88855e28ab6b2bbc88",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/90f5ba373c785eb1d723abcacd8a98f2f9d83029b50f27362263259e37f7539c/SOURCE_PROFILES_REVIEW.md",
+      "review_sha256": "90f5ba373c785eb1d723abcacd8a98f2f9d83029b50f27362263259e37f7539c",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedSourceProfiles",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedSourceProfiles.lean",
+      "sha256": "ddb45f980bfca7c54646dd6dfeee3a9355aea4415e1e3ca8e64b6a7f7de897f3",
+      "reviewed_private_sha256": "cec87f962ea4ea8a8e1d39b688e7a42a888f1f8253816e451b17f3f02d352526",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/90f5ba373c785eb1d723abcacd8a98f2f9d83029b50f27362263259e37f7539c/SOURCE_PROFILES_REVIEW.md",
+      "review_sha256": "90f5ba373c785eb1d723abcacd8a98f2f9d83029b50f27362263259e37f7539c",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42SourceNearFullGuards",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceNearFullGuards.lean",
+      "sha256": "2fe32645be37ee79b3bfb72969471f71f6edd3c7696e9d64dbbffd95f66b0637",
+      "reviewed_private_sha256": "f71b24b09cba0b42daa045c77c3bb2f4b17e2841ae3d56496dba6f3621110492",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/90f5ba373c785eb1d723abcacd8a98f2f9d83029b50f27362263259e37f7539c/SOURCE_PROFILES_REVIEW.md",
+      "review_sha256": "90f5ba373c785eb1d723abcacd8a98f2f9d83029b50f27362263259e37f7539c",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ActualGeneratedSource",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualGeneratedSource.lean",
+      "sha256": "c4aad2768e6a02a967a792c64c46181d46664c53b0d2332ebe23c4320faf30c8",
+      "reviewed_private_sha256": "7a091a44f617279113666f131c4cf875a964654ad3bd29a01b99d14858300721",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/90f5ba373c785eb1d723abcacd8a98f2f9d83029b50f27362263259e37f7539c/SOURCE_PROFILES_REVIEW.md",
+      "review_sha256": "90f5ba373c785eb1d723abcacd8a98f2f9d83029b50f27362263259e37f7539c",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedConstruction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedConstruction.lean",
+      "sha256": "a6dfbd312bd07e3a1e3ad49c713e0fb21640faeac12a2f86ad11a9032fadeac1",
+      "reviewed_private_sha256": "f522b95e1c57d2dd792bb05789b57c44dcf1ef919d9068420ba1d8e266bb937e",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3/CONSTRUCTOR_REVIEW.md",
+      "review_sha256": "e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedNo",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedNo.lean",
+      "sha256": "fd68c067321bd9e817f220cf977c78debf9e5a23f1f3fa3257b4a1b284d92d51",
+      "reviewed_private_sha256": "8117d78cc33639c0053a505f5c3b85f79d4a55e124e958cb45404de4ef6e8484",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3/CONSTRUCTOR_REVIEW.md",
+      "review_sha256": "e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedIteration",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedIteration.lean",
+      "sha256": "dd1a53ed781b2fa254f4a429acedb45701a1b1b64fc9d237d03297f2410d05eb",
+      "reviewed_private_sha256": "abdb70ccfbd8ee2caf2d06d0750054f8252e96ea4a4ba6ff538d4beb933650ff",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3/CONSTRUCTOR_REVIEW.md",
+      "review_sha256": "e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullConstruction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullConstruction.lean",
+      "sha256": "79d199dd340e60b714f123784b5fd8b9e6e6348c47633d682065022b488b83f1",
+      "reviewed_private_sha256": "2494d9ff19f6c7030bbd1bad0b0ddbf28149a30231cdf6635261f7e99dea1913",
+      "adaptation": "Only import paths qualified under CurrentAdditive; local maxHeartbeats 2500000 matches reviewed compiler resource setting",
+      "review": "release-evidence/e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3/CONSTRUCTOR_REVIEW.md",
+      "review_sha256": "e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullActualLabels",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullActualLabels.lean",
+      "sha256": "4b653b286642daeeb92a6b2278a6d0056de109d494b3589e8c3859027a2fc75d",
+      "reviewed_private_sha256": "a6bac0a63e0059f34ba9a050fc80e55e3a6ae87e042d20c5a6c006c30663ffdb",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3/CONSTRUCTOR_REVIEW.md",
+      "review_sha256": "e3c3fb7cbc93ff841dc0c136f95711a1fccc2136c29aa6022094a2eeef6df3f3",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullSuccessor",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullSuccessor.lean",
+      "sha256": "cb05b0c0a5ff75ef1a7c30e2d64080321d41f6f85112c12d8bd810947e4296b1",
+      "reviewed_private_sha256": "25797ff383ea474ba0fdd0af9dd6ecb28067fb91f15c0743237f25f88082f823",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5/FULL_PRODUCT_REVIEW.md",
+      "review_sha256": "27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullIteration",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullIteration.lean",
+      "sha256": "e8d162a1a1efe8fe29148bb040ce23d53bc5c77caf043ff916e96537e22bf2db",
+      "reviewed_private_sha256": "4e70f876afbad96d9da5405ec067d4f4afabcfc41634996b5bdb5b1feb97105e",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5/FULL_PRODUCT_REVIEW.md",
+      "review_sha256": "27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullProfiles",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullProfiles.lean",
+      "sha256": "394056b6e144c2efc1e4cfaf0d7d5b4bd3bd48ca8f5e2fb8d1790d534271baea",
+      "reviewed_private_sha256": "f7b6cc4aaff66cfc06e2a71a32575a01b4539d96c2901209e9f3fecf03cf05b4",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5/FULL_PRODUCT_REVIEW.md",
+      "review_sha256": "27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullNearFull",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullNearFull.lean",
+      "sha256": "d4bb621257bf1abab6af53340ef7979cdcc7c038702dcb0f46f0c797b2209c45",
+      "reviewed_private_sha256": "f3f742b978523b244a05053921928d6bcb5c1d1fb1a9ca6a22d2819806727844",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5/FULL_PRODUCT_REVIEW.md",
+      "review_sha256": "27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullAlignment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullAlignment.lean",
+      "sha256": "ea79de92ab3a24b56de25c9cafa1b1ed57eaa8038f888eaa1e358ee59ee08f49",
+      "reviewed_private_sha256": "67481118f0382a107a0a959585f788919634d4e2d0db695cf94080e2f76bab0d",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5/FULL_PRODUCT_REVIEW.md",
+      "review_sha256": "27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullAmplifier",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullAmplifier.lean",
+      "sha256": "606ea107cdcdc15e84b75003d107b6348f678fd6f550498ed7b89149d3097f01",
+      "reviewed_private_sha256": "7d29c0f4b3c105f597ef14087c2ee7efb700a494dd37972f47c9413f8b0076ca",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5/FULL_PRODUCT_REVIEW.md",
+      "review_sha256": "27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullCutoff",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullCutoff.lean",
+      "sha256": "0d7f81b73119067b16cef046d836e346abb27217f6060ffb773eab5c4342721c",
+      "reviewed_private_sha256": "ad96d092e201c9c8b8fc06fb7cf4cddfd082e29fe11ae44e2856e14520a6dd14",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5/FULL_PRODUCT_REVIEW.md",
+      "review_sha256": "27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullNoIteration",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullNoIteration.lean",
+      "sha256": "563295ce77c8e9b80aed505330669f464d1d35d1ff765459ec95698bb9d6fdde",
+      "reviewed_private_sha256": "cb7a85cdca73eb0ce4dc9627c6927d5c92271d814e0407c4d9aa02145e356232",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5/FULL_PRODUCT_REVIEW.md",
+      "review_sha256": "27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullPublicAmplifier",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullPublicAmplifier.lean",
+      "sha256": "a19b63b3f5a980eb68af35ac15986fa60a4935ecdf8b4b20fd35a7789da7582b",
+      "reviewed_private_sha256": "9fccdad13de1595e5692fe8896dc47f0a2b004e514dbed0e1280568be794a49e",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5/FULL_PRODUCT_REVIEW.md",
+      "review_sha256": "27f7939da7e68d52cb978abfd632552d730178baf1a2dcc6044c3dc7c4f2d2c5",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimePacket",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimePacket.lean",
+      "sha256": "235a70443cce98dfc241ca4edc6f8d2689795c23738831d38e643c3c1bfb6c80",
+      "reviewed_private_sha256": "640de26bb7eab4c081ff2fefea720405ae158f95e16f499c4b03ac34dc1c5d74",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e/GENERATED_RUNTIME_REVIEW.md",
+      "review_sha256": "2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeSource",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeSource.lean",
+      "sha256": "bcb459a8d552e32a43d07fd8fb32397a665b434af69768a5876f2ac432559afb",
+      "reviewed_private_sha256": "be61f0d098b304507ea6e907f055d1b4b491373e42b057f0222aa3a69a05ebf2",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e/GENERATED_RUNTIME_REVIEW.md",
+      "review_sha256": "2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeSeed",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeSeed.lean",
+      "sha256": "3ecd34e50ca0ca0f2bf10c14f6a2e9a415e4d27d2c5a5f3dec052577b777db96",
+      "reviewed_private_sha256": "2b71584643b16311ac014416b9656f679f8d641fc0b58abf60bf20aa6b3e2447",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e/GENERATED_RUNTIME_REVIEW.md",
+      "review_sha256": "2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeSelector",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeSelector.lean",
+      "sha256": "d2f50a678e404d29074af6f4a21b2ff2b29fbe0d21c7cd9725267906e87ae560",
+      "reviewed_private_sha256": "e46911334815c6972b51bd4ee89e6c81d14f3d2a081755f75d49d6c672779c5b",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e/GENERATED_RUNTIME_REVIEW.md",
+      "review_sha256": "2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeWords",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeWords.lean",
+      "sha256": "ca02f914ce1d782371a6d37c9a950ceab119a1f0361f0c429ea7d23e792fecf5",
+      "reviewed_private_sha256": "511a9fae7b40a62dde42ad645caa2840eb637a54402509c506eac69d12d1018c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e/GENERATED_RUNTIME_REVIEW.md",
+      "review_sha256": "2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimePrefix",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimePrefix.lean",
+      "sha256": "62dea65aed03f10789534bfe405a71c21eaa4a0ec2bc86280d8d1aa010bccc4f",
+      "reviewed_private_sha256": "9d2230fc33adb95614038e8047a393465ae5734f94d260bf20e9bc5fe271c2e4",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e/GENERATED_RUNTIME_REVIEW.md",
+      "review_sha256": "2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GraphRuntime",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GraphRuntime.lean",
+      "sha256": "655f1156ee10a6723bbb14e7345e5aba147e74314f20894806bdc682ebef0ddf",
+      "reviewed_private_sha256": "25b75cd232e57ede2b2798a551f509c4bd3c392b32e4b144f4ff36aae94ea38e",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e/GENERATED_RUNTIME_REVIEW.md",
+      "review_sha256": "2fd3305579ff93fde0b859589167e9c32af2e9c51437ef93d3f253443825a60e",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42AlternatingPublic",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AlternatingPublic.lean",
+      "sha256": "b96ca348ee091b9c2227d7ad7d2367e67e0c3abe6eb996544c3a16c4dae6de3f",
+      "reviewed_private_sha256": "32967c52f84643f62b786c6a1711436aab9da350c8288e025069c420d5d79015",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/52e4fb7ba37f3f0fbb2c21f301e4be3db2ed8b8a44a9495ceea90ea1157bf05c/ALTERNATING_PUBLIC_REVIEW.md",
+      "review_sha256": "52e4fb7ba37f3f0fbb2c21f301e4be3db2ed8b8a44a9495ceea90ea1157bf05c",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldBinary",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldBinary.lean",
+      "sha256": "368698523f54332861712999a9d257b35d9f5e6c31e7590c7f3fa3c0810987a2",
+      "reviewed_private_sha256": "37de187224a4fe483639584b419ccea6b636b46d06b7f50154ae4f5a314d844c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec/finite-field-review_REVIEW.md",
+      "review_sha256": "2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldComplete",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldComplete.lean",
+      "sha256": "544bababfe8ae80cc8057ac5bf0b75e2ee171e04a3a2c3e1909bfea9f4725ba4",
+      "reviewed_private_sha256": "69c476a1c0db3be067c728d3c2b83482802bede1b9b1aa976439f502510109b9",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec/finite-field-review_REVIEW.md",
+      "review_sha256": "2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldList",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldList.lean",
+      "sha256": "e018acd1ffe9f67499dc188f6cdf9a8c132973e156934c007ddd2409e5b9651d",
+      "reviewed_private_sha256": "e018acd1ffe9f67499dc188f6cdf9a8c132973e156934c007ddd2409e5b9651d",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec/finite-field-review_REVIEW.md",
+      "review_sha256": "2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldMachine",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldMachine.lean",
+      "sha256": "4e4e75be61236de6619c794cb98ce67a407da8cd1efbc48489ca1f6139cb8053",
+      "reviewed_private_sha256": "f9d13af715966b5f6c3c2a648a9ada5d83a92b62510857d5fd79df7d13486a0f",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec/finite-field-review_REVIEW.md",
+      "review_sha256": "2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldTheorem",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldTheorem.lean",
+      "sha256": "6170c671ffe9061bc105a1a505dbd61fea298467e817fc12c150473c910b5724",
+      "reviewed_private_sha256": "aebf6119ebe57b743c85450a4f41792397325f7bb4e78090cac631bf37f44e7b",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec/finite-field-review_REVIEW.md",
+      "review_sha256": "2ea4bdaee3cd14213cf4141cf760e77b4e437ace541fff80583759a5683150ec",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullGammaTail",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullGammaTail.lean",
+      "sha256": "6227e3c85e349b5a5cab3f3c762d7104024ba94bbfa8238c0b1b67bad972fdb0",
+      "reviewed_private_sha256": "1c9cf481ae6c880643320f70261b715e3cc960bdc8df0e172000fbfbca67cf14",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/e346f3b506227587fb68c4ca7ab59e48aa48316cb0d3f46a1bead76d8f4c3c9c/full-tail_review_REVIEW_RECEIPT.json",
+      "review_sha256": "e346f3b506227587fb68c4ca7ab59e48aa48316cb0d3f46a1bead76d8f4c3c9c",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42SourceFacing",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceFacing.lean",
+      "sha256": "28f7dd22e4b554071d2803f7cebb02ac8129d080dc8e53d563566a0c5805be66",
+      "reviewed_private_sha256": "af1ed7a000dd7fa12a8f436915c61597b3c4c345d1681af1a08d558d3506e1bb",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/e03081caf5779bc87f8c28030977d936247a34a60cd15b76c5b27c275e8b987d/source-facing-review_REVIEW.md",
+      "review_sha256": "e03081caf5779bc87f8c28030977d936247a34a60cd15b76c5b27c275e8b987d",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42Compression",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42Compression.lean",
+      "sha256": "c4bceff6830d2d7e13890df8dff8d1eaf59ba484b0e6e8d7de605e4dacb6319c",
+      "reviewed_private_sha256": "5f15a24254371b84dd68985a93d3df2a4bbf98d85eabb9655449f42b89c66ba3",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0/compression-review_REPORT.md",
+      "review_sha256": "66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42EncodedCostEvent",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42EncodedCostEvent.lean",
+      "sha256": "505a72680ed2e613d52e05c9feb379694c0dc3f3286835563f6f64c2ea91ff7b",
+      "reviewed_private_sha256": "505a72680ed2e613d52e05c9feb379694c0dc3f3286835563f6f64c2ea91ff7b",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0/compression-review_REPORT.md",
+      "review_sha256": "66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GraphOwnerBounds",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GraphOwnerBounds.lean",
+      "sha256": "d24dd1246f70f2c5d190835ace5096d4f799c8ba6a0f92565318cc278e6467fc",
+      "reviewed_private_sha256": "8451ff324f9beb846be1e49019a3478d1b10f50f29e7e67b044bb629c2e16e9a",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0/compression-review_REPORT.md",
+      "review_sha256": "66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GraphNoBounds",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GraphNoBounds.lean",
+      "sha256": "a2a7b6fe5c7b61114762bde801f4f470cfb8c7bd7469e8d00522c0c9ca36ad41",
+      "reviewed_private_sha256": "f79cd1187f4d92e0913848e85795a82a56c0c747deeaee387e06f114e8cb8e24",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0/compression-review_REPORT.md",
+      "review_sha256": "66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PrintedCompression",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PrintedCompression.lean",
+      "sha256": "c9a9012be60846735ba278a332d000def7b4360058bab95941e1fad31338d245",
+      "reviewed_private_sha256": "339d86f330fde96cb72fada4c369cb87ca5b0d1db0a3f41d8fe3d26de7b097e3",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0/compression-review_REPORT.md",
+      "review_sha256": "66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GraphLiteralBounds",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GraphLiteralBounds.lean",
+      "sha256": "d6c11f25a6bfe23bff9ef4942270ca8af7220432eb83abfbf953b0988693c4a1",
+      "reviewed_private_sha256": "8b3408db825fc80ce9d72a7dee39c6526a2574b46b2a739a1bc914cb31dfd168",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0/compression-review_REPORT.md",
+      "review_sha256": "66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PrintedGraphGap",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PrintedGraphGap.lean",
+      "sha256": "ae4ba8ee13dc15a1e482b3a30b64b372dbe656a03b6208be482326213ed1c190",
+      "reviewed_private_sha256": "b774a4eb082b7912368e8527beeab1289e728db9e0a10b8ae261fd848a50c007",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0/compression-review_REPORT.md",
+      "review_sha256": "66eb840024faecaf3618e01763873eafdf7182fc789627f2ea120204a0d8ade0",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42MidpointRequestClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42MidpointRequestClock.lean",
+      "sha256": "a1d02ee6ca6826f5f77a54a4e25bb9986bcc8b1a787af093076975ed56291178",
+      "reviewed_private_sha256": "46b35861cb168b5e3c5de3a4300bdf374d99e658fbddefe63ff80a715980a624",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawMidpointRequest",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawMidpointRequest.lean",
+      "sha256": "8323f3eee039d6ce0474eec144101593922eaf5d8649e7ec56e136d61a2856e0",
+      "reviewed_private_sha256": "ea444b3e01ab451b6042deaeb86d7ae57a705f1920abc58e65921bb92f5d839c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawRequestPacketTypes",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawRequestPacketTypes.lean",
+      "sha256": "6f3aa2f458630319b965aaae0201cfa5f54ca25e7345e2e7948e0f89836a7d53",
+      "reviewed_private_sha256": "1bc758a52c3610cf8783cf484a15416ade2c72769756b5aeee670ef683bc7366",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawRequestPacket",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawRequestPacket.lean",
+      "sha256": "38358a45483d83b3a6682746311a86e7a5f1773cbe20f963744811ebc98974f9",
+      "reviewed_private_sha256": "289670456a021d46477ee25481d49d823f86c30cfbafea24f4f7e5a03d638840",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawClassifierClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawClassifierClock.lean",
+      "sha256": "3f803f295a16f2fa30ffde380a35fb61d3f03b95cccb9b1592c253fd0d38948a",
+      "reviewed_private_sha256": "54780dfac0725cf2c11eea377f42bde0543872bf5caaeed8f59c296bf39aed7d",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawRequestSemantics",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawRequestSemantics.lean",
+      "sha256": "c02dad187c37ff85b603842fe38723f23b25a9c6b6200f9def8a1e2a2a9c6503",
+      "reviewed_private_sha256": "f4dff8d95e317e6a0befeb4185e75df4fdf30eba9fcc1c6559d6dd31688809e8",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42SourceClassifierResources",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceClassifierResources.lean",
+      "sha256": "c93622bf1216ea0cbfd0b4f91212e54fbc6fcd8d45f8ccc15105104d29783155",
+      "reviewed_private_sha256": "69c7b4e15d7dc9bfcf9232a00ebc25f5ec586ba04aefb1ae21959b6356146b2d",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42SourceClassifierMachine",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceClassifierMachine.lean",
+      "sha256": "113ed63fdf25e421e1defce98092d56248ed747cfe210e58cc58e20740487e78",
+      "reviewed_private_sha256": "c533d6b2f9372fb8f091156176b0918621081556bb4ffea3b898b6a40ed009b6",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42SourceClassifierRun",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceClassifierRun.lean",
+      "sha256": "a6269128e871e34c0a847c8f190cf22bc72adca7b45deb5fcd2605260501a61c",
+      "reviewed_private_sha256": "371cdd8aca3eda462742ec9ffac6fe4b26a9d1f217196cae126635d2723e585c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedMachineLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedMachineLaw.lean",
+      "sha256": "c7914663a21e8ba60b1f5a354d5028866d93ae76833411e6c800491faadd0267",
+      "reviewed_private_sha256": "b29d6f61cd54ca4255d4711575a5a6f52238dbec6090c6fc1a97f498f9ab1be3",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1/randomized-caller-review_REPORT.md",
+      "review_sha256": "d9537153c0b41fb1dbc2afb9f3b89cab66532a855ab543b7f0671b8a11845df1",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ETHAsymptotics",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ETHAsymptotics.lean",
+      "sha256": "96f586bf161a1a8919e13ae5b2d03d1ccdf5cc34cc85c932c233823dcabfe38c",
+      "reviewed_private_sha256": "cda6e2b30274381923b4f8e952be62b23276a3fb5bb829c0c86b54247c45ecd1",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomPermittedFamily",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomPermittedFamily.lean",
+      "sha256": "08f5624b0257d5f8db9a89329a3ac47e53bc0dbb00fc5b889a4f55fc9ee69d6a",
+      "reviewed_private_sha256": "830836684c97142ffa8d98d462e9b010f81164ba1deec2e1637a71d81fe48ff0",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42JointEstimatorLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42JointEstimatorLaw.lean",
+      "sha256": "bef6ca7d3b3aeda3dc7496de4f99d1c5f0a5b4b31db7f0833d458b7c8ae2ba6e",
+      "reviewed_private_sha256": "4f74fec59ef9241e4e5dafe9c356179543686650861215ff43546527d7cbcea3",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedETHFits",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedETHFits.lean",
+      "sha256": "f643115bc0e6ad60ac04f495b3db132be4b413403a648e13235e32d94b4c842c",
+      "reviewed_private_sha256": "9b210ec922b429ad6c8c8381949281bc02d1373ad696db737fea6ee3f9c31f35",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42SourceGeometry",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceGeometry.lean",
+      "sha256": "d71906ebc999a844e1a86e894d8000954d0bf6db8a3344aab4b2c82cc386c074",
+      "reviewed_private_sha256": "c7bf05c535758664a90e30e0216b01ceb2d0b7a9ba9afbeb41f27bdfcee43695",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedTapeFits",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedTapeFits.lean",
+      "sha256": "d776603792d858d297528539d08ce1790897b53176bf62ab0c2c091ec387aa60",
+      "reviewed_private_sha256": "25feb6d3ad2dec1557a5c907d4f598dd383b4461a80e51c3ed0ea6717f7d670b",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedETHCutoffs",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedETHCutoffs.lean",
+      "sha256": "6edd640dca5d73bef2058caf95362e049152e4a9e19ff2ff94548387b000464b",
+      "reviewed_private_sha256": "9d782340e31feca99ea3fd438f19e188bd48b3c23e3805bd2b0d16bdbf50bcc4",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedETHArithmetic",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedETHArithmetic.lean",
+      "sha256": "4266d9b8e97b3d05b669d735347f713264b83900e6b9682d15f525b20cb680a2",
+      "reviewed_private_sha256": "ecb990eaaf20bfaf6a83050cd06653444293571ad09a58dac417f3c3eb676c52",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedSourceData",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedSourceData.lean",
+      "sha256": "96e482f6a190a72551db8efa03d77f6c2a834d3acdf0c350666734d415999cf4",
+      "reviewed_private_sha256": "aa76f79e21940957499e1a8a134c0b950c7e3ed0c733fcf54d69b959a6552cf7",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedETHClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedETHClock.lean",
+      "sha256": "7d3c275b4c702a49b89d97e52dcc878a95a6f509bab9b0caf213a32512913a6e",
+      "reviewed_private_sha256": "94b2e96762b8a0af4d614ae516d87fddbd8be3780ef6855a278d3f59192e3876",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedPhysicalClockFits",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedPhysicalClockFits.lean",
+      "sha256": "ed91c0f15ea12938263661be4555de8d16affa20dae28ea20ab7d2c7d3c6e4d3",
+      "reviewed_private_sha256": "840aa19c311f855dd1e4b2f4ccc8a6b31d8762788e2c797f34c048fa9ae9561f",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedMachineClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedMachineClock.lean",
+      "sha256": "ff0e6f37074df897d8f2a426e5d85a1fbcedbd7dafbf8c9167f1d1b88d6e6dad",
+      "reviewed_private_sha256": "bb40a0bd6b9dbc1af96d947aa6e5d16adf5ca78bad7b8654aecde15c04ccfac2",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedSourceTests",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedSourceTests.lean",
+      "sha256": "20e451e78f771e50a81f7347b600cd3156d08afddf7a1312db1f6800dadfbfa9",
+      "reviewed_private_sha256": "c059796848e18e4aab93db5379c2fb67615d27e1ed260cff0561da074b04b00f",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedSourceLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedSourceLaw.lean",
+      "sha256": "171e5b95b7697eb22bbb7c254e33ff5a3edfaf53564f443b53990b422ebadf68",
+      "reviewed_private_sha256": "983036a2693c4f1e66b8b5c9d81863e55bc19c10313e5b1571146ea7f70d62be",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedRoutedLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedRoutedLaw.lean",
+      "sha256": "22521358456eface8e9a23f2f6d18007f45c158b6502dcb13877125f4728f6c5",
+      "reviewed_private_sha256": "37d98cb97061985d54c97f03baadd79299f5cdad0ded1ce8e2462ff170a6cdc8",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedClassEndpoint",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedClassEndpoint.lean",
+      "sha256": "76521bc64384d4e82d882f1c97e02219b93433146669ea9a433e2fafdaed5adf",
+      "reviewed_private_sha256": "850fc484255ea276e117bd42fbff6c5086842b1602d52fa37d5e32057cf41e07",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42UniformReduction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniformReduction.lean",
+      "sha256": "496708ac72acdbb73be9cacca78b47fef4ca157e2303ec871e2db6d9f4f38847",
+      "reviewed_private_sha256": "07ffca819b81f3de0bc45fa14aee8423a7b9ecb0a18318a2f4bcc6ea16e10a1c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76/review_RANDOMIZED_ENDPOINT_REVIEW.md",
+      "review_sha256": "24a54aa35699c1e064f2404c9ac59185865b2e1a26cc4bcd8de19355f2dd6e76",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeSchedule",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeSchedule.lean",
+      "sha256": "7d52e8d4546d1d21f3416d2d8a7ad8e259f14c44fb720f2e2e3e78d9283fa9a7",
+      "reviewed_private_sha256": "b647c2fcdd09f9cf3a78110ad899b79c91cebfefbb9e9ab512d0037f6cb9229c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullScheduleExpressions",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullScheduleExpressions.lean",
+      "sha256": "744fc3c7cb22dd7a000a9d2c1eb85b130f81fd70e005a0ee2fce9117e240ed56",
+      "reviewed_private_sha256": "bce7fe978a842bb663196409df05520016d0f89ece47a8afd7b24f24ac5e17fa",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullScheduleBatch",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullScheduleBatch.lean",
+      "sha256": "d2a0d32da7cd279ec222138629cbecac83be64f0298f56b6ae5c6cd399c71294",
+      "reviewed_private_sha256": "4d4c02ddfaf6c52bb7969911228768eb15c9301a6e385f29f80f2230c2395dc3",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawGraphParameters",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawGraphParameters.lean",
+      "sha256": "6d9ff09d9b938cd2998861d39d22ed17fb69b311f6f574e346dbeb7b17b8460c",
+      "reviewed_private_sha256": "c38861e18b20cf3d8851ccc3266218830091a13de5fede423bda138cba403723",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawSamplerJoin",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawSamplerJoin.lean",
+      "sha256": "a061478350889c6ae27a3b252f25f6ecdb6ff701b1315126081305c393f7d297",
+      "reviewed_private_sha256": "af7049c70101921f9608663bbc96e0bf304653facc5f4ff60da411c296db7c04",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawSamplerOutput",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawSamplerOutput.lean",
+      "sha256": "b3205c1278bf576767f192efaee8aaaf4d78fac0211c4c611c92dbdb625e68ca",
+      "reviewed_private_sha256": "41be50071f5a29c2f8f37ed833c3616f5be75e7996b1b62ac7cc2fe477e38e3c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawPublicRepeat",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawPublicRepeat.lean",
+      "sha256": "471c1ff8e2825722be75c920df75c376e17c5678ddabe7428334ff2f0bf44bf6",
+      "reviewed_private_sha256": "95bc7ee49a332270e776b066265916ee1cc843610d2d21858a9f1e167b957ab8",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawPublicRepeatFields",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawPublicRepeatFields.lean",
+      "sha256": "6ad13b14c351d70aff7e54e806744c2aab66aff2e3ee8d8c05396233c136b342",
+      "reviewed_private_sha256": "9f1d83ccec476f82846f53a53fbc9334240e4d56ae585da1eece87b3263ada6b",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42WRawFields",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawFields.lean",
+      "sha256": "6d7b5e1df88f719579bbc10eddb84bca637ce8f40be21b4f27bd0a768ac4125f",
+      "reviewed_private_sha256": "d57dbd778f9385aafe68ff1f17094146e54145da17407572efbee522334995d8",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42WRawInput",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawInput.lean",
+      "sha256": "d1e375877429e8028d985600f19b5be25c495bfc66646f569e1d4c000f0e67dd",
+      "reviewed_private_sha256": "9730d36126dcd6c8673e04cf87547969d65ecee18f28f9fcb65facfde81c4ebc",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42WRawFinal",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawFinal.lean",
+      "sha256": "3e5bf7fee2a4c88f810c81aa47d4113db6f0b93239381ab44d691d1189be5e44",
+      "reviewed_private_sha256": "bb4772f013833f4e47e9d58d651ae5d90c12c07ea5417bc146c83f301a84d3a4",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42WRawRun",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawRun.lean",
+      "sha256": "01c4b0ade6af84e9b067bb2799d66d4431299a36675a08729582e1b0a0546587",
+      "reviewed_private_sha256": "16659ab8970cba2659a1b488c2de7f45033593d46aa58743837633e0ff09ac72",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42WRawInitial",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawInitial.lean",
+      "sha256": "3b733e9ff9fc28a6a340c43f054146a483a246d8127544e83be0738859a4fe08",
+      "reviewed_private_sha256": "18a007cb39eefcc83e8dce8b22061ebe8b6445559dd348566c75b5bc97e075d1",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42WRawPacket",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawPacket.lean",
+      "sha256": "d6231b113ab2c40bf172feb10334fb47226c5bc3a2915e2db4fb13010996b413",
+      "reviewed_private_sha256": "11d1cde8fde3a193b0ecdc498a6c9d397f47f98ec47fbdc6d4fe9e4d8458e972",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PrintedLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PrintedLaw.lean",
+      "sha256": "ee4fea32fa60b124dcb99ccff8008d76493fd285c34d2f76527ba211ad358116",
+      "reviewed_private_sha256": "14b082254cde3ebf0191aec1ebbb8795df9e5ec353981df52a7a4a03fcf2f8cf",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullCodeConstructor",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullCodeConstructor.lean",
+      "sha256": "34a67b0db4760670644da3ad4fb0001d2ba45b18df20037499f65fc4545df7fb",
+      "reviewed_private_sha256": "f63602a86e7ff62672a94ea6b6a1e9a80b573d5d7907681e2695f3a9e89bac7d",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PhysicalSampleClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PhysicalSampleClock.lean",
+      "sha256": "0a5e59808bf8e43d1dc1869a233d4fc7daf7a6ee5fba5ced8d1ea70d4ea08db9",
+      "reviewed_private_sha256": "7794c455d74056e905eced36f70214a34a12318c00f4794dd57b4418e83ba5cf",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ShapeClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ShapeClock.lean",
+      "sha256": "8db2439712e853e17ccf36e54df3e59264178de63daf9e964aaed46f7659ec82",
+      "reviewed_private_sha256": "0ddab44b2ca82a39f6d8dadea595aaec2ca4e1fa70872e5ffa4cba111d482d54",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullSchedulePeak",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullSchedulePeak.lean",
+      "sha256": "3161191bbb48be4ec08af02074472bacc77fd8bc0f08a84893d5e13ab403e43d",
+      "reviewed_private_sha256": "07bfc8b54fd3769ffbc5a74bf693966750988f30c4706e91f1806ff3670179ab",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullScheduleClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullScheduleClock.lean",
+      "sha256": "320e452c57b2b498f60f0e935a06c740f057c0675f3de19207a0c2746c60f4b0",
+      "reviewed_private_sha256": "9c370c54d7540ceba011aeefe6728488c7e55c606095875f2ef879715255ddb9",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawSamplerClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawSamplerClock.lean",
+      "sha256": "8a39a793874ffeca4d6ea459a97ac8636e7fd33c5f1c2ca4ebb4b87471749bc6",
+      "reviewed_private_sha256": "9c271c7fcfbc0c178f8a379817677eadfed3b874b7d989c7b626a5bf9915454c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullTableScale",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullTableScale.lean",
+      "sha256": "6c405790db3bb4f9cce9bfb3b457986f43aa176b1b1ecb98a42049cd0eff997f",
+      "reviewed_private_sha256": "fe9ff553e79a4ea8da15406e20c835f3fe5eda40990ab1a9c7c1d27ae66299b3",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullTableWriter",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullTableWriter.lean",
+      "sha256": "cc877bf2e47c703502f07779fcde3451161685e2229cbae8e3ae6a030dd8dc85",
+      "reviewed_private_sha256": "1a1d79cd593d36181bbcb404c97f78f6771ab4e96757ea296e66b4ebd5811fd1",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RawTableClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawTableClock.lean",
+      "sha256": "bb974d18e902662e186e513333fe2ee944544b3c3fe23c5564b92ff556423eef",
+      "reviewed_private_sha256": "5a39c3daf755951fec5aa38586c7a5a40a4f0dac2c835221a5775e3e457cc3ef",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PhysicalRawTableClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PhysicalRawTableClock.lean",
+      "sha256": "e514cb07202b357de40b24e8ec51338c5e6f00fbdaca69e4ae994d1833ce67ef",
+      "reviewed_private_sha256": "ec6e81103da154b04989ea49d28a6c3e157b2084538697ee4a26db1d64befeb4",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PacketClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PacketClock.lean",
+      "sha256": "67d9597faff629aeb306c3d34bfdc775a9a58bc738263cc09d2fd966d39d9300",
+      "reviewed_private_sha256": "c9d5f82b8bf54c837b127e6d5aacbff556ab6bec7afa0f08cb428ebd152fd5d4",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a/randomized-runtime-review_REPORT.md",
+      "review_sha256": "ea62679989be205923e2cd9505c53764e7d1b453db22512d2271a6f2e102a16a",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ActualSource",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualSource.lean",
+      "sha256": "984a32d5b943b94f71928b3b59f3553680fd6a2ac324c367c85fe03ef3ae2d42",
+      "reviewed_private_sha256": "59ef9e34c3fed0957aea6cab0bf177899f6cea1b5d1bbdd8a10b7ebed7af81ee",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168/fixed-endpoints-review_REVIEW.md",
+      "review_sha256": "94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ActualSourceEstimator",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualSourceEstimator.lean",
+      "sha256": "53d91504246f7f290c92892d190562012e609ffae5bc8adc83a3ea948e587afd",
+      "reviewed_private_sha256": "545c1c259d182c0f3bdf4f6fe48e379f9ea8498fee7b3a66a5127fb2db4f9986",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168/fixed-endpoints-review_REVIEW.md",
+      "review_sha256": "94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ActualSourceGap",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualSourceGap.lean",
+      "sha256": "bffac5b2ad9bc042d54bc5ee60fde159c0bdf6ed5e7c1ed4e3e3ba6e213135ca",
+      "reviewed_private_sha256": "831458ab2bb138a37d131d08d7f4054097f8761d8ae75f0cdbf7eb7f70884cdc",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168/fixed-endpoints-review_REVIEW.md",
+      "review_sha256": "94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42DeterministicRequest",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42DeterministicRequest.lean",
+      "sha256": "95a8916453c9da03cc0f906e1f10c2acd01499b24173a70243abea83d593d342",
+      "reviewed_private_sha256": "95a8916453c9da03cc0f906e1f10c2acd01499b24173a70243abea83d593d342",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168/fixed-endpoints-review_REVIEW.md",
+      "review_sha256": "94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FixedEndpoints",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FixedEndpoints.lean",
+      "sha256": "a07191d500695eb959ff5e7e07589c6101cb9ebc099b843da33196a3b0c21f2d",
+      "reviewed_private_sha256": "7e1f7355bd719abb8966173695f9b8414b92e7f61c1d2049c28da4e45ce2c4fd",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168/fixed-endpoints-review_REVIEW.md",
+      "review_sha256": "94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42SourcePhysical",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourcePhysical.lean",
+      "sha256": "bdb11464652fa1026f8c45dc7cfa3f0367a2a68c2b43716535768b3084998751",
+      "reviewed_private_sha256": "38133edbf75fc29baea5acd7f40b48763b965a7f9efe73acca9884c54b71b937",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168/fixed-endpoints-review_REVIEW.md",
+      "review_sha256": "94c22f2f4f69a98d5776201fda09f55c8c4662630139bfee9379a9c16acd7168",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ActualLower",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualLower.lean",
+      "sha256": "d734b154c3630395dd89d9d8ca3c73105842c6e6471812421d6c830304db0b64",
+      "reviewed_private_sha256": "493097f275b91636355699f344b57e96b45ca176f3c757b0810d0d4546e72173",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605/deterministic-endpoints-review_REVIEW.md",
+      "review_sha256": "52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PermittedExtraction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PermittedExtraction.lean",
+      "sha256": "2af4be27f419ad8bbb1c0f2dd043a6808ec9784b429d125ce68f3a42eef43d64",
+      "reviewed_private_sha256": "11b3b52db242282171fb472b5101b70cf8d9a05db3f54e3fa11ab6b08468fe0d",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605/deterministic-endpoints-review_REVIEW.md",
+      "review_sha256": "52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ETHNumerics",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ETHNumerics.lean",
+      "sha256": "8f80e2cd60ed27aaa96a7b7c3cc1fe3dbe38c6831b6f32e7ba3f00f5885fc489",
+      "reviewed_private_sha256": "1dacee9b1871e773429458cef55dd3fa4b66950a2117cfcc851f09699bb22fda",
+      "adaptation": "Only import paths qualified under CurrentAdditive; trailing horizontal whitespace removed (no tokens or line numbers changed)",
+      "review": "release-evidence/52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605/deterministic-endpoints-review_REVIEW.md",
+      "review_sha256": "52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ETHPhysical",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ETHPhysical.lean",
+      "sha256": "8d8e9a4d0efee49979291984f9dca8f5ea29d4c597feeee9105fdecc45e011d1",
+      "reviewed_private_sha256": "237603e2c00183bb7ecd13b3230bf732813db9c46cc2cba33d3cd1b65b7bae66",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605/deterministic-endpoints-review_REVIEW.md",
+      "review_sha256": "52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ETHSourceLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ETHSourceLaw.lean",
+      "sha256": "49684e0b024b1be8c05d83b0cf17a54576b5bdf90678831e408d752f20f3b3ce",
+      "reviewed_private_sha256": "73965fbe388d961028a4155ed36f283f0669f6ab075ba072ba7aecb3197a5773",
+      "adaptation": "Only import paths qualified under CurrentAdditive; trailing horizontal whitespace removed (no tokens or line numbers changed)",
+      "review": "release-evidence/52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605/deterministic-endpoints-review_REVIEW.md",
+      "review_sha256": "52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42DeterministicETHEndpoint",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42DeterministicETHEndpoint.lean",
+      "sha256": "1fe19c76ebd92bd4e9597fd68fa6ac64f17aedd229bf82755ff6d499b7687a01",
+      "reviewed_private_sha256": "fdbd68705c1c8d504415abf6d8a61681d6a634e76343634b647f8611097b9b56",
+      "adaptation": "Only import paths qualified under CurrentAdditive; trailing horizontal whitespace removed (no tokens or line numbers changed)",
+      "review": "release-evidence/52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605/deterministic-endpoints-review_REVIEW.md",
+      "review_sha256": "52bf1648b8d2322da0be23782db0275f03ca83e584f038fc81f20c54d8b59605",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeDyadic",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeDyadic.lean",
+      "sha256": "7c7cf2c83ba8a46c04e93d77d999dfbe66cea5b78261283a9d14210c51766ef5",
+      "reviewed_private_sha256": "1d53235a3749ed0335da3dec15f6cadb489927b54722605be41fefcb0727508d",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/af4d1da1717a77aed9dd64773038e36cb054a8b9422f6bb19b9b6414e61d0067/runtime-dyadic-review_REVIEW.md",
+      "review_sha256": "af4d1da1717a77aed9dd64773038e36cb054a8b9422f6bb19b9b6414e61d0067",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42NumericPowerMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42NumericPowerMargins.lean",
+      "sha256": "1a8e5fb8bde355aa628bb3136a9a1c6d4e8ce9c1390bb0abb9107dc485cc64ef",
+      "reviewed_private_sha256": "126f82517788665533bfe448cc467085f52ecb3036864f02c4157abecfca5a5c",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24096bfafb0a798ba7f6c6d22b6c297eee129c6334b8125ebeae275b54ef0d22/numeric-margins-review_REPORT.md",
+      "review_sha256": "24096bfafb0a798ba7f6c6d22b6c297eee129c6334b8125ebeae275b54ef0d22",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42NumericExceptionMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42NumericExceptionMargins.lean",
+      "sha256": "17dbf6eeedc91258dbcd84cfa3cbde19fb80db61c7fc8ee52ec96fdfc9613a3b",
+      "reviewed_private_sha256": "b3cf457179ed706ec9a92031d9cdb04c1c73f326297de5c14f84d2e3f892340e",
+      "adaptation": "Only import paths qualified under CurrentAdditive; trailing horizontal whitespace removed (no tokens or line numbers changed)",
+      "review": "release-evidence/24096bfafb0a798ba7f6c6d22b6c297eee129c6334b8125ebeae275b54ef0d22/numeric-margins-review_REPORT.md",
+      "review_sha256": "24096bfafb0a798ba7f6c6d22b6c297eee129c6334b8125ebeae275b54ef0d22",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ExactWidthMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ExactWidthMargins.lean",
+      "sha256": "2d1727bb73e3a88884620af1f791df6753b4b8f2a19c5d74a9f89fbbbecef7df",
+      "reviewed_private_sha256": "88855a26f6e5de7c6c7a52bf771d81d03c0b2c27a3a5d9b20f3919790966d3cc",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/24096bfafb0a798ba7f6c6d22b6c297eee129c6334b8125ebeae275b54ef0d22/numeric-margins-review_REPORT.md",
+      "review_sha256": "24096bfafb0a798ba7f6c6d22b6c297eee129c6334b8125ebeae275b54ef0d22",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42NumericAllowances",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42NumericAllowances.lean",
+      "sha256": "a29b11809c0fca93be9f474069ef6a0f7658b578c507bd0eb39359bb92a7f44e",
+      "reviewed_private_sha256": "a6c5dd4e6c6cfa471b8b5b2cc1d98ee21a7667e0800079a63adc8c39ecf3fc21",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/8cac60e5ad036ec3cf644d1bffd4a0132afb549d295f8e8dbf5d69c2e9efc3cc/numeric-allowances-review_REPORT.md",
+      "review_sha256": "8cac60e5ad036ec3cf644d1bffd4a0132afb549d295f8e8dbf5d69c2e9efc3cc",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42WidthMarginsChain",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WidthMarginsChain.lean",
+      "sha256": "7f330501d8b616c31ed5b04ed46b85e60a75582a84b43aeaf4cbb12473e60683",
+      "reviewed_private_sha256": "f0bb438f705373fa8c77acc340f71d5ce9e3e2d3d1ee92e1918cc6f8876ec940",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/8cac60e5ad036ec3cf644d1bffd4a0132afb549d295f8e8dbf5d69c2e9efc3cc/numeric-allowances-review_REPORT.md",
+      "review_sha256": "8cac60e5ad036ec3cf644d1bffd4a0132afb549d295f8e8dbf5d69c2e9efc3cc",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedCollisionInterface",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedCollisionInterface.lean",
+      "sha256": "a61c93c84eabfd085f2d5a7ae6574ba0536fb940e36e4fbab61986fe93ff1d91",
+      "reviewed_private_sha256": "a61c93c84eabfd085f2d5a7ae6574ba0536fb940e36e4fbab61986fe93ff1d91",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/da5f12e759f72004cc131f3affd9e701d03d896743bb833a215c2136e42acc4f/nearfull-review_REPORT.md",
+      "review_sha256": "da5f12e759f72004cc131f3affd9e701d03d896743bb833a215c2136e42acc4f",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedNearFullInterface",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedNearFullInterface.lean",
+      "sha256": "abcbaa9334abe930b10590ab090769c70d58bc432d1bc85d44dc88fe56a18324",
+      "reviewed_private_sha256": "827c5de766a386516f2d84d956b4b04021a64e1d59ad2a49ccbf119d0c1fe8ab",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/da5f12e759f72004cc131f3affd9e701d03d896743bb833a215c2136e42acc4f/nearfull-review_REPORT.md",
+      "review_sha256": "da5f12e759f72004cc131f3affd9e701d03d896743bb833a215c2136e42acc4f",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedSourceHardness",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedSourceHardness.lean",
+      "sha256": "f99ee535a352026acc12f1c3cce3d6b1ce8d8a08ffb7c464aeecf9d6eea4f779",
+      "reviewed_private_sha256": "bd0d6715614ce27a373c2724f152d203b5410d24a19f52667b29da676ba84d2f",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/da5f12e759f72004cc131f3affd9e701d03d896743bb833a215c2136e42acc4f/nearfull-review_REPORT.md",
+      "review_sha256": "da5f12e759f72004cc131f3affd9e701d03d896743bb833a215c2136e42acc4f",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42HeterogeneousPairLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42HeterogeneousPairLaw.lean",
+      "sha256": "848b0c5d24f6e3dbff5e5a0dba13e3c8098917d74847c809e6284d12c164d854",
+      "reviewed_private_sha256": "848b0c5d24f6e3dbff5e5a0dba13e3c8098917d74847c809e6284d12c164d854",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/5538f45e73953907d8ee796786fc2202c96d74a2150442b47976fdd7b1ff7dc6/paired-interface-review_REVIEW.md",
+      "review_sha256": "5538f45e73953907d8ee796786fc2202c96d74a2150442b47976fdd7b1ff7dc6",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42PairedInterface",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PairedInterface.lean",
+      "sha256": "f0c6989c72b39fab1bc1789cfd45adbf5145bae05616e12e06805672c7a4ec92",
+      "reviewed_private_sha256": "1110b1b16a9d4a1f4e46a6d6762529214750cafefd8da29db69eaf750ed96ff8",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/5538f45e73953907d8ee796786fc2202c96d74a2150442b47976fdd7b1ff7dc6/paired-interface-review_REVIEW.md",
+      "review_sha256": "5538f45e73953907d8ee796786fc2202c96d74a2150442b47976fdd7b1ff7dc6",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedThreeTail",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedThreeTail.lean",
+      "sha256": "c4bb27ed3f1a97010d8d5ab056034d59dc03e9537b328f0999df553de801fb49",
+      "reviewed_private_sha256": "ed6387351a67e921969c368113b5fe550487229630bf5a9f14af7645a86ada48",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/578cab9d56c2647bfa5c2f497ef482cd5e94df4ac5cf4307e13b6301234a143c/generated-tail-review_REPORT.md",
+      "review_sha256": "578cab9d56c2647bfa5c2f497ef482cd5e94df4ac5cf4307e13b6301234a143c",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedEmbedding",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedEmbedding.lean",
+      "sha256": "deea74ce947e1e990a03117a4121257155fc4da9170f7a6d7574051776d7174a",
+      "reviewed_private_sha256": "4be52ebd168e1fc96bbd243b4c4163e27a45f71039e0a45ed29b1ea2923a92ed",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/3055fa25a5596a22cf74be9d00e82befba430813f671210bb5ddebb7aecec530/generated-interface-review_REVIEW.md",
+      "review_sha256": "3055fa25a5596a22cf74be9d00e82befba430813f671210bb5ddebb7aecec530",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedRank",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedRank.lean",
+      "sha256": "d208f7a25f532e86af8e9d13aa8f1fc47154be9e1f9c973fed3207998ea311db",
+      "reviewed_private_sha256": "d882b7bbe4f5b94ad8ba8175f02db888e1c0460762e25a833bcafe535fd7deb3",
+      "adaptation": "Only import paths qualified under CurrentAdditive; trailing horizontal whitespace removed (no tokens or line numbers changed)",
+      "review": "release-evidence/3055fa25a5596a22cf74be9d00e82befba430813f671210bb5ddebb7aecec530/generated-interface-review_REVIEW.md",
+      "review_sha256": "3055fa25a5596a22cf74be9d00e82befba430813f671210bb5ddebb7aecec530",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedRound",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedRound.lean",
+      "sha256": "36891dd86a138b515897485526a8dfbf5292fb162fe51d76284765403667349c",
+      "reviewed_private_sha256": "82e768e749baedceabaa5a4f1805048bbab1df2c1cdfbbc537a66f5d8a101f05",
+      "adaptation": "Only import paths qualified under CurrentAdditive; trailing horizontal whitespace removed (no tokens or line numbers changed)",
+      "review": "release-evidence/3055fa25a5596a22cf74be9d00e82befba430813f671210bb5ddebb7aecec530/generated-interface-review_REVIEW.md",
+      "review_sha256": "3055fa25a5596a22cf74be9d00e82befba430813f671210bb5ddebb7aecec530",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedRoundFromGraph",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedRoundFromGraph.lean",
+      "sha256": "769fb11af72b351697f1c4957ee640d5f7209d3c82e9f5811408d49015008bd5",
+      "reviewed_private_sha256": "5356621b6c50973b70773e1f40b990ea5b05dbd62d2d6ae302b972f673b7af06",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/3055fa25a5596a22cf74be9d00e82befba430813f671210bb5ddebb7aecec530/generated-interface-review_REVIEW.md",
+      "review_sha256": "3055fa25a5596a22cf74be9d00e82befba430813f671210bb5ddebb7aecec530",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42WidthPrimitives",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WidthPrimitives.lean",
+      "sha256": "4b8ca2074eb4fadea23f08ad426470206cb2a64de1514ccd4475ccdc8d0f06dc",
+      "reviewed_private_sha256": "4b8ca2074eb4fadea23f08ad426470206cb2a64de1514ccd4475ccdc8d0f06dc",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/e12748c4228f385379a8e45708449fac55731a060ff001885712a41598b9ff1f/full-schedule-interface-review_REPORT.md",
+      "review_sha256": "e12748c4228f385379a8e45708449fac55731a060ff001885712a41598b9ff1f",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullWidthExpressions",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullWidthExpressions.lean",
+      "sha256": "a2f8331d8a080924d181dd4d8404afec2a8194274e4027e3e59611e7b541d6b2",
+      "reviewed_private_sha256": "57db86a3028639e2af972a12193d7de2b086de0da0d50cddf0eca25c31ad23a1",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/e12748c4228f385379a8e45708449fac55731a060ff001885712a41598b9ff1f/full-schedule-interface-review_REPORT.md",
+      "review_sha256": "e12748c4228f385379a8e45708449fac55731a060ff001885712a41598b9ff1f",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42FullScheduleInterface",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullScheduleInterface.lean",
+      "sha256": "3b652562973e64da121e41bf74579655cf9b43d2864de2613944d96077857fa1",
+      "reviewed_private_sha256": "a39eb742f1341dd5cabfbf9b198407de25fbed26d0621e2cf33262f0615aa77d",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/e12748c4228f385379a8e45708449fac55731a060ff001885712a41598b9ff1f/full-schedule-interface-review_REPORT.md",
+      "review_sha256": "e12748c4228f385379a8e45708449fac55731a060ff001885712a41598b9ff1f",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42UniversalPrefix",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniversalPrefix.lean",
+      "sha256": "2d0cfab3b7bb0ddf86f294cf1caa175acad42e31d199eda600c6f71fd3bafac1",
+      "reviewed_private_sha256": "ef0c63713def02cc83ba78779f982bc151db41a8a9fc292ed4dc74995b553a30",
+      "adaptation": "Only import paths qualified under CurrentAdditive; source-local maxHeartbeats 4000000, maxRecDepth 65536, synthInstance.maxSize 32768 match independent replay flags; existing later local options preserved",
+      "review": "release-evidence/a2743bf382c17803260e86d9c9943fa49454d29396f1c54f091c2c6478128578/det-universal-size-review_REPORT.md",
+      "review_sha256": "a2743bf382c17803260e86d9c9943fa49454d29396f1c54f091c2c6478128578",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42UniversalFormatter",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniversalFormatter.lean",
+      "sha256": "e41e86f26c82730a52fe034cf4619a9200b02ed2843e2554f9af49dc911b72c5",
+      "reviewed_private_sha256": "dcaca91138c50a539a4462d18f4b6bd2b79259f24992b812b8e5a4f0abda4816",
+      "adaptation": "Only import paths qualified under CurrentAdditive; source-local maxHeartbeats 4000000, maxRecDepth 65536, synthInstance.maxSize 32768 match independent replay flags; existing later local options preserved",
+      "review": "release-evidence/a2743bf382c17803260e86d9c9943fa49454d29396f1c54f091c2c6478128578/det-universal-size-review_REPORT.md",
+      "review_sha256": "a2743bf382c17803260e86d9c9943fa49454d29396f1c54f091c2c6478128578",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42UniversalRuntime",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniversalRuntime.lean",
+      "sha256": "3c43e8c6780095d8aa3b633b9b75ef2ebe6d5b6d45212f1b08cca132229e6f09",
+      "reviewed_private_sha256": "22482693692e052815dae07aecb095d0627f1934f04905698f0723052f01efff",
+      "adaptation": "Only import paths qualified under CurrentAdditive; source-local maxHeartbeats 4000000, maxRecDepth 65536, synthInstance.maxSize 32768 match independent replay flags; existing later local options preserved",
+      "review": "release-evidence/a2743bf382c17803260e86d9c9943fa49454d29396f1c54f091c2c6478128578/det-universal-size-review_REPORT.md",
+      "review_sha256": "a2743bf382c17803260e86d9c9943fa49454d29396f1c54f091c2c6478128578",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42UniversalReduction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniversalReduction.lean",
+      "sha256": "e934d8efcbe66f4127db69dd9babf194555931c1bc0b03f0ce688890515ca6eb",
+      "reviewed_private_sha256": "41ffcd33c05ae1c12d29b800629b07ace22666d60b22aecd7aa6c23d38ee504e",
+      "adaptation": "Only import paths qualified under CurrentAdditive; source-local maxHeartbeats 4000000, maxRecDepth 65536, synthInstance.maxSize 32768 match independent replay flags; existing later local options preserved",
+      "review": "release-evidence/a2743bf382c17803260e86d9c9943fa49454d29396f1c54f091c2c6478128578/det-universal-size-review_REPORT.md",
+      "review_sha256": "a2743bf382c17803260e86d9c9943fa49454d29396f1c54f091c2c6478128578",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ZeroArithmetic",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ZeroArithmetic.lean",
+      "sha256": "324542e8957ba1d88bbd1b53ec28c2df2455e0635016b633e68ccaa794130fec",
+      "reviewed_private_sha256": "3ce831889c18742bc3d1ae92d0d2971f95daf3751649e899449a94668448c697",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543/sample-zero-review_REPORT.md",
+      "review_sha256": "c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42ZeroSamplerClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ZeroSamplerClock.lean",
+      "sha256": "b0374047f10b336a45c5b2c8f9b82a8194bb406434579645a7b391aa2b6943f2",
+      "reviewed_private_sha256": "60a6075f599643177ffa33e953db1f40bac25dc01b0d908a21efa601d9da73df",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543/sample-zero-review_REPORT.md",
+      "review_sha256": "c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42AllRoundTableClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AllRoundTableClock.lean",
+      "sha256": "f3d77cadef98111442b5474d25414d135b5543ec736b259f38e5dfffc8186d91",
+      "reviewed_private_sha256": "5edf20fae0f4bb571cbca809e7a0c802950f63cc893257ac31029ccd6f570524",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543/sample-zero-review_REPORT.md",
+      "review_sha256": "c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42AllRoundPacketClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AllRoundPacketClock.lean",
+      "sha256": "3a26ba1bf3b660faf519f4c7adb5aa55624fdba244de37178361fce22912fdd3",
+      "reviewed_private_sha256": "537dfe5769a36bd8b798d64ca037fa0125b4d492f86409be2b6d44b4f7683e1b",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543/sample-zero-review_REPORT.md",
+      "review_sha256": "c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    },
+    {
+      "module": "CurrentAdditive.V42AllRoundSampleAccess",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AllRoundSampleAccess.lean",
+      "sha256": "0d8280314aaf3d57399a3f5966e9d64abdf1266be3036f5b7bc37f896ea4dffc",
+      "reviewed_private_sha256": "4e9b5ff7c93f0f7bafd9a80b7cfdea597f6aae3501dce0f9469b592f473e5bf7",
+      "adaptation": "Only import paths qualified under CurrentAdditive",
+      "review": "release-evidence/c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543/sample-zero-review_REPORT.md",
+      "review_sha256": "c5c4ecca3f9ea1db9a4ce4714a2b98f09c298de8030945749ba0891aef27b543",
+      "scope": "Reviewed component; complete manuscript correspondence and release checks are recorded separately."
+    }
+  ]
+}

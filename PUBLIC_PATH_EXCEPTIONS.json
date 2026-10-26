@@ -1,0 +1,65 @@
+{
+  "policy": "Exact source-hash and line-bound exceptions only; no personal home paths, attachment paths or credentials permitted.",
+  "exceptions": [
+    {
+      "source": "src/EthInapproximability/ParameterizedNP/AlphaAllowance.lean",
+      "sha256": "3edb4273f674110b088aaa22384323bc6edfaeba296511081d9846a335e3f6a1",
+      "permitted_findings": [
+        {
+          "line": 95,
+          "category": "absolute_machine_path"
+        }
+      ],
+      "reason": "Already-public nonpersonal legacy-development path in an inherited source comment; exact proof-source bytes retained.",
+      "prior_public_source_manifest_sha256": "6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee"
+    },
+    {
+      "source": "src/EthInapproximability/ParameterizedNP/CommonPadding.lean",
+      "sha256": "704aabc75a32b49ad4c6548dcc312c97f0eeeee9272c120d564ddff36c76bea5",
+      "permitted_findings": [
+        {
+          "line": 93,
+          "category": "absolute_machine_path"
+        }
+      ],
+      "reason": "Already-public nonpersonal legacy-development path in an inherited source comment; exact proof-source bytes retained.",
+      "prior_public_source_manifest_sha256": "6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee"
+    },
+    {
+      "source": "src/EthInapproximability/ParameterizedNP/EffectiveMain.lean",
+      "sha256": "44c206300877e50fba1d2a0249f5a9f09a142844ae10a15b3c1d25d465881651",
+      "permitted_findings": [
+        {
+          "line": 131,
+          "category": "absolute_machine_path"
+        }
+      ],
+      "reason": "Already-public nonpersonal legacy-development path in an inherited source comment; exact proof-source bytes retained.",
+      "prior_public_source_manifest_sha256": "6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee"
+    },
+    {
+      "source": "src/EthInapproximability/ParameterizedNP/PaddingAndClock.lean",
+      "sha256": "4646cc7c319e311c907ec0cc582d448ae57b0f8c857f11f3a64c7fb0ee169a2b",
+      "permitted_findings": [
+        {
+          "line": 184,
+          "category": "absolute_machine_path"
+        }
+      ],
+      "reason": "Already-public nonpersonal legacy-development path in an inherited source comment; exact proof-source bytes retained.",
+      "prior_public_source_manifest_sha256": "6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee"
+    },
+    {
+      "source": "src/EthInapproximability/ParameterizedNP/TruthTableExponent.lean",
+      "sha256": "7b432cc02e7a8e64e05e2f57b1508fc85f5a14b5aa4376bcea67316bcddaf023",
+      "permitted_findings": [
+        {
+          "line": 83,
+          "category": "absolute_machine_path"
+        }
+      ],
+      "reason": "Already-public nonpersonal legacy-development path in an inherited source comment; exact proof-source bytes retained.",
+      "prior_public_source_manifest_sha256": "6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "decision": "accepted_for_the_full_product_final_collision_clause",
+  "reviewer": "v42_incoming_proof",
+  "date": "2026-10-26",
+  "source_path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+  "source_sha256": "1c7f0fedc92989087219c2773411a42f610503846c6cf1e2dea5ac18961684f7",
+  "source_statement_id": "src:profiles",
+  "source_statement_alias": "det:profiles",
+  "source_raw_block_sha256": "cc86697ec20cbbbe9aae49481a307058ce79e514ae54cefe22bd5ba1d630c64a",
+  "source_normalized_block_sha256": "df0fe1492411e2c91c4505a5208c41927ddea326b0161c56e1d1985701d24015",
+  "reviewed_file": "private-provenance-refs/8c6fa9d92e05ea357eb67e7bd76339976d6df0e5d32616360be2e9581c5bf49c/V42FullGammaTail.lean",
+  "reviewed_file_sha256": "1c9cf481ae6c880643320f70261b715e3cc960bdc8df0e172000fbfbca67cf14",
+  "endpoint": "CurrentAdditive.V42FullGammaTail.full_gamma_tail_lower",
+  "compiler": "Lean 4.30.0; relaxedAutoImplicit=false; maxHeartbeats=1000000",
+  "independent_replay": {
+    "exit_code": 0,
+    "log": "replay.log",
+    "object": "V42FullGammaTail.olean"
+  },
+  "independent_axiom_audit": {
+    "exit_code": 0,
+    "log": "axiom-audit.log",
+    "declarations": 6,
+    "allowed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "source_contract_checks": [
+    {
+      "claim": "Original Gamma labels and weights",
+      "result": "pass",
+      "evidence": "Gamma is an arbitrary Set (Word q1 s Y), where Word is the full q1+s+1 coordinate word. Its retained weight is measured by the original (nu.iid (q1+s+1)).toFiniteLaw, strictly above 1/2."
+    },
+    {
+      "claim": "Every head position plus any three distinct tail positions",
+      "result": "pass",
+      "evidence": "headTailPositions keeps every i<q1 unchanged and maps the last three selected indices to q1+tail(i). tail is arbitrary subject only to injectivity; the combined map is proved injective."
+    },
+    {
+      "claim": "Exact per-block source threshold",
+      "result": "pass",
+      "evidence": "For every selected block the retained base-row set has original mu weight at least 2*s*rho, precisely x_cap in eq:source-costs. No normalization across blocks changes this threshold."
+    },
+    {
+      "claim": "Exact source lower bound",
+      "result": "pass",
+      "evidence": "fullS=2^fullExponent and fullQ1=fullS-2, so q1+3=s+1=2^fullExponent+1. The conclusion d+fullExponent+1 is H1+1."
+    },
+    {
+      "claim": "Projection does not silently change the retained law",
+      "result": "pass",
+      "evidence": "V39ThreeTail.word_positions_lower bounds the product weight of the joint coordinate image using word_projection_mass, then uses one retained original representative per projected word through restrictionD_projected_le. The final cost is on Rows and the original Gamma event; no independence of the retained event is assumed."
+    },
+    {
+      "claim": "Numerical schedule premise",
+      "result": "pass",
+      "evidence": "hb is 4*fullExponent<=L. full_capacity proves the weaker required 2*s*rho<=1 directly; V42FullCutoff.bounds supplies hb for sufficiently large promised source graphs."
+    },
+    {
+      "claim": "No conclusion-bearing certificate or extra hardness assumption",
+      "result": "pass",
+      "evidence": "Only the base matrix two-threshold profile, positive rational input laws, row/event masses, and public scalar bound are assumptions. The desired Gamma restriction lower bound is derived using the generic exactboost result."
+    }
+  ],
+  "direct_reused_proof_dependency": {
+    "path": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39ThreeTail.lean",
+    "sha256": "2929b30043fd5d75d0a76295396e00b4aaecb01c0aa27b96ff8d932aa42be22b",
+    "review_note": "Its generic word_positions_lower theorem was read directly; it has no old schedule or obsolete row threshold hidden in its hypotheses."
+  },
+  "source_profile_dependency": {
+    "path": "private-provenance-refs/506b30ba349b7a29a4b4a15258bc0dc4d404912b1267e379c5cc694b88e5e083/V42FullProfiles.lean",
+    "sha256": "f7b6cc4aaff66cfc06e2a71a32575a01b4539d96c2901209e9f3fecf03cf05b4",
+    "review_note": "Owns the three deletion profiles; not re-certified by this wrapper review."
+  },
+  "findings": [],
+  "coverage_boundary": "Closes the previously missing full-product final three-tail clause of src:profiles. The complete statement combines this clause with the independently owned three deletion profiles and generated-list branch; root owns their integration and final source-bound gates.",
+  "safety": "No production sources, shared build outputs, Git state, or manuscript files changed. One private compiler was used at a time."
+}

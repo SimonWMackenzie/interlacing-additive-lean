@@ -1,0 +1,226 @@
+{
+  "status": "prepared_not_installed",
+  "preparer": {
+    "path": "private-provenance-refs/6023ffb5277f5801178f413a5ed9e81b691b0e10d66accf254b8583620e0b3e8/prepare_owner_port.py",
+    "bytes": 16458,
+    "sha256": "da2397c5c1cf0109be1f4338c20d8660971f659f620c3d20937e60150cf51a70"
+  },
+  "source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "original_map_sha256": "fae1a9981e182f435daf4bf13b399b832770464e77dbd0f49545f5aa82e8156d",
+  "owned_map_sha256": "609ec2973ac3807af9201b5813f596e1e0343ce40061f3a681b4c1c7125abf59",
+  "policy": "Only evidence locations and tool data-directory references are projected. Original evidence and all Lean proof source bytes are unchanged. Historical receipt-internal paths remain provenance strings.",
+  "relocations": [
+    {
+      "original_path": "private-provenance-refs/c565908f8a02b327ac0881e9ddde0daa42aa44bdbb527667eaa520c764ef5c54/main.tex",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/8cfdd735e5703682f98c840df96397dea74ef2795716f7bdddb3b7e562e64cb0/main.tex",
+      "sha256": "8cfdd735e5703682f98c840df96397dea74ef2795716f7bdddb3b7e562e64cb0",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/6a6beb63f7fb7e4a60707be98d513226fc83582553c916a901d48d4a4501973d/SOURCE_MANIFEST.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee/SOURCE_MANIFEST.json",
+      "sha256": "6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/1767727264368152f7670cb25b94c2c2cfa0c4a545173b7114afba8d7999dc33/refresh_inventory.py",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/753722506d21beff104e3e39a8151c3ba8b9e85eeadedbb9076ff3c3664ca120/refresh_inventory.py",
+      "sha256": "753722506d21beff104e3e39a8151c3ba8b9e85eeadedbb9076ff3c3664ca120",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/80fa3688c53956999bfd4efe0ba7aabc3e28c83c94f40eda2f4ae09e49eed107/validate_inventory.py",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/2c410e21549d85d5ebcd1fb15bb3a789d88a5b0acdf833d3f99eded5bfd98ffe/validate_inventory.py",
+      "sha256": "2c410e21549d85d5ebcd1fb15bb3a789d88a5b0acdf833d3f99eded5bfd98ffe",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/00589c155bf413fbc796b819a5ff219a15a9f8a4370417b5ba27fad323480b24/run_tooling_checks.py",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/a9f660ce50c5746e063247dfa2eee5b39f888dadbb8e4b5ecfd424bad1d51fea/run_tooling_checks.py",
+      "sha256": "a9f660ce50c5746e063247dfa2eee5b39f888dadbb8e4b5ecfd424bad1d51fea",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/d9ab88262bd84cff80f142d68a97bb4f41736a0091896c3a9de066675b615976/AUTHOR_UPDATE_COMPARISON.json",
+      "owned_path": "release-evidence/21914e17996311307f4cd9ba728eb479d7c651bb90e7f2e000e4aea26291d4db/AUTHOR_UPDATE_COMPARISON.json",
+      "sha256": "21914e17996311307f4cd9ba728eb479d7c651bb90e7f2e000e4aea26291d4db",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/058502e90c9f6320130faf9743ca13070affd48445de564c8a677e3c928fb5bc/UNCHANGED_STATEMENT_REVIEW.md",
+      "owned_path": "release-evidence/37b56165b59830af695938860b7afd37f4df4ae1ecff4c060ac9ad2b17db80d3/UNCHANGED_STATEMENT_REVIEW.md",
+      "sha256": "37b56165b59830af695938860b7afd37f4df4ae1ecff4c060ac9ad2b17db80d3",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/caab7b147bfc28be1b42510ba59b420b96e3aaa2a169a1285cf699da85b09afc/REVIEW.json",
+      "owned_path": "release-evidence/92ecbf293a7511b6ba2c36f4b74bbca4e089f0525ed3c1553f2cc463547ecdf2/REVIEW.json",
+      "sha256": "92ecbf293a7511b6ba2c36f4b74bbca4e089f0525ed3c1553f2cc463547ecdf2",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/a4b0f0ad74ff01c8fcc997137a37b0e368c8e1c0b7d2b40444762042d8435476/CORE_DELTAS.json",
+      "owned_path": "release-evidence/a26b7964d29ce59832aa262ed4f5c8d73397b342ca62f27804f3ce9e22433fe1/CORE_DELTAS.json",
+      "sha256": "a26b7964d29ce59832aa262ed4f5c8d73397b342ca62f27804f3ce9e22433fe1",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/de95abbde6e13d109c8416a11c55007c481496b50bf6fc42db25b05ee053ff50/compare_author_update.py",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/28ab3600e0b2d8e0a1a823773fc8b6c153b092d3bd2d8dc71edf5ab9cc88238f/compare_author_update.py",
+      "sha256": "28ab3600e0b2d8e0a1a823773fc8b6c153b092d3bd2d8dc71edf5ab9cc88238f",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/2b19a82e46e437e40988ae514b6e0c78543cd187f36774f8c333d647c23a0d5b/integrate_reviewed_statuses.py",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/053c92d3a1ba4eb30973045d07a2abb606ed92714362ec0ae9a5f9cfda7fd22a/integrate_reviewed_statuses.py",
+      "sha256": "053c92d3a1ba4eb30973045d07a2abb606ed92714362ec0ae9a5f9cfda7fd22a",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/ffaf14a9e4384afd264cef925ff7e9c91bd0c04dc2571d578e13fe099f9260bb/COMPONENT_BUILD_54.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/0f8a5fdf1795ebacd281197728419b331d329da2bb7a5b428bba9a7095adf2e8/COMPONENT_BUILD_54.json",
+      "sha256": "0f8a5fdf1795ebacd281197728419b331d329da2bb7a5b428bba9a7095adf2e8",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/12140b964cf2b9badc78f6a333dbec9c5df354f564ed58e3b9458f9069c55dfb/EXPLANATIONS.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/27163571eba4cf2e92587dd27fe1d97e972e56bd900069c074826357c4a2ede1/EXPLANATIONS.json",
+      "sha256": "27163571eba4cf2e92587dd27fe1d97e972e56bd900069c074826357c4a2ede1",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/5dbb56291d0fc1a8612e3c15a537c2478ba8ac29a5cd8415460edf866f9a24a3/PUBLISHED_REPLAY.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/90c8d3eaef3488bfffbe9a8d6e5c269ea08f1a583cdbadc4f03da4f988e8a261/PUBLISHED_REPLAY.json",
+      "sha256": "90c8d3eaef3488bfffbe9a8d6e5c269ea08f1a583cdbadc4f03da4f988e8a261",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/a2924d67b55514ca178817e7a162557d3fc2bdd7cefbbe57c503093824fb8f28/CURRENT_IMPORT_CLOSURE_54.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/21255f9262ebbfde760e9c9e18cd217bc7f1e9fccb3164b69e536701c8ebb3db/CURRENT_IMPORT_CLOSURE_54.json",
+      "sha256": "21255f9262ebbfde760e9c9e18cd217bc7f1e9fccb3164b69e536701c8ebb3db",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/3e496326fec8f0b63a48c4cd2a33552122a6c872e3af5b037518fdcbc5b07bfc/MODEL_DEFINITIONS_REVIEW.md",
+      "owned_path": "release-evidence/605d885ff3b92ffa922c12514a8eff51f8bd1f7b6c13aa27b990c42bbe68a083/MODEL_DEFINITIONS_REVIEW.md",
+      "sha256": "605d885ff3b92ffa922c12514a8eff51f8bd1f7b6c13aa27b990c42bbe68a083",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/cead33958f1426ab70a687305aff8b72953799d731aa8699c253c7550c37a981/INHERITED_CORE_READBACK.json",
+      "owned_path": "release-evidence/d31a8458c2bf3e6d777a357cf41079a7de9ed0c2cf3de25e5b4cf735f34d3178/INHERITED_CORE_READBACK.json",
+      "sha256": "d31a8458c2bf3e6d777a357cf41079a7de9ed0c2cf3de25e5b4cf735f34d3178",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/215260c63139ac92c96a28a2088947cedcc6863075f382a81c29300b4a3d62c5/COMPONENT_BUILD_134.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/fa7393015059f2fc1f80757e6bbf0c6d64cb758192056e2d7223ea2b0073fefd/COMPONENT_BUILD_134.json",
+      "sha256": "fa7393015059f2fc1f80757e6bbf0c6d64cb758192056e2d7223ea2b0073fefd",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/2062438febaeb9b78c2b829df676d7a05ff6912a2c0a6244e3816e445b0fa130/CURRENT_IMPORT_CLOSURE_134.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/aa4ba634511311805f4ada489e4c1ba8a0c1bee2a1e3e8edadea1fff96a96fe8/CURRENT_IMPORT_CLOSURE_134.json",
+      "sha256": "aa4ba634511311805f4ada489e4c1ba8a0c1bee2a1e3e8edadea1fff96a96fe8",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/3c9a231daa52c170c74ce3d64dba6e1cebdc83fdf7b24e43d26d9dae42d33c62/COMPOSED_STATEMENT_REVIEW.md",
+      "owned_path": "release-evidence/164e08f11d8a20ecb5caf7b8f25c397c4e8dc2278fa1510b58ae03e1355d79da/COMPOSED_STATEMENT_REVIEW.md",
+      "sha256": "164e08f11d8a20ecb5caf7b8f25c397c4e8dc2278fa1510b58ae03e1355d79da",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/db50a2db92decd2c0cb01fa568b8a10173e2f988737e440456e31d1d76e565bb/COMPONENT_BUILD_144.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/a6cff42895bc3f4e9ed60a24deb648fa1686bdc2591b8cf2d819f360b8c78f8d/COMPONENT_BUILD_144.json",
+      "sha256": "a6cff42895bc3f4e9ed60a24deb648fa1686bdc2591b8cf2d819f360b8c78f8d",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/28ea8dc61e5cc4842f91149947df53c0c7f1f9f537355ae8a30d5a19342b53dd/CURRENT_IMPORT_CLOSURE_144.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/18182a909a6ed429c8b12dd4ac96daeab4f34ac1f9e11ce07b8b21d4ab4a1251/CURRENT_IMPORT_CLOSURE_144.json",
+      "sha256": "18182a909a6ed429c8b12dd4ac96daeab4f34ac1f9e11ce07b8b21d4ab4a1251",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/44ff308057433a514e99d3d5f2b4507c5ca7d9fe167b4d71cebb733b02bd7abd/CURRENT_IMPORT_CLOSURE_145.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/065bab604bf14a190f0ee887454f444908c4cf3b1273ba400de87cf31c9447f3/CURRENT_IMPORT_CLOSURE_145.json",
+      "sha256": "065bab604bf14a190f0ee887454f444908c4cf3b1273ba400de87cf31c9447f3",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/eaa84fc81eeb7198b52bdfc91ff30a4c116b156a28b6abc7d6a355e5549418c1/COMPONENT_BUILD_145.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/656ef5cf62c73d66e8721bea1467a5ff96b3dd5a6c63e71f685a70ef8e35147c/COMPONENT_BUILD_145.json",
+      "sha256": "656ef5cf62c73d66e8721bea1467a5ff96b3dd5a6c63e71f685a70ef8e35147c",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/734101ddd74bdcd10ede22258e6308dc90b6b498f7a03f4c3498e5df14d1c773/CONSTRUCTION_CHECKS_REVIEW.md",
+      "owned_path": "release-evidence/12b99970e4334d0cd24d947a94b99a099d146fc650a0fe1329893176fba03359/CONSTRUCTION_CHECKS_REVIEW.md",
+      "sha256": "12b99970e4334d0cd24d947a94b99a099d146fc650a0fe1329893176fba03359",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/dc7451259ab3e0f8f067912822bce6fddf2e60b13dff2570a53dacb8bbdfe59f/COMPONENT_BUILD_149.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/3dbe6dccc943ed35fa779325403bc4db55e27b1a26852d3a3370f5b501446fb5/COMPONENT_BUILD_149.json",
+      "sha256": "3dbe6dccc943ed35fa779325403bc4db55e27b1a26852d3a3370f5b501446fb5",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/4d517b06e5e0cb1a7d5e7b744180cbbe871ca88b6d07a09e351ba67a5c1c6479/CURRENT_IMPORT_CLOSURE_149.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/c3048e81cadd12d2d2c7811838a53cba2ac0aeb9abceba5ddaf7cdb02301fafd/CURRENT_IMPORT_CLOSURE_149.json",
+      "sha256": "c3048e81cadd12d2d2c7811838a53cba2ac0aeb9abceba5ddaf7cdb02301fafd",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/dd00868219cf401a78ddc0ab6a3c65b968a559414f3d2f2cb0c823157901aec5/CURRENT_IMPORT_CLOSURE_152.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/7a44fff339795cc56cfdc9e5355c3b5d53547f056f318663932f4c60d6d61c1e/CURRENT_IMPORT_CLOSURE_152.json",
+      "sha256": "7a44fff339795cc56cfdc9e5355c3b5d53547f056f318663932f4c60d6d61c1e",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/a343c129322befabae5e257af47cd3fb2114f2d5b1312c5c4c32cda4ee1c2596/COMPONENT_BUILD_152.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/930643feb1e86d4127ddaadfa915baa21d65653e5b595169a61916d22b6b4d52/COMPONENT_BUILD_152.json",
+      "sha256": "930643feb1e86d4127ddaadfa915baa21d65653e5b595169a61916d22b6b4d52",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/d23e18e4c20b49b1d79601b4b07edf810d2c4eadbcaa4e0a09931d65db2008ef/COMPONENT_BUILD_156.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/f0efc08013d34fe77982ba40db39ca66b34c86ea7be62845bdb44be21c06be6d/COMPONENT_BUILD_156.json",
+      "sha256": "f0efc08013d34fe77982ba40db39ca66b34c86ea7be62845bdb44be21c06be6d",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/d2d9c8e059c1966dc2a8ef8dd67e736879bb261211de1fe41b8589351b3b1046/CURRENT_IMPORT_CLOSURE_156.json",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/04768029bdc9fc9185fc7e4169c0b645b97fcf61336b6f7cd4e09172564026d8/CURRENT_IMPORT_CLOSURE_156.json",
+      "sha256": "04768029bdc9fc9185fc7e4169c0b645b97fcf61336b6f7cd4e09172564026d8",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/43fb8ff293cbf68c917e37cfccc318c4e3b765975f9ea77f56cd537ecdb90a4b/CURRENT_IMPORT_CLOSURE_161.json",
+      "owned_path": "release-evidence/4e5c4e483a4b2906865825afc0055ddad34be1d3d44d6a72f929780dee52396c/CURRENT_IMPORT_CLOSURE_161.json",
+      "sha256": "4e5c4e483a4b2906865825afc0055ddad34be1d3d44d6a72f929780dee52396c",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/5cc0f406d23833cd3d8013e72b3147949d7f3267ae38be5b8b630b4ead5f12fd/COMPONENT_BUILD_161.json",
+      "owned_path": "release-evidence/7b0c7a6a6da8854e30b3478c0bf0cea4e09014996c2647b808e7cbfd81739dce/COMPONENT_BUILD_161.json",
+      "sha256": "7b0c7a6a6da8854e30b3478c0bf0cea4e09014996c2647b808e7cbfd81739dce",
+      "policy": "original bytes retained"
+    },
+    {
+      "original_path": "private-provenance-refs/6023ffb5277f5801178f413a5ed9e81b691b0e10d66accf254b8583620e0b3e8/prepare_owner_port.py",
+      "owned_path": "papers/randomized-additive-hardness/formalization/current-v42/evidence/da2397c5c1cf0109be1f4338c20d8660971f659f620c3d20937e60150cf51a70/prepare_owner_port.py",
+      "sha256": "da2397c5c1cf0109be1f4338c20d8660971f659f620c3d20937e60150cf51a70",
+      "policy": "original bytes retained"
+    }
+  ],
+  "tools": {
+    "private-provenance-refs/1767727264368152f7670cb25b94c2c2cfa0c4a545173b7114afba8d7999dc33/refresh_inventory.py": "papers/randomized-additive-hardness/formalization/current-v42/tools/refresh_inventory.py",
+    "private-provenance-refs/2b19a82e46e437e40988ae514b6e0c78543cd187f36774f8c333d647c23a0d5b/integrate_reviewed_statuses.py": "papers/randomized-additive-hardness/formalization/current-v42/tools/integrate_reviewed_statuses.py",
+    "private-provenance-refs/80fa3688c53956999bfd4efe0ba7aabc3e28c83c94f40eda2f4ae09e49eed107/validate_inventory.py": "papers/randomized-additive-hardness/formalization/current-v42/tools/validate_inventory.py",
+    "private-provenance-refs/de95abbde6e13d109c8416a11c55007c481496b50bf6fc42db25b05ee053ff50/compare_author_update.py": "papers/randomized-additive-hardness/formalization/current-v42/tools/compare_author_update.py",
+    "private-provenance-refs/5c0f23c415ac8e4ac38092eb606aeb5d6ce42b8234b8964335e4a23a3be0c595/capture_current_closure.py": "papers/randomized-additive-hardness/formalization/current-v42/tools/capture_current_closure.py",
+    "private-provenance-refs/00589c155bf413fbc796b819a5ff219a15a9f8a4370417b5ba27fad323480b24/run_tooling_checks.py": "papers/randomized-additive-hardness/formalization/current-v42/tools/run_tooling_checks.py"
+  }
+}

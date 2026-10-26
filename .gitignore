@@ -4,3 +4,9 @@
 *.log
 __pycache__/
 build-logs/
+
+# Local build evidence stays private; accepted logs have separate namespaces.
+REPLAY.json
+checked-build-logs/
+!published-build-logs/*.log
+!published-checked-build-logs/*.log

@@ -1,0 +1,42 @@
+{
+  "positive_identity_check": {
+    "source_identity": "passed",
+    "declaration_anchor_identity": "passed",
+    "source_blocks": 66,
+    "unique_candidate_or_accepted_anchors": 383,
+    "open_statement_or_unnumbered_links": 0,
+    "historical_build_aggregate_extensions": [],
+    "correspondence_complete": true,
+    "scope": "Source and link identity only; no Lean proof build or semantic certification."
+  },
+  "final_coverage_identity_check": {
+    "source_identity": "passed",
+    "declaration_anchor_identity": "passed",
+    "source_blocks": 66,
+    "unique_candidate_or_accepted_anchors": 383,
+    "open_statement_or_unnumbered_links": 0,
+    "historical_build_aggregate_extensions": [],
+    "correspondence_complete": true,
+    "scope": "Source and link identity only; no Lean proof build or semantic certification."
+  },
+  "pending_fixture_rejected": {
+    "status": "passed",
+    "expected_rejection": "Open statement/unnumbered proof links (3)"
+  },
+  "manuscript_drift_rejected": {
+    "status": "passed",
+    "expected_rejection": "Pinned input changed"
+  },
+  "proof_source_drift_rejected": {
+    "status": "passed",
+    "expected_rejection": "Lean source changed"
+  },
+  "unlinked_dependency_drift_rejected": {
+    "status": "passed",
+    "expected_rejection": "Imported proof dependency drift"
+  },
+  "missing_block_rejected": {
+    "status": "passed",
+    "expected_rejection": "Missing, surplus, duplicate or reordered source blocks in map"
+  }
+}

@@ -1,0 +1,1251 @@
+{
+  "schema_version": 1,
+  "version": "v42",
+  "main": "main.tex",
+  "source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "active_source_files": [
+    "main.tex"
+  ],
+  "formal_count": 63,
+  "auxiliary_count": 3,
+  "proof_count": 52,
+  "proof_association": "Following proof environments before next inventoried statement; navigation only.",
+  "formal_blocks": [
+    {
+      "id": "intro:deterministic",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Fixed gaps for unrestricted protocols",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 275,
+      "end_line": 286,
+      "labels": [
+        "intro:deterministic"
+      ],
+      "body_sha256": "907157068fcb012dda6e441fa6eecc74df33fabec33249259d27c4a38af51d9a",
+      "normalized_body_sha256": "6fb3237a49a2c481e732e4672553d2c818b1497e5e0411657be81f2658c8a256",
+      "following_proofs": []
+    },
+    {
+      "id": "yao:main",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Fixed gaps under strict alternation",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 291,
+      "end_line": 301,
+      "labels": [
+        "yao:main"
+      ],
+      "body_sha256": "9c10a4acf5558f7da6cd49883620cc423361f2325aab52d9f2cae8600985054c",
+      "normalized_body_sha256": "a96348c7480bfaba32412ccdaf95330ee1481e755f2022cb6d8429e04c950a5d",
+      "following_proofs": []
+    },
+    {
+      "id": "yao:bpp",
+      "kind": "formal",
+      "environment": "corollary",
+      "title": "Yao's output convention",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 311,
+      "end_line": 318,
+      "labels": [
+        "yao:bpp"
+      ],
+      "body_sha256": "6a35253e7aa6960de6c694a38f8adfd09443b42c9ce55ccbabd5cb4bcc1536a5",
+      "normalized_body_sha256": "7caadc1ee512092a6e8ade8b19e38aef1cb7940812607eb247cfbd5ce5cecb1b",
+      "following_proofs": []
+    },
+    {
+      "id": "thm:quantitative",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Randomized growing-error hardness",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 327,
+      "end_line": 334,
+      "labels": [
+        "thm:quantitative"
+      ],
+      "body_sha256": "03ea2b139937dc642b0616bf666c02611463ee375f37fc81d38e513be6b2b0f5",
+      "normalized_body_sha256": "23cfd3142b21c111668466f3355c994b6fffe163cfd1a81f7802cbe777436402",
+      "following_proofs": []
+    },
+    {
+      "id": "det:eth",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Deterministic growing-error hardness",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 339,
+      "end_line": 345,
+      "labels": [
+        "det:eth"
+      ],
+      "body_sha256": "a741dc475c85374404eae9351be5b5adba7bd09364516a22d4b3da00abbf668f",
+      "normalized_body_sha256": "fb9b313289f9bb64c30d943ef263165e195b16af426b1736bad7ecda5651f8b8",
+      "following_proofs": []
+    },
+    {
+      "id": "def:table-estimation",
+      "kind": "formal",
+      "environment": "definition",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 942,
+      "end_line": 959,
+      "labels": [
+        "def:table-estimation"
+      ],
+      "body_sha256": "153b632ef4fd0683a734fd7a53d6ef240ddeb3f873ddd4273c12aaf662f74a3c",
+      "normalized_body_sha256": "1c11d00f98737c6c8a1b75fc9718ae4a94e642be0d1b5bd7adaf4412c1cbdd47",
+      "following_proofs": []
+    },
+    {
+      "id": "yao:model",
+      "kind": "formal",
+      "environment": "definition",
+      "title": "Alternating costs",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 964,
+      "end_line": 978,
+      "labels": [
+        "yao:model"
+      ],
+      "body_sha256": "93b98c381b5e5f1f964b1bfc5636aee27fa07cbb15149e07632ed3daffa4f6df",
+      "normalized_body_sha256": "622ae3a7a7f771465e8b25752d1e276c0a51d06daedf991aae707244fbe96654",
+      "following_proofs": []
+    },
+    {
+      "id": "def:reth",
+      "kind": "formal",
+      "environment": "definition",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 983,
+      "end_line": 990,
+      "labels": [
+        "def:reth"
+      ],
+      "body_sha256": "e6a3d33be8714dd70c81268107c2972c511794280b357b6018d1e9eda1bf6208",
+      "normalized_body_sha256": "751b378b88e237b9716f56199a6e0fabfbc46bca1be583e580c45284140e308f",
+      "following_proofs": []
+    },
+    {
+      "id": "def:interlace",
+      "kind": "formal",
+      "environment": "definition",
+      "title": "Interlacing",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1065,
+      "end_line": 1075,
+      "labels": [
+        "def:interlace"
+      ],
+      "body_sha256": "0eb83071459a1f7529d4364027750f52d33224a419a782621237fb06459b95e0",
+      "normalized_body_sha256": "cfc70098b95fec1e516950a6d2da476a9fb54c9d62bc8fd19991cae85379b0cc",
+      "following_proofs": []
+    },
+    {
+      "id": "def:exact-tuples",
+      "kind": "formal",
+      "environment": "definition",
+      "title": "Weighted lists of tuples",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1158,
+      "end_line": 1175,
+      "labels": [
+        "def:exact-tuples"
+      ],
+      "body_sha256": "1614edbb0156300c4252613c04267651f499ca56577d49fac04b09661aead874",
+      "normalized_body_sha256": "b71e131b4797b3142a788acb3a92ee785a6a2e656a95dcd916d03249cc1417b4",
+      "following_proofs": []
+    },
+    {
+      "id": "def:profile",
+      "kind": "formal",
+      "environment": "definition",
+      "title": "Deletion bounds",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1213,
+      "end_line": 1225,
+      "labels": [
+        "def:profile"
+      ],
+      "body_sha256": "d632135b76607753101ca20edcca170e3bb395fbb523081820814bae9c0ff973",
+      "normalized_body_sha256": "1755e4f974697a56b151511d1d5648497c6a050ed2217fcccae3f2dcd1eb6406",
+      "following_proofs": []
+    },
+    {
+      "id": "src:gap-colouring",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Bounded-degree coloring source",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1234,
+      "end_line": 1249,
+      "labels": [
+        "src:gap-colouring"
+      ],
+      "body_sha256": "8c3ea482d83544af40887fe79f67ecc05d9087b5d9e1466a52728be1a299eabd",
+      "normalized_body_sha256": "945b55cc9674636e0e54a6cd8ff188217a0a4d6abad1163893d69a94cb3866df",
+      "following_proofs": []
+    },
+    {
+      "id": "thm:amplifier",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Amplification under input deletion",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1265,
+      "end_line": 1289,
+      "labels": [
+        "thm:amplifier"
+      ],
+      "body_sha256": "2d01bf26e3a3616357b44f9cae2eddca53235252865ed3f76e356fadf0e613ce",
+      "normalized_body_sha256": "ae7b206e55e573023290ec3f0514ac92cfa9fe37397beea8c49e772371adec01",
+      "following_proofs": []
+    },
+    {
+      "id": "cl:seed",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Initial matrix",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1303,
+      "end_line": 1312,
+      "labels": [
+        "cl:seed"
+      ],
+      "body_sha256": "8ede631e9c9467e24ff3b133e7dd882134003a4609de6a26aa459d2f2980b456",
+      "normalized_body_sha256": "9aac6c0cd07b61a8d903b9e3dd6bc4310028e0a08ea8cf5039c801fdc33a0596",
+      "following_proofs": []
+    },
+    {
+      "id": "prop:iteration",
+      "kind": "formal",
+      "environment": "proposition",
+      "title": "Iterated amplification",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1316,
+      "end_line": 1325,
+      "labels": [
+        "prop:iteration"
+      ],
+      "body_sha256": "7e2acd910fb2feae76079345d014b4e2c70d4c4bb6d9934e597a3487340dcc74",
+      "normalized_body_sha256": "f11aafeb6bb5873dc47e967ecae930b4f6a684ce6f2369ffa2fed99c463b3db6",
+      "following_proofs": [
+        {
+          "line": 1326,
+          "body_sha256": "78411de1f42c0edbf22911c016a377a021c6f8d032224674c10a890c902a85ea"
+        }
+      ]
+    },
+    {
+      "id": "def:amplification-parameters",
+      "kind": "formal",
+      "environment": "definition",
+      "title": "Amplification parameters",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1349,
+      "end_line": 1369,
+      "labels": [
+        "def:amplification-parameters"
+      ],
+      "body_sha256": "811889cd8febc34acda528a1bf3b862284d853efbefcb66e560e16ffc6aa6c18",
+      "normalized_body_sha256": "08030bfc3e8e98514fcbc5761b6277f3d15fb5ea12dcb01dc9a6b88397ab6947",
+      "following_proofs": []
+    },
+    {
+      "id": "def:source-matrix",
+      "kind": "formal",
+      "environment": "definition",
+      "title": "Source construction",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1391,
+      "end_line": 1497,
+      "labels": [
+        "def:source-matrix"
+      ],
+      "body_sha256": "01369d8cfe5907d764bff0cd175da96321763dd0f4d3e029f0b5e1c6bbbc4f01",
+      "normalized_body_sha256": "3d4f9d4b6f07d552bb4fa194a7804c7a7e0e28d87d6f0523e5ca13ae89686429",
+      "following_proofs": []
+    },
+    {
+      "id": "src:item-witness",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1581,
+      "end_line": 1592,
+      "labels": [
+        "src:item-witness"
+      ],
+      "body_sha256": "c0013d7ae6c78e6bc96b7e7a1f9b307fea29a03d531c45ea3795c989b723aeea",
+      "normalized_body_sha256": "30b871651a38635499cbe3b1f8cab04155153f3fd07fd531b6a26885ea6b9b9e",
+      "following_proofs": []
+    },
+    {
+      "id": "src:upper",
+      "kind": "formal",
+      "environment": "proposition",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1597,
+      "end_line": 1602,
+      "labels": [
+        "src:upper"
+      ],
+      "body_sha256": "4976c6e68016ad20474081d56c3e13a104e4b285c944b336b258cd5b2d91a1a1",
+      "normalized_body_sha256": "5fa23840a12ae8ff6efd0b5857fed44596a66a8cb42578be218c8164ccafe818",
+      "following_proofs": [
+        {
+          "line": 1604,
+          "body_sha256": "b3141a3fa8a9962850eab4115dd678303024f0f04628027a28c62678e2ee3237"
+        },
+        {
+          "line": 1642,
+          "body_sha256": "d22972aa5ac5d7263b71dd5344e9d097b4daaacf12a28c4e9b68439aac34629c"
+        }
+      ]
+    },
+    {
+      "id": "lem:many-product-blocks",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1690,
+      "end_line": 1696,
+      "labels": [
+        "lem:many-product-blocks"
+      ],
+      "body_sha256": "3d7bb7904bb4a93028f87a4a2a3f8af3bb7e7f0bffdf194299bfd2bd884e954d",
+      "normalized_body_sha256": "dcb9bbec0d8a0ac061ac73799932bc8eba82d65129da66322cdf450c603a9670",
+      "following_proofs": []
+    },
+    {
+      "id": "src:profiles",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Template-layer deletion bounds",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1705,
+      "end_line": 1722,
+      "labels": [
+        "src:profiles",
+        "det:profiles"
+      ],
+      "body_sha256": "cc86697ec20cbbbe9aae49481a307058ce79e514ae54cefe22bd5ba1d630c64a",
+      "normalized_body_sha256": "df0fe1492411e2c91c4505a5208c41927ddea326b0161c56e1d1985701d24015",
+      "following_proofs": []
+    },
+    {
+      "id": "lem:kraft-count",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Kraft count",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1731,
+      "end_line": 1738,
+      "labels": [
+        "lem:kraft-count"
+      ],
+      "body_sha256": "04df92c4177332f24743b0119449ae2a0a1fd162dcea2fbf5aa206d90a5afd02",
+      "normalized_body_sha256": "619ba68b1a11110206779d1a48dc8e07a49140e4e1bf50c987c5904086d5f907",
+      "following_proofs": [
+        {
+          "line": 1739,
+          "body_sha256": "0197aa654541f2d040124ed3ca3035bdd2483900997e2291f9636a743b54bbe8"
+        }
+      ]
+    },
+    {
+      "id": "lem:collision-tracking",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Following collision witnesses",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1758,
+      "end_line": 1777,
+      "labels": [
+        "lem:collision-tracking"
+      ],
+      "body_sha256": "6b5734340493fa3250021bac6d622ac9715608b30b5022dec003a321e9dde9a7",
+      "normalized_body_sha256": "64573a8ee91c59103176399e695c9a3114a242e1c2c6e12089776dfedfe2de33",
+      "following_proofs": [
+        {
+          "line": 1778,
+          "body_sha256": "665e319b413aef1fe603076ba15b6f3e83f1d20e8c6315efca82db508df45613"
+        }
+      ]
+    },
+    {
+      "id": "src:near-full",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Source hardness after deletion",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1796,
+      "end_line": 1809,
+      "labels": [
+        "src:near-full"
+      ],
+      "body_sha256": "d31bd673d72fcd5294d629ec7cec1792a5ce00f4e2b925ea0e198246b13d9355",
+      "normalized_body_sha256": "e4006183b3e0a815fdae7d4d456ce68c55b99b90b09a622f863e1ba0c53be409",
+      "following_proofs": [
+        {
+          "line": 1810,
+          "body_sha256": "6692e6dfd78ceb98faf17416f55dc6016fd23553fd8a8046fa69a4c8ca2f872e"
+        }
+      ]
+    },
+    {
+      "id": "det:conditioning",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Conditioning outside exceptional coordinates",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1959,
+      "end_line": 1972,
+      "labels": [
+        "det:conditioning"
+      ],
+      "body_sha256": "84e15110bf03942e968656ae58a89f42129649acf3ade8f024e2ad6be948da5f",
+      "normalized_body_sha256": "53faf63bebaa9de8af4ba90c388da7b383781e353db60eab293317eb46dc04f7",
+      "following_proofs": []
+    },
+    {
+      "id": "det:exact",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Surviving blocks in a tuple list",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1993,
+      "end_line": 2000,
+      "labels": [
+        "det:exact"
+      ],
+      "body_sha256": "d811610dc088ea81baf41ab8ed606d4f01d8ad10137e77d33f1271a33d06b049",
+      "normalized_body_sha256": "49e9096eb9b234cec59935d03f0478fd9b081104345dfa970f07d03614244ac8",
+      "following_proofs": []
+    },
+    {
+      "id": "det:rareboost",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Surviving blocks after conditioning",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2006,
+      "end_line": 2014,
+      "labels": [
+        "det:rareboost"
+      ],
+      "body_sha256": "ff072fc17f4a459d923560a3eee492d27fe471e9d0f955e4a6e15ccc11cab972",
+      "normalized_body_sha256": "3e611a3f1f80a15f26fb292cc53d89df98f1f9c77ba82b5bec3f44e56da0b521",
+      "following_proofs": []
+    },
+    {
+      "id": "res:destinations",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2075,
+      "end_line": 2096,
+      "labels": [
+        "res:destinations"
+      ],
+      "body_sha256": "c838711bdafe4a9500931a133507d0d54b0a929b1755170f4ad50cd2bacdd2bc",
+      "normalized_body_sha256": "58efc5d5d8351eab0f85d160c790f24379b302c1f680afa2a6633a0685372bc1",
+      "following_proofs": [
+        {
+          "line": 2097,
+          "body_sha256": "7bf145f7df89f614a9d02338ae6dabffd8d0ee2d680e79d39cde91f5475ea63b"
+        }
+      ]
+    },
+    {
+      "id": "res:incoming",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2148,
+      "end_line": 2154,
+      "labels": [
+        "res:incoming"
+      ],
+      "body_sha256": "7500011db4d3bcfbd5ddb4f46d7d8cbfac7b8e9b62bb83af53bc0ce9dee6a058",
+      "normalized_body_sha256": "e9049bce4144022210bb6189fac1ac1168c1841ca17722083f88472742b47268",
+      "following_proofs": []
+    },
+    {
+      "id": "res:foreign",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2156,
+      "end_line": 2165,
+      "labels": [
+        "res:foreign"
+      ],
+      "body_sha256": "8747919e324f8a31d7332789f474bc6d4cf85d40b515a55961cca3515bfa9a78",
+      "normalized_body_sha256": "a21de8fc9665ebbdeb40d491ee0146e6d561da81445a533383afabc24ad53283",
+      "following_proofs": []
+    },
+    {
+      "id": "res:alignment",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Lower bounds for $W$",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2219,
+      "end_line": 2226,
+      "labels": [
+        "res:alignment"
+      ],
+      "body_sha256": "95b145515dcb751061e26e2e35767dc5562f5185206cb60376cd59eb3ae544db",
+      "normalized_body_sha256": "3c1b7ee51ccfaf3aedc3d4f3d895f36e4f06aaac58e73690c1229d2974549d18",
+      "following_proofs": [
+        {
+          "line": 2227,
+          "body_sha256": "7d5c3a80fddfffab8ea407084cc6e2279435dadaf150475aa4e0382993d52f7b"
+        }
+      ]
+    },
+    {
+      "id": "cl:bridge",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Restoring the deletion bounds",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2306,
+      "end_line": 2320,
+      "labels": [
+        "cl:bridge"
+      ],
+      "body_sha256": "d49a61ffb1812a1af653adf34a5487c214727932f64cb2d1f7cbbca02cfa3ada",
+      "normalized_body_sha256": "778f68eb96a775a2220dcd885cc91b116d4ec0cf680f5a1ee278fdd3ea67acee",
+      "following_proofs": []
+    },
+    {
+      "id": "lem:amplifier-rank",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2326,
+      "end_line": 2332,
+      "labels": [
+        "lem:amplifier-rank"
+      ],
+      "body_sha256": "20c6bb20131e6fedf6ac0426e81da0d6d05beeb3e573ce6e84257b06efcde733",
+      "normalized_body_sha256": "b9c844ad0a557536a5951996ec24c75547f5050b5247228d6a05adc98df6ca23",
+      "following_proofs": [
+        {
+          "line": 2333,
+          "body_sha256": "787a08eb99d7886eaee644d7d1903ff9569145c1d5cd5854a589323b4a0b8304"
+        },
+        {
+          "line": 2349,
+          "body_sha256": "0b0400d0de71fd556f2480cb972e3c7f9eed580eb96ecfad8f694975038e91e4"
+        }
+      ]
+    },
+    {
+      "id": "det:code",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Small rational tuple lists",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2427,
+      "end_line": 2435,
+      "labels": [
+        "det:code"
+      ],
+      "body_sha256": "73ab588ac5415a97c6bfbb2ef866b7fa9d8e246917cd11a16ae53104a92efee8",
+      "normalized_body_sha256": "e23cefa25ef757bd449324e01eaa8ed5a2b1dadcff1c9e8274599dbefdc96210",
+      "following_proofs": []
+    },
+    {
+      "id": "det:restore",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2447,
+      "end_line": 2467,
+      "labels": [
+        "det:restore"
+      ],
+      "body_sha256": "5dc2b4046481a1c7e569be3312aa5e0c4dbee34a62532352dc740b4f9c4bd5a0",
+      "normalized_body_sha256": "01c79ac36f4066684dc40eee48fab31b5c7aa4f939d9a61809a4ef2bb585c89e",
+      "following_proofs": [
+        {
+          "line": 2468,
+          "body_sha256": "3f51a607a39624e6e6f3181b56b6e2c2b9238c9caaabc5e006654dda6d87bcc6"
+        }
+      ]
+    },
+    {
+      "id": "det:amplifier",
+      "kind": "formal",
+      "environment": "corollary",
+      "title": "Explicit case",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2543,
+      "end_line": 2554,
+      "labels": [
+        "det:amplifier"
+      ],
+      "body_sha256": "7d2dc512c34d1bb237bdb6567a32eec60cfeada113a59ef8b38f548cdf4e3dd3",
+      "normalized_body_sha256": "885dfefc4f82832b7ab3b0b3d508da756bdd0c5e45bdff0cd37f93c7a9d2fc3f",
+      "following_proofs": []
+    },
+    {
+      "id": "det:flat",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2568,
+      "end_line": 2578,
+      "labels": [
+        "det:flat"
+      ],
+      "body_sha256": "c412f648e24f2546b67943bd276cedcde6b6d379e3cbe36e642d6368f04fd6ee",
+      "normalized_body_sha256": "1923e88e207ff6bef59f9abcc81bba908539f2074999c48b0bb28acfa6c7f4b8",
+      "following_proofs": [
+        {
+          "line": 2580,
+          "body_sha256": "11ecf35c72101bb47af506980923012677b844df15a7814f0a9ed77adeb824b2"
+        }
+      ]
+    },
+    {
+      "id": "det:construction",
+      "kind": "formal",
+      "environment": "definition",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2590,
+      "end_line": 2635,
+      "labels": [
+        "det:construction"
+      ],
+      "body_sha256": "785aa0a1d18f745b033625f9f0693ff04c12e4407e30e7218b1e438c0eebc1b4",
+      "normalized_body_sha256": "ea2b0012093d6d688e28ae7bb527384b1ee91fd704c89d7d974991f5c0584b43",
+      "following_proofs": [
+        {
+          "line": 2652,
+          "body_sha256": "99d7d620397d271c5a5661802ae944384d94685c4ffe85e7e2f59f26ff86e533"
+        }
+      ]
+    },
+    {
+      "id": "det:reduction",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2669,
+      "end_line": 2693,
+      "labels": [
+        "det:reduction"
+      ],
+      "body_sha256": "72c6464a989ca8c034f4a3487f0e176b9329c218121fec011a853b53f5af3323",
+      "normalized_body_sha256": "4548391bc47d72a5b7d341a879c43ac42bbf414f77a96c05a38f2f1132f3b820",
+      "following_proofs": [
+        {
+          "line": 2695,
+          "body_sha256": "d7ab601734b46d565f9e3a6ed5daf31ac4f29a6220d1957e9b13a34618c86479"
+        },
+        {
+          "line": 2732,
+          "body_sha256": "c159d70de32b1fad7e50cdb26b82c92f126add933e57276c0857c51a7df52614"
+        },
+        {
+          "line": 2744,
+          "body_sha256": "a195d7b137fc7d4158d3d369d44374c161e809a28656919ef0ce5e1b542603b8"
+        }
+      ]
+    },
+    {
+      "id": "def:compatibility",
+      "kind": "formal",
+      "environment": "definition",
+      "title": "Columns on which Bob can complete the protocol",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2803,
+      "end_line": 2810,
+      "labels": [
+        "def:compatibility"
+      ],
+      "body_sha256": "a561a6c864de61a7fc311f58060c99835498d95031c8c37c1809d3bc3649058f",
+      "normalized_body_sha256": "a087b6a92abc8e889a6b297cbe8b4120c1a0078c4f3df3504792c5413fe946ad",
+      "following_proofs": []
+    },
+    {
+      "id": "thm:rank-count",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Counting the sets of columns",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2908,
+      "end_line": 2916,
+      "labels": [
+        "thm:rank-count",
+        "eq:rank-count"
+      ],
+      "body_sha256": "c2ccc05b0bb45ffd64671f7f5f7554fb215ca02b0f8dcaa33f6329f60f0eb190",
+      "normalized_body_sha256": "3d0a77e27daaf91283d314bea517fdde20919bef36440feb29fad056ada7e1da",
+      "following_proofs": [
+        {
+          "line": 2917,
+          "body_sha256": "5a31226a2e38ca77c7d725549bca04c26bb0f982363ae5c28d423f90f367c5eb"
+        }
+      ]
+    },
+    {
+      "id": "thm:compression",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Sampling rows and columns",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2953,
+      "end_line": 2970,
+      "labels": [
+        "thm:compression"
+      ],
+      "body_sha256": "5c17869891273d9ed3380f6219fc55aa8c8f9379c9b205fd9649bc9712b5ea5e",
+      "normalized_body_sha256": "3aa0abb6f275043d8ab7f7e3c9dae2544d5be609d883e04314f980febe608859",
+      "following_proofs": [
+        {
+          "line": 2971,
+          "body_sha256": "e40b42d251b7dcdaeb354d3b16f07529811045101ddb2aa63490e8b51da3dcd4"
+        }
+      ]
+    },
+    {
+      "id": "lem:sample-access",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3024,
+      "end_line": 3031,
+      "labels": [
+        "lem:sample-access"
+      ],
+      "body_sha256": "7cba39b174e15c45a0b77a55bcada163905d589b4354792a659e22bcd4a45ad6",
+      "normalized_body_sha256": "fd1d71694ff25f926212256bea4987885e30d8d65e4d81e77e450718db6b8535",
+      "following_proofs": []
+    },
+    {
+      "id": "thm:uniform-reduction",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "Randomized reduction",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3040,
+      "end_line": 3055,
+      "labels": [
+        "thm:uniform-reduction"
+      ],
+      "body_sha256": "f37b9daeb8933047bc09928bf35033478bfbaa11b7cb124e3a99147750f36713",
+      "normalized_body_sha256": "2bcc5434e4685010ca9ac29fcfa0548fa6fc2580ad0a4d32cb1f7f72d01064d0",
+      "following_proofs": [
+        {
+          "line": 3057,
+          "body_sha256": "1639e9d6a7250c1578a2056378b664fba7febfb534fafbdcb6d136b46162976d"
+        },
+        {
+          "line": 3082,
+          "body_sha256": "106320885c1dca3e386ef29121b914d135ff4385eb0beaee4248ced9a082674e"
+        }
+      ]
+    },
+    {
+      "id": "yao:comparison",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3156,
+      "end_line": 3163,
+      "labels": [
+        "yao:comparison"
+      ],
+      "body_sha256": "914a314ff48c617d5027f73f3bf12f9e12393426cdf8b127a4826c63ae43081d",
+      "normalized_body_sha256": "f1ec40a6304ab63dc4994f495ee6fbbfb34a50350bfd296572441d40ee3acd2f",
+      "following_proofs": [
+        {
+          "line": 3164,
+          "body_sha256": "8c66bff3fe49d6d98e2350874ee865995f7a4f5a9e7fc60f45d7270a24a4f1a2"
+        }
+      ]
+    },
+    {
+      "id": "yao:source",
+      "kind": "formal",
+      "environment": "proposition",
+      "title": "Hypergraph coloring promise",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3188,
+      "end_line": 3201,
+      "labels": [
+        "yao:source"
+      ],
+      "body_sha256": "72b98c79bb5d5a191e4e1c84b02cbb0724783c4986e8ff0ff8cf6f07a6546c52",
+      "normalized_body_sha256": "97da62c6ef50e9a83e2d12b02779e3c253e399e9e3ea264f024b967cace12922",
+      "following_proofs": []
+    },
+    {
+      "id": "def:alternating-table",
+      "kind": "formal",
+      "environment": "definition",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3210,
+      "end_line": 3239,
+      "labels": [
+        "def:alternating-table"
+      ],
+      "body_sha256": "39e35505a2e831edd2a5476d44592e2b714775eeca4ef5864eb20849448adc75",
+      "normalized_body_sha256": "b29a21ac3fcb4d6ace7cee189372c475e586de99113c17b292f5c06243d1fd87",
+      "following_proofs": []
+    },
+    {
+      "id": "prop:alternating-upper",
+      "kind": "formal",
+      "environment": "proposition",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3305,
+      "end_line": 3311,
+      "labels": [
+        "prop:alternating-upper"
+      ],
+      "body_sha256": "ecee1c1c1da7d893dfb8376209a6b4e327c61c61afda3cb83dae4e9928dbde6b",
+      "normalized_body_sha256": "c2914be82b184b8676aef08447bd9321a82eba6b7a63a8b83bc1ff93402e87ba",
+      "following_proofs": [
+        {
+          "line": 3312,
+          "body_sha256": "263de955b1f142e88a9bc8bc7460dc4d3052d5b503a31260e88b3d26fb1d9741"
+        }
+      ]
+    },
+    {
+      "id": "yao:small-bias-escape",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Lower bound for alternating protocols",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3376,
+      "end_line": 3386,
+      "labels": [
+        "yao:small-bias-escape"
+      ],
+      "body_sha256": "4b19f8b08b12f848ba599440a2b01323918a1afe080831f876cc81679b5f48dd",
+      "normalized_body_sha256": "e2f49f8ccaf763b28c7d82d5d0fb887a4e15dcc0f58b5adf879a099b3e16d3c6",
+      "following_proofs": [
+        {
+          "line": 3387,
+          "body_sha256": "dbd6d02b40458a68707790a7b38dea0a483ef43e13d0dfe2199b62069fc74259"
+        }
+      ]
+    },
+    {
+      "id": "yao:array-list",
+      "kind": "formal",
+      "environment": "corollary",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3427,
+      "end_line": 3434,
+      "labels": [
+        "yao:array-list"
+      ],
+      "body_sha256": "011d136b9bb1a3f67003e6061e29b06d3136eadeee28214f4c5d68bdcae71bbd",
+      "normalized_body_sha256": "da852d77eac65719d1278b22f30667652a3a5b9bf79414e57b38180f22f25773",
+      "following_proofs": []
+    },
+    {
+      "id": "yao:lift",
+      "kind": "formal",
+      "environment": "proposition",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3444,
+      "end_line": 3456,
+      "labels": [
+        "yao:lift"
+      ],
+      "body_sha256": "ffd8fa4bd3158b78b26a9f21fcaa764149e2a5e32993eea842ec7e9d4aa7ad78",
+      "normalized_body_sha256": "7c437075dd4ac397a8d2793eb513650995769db771962481dc197edf61211455",
+      "following_proofs": [
+        {
+          "line": 3457,
+          "body_sha256": "27a11bf41bd8e6abea035d72692a3f0810f7142f705b60d9496a793acd8c4e98"
+        },
+        {
+          "line": 3513,
+          "body_sha256": "1724f886b14172db3fd3a82a7facce90ee50949aa906682cc883d224a48fca25"
+        }
+      ]
+    },
+    {
+      "id": "cl:projection",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3577,
+      "end_line": 3593,
+      "labels": [
+        "cl:projection"
+      ],
+      "body_sha256": "e96e7dc847e69b404c869ac01f1305bed909631bafe3fe236cfa37d0dab9540c",
+      "normalized_body_sha256": "5b76648fd8ecbe0bc00de1ec982d762c9ba46d1ae340ad992d500c2d238177bf",
+      "following_proofs": [
+        {
+          "line": 3595,
+          "body_sha256": "3198eb61a396230062cd4cb4954e2491c05481f16cdf01a41c10940418b0c8a6"
+        }
+      ]
+    },
+    {
+      "id": "lem:small-blocks",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Small block bounds",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3639,
+      "end_line": 3652,
+      "labels": [
+        "lem:small-blocks"
+      ],
+      "body_sha256": "e493760bf7585be6c10a754c3fa0b77a45cad7329311a0bdd0fb0db97c5a5dac",
+      "normalized_body_sha256": "60519821403745d629c9ea8369aa5ed80ac7593dd0b3902072fdd2ed443b4579",
+      "following_proofs": [
+        {
+          "line": 3653,
+          "body_sha256": "3ca72a3b305517582a4d355788f27983a2a3f3276d68f1ff92cbd7ae5796e637"
+        }
+      ]
+    },
+    {
+      "id": "cl:separation",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3688,
+      "end_line": 3700,
+      "labels": [
+        "cl:separation"
+      ],
+      "body_sha256": "53daa9641c2b57ac3eafa021c99ec22fd29b319e2573f6990130841d0142b2c6",
+      "normalized_body_sha256": "e2aaddb633a7092152b750d37cd7fae0c101ff68a60dbab72da4dd8a613f435a",
+      "following_proofs": [
+        {
+          "line": 3702,
+          "body_sha256": "03096f5fa68b197a0a742d551f7b413a20c374569e968d3a30b30d6ff6252356"
+        }
+      ]
+    },
+    {
+      "id": "cl:defect-induction",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 3739,
+      "end_line": 3751,
+      "labels": [
+        "cl:defect-induction"
+      ],
+      "body_sha256": "8c95ab106979137aad994775a9a42535e5b40d97da1af0e685e041f0732bdf55",
+      "normalized_body_sha256": "fd0ae4a2fd70ec6495506fe9ca31802bf20a106fca08d5e4b6b6ad17687926c0",
+      "following_proofs": [
+        {
+          "line": 3753,
+          "body_sha256": "4802633ec33a6b639d6d068379c4eb0cf26b325f11a58ad2bf51bf2aa117ee10"
+        },
+        {
+          "line": 3873,
+          "body_sha256": "e5baea36e635d7388826f09cda3ba985d3b9cb836b070f2856832fbadc064242"
+        },
+        {
+          "line": 3899,
+          "body_sha256": "28099746027b8190bcf77a386e2cadd2810188197e353a0c4a60bc03c75531cc"
+        },
+        {
+          "line": 3947,
+          "body_sha256": "577b38df77ba7574f83fc50e6b21f23a25ccdfbe28ce8afda96aa2fa57fc5e23"
+        },
+        {
+          "line": 3995,
+          "body_sha256": "894e9524d890d63dfd901ac9fb776a9cf574b7545bc737edf41ee342b509b53d"
+        }
+      ]
+    },
+    {
+      "id": "res:paired",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Two template inputs",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 4087,
+      "end_line": 4107,
+      "labels": [
+        "res:paired"
+      ],
+      "body_sha256": "ca4494c39ca4353528c192dd99728962db249ca0400150f2bff74def93ecbb3c",
+      "normalized_body_sha256": "135c40d47e51b5b4a38d326033455aca853ef0adbadf0e839499a916c34eb419",
+      "following_proofs": [
+        {
+          "line": 4109,
+          "body_sha256": "0ec4c64777000f10f922578d91cb8e76fe127b1f110e894b1c0a8c8175003fae"
+        }
+      ]
+    },
+    {
+      "id": "lem:conditioning-moment",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Moment bound",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 4372,
+      "end_line": 4386,
+      "labels": [
+        "lem:conditioning-moment"
+      ],
+      "body_sha256": "1a6bb18c6c93043727ff717eab7ab6b2e41adc598495da28b52aa24b871b5b5c",
+      "normalized_body_sha256": "91c7102700b5a8a93360f150a60f806dc206e890198b9740348b282e8ecd148d",
+      "following_proofs": [
+        {
+          "line": 4387,
+          "body_sha256": "c7ae69b4001aad7c507a9ef9dee011a56d31c03565b81e62990c84ae8eafe9e3"
+        },
+        {
+          "line": 4406,
+          "body_sha256": "f995ec0c4f1ad9861c3411ad07bc1190160be0a9e9f041b793f5d37cd3bd32ce"
+        }
+      ]
+    },
+    {
+      "id": "lem:pair-projections",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 4439,
+      "end_line": 4455,
+      "labels": [
+        "lem:pair-projections"
+      ],
+      "body_sha256": "192ee694e37162a8938530e86633e347e67efc98145ffc064620c6f7fdbbc59c",
+      "normalized_body_sha256": "7c2441169c78c07d61e736867b1272bfb331768841cd9a4a01eca42c0e272831",
+      "following_proofs": [
+        {
+          "line": 4456,
+          "body_sha256": "fca5eb0a11fd70f29a608e86c96e0709184fe82f646b604f853b5ac00af83bdc"
+        }
+      ]
+    },
+    {
+      "id": "det:suffix",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 4526,
+      "end_line": 4541,
+      "labels": [
+        "det:suffix"
+      ],
+      "body_sha256": "e66bb53d188b6e3d28afd1a74a428eb89e57c3d1dbd52c47bf4d8fd8174f2d7e",
+      "normalized_body_sha256": "c43549ac208cf2ac43e6c4f8e231b787f1d8358805a6206d1ce0561e98c329c8",
+      "following_proofs": [
+        {
+          "line": 4542,
+          "body_sha256": "27b3bbaa69e0b568585236e8cda9d574bed186d788f99131fde193f150292182"
+        },
+        {
+          "line": 4570,
+          "body_sha256": "f97ce12e361c1fa4f2aa0e02e329cb6ad2f730e03d5256fb4b48fb7f2b8d2f24"
+        },
+        {
+          "line": 4610,
+          "body_sha256": "cfeaefdfe07e93bdf365078d6bb1cc8f336097c0417b2fb157d2c5c0a64f844d"
+        },
+        {
+          "line": 4665,
+          "body_sha256": "c2c883581098c50e0c0d2972109d5d6470fe224ce695ce64facd7d25d38030b1"
+        }
+      ]
+    },
+    {
+      "id": "lem:common-schedule",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Common numerical margins",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 4796,
+      "end_line": 4802,
+      "labels": [
+        "lem:common-schedule"
+      ],
+      "body_sha256": "83974987359936f52c3375d43265e9c055e85bd53e741c24dfa32aebe5765a60",
+      "normalized_body_sha256": "2ffc6bc003ca02e01996a769f9b75aed0d1c004c394421834fa5a0845c110e45",
+      "following_proofs": [
+        {
+          "line": 4804,
+          "body_sha256": "70de408c3fc2de7ef03373e3eca62b172644ab16eba4f885fb7e5e42f3d316b2"
+        }
+      ]
+    },
+    {
+      "id": "lem:full-schedule",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Parameters for full products",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 4891,
+      "end_line": 4904,
+      "labels": [
+        "lem:full-schedule"
+      ],
+      "body_sha256": "0b9954704eaa44fef2129fe4300fbf55a30a4e72d88de7a72cfe4a102fabcf1a",
+      "normalized_body_sha256": "10ec9f2d066a8d9cfd2420b311073c59c9ba148ebc430775ede5ad0b7d9e6002",
+      "following_proofs": [
+        {
+          "line": 4906,
+          "body_sha256": "7ed5cd4397ffc9153066375baf5433dd945e853f91e9fcfde20ae1c936c0d221"
+        }
+      ]
+    },
+    {
+      "id": "lem:generated-schedule",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": "Parameters for explicit lists",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 4940,
+      "end_line": 4954,
+      "labels": [
+        "lem:generated-schedule"
+      ],
+      "body_sha256": "e584a9301bc71d894e663ef18b40e2169fc036fd29668351274baf055981e231",
+      "normalized_body_sha256": "f92782ca985878a942d06caab4424855553f7101906b2b89bc1eaa9b255e5992",
+      "following_proofs": [
+        {
+          "line": 4956,
+          "body_sha256": "7384e3ae07ccce230adaf902bcbc5491ce3948a21a03a2359a47425af1fbda40"
+        },
+        {
+          "line": 5007,
+          "body_sha256": "430f93088fc9324d628634373fb8ec3b97f921a38568c45bfe64a46f1a6ea9ae"
+        },
+        {
+          "line": 5046,
+          "body_sha256": "0661dd785292bed545208cf68f4819eefcceefa73541ef5b602e3fe9c2f8a874"
+        }
+      ]
+    },
+    {
+      "id": "yao:finite-field-list",
+      "kind": "formal",
+      "environment": "lemma",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 5108,
+      "end_line": 5116,
+      "labels": [
+        "yao:finite-field-list"
+      ],
+      "body_sha256": "8d0e3f4d7bff4ffac32e2027e64283ef17b1b9e0fe2f0db854a365cdb2b86f96",
+      "normalized_body_sha256": "b11a9fb348f42248d2a274952f0ab0ca3b2328bea868c399a36b40ff7860316a",
+      "following_proofs": [
+        {
+          "line": 5118,
+          "body_sha256": "521538d9d13c5bcc371b2989e13b06f0f59d9ef641ac08bd785b96c261b7fc5e"
+        },
+        {
+          "line": 5145,
+          "body_sha256": "ce8d1e840e0ef3ec1309a7c248781168476ff9a01bdaa2705e1f7f7a816ad4b7"
+        }
+      ]
+    }
+  ],
+  "auxiliary_blocks": [
+    {
+      "id": "obs:representatives",
+      "kind": "auxiliary",
+      "environment": "observation",
+      "title": "Restrictions projected to a set of blocks",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 1181,
+      "end_line": 1195,
+      "labels": [
+        "obs:representatives"
+      ],
+      "body_sha256": "4b5f6b8c3b383e9bb1443d6732e4618550137c3661a3574bd221cbc2863919c7",
+      "normalized_body_sha256": "6c0d575c4f1d535e9a95a8f74f7fb2567be3aeb4b91cdba4e7728487a8b71ff2",
+      "following_proofs": []
+    },
+    {
+      "id": "obs:compatible-protocol",
+      "kind": "auxiliary",
+      "environment": "observation",
+      "title": "Short protocols as containments",
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 2812,
+      "end_line": 2820,
+      "labels": [
+        "obs:compatible-protocol",
+        "eq:compatibility"
+      ],
+      "body_sha256": "30be844ee0b69e51a698fa77a3636004b91febeaebb07122ba394c4c158f2f69",
+      "normalized_body_sha256": "915d3a88a0eb2ed311ebc3820f4c8fc52f58160f6c8649b69e26f67ccb104daf",
+      "following_proofs": [
+        {
+          "line": 2822,
+          "body_sha256": "c31fce9939baeb28d6d9fc1490f4152ad8011a35413d68d9844f4a7c98e8edf3"
+        }
+      ]
+    },
+    {
+      "id": "cl:two-stream",
+      "kind": "auxiliary",
+      "environment": "claim",
+      "title": null,
+      "source": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "line": 4134,
+      "end_line": 4157,
+      "labels": [
+        "cl:two-stream"
+      ],
+      "body_sha256": "c57feee6ec48ec5e7655fc528eb0270d58663ee91fe3d032ae9c036e0d53bbe8",
+      "normalized_body_sha256": "3a5acc01f356ea5fc419a117a8ef5deb35e6613499c06a4435800aa7f75430d7",
+      "following_proofs": [
+        {
+          "line": 4159,
+          "body_sha256": "6c2b8a434f712a78c7ade06b0fb60aed61f7506e22f0bf2fb940906f062ce2bd"
+        },
+        {
+          "line": 4230,
+          "body_sha256": "a9ae51d3444c0c88236eb3bec3b113e1e24c69d72455855eb288c62557f0bfc1"
+        },
+        {
+          "line": 4306,
+          "body_sha256": "77886ccdb78b652c91af7a87629d159e2626c57fe685d738e75a81dfb7403887"
+        }
+      ]
+    }
+  ]
+}

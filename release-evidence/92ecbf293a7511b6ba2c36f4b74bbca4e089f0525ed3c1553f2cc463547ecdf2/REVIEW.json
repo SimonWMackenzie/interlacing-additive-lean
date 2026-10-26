@@ -1,0 +1,402 @@
+{
+  "scope": "Private source-delta review, not v42 production certification",
+  "source_hashes": {
+    "private-provenance-refs/86b86ee60cb6dae52e7fce46fb4f0222cb5dfd2d55e553b1035f3a533e17e620/main.tex": "8cfdd735e5703682f98c840df96397dea74ef2795716f7bdddb3b7e562e64cb0",
+    "private-provenance-refs/e15bfa5938c01b17a9f574f555a7a5c33c980cf043ac685885a4b2ae86e8944f/Pasted_text.txt": "e9eb48925f087a64141c4b756ae3293856a87b353acae33f3fdc802b33f0f535"
+  },
+  "reviewed_blocks": [
+    {
+      "ids": [
+        "def:exact-tuples",
+        "det:code"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "CurrentAdditive.GenericCodeDWholeConstructor.indexed_outputs",
+        "CurrentAdditive.GenericCodeDWholeConstructor.uniform_outputs"
+      ],
+      "explanation": "Same fixed-D rational law, positive retained labels, actual ordered elimination, denominator and polynomial byte bounds.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "det:flat"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "CurrentAdditive.DeterministicIndexedMatrix.selector_flatten_dwise",
+        "CurrentAdditive.DeterministicIndexedMatrix.fixed_stream_flatten_dwise"
+      ],
+      "explanation": "Same nested distinct-coordinate law and original selector law after fixing complete other streams.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "det:conditioning"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "V38Moments.conditioning_outside_exception"
+      ],
+      "explanation": "Same event/exception/later-restriction quantifiers and same epsilon and e; new numeric e envelope separately open.",
+      "open_obligations": [
+        "D4"
+      ]
+    },
+    {
+      "ids": [
+        "det:exact"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "CurrentAdditive.V38Fin2Exact.exactboost"
+      ],
+      "explanation": "Same exact eight-wise two-threshold boost.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "det:rareboost"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "V38RareBoost.rareboost_after_conditioning",
+        "V38RareBoost.rareboost_two_threshold"
+      ],
+      "explanation": "Same fixed-event exceptional set, original indexed law, and later restriction.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "lem:pair-projections"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "FiniteV35Admission.universal_pair_estimates_and_projection",
+        "CurrentAdditive.FourthMoment.exact_pair_tail_of_four_wise"
+      ],
+      "explanation": "Exact and conditional pair projection bounds unchanged.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "det:suffix"
+      ],
+      "assessment": "inherited-components-sufficient",
+      "candidate_declarations": [
+        "CurrentAdditive.V38Fin2Exact.exact_suffix_all",
+        "V38RareBoost.rare_suffix_two_threshold"
+      ],
+      "explanation": "New statement groups exact E and conditional C, both already implemented.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "det:restore"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "CurrentAdditive.V39TwoThresholdRestoration.restored",
+        "CurrentAdditive.V39TwoThresholdRestoration.restored_profile"
+      ],
+      "explanation": "Same actual two-threshold restoration theorem; new schedule must discharge its guards.",
+      "open_obligations": [
+        "D4"
+      ]
+    },
+    {
+      "ids": [
+        "src:profiles",
+        "det:profiles"
+      ],
+      "assessment": "new-instantiation-required",
+      "candidate_declarations": [
+        "CurrentAdditive.V39GeneratedSourceProfiles.costs_and_profiles_of_tests",
+        "CurrentAdditive.V39GeneratedSourceProfiles.costs_and_profiles_all_large"
+      ],
+      "explanation": "Statements merged into two-case lemma; generic math reusable, but actual scheduled instantiation hardcodes old q2 and overhead.",
+      "open_obligations": [
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "ids": [
+        "lem:conditioning-moment"
+      ],
+      "assessment": "new-proof-required",
+      "candidate_declarations": [
+        "V39GeneralMoment.bounded_wise_even_moment"
+      ],
+      "explanation": "Existing unweighted bound is in number of variables m, new weighted bound is in W=sum coefficients.",
+      "open_obligations": [
+        "D1"
+      ]
+    },
+    {
+      "ids": [
+        "res:incoming"
+      ],
+      "assessment": "new-proof-required",
+      "candidate_declarations": [
+        "CurrentAdditive.V39IncomingSharpBound.incoming_diagonal_mass_lt",
+        "CurrentAdditive.V39IncomingDensity.sharp_density_group",
+        "CurrentAdditive.V39IndexedIncomingLocal.selected_diagonal_section_cost"
+      ],
+      "explanation": "Old threshold is 2(r+2)s*kappa; new threshold 2s*kappa needs weighted flag tail and direct heavy-fiber count.",
+      "open_obligations": [
+        "D1",
+        "D2"
+      ]
+    },
+    {
+      "ids": [
+        "res:foreign",
+        "cl:two-stream"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "CurrentAdditive.V39TwoStreamImageObstruction.generated_two_stream_image_restriction_lower"
+      ],
+      "explanation": "Same actual two-tag restriction, original product pair law, and delta>2*q2*x+4*epsilon.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "res:alignment"
+      ],
+      "assessment": "new-consumer-required",
+      "candidate_declarations": [
+        "CurrentAdditive.V39IndexedAlignment.alignment",
+        "CurrentAdditive.V39IndexedAlignment.nearfull"
+      ],
+      "explanation": "Actual old accounting asks Kstar*Eexc; new common recipe uses 2s*Eexc.",
+      "open_obligations": [
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "ids": [
+        "def:amplification-parameters",
+        "lem:common-schedule",
+        "lem:generated-schedule"
+      ],
+      "assessment": "new-proof-required",
+      "candidate_declarations": [
+        "V38Schedule.generatedQ₂",
+        "V38Schedule.generatedEta",
+        "CurrentAdditive.V39PublicGeneratedSchedule.publicLog",
+        "CurrentAdditive.V39PublicSchedule.generatedOverhead_exact",
+        "CurrentAdditive.V39GeneralExceptionBudget.exception_le_ebar"
+      ],
+      "explanation": "New common recipe, exact fourth-power size, eta and q2, sharper e envelope, all-large numerical guards, and h=10L.",
+      "open_obligations": [
+        "D4"
+      ]
+    },
+    {
+      "ids": [
+        "det:construction"
+      ],
+      "assessment": "new-parameter-instantiation-required",
+      "candidate_declarations": [
+        "CurrentAdditive.V39GeneratedConstruction.SourceData.streams",
+        "CurrentAdditive.V39GeneratedConstruction.SourceData.final",
+        "CurrentAdditive.V39GeneratedConstruction.SourceData.successor",
+        "CurrentAdditive.V39GeneratedConstruction.SourceData.combined_dwise"
+      ],
+      "explanation": "Same list and law architecture; new q2 defines a different actual matrix.",
+      "open_obligations": [
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "ids": [
+        "det:amplifier",
+        "prop:iteration",
+        "det:reduction"
+      ],
+      "assessment": "new-constructor-and-runtime-required",
+      "candidate_declarations": [
+        "CurrentAdditive.V39GeneratedConstruction.numberedStep_no_of_tests",
+        "CurrentAdditive.V39GeneratedConstruction.storedIterate_no_of_tests",
+        "CurrentAdditive.V40DeterministicGraphConstructor.square_outputs",
+        "CurrentAdditive.V40DeterministicGraphConstructor.request_outputs"
+      ],
+      "explanation": "Old actual run and physical front select old parameters and threshold; fixed A^k shape alone is insufficient.",
+      "open_obligations": [
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "ids": [
+        "intro:deterministic",
+        "det:eth"
+      ],
+      "assessment": "endpoint-preserved-but-trace-open",
+      "candidate_declarations": [
+        "CurrentAdditive.V40DeterministicETHEndpoint.fixed_gap_reduction",
+        "CurrentAdditive.V40DeterministicETHEndpoint.deterministic_growing_hardness",
+        "CurrentAdditive.V39RuntimeETHNumerics.actual_numerics"
+      ],
+      "explanation": "New run must be composed; explicit coefficient 1/(8log A) can weaken old stronger coefficient when A is power of two.",
+      "open_obligations": [
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "ids": [
+        "def:alternating-table",
+        "prop:alternating-upper",
+        "yao:source",
+        "yao:comparison"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "CurrentAdditive.SmallBias.matrixV38",
+        "CurrentAdditive.SmallBias.upper_bound_matrixV38",
+        "CurrentAdditive.SmallBias.v38_public_printed_matrix_yes_no",
+        "CurrentAdditive.V39ApprovedYaoCompiler.instanceWord_polytime"
+      ],
+      "explanation": "Complete addresses, zero nonincidences, all four conventions, balanced source and upper protocol unchanged.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "yao:small-bias-escape"
+      ],
+      "assessment": "private-proved-pending-independent-review",
+      "candidate_declarations": [
+        "CurrentAdditive.SmallBias.V42.no_short_lookup_v42",
+        "CurrentAdditive.SmallBias.V42.log_guard"
+      ],
+      "explanation": "Literal new m>=2t>=2 statement; actual cut and suffix reconstruction, no old lower-bound endpoint called.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "yao:lift"
+      ],
+      "assessment": "private-source-consumer-proved-pending-independent-review",
+      "candidate_declarations": [
+        "CurrentAdditive.SmallBias.V42.lower_bound_matrix",
+        "CurrentAdditive.SmallBias.V42.lower_bound_complete_addresses"
+      ],
+      "explanation": "Actual dominant-class restriction consumes new lookup theorem on same complete-address table and original array law; stronger generic projection estimate is documented.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "yao:finite-field-list",
+        "yao:array-list"
+      ],
+      "assessment": "inherited-sufficient",
+      "candidate_declarations": [
+        "CurrentAdditive.SmallBias.v38PairFieldWord_hasPattern",
+        "CurrentAdditive.SmallBias.v38FieldDegree_bias",
+        "CurrentAdditive.SmallBias.v38_public_printed_matrix_yes_no",
+        "CurrentAdditive.V39ApprovedYaoCompiler.sourceTable_outputs",
+        "CurrentAdditive.V39ApprovedYaoCompiler.sourceTableTime_poly"
+      ],
+      "explanation": "Same seed formula, repeated R^2 labels, genuine H*K positions, field search and physical printer clocks.",
+      "open_obligations": []
+    },
+    {
+      "ids": [
+        "yao:main",
+        "yao:bpp"
+      ],
+      "assessment": "inherited-endpoints-plus-new-trace-review",
+      "candidate_declarations": [
+        "CurrentAdditive.V39LiteralYaoNPJoin.approved_cnf_fixed_gap_reduction",
+        "CurrentAdditive.V39PermittedOriginalDetYao.permitted_original_deterministic_p_equals_np"
+      ],
+      "explanation": "Statements unchanged; bind new private lookup/lift proof to unchanged actual source/array/table/estimator components before v42 coverage.",
+      "open_obligations": []
+    }
+  ],
+  "private_proof_declarations": [
+    {
+      "name": "CurrentAdditive.SmallBias.V42.patterns_prob_le_direct",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 13
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.no_short_lookup_actual_cut_pattern",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 31
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.numeric_pattern_gap",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 88
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.no_short_lookup_complete",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 123
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.no_short_lookup_at_bound",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 176
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.no_short_lookup",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 198
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.twice_le_pow",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 219
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.log_guard",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 228
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.no_short_lookup_v42",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 237
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.no_implies_strategy_colouring",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 253
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.lower_bound_matrix",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 270
+    },
+    {
+      "name": "CurrentAdditive.SmallBias.V42.lower_bound_complete_addresses",
+      "file": "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+      "line": 349
+    }
+  ],
+  "private_compile": {
+    "command": "lake env lean -o private-provenance-refs/aaa8c6b1ba5c94bd3ab284af92b4723d089f758392578360ac5c737f7cc40d55/AlternatingV42.olean private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean",
+    "exit_code": 0,
+    "allowed_axioms_only": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "log": "private-provenance-refs/1734cc31514b249ea09620f70e9d5500ede6c0fc29c8c50ef5042d9cfb037ffe/AlternatingV42.compile.log"
+  },
+  "artifacts": {
+    "private-provenance-refs/d964c2f20703bf8d49f0cb6c7e1589d34bb923c8e74d8ebad0ce4af6c3db0613/AlternatingV42.lean": "0a5654f81be3450df5056c94448558333954c8ae3e2265649ce09c81a4f4fbe6",
+    "private-provenance-refs/aaa8c6b1ba5c94bd3ab284af92b4723d089f758392578360ac5c737f7cc40d55/AlternatingV42.olean": "df890d99f69d665864b622fb5d8de8c1a35a6286f885ebf6410c5a77d31747cf",
+    "private-provenance-refs/1734cc31514b249ea09620f70e9d5500ede6c0fc29c8c50ef5042d9cfb037ffe/AlternatingV42.compile.log": "716ce9b37e0eaf6dafee7e96626746149ad1bd9812aff30dbc8fab3ad8f2d23e",
+    "private-provenance-refs/89ef1235b0400b774ddf6560d0c9b2294f225bbe35cdcd30da93df32886de08b/REPORT.md": "3d7778270398db02a366ace1e3aa2e15bd29a0dfc899d9388a4ab68c621c346c"
+  },
+  "alternating_public_followup": "private-provenance-refs/889d4c4c2d70790d7f7817d38fb44a8d46a4901728b3c0c58ee88d82deaba692/PUBLIC_TRACE.json"
+}

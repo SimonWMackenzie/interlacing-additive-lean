@@ -1,0 +1,19 @@
+{
+  "paper": "randomized-additive-hardness",
+  "version": "2026-10-12-proof-exposition-v27",
+  "authorization_date": "2026-10-13",
+  "baseline_commit": "ef071758fce4324c046911b1b9d2d78a67e862d9",
+  "manifest_sha256": "479CA73B56C98C6F8820EBFD8E0E1F73990E1187D08626118A3D8FE0746C8492",
+  "pdf_sha256": "AC38FD4988D1F5B433106D3C8C53245778D28357B3CE3C1A331C9ABDDA096642",
+  "lean_toolchain": "leanprover/lean4:v4.30.0",
+  "lake_manifest_sha256": "04DBF24AF77F6D3C2AED0610D0FB1AEBCD588B61E5271C0774E5AF9E972846D6",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "baseline_lock_sha256": "876116C6FB0B4F65C7463D1916CB829AC283B5351665E7AF6366F6A353F15CB3",
+  "baseline_aggregate_sha256": "6FF81627F602F9F660D38282D839DD75C455B728BB87183FFB9D5D8B2F2B8BFF",
+  "scope": "Entire selected v27 manuscript is the target; only individually reviewed and compiled components are proved. Read OBLIGATION_LEDGER.md."
+}

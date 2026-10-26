@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "coverage_sha256": "609ec2973ac3807af9201b5813f596e1e0343ce40061f3a681b4c1c7125abf59",
+  "command": "python -B -X utf8 tools/validate_inventory.py --require-complete",
+  "exit_code": 0,
+  "result": {
+    "source_identity": "passed",
+    "declaration_anchor_identity": "passed",
+    "source_blocks": 66,
+    "unique_candidate_or_accepted_anchors": 383,
+    "open_statement_or_unnumbered_links": 0,
+    "historical_build_aggregate_extensions": [],
+    "correspondence_complete": true,
+    "scope": "Source and link identity only; no Lean proof build or semantic certification."
+  },
+  "bounded_checker_tests": {
+    "path": "release-evidence/b0ea0a6a21b2ad91cf4c6e5a9caf0ee3526ca1a58709e1cdf8af380e8e7bf1cd/CHECKS.json",
+    "sha256": "b0ea0a6a21b2ad91cf4c6e5a9caf0ee3526ca1a58709e1cdf8af380e8e7bf1cd"
+  }
+}

@@ -1,14 +1,20 @@
-# Reproducing this proof snapshot
+# Reproducing the source snapshot
 
-This package targets the exact v40 manuscript in `manuscript-v40/`, with
-main-source SHA-256
-`8cfdd735e5703682f98c840df96397dea74ef2795716f7bdddb3b7e562e64cb0`.
-The manuscript files are frozen provenance, not the current editable paper.
-Correspondence with v42 has not been checked.
+Install Lean through elan and Python 3.11 or later. `lean-toolchain` selects the
+toolchain and `lake-manifest.json` pins Mathlib and every fetched dependency.
+The canonical checked-build receipt and a cold project-source replay are
+different forms of evidence. The release status identifies which passed.
 
-Install Lean through elan and Python 3.11 or later. The included toolchain
-file selects Lean 4.30.0; `lake-manifest.json` pins Mathlib and its dependencies.
-From this repository's root:
+The canonical route uses existing unchanged inherited project objects. It first
+checks every supplied proof source, the exact production configuration, admission
+registry, and prior v40 fresh-release source/receipt identities. It runs
+`lake build CurrentV42`, both complete audits and every provider/object/pin
+check, then checks the source package again. Every imported object is hashed.
+`PUBLISHED_CHECKED_BUILD.json` explicitly records
+`project_build_initially_empty: false` and `fresh_project_replay: false`.
+It does not claim all unchanged inherited project modules were cold rebuilt.
+
+For the optional cold project-source replay, run from a fresh checkout:
 
 ```sh
 python verify_release.py
@@ -16,47 +22,70 @@ lake exe cache get
 python replay.py
 ```
 
-The runner refuses an existing project build directory, disables Lake's artifact
-cache with `LAKE_ARTIFACT_CACHE=false`, stops on any failed command, and records
-source identity, command exit codes and log hashes in
-`REPLAY.json`. It builds `CurrentAdditive`, runs both Lean audits, checks the
-resolved object paths and dependency revisions, and rechecks source identity.
-Use a fresh checkout for another clean replay; the script never deletes files.
+That runner refuses existing project objects in `.lake/build`, existing local
+replay logs, and externally set Lean search paths. It disables Lake's artifact
+cache for every subprocess with `LAKE_ARTIFACT_CACHE=false`, builds `CurrentV42`,
+runs the effective-declaration and raw-proof audits, checks all active object
+providers and dependency source revisions, then rechecks the source package.
+It stops on a failed command and writes `REPLAY.json` and `build-logs/`.
+Nothing is deleted. Use another fresh checkout to repeat the replay.
 
-The cache command downloads compiled external dependencies. All 5,032 local
-proof modules are supplied as source; do not substitute project objects from
-another checkout. The source check verifies their exact identities. The build
-checks their Lean proofs. The owning audit checks the transitive axioms of
-CurrentAdditive declarations; the supplemental audit also checks raw generated
-proof rows, including the historical duplicate-name case. These checks do not
-establish that external source-theorem interfaces faithfully represent the
-cited papers, or that a later manuscript matches this snapshot.
+The package preserves the production-validated Lake options and exact
+source-local resource settings; only its default target changes to `CurrentV42`.
+`RESOURCE_LIMITS.json` records these settings. Private compiler flags are not
+silently added to the fresh replay: that replay must succeed using the supplied
+sources and configuration.
 
-The earlier local completion record used a fresh build of 2,678 CurrentAdditive
-modules and reused inherited objects. Its provider inventory initially missed
-80 meta-import dependencies; subsequent recovery preserved that failure,
-checked all 15,633 providers and audited the actual raw proof expressions.
-The public-package replay is a separate check and must report whether its
-inherited project sources and external dependency objects were rebuilt or reused.
+Pinned toolchain objects and fetched external package objects can be reused.
+All imported local project modules must be compiled in a fresh replay checkout.
+The receipt states this distinction and records the observed module count;
+there is no fixed historical count. `PROVIDER_INVENTORY.json` records hashes of
+the actual object files, the toolchain identity and dependency manifest.
+These hashes identify the objects used; they do not prove cached external
+objects were compiled locally from source.
 
-## Assumptions and attribution
+`AxiomAudit.lean` checks every effective declaration owned by imported
+`CurrentAdditive` and `CurrentV42` modules and its transitive proof axioms.
+`RawProofAudit.lean` additionally checks all actual generated rows owned by
+those modules. If a raw row differs from the effective declaration, it checks
+the actual type/proof expressions and their dependencies. Counts are observed
+and cross-checked against the release's imported owner set. The audit permits
+only `propext`, `Classical.choice`, and `Quot.sound` as proof dependencies and
+rejects unsafe owned declarations or missing checked dependencies.
 
-The source reduction interfaces for Dinur, Bogdanov--Obata--Trevisan and the
-Guruswami--Lee alternating source remain explicit, as do literal-CNF hardness
-and the distinct deterministic and randomized ETH assumptions. A theorem about
-one of these interfaces does not construct or prove the external result.
+The complete provider inventory includes inherited `Paper2`,
+`EthInapproximability`, `LegacyNPCC`, `Workspace`, `NPCC`, and `EthBridge` modules.
+Reachable dependencies of the audited proof rows are checked transitively.
+An unused inherited citation assertion is not promoted into the release's
+checked theorem scope merely because its file is supplied for reproducibility.
 
-The `CurrentAdditive`, `Paper2` and `EthInapproximability` trees contain the
-authors' successive developments. The `Workspace`, `NPCC`, `EthBridge` and
-`LegacyNPCC` trees preserve the inherited NP-hardness development used by the
-checked dependency closure. `manuscript-v40/COVERAGE.json` preserves the historical
-group-based map for 73 formal and auxiliary manuscript blocks. Every block has
-anchors in the imported proof closure. The map also cites one older helper,
-`Paper2.AveragedProjection.rational_monotonicity_member`, which the final proof
-does not import. Its exact source is preserved in `historical-coverage-supplements/`
-and marked as outside the release build. The map is navigation through the
-earlier evidence, not a new statement-fidelity review.
+`verify_release.py` checks file identities, exact local Lean source paths,
+the admitted v42 module registry and review hashes, every accepted declaration
+anchor, all formal and unnumbered coverage rows, and the independent coverage
+gate bindings. Those identity checks do not replace the independent statement
+reviews or establish fidelity of external source-theorem records.
 
-Original source notices are retained. No blanket license is added by this
-packaging step. The separately fetched dependencies
-retain their own licenses (Apache-2.0, and MIT for Cli).
+Canonical checked-build evidence is kept in `PUBLISHED_CHECKED_BUILD.json` and
+`published-checked-build-logs/`, with explicit path-projection bindings in
+`PUBLISHED_CHECKED_EVIDENCE_BINDING.json`. Original private receipt/log hashes
+and distinct public hashes are retained. These files do not assert a fresh replay.
+
+Optional published fresh-replay evidence is kept in `PUBLISHED_REPLAY.json` and
+`published-build-logs/`. Machine paths are projected to relative provenance IDs;
+original/private and public/projected hashes are separately recorded in
+`PUBLISHED_EVIDENCE_BINDING.json`. Executables, flags, exit codes and audit
+conclusions are retained. Original private logs remain archived locally.
+Your replay creates separate local files and does not
+overwrite that evidence. Historical v40 receipts under `archive/v40/` are
+preserved verbatim and do not certify the current source.
+
+Historical private build-authority receipts bind their original manifest hash,
+which is not the hash of a projected manifest. They preserve the attestation
+trace and do not replace the current canonical checks or optional fresh public replay. Five already-public legacy
+path comments in inherited source files have exact hash/line exceptions under
+`PUBLIC_PATH_EXCEPTIONS.json`; those nonpersonal comments are preserved with
+the proof bytes. New personal paths, attachment locations and credential data
+are rejected during preparation.
+
+Mathlib and the other fetched dependencies retain their own licenses, including
+Apache-2.0 and the Cli package's MIT license. Original project notices remain.

@@ -1,0 +1,94 @@
+{
+  "status": "passed",
+  "recorded_utc": "2026-10-26T13:12:37.698897+00:00",
+  "correspondence_complete": true,
+  "unresolved_obligations": [],
+  "source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "coverage_sha256": "609ec2973ac3807af9201b5813f596e1e0343ce40061f3a681b4c1c7125abf59",
+  "admitted_manifest_sha256": "87dc3bbdabb9bae43a4835289b194eb5387b403062a5bc9c1b709a537adecd33",
+  "aggregate_sha256": "89f1d24883e539db14cd7d9a1ddd9db2320c033e749dc4119736a8828a9dbb84",
+  "source_lock": {
+    "path": "manuscript-v42/SOURCE_LOCK.json",
+    "sha256": "a02a95dc58599688f5940916aace950cefd5a1bf58dce4ed11fcdba9e2a4aa47"
+  },
+  "counts": {
+    "formal_blocks": 66,
+    "construction_checks": 8,
+    "new_admitted_modules": 161
+  },
+  "checks": [
+    {
+      "name": "inventory_complete",
+      "exit_code": 0,
+      "evidence": [
+        {
+          "path": "release-evidence/740eeb942f1cdb219e9e06746d592c281156f239078b4c600c8d261c5a50755f/CORRESPONDENCE_IDENTITY.json",
+          "sha256": "740eeb942f1cdb219e9e06746d592c281156f239078b4c600c8d261c5a50755f"
+        },
+        {
+          "path": "release-evidence/b0ea0a6a21b2ad91cf4c6e5a9caf0ee3526ca1a58709e1cdf8af380e8e7bf1cd/CHECKS.json",
+          "sha256": "b0ea0a6a21b2ad91cf4c6e5a9caf0ee3526ca1a58709e1cdf8af380e8e7bf1cd"
+        }
+      ]
+    },
+    {
+      "name": "source_correspondence",
+      "exit_code": 0,
+      "evidence": [
+        {
+          "path": "release-evidence/21914e17996311307f4cd9ba728eb479d7c651bb90e7f2e000e4aea26291d4db/AUTHOR_UPDATE_COMPARISON.json",
+          "sha256": "21914e17996311307f4cd9ba728eb479d7c651bb90e7f2e000e4aea26291d4db"
+        },
+        {
+          "path": "release-evidence/468f2b58e1c7b7d91d5a77cc3598f6abe28cf9e9799502aa46234c48aaaffe5d/SEMANTIC_CHECKS.json",
+          "sha256": "468f2b58e1c7b7d91d5a77cc3598f6abe28cf9e9799502aa46234c48aaaffe5d"
+        }
+      ]
+    },
+    {
+      "name": "declaration_anchors",
+      "exit_code": 0,
+      "evidence": [
+        {
+          "path": "release-evidence/60d378e8ec52ee95091c6fbaf2fe7734f6994829f0d058e7a44febfbaff98b41/CANONICAL_MAP_INTEGRITY.json",
+          "sha256": "60d378e8ec52ee95091c6fbaf2fe7734f6994829f0d058e7a44febfbaff98b41"
+        },
+        {
+          "path": "release-evidence/740eeb942f1cdb219e9e06746d592c281156f239078b4c600c8d261c5a50755f/CORRESPONDENCE_IDENTITY.json",
+          "sha256": "740eeb942f1cdb219e9e06746d592c281156f239078b4c600c8d261c5a50755f"
+        }
+      ]
+    },
+    {
+      "name": "independent_review",
+      "exit_code": 0,
+      "evidence": [
+        {
+          "path": "release-evidence/eea18d987e711ca8c7719b2b45053c61c7098363666464d05caad93c06385bc6/REVIEW.md",
+          "sha256": "eea18d987e711ca8c7719b2b45053c61c7098363666464d05caad93c06385bc6"
+        },
+        {
+          "path": "release-evidence/9bc8eaa4d4b469f6c7b0520050f8eb702ed456a54ce4d877dade42f9696bb42c/RECEIPT.json",
+          "sha256": "9bc8eaa4d4b469f6c7b0520050f8eb702ed456a54ce4d877dade42f9696bb42c"
+        }
+      ]
+    }
+  ],
+  "external_assumptions": [
+    "DinurReduction",
+    "BOTReduction (booleanOccurrence D)",
+    "Selected GLSourceDraft G with explicit G.L=EncodedCNF.Language for strict-Yao/literal-CNF specialization",
+    "Visible NPHard EncodedCNF.Language where hardness or NP-class closure is concluded",
+    "Distinct DeterministicSparseETH.Holds and randomized sparse-ETH assumptions in their respective results",
+    "Dinur/BOT external record fidelity remains author-owned unresolved per ROOT_CONTRACT174–178."
+  ],
+  "qualifications": [
+    "Supplied Dinur/BOT and selected hypergraph source existence/fidelity remains external and author-owned; literal-CNF hardness and deterministic/randomized sparse ETH are explicit separate premises.",
+    "Reviewer contributed full-product/source-facing proofs; this pass independently checks inventory/integration and scope joins; separately bound reviewers provide component proof independence.",
+    "False all-widths-power-of-two prose at source line4930 is nonblocking for the direct bit-complexity proof, which handles q1=s-2 separately.",
+    "Compilation/audit evidence is root final161 plus independent component replays, not a fresh complete cold build by this reviewer."
+  ],
+  "verification_scope": "Complete source correspondence relative to explicit external premises; production component build and effective/raw audits passed. Canonical package checked build and publication are separately recorded.",
+  "public_package_replay_complete": false,
+  "published": false
+}

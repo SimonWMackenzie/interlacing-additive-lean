@@ -1,0 +1,15 @@
+{
+  "scope": "Independent source/accepted-provider/evidence/build-manifest integrity; semantic review remains separately required.",
+  "map_sha256": "609ec2973ac3807af9201b5813f596e1e0343ce40061f3a681b4c1c7125abf59",
+  "source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "formal_rows": 66,
+  "unnumbered_rows": 8,
+  "accepted_rows": 74,
+  "pending_ids": [],
+  "accepted_declaration_records": 399,
+  "unique_accepted_declarations": 249,
+  "review_evidence_files": 32,
+  "build_manifest_checks": 399,
+  "problems": [],
+  "complete": true
+}

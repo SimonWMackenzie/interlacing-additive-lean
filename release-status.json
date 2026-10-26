@@ -1,43 +1,21 @@
 {
-  "updated_on": "2026-10-25",
-  "status": "source_release_with_successful_fresh_project_build",
-  "repository": "https://github.com/SimonWMackenzie/interlacing-additive-lean",
-  "code_released": true,
-  "public_package_replay_complete": true,
-  "v42_correspondence_checked": false,
-  "covered_manuscript": {
-    "version": "exact v40 snapshot of 22 October 2026",
-    "source_sha256": "8cfdd735e5703682f98c840df96397dea74ef2795716f7bdddb3b7e562e64cb0",
-    "scope": "Relative to explicit external hardness interfaces; not a verification of v42"
-  },
-  "public_package_replay": {
-    "receipt": "PUBLISHED_REPLAY.json",
-    "receipt_sha256": "90c8d3eaef3488bfffbe9a8d6e5c269ea08f1a583cdbadc4f03da4f988e8a261",
-    "source_manifest_sha256": "6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee",
-    "finished_utc": "2026-10-24T21:32:31.739628+00:00",
-    "project_modules_compiled_from_source": 5032,
-    "external_objects": "Pinned toolchain and package objects reused; external dependencies not freshly compiled",
-    "lake_artifact_cache": "disabled",
-    "command_exits": [
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-    ],
-    "active_provider_count": 15633,
-    "raw_proof_rows": 56544,
-    "raw_theorem_rows": 37175,
-    "allowed_theorem_axioms": [
-      "propext",
-      "Classical.choice",
-      "Quot.sound"
-    ]
-  },
-  "coverage": "Historical group-based map: 73 formal and auxiliary blocks. One supplementary helper is explicitly outside the imported build. This release is not a new statement-fidelity review.",
-  "remaining_qualifications": [
-    "Correspondence with the revised v42 manuscript has not been checked",
-    "External source-reduction records remain assumptions; fidelity to the cited source theorems is not certified by this build"
-  ]
+  "status": "source_package_with_canonical_checked_incremental_build",
+  "publication_performed_by_preparation_tool": false,
+  "public_package_replay_complete": false,
+  "v42_correspondence_checked": true,
+  "source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "full_coverage_receipt_sha256": "a2abbf982816f953952c38c98471bc144724e62b935b2e4eddbf97621f22cfdb",
+  "canonical_checked_build_complete": true,
+  "qualification": "Existing unchanged inherited project objects reused; canonical CurrentV42 build, complete effective/raw audits and exact source/object/provider/dependency checks passed. Optional fresh project-source replay remains available and is not asserted here. External source-interface fidelity remains qualified.",
+  "source_manifest_sha256": "e7498396e21d0320d3fcdd1e024908a58633b72336a8a7b22bd665b7444ea077",
+  "canonical_checked_build": {
+    "receipt": "PUBLISHED_CHECKED_BUILD.json",
+    "receipt_sha256": "03e34e74316fb9fe87192921e09898974fb2d5da1d12174726c5bdfc325d982d",
+    "verification_mode": "canonical_checked_incremental",
+    "project_build_initially_empty": false,
+    "fresh_project_replay": false,
+    "project_sources_cold_rebuilt": false,
+    "unchanged_prior_source_modules": 5032,
+    "checked_source_module_count": 5194
+  }
 }

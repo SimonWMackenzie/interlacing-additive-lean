@@ -1,0 +1,838 @@
+{
+  "schema_version": 1,
+  "review_scope": "core/interlacing/randomized; no production edits/builds/Git",
+  "replacement_sha256": "e9eb48925f087a64141c4b756ae3293856a87b353acae33f3fdc802b33f0f535",
+  "checked_v40_source": "private-provenance-refs/c565908f8a02b327ac0881e9ddde0daa42aa44bdbb527667eaa520c764ef5c54/main.tex",
+  "checked_v40_sha256": "8cfdd735e5703682f98c840df96397dea74ef2795716f7bdddb3b7e562e64cb0",
+  "current_v40_sha256": "f314de03cdbfea521dac3d35a677cfab14a71b3239fe1b93835786edf93eca92",
+  "coverage_complete": false,
+  "groups": [
+    {
+      "id": "models",
+      "blocks": [
+        {
+          "id": "def:table-estimation",
+          "replacement_lines": [
+            938,
+            955
+          ]
+        },
+        {
+          "id": "def:reth",
+          "replacement_lines": [
+            979,
+            986
+          ]
+        },
+        {
+          "id": "def:profile",
+          "replacement_lines": [
+            1209,
+            1221
+          ]
+        },
+        {
+          "id": "def:interlace",
+          "replacement_lines": [
+            1061,
+            1071
+          ]
+        },
+        {
+          "id": "def:exact-tuples",
+          "replacement_lines": [
+            1154,
+            1171
+          ]
+        }
+      ],
+      "disposition": "definitions_reusable",
+      "explanation": "Definitions preserve operative matrix, cost, estimator and two-threshold semantics. New parameter instances still need their own proofs.",
+      "candidate_declarations": [
+        {
+          "name": "Paper2.V38RestrictionProfiles.TwoThresholdProfile",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38RestrictionProfiles.lean",
+          "sha256": "9cf01fa4ccc777affa5cc77df6467250d225bb367ff3d76c504b28c441eb7fe1",
+          "line": 17,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "representatives",
+      "blocks": [
+        {
+          "id": "obs:representatives",
+          "replacement_lines": [
+            1177,
+            1191
+          ]
+        },
+        {
+          "id": "cl:projection",
+          "replacement_lines": [
+            3543,
+            3559
+          ]
+        }
+      ],
+      "disposition": "new_source_facing_wrapper",
+      "explanation": "Projection/section machinery exists; assemble exact statement with original marginal image weight and same retained matrix.",
+      "candidate_declarations": [
+        {
+          "name": "V38RareBoost.short_suffix_of_projected_mass",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39SuffixShort.lean",
+          "sha256": "8a1ab7ed1752005b3db8bd379f8038c59e2464349f4c3261e6f4d007653cf7b5",
+          "line": 48,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "source_raw",
+      "blocks": [
+        {
+          "id": "def:source-matrix",
+          "replacement_lines": [
+            1384,
+            1490
+          ]
+        },
+        {
+          "id": "src:item-witness",
+          "replacement_lines": [
+            1574,
+            1585
+          ]
+        },
+        {
+          "id": "src:upper",
+          "replacement_lines": [
+            1589,
+            1594
+          ]
+        },
+        {
+          "id": "lem:amplifier-rank",
+          "replacement_lines": [
+            2309,
+            2315
+          ]
+        }
+      ],
+      "disposition": "generic_matrix_reusable_new_instance_required",
+      "explanation": "Raw edge source, two tags, item law and entries are unchanged parametrically. New widths, repetition and rank capacity remain obligations.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V38Matrix.matrix",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38Matrix.lean",
+          "sha256": "959f258388664e944565613520d6002eb23e7d36c8e5630b64dd4db53fc45ce6",
+          "line": 40,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V38Matrix.matrix_rank_le",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38Matrix.lean",
+          "sha256": "959f258388664e944565613520d6002eb23e7d36c8e5630b64dd4db53fc45ce6",
+          "line": 124,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V38Matrix.matrix_upper_budgets",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38Matrix.lean",
+          "sha256": "959f258388664e944565613520d6002eb23e7d36c8e5630b64dd4db53fc45ce6",
+          "line": 145,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "source_profiles",
+      "blocks": [
+        {
+          "id": "src:profiles",
+          "replacement_lines": [
+            1693,
+            1710
+          ]
+        },
+        {
+          "id": "src:near-full",
+          "replacement_lines": [
+            1781,
+            1794
+          ]
+        },
+        {
+          "id": "lem:many-product-blocks",
+          "replacement_lines": [
+            1681,
+            1687
+          ]
+        }
+      ],
+      "disposition": "generic_finite_theorems_reusable_new_guards_required",
+      "explanation": "Full x changes to rho^8; new explicit q2=s^6. Existing schedule-specialized proofs cannot establish the new recipe.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V39SourceProfiles.costs_and_profiles",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39SourceProfiles.lean",
+          "sha256": "5d004630c27122ec04798b32b861407054b0a6622314fda91e0539c30aada081",
+          "line": 31,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V39IndexedNearFull.restriction_lower",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IndexedNearFull.lean",
+          "sha256": "715455a3d20cbe247a2780a537bc03734d0fc1545a377c605ba01d18896798b7",
+          "line": 27,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V38FullNearFull.restriction_lower",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38FullNearFull.lean",
+          "sha256": "fcdfece7afc14b986dc7f3a1121b73ced006ea64ec935b0599593560881646bf",
+          "line": 27,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "small_blocks",
+      "blocks": [
+        {
+          "id": "lem:small-blocks",
+          "replacement_lines": [
+            3605,
+            3618
+          ]
+        },
+        {
+          "id": "cl:separation",
+          "replacement_lines": [
+            3654,
+            3666
+          ]
+        },
+        {
+          "id": "cl:defect-induction",
+          "replacement_lines": [
+            3704,
+            3716
+          ]
+        },
+        {
+          "id": "cl:seed",
+          "replacement_lines": [
+            1297,
+            1306
+          ]
+        }
+      ],
+      "disposition": "operative_math_unchanged",
+      "explanation": "Same two-threshold small blocks, actual forced Alice prefix, fixed4e/3 defect induction and seed. Retie source anchors and new parameter instantiations.",
+      "candidate_declarations": [
+        {
+          "name": "Paper2.V38DefectInduction.rational_defect_induction",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38DefectRational.lean",
+          "sha256": "c11f90b78a7f7dd457db42c59db7abca7aa9de2761a56bb0ade44370d8c08e9b",
+          "line": 63,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "Paper2.V38SmallBlocks.three_block_middle",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38ThreeMiddle.lean",
+          "sha256": "d7caeb5a2ec6be34a2cac30272bcd4a1449da5b5d66b5a0f5e70cfacbc23b6af",
+          "line": 39,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "V39PublicSchedule.seedWidth_exact",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39PublicSchedule.lean",
+          "sha256": "af5bf3c26ee8764650ddb086a1901bd5000a4ebde5f834d8083b98c5df9c282c",
+          "line": 106,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "conditioning_suffix",
+      "blocks": [
+        {
+          "id": "det:conditioning",
+          "replacement_lines": [
+            1944,
+            1957
+          ]
+        },
+        {
+          "id": "det:exact",
+          "replacement_lines": [
+            1976,
+            1983
+          ]
+        },
+        {
+          "id": "det:rareboost",
+          "replacement_lines": [
+            1989,
+            1997
+          ]
+        },
+        {
+          "id": "lem:pair-projections",
+          "replacement_lines": [
+            4393,
+            4409
+          ]
+        },
+        {
+          "id": "det:suffix",
+          "replacement_lines": [
+            4479,
+            4494
+          ]
+        }
+      ],
+      "disposition": "existing_pieces_new_union_wrapper",
+      "explanation": "Conditional bounds unchanged; new explicit E branch of suffix has exact current Fin2 short and long proofs, requiring union assembly.",
+      "candidate_declarations": [
+        {
+          "name": "V38Moments.conditioning_outside_exception",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38Moments.lean",
+          "sha256": "089138e3273f43bd4779215610f6393992aeb58b160fc9d7702a1a9e78098e55",
+          "line": 106,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "V38RareBoost.rare_suffix_two_threshold",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39RareBoost.lean",
+          "sha256": "b97037e06df48b7781d10adc2c2fce2b813fa1d4db1d8414accfcbf8c8a88b5d",
+          "line": 16,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "V38RareBoost.rareboost_two_threshold",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39RareBoost.lean",
+          "sha256": "b97037e06df48b7781d10adc2c2fce2b813fa1d4db1d8414accfcbf8c8a88b5d",
+          "line": 42,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "V38RareBoost.exact_suffix_short_two_threshold",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39SuffixShort.lean",
+          "sha256": "8a1ab7ed1752005b3db8bd379f8038c59e2464349f4c3261e6f4d007653cf7b5",
+          "line": 227,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "V38RareBoost.exact_suffix_long_eight",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38ExactSuffixLong.lean",
+          "sha256": "110d3747581a3fe7e2ec2ba37d0d74ada43b4dcc8c9350de537add15d13b4458",
+          "line": 17,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "kraft_collision",
+      "blocks": [
+        {
+          "id": "lem:kraft-count",
+          "replacement_lines": [
+            1716,
+            1723
+          ]
+        },
+        {
+          "id": "lem:collision-tracking",
+          "replacement_lines": [
+            1743,
+            1762
+          ]
+        }
+      ],
+      "disposition": "existing_core_new_generic_wrapper",
+      "explanation": "Actual-run conserved overload already exists; new generic prefix-free integer Kraft lemma needs direct source-facing proof.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V38Collision.run_conserved_overload",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38CollisionConservation.lean",
+          "sha256": "c0571f01b6c46306accd360d81aa59fd9d9439bbf08bba355941fb53a0a2916a",
+          "line": 52,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V38Collision.no_short_actual_protocol",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38CollisionConservation.lean",
+          "sha256": "c0571f01b6c46306accd360d81aa59fd9d9439bbf08bba355941fb53a0a2916a",
+          "line": 113,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "moment",
+      "blocks": [
+        {
+          "id": "lem:conditioning-moment",
+          "replacement_lines": [
+            4327,
+            4341
+          ]
+        }
+      ],
+      "disposition": "new_mathematical_proof",
+      "explanation": "Weighted coefficients require W=sum weights instead of m. Existing unweighted theorem is insufficient.",
+      "candidate_declarations": [
+        {
+          "name": "V39GeneralMoment.bounded_wise_even_moment",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39GeneralMoment.lean",
+          "sha256": "34c75c06607748a24c0b17bc341cc7b84372eb574e5f5fb910248e3fdf45282e",
+          "line": 120,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "incoming",
+      "blocks": [
+        {
+          "id": "res:incoming",
+          "replacement_lines": [
+            2131,
+            2137
+          ]
+        }
+      ],
+      "disposition": "new_mathematical_and_actual_object_proof",
+      "explanation": "New <2s*kappa improves checked <2(r+2)s*kappa. Requires weighted flag concentration, actual fibres/section/good-block construction.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V39IncomingSharpBound.incoming_diagonal_mass_lt",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IncomingSharpBound.lean",
+          "sha256": "b06dd538b2adad192537e6070fa4a13ee436b2000c312cab0c16e9b5a4adf8a3",
+          "line": 21,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V39IndexedIncomingLocal.selected_diagonal_section_cost",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IndexedIncomingLocal.lean",
+          "sha256": "072768efe1d08bd07d0b361cd8e75c2f8858e8e66d96fef49cbeb7f95980679e",
+          "line": 65,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "owners_foreign",
+      "blocks": [
+        {
+          "id": "res:destinations",
+          "replacement_lines": [
+            2058,
+            2079
+          ]
+        },
+        {
+          "id": "res:foreign",
+          "replacement_lines": [
+            2139,
+            2148
+          ]
+        },
+        {
+          "id": "res:paired",
+          "replacement_lines": [
+            4047,
+            4067
+          ]
+        },
+        {
+          "id": "cl:two-stream",
+          "replacement_lines": [
+            4094,
+            4117
+          ]
+        }
+      ],
+      "disposition": "operative_local_math_unchanged_new_guards",
+      "explanation": "Exact owner counts, foreign mu(2q2x+4eps), paired and two-stream thresholds unchanged. Retain actual protocol/frontier objects.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V39PairedObstruction.paired_restriction_lower",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39PairedObstruction.lean",
+          "sha256": "1cd6d4df6d5e0249a09b46daa65771c26b709a9d7f7245ef1e644fca7a675552",
+          "line": 75,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V39TwoStreamImageObstruction.generated_two_stream_image_restriction_lower",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39TwoStreamImageObstruction.lean",
+          "sha256": "4b35d4c063bd46b5ce1a2793a83b8b09b3782d78d1248ad9e49e8facc15a68cc",
+          "line": 137,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "alignment",
+      "blocks": [
+        {
+          "id": "res:alignment",
+          "replacement_lines": [
+            2202,
+            2209
+          ]
+        }
+      ],
+      "disposition": "new_composition_after_incoming",
+      "explanation": "Generic alignment currently charges extra r+2. Recompose same-W theorem with sharpened incoming provider and new common margins.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V39IndexedAlignment.alignment",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IndexedAlignment.lean",
+          "sha256": "a9864ab28836adf3b4ae078fc885b74f2c9719abdbabb6c6c9a265f1e64feda6",
+          "line": 129,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V39IndexedAlignmentProtocol.protocol_impossible",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39IndexedAlignmentProtocol.lean",
+          "sha256": "5f03588b426d6f57bca6ad8011eb6ef4481d83afd6866ba6184a0188ca0581dc",
+          "line": 31,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "restoration",
+      "blocks": [
+        {
+          "id": "cl:bridge",
+          "replacement_lines": [
+            2289,
+            2303
+          ]
+        }
+      ],
+      "disposition": "new_boundary_case_proof",
+      "explanation": "Replacement permits Qtheta<=1/20; checked full-iid theorem requires strict inequality. Concrete schedule1/512 suffices only for its instance.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V39FullIidRestoration.rational_restoration",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39FullIidRestoration.lean",
+          "sha256": "54da20e1948e605d5b6195bb96a3b77cac575db57efa554dd44e9e78e393cee7",
+          "line": 165,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V39TwoThresholdRestoration.restored",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39TwoThresholdRestoration.lean",
+          "sha256": "86ad6eca390964d59b40ef9b00065a855512f55dd8a37712300330f7afb585a3",
+          "line": 180,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "schedules",
+      "blocks": [
+        {
+          "id": "def:amplification-parameters",
+          "replacement_lines": [
+            1342,
+            1362
+          ]
+        },
+        {
+          "id": "lem:common-schedule",
+          "replacement_lines": [
+            4746,
+            4752
+          ]
+        },
+        {
+          "id": "lem:full-schedule",
+          "replacement_lines": [
+            4841,
+            4854
+          ]
+        },
+        {
+          "id": "lem:generated-schedule",
+          "replacement_lines": [
+            4890,
+            4904
+          ]
+        }
+      ],
+      "disposition": "new_recipe_and_effective_arithmetic",
+      "explanation": "Common q2=s^2/rho,w=s^8,Q=s^24,x=rho^8,eta=s^-2; exact new overheads/cutoffs/exception estimates and literal printers needed.",
+      "candidate_declarations": [
+        {
+          "name": "V38Schedule.fullInput",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38Schedule.lean",
+          "sha256": "02d26042600186cc027ffebf1a51578892683188ce4edbaa1a31309308048ee3",
+          "line": 205,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "V38Schedule.generatedInput",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V38Schedule.lean",
+          "sha256": "02d26042600186cc027ffebf1a51578892683188ce4edbaa1a31309308048ee3",
+          "line": 212,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "V39PublicSchedule.fullOverhead",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39PublicSchedule.lean",
+          "sha256": "af5bf3c26ee8764650ddb086a1901bd5000a4ebde5f834d8083b98c5df9c282c",
+          "line": 103,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "V22FullScheduleExpressions.overhead",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V22FullScheduleExpressions.lean",
+          "sha256": "7bc7826deee8f191a6e87e29aa5b2dfd0c6d9631fa154b49eab722aaf5a3c5c2",
+          "line": 25,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "amplifier_iteration",
+      "blocks": [
+        {
+          "id": "thm:amplifier",
+          "replacement_lines": [
+            1259,
+            1283
+          ]
+        },
+        {
+          "id": "prop:iteration",
+          "replacement_lines": [
+            1309,
+            1318
+          ]
+        }
+      ],
+      "disposition": "new_same_constructor_composition",
+      "explanation": "Both cases now public. Must construct new same-matrix successor/iteration with exact threshold, rank and overhead, not invoke old endpoints.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V39FullAmplifier.amplifier",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39FullAmplifier.lean",
+          "sha256": "130a60815bd372316e08af928b44bf288cb2e02af9a72d304c670a5fc0234104",
+          "line": 67,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V39FullAmplifier.upper",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39FullAmplifier.lean",
+          "sha256": "130a60815bd372316e08af928b44bf288cb2e02af9a72d304c670a5fc0234104",
+          "line": 161,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V39FullAmplifier.rank_le",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39FullAmplifier.lean",
+          "sha256": "130a60815bd372316e08af928b44bf288cb2e02af9a72d304c670a5fc0234104",
+          "line": 206,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "count_compression",
+      "blocks": [
+        {
+          "id": "def:compatibility",
+          "replacement_lines": [
+            2777,
+            2784
+          ]
+        },
+        {
+          "id": "obs:compatible-protocol",
+          "replacement_lines": [
+            2786,
+            2794
+          ]
+        },
+        {
+          "id": "thm:rank-count",
+          "replacement_lines": [
+            2882,
+            2890
+          ]
+        },
+        {
+          "id": "thm:compression",
+          "replacement_lines": [
+            2927,
+            2944
+          ]
+        }
+      ],
+      "disposition": "generic_theorems_reusable",
+      "explanation": "Literal exponent, square sample count, original independent law, repeated indices and error unchanged.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V38RankCount.compatibleDomains_card_le_v38",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/RankCountV38.lean",
+          "sha256": "76659aa334d313997e567a45231df88efcea2a9ccc25b5d277a8ee40bdb1fdf0",
+          "line": 123,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V38RankCount.square_compression_failure_v38",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/RankCountV38.lean",
+          "sha256": "76659aa334d313997e567a45231df88efcea2a9ccc25b5d277a8ee40bdb1fdf0",
+          "line": 225,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V38RankCount.square_sample_upper_v38",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/RankCountV38.lean",
+          "sha256": "76659aa334d313997e567a45231df88efcea2a9ccc25b5d277a8ee40bdb1fdf0",
+          "line": 276,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "sampler_machine",
+      "blocks": [
+        {
+          "id": "lem:sample-access",
+          "replacement_lines": [
+            2998,
+            3005
+          ]
+        },
+        {
+          "id": "thm:uniform-reduction",
+          "replacement_lines": [
+            3013,
+            3028
+          ]
+        }
+      ],
+      "disposition": "new_schedule_instantiation_and_physical_clock",
+      "explanation": "Generic rounded table correctness/law valid for new widths, but hardcoded schedule expressions and every-tape clock/output ties need rebuild.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V39RoundedPrintedTable.printedWord_event_error_200",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39RoundedPrintedTable.lean",
+          "sha256": "cd4b58edab68db331a8e6d83dbd60a954e5f4179e41e07b82fedeea8e75a8075",
+          "line": 30,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V39RoundedPrintedTable.every_tape_exact",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39RoundedPrintedTable.lean",
+          "sha256": "cd4b58edab68db331a8e6d83dbd60a954e5f4179e41e07b82fedeea8e75a8075",
+          "line": 45,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "V22FullTableClock.physical_encoded_raw_full",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V22PhysicalRawTableClock.lean",
+          "sha256": "213529a5851cf9cf3f0c60124e2546d95a4421d2cc9c1e41369a8b4808d7e5c8",
+          "line": 21,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    },
+    {
+      "id": "randomized_eth",
+      "blocks": [
+        {
+          "id": "thm:quantitative",
+          "replacement_lines": [
+            327,
+            334
+          ]
+        }
+      ],
+      "disposition": "unchanged_statement_new_constructor_endpoint_required",
+      "explanation": "Coefficient<1/8 and k formula unchanged. Retarget new h,B,H,r,m and actual sampled source law/machine/original-variable clocks.",
+      "candidate_declarations": [
+        {
+          "name": "CurrentAdditive.V39ETHArithmetic.overhead_relative",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39ETHArithmetic.lean",
+          "sha256": "60c3acec6ed22c960f4d2a4fa6eb088f9d036728ce8e264af562c6b51424d8c3",
+          "line": 27,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V39ETHArithmetic.core",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V39ETHArithmetic.lean",
+          "sha256": "60c3acec6ed22c960f4d2a4fa6eb088f9d036728ce8e264af562c6b51424d8c3",
+          "line": 59,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V40RandomizedETHEndpoint.polynomial_source_envelope_subexponential",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V40RandomizedETHArithmetic.lean",
+          "sha256": "adb4ab9e0723321df6268d4d2f0986f3aa0908443ae682347b0f2b237ba2e9c6",
+          "line": 14,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        },
+        {
+          "name": "CurrentAdditive.V40RandomizedETHEndpoint.quantitative_class",
+          "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V40RandomizedClassEndpoint.lean",
+          "sha256": "8cbe99ff8ab6f5002bea49a4394ddc78a9726afcdebb0c7b5d6ec4ff3bfe3284",
+          "line": 85,
+          "found_declaration": true,
+          "role": "readback_candidate_not_v42_completion"
+        }
+      ]
+    }
+  ]
+}

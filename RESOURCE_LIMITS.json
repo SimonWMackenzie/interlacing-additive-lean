@@ -1,0 +1,2181 @@
+{
+  "production_lakefile_sha256": "30ae33310c9322a83ab0c9590b394a8da1c3926e3dff4145b02cda402d9e0632",
+  "public_lakefile_sha256": "d1cafd02b5b5105603fec7fbf7c0f33624e0df34163ec2720bf1ce529a66d457",
+  "production_options_preserved_except_default_target": true,
+  "hidden_global_resource_overrides": false,
+  "new_module_source_options": [
+    {
+      "module": "CurrentAdditive.V42ActualGeneratedSource",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualGeneratedSource.lean",
+      "source_sha256": "c4aad2768e6a02a967a792c64c46181d46664c53b0d2332ebe23c4320faf30c8",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42ActualInternal",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualInternal.lean",
+      "source_sha256": "a9790c00fd5f85bcaf453381eabe619fa90b7a3b13a99833902a119c5d54fdad",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42ActualItemStreams",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualItemStreams.lean",
+      "source_sha256": "6563d4209fcda3b81510a324593de402c0ba201a4bc0256a2dbc0716cd894f73",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42ActualLower",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualLower.lean",
+      "source_sha256": "d734b154c3630395dd89d9d8ca3c73105842c6e6471812421d6c830304db0b64",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42ActualSource",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualSource.lean",
+      "source_sha256": "984a32d5b943b94f71928b3b59f3553680fd6a2ac324c367c85fe03ef3ae2d42",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 15
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42ActualSourceEstimator",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualSourceEstimator.lean",
+      "source_sha256": "53d91504246f7f290c92892d190562012e609ffae5bc8adc83a3ea948e587afd",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42ActualSourceGap",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ActualSourceGap.lean",
+      "source_sha256": "bffac5b2ad9bc042d54bc5ee60fde159c0bdf6ed5e7c1ed4e3e3ba6e213135ca",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 9
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42AlignmentGuards",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AlignmentGuards.lean",
+      "source_sha256": "ab1cf4ab54605a42f9d773d670cd784f5f6f77097f0a39cb8a77220138fa46e5",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42AllRoundPacketClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AllRoundPacketClock.lean",
+      "source_sha256": "3a26ba1bf3b660faf519f4c7adb5aa55624fdba244de37178361fce22912fdd3",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 9
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 10
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42AllRoundSampleAccess",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AllRoundSampleAccess.lean",
+      "source_sha256": "0d8280314aaf3d57399a3f5966e9d64abdf1266be3036f5b7bc37f896ea4dffc",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "6000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 11
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42AllRoundTableClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AllRoundTableClock.lean",
+      "source_sha256": "f3d77cadef98111442b5474d25414d135b5543ec736b259f38e5dfffc8186d91",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 11
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42AlternatingLookup",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AlternatingLookup.lean",
+      "source_sha256": "0a5654f81be3450df5056c94448558333954c8ae3e2265649ce09c81a4f4fbe6",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42AlternatingPublic",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42AlternatingPublic.lean",
+      "source_sha256": "b96ca348ee091b9c2227d7ad7d2367e67e0c3abe6eb996544c3a16c4dae6de3f",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 36
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 38
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42CommonMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42CommonMargins.lean",
+      "source_sha256": "f7ff9d07313cf3c8ff88891eb3e3cb31837fa4580801c2974f3929cb29c1e75f",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42Compression",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42Compression.lean",
+      "source_sha256": "c4bceff6830d2d7e13890df8dff8d1eaf59ba484b0e6e8d7de605e4dacb6319c",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42DeterministicETHEndpoint",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42DeterministicETHEndpoint.lean",
+      "source_sha256": "1fe19c76ebd92bd4e9597fd68fa6ac64f17aedd229bf82755ff6d499b7687a01",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "100000",
+          "line": 19
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42DeterministicRequest",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42DeterministicRequest.lean",
+      "source_sha256": "95a8916453c9da03cc0f906e1f10c2acd01499b24173a70243abea83d593d342",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 9
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 10
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42ETHAsymptotics",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ETHAsymptotics.lean",
+      "source_sha256": "96f586bf161a1a8919e13ae5b2d03d1ccdf5cc34cc85c932c233823dcabfe38c",
+      "source_local_options": [
+        {
+          "option": "maxRecDepth",
+          "as_written": "8192",
+          "line": 11
+        },
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42ETHNumerics",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ETHNumerics.lean",
+      "source_sha256": "8f80e2cd60ed27aaa96a7b7c3cc1fe3dbe38c6831b6f32e7ba3f00f5885fc489",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "300000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42ETHPhysical",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ETHPhysical.lean",
+      "source_sha256": "8d8e9a4d0efee49979291984f9dca8f5ea29d4c597feeee9105fdecc45e011d1",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "300000",
+          "line": 12
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42ETHSourceLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ETHSourceLaw.lean",
+      "source_sha256": "49684e0b024b1be8c05d83b0cf17a54576b5bdf90678831e408d752f20f3b3ce",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "20000",
+          "line": 14
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42EncodedCostEvent",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42EncodedCostEvent.lean",
+      "source_sha256": "505a72680ed2e613d52e05c9feb379694c0dc3f3286835563f6f64c2ea91ff7b",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42ExactWidthMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ExactWidthMargins.lean",
+      "source_sha256": "2d1727bb73e3a88884620af1f791df6753b4b8f2a19c5d74a9f89fbbbecef7df",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 8
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42ExceptionBudget",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ExceptionBudget.lean",
+      "source_sha256": "12abffc9652c35f08a01912f95da5f859ec0d846d3432f997e46a05805dd43f9",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "8192",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42ExceptionMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ExceptionMargins.lean",
+      "source_sha256": "0039261a83a25797615a40c643f3f3b540c92bf06739322e760e438394185ed6",
+      "source_local_options": [
+        {
+          "option": "maxRecDepth",
+          "as_written": "10000",
+          "line": 4
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldBinary",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldBinary.lean",
+      "source_sha256": "368698523f54332861712999a9d257b35d9f5e6c31e7590c7f3fa3c0810987a2",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldComplete",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldComplete.lean",
+      "source_sha256": "544bababfe8ae80cc8057ac5bf0b75e2ee171e04a3a2c3e1909bfea9f4725ba4",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1500000",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldList",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldList.lean",
+      "source_sha256": "e018acd1ffe9f67499dc188f6cdf9a8c132973e156934c007ddd2409e5b9651d",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1500000",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldMachine",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldMachine.lean",
+      "source_sha256": "4e4e75be61236de6619c794cb98ce67a407da8cd1efbc48489ca1f6139cb8053",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1500000",
+          "line": 131
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FiniteFieldTheorem",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FiniteFieldTheorem.lean",
+      "source_sha256": "6170c671ffe9061bc105a1a505dbd61fea298467e817fc12c150473c910b5724",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1500000",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FixedEndpoints",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FixedEndpoints.lean",
+      "source_sha256": "a07191d500695eb959ff5e7e07589c6101cb9ebc099b843da33196a3b0c21f2d",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "500000",
+          "line": 15
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FixedPromiseCutoff",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FixedPromiseCutoff.lean",
+      "source_sha256": "dc6b1e53ec43286176837313ee155ed3a79b091391e9e85eb6b1e3a4cc0cc646",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42FullActualLabels",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullActualLabels.lean",
+      "source_sha256": "4b653b286642daeeb92a6b2278a6d0056de109d494b3589e8c3859027a2fc75d",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42FullAlignment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullAlignment.lean",
+      "source_sha256": "ea79de92ab3a24b56de25c9cafa1b1ed57eaa8038f888eaa1e358ee59ee08f49",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullAmplifier",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullAmplifier.lean",
+      "source_sha256": "606ea107cdcdc15e84b75003d107b6348f678fd6f550498ed7b89149d3097f01",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullCodeConstructor",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullCodeConstructor.lean",
+      "source_sha256": "34a67b0db4760670644da3ad4fb0001d2ba45b18df20037499f65fc4545df7fb",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullConstruction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullConstruction.lean",
+      "source_sha256": "79d199dd340e60b714f123784b5fd8b9e6e6348c47633d682065022b488b83f1",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2500000",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullCutoff",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullCutoff.lean",
+      "source_sha256": "0d7f81b73119067b16cef046d836e346abb27217f6060ffb773eab5c4342721c",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42FullGammaTail",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullGammaTail.lean",
+      "source_sha256": "6227e3c85e349b5a5cab3f3c762d7104024ba94bbfa8238c0b1b67bad972fdb0",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42FullIidRestoration",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullIidRestoration.lean",
+      "source_sha256": "db49b654c2b1ed3b3a9a60f20f88090bcff75d310022b9d574046eaa60e527a2",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42FullIteration",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullIteration.lean",
+      "source_sha256": "e8d162a1a1efe8fe29148bb040ce23d53bc5c77caf043ff916e96537e22bf2db",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullNearFull",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullNearFull.lean",
+      "source_sha256": "d4bb621257bf1abab6af53340ef7979cdcc7c038702dcb0f46f0c797b2209c45",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullNoIteration",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullNoIteration.lean",
+      "source_sha256": "563295ce77c8e9b80aed505330669f464d1d35d1ff765459ec95698bb9d6fdde",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullProductAlignment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullProductAlignment.lean",
+      "source_sha256": "bdc8f8a024057c9d46780d38ff14ae05689924af09cedbfd0a26cd389cbd7998",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42FullProfiles",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullProfiles.lean",
+      "source_sha256": "394056b6e144c2efc1e4cfaf0d7d5b4bd3bd48ca8f5e2fb8d1790d534271baea",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullPublicAmplifier",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullPublicAmplifier.lean",
+      "source_sha256": "a19b63b3f5a980eb68af35ac15986fa60a4935ecdf8b4b20fd35a7789da7582b",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42FullScheduleBatch",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullScheduleBatch.lean",
+      "source_sha256": "d2a0d32da7cd279ec222138629cbecac83be64f0298f56b6ae5c6cd399c71294",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 4
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "16384",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullScheduleClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullScheduleClock.lean",
+      "source_sha256": "320e452c57b2b498f60f0e935a06c740f057c0675f3de19207a0c2746c60f4b0",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 3
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullScheduleExpressions",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullScheduleExpressions.lean",
+      "source_sha256": "744fc3c7cb22dd7a000a9d2c1eb85b130f81fd70e005a0ee2fce9117e240ed56",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42FullScheduleInterface",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullScheduleInterface.lean",
+      "source_sha256": "3b652562973e64da121e41bf74579655cf9b43d2864de2613944d96077857fa1",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 12
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullSchedulePeak",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullSchedulePeak.lean",
+      "source_sha256": "3161191bbb48be4ec08af02074472bacc77fd8bc0f08a84893d5e13ab403e43d",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 3
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullSuccessor",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullSuccessor.lean",
+      "source_sha256": "cb05b0c0a5ff75ef1a7c30e2d64080321d41f6f85112c12d8bd810947e4296b1",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullTableScale",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullTableScale.lean",
+      "source_sha256": "6c405790db3bb4f9cce9bfb3b457986f43aa176b1b1ecb98a42049cd0eff997f",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullTableWriter",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullTableWriter.lean",
+      "source_sha256": "cc877bf2e47c703502f07779fcde3451161685e2229cbae8e3ae6a030dd8dc85",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 3
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 5
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42FullWidthExpressions",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42FullWidthExpressions.lean",
+      "source_sha256": "a2f8331d8a080924d181dd4d8404afec2a8194274e4027e3e59611e7b541d6b2",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 11
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42GeneralWeightedMoment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneralWeightedMoment.lean",
+      "source_sha256": "b3d1d9cc88a69597316a78ebdc1a26bd06d9fd61f604a7416f85c32e74ea0686",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1500000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "8192",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedConstruction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedConstruction.lean",
+      "source_sha256": "a6dfbd312bd07e3a1e3ad49c713e0fb21640faeac12a2f86ad11a9032fadeac1",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedEmbedding",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedEmbedding.lean",
+      "source_sha256": "deea74ce947e1e990a03117a4121257155fc4da9170f7a6d7574051776d7174a",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedIteration",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedIteration.lean",
+      "source_sha256": "dd1a53ed781b2fa254f4a429acedb45701a1b1b64fc9d237d03297f2410d05eb",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedNo",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedNo.lean",
+      "source_sha256": "fd68c067321bd9e817f220cf977c78debf9e5a23f1f3fa3257b4a1b284d92d51",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedProfileGuards",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedProfileGuards.lean",
+      "source_sha256": "fa8acfffefdd1d104c838400635bf93eb1a6f680b81c9188c31568fb7fdd00f0",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedRank",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedRank.lean",
+      "source_sha256": "d208f7a25f532e86af8e9d13aa8f1fc47154be9e1f9c973fed3207998ea311db",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedRound",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedRound.lean",
+      "source_sha256": "36891dd86a138b515897485526a8dfbf5292fb162fe51d76284765403667349c",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedRoundFromGraph",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedRoundFromGraph.lean",
+      "source_sha256": "769fb11af72b351697f1c4957ee640d5f7209d3c82e9f5811408d49015008bd5",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "300000",
+          "line": 34
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 35
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedSourceProfiles",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedSourceProfiles.lean",
+      "source_sha256": "ddb45f980bfca7c54646dd6dfeee3a9355aea4415e1e3ca8e64b6a7f7de897f3",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GeneratedThreeTail",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GeneratedThreeTail.lean",
+      "source_sha256": "c4bb27ed3f1a97010d8d5ab056034d59dc03e9537b328f0999df553de801fb49",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GraphLiteralBounds",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GraphLiteralBounds.lean",
+      "source_sha256": "d6c11f25a6bfe23bff9ef4942270ca8af7220432eb83abfbf953b0988693c4a1",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GraphNoBounds",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GraphNoBounds.lean",
+      "source_sha256": "a2a7b6fe5c7b61114762bde801f4f470cfb8c7bd7469e8d00522c0c9ca36ad41",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42GraphOwnerBounds",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GraphOwnerBounds.lean",
+      "source_sha256": "d24dd1246f70f2c5d190835ace5096d4f799c8ba6a0f92565318cc278e6467fc",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 15
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 16
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 17
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42GraphRuntime",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42GraphRuntime.lean",
+      "source_sha256": "655f1156ee10a6723bbb14e7345e5aba147e74314f20894806bdc682ebef0ddf",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "16000000",
+          "line": 13
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42HeterogeneousPairLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42HeterogeneousPairLaw.lean",
+      "source_sha256": "848b0c5d24f6e3dbff5e5a0dba13e3c8098917d74847c809e6284d12c164d854",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingBob",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingBob.lean",
+      "source_sha256": "b1243afdc961b9ff1beff4d2590357e14abb9f1eef2279d3f04fcb9c6425dd12",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingGuard",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingGuard.lean",
+      "source_sha256": "cd0a588443cc4bf663991590dbdd867e49d09835a152a1c4930ae8910d66ce27",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingHeavyFibres",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingHeavyFibres.lean",
+      "source_sha256": "7bbe5511c8d4882c1faa5d73b33fbf50bbdf93e45f82622fc5b7a98c7b5bf52c",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingSelection",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingSelection.lean",
+      "source_sha256": "b57960d5f735b3ef7d85eaa623f0c2f690ae33c504ae1730b76dca0eb789b215",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingSharpBound",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingSharpBound.lean",
+      "source_sha256": "17991f6eb61b655d80590d5e6630f05260b43958181cfde47c72d9dcd7047cd0",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingWeightedSection",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingWeightedSection.lean",
+      "source_sha256": "b499e0df1dec3cbbeb0b453acc3ffc91a32f26ba9b4a967c68292702ee1a1fce",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IncomingWeightedTail",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IncomingWeightedTail.lean",
+      "source_sha256": "318fb229f280091776044ba48487ed8010f48614c72cc3bb28b32f8ff356d549",
+      "source_local_options": [
+        {
+          "option": "maxRecDepth",
+          "as_written": "8192",
+          "line": 10
+        },
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1000000",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedAlignment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedAlignment.lean",
+      "source_sha256": "1c1992662f99d7659c2fed8965dcb262833c41a0e52e8ddd7dc79088a8fc645f",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedAlignmentProtocol",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedAlignmentProtocol.lean",
+      "source_sha256": "689257323ad5620324f4d5eaef56ddd77864d10aec35ca0f73eb3e6fcca76e7e",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedCollisionInterface",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedCollisionInterface.lean",
+      "source_sha256": "a61c93c84eabfd085f2d5a7ae6574ba0536fb940e36e4fbab61986fe93ff1d91",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedNearFullInterface",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedNearFullInterface.lean",
+      "source_sha256": "abcbaa9334abe930b10590ab090769c70d58bc432d1bc85d44dc88fe56a18324",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42IndexedSourceHardness",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42IndexedSourceHardness.lean",
+      "source_sha256": "f99ee535a352026acc12f1c3cce3d6b1ce8d8a08ffb7c464aeecf9d6eea4f779",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42JointEstimatorLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42JointEstimatorLaw.lean",
+      "source_sha256": "bef6ca7d3b3aeda3dc7496de4f99d1c5f0a5b4b31db7f0833d458b7c8ae2ba6e",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42MidpointRequestClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42MidpointRequestClock.lean",
+      "source_sha256": "a1d02ee6ca6826f5f77a54a4e25bb9986bcc8b1a787af093076975ed56291178",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42NearFullMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42NearFullMargins.lean",
+      "source_sha256": "e856a89e5d7a3cbd458ef044da897201db3610060ecb90c86fddba22750df441",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42NumericAllowances",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42NumericAllowances.lean",
+      "source_sha256": "a29b11809c0fca93be9f474069ef6a0f7658b578c507bd0eb39359bb92a7f44e",
+      "source_local_options": [
+        {
+          "option": "maxRecDepth",
+          "as_written": "10000",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42NumericExceptionMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42NumericExceptionMargins.lean",
+      "source_sha256": "17dbf6eeedc91258dbcd84cfa3cbde19fb80db61c7fc8ee52ec96fdfc9613a3b",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 4
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42NumericPowerMargins",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42NumericPowerMargins.lean",
+      "source_sha256": "1a8e5fb8bde355aa628bb3136a9a1c6d4e8ce9c1390bb0abb9107dc485cc64ef",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42PacketClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PacketClock.lean",
+      "source_sha256": "67d9597faff629aeb306c3d34bfdc775a9a58bc738263cc09d2fd966d39d9300",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42PairedInterface",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PairedInterface.lean",
+      "source_sha256": "f0c6989c72b39fab1bc1789cfd45adbf5145bae05616e12e06805672c7a4ec92",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42PermittedExtraction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PermittedExtraction.lean",
+      "source_sha256": "2af4be27f419ad8bbb1c0f2dd043a6808ec9784b429d125ce68f3a42eef43d64",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42PhysicalRawTableClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PhysicalRawTableClock.lean",
+      "source_sha256": "e514cb07202b357de40b24e8ec51338c5e6f00fbdaca69e4ae994d1833ce67ef",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 3
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 5
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42PhysicalSampleClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PhysicalSampleClock.lean",
+      "source_sha256": "0a5e59808bf8e43d1dc1869a233d4fc7daf7a6ee5fba5ced8d1ea70d4ea08db9",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 6
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42PrintedCompression",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PrintedCompression.lean",
+      "source_sha256": "c9a9012be60846735ba278a332d000def7b4360058bab95941e1fad31338d245",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42PrintedGraphGap",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PrintedGraphGap.lean",
+      "source_sha256": "ae4ba8ee13dc15a1e482b3a30b64b372dbe656a03b6208be482326213ed1c190",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42PrintedLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PrintedLaw.lean",
+      "source_sha256": "ee4fea32fa60b124dcb99ccff8008d76493fd285c34d2f76527ba211ad358116",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 5
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42PublicCutoff",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PublicCutoff.lean",
+      "source_sha256": "e4c0a50cb35f8a7455c5737718a21ca2faae390b31489ca807f973d114072af3",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42PublicSchedule",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PublicSchedule.lean",
+      "source_sha256": "2b220f42aa54935da05cadc52165105365ae009941492fab9be06cfc619ab9b1",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42PublicSize",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42PublicSize.lean",
+      "source_sha256": "9d2e09d8cb24c42f9aec439e65cde2649eaaef7295c0af677aad786d54370725",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42RandomPermittedFamily",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomPermittedFamily.lean",
+      "source_sha256": "08f5624b0257d5f8db9a89329a3ac47e53bc0dbb00fc5b889a4f55fc9ee69d6a",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedClassEndpoint",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedClassEndpoint.lean",
+      "source_sha256": "76521bc64384d4e82d882f1c97e02219b93433146669ea9a433e2fafdaed5adf",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 16
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 17
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedETHArithmetic",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedETHArithmetic.lean",
+      "source_sha256": "4266d9b8e97b3d05b669d735347f713264b83900e6b9682d15f525b20cb680a2",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1000000",
+          "line": 6
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedETHClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedETHClock.lean",
+      "source_sha256": "7d3c275b4c702a49b89d97e52dcc878a95a6f509bab9b0caf213a32512913a6e",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "200000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "8192",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedETHCutoffs",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedETHCutoffs.lean",
+      "source_sha256": "6edd640dca5d73bef2058caf95362e049152e4a9e19ff2ff94548387b000464b",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 11
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "8192",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedETHFits",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedETHFits.lean",
+      "source_sha256": "f643115bc0e6ad60ac04f495b3db132be4b413403a648e13235e32d94b4c842c",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedMachineClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedMachineClock.lean",
+      "source_sha256": "ff0e6f37074df897d8f2a426e5d85a1fbcedbd7dafbf8c9167f1d1b88d6e6dad",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 13
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 14
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedMachineLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedMachineLaw.lean",
+      "source_sha256": "c7914663a21e8ba60b1f5a354d5028866d93ae76833411e6c800491faadd0267",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 13
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 14
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedPhysicalClockFits",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedPhysicalClockFits.lean",
+      "source_sha256": "ed91c0f15ea12938263661be4555de8d16affa20dae28ea20ab7d2c7d3c6e4d3",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 13
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedRoutedLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedRoutedLaw.lean",
+      "source_sha256": "22521358456eface8e9a23f2f6d18007f45c158b6502dcb13877125f4728f6c5",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "300000",
+          "line": 14
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "16384",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedSourceData",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedSourceData.lean",
+      "source_sha256": "96e482f6a190a72551db8efa03d77f6c2a834d3acdf0c350666734d415999cf4",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 13
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 14
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedSourceLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedSourceLaw.lean",
+      "source_sha256": "171e5b95b7697eb22bbb7c254e33ff5a3edfaf53564f443b53990b422ebadf68",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "6000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 11
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedSourceTests",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedSourceTests.lean",
+      "source_sha256": "20e451e78f771e50a81f7347b600cd3156d08afddf7a1312db1f6800dadfbfa9",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42RandomizedTapeFits",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RandomizedTapeFits.lean",
+      "source_sha256": "d776603792d858d297528539d08ce1790897b53176bf62ab0c2c091ec387aa60",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 8
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawClassifierClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawClassifierClock.lean",
+      "source_sha256": "3f803f295a16f2fa30ffde380a35fb61d3f03b95cccb9b1592c253fd0d38948a",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "16000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawGraphParameters",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawGraphParameters.lean",
+      "source_sha256": "6d9ff09d9b938cd2998861d39d22ed17fb69b311f6f574e346dbeb7b17b8460c",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "2000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "16384",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawMidpointRequest",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawMidpointRequest.lean",
+      "source_sha256": "8323f3eee039d6ce0474eec144101593922eaf5d8649e7ec56e136d61a2856e0",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "16000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawPublicRepeat",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawPublicRepeat.lean",
+      "source_sha256": "471c1ff8e2825722be75c920df75c376e17c5678ddabe7428334ff2f0bf44bf6",
+      "source_local_options": [
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        },
+        {
+          "option": "maxHeartbeats",
+          "as_written": "12000000",
+          "line": 9
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawPublicRepeatFields",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawPublicRepeatFields.lean",
+      "source_sha256": "6ad13b14c351d70aff7e54e806744c2aab66aff2e3ee8d8c05396233c136b342",
+      "source_local_options": [
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 7
+        },
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawRequestPacket",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawRequestPacket.lean",
+      "source_sha256": "38358a45483d83b3a6682746311a86e7a5f1773cbe20f963744811ebc98974f9",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "20000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawRequestPacketTypes",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawRequestPacketTypes.lean",
+      "source_sha256": "6f3aa2f458630319b965aaae0201cfa5f54ca25e7345e2e7948e0f89836a7d53",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "16000000",
+          "line": 5
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 6
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawRequestSemantics",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawRequestSemantics.lean",
+      "source_sha256": "c02dad187c37ff85b603842fe38723f23b25a9c6b6200f9def8a1e2a2a9c6503",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 12
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 13
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawSamplerClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawSamplerClock.lean",
+      "source_sha256": "8a39a793874ffeca4d6ea459a97ac8636e7fd33c5f1c2ca4ebb4b87471749bc6",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 4
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 6
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawSamplerJoin",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawSamplerJoin.lean",
+      "source_sha256": "a061478350889c6ae27a3b252f25f6ecdb6ff701b1315126081305c393f7d297",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawSamplerOutput",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawSamplerOutput.lean",
+      "source_sha256": "b3205c1278bf576767f192efaee8aaaf4d78fac0211c4c611c92dbdb625e68ca",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 2
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 4
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 5
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RawTableClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RawTableClock.lean",
+      "source_sha256": "bb974d18e902662e186e513333fe2ee944544b3c3fe23c5564b92ff556423eef",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "3000000",
+          "line": 4
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 6
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RestorationGuards",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RestorationGuards.lean",
+      "source_sha256": "5e692dd5abc8b5c87c828d515929a11887e744d1f2bdf22881cd862de1aca21e",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeDyadic",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeDyadic.lean",
+      "source_sha256": "7c7cf2c83ba8a46c04e93d77d999dfbe66cea5b78261283a9d14210c51766ef5",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimePacket",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimePacket.lean",
+      "source_sha256": "235a70443cce98dfc241ca4edc6f8d2689795c23738831d38e643c3c1bfb6c80",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 13
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimePrefix",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimePrefix.lean",
+      "source_sha256": "62dea65aed03f10789534bfe405a71c21eaa4a0ec2bc86280d8d1aa010bccc4f",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "16000000",
+          "line": 14
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 15
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeSchedule",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeSchedule.lean",
+      "source_sha256": "7d52e8d4546d1d21f3416d2d8a7ad8e259f14c44fb720f2e2e3e78d9283fa9a7",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeSeed",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeSeed.lean",
+      "source_sha256": "3ecd34e50ca0ca0f2bf10c14f6a2e9a415e4d27d2c5a5f3dec052577b777db96",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeSelector",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeSelector.lean",
+      "source_sha256": "d2f50a678e404d29074af6f4a21b2ff2b29fbe0d21c7cd9725267906e87ae560",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 12
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeSource",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeSource.lean",
+      "source_sha256": "bcb459a8d552e32a43d07fd8fb32397a665b434af69768a5876f2ac432559afb",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "6000000",
+          "line": 13
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42RuntimeWords",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42RuntimeWords.lean",
+      "source_sha256": "ca02f914ce1d782371a6d37c9a950ceab119a1f0361f0c429ea7d23e792fecf5",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 12
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42Schedule",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42Schedule.lean",
+      "source_sha256": "8ec1afe59d8b716ef5d2d804b8c6dc334529b1508aaa13ca9ffd3498999944b4",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42ShapeClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ShapeClock.lean",
+      "source_sha256": "8db2439712e853e17ccf36e54df3e59264178de63daf9e964aaed46f7659ec82",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42SourceClassifierMachine",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceClassifierMachine.lean",
+      "source_sha256": "113ed63fdf25e421e1defce98092d56248ed747cfe210e58cc58e20740487e78",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "20000000",
+          "line": 5
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 6
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 7
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42SourceClassifierResources",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceClassifierResources.lean",
+      "source_sha256": "c93622bf1216ea0cbfd0b4f91212e54fbc6fcd8d45f8ccc15105104d29783155",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "12000000",
+          "line": 8
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 9
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42SourceClassifierRun",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceClassifierRun.lean",
+      "source_sha256": "a6269128e871e34c0a847c8f190cf22bc72adca7b45deb5fcd2605260501a61c",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "20000000",
+          "line": 4
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 5
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42SourceFacing",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceFacing.lean",
+      "source_sha256": "28f7dd22e4b554071d2803f7cebb02ac8129d080dc8e53d563566a0c5805be66",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42SourceGeometry",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceGeometry.lean",
+      "source_sha256": "d71906ebc999a844e1a86e894d8000954d0bf6db8a3344aab4b2c82cc386c074",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1000000",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42SourceNearFullGuards",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceNearFullGuards.lean",
+      "source_sha256": "2fe32645be37ee79b3bfb72969471f71f6edd3c7696e9d64dbbffd95f66b0637",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42SourcePhysical",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourcePhysical.lean",
+      "source_sha256": "bdb11464652fa1026f8c45dc7cfa3f0367a2a68c2b43716535768b3084998751",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 12
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42SourceWidths",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42SourceWidths.lean",
+      "source_sha256": "03ab1154ea0ffcf2dfd6e66a4980299427ed7690d1a3f0009e460158c8f5f4be",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42UniformReduction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniformReduction.lean",
+      "source_sha256": "496708ac72acdbb73be9cacca78b47fef4ca157e2303ec871e2db6d9f4f38847",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "6000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 11
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42UniversalFormatter",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniversalFormatter.lean",
+      "source_sha256": "e41e86f26c82730a52fe034cf4619a9200b02ed2843e2554f9af49dc911b72c5",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 9
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42UniversalPrefix",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniversalPrefix.lean",
+      "source_sha256": "2d0cfab3b7bb0ddf86f294cf1caa175acad42e31d199eda600c6f71fd3bafac1",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 9
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 10
+        },
+        {
+          "option": "maxHeartbeats",
+          "as_written": "200000",
+          "line": 16
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42UniversalReduction",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniversalReduction.lean",
+      "source_sha256": "e934d8efcbe66f4127db69dd9babf194555931c1bc0b03f0ce688890515ca6eb",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 8
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 10
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42UniversalRuntime",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniversalRuntime.lean",
+      "source_sha256": "3c43e8c6780095d8aa3b633b9b75ef2ebe6d5b6d45212f1b08cca132229e6f09",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 9
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "65536",
+          "line": 11
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42WRawFields",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawFields.lean",
+      "source_sha256": "6d7b5e1df88f719579bbc10eddb84bca637ce8f40be21b4f27bd0a768ac4125f",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "12000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 11
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42WRawFinal",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawFinal.lean",
+      "source_sha256": "3e5bf7fee2a4c88f810c81aa47d4113db6f0b93239381ab44d691d1189be5e44",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42WRawInitial",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawInitial.lean",
+      "source_sha256": "3b733e9ff9fc28a6a340c43f054146a483a246d8127544e83be0738859a4fe08",
+      "source_local_options": [
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        },
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 9
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 10
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42WRawInput",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawInput.lean",
+      "source_sha256": "d1e375877429e8028d985600f19b5be25c495bfc66646f569e1d4c000f0e67dd",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "12000000",
+          "line": 7
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 8
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 9
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42WRawPacket",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawPacket.lean",
+      "source_sha256": "d6231b113ab2c40bf172feb10334fb47226c5bc3a2915e2db4fb13010996b413",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "12000000",
+          "line": 10
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 11
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "32768",
+          "line": 12
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42WRawRun",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WRawRun.lean",
+      "source_sha256": "01c4b0ade6af84e9b067bb2799d66d4431299a36675a08729582e1b0a0546587",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "12000000",
+          "line": 11
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 12
+        },
+        {
+          "option": "synthInstance.maxSize",
+          "as_written": "16384",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42WeightedMoment",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WeightedMoment.lean",
+      "source_sha256": "ebb907f1ea28971b1738ccff098207506f69729cf1f0b140a8eb90702dca5521",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "1000000",
+          "line": 11
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "8192",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42WidthMarginsChain",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WidthMarginsChain.lean",
+      "source_sha256": "7f330501d8b616c31ed5b04ed46b85e60a75582a84b43aeaf4cbb12473e60683",
+      "source_local_options": []
+    },
+    {
+      "module": "CurrentAdditive.V42WidthPrimitives",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42WidthPrimitives.lean",
+      "source_sha256": "4b8ca2074eb4fadea23f08ad426470206cb2a64de1514ccd4475ccdc8d0f06dc",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "8000000",
+          "line": 13
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42ZeroArithmetic",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ZeroArithmetic.lean",
+      "source_sha256": "324542e8957ba1d88bbd1b53ec28c2df2455e0635016b633e68ccaa794130fec",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 12
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "module": "CurrentAdditive.V42ZeroSamplerClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42ZeroSamplerClock.lean",
+      "source_sha256": "b0374047f10b336a45c5b2c8f9b82a8194bb406434579645a7b391aa2b6943f2",
+      "source_local_options": [
+        {
+          "option": "maxHeartbeats",
+          "as_written": "4000000",
+          "line": 8
+        },
+        {
+          "option": "maxRecDepth",
+          "as_written": "32768",
+          "line": 9
+        }
+      ]
+    }
+  ],
+  "gate": "Canonical CurrentV42 build/audits must succeed under these exact settings; optional cold replay is separate. Private compiler overrides establish neither gate."
+}

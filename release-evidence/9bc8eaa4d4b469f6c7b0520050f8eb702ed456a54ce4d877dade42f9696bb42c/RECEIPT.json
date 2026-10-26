@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "status": "accepted_complete_source_correspondence_relative_to_explicit_premises",
+  "reviewer": "/root/v42_formal_core_diff",
+  "time_utc": "2026-10-26T13:09:15.182385+00:00",
+  "scope": "All66 current v42 formal blocks plus8 construction/preservation checks, including full source scope and actual-object joins.",
+  "all_74_semantic_reviews_accepted": true,
+  "formal_status_counts": {
+    "verified_correspondence": 53,
+    "definition_correspondence": 11,
+    "external_input": 2
+  },
+  "construction_status_counts": {
+    "verified_correspondence": 7,
+    "external_input": 1
+  },
+  "accepted_provider_records": 399,
+  "distinct_accepted_declarations": 249,
+  "component_count": 161,
+  "pending_ids": [],
+  "blocking_findings": [],
+  "qualifications": [
+    "Supplied Dinur/BOT and selected hypergraph source existence/fidelity remains external and author-owned; literal-CNF hardness and deterministic/randomized sparse ETH are explicit separate premises.",
+    "Reviewer contributed full-product/source-facing proofs; this pass independently checks inventory/integration and scope joins; separately bound reviewers provide component proof independence.",
+    "False all-widths-power-of-two prose at source line4930 is nonblocking for the direct bit-complexity proof, which handles q1=s-2 separately.",
+    "Compilation/audit evidence is root final161 plus independent component replays, not a fresh complete cold build by this reviewer."
+  ],
+  "approved_external_boundaries": [
+    "DinurReduction",
+    "BOTReduction (booleanOccurrence D)",
+    "Selected GLSourceDraft G with explicit G.L=EncodedCNF.Language for strict-Yao/literal-CNF specialization",
+    "Visible NPHard EncodedCNF.Language where hardness or NP-class closure is concluded",
+    "Distinct DeterministicSparseETH.Holds and randomized sparse-ETH assumptions in their respective results",
+    "Dinur/BOT external record fidelity remains author-owned unresolved per ROOT_CONTRACT174–178."
+  ],
+  "external_source_fidelity_certified": false,
+  "publication_or_human_approval_granted": false,
+  "proof_coverage_accepted_for_recorded_scope": true,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "canonical_path_projection": {
+    "binding_sha256": "28b923194fdf30e130efec1c6a8669addd6f0da88fab4b6da49b87607b5c1815",
+    "original_map_sha256": "fae1a9981e182f435daf4bf13b399b832770464e77dbd0f49545f5aa82e8156d",
+    "canonical_map_sha256": "609ec2973ac3807af9201b5813f596e1e0343ce40061f3a681b4c1c7125abf59",
+    "path_only": true,
+    "leaf_changes": 1667,
+    "declared_relocations": 34,
+    "declared_files_verified": 51,
+    "source_lock_pins_verified": 83
+  },
+  "admission_readback": {
+    "all161_proof_text_matches": true,
+    "trailing_whitespace_strips": 14,
+    "resource_changes_match_independent_replay_flags": true,
+    "unexpected_translations": []
+  },
+  "artifacts": [
+    {
+      "path": "papers/randomized-additive-hardness/versions/v42/source/main.tex",
+      "bytes": 266241,
+      "sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78"
+    },
+    {
+      "path": "private-provenance-refs/aac9332481848e735228dbac6c03ce44e95c99105cc167ee4b7e951b1f235642/V42_STATEMENT_MAP.json",
+      "bytes": 1455530,
+      "sha256": "fae1a9981e182f435daf4bf13b399b832770464e77dbd0f49545f5aa82e8156d"
+    },
+    {
+      "path": "manuscript-v42/V42_STATEMENT_MAP.json",
+      "bytes": 1626223,
+      "sha256": "609ec2973ac3807af9201b5813f596e1e0343ce40061f3a681b4c1c7125abf59"
+    },
+    {
+      "path": "release-evidence/28b923194fdf30e130efec1c6a8669addd6f0da88fab4b6da49b87607b5c1815/PORT_BINDING.json",
+      "bytes": 15959,
+      "sha256": "28b923194fdf30e130efec1c6a8669addd6f0da88fab4b6da49b87607b5c1815"
+    },
+    {
+      "path": "manuscript-v42/SOURCE_LOCK.json",
+      "bytes": 21921,
+      "sha256": "a02a95dc58599688f5940916aace950cefd5a1bf58dce4ed11fcdba9e2a4aa47"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v42/ADMITTED_MODULES.json",
+      "bytes": 127964,
+      "sha256": "87dc3bbdabb9bae43a4835289b194eb5387b403062a5bc9c1b709a537adecd33"
+    },
+    {
+      "path": "private-provenance-refs/5cc0f406d23833cd3d8013e72b3147949d7f3267ae38be5b8b630b4ead5f12fd/COMPONENT_BUILD_161.json",
+      "bytes": 2221,
+      "sha256": "7b0c7a6a6da8854e30b3478c0bf0cea4e09014996c2647b808e7cbfd81739dce"
+    },
+    {
+      "path": "private-provenance-refs/43fb8ff293cbf68c917e37cfccc318c4e3b765975f9ea77f56cd537ecdb90a4b/CURRENT_IMPORT_CLOSURE_161.json",
+      "bytes": 2620666,
+      "sha256": "4e5c4e483a4b2906865825afc0055ddad34be1d3d44d6a72f929780dee52396c"
+    },
+    {
+      "path": "private-provenance-refs/878cd20064a6958cc00e67866197c7315d6740f5685722a24565d20b38a97c46/REVIEW.md",
+      "bytes": 10083,
+      "sha256": "eea18d987e711ca8c7719b2b45053c61c7098363666464d05caad93c06385bc6"
+    },
+    {
+      "path": "private-provenance-refs/46ba2812a4c828afd7ce665410ca241d120e8fa1b58658e18797141ecfee9d89/SEMANTIC_CHECKS.json",
+      "bytes": 291520,
+      "sha256": "468f2b58e1c7b7d91d5a77cc3598f6abe28cf9e9799502aa46234c48aaaffe5d"
+    },
+    {
+      "path": "private-provenance-refs/1a0e5f06b20b24cc76c9d220e188b03a164ff7b3a238e400058e1e35ab3dc980/INDEPENDENT_SOURCE_PARSE.json",
+      "bytes": 17155,
+      "sha256": "51472a3d76c03b7dfb2377f78d31c86a9cca0723d62b0b4aa1b14fafffd97688"
+    },
+    {
+      "path": "private-provenance-refs/b74b8b7e7a3a463995ffb8c6eb734b0da60e275512b152d8242893b59a75272d/MAP_INTEGRITY_PROGRESS.json",
+      "bytes": 588,
+      "sha256": "fe6973a7edb069b0f8144402e6e0152b4982f8e0c5cf4230a6fa0777de58faa6"
+    },
+    {
+      "path": "private-provenance-refs/be501d26a981781498d51c1ade99dfc88ca5148c6fb0b573b9dfee5c4209942f/CANONICAL_MAP_INTEGRITY.json",
+      "bytes": 588,
+      "sha256": "60d378e8ec52ee95091c6fbaf2fe7734f6994829f0d058e7a44febfbaff98b41"
+    },
+    {
+      "path": "private-provenance-refs/1fdd3ede654c13c71bf8a078c7ecc732791c65ea648b50ea95d4f42bad7ddc57/ADMISSION_READBACK_LATEST.json",
+      "bytes": 166010,
+      "sha256": "e91f1dd044579e708232e5915ab7c406c2496e03c2e5d50a4408ee26327dfd15"
+    },
+    {
+      "path": "private-provenance-refs/66866eb44309d79b78160f3097db2ac84b521d67531a5209fe3b1fcda2c2e612/OWNER_PORT_READBACK.json",
+      "bytes": 26516,
+      "sha256": "a0e999cd061e644e9ea5c84efa16793a7798a938ed2e4a04b90a025ec4c437a8"
+    },
+    {
+      "path": "private-provenance-refs/9655f206d47aa39a163915cbae5fc6b30f4b7426de57844b97a2fb55f7dcc891/FULL_SOURCE_CONSUMER_RECEIPT.json",
+      "bytes": 1850,
+      "sha256": "9159e010d6a76a10c13ee5f0dce23bd7c459ad69e452cf412b61881e7bc0f2d1"
+    },
+    {
+      "path": "private-provenance-refs/37366b19c5146fe2c249296acec4047aafe82ba90194822440a500bf5b39f2ab/check_map.py",
+      "bytes": 4357,
+      "sha256": "7109f5fd3e5ee8a3583d8b74e215473e0aaf59a182f554ce383a97c42f5023ae"
+    },
+    {
+      "path": "private-provenance-refs/ce82e136a25e2da1ce1189d07e49004b6fa39bb85c7aca318a23b9d7a151acac/check_canonical_map.py",
+      "bytes": 4383,
+      "sha256": "85559a433b0e7754f45d54efb4846187d9b0f6d4918cb42f6b313c4cc1f8512c"
+    },
+    {
+      "path": "private-provenance-refs/f3e5035157c723cf46cbcb7353dcf98e85b1803c7160211b732298a01c6bfc37/check_admissions.py",
+      "bytes": 3157,
+      "sha256": "f5b546d7bbb88a8eb84878fc7b95557b8239bb75b9ad595a3ec784086df15961"
+    },
+    {
+      "path": "private-provenance-refs/0c78000293848f6a26596a6c48c0cd5ed2c484852541bba64dd8fe2cb216b310/verify_port.py",
+      "bytes": 3991,
+      "sha256": "895e2cac157c40a4f07c093c3e49dee2204870aa5aee7de273b8b5318f7c83f0"
+    },
+    {
+      "path": "private-provenance-refs/a00c902213212fe2f1e844ca9c30f0f6cdb20cdbc9df130e9922cc23279251dd/sixteenth-production-build.log",
+      "bytes": 11906955,
+      "sha256": "fff782dc9588f66cf3709192e53c06f9746042811a12b01fc35d91032157b9ec"
+    },
+    {
+      "path": "private-provenance-refs/fdcda32f5736566be207718795f7c8c22c9c4db04128c9a6a7224a49950ccc71/production-audit-161.log",
+      "bytes": 79,
+      "sha256": "8609c814a619fc15164c84fd6e934d0606e9b05d93729ee69ede8503504bbcfe"
+    },
+    {
+      "path": "private-provenance-refs/7e32d20ffa0236a16982715112abcbce3d38ecd69e8f95e52f722615f194b5df/raw-production-audit-161.log",
+      "bytes": 3087303,
+      "sha256": "e8c1bb3dabdb9ded3fb6876e5bd790e061cd138b1e64f764cac71422054b0fb4"
+    }
+  ]
+}

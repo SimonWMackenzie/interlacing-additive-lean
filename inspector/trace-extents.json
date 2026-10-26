@@ -835,9 +835,9 @@
     "id": "lem:generated-schedule",
     "page": 66,
     "x0": 0.1094477161083346,
-    "y0": 0.4788918543343592,
+    "y0": 0.5046898427635732,
     "x1": 0.8873084573184743,
-    "y1": 0.6414738664723406,
+    "y1": 0.6707554056186869,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -848,9 +848,9 @@
     "id": "yao:finite-field-list",
     "page": 68,
     "x0": 0.11177940617978963,
-    "y0": 0.6831108632713857,
+    "y0": 0.7173267711292614,
     "x1": 0.8859378590303308,
-    "y1": 0.7811102048315183,
+    "y1": 0.8153261126893939,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",

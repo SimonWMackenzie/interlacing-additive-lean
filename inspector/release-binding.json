@@ -3,16 +3,16 @@
   "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
   "archive_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/archive/bff03274f57796d986e788f95e0d553a71312936.zip",
   "input_hashes": {
-    "paper_source": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
-    "paper_pdf": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
+    "paper_source": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
+    "paper_pdf": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
     "paper_aux": "e7c299fe2d441d30cf8940466850ecd69587141583653ceee1ea8c1f6e2c713d",
-    "mapping": "17a755e684c35fa8aa1bb63de4ccbae7a78abe8dd8cf6c07288a5212fce9f3c1",
+    "mapping": "f819c6385b5faf93eb71fc7f145b2867543f7803504e964477c20d3982d4b8a3",
     "module_inventory": "4e5c4e483a4b2906865825afc0055ddad34be1d3d44d6a72f929780dee52396c",
-    "endpoints": "6bea5ffc5075af736f729fd766eb8c804a0f5277c00156c27806892acd7758f2",
+    "endpoints": "9cbc4d51fda372f4c4f2980b0d50f5d0e1ee42da1a61d22d912e4ccc26318e6f",
     "explanations": "27163571eba4cf2e92587dd27fe1d97e972e56bd900069c074826357c4a2ede1",
     "references": "6b94fecc586f68128b2e136f1fce08e474095ee9dd11235c86fba91f0d70f878"
   },
-  "bound_mapping_sha256": "2d717d36ec8382588544477198955f19aaeb1eeea82d867f9a0716d5ad8ca3bc",
+  "bound_mapping_sha256": "f819c6385b5faf93eb71fc7f145b2867543f7803504e964477c20d3982d4b8a3",
   "build": {
     "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
     "canonical_checked_build_complete": true,
@@ -24,13 +24,32 @@
   },
   "publication_performed_by_runner": false,
   "mapping_transformation": {
+    "base_bound_mapping_sha256": "2d717d36ec8382588544477198955f19aaeb1eeea82d867f9a0716d5ad8ca3bc",
     "changed_fields": [
-      "lean_archive_url",
-      "verification.build",
-      "verification.input_mapping_sha256"
+      "paper.source_sha256",
+      "paper.pdf_sha256",
+      "verification.source_sha256",
+      "verification.scope",
+      "verification.editorial_amendment"
     ],
-    "archive_url_before": null,
     "statements_unchanged": true,
     "statement_records_sha256": "8aa5bed32004b018a4c59d167a9223999cd5911745020cd441433276fc5a3952"
+  },
+  "editorial_amendment": {
+    "kind": "single-passage editorial correction",
+    "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+    "original_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+    "displayed_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
+    "original_pdf_sha256": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
+    "displayed_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
+    "old_text": "Hence the cutoff is effective and valid at every larger size. Every width is a power of two with exponent\n$O(L)$, which gives the stated bit complexity.",
+    "new_text": "Hence the cutoff is effective and valid at every larger size. All widths except $q_1=s-2$ are powers of two\nwith exponents $O(L)$; forming those powers and subtracting two from $s$ gives the stated bit complexity.",
+    "exact_replacement_verified": true,
+    "formal_statements_unchanged": true,
+    "correspondence_records_unchanged": true,
+    "proof_sources_unchanged": true,
+    "new_lean_build_performed": false,
+    "prior_release_binding_sha256": "747d758cf95d0a9ae72da426d8f94d571ce9f1c7744296176822b47bca8430b1",
+    "note": "The original checked-build and full-coverage receipts retain their original source identity. This exact editorial amendment connects that source to the displayed manuscript."
   }
 }

@@ -1,7 +1,7 @@
 {
   "files": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "coordinate-verification.json": "8013adf998bb89b136a9eda7913896f89b490e1118d063074f509adca18d81f8",
+    "coordinate-verification.json": "891456b71bcedcf8b42ec617fc07f24c3da5906dd3acb75c8e89f318d4e58823",
     "extras.css": "cf0e861dc77e400e37af412fecc4640ebacc5376e6909b07a39cdb38a4d13eea",
     "extras.js": "c1797a6d30758919887f44e5f5aaa85e8794c32eb33a52f30ba9356f6f88b916",
     "index.html": "5af2c7872de35590035665c60893d84fad9bba3be830db2be901b91f3a91ea83",
@@ -5199,7 +5199,7 @@
     "lean/Workspace/Types/QProjection.lean": "48276146515509b57b2583bba53fa384241fbf2ef4bd7f16508f47276d8dfebd",
     "lean/Workspace/Types/Subgame.lean": "49c8f92a074de0230f1fc471df8a12a7d451b545b960d2118d9b555edd6cf7d4",
     "lean/Workspace/UpperBound.lean": "09ea6979e68710a5353b3d305935a6d67e0990cdeae7d965df13432c343bb3e2",
-    "main.tex": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+    "main.tex": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
     "pages/page-001.webp": "81626d49160f050ff7c32eeb80eb9f6d75a76bed011fdb83579f0f23a7b89b49",
     "pages/page-002.webp": "ecc795f4b94ca3b10f88ffe7145086947794a7da0e57db04c21521768293df30",
     "pages/page-003.webp": "3faff681849b978bbd9121c318db85c6257e7d3010f5a168d96cf356ce8c6b21",
@@ -5265,19 +5265,19 @@
     "pages/page-063.webp": "fae5a98b3e8cf53b59120ff59562a8fab1b98c7c3ad60d064408e6176da9b589",
     "pages/page-064.webp": "dcef7cdc450b7f7d92749cc59ba796d0e9ddd817591bd9dee0c954092f54b08a",
     "pages/page-065.webp": "1108d37a0bbb5760fe67ee5cbbd7879f5371d1df987fee986b32f01e2215a86a",
-    "pages/page-066.webp": "74ab56b8be744777b098f91b0bad8d0b51c09c38336c60a3e274c903af80cad3",
-    "pages/page-067.webp": "d06e0cc5866c9a71b15702a9c2575aec6ec77eb7c7c89a0ef6f722b7f1b22a33",
-    "pages/page-068.webp": "a47370c959e2fd86b3720d686031c8ed5a66dd088902108c03961af4b6cd34b8",
-    "pages/page-069.webp": "4861671fc9e4215756f8bef5b7f77d0355bed58fe15d09ea3b5524320ae6a25a",
+    "pages/page-066.webp": "d1e25d65271928743c31dfdbb1c186aae48f3544d962e32a17bcec9326625a02",
+    "pages/page-067.webp": "6d057b9593dced1b50f9cf137be1376e1cd2abe5b0f1b9d03aaa71e475a7b1d8",
+    "pages/page-068.webp": "7ed70fe31e847b59d32ac59afbe5dd288a85660496b64a87bf43fa1dc6ce48c7",
+    "pages/page-069.webp": "716a9fbd0bb56517863a461e676bcb3a8aac4d00c5022c4dec4ef4b866e99ad0",
     "pages/page-070.webp": "7f76bccf6a770f527b73191c0e788d6e8aaf6d257ab75bb756ba5d24c7f273be",
     "pages/page-071.webp": "4dbd9160431416767bd7bbc50efcfec07811f4b37df7cc246483d67db6f2f93b",
-    "paper.pdf": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
-    "payload.json": "a33bddcc20d76529b2d3637eb2a3bc5d9728148fe64e72fef3306ce4d4a52529",
-    "payload.json.gz": "6621d2e8167fcd805dcbe2efeee828164195ca386e785d5ed2b446a6c4901bf4",
+    "paper.pdf": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
+    "payload.json": "58a28d37d0758ca7b4a5359aa11768b0b6469747e28d57a3453b8ba723232196",
+    "payload.json.gz": "fc96a2abdebba25883c9e6c8dbb0feab2d13f065911691053a314c80e2aae922",
     "references.bib": "6b94fecc586f68128b2e136f1fce08e474095ee9dd11235c86fba91f0d70f878",
-    "release-binding.json": "747d758cf95d0a9ae72da426d8f94d571ce9f1c7744296176822b47bca8430b1",
+    "release-binding.json": "e2b34853617ec8fe6c9cf4c4a9b1dd5c86daf5d1081cec304f77c818b27f7275",
     "source-manifest.json": "9c56165cfac8b19340d94fd95eed0cf0143d64d8d7458e9093b5b9e414a34604",
-    "trace-extents.json": "a16970c9230e48cfc0aa96fab0e35a52d1ee9272da810dab3346a6e84a2e7384",
-    "verification.json": "9fa9f8883630a73a38e81d624015591d370fbbdf1d39e070e147e0bdbd5d7134"
+    "trace-extents.json": "10ad5ea2e527a153b818e3d558485ff6a27d0d9fcb7b203e7ef57cba850395e5",
+    "verification.json": "b23ae94cde5cd5bc7a9fe6897cd62e5f35cc8ac0caf8c4fc503ccb18eeb5881a"
   }
 }

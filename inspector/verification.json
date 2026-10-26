@@ -1,11 +1,11 @@
 {
-  "scope": "Complete v42 statement correspondence relative to the explicitly named source-theorem records and complexity assumptions. All 66 source blocks and eight construction checks have reviewed provider links and recorded imported-build authority; final publication identity/audit gates are separate. The displayed PDF includes the correction that q1 = s - 2 need not be a power of two. The theorem statements and Lean sources are unchanged.",
+  "scope": "Complete v42 statement correspondence relative to the named source-theorem records and complexity assumptions. The displayed manuscript includes the width correction, the H4 explanation, and the weight clarification. Three alternating statements now use uniform label counts: one specializes an existing arbitrary-weight theorem and two restate existing uniform bounds. All provider links and checked Lean sources are unchanged. The original build receipts retain their original source identity; the presentation amendment is recorded separately.",
   "axioms": [
     "propext",
     "Classical.choice",
     "Quot.sound"
   ],
-  "source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
+  "source_sha256": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
   "build": {
     "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
     "canonical_checked_build_complete": true,
@@ -17,25 +17,57 @@
   },
   "input_mapping_sha256": "17a755e684c35fa8aa1bb63de4ccbae7a78abe8dd8cf6c07288a5212fce9f3c1",
   "editorial_amendment": {
-    "kind": "single-passage editorial correction",
+    "kind": "weight explanations and uniform counting presentation",
     "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
-    "original_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
-    "displayed_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
-    "original_pdf_sha256": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
-    "displayed_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
-    "old_text": "Hence the cutoff is effective and valid at every larger size. Every width is a power of two with exponent\n$O(L)$, which gives the stated bit complexity.",
-    "new_text": "Hence the cutoff is effective and valid at every larger size. All widths except $q_1=s-2$ are powers of two\nwith exponents $O(L)$; forming those powers and subtracting two from $s$ gives the stated bit complexity.",
-    "exact_replacement_verified": true,
-    "formal_statements_unchanged": true,
-    "correspondence_records_unchanged": true,
+    "previous_displayed_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
+    "displayed_source_sha256": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
+    "previous_displayed_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
+    "displayed_pdf_sha256": "503ad21a1a2c385350697fef9655eb260db1f6966179952f72ba6d8932ebac10",
+    "prior_release_binding_sha256": "e2b34853617ec8fe6c9cf4c4a9b1dd5c86daf5d1081cec304f77c818b27f7275",
+    "prior_editorial_amendment": {
+      "kind": "single-passage editorial correction",
+      "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+      "original_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+      "displayed_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
+      "original_pdf_sha256": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
+      "displayed_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
+      "old_text": "Hence the cutoff is effective and valid at every larger size. Every width is a power of two with exponent\n$O(L)$, which gives the stated bit complexity.",
+      "new_text": "Hence the cutoff is effective and valid at every larger size. All widths except $q_1=s-2$ are powers of two\nwith exponents $O(L)$; forming those powers and subtracting two from $s$ gives the stated bit complexity.",
+      "exact_replacement_verified": true,
+      "formal_statements_unchanged": true,
+      "correspondence_records_unchanged": true,
+      "proof_sources_unchanged": true,
+      "new_lean_build_performed": false,
+      "prior_release_binding_sha256": "747d758cf95d0a9ae72da426d8f94d571ce9f1c7744296176822b47bca8430b1",
+      "note": "The original checked-build and full-coverage receipts retain their original source identity. This exact editorial amendment connects that source to the displayed manuscript."
+    },
+    "manuscript_edit_receipts": {
+      "H4_CLARIFICATION.json": "324f74fb79b52fc039c888c62c8145714df79ca975175fbd390243575982fcd5",
+      "WEIGHT_CLARIFICATION.json": "cd569b6e4cca595e82ff7b2c3f24a2b9bed0238cc2df5be83bd04f8af69ed9dd"
+    },
+    "formal_statement_changes": {
+      "yao:small-bias-escape": "Uniform specialization of the prior arbitrary-weight lemma; numerical hypotheses and conclusion unchanged.",
+      "yao:array-list": "Equivalent formulation by fractions of equally counted labels.",
+      "yao:finite-field-list": "Equivalent formulation by fractions of equally counted labels."
+    },
+    "formal_statements_unchanged": false,
+    "unchanged_formal_statement_count": 63,
+    "unchanged_proof_count": 51,
+    "changed_proof": "yao:small-bias-escape",
+    "headline_results_unchanged": true,
     "proof_sources_unchanged": true,
+    "provider_links_and_statuses_unchanged": true,
     "new_lean_build_performed": false,
-    "prior_release_binding_sha256": "747d758cf95d0a9ae72da426d8f94d571ce9f1c7744296176822b47bca8430b1",
-    "note": "The original checked-build and full-coverage receipts retain their original source identity. This exact editorial amendment connects that source to the displayed manuscript."
+    "correspondence_review": {
+      "yao:small-bias-escape": "no_short_lookup_v42 accepts arbitrary FiniteLaw; specialize to FiniteLaw.uniform. uniform_prob_finset identifies each retained weight with its label count divided by the original label count.",
+      "yao:array-list": "public_array_pattern already uses uniform Fin(R^2); public_array_label_shape retains every label, including duplicate arrays.",
+      "yao:finite-field-list": "finite_field_list provides a nonempty R^2 label carrier, the uniform pattern bound, and the stated polynomial output and runtime bounds."
+    },
+    "note": "The displayed statements use uniform label counts. The original checked-build and coverage receipts remain pinned to their original source; the existing broader or equivalent Lean statements support these presentation changes. No new proof build is claimed."
   },
-  "paper_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
-  "paper_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
-  "mapping_sha256": "f819c6385b5faf93eb71fc7f145b2867543f7803504e964477c20d3982d4b8a3",
+  "paper_source_sha256": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
+  "paper_pdf_sha256": "503ad21a1a2c385350697fef9655eb260db1f6966179952f72ba6d8932ebac10",
+  "mapping_sha256": "12ba750fa315b5c7f225522ab2c61d25ebd8f62d5e6e265cb3ba787f8f28b198",
   "pending": [],
   "mode": "reviewed mappings",
   "module_count": 5194,

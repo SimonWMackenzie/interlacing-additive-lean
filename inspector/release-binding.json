@@ -3,16 +3,16 @@
   "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
   "archive_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/archive/bff03274f57796d986e788f95e0d553a71312936.zip",
   "input_hashes": {
-    "paper_source": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
-    "paper_pdf": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
-    "paper_aux": "e7c299fe2d441d30cf8940466850ecd69587141583653ceee1ea8c1f6e2c713d",
-    "mapping": "f819c6385b5faf93eb71fc7f145b2867543f7803504e964477c20d3982d4b8a3",
+    "paper_source": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
+    "paper_pdf": "503ad21a1a2c385350697fef9655eb260db1f6966179952f72ba6d8932ebac10",
+    "paper_aux": "fe8cc4120ad8d1e0057b65f1f68b3728e63c9a28c22a2b18e5b0012f00b3557b",
+    "mapping": "12ba750fa315b5c7f225522ab2c61d25ebd8f62d5e6e265cb3ba787f8f28b198",
     "module_inventory": "4e5c4e483a4b2906865825afc0055ddad34be1d3d44d6a72f929780dee52396c",
-    "endpoints": "9cbc4d51fda372f4c4f2980b0d50f5d0e1ee42da1a61d22d912e4ccc26318e6f",
+    "endpoints": "92828fc7d508d109c33c33e22a691044612e03e0de58c0066ae83e52c5c1b22c",
     "explanations": "27163571eba4cf2e92587dd27fe1d97e972e56bd900069c074826357c4a2ede1",
     "references": "6b94fecc586f68128b2e136f1fce08e474095ee9dd11235c86fba91f0d70f878"
   },
-  "bound_mapping_sha256": "f819c6385b5faf93eb71fc7f145b2867543f7803504e964477c20d3982d4b8a3",
+  "bound_mapping_sha256": "12ba750fa315b5c7f225522ab2c61d25ebd8f62d5e6e265cb3ba787f8f28b198",
   "build": {
     "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
     "canonical_checked_build_complete": true,
@@ -24,32 +24,73 @@
   },
   "publication_performed_by_runner": false,
   "mapping_transformation": {
-    "base_bound_mapping_sha256": "2d717d36ec8382588544477198955f19aaeb1eeea82d867f9a0716d5ad8ca3bc",
+    "base_bound_mapping_sha256": "f819c6385b5faf93eb71fc7f145b2867543f7803504e964477c20d3982d4b8a3",
     "changed_fields": [
       "paper.source_sha256",
       "paper.pdf_sha256",
       "verification.source_sha256",
       "verification.scope",
-      "verification.editorial_amendment"
+      "verification.editorial_amendment",
+      "statements.source_line",
+      "statements.tex",
+      "statements.scope_note"
     ],
-    "statements_unchanged": true,
-    "statement_records_sha256": "8aa5bed32004b018a4c59d167a9223999cd5911745020cd441433276fc5a3952"
+    "statements_unchanged": false,
+    "formal_statement_ids_changed": [
+      "yao:array-list",
+      "yao:finite-field-list",
+      "yao:small-bias-escape"
+    ],
+    "provider_links_and_statuses_unchanged": true,
+    "statement_records_sha256": "37565d3cce1c0caccd6be9bc79062569f6815457596a91c0dfc35301b77095aa"
   },
   "editorial_amendment": {
-    "kind": "single-passage editorial correction",
+    "kind": "weight explanations and uniform counting presentation",
     "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
-    "original_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
-    "displayed_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
-    "original_pdf_sha256": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
-    "displayed_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
-    "old_text": "Hence the cutoff is effective and valid at every larger size. Every width is a power of two with exponent\n$O(L)$, which gives the stated bit complexity.",
-    "new_text": "Hence the cutoff is effective and valid at every larger size. All widths except $q_1=s-2$ are powers of two\nwith exponents $O(L)$; forming those powers and subtracting two from $s$ gives the stated bit complexity.",
-    "exact_replacement_verified": true,
-    "formal_statements_unchanged": true,
-    "correspondence_records_unchanged": true,
+    "previous_displayed_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
+    "displayed_source_sha256": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
+    "previous_displayed_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
+    "displayed_pdf_sha256": "503ad21a1a2c385350697fef9655eb260db1f6966179952f72ba6d8932ebac10",
+    "prior_release_binding_sha256": "e2b34853617ec8fe6c9cf4c4a9b1dd5c86daf5d1081cec304f77c818b27f7275",
+    "prior_editorial_amendment": {
+      "kind": "single-passage editorial correction",
+      "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+      "original_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+      "displayed_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
+      "original_pdf_sha256": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
+      "displayed_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
+      "old_text": "Hence the cutoff is effective and valid at every larger size. Every width is a power of two with exponent\n$O(L)$, which gives the stated bit complexity.",
+      "new_text": "Hence the cutoff is effective and valid at every larger size. All widths except $q_1=s-2$ are powers of two\nwith exponents $O(L)$; forming those powers and subtracting two from $s$ gives the stated bit complexity.",
+      "exact_replacement_verified": true,
+      "formal_statements_unchanged": true,
+      "correspondence_records_unchanged": true,
+      "proof_sources_unchanged": true,
+      "new_lean_build_performed": false,
+      "prior_release_binding_sha256": "747d758cf95d0a9ae72da426d8f94d571ce9f1c7744296176822b47bca8430b1",
+      "note": "The original checked-build and full-coverage receipts retain their original source identity. This exact editorial amendment connects that source to the displayed manuscript."
+    },
+    "manuscript_edit_receipts": {
+      "H4_CLARIFICATION.json": "324f74fb79b52fc039c888c62c8145714df79ca975175fbd390243575982fcd5",
+      "WEIGHT_CLARIFICATION.json": "cd569b6e4cca595e82ff7b2c3f24a2b9bed0238cc2df5be83bd04f8af69ed9dd"
+    },
+    "formal_statement_changes": {
+      "yao:small-bias-escape": "Uniform specialization of the prior arbitrary-weight lemma; numerical hypotheses and conclusion unchanged.",
+      "yao:array-list": "Equivalent formulation by fractions of equally counted labels.",
+      "yao:finite-field-list": "Equivalent formulation by fractions of equally counted labels."
+    },
+    "formal_statements_unchanged": false,
+    "unchanged_formal_statement_count": 63,
+    "unchanged_proof_count": 51,
+    "changed_proof": "yao:small-bias-escape",
+    "headline_results_unchanged": true,
     "proof_sources_unchanged": true,
+    "provider_links_and_statuses_unchanged": true,
     "new_lean_build_performed": false,
-    "prior_release_binding_sha256": "747d758cf95d0a9ae72da426d8f94d571ce9f1c7744296176822b47bca8430b1",
-    "note": "The original checked-build and full-coverage receipts retain their original source identity. This exact editorial amendment connects that source to the displayed manuscript."
+    "correspondence_review": {
+      "yao:small-bias-escape": "no_short_lookup_v42 accepts arbitrary FiniteLaw; specialize to FiniteLaw.uniform. uniform_prob_finset identifies each retained weight with its label count divided by the original label count.",
+      "yao:array-list": "public_array_pattern already uses uniform Fin(R^2); public_array_label_shape retains every label, including duplicate arrays.",
+      "yao:finite-field-list": "finite_field_list provides a nonempty R^2 label carrier, the uniform pattern bound, and the stated polynomial output and runtime bounds."
+    },
+    "note": "The displayed statements use uniform label counts. The original checked-build and coverage receipts remain pinned to their original source; the existing broader or equivalent Lean statements support these presentation changes. No new proof build is claimed."
   }
 }

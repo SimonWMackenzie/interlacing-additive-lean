@@ -179,9 +179,8 @@ cost $\le\D(M)+\log q$ must begin with $\log q$ bits from
 Alice that separate the $q$ values of
 $i$~\cite{mackenzie2025refuting,gaspers-he-mackenzie-npcc}. Since the
 argument is stated for subtables, it still applies after we delete
-inputs, provided the remaining rows and the remaining columns each keep
-enough of their total weight (we fix weights on the inputs in
-\cref{sec:overview}). Hence we can repeat the operation.
+inputs, provided enough of each input set remains;
+\cref{sec:overview} explains how we measure this. Hence we can repeat the operation.
 
 Mackenzie and Saffidine developed the interlacing framework, in work first
 circulated in 2024~\cite{mackenzie2025refuting}, to refute the exact
@@ -375,12 +374,15 @@ The construction takes a base communication matrix $R$ of cost $d=\D(R)$
 and adds rows encoding the graph to interlaced copies of $R$. The first
 round starts from a simple matrix of known cost (\cref{cl:seed}). We
 allow a general base matrix so that the construction can be repeated, with
-the output of one round as the base matrix of the next. We also need lower bounds on
-restrictions obtained by deleting inputs. To measure deletion, we give the row
-inputs and the column inputs fixed positive rational weights, of total
-weight one on each side, and we measure a restriction by the total weight
-of the rows and of the columns it retains. The deterministic reduction does
-not sample from these weights.
+the output of one round as the base matrix of the next. We also need lower bounds
+that survive deletion of some inputs. We measure the retained rows and columns
+using fixed positive rational weights, summing to one on each side. These act
+as fractional counts: they let us control how much each input family contributes,
+independently of its number of labels. Later, adjusting weights also lets us
+shorten tuple lists while preserving the counts needed by the proof.
+The weights do not change communication cost: every protocol must still compute
+every entry correctly. The deterministic construction never samples from them,
+and its final output is an ordinary Boolean table with the weights discarded.
 
 A proper three-coloring places the vertices in
 three groups so that the endpoints of every edge lie in different groups. We call
@@ -595,11 +597,10 @@ messages, and a hard matrix may contain easy submatrices. For example, in $R(u,y
 with all $y_i$ equal removes the need to learn $i$.
 
 We therefore record lower bounds after input deletion using the fixed
-input weights. Different kinds of input may have different total weights. The
-template rows receive total weight $255/256$ and the item rows $1/256$,
-regardless of how many rows of each kind there are, and the weight within
-each kind is uniform over bins or items and follows the weights of $R$ on
-its rows. We require each base matrix $R$ of cost $d$ used in a round
+input weights. Most of the total row weight is assigned to template rows,
+and a fixed smaller share to item rows. These shares do not depend on how many
+rows each family contains, so the bounds on deletion do not depend on that
+imbalance. We require each base matrix $R$ of cost $d$ used in a round
 to satisfy the following, for a small fixed threshold $\rho$: every
 restriction retaining row weight $\ge\rho$ and column weight $\ge3/5$ has
 cost $\ge d$, and if the column weight is only $\ge3/10$, the cost is
@@ -696,19 +697,22 @@ graph is colorable.
 
 Allowing every tuple of $q$ columns from a set $Y$ creates $|Y|^q$ inputs.
 We replace each such product by an explicit list of polynomially many
-tuples with rational weights. Every lower bound above inspects at most
+tuples. Unequal rational weights let this short list preserve the counts
+needed by the lower bounds. Every lower bound above inspects at most
 eight positions of a tuple at a time, and the conditioning step below needs
 groups of such sets, so we fix $D=8192$. For every set of at most $D$
 positions and every assignment of columns to those positions, the total
 weight of the listed tuples that match the assignment equals its weight
-under the full product. This is the usual notion of limited independence,
-here an exact identity for a deterministically constructed weighted
-list.
+under the full product. These counting identities are called
+\emph{limited independence}. The algorithm constructs and enumerates the
+entire list; it does not draw a random tuple from it.
 
 We construct the list by extending tuples one coordinate at a time,
 using linear dependences among the zero--one vectors that record which
-counts each tuple contributes to. These dependences let us remove tuples
-while preserving those weighted counts (\cref{det:code}). We compute the
+counts each tuple contributes to. Adjusting weights along these dependences
+lets us remove tuples while preserving the required counts (\cref{det:code});
+giving the remaining tuples equal weight would generally lose those identities.
+We compute the
 table entries from the listed tuples by the same entry rules as for full
 products, so the upper-bound protocol is preserved. The lower
 bound needs more work, because a message can create dependencies. For
@@ -757,8 +761,10 @@ $\log\log T$ error scale (\cref{det:eth}).
 For the randomized result, we keep full products of tuples throughout the
 amplification. The table is then too large to print, but we can compute
 single entries from short descriptions of the inputs. After all $k$
-rounds, we sample $m$ rows and $m$ columns independently from the input
-weights and print the $m^2$ entries at their intersections.
+rounds, we use the input weights as sampling probabilities: we draw $m$ rows
+and $m$ columns independently and print the $m^2$ entries at their intersections.
+Here the reduction uses randomness; the communication protocols being measured
+remain deterministic.
 
 In the NO case, a protocol may be chosen after the sample is drawn, so the
 sample must defeat every protocol of depth one less than the NO cost
@@ -826,9 +832,9 @@ values. Paired with the vertices' positions in the edge, they give
 $2^{m-t+1}$ distinct array positions, for a protocol of depth $2m-1$. On
 all these rows Alice's first $t$ bits are the same function of Bob's bits.
 
-We follow the protocol, keeping at each Bob turn the half of the arrays of
-larger weight and at each later Alice turn the half of the rows that is
-larger. When $\lceil\log m\rceil$ pairs of turns remain, at least
+We follow the protocol, keeping at each Bob turn the larger set of array labels
+and at each later Alice turn the larger set of rows. Each choice keeps at least
+half of the corresponding set. When $\lceil\log m\rceil$ pairs of turns remain, at least
 $2^{\lceil\log m\rceil+1}$ positions and a $2^{-m}$ fraction of the arrays
 survive, and the remaining turns can produce at most
 $2^{2^{\lceil\log m\rceil}-1}$ answer patterns on these positions. We
@@ -1015,13 +1021,15 @@ require the side length to be at least a prescribed bound $b$ polynomial in
 the input size. The side length is then less than $2\max\{b,|X|,|Y|\}$, so
 the enlarged table can be printed in polynomial time.
 
-For the lower bounds, we need the matrix to remain hard after inputs are
-removed, provided enough of each input set remains.
-To measure how much survives deletion, we assign the labels in each input set
+For the unrestricted construction, we assign the labels in each input set
 positive rational weights summing to one. For row weights $\mu_X$ and column weights $\mu_Y$, a set's
 weight is the sum of its labels' weights, for example
-$\mu_X(A)=\sum_{x\in A}\mu_X(x)$. We use these weights only for counting.
-Every matrix entry is fixed, and a protocol must be correct on every input.
+$\mu_X(A)=\sum_{x\in A}\mu_X(x)$. Uniform weights give ordinary fractions
+of labels. Unequal weights fix the shares assigned to different input families
+and preserve the required counts when we shorten tuple lists. The weights
+are auxiliary data for the construction and its lower-bound proof;
+communication cost depends only on the table, and every input must be computed
+correctly. The final deterministic reduction discards the weights.
 Distinct labels keep separate weights, even when their rows or columns agree.
 
 If $X'$ has weights $\mu'$, a decoder $f:X'\to X$ induces weights on $X$ by adding the weights of
@@ -1029,10 +1037,12 @@ labels with the same image, and labels outside the image get weight zero. A set 
 weight $\mu'(f^{-1}(A))$. In particular, a retained set $A'\subseteq X'$
 has image of induced weight at least $\mu'(A')$.
 
-Under product weights, a tuple has the product of the weights of its coordinates. When a proof
-views a label as a random variable drawn with these weights, we use the
-standard terms distribution, marginal, and independence.
-An event is a set of labels. Conditioning on a retained set $A$ of
+Under product weights, a tuple has the product of the weights of its coordinates.
+Some counting arguments are shorter in probability notation: we regard a label
+as drawn according to its weights and use the standard terms distribution,
+marginal, and independence. This is an auxiliary calculation, not a random
+choice by a communication protocol. An event is a set of labels.
+Conditioning on a retained set $A$ of
 positive weight means renormalizing: $(\mu\mid A)(B)=\mu(A\cap B)/\mu(A)$.
 For each projection below, we specify whether we measure its size with the
 original weights or with these conditional weights.
@@ -1150,10 +1160,11 @@ restrictions that retain a prescribed weight of rows and of columns.
 \paragraph{Keeping fewer column tuples.}
 Full interlacing creates $|Y|^q$ columns, too many for an explicit
 polynomial-time reduction. We therefore
-replace $Y^q$ by a short weighted list that agrees with the product weights
-on every set of at most $D$ coordinates
-(\cref{sec:small-lists,sec:deterministic}). \Cref{det:code} constructs
-such lists deterministically.
+replace $Y^q$ by a short list with rational weights. For every assignment of
+values to at most $D$ coordinates, we preserve the total weight of tuples
+matching that assignment. The definition below calls these exact counting
+identities $D$-wise independence. \Cref{det:code} constructs such lists
+deterministically (\cref{sec:small-lists,sec:deterministic}).
 
 \begin{definition}[Weighted lists of tuples]\label{def:exact-tuples}
 Fix integers $q,D\ge1$. For a finite alphabet $Y$ with prescribed
@@ -2047,10 +2058,15 @@ $\alpha$, are also exactly $8192$-wise independent: group at most
 $8192$ coordinates by copy, then use independence between copies and among
 the tuple coordinates within each template input. By independence, fixing some of the three complete
 sequences leaves the remaining ones with their original weights.
-\item[(H4)] The margins \eqref{eq:width-margins} of \cref{lem:common-schedule}.
+\item[(H4)] The widths and deletion thresholds satisfy the numerical bounds in
+\eqref{eq:width-margins}: each quantity in the first column is below the
+corresponding bound in the last column. These bounds provide enough coordinates
+to encode the graph and ensure that, after deleting inputs and setting aside
+exceptional coordinates, enough inputs remain for the lower-bound arguments.
 \end{enumerate}
-In both cases, (H1) is \cref{src:profiles}, (H2) is \cref{src:near-full}, and
-(H4) is \cref{lem:common-schedule}. For (H3) with full products, we take all
+In both cases, (H1) follows from \cref{src:profiles} and (H2) from
+\cref{src:near-full}. \Cref{lem:common-schedule} verifies (H4) for the parameter
+choices of \cref{def:amplification-parameters}. For (H3) with full products, we take all
 complete sequences, including values ignored by the decoder, with product
 weights across the three sequences. Decoding induces the original product
 weights on $\mathcal K^w$, so pulling back preserves the weights of retained
@@ -2435,6 +2451,9 @@ length of $\mu$.
 \end{lemma}
 
 Below we always use $\mathsf{Code}_{8192}$.
+Keeping the weights as binary-encoded rational numbers avoids expanding them
+into repeated labels: a denominator with polynomially many bits can represent
+far too many copies to print in polynomial time.
 
 \subsection{Restoring the deletion bounds}
 
@@ -3350,32 +3369,34 @@ $2^{2^t-1}$ possible response rules for these turns.
 
 Among all Boolean arrays, the fraction agreeing with prescribed bits on
 $k$ distinct positions is $2^{-k}$. We need only an upper bound of
-$2^{-k}+\varepsilon$ on this fraction, and a small explicit list already satisfies this weaker bound. More precisely,
-for a labeled list of Boolean arrays
-$\mathcal W=(w^\ell)$ on a finite position set $\Omega$, we ask that its
-normalized weights $\nu$ satisfy
+$2^{-k}+\varepsilon$ on this fraction, and a small explicit list already
+satisfies this weaker bound. Here we count all array labels equally, keeping
+repeated arrays as separate labels. For a list
+$\mathcal W=(w^\ell)_{\ell\in\mathcal L}$ on a finite position set $\Omega$,
+with $\mathcal L$ finite and nonempty, we require
 \begin{equation}\label{eq:alternating-pattern}
-\Pr_{\ell\sim\nu}[w^\ell|_I=z]\le2^{-|I|}+\varepsilon
+\frac{|\{\ell\in\mathcal L:w^\ell|_I=z\}|}{|\mathcal L|}
+\le2^{-|I|}+\varepsilon
 \qquad
 (I\subseteq\Omega,\ z\in\{0,1\}^I).
 \end{equation}
-Here the probability is the total weight of labels matching the pattern.
-By a union
-bound, the labels matching any of $P$ patterns on $I$ have total weight
-$\le P(2^{-|I|}+\varepsilon)$. Throughout the argument we
-measure retained sets with the original weights, without renormalizing them.
+Adding these counts, at most a $P(2^{-|I|}+\varepsilon)$ fraction of all
+labels can match any of $P$ patterns on $I$. Every fraction below is measured
+against the original list size $|\mathcal L|$, even after a transcript has
+removed some columns.
 
 \Cref{yao:small-bias-escape} rules out a short protocol when many requested
 positions share Alice's early response rules. The early messages cannot distinguish
-those positions, so a large array weight remains after them. The remaining
-messages can produce only a few answer patterns, and these cover too little weight. In the lemma, $m$
+those positions, so many array labels remain after them. The remaining
+messages can produce only a few answer patterns, which cannot cover all
+the surviving labels. In the lemma, $m$
 is the total number of Alice turns, and $t$ is the number of initial Alice
 turns during which her response rules agree across the rows for every possible
 Bob history.
 
 \begin{lemma}[Lower bound for alternating protocols]\label{yao:small-bias-escape}
-Let $m,t$ be integers with $m\ge2t\ge2$. Suppose the array weights
-$\nu$ satisfy \cref{eq:alternating-pattern} with
+Let $m,t$ be integers with $m\ge2t\ge2$. Suppose the nonempty labeled
+array list $\mathcal W$ satisfies \cref{eq:alternating-pattern} with
 $\varepsilon\le2^{-4m}$. If $J\subseteq\Omega$ has at least
 $2^{m-t+1}$ positions, then the matrix
 \[
@@ -3392,13 +3413,14 @@ uses no extra bit and, since $m>t$, preserves her first $t$ responses.
 
 Put $h=\ceil{\log m}\le m-t$ and $Q=2^h$. The inequality follows from
 $m\le2(m-t)\le2^{m-t}$. We follow the first $2(m-h)-1$ messages and keep the
-Bob child with greater column weight and the Alice child with more rows. Alice's first $t$ turns
-discard no rows because these response rules agree. Only her
-remaining $m-h-t$ turns halve the rows, while $m-h-1$ Bob turns halve the
-original column weight. The resulting rectangle $X\times Y$ therefore satisfies
+Bob child with more column labels and the Alice child with more rows.
+Alice's first $t$ turns discard no rows because these response rules agree.
+Each of her remaining $m-h-t$ turns retains at least half the rows,
+and each of the $m-h-1$ Bob turns retains at least half the columns.
+The resulting rectangle $X\times Y$, with $Y\subseteq\mathcal L$, therefore satisfies
 \[
 |X|\ge2^{h+1}=2Q,\qquad
-\nu(Y)\ge2^{-(m-h-1)}.
+\frac{|Y|}{|\mathcal L|}\ge2^{-(m-h-1)}.
 \]
 Exactly $h$ Bob--Alice pairs remain. We record Bob's next bit after every
 hypothetical history of earlier Alice bits, which gives
@@ -3406,18 +3428,20 @@ $1+2+\cdots+2^{h-1}=Q-1$ bits. Fixing these bits and Alice's response rules dete
 her final output on every retained row. On any $2Q$ of those rows, there are
 therefore at most $2^{Q-1}$ output patterns.
 
-Since $m\le Q<2m$, we have $\varepsilon\le2^{-2Q}$. Correctness,
-\cref{eq:alternating-pattern}, and a union bound now give
+Since $m\le Q<2m$, we have $\varepsilon\le2^{-2Q}$. Every column in $Y$
+must match one of these patterns. Applying \cref{eq:alternating-pattern}
+to each pattern and adding the bounds gives
 \[
-\nu(Y)\le2^{Q-1}(2^{-2Q}+\varepsilon)\le2^{-Q}.
+\frac{|Y|}{|\mathcal L|}\le2^{Q-1}(2^{-2Q}+\varepsilon)\le2^{-Q}.
 \]
-This contradicts the retained-weight bound because
+This contradicts the lower bound on the surviving fraction because
 $Q\ge m>m-h-1$.
 \end{proof}
 
 Since \cref{eq:alternating-pattern} holds for every set of positions, one
-array list works against every protocol. We never renormalize, because the weights
-renormalized after a transcript need not satisfy that bound. We use the accuracy
+array list works against every protocol. The bound applies to fractions of
+the original list; it need not hold within the subset left by a transcript.
+We use the accuracy
 $\epsilon_{\rm a}=2^{-4(b+3t)}=2^{-12t}H_{\rm a}^{-4}$, which is inverse
 polynomial in $H_{\rm a}$ for each fixed $t$. At this accuracy, the
 finite-field construction of \cref{sec:alternating_implementation} gives such a
@@ -3426,7 +3450,7 @@ set of all Boolean arrays in $M_{\rm a}$.
 
 \begin{corollary}\label{yao:array-list}
 For every fixed $t\ge4$, a nonempty labeled array list on $\Omega_{\rm a}$
-whose uniform weights satisfy \cref{eq:alternating-pattern} with
+satisfying \cref{eq:alternating-pattern} with
 \[
 \epsilon_{\rm a}:=2^{-4(b+3t)}
 \]
@@ -4353,8 +4377,9 @@ transfer bound, including the case $\varepsilon_i=0$.
 
 We prove \cref{det:conditioning} by bounding the number of exceptional
 coordinates, and then show that a short protocol must leave two or three
-blocks to which \cref{lem:small-blocks} still applies. We draw a label according
-to its fixed weights and regard its coordinates as random variables. The
+blocks to which \cref{lem:small-blocks} still applies. For these estimates only,
+we view a label drawn according to its fixed weights as a random variable.
+Expectations then express weighted sums over the fixed tuple list. The
 $1024$th-moment bounds use the original weights $\nu$, under which
 independence is exact, whereas the fourth-moment bound under $\nu\mid Y$ in
 \cref{lem:pair-projections} uses only the approximate marginals outside the
@@ -5100,16 +5125,17 @@ the algorithmic step promised in \cref{yao:array-list}.
 
 We use the polynomial-root construction of Alon, Goldreich,
 H{\aa}stad and Peralta~\cite[Construction~3 and Proposition~3]{alon1992smallbias}.
-The conversion from parity bounds to pattern probabilities is also recorded
+The conversion from parity bounds to pattern frequencies is also recorded
 there, with credit to Vazirani~\cite[Lemma~1 and Corollary~1]{alon1992smallbias}.
 We use the following direct consequence and keep its seed labels explicit
 so that the reduction can print the full array list.
 
 \begin{lemma}\label{yao:finite-field-list}
 For integers $n,r\ge1$, a deterministic algorithm prints a nonempty labeled
-list of $n$-bit arrays such that the array $w$ at a uniformly chosen label satisfies
+list $(w^\ell)_{\ell\in\mathcal L}$ of $n$-bit arrays satisfying
 \[
-\Pr[w|_I=z]\le2^{-|I|}+2^{-r}
+\frac{|\{\ell\in\mathcal L:w^\ell|_I=z\}|}{|\mathcal L|}
+\le2^{-|I|}+2^{-r}
 \qquad(I\subseteq\{0,\ldots,n-1\},\ z\in\{0,1\}^I).
 \]
 Its running time and complete output length are polynomial in $n2^r$.

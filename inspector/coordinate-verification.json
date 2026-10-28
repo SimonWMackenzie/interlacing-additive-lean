@@ -1,470 +1,470 @@
 {
-  "source_sha256": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
-  "pdf_sha256": "503ad21a1a2c385350697fef9655eb260db1f6966179952f72ba6d8932ebac10",
-  "references_sha256": "6b94fecc586f68128b2e136f1fce08e474095ee9dd11235c86fba91f0d70f878",
-  "page_count": 72,
+  "source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
+  "pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+  "references_sha256": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31",
+  "page_count": 74,
   "character_geometry_identical": true,
   "endpoints": {
     "intro:deterministic": {
       "page": 4,
       "point": [
         506.751,
-        392.191
+        260.377
       ]
     },
     "yao:main": {
       "page": 4,
       "point": [
         426.321,
-        281.476
+        146.957
       ]
     },
     "yao:bpp": {
-      "page": 4,
+      "page": 5,
       "point": [
         103.637,
-        132.793
+        654.844
+      ]
+    },
+    "thm:time-tradeoff": {
+      "page": 5,
+      "point": [
+        495.745,
+        308.927
       ]
     },
     "thm:quantitative": {
       "page": 5,
       "point": [
-        126.062,
-        654.844
+        410.379,
+        156.59
       ]
     },
-    "det:eth": {
-      "page": 5,
+    "det:time": {
+      "page": 6,
       "point": [
-        516.416,
-        569.166
+        156.467,
+        681.943
       ]
     },
     "def:table-estimation": {
-      "page": 13,
+      "page": 14,
       "point": [
         207.879,
-        162.358
+        135.26
       ]
     },
     "yao:model": {
-      "page": 14,
+      "page": 15,
       "point": [
         187.243,
-        668.394
-      ]
-    },
-    "def:reth": {
-      "page": 14,
-      "point": [
-        499.535,
-        569.166
+        641.295
       ]
     },
     "def:interlace": {
-      "page": 15,
+      "page": 16,
       "point": [
         168.584,
         409.266
       ]
     },
     "def:exact-tuples": {
-      "page": 16,
+      "page": 17,
       "point": [
         467.292,
-        427.375
+        427.85
       ]
     },
     "obs:representatives": {
-      "page": 16,
+      "page": 17,
       "point": [
         467.006,
-        260.401
+        234.578
       ]
     },
     "def:profile": {
-      "page": 17,
+      "page": 18,
       "point": [
         478.518,
         643.416
       ]
     },
     "src:gap-colouring": {
-      "page": 17,
+      "page": 18,
       "point": [
         455.808,
         441.674
       ]
     },
     "thm:amplifier": {
-      "page": 17,
+      "page": 18,
       "point": [
         339.433,
         117.244
       ]
     },
     "cl:seed": {
-      "page": 18,
+      "page": 19,
       "point": [
         151.175,
         562.718
       ]
     },
     "prop:iteration": {
-      "page": 18,
+      "page": 19,
       "point": [
         151.174,
         449.941
       ]
     },
     "def:amplification-parameters": {
-      "page": 18,
+      "page": 19,
       "point": [
         486.501,
         82.334
       ]
     },
     "def:source-matrix": {
-      "page": 20,
+      "page": 21,
       "point": [
         418.173,
         316.803
       ]
     },
     "src:item-witness": {
-      "page": 21,
+      "page": 22,
       "point": [
         336.534,
         364.91
       ]
     },
     "src:upper": {
-      "page": 21,
+      "page": 22,
       "point": [
         444.305,
         306.33
       ]
     },
     "lem:many-product-blocks": {
-      "page": 22,
+      "page": 23,
       "point": [
         120.787,
-        187.325
+        230.533
       ]
     },
     "src:profiles": {
-      "page": 23,
+      "page": 24,
       "point": [
         486.697,
-        620.06
+        681.943
       ]
     },
     "lem:kraft-count": {
-      "page": 23,
+      "page": 24,
       "point": [
         131.064,
-        494.303
+        544.102
       ]
     },
     "lem:collision-tracking": {
-      "page": 23,
+      "page": 24,
       "point": [
         209.021,
-        134.879
+        188.342
       ]
     },
     "src:near-full": {
-      "page": 24,
+      "page": 25,
       "point": [
         259.944,
-        496.837
+        551.034
       ]
     },
     "det:conditioning": {
-      "page": 26,
+      "page": 27,
       "point": [
         440.843,
-        423.03
+        459.233
       ]
     },
     "det:exact": {
-      "page": 26,
+      "page": 27,
       "point": [
         190.737,
-        206.13
+        229.694
       ]
     },
     "det:rareboost": {
-      "page": 26,
+      "page": 27,
       "point": [
         242.068,
-        72.0
+        89.818
       ]
     },
     "res:destinations": {
-      "page": 28,
+      "page": 29,
       "point": [
         315.556,
         532.902
       ]
     },
     "res:incoming": {
-      "page": 28,
+      "page": 30,
       "point": [
         481.63,
-        72.0
+        681.943
       ]
     },
     "res:foreign": {
-      "page": 29,
+      "page": 30,
       "point": [
         343.177,
-        657.846
+        607.821
       ]
     },
     "res:alignment": {
-      "page": 29,
+      "page": 30,
       "point": [
         145.411,
-        202.566
+        150.687
       ]
     },
     "cl:bridge": {
-      "page": 31,
+      "page": 32,
       "point": [
         410.904,
-        695.492
+        619.377
       ]
     },
     "lem:amplifier-rank": {
-      "page": 31,
+      "page": 32,
       "point": [
-        421.065,
-        612.065
+        420.514,
+        533.699
       ]
     },
     "det:code": {
-      "page": 32,
+      "page": 33,
       "point": [
         338.884,
-        379.172
+        273.076
       ]
     },
     "det:restore": {
-      "page": 33,
+      "page": 34,
       "point": [
         158.629,
-        695.492
+        584.438
       ]
     },
     "det:amplifier": {
-      "page": 34,
+      "page": 35,
       "point": [
         134.844,
-        556.181
+        449.468
       ]
     },
     "det:flat": {
-      "page": 34,
+      "page": 35,
       "point": [
-        241.362,
-        353.634
+        281.491,
+        246.236
       ]
     },
     "det:construction": {
-      "page": 35,
+      "page": 36,
       "point": [
-        114.515,
-        546.451
+        276.152,
+        399.675
       ]
     },
     "det:reduction": {
-      "page": 35,
+      "page": 37,
       "point": [
         421.106,
-        89.045
+        607.695
       ]
     },
     "def:compatibility": {
-      "page": 37,
+      "page": 38,
       "point": [
         241.788,
-        415.403
+        228.564
       ]
     },
     "obs:compatible-protocol": {
-      "page": 37,
+      "page": 38,
       "point": [
         502.293,
-        354.831
+        167.991
       ]
     },
     "thm:rank-count": {
-      "page": 38,
+      "page": 39,
       "point": [
         382.844,
-        307.768
+        243.13
       ]
     },
     "thm:compression": {
-      "page": 39,
+      "page": 40,
       "point": [
         381.173,
-        474.947
+        383.169
       ]
     },
     "lem:sample-access": {
-      "page": 40,
+      "page": 41,
       "point": [
         448.87,
-        605.23
+        508.521
       ]
     },
     "thm:uniform-reduction": {
-      "page": 40,
+      "page": 41,
       "point": [
         434.796,
-        391.831
+        295.121
       ]
     },
     "yao:comparison": {
-      "page": 41,
+      "page": 43,
       "point": [
         361.615,
-        72.0
+        99.315
       ]
     },
     "yao:source": {
-      "page": 42,
+      "page": 44,
       "point": [
         230.342,
         367.81
       ]
     },
     "def:alternating-table": {
-      "page": 42,
+      "page": 44,
       "point": [
         171.273,
         72.0
       ]
     },
     "prop:alternating-upper": {
-      "page": 43,
+      "page": 45,
       "point": [
         343.048,
         250.939
       ]
     },
     "yao:small-bias-escape": {
-      "page": 44,
+      "page": 46,
       "point": [
         379.254,
-        233.856
+        227.34
       ]
     },
     "yao:array-list": {
-      "page": 45,
+      "page": 47,
       "point": [
         342.529,
-        437.791
+        362.03
       ]
     },
     "yao:lift": {
-      "page": 45,
+      "page": 47,
       "point": [
         504.329,
-        208.985
+        128.511
       ]
     },
     "cl:projection": {
-      "page": 47,
+      "page": 49,
       "point": [
         244.278,
-        229.855
+        89.44
       ]
     },
     "lem:small-blocks": {
-      "page": 48,
+      "page": 50,
       "point": [
         455.545,
-        367.382
+        194.42
       ]
     },
     "cl:separation": {
-      "page": 49,
+      "page": 51,
       "point": [
         501.318,
-        580.658
+        384.657
       ]
     },
     "cl:defect-induction": {
-      "page": 49,
+      "page": 52,
       "point": [
         502.15,
-        127.016
+        543.971
       ]
     },
     "res:paired": {
-      "page": 54,
+      "page": 57,
       "point": [
         327.893,
-        121.562
+        441.345
       ]
     },
     "cl:two-stream": {
-      "page": 55,
+      "page": 58,
       "point": [
         474.207,
-        332.567
+        638.402
       ]
     },
     "lem:conditioning-moment": {
-      "page": 58,
+      "page": 61,
       "point": [
         442.997,
-        124.608
+        432.937
       ]
     },
     "lem:pair-projections": {
-      "page": 59,
+      "page": 62,
       "point": [
         219.411,
-        135.244
+        472.422
       ]
     },
     "det:suffix": {
-      "page": 61,
+      "page": 63,
       "point": [
         295.753,
-        659.427
+        311.396
       ]
     },
     "lem:common-schedule": {
-      "page": 64,
+      "page": 67,
       "point": [
         347.199,
-        285.987
+        600.496
       ]
     },
     "lem:full-schedule": {
-      "page": 66,
+      "page": 68,
       "point": [
         333.817,
-        582.344
+        244.788
       ]
     },
     "lem:generated-schedule": {
-      "page": 66,
+      "page": 69,
       "point": [
         171.493,
-        129.26
+        435.627
       ]
     },
     "yao:finite-field-list": {
-      "page": 69,
+      "page": 71,
       "point": [
         392.425,
-        634.801
+        325.208
       ]
     }
   },

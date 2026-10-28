@@ -340,9 +340,9 @@
 <div id="app">
   <header>
     <div class="brand">
-      <div class="eyebrow">Paper and Lean · v42</div>
+      <div class="eyebrow">Paper and Lean · v43</div>
       <h1>Interlacing and Additive Inapproximability</h1>
-      <div class="sub">Gaspers · He · Mackenzie — v42 · paper ⇄ Lean inspector</div>
+      <div class="sub">Gaspers · He · Mackenzie — v43 · paper ⇄ Lean inspector</div>
       <div class="sub scopecaveat" id="scope-note"></div>
     </div>
     <div class="modes" role="tablist">
@@ -426,7 +426,7 @@
   <div class="sheet-res" id="res-sheet" title="drag to widen / narrow the panel"></div>
   <div class="sheet">
     <div class="sheet-head">
-      <div class="t"><b>Trace the paper</b><span id="o-sub">v42 — the 50 formalized statements are highlighted; click one to see its formalization</span></div>
+      <div class="t"><b>Trace the paper</b><span id="o-sub">v43 — loading manuscript statement locations</span></div>
       <div class="tkey" id="tkey"></div>
       <button class="close" id="o-close">Close ✕</button>
     </div>
@@ -517,7 +517,7 @@
   //      breaks — fixed overlays, dragging, and box alignment all stay consistent).
   //      Persisted per-browser; click the % to reset. ----
   (function(){
-    var MINS = 60, MAXS = 200, KEY = "additive-v42-ui-scale";
+    var MINS = 60, MAXS = 200, KEY = "additive-v43-ui-scale";
     var pct = 100;
     try { var v = parseInt(localStorage.getItem(KEY), 10); if(v >= MINS && v <= MAXS) pct = v; } catch(e){}
     var readout = document.getElementById("ui-pct");
@@ -1272,7 +1272,7 @@
     });
     var nBox = Object.keys(TRACE.boxes).length;
     var nReused = Object.keys(TRACE.boxes).filter(function(id){ return byId[id] && byId[id].reused; }).length;
-    document.getElementById("o-sub").textContent = "v42 · " + nBox + " highlighted statements · amber means pending or external";
+    document.getElementById("o-sub").textContent = "v43 · " + nBox + " highlighted statements · amber means pending or external";
   }
   function selectStmt(id, scroll){
     var n = byId[id]; if(!n) return; selStmt = id;
@@ -1397,7 +1397,7 @@
       b1.textContent = n.paper.env.charAt(0).toUpperCase()+n.paper.env.slice(1)+" "+n.paper.num+
         (n.paper.name ? " — "+n.paper.name : "");
       var s1 = document.createElement("span");
-      s1.textContent = "page "+n.paper.page+" of v42"+(n.texLine? " · main.tex:"+n.texLine : "");
+      s1.textContent = "page "+n.paper.page+" of v43"+(n.texLine? " · main.tex:"+n.texLine : "");
       w.appendChild(b1); w.appendChild(s1);
       var btn = document.createElement("button"); btn.textContent = "Trace in PDF → p."+n.paper.page;
       btn.addEventListener("click",function(){ openTrace(n.id); });

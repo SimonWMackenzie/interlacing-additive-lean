@@ -3,9 +3,9 @@
     "id": "intro:deterministic",
     "page": 4,
     "x0": 0.10993952532998877,
-    "y0": 0.40241896504103536,
+    "y0": 0.5669883959221117,
     "x1": 0.8872453278186274,
-    "y1": 0.5103425305299084,
+    "y1": 0.6767756914851641,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -16,9 +16,9 @@
     "id": "yao:main",
     "page": 4,
     "x0": 0.10993952532998877,
-    "y0": 0.5422118986495817,
+    "y0": 0.7101967551491477,
     "x1": 0.8872453278186274,
-    "y1": 0.6501354641384549,
+    "y1": 0.8199826635495581,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -27,11 +27,24 @@
   },
   "yao:bpp": {
     "id": "yao:bpp",
-    "page": 4,
+    "page": 5,
     "x0": 0.11135947782229753,
-    "y0": 0.750720785121725,
+    "y0": 0.09156422663216639,
     "x1": 0.8872930987987643,
-    "y1": 0.8378665808475378,
+    "y1": 0.1787112457583649,
+    "extent": {
+      "method": "invisible end destination, identical printed-character geometry",
+      "end": "exact source environment end",
+      "continuation": false
+    }
+  },
+  "thm:time-tradeoff": {
+    "id": "thm:time-tradeoff",
+    "page": 5,
+    "x0": 0.1113790873608558,
+    "y0": 0.3181235573508523,
+    "x1": 0.8900108586728962,
+    "y1": 0.6154751247829862,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -41,23 +54,23 @@
   "thm:quantitative": {
     "id": "thm:quantitative",
     "page": 5,
-    "x0": 0.1099395377963197,
-    "y0": 0.09134891779735835,
-    "x1": 0.8900549396190768,
-    "y1": 0.1787112457583649,
+    "x0": 0.11126960804259856,
+    "y0": 0.7032788209240846,
+    "x1": 0.8872759451273999,
+    "y1": 0.8078198673749211,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
       "continuation": false
     }
   },
-  "det:eth": {
-    "id": "det:eth",
+  "det:time": {
+    "id": "det:time",
     "page": 5,
-    "x0": 0.1117973826289956,
-    "y0": 0.23385128830418442,
-    "x1": 0.8877000995710784,
-    "y1": 0.28801632890797624,
+    "x0": 0.11132352492388557,
+    "y0": 0.8616130327937579,
+    "x1": 0.8897767908432904,
+    "y1": 0.9157499062894571,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -66,11 +79,11 @@
   },
   "def:table-estimation": {
     "id": "def:table-estimation",
-    "page": 13,
+    "page": 14,
     "x0": 0.11208496841729856,
-    "y0": 0.5933508054174558,
+    "y0": 0.6275654417095762,
     "x1": 0.8907548493030024,
-    "y1": 0.8005369552458176,
+    "y1": 0.8347516300702336,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -79,24 +92,11 @@
   },
   "yao:model": {
     "id": "yao:model",
-    "page": 13,
-    "x0": 0.11274509803921569,
-    "y0": 0.8384625213314788,
-    "x1": 0.8897544511782578,
-    "y1": 0.9087175311464252,
-    "extent": {
-      "method": "invisible end destination, identical printed-character geometry",
-      "end": "exact source environment end",
-      "continuation": false
-    }
-  },
-  "def:reth": {
-    "id": "def:reth",
     "page": 14,
-    "x0": 0.11183660170611213,
-    "y0": 0.2167439508919764,
-    "x1": 0.8907403883591197,
-    "y1": 0.2868905115609217,
+    "x0": 0.11274509803921569,
+    "y0": 0.8726771961558949,
+    "x1": 0.8897544511782578,
+    "y1": 0.9127693561592487,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -105,7 +105,7 @@
   },
   "def:interlace": {
     "id": "def:interlace",
-    "page": 15,
+    "page": 16,
     "x0": 0.11183660170611213,
     "y0": 0.3767497900760535,
     "x1": 0.8893427630655126,
@@ -118,11 +118,11 @@
   },
   "def:exact-tuples": {
     "id": "def:exact-tuples",
-    "page": 16,
+    "page": 17,
     "x0": 0.11274509803921569,
-    "y0": 0.2758406629466047,
+    "y0": 0.27524094629769374,
     "x1": 0.8897512597975388,
-    "y1": 0.46591957169349746,
+    "y1": 0.4653198550445865,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -131,11 +131,11 @@
   },
   "obs:representatives": {
     "id": "obs:representatives",
-    "page": 16,
+    "page": 17,
     "x0": 0.11132352492388557,
-    "y0": 0.5210595564408735,
+    "y0": 0.5536656235203599,
     "x1": 0.8899971955741932,
-    "y1": 0.6767453280362216,
+    "y1": 0.7093501235499526,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -144,7 +144,7 @@
   },
   "def:profile": {
     "id": "def:profile",
-    "page": 17,
+    "page": 18,
     "x0": 0.11210294486650454,
     "y0": 0.09127751745358863,
     "x1": 0.8879425447750715,
@@ -157,7 +157,7 @@
   },
   "src:gap-colouring": {
     "id": "src:gap-colouring",
-    "page": 17,
+    "page": 18,
     "x0": 0.1113790873608558,
     "y0": 0.271281290535975,
     "x1": 0.889712464575674,
@@ -170,7 +170,7 @@
   },
   "thm:amplifier": {
     "id": "thm:amplifier",
-    "page": 17,
+    "page": 18,
     "x0": 0.11132352492388557,
     "y0": 0.611722464513297,
     "x1": 0.8897339066648795,
@@ -183,7 +183,7 @@
   },
   "cl:seed": {
     "id": "cl:seed",
-    "page": 18,
+    "page": 19,
     "x0": 0.11157843645881205,
     "y0": 0.17800525703815498,
     "x1": 0.8897241330614277,
@@ -196,7 +196,7 @@
   },
   "prop:iteration": {
     "id": "prop:iteration",
-    "page": 18,
+    "page": 19,
     "x0": 0.11137913722617954,
     "y0": 0.33306460910373265,
     "x1": 0.8872584922640931,
@@ -209,7 +209,7 @@
   },
   "def:amplification-parameters": {
     "id": "def:amplification-parameters",
-    "page": 18,
+    "page": 19,
     "x0": 0.11210294486650454,
     "y0": 0.715140371611624,
     "x1": 0.887307759203942,
@@ -222,7 +222,7 @@
   },
   "def:source-matrix": {
     "id": "def:source-matrix",
-    "page": 19,
+    "page": 20,
     "x0": 0.1099395377963197,
     "y0": 0.3365628791577888,
     "x1": 0.8907234341490502,
@@ -235,7 +235,7 @@
   },
   "src:item-witness": {
     "id": "src:item-witness",
-    "page": 21,
+    "page": 22,
     "x0": 0.11132352492388557,
     "y0": 0.4216651916503906,
     "x1": 0.8872560987285539,
@@ -248,7 +248,7 @@
   },
   "src:upper": {
     "id": "src:upper",
-    "page": 21,
+    "page": 22,
     "x0": 0.10928758608749489,
     "y0": 0.5826437208387587,
     "x1": 0.8867684158624387,
@@ -261,11 +261,11 @@
   },
   "lem:many-product-blocks": {
     "id": "lem:many-product-blocks",
-    "page": 22,
+    "page": 23,
     "x0": 0.11126960804259856,
-    "y0": 0.6986866189975931,
+    "y0": 0.6441323636758207,
     "x1": 0.8897227368323631,
-    "y1": 0.7690129906240136,
+    "y1": 0.7144574252041903,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -274,11 +274,11 @@
   },
   "src:profiles": {
     "id": "src:profiles",
-    "page": 22,
+    "page": 23,
     "x0": 0.11132352492388557,
-    "y0": 0.8584758874141809,
-    "x1": 0.8872644761029411,
-    "y1": 0.9135037817136206,
+    "y0": 0.7993041529799952,
+    "x1": 0.8897312139373978,
+    "y1": 0.9160583187835385,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -287,11 +287,11 @@
   },
   "lem:kraft-count": {
     "id": "lem:kraft-count",
-    "page": 23,
+    "page": 24,
     "x0": 0.1113790873608558,
-    "y0": 0.29415934013597894,
+    "y0": 0.23128180070356888,
     "x1": 0.8899937050015319,
-    "y1": 0.3834801490860756,
+    "y1": 0.3206026481859612,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -300,11 +300,11 @@
   },
   "lem:collision-tracking": {
     "id": "lem:collision-tracking",
-    "page": 23,
+    "page": 24,
     "x0": 0.10993952532998877,
-    "y0": 0.5837674381757023,
-    "x1": 0.8897666183172488,
-    "y1": 0.8352326672486584,
+    "y0": 0.5188545843567511,
+    "x1": 0.8897314133986928,
+    "y1": 0.7677288633404356,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -313,11 +313,11 @@
   },
   "src:near-full": {
     "id": "src:near-full",
-    "page": 24,
+    "page": 25,
     "x0": 0.11126960804259856,
-    "y0": 0.22242345713605785,
+    "y0": 0.15399287445376617,
     "x1": 0.889720143835529,
-    "y1": 0.3782150191490096,
+    "y1": 0.30978447499901357,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -326,11 +326,11 @@
   },
   "det:conditioning": {
     "id": "det:conditioning",
-    "page": 26,
+    "page": 27,
     "x0": 0.11132352492388557,
-    "y0": 0.3439130686750316,
+    "y0": 0.29602667297979796,
     "x1": 0.8873017753650939,
-    "y1": 0.4714056843459004,
+    "y1": 0.42569482206094145,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -339,11 +339,11 @@
   },
   "det:exact": {
     "id": "det:exact",
-    "page": 26,
+    "page": 27,
     "x0": 0.11132352492388557,
-    "y0": 0.6578356039644492,
+    "y0": 0.6280831231011285,
     "x1": 0.8890366897084354,
-    "y1": 0.7452693130030776,
+    "y1": 0.7155168321397569,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -352,11 +352,11 @@
   },
   "det:rareboost": {
     "id": "det:rareboost",
-    "page": 26,
+    "page": 27,
     "x0": 0.11126960804259856,
-    "y0": 0.8100844103880603,
+    "y0": 0.7875869442718197,
     "x1": 0.8897198446435866,
-    "y1": 0.9146253797743056,
+    "y1": 0.892127913658065,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -365,10 +365,10 @@
   },
   "res:destinations": {
     "id": "res:destinations",
-    "page": 28,
-    "x0": 0.11132352492388557,
+    "page": 29,
+    "x0": 0.11126960804259856,
     "y0": 0.09145603757916075,
-    "x1": 0.8900017831839767,
+    "x1": 0.8885764327703738,
     "y1": 0.33393466833866003,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
@@ -378,11 +378,11 @@
   },
   "res:incoming": {
     "id": "res:incoming",
-    "page": 28,
+    "page": 30,
     "x0": 0.1113790873608558,
-    "y0": 0.8614075785935528,
+    "y0": 0.09127751745358863,
     "x1": 0.8872549019607843,
-    "y1": 0.9146253797743056,
+    "y1": 0.14449532826741537,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -391,11 +391,11 @@
   },
   "res:foreign": {
     "id": "res:foreign",
-    "page": 29,
+    "page": 30,
     "x0": 0.11157843645881205,
-    "y0": 0.09145603757916075,
+    "y0": 0.15409999423556858,
     "x1": 0.8871869853898591,
-    "y1": 0.17698646314216382,
+    "y1": 0.24015068285392993,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -404,11 +404,11 @@
   },
   "res:alignment": {
     "id": "res:alignment",
-    "page": 29,
+    "page": 30,
     "x0": 0.11165196287865732,
-    "y0": 0.6529876246596827,
+    "y0": 0.7174522322837753,
     "x1": 0.8871945649190666,
-    "y1": 0.7497693456784643,
+    "y1": 0.8152730922506313,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -417,11 +417,11 @@
   },
   "cl:bridge": {
     "id": "cl:bridge",
-    "page": 30,
+    "page": 31,
     "x0": 0.1113790873608558,
-    "y0": 0.7977182407571812,
+    "y0": 0.8785149160057607,
     "x1": 0.8897277233647365,
-    "y1": 0.9146253797743056,
+    "y1": 0.9146552808357008,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -430,11 +430,11 @@
   },
   "lem:amplifier-rank": {
     "id": "lem:amplifier-rank",
-    "page": 31,
-    "x0": 0.11157843645881205,
-    "y0": 0.17964284106938525,
-    "x1": 0.8872803332758885,
-    "y1": 0.23272512416646937,
+    "page": 32,
+    "x0": 0.11135947782229753,
+    "y0": 0.27858984590780855,
+    "x1": 0.886799631555096,
+    "y1": 0.3316721290048927,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -443,11 +443,11 @@
   },
   "det:code": {
     "id": "det:code",
-    "page": 32,
+    "page": 33,
     "x0": 0.1106601291232639,
-    "y0": 0.43934951165709835,
+    "y0": 0.5733078465317235,
     "x1": 0.8872881122663909,
-    "y1": 0.5267819491299716,
+    "y1": 0.660741555570352,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -456,11 +456,11 @@
   },
   "det:restore": {
     "id": "det:restore",
-    "page": 32,
-    "x0": 0.1113790873608558,
-    "y0": 0.7067851056956281,
-    "x1": 0.8900199341618158,
-    "y1": 0.9146253797743056,
+    "page": 33,
+    "x0": 0.1117973826289956,
+    "y0": 0.8470212377683081,
+    "x1": 0.8897207422194138,
+    "y1": 0.9162087488656092,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -469,11 +469,11 @@
   },
   "det:amplifier": {
     "id": "det:amplifier",
-    "page": 34,
+    "page": 35,
     "x0": 0.1099395377963197,
-    "y0": 0.16871357927418718,
+    "y0": 0.3025026417741872,
     "x1": 0.8899936052708844,
-    "y1": 0.30328569508562186,
+    "y1": 0.4380243860109888,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -482,11 +482,11 @@
   },
   "det:flat": {
     "id": "det:flat",
-    "page": 34,
+    "page": 35,
     "x0": 0.1113790873608558,
-    "y0": 0.4514038394195865,
+    "y0": 0.5870086592857284,
     "x1": 0.8897704080818525,
-    "y1": 0.5590268915349786,
+    "y1": 0.694630478367661,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -495,11 +495,11 @@
   },
   "det:construction": {
     "id": "det:construction",
-    "page": 34,
+    "page": 35,
     "x0": 0.11274509803921569,
-    "y0": 0.6648369220772175,
+    "y0": 0.8009151882595487,
     "x1": 0.890757741491779,
-    "y1": 0.9166607326931424,
+    "y1": 0.9043172971166745,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -508,11 +508,11 @@
   },
   "det:reduction": {
     "id": "det:reduction",
-    "page": 35,
+    "page": 36,
     "x0": 0.1113790873608558,
-    "y0": 0.6500338930072207,
-    "x1": 0.8872604868770425,
-    "y1": 0.8955999817511048,
+    "y0": 0.8325679278132891,
+    "x1": 0.8871937670738869,
+    "y1": 0.9190736250443892,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -521,11 +521,11 @@
   },
   "def:compatibility": {
     "id": "def:compatibility",
-    "page": 37,
+    "page": 38,
     "x0": 0.11274509803921569,
-    "y0": 0.3766732264046717,
+    "y0": 0.6125810411241319,
     "x1": 0.8879311754812602,
-    "y1": 0.48103571419764046,
+    "y1": 0.7169436059816919,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -534,11 +534,11 @@
   },
   "obs:compatible-protocol": {
     "id": "obs:compatible-protocol",
-    "page": 37,
+    "page": 38,
     "x0": 0.11159640044168709,
-    "y0": 0.49046063663983586,
+    "y0": 0.7263697614573469,
     "x1": 0.8893736795662275,
-    "y1": 0.5596481092048414,
+    "y1": 0.7955571954900568,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -547,11 +547,11 @@
   },
   "thm:rank-count": {
     "id": "thm:rank-count",
-    "page": 38,
+    "page": 39,
     "x0": 0.11137903749553207,
-    "y0": 0.5126176699243411,
+    "y0": 0.5849181666518702,
     "x1": 0.8893444584865197,
-    "y1": 0.61906984117296,
+    "y1": 0.7006846726542771,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -560,11 +560,11 @@
   },
   "thm:compression": {
     "id": "thm:compression",
-    "page": 39,
+    "page": 40,
     "x0": 0.11157843645881205,
-    "y0": 0.19703256240998857,
+    "y0": 0.3129138946533203,
     "x1": 0.8900046753727533,
-    "y1": 0.4058539265334004,
+    "y1": 0.5217352202444365,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -573,11 +573,11 @@
   },
   "lem:sample-access": {
     "id": "lem:sample-access",
-    "page": 40,
+    "page": 41,
     "x0": 0.1099395377963197,
-    "y0": 0.15399287445376617,
+    "y0": 0.27610017795755404,
     "x1": 0.8897224376404208,
-    "y1": 0.2413551253501815,
+    "y1": 0.3634625059185606,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -586,11 +586,11 @@
   },
   "thm:uniform-reduction": {
     "id": "thm:uniform-reduction",
-    "page": 40,
+    "page": 41,
     "x0": 0.11159640044168709,
-    "y0": 0.33060270367246686,
+    "y0": 0.4527113172743056,
     "x1": 0.8873011769812091,
-    "y1": 0.5132956841979364,
+    "y1": 0.6354030262340199,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -599,11 +599,11 @@
   },
   "yao:comparison": {
     "id": "yao:comparison",
-    "page": 41,
+    "page": 43,
     "x0": 0.11274509803921569,
-    "y0": 0.8646946146030619,
+    "y0": 0.8282691107855903,
     "x1": 0.8000131744185305,
-    "y1": 0.9180307099313447,
+    "y1": 0.8835420704851247,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -612,7 +612,7 @@
   },
   "yao:source": {
     "id": "yao:source",
-    "page": 42,
+    "page": 44,
     "x0": 0.10993952532998877,
     "y0": 0.3633710302487768,
     "x1": 0.8872735515918607,
@@ -625,7 +625,7 @@
   },
   "def:alternating-table": {
     "id": "def:alternating-table",
-    "page": 42,
+    "page": 44,
     "x0": 0.11210294486650454,
     "y0": 0.6379808368104877,
     "x1": 0.8873072605507046,
@@ -638,7 +638,7 @@
   },
   "prop:alternating-upper": {
     "id": "prop:alternating-upper",
-    "page": 43,
+    "page": 45,
     "x0": 0.11126960804259856,
     "y0": 0.6354745421746765,
     "x1": 0.8858990638084661,
@@ -651,11 +651,11 @@
   },
   "yao:small-bias-escape": {
     "id": "yao:small-bias-escape",
-    "page": 44,
+    "page": 46,
     "x0": 0.11157843645881205,
-    "y0": 0.4881526291972459,
+    "y0": 0.489701858674637,
     "x1": 0.8899947023080066,
-    "y1": 0.7102617205995502,
+    "y1": 0.718489059294113,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -664,11 +664,11 @@
   },
   "yao:array-list": {
     "id": "yao:array-list",
-    "page": 45,
+    "page": 47,
     "x0": 0.1113235373902165,
-    "y0": 0.37477755305742977,
+    "y0": 0.4699240019827178,
     "x1": 0.8893551296657987,
-    "y1": 0.45402426671500157,
+    "y1": 0.5496820392030658,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -677,11 +677,11 @@
   },
   "yao:lift": {
     "id": "yao:lift",
-    "page": 45,
+    "page": 47,
     "x0": 0.11157839905981924,
-    "y0": 0.5858621693620778,
+    "y0": 0.6833835948597301,
     "x1": 0.88731374304279,
-    "y1": 0.7429194594874526,
+    "y1": 0.8445280441130051,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -690,11 +690,11 @@
   },
   "cl:projection": {
     "id": "cl:projection",
-    "page": 47,
+    "page": 49,
     "x0": 0.10930065080231312,
-    "y0": 0.48954753683070945,
+    "y0": 0.6590248647362295,
     "x1": 0.8872560987285539,
-    "y1": 0.7153135357481061,
+    "y1": 0.8926051746715199,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -703,11 +703,11 @@
   },
   "lem:small-blocks": {
     "id": "lem:small-blocks",
-    "page": 48,
+    "page": 50,
     "x0": 0.1113790873608558,
-    "y0": 0.41717274983723956,
+    "y0": 0.6340452252012311,
     "x1": 0.8872690637127246,
-    "y1": 0.5504511438234888,
+    "y1": 0.7688375145497949,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -716,11 +716,11 @@
   },
   "cl:separation": {
     "id": "cl:separation",
-    "page": 49,
+    "page": 51,
     "x0": 0.11126960804259856,
-    "y0": 0.15073207893756904,
+    "y0": 0.3982068456784643,
     "x1": 0.8873091554330066,
-    "y1": 0.27238040500217015,
+    "y1": 0.5198564240426728,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -729,11 +729,11 @@
   },
   "cl:defect-induction": {
     "id": "cl:defect-induction",
-    "page": 49,
+    "page": 52,
     "x0": 0.1113790873608558,
-    "y0": 0.7082951863606771,
+    "y0": 0.17992530206237176,
     "x1": 0.8877607358047386,
-    "y1": 0.8451607444069602,
+    "y1": 0.31870246656013257,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -742,11 +742,11 @@
   },
   "res:paired": {
     "id": "res:paired",
-    "page": 54,
+    "page": 57,
     "x0": 0.10993947546466504,
-    "y0": 0.59210205078125,
+    "y0": 0.1881361489344125,
     "x1": 0.889720143835529,
-    "y1": 0.8541140315508602,
+    "y1": 0.4503463590988005,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -755,11 +755,11 @@
   },
   "cl:two-stream": {
     "id": "cl:two-stream",
-    "page": 55,
-    "x0": 0.11126960804259856,
-    "y0": 0.31938913133409286,
+    "page": 57,
+    "x0": 0.11135947782229753,
+    "y0": 0.7453171701142283,
     "x1": 0.8897207422194138,
-    "y1": 0.5876922992744831,
+    "y1": 0.906511634287208,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -768,11 +768,11 @@
   },
   "lem:conditioning-moment": {
     "id": "lem:conditioning-moment",
-    "page": 58,
+    "page": 61,
     "x0": 0.10970261517693014,
-    "y0": 0.6646575927734375,
+    "y0": 0.281307856241862,
     "x1": 0.8897653218188317,
-    "y1": 0.8670584938742898,
+    "y1": 0.47775418830640387,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -781,11 +781,11 @@
   },
   "lem:pair-projections": {
     "id": "lem:pair-projections",
-    "page": 59,
+    "page": 62,
     "x0": 0.1099395377963197,
-    "y0": 0.6084486836134785,
+    "y0": 0.1799967024061415,
     "x1": 0.8872651742174734,
-    "y1": 0.8347718209931345,
+    "y1": 0.4090420501400726,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -794,11 +794,11 @@
   },
   "det:suffix": {
     "id": "det:suffix",
-    "page": 60,
-    "x0": 0.1113790873608558,
-    "y0": 0.8149963533035433,
-    "x1": 0.8872518103107129,
-    "y1": 0.9146253797743056,
+    "page": 63,
+    "x0": 0.1099395003973269,
+    "y0": 0.4206099847350458,
+    "x1": 0.8872654734094159,
+    "y1": 0.6123577079387627,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -807,11 +807,11 @@
   },
   "lem:common-schedule": {
     "id": "lem:common-schedule",
-    "page": 64,
+    "page": 67,
     "x0": 0.11132352492388557,
-    "y0": 0.57419012050436,
+    "y0": 0.17707872872400765,
     "x1": 0.8872633790658191,
-    "y1": 0.6444397743302163,
+    "y1": 0.2473324862393466,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -820,11 +820,11 @@
   },
   "lem:full-schedule": {
     "id": "lem:full-schedule",
-    "page": 66,
+    "page": 68,
     "x0": 0.1099395377963197,
-    "y0": 0.08922705024179786,
+    "y0": 0.5108709624319365,
     "x1": 0.8897203432968239,
-    "y1": 0.2702516497987689,
+    "y1": 0.696458758729877,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -833,11 +833,11 @@
   },
   "lem:generated-schedule": {
     "id": "lem:generated-schedule",
-    "page": 66,
+    "page": 69,
     "x0": 0.1094477161083346,
-    "y0": 0.6805332838886916,
+    "y0": 0.2980218945127545,
     "x1": 0.8873084573184743,
-    "y1": 0.8423273876459911,
+    "y1": 0.455500400427616,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -846,11 +846,11 @@
   },
   "yao:finite-field-list": {
     "id": "yao:finite-field-list",
-    "page": 69,
+    "page": 71,
     "x0": 0.1113235373902165,
-    "y0": 0.08935747242937184,
+    "y0": 0.48193193686128866,
     "x1": 0.886439603917739,
-    "y1": 0.2040181015477036,
+    "y1": 0.5949182992029671,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",

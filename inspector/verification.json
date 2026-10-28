@@ -1,11 +1,11 @@
 {
-  "scope": "Complete v42 statement correspondence relative to the named source-theorem records and complexity assumptions. The displayed manuscript includes the width correction, the H4 explanation, and the weight clarification. Three alternating statements now use uniform label counts: one specializes an existing arbitrary-weight theorem and two restate existing uniform bounds. All provider links and checked Lean sources are unchanged. The original build receipts retain their original source identity; the presentation amendment is recorded separately.",
+  "scope": "This inspector displays manuscript v43 and links its unchanged constructions and fixed-gap results to the checked v42 Lean release. Three new runtime statements are pending: the general approximation-to-SAT theorem and its randomized and deterministic runtime corollaries. Their Lean correspondence is not yet complete. The cited graph and hypergraph source reductions remain explicit external inputs.",
   "axioms": [
     "propext",
     "Classical.choice",
     "Quot.sound"
   ],
-  "source_sha256": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
+  "source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
   "build": {
     "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
     "canonical_checked_build_complete": true,
@@ -65,16 +65,39 @@
     },
     "note": "The displayed statements use uniform label counts. The original checked-build and coverage receipts remain pinned to their original source; the existing broader or equivalent Lean statements support these presentation changes. No new proof build is claimed."
   },
-  "paper_source_sha256": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
-  "paper_pdf_sha256": "503ad21a1a2c385350697fef9655eb260db1f6966179952f72ba6d8932ebac10",
-  "mapping_sha256": "12ba750fa315b5c7f225522ab2c61d25ebd8f62d5e6e265cb3ba787f8f28b198",
-  "pending": [],
-  "mode": "reviewed mappings",
+  "displayed_manuscript_version": "v43",
+  "checked_lean_release": "v42",
+  "checked_manuscript_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+  "presentation_amendment": {
+    "kind": "v43 manuscript presentation with partial Lean correspondence",
+    "displayed_source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
+    "displayed_pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+    "prior_release_binding_sha256": "51b50b2bfec9151b1786ee72d0573af4c6b0a40af5f23d4f7e649ee289f4ccc9",
+    "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+    "pending_statement_ids": [
+      "det:time",
+      "thm:quantitative",
+      "thm:time-tradeoff"
+    ],
+    "carried_formal_statements": 63,
+    "new_lean_build_performed": false,
+    "proof_sources_unchanged": true,
+    "correspondence_review_sha256": "df17a96c1c98b1cee8d93ce5afa6f32c9b8b0f72f871804414868b0b8247335a"
+  },
+  "paper_source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
+  "paper_pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+  "mapping_sha256": "96786718a34cd99a3ea088866bc39993358b2794d1ef355ba5c6ecbfb1a7c86d",
+  "pending": [
+    "thm:time-tradeoff",
+    "thm:quantitative",
+    "det:time"
+  ],
+  "mode": "partial manuscript correspondence",
   "module_count": 5194,
   "declaration_count": 70280,
   "compiler_index_count": 5194,
   "missing_indexes": [],
   "trace_issues": [],
-  "explanations_sha256": "27163571eba4cf2e92587dd27fe1d97e972e56bd900069c074826357c4a2ede1",
+  "explanations_sha256": "587045b9da5d0ed003c9b75142ae2813b32c89a8c95c1d71592b31cd22cbe9b4",
   "note": "Compiler reference arrows are source references, not kernel proof-term dependencies. Mapping status is supplied by the source-bound review; this website does not run Lean."
 }

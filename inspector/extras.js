@@ -67,14 +67,14 @@ window.ExplorerExtras = (() => {
       body.append(el('p','',data.scope||'Read the linked verification record for this source snapshot.'));
       if(data.build){
         body.append(el('h3','','Recorded build'));
-        if(data.build.canonical_checked_build_complete===true)body.append(el('p','','The recorded canonical build and axiom audits passed for this source snapshot.'));
+        if(data.build.canonical_checked_build_complete===true)body.append(el('p','','The recorded canonical build and axiom audits passed for the checked Lean source release. Correspondence with the displayed manuscript is recorded separately for each item.'));
         if(data.build.public_package_replay_complete===false)body.append(el('p','','This release does not claim a fresh rebuild of the entire development. Unchanged inherited sources reuse the earlier verified build.'));
         if(data.build.public_package_replay_complete===true)body.append(el('p','','A separate recorded replay rebuilt the local project sources in a fresh checkout.'));
         body.append(el('p','source-scope','Proof-source commit: '+data.build.code_commit));
         if(data.build.checked_build_receipt_url){const record=el('a','','Read the canonical build record');record.href=data.build.checked_build_receipt_url;record.target='_blank';record.rel='noopener';body.append(record);}
       }
       body.append(el('h3','','What the colors mean'));
-      const list=el('ul');for(const text of ['Checked correspondence: the recorded review links this manuscript item to its Lean proof.','Definition: notation or a construction represented in the formal development.','External input: an assumption or cited result used at the stated boundary.','Pending: an older or candidate link that still needs current-source review.'])list.append(el('li','',text));body.append(list);
+      const list=el('ul');for(const text of ['Checked correspondence: the recorded review links this manuscript item to its Lean proof.','Definition: notation or a construction represented in the formal development.','External input: an assumption or cited result used at the stated boundary.','Pending: correspondence with this manuscript is not yet complete; any linked declaration is a candidate.'])list.append(el('li','',text));body.append(list);
       body.append(el('h3','','Lean axioms recorded in the audit'),el('p','',Array.isArray(data.axioms)?data.axioms.join(' · '):'Read the linked audit.'));
       body.append(el('p','','Mathematical source hypotheses can also appear as explicit parameters of a theorem. An axiom list alone does not show that those hypotheses have been independently proved.'));
       if(data.assumptions){body.append(el('h3','','External mathematical inputs'));const ul=el('ul');for(const x of data.assumptions)ul.append(el('li','',typeof x==='string'?x:JSON.stringify(x)));body.append(ul);}
@@ -99,7 +99,7 @@ window.ExplorerExtras = (() => {
     const detail=el('div','linked-detail');box.append(detail);
     if(n.proof_role)box.append(el('p','proof-role',n.proof_role));
     if(links[0])addSourceButtons(detail,links[0],n.scope_note);
-    if(n.status==='pending')box.prepend(el('p','pending-note','Candidate correspondence. This link has not yet been checked against this manuscript.'));
+    if(n.status==='pending')box.prepend(el('p','pending-note',links.length?'Candidate correspondence. This link has not yet been checked against this manuscript.':'Correspondence is not yet complete. No Lean declaration is currently linked to this manuscript statement.'));
     decorateTokens(host);
     decorateTokens($(hostId==='td-code'?'td-chips':'i-chips'));
   }

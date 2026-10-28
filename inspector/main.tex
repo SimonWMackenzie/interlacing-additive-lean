@@ -90,14 +90,19 @@ latter case, hardness holds even when only the receiver of the last bit
 needs to determine the answer, resolving Yao's original question from
 1979.
 
-For the standard model, we also obtain hardness for additive errors that
-grow with the number $T$ of table entries. Under the randomized sparse
-Exponential Time Hypothesis (ETH), no bounded-error randomized
-polynomial-time algorithm can estimate the optimum within additive error
-$c\log T/\log\log T$ for any fixed $0\le c<1/8$. Under deterministic ETH,
-no deterministic polynomial-time algorithm can estimate it within additive
-error $c_*\log\log T$, for an effective absolute constant $c_*>0$. In all
-cases the protocols whose costs are estimated remain deterministic.
+For the standard model, we prove a general algorithmic implication: a
+polynomial-time approximation algorithm yields an algorithm for $3$-SAT
+on $N$ variables and $O(N)$ clauses whose running time depends explicitly
+on the allowed additive error. This
+tradeoff requires no running-time hypothesis about $3$-SAT. For example,
+a polynomial-time randomized estimator with error $c\log T/\log\log T$,
+where $T$ is the number of table entries and $0\le c<1/8$, would give a
+bounded-error algorithm for such formulas in time
+$2^{O(N^\alpha)}$ for every fixed $8c<\alpha<1$. A deterministic
+polynomial-time estimator with error $c_*\log\log T$, for an effective
+absolute constant $c_*>0$, would give a deterministic $3$-SAT algorithm
+in time $2^{O((\log N)^2)}$ on such formulas. In all cases the communication
+protocols remain deterministic.
 \end{abstract}
 \end{titlepage}
 \setcounter{page}{1}
@@ -174,13 +179,12 @@ chasing~\cite{nisan1993rounds}. The interlacing framework
 proves lower bounds for the smaller tables that remain after each message.
 After any partial conversation, we record which of Alice's rows remain,
 grouped by her index $i$, and which of Bob's tuples remain.
-If all large subtables of $M$ have lower bounds, then every protocol of
-cost $\le\D(M)+\log q$ must begin with $\log q$ bits from
-Alice that separate the $q$ values of
-$i$~\cite{mackenzie2025refuting,gaspers-he-mackenzie-npcc}. Since the
-argument is stated for subtables, it still applies after we delete
-inputs, provided enough of each input set remains;
-\cref{sec:overview} explains how we measure this. Hence we can repeat the operation.
+With sufficiently strong lower bounds on restrictions of $M$, the method
+forces a nearly optimal protocol to begin by having Alice identify her
+index~\cite{mackenzie2025refuting,gaspers-he-mackenzie-npcc}.
+Stating the bounds for restrictions lets us use them after messages have
+eliminated inputs. To repeat the construction, we must restore the required
+restriction bounds at each step; \cref{sec:overview} explains how.
 
 Mackenzie and Saffidine developed the interlacing framework, in work first
 circulated in 2024~\cite{mackenzie2025refuting}, to refute the exact
@@ -198,7 +202,7 @@ For approximation we need a larger gap, so we apply interlacing
 repeatedly. Each new table must again have the lower bounds on subtables
 that the next step uses. In an intermediate
 version of this paper~\cite{gaspers2026interlacingeth}, we carried out this
-repeated enlargement and, under ETH, ruled out every fixed additive error
+repeated enlargement and, under the Exponential Time Hypothesis (ETH), ruled out every fixed additive error
 and also additive errors growing with the table size. However, we only
 showed that its fixed-gap constructions run in subexponential time. This is
 enough for hardness under ETH but not for NP-hardness.
@@ -216,7 +220,8 @@ that the sample preserves the gap with high probability
 (\cref{thm:compression}). In both constructions, the
 lower bounds for unrestricted protocols come from interlacing. Because the
 two constructions control the table size differently, they give different
-growing-error bounds, under deterministic and randomized ETH respectively.
+tradeoffs between the approximation error and the running time of the
+$3$-SAT algorithm that an estimator would imply.
 
 Strict alternation needs a separate construction. The short protocols in our
 unrestricted construction send multi-bit messages. Making them alternate
@@ -235,35 +240,50 @@ protocol may choose its starting player independently of the inputs.
 In both conventions, the bits exchanged must determine when the
 conversation has ended.
 
-The \emph{Exponential Time Hypothesis} (ETH), in the sparse form we
-use, asserts that for some constant $c_s$, $3$-SAT on $N$ variables and at
-most $c_sN$ clauses has no deterministic algorithm running in time
-$2^{o(N)}$. We also use the stronger randomized form, which excludes
-bounded-error randomized algorithms. \Cref{def:reth} states the
-assumptions precisely. We need neither assumption for the fixed-error
-NP-hardness results.
+\paragraph{From approximation to satisfiability algorithms.}
+The Exponential Time Hypothesis (ETH) asserts that $3$-SAT requires
+exponential time in the number of variables. Recent independent releases
+by Anthropic and OpenAI announce deterministic subexponential algorithms
+for counting satisfying assignments, and hence for deciding
+$3$-SAT~\cite{anthropic2026subexponential,openai2026ethfalse}. On formulas
+with $N$ variables and $O(N)$ clauses, both manuscripts give time
+$2^{O(N/\sqrt{\log N})}$. We do not rely on these new proofs: instead, we
+state exactly how a communication-cost estimator would speed up $3$-SAT.
+This formulation remains meaningful as satisfiability algorithms improve.
+A known algorithm supplies an upper bound on running time, not a lower
+bound; any inapproximability conclusion must therefore specify which
+further improvement for $3$-SAT it excludes. Our fixed-error NP-hardness
+results do not require any running-time hypothesis.
 
 \subsection{Results}
 \label{sec:results}
 
-The following table summarizes our results.
+The following table summarizes the fixed-error hardness results and two
+examples of our general algorithmic implication. The full tradeoff is
+stated in \cref{thm:time-tradeoff}.
 
 \begin{center}
 \small
 \begin{tabular}{@{}p{.18\linewidth}p{.27\linewidth}p{.25\linewidth}p{.19\linewidth}@{}}
 \toprule
-Protocol model & Additive error & Basis of hardness & Estimators ruled out\\
+Protocol model & Additive error & Consequence for $3$-SAT & Estimator type\\
 \midrule
-Unrestricted & Every fixed error & NP-hard by deterministic reduction & Deterministic unless $\mathsf P=\NP$; randomized unless $\NP\subseteq\BPP$\\
+Unrestricted & Every fixed error & Polynomial time & Deterministic or randomized\\
 \addlinespace
-Strict alternation & Every fixed error & NP-hard by deterministic reduction & Deterministic unless $\mathsf P=\NP$; randomized unless $\NP\subseteq\BPP$\\
+Strict alternation & Every fixed error & Polynomial time & Deterministic or randomized\\
 \addlinespace
-Unrestricted & $c_*\log\log T$ & Deterministic ETH & Deterministic\\
+Unrestricted & $c_*\log\log T$ & $2^{O((\log N)^2)}$ & Deterministic\\
 \addlinespace
-Unrestricted & $c\log T/\log\log T$, $c<1/8$ & Randomized sparse ETH & Bounded-error randomized\\
+Unrestricted & $c\log T/\log\log T$, $c<1/8$ & $2^{O(N^\alpha)}$, every $8c<\alpha<1$ & Bounded-error randomized\\
 \bottomrule
 \end{tabular}
 \end{center}
+
+The last two rows concern formulas with $N$ variables and at most $c_sN$
+clauses, for any fixed density bound $c_s$. Each row describes the algorithm
+that a polynomial-time estimator would imply; randomized estimators give
+bounded-error algorithms. The first two rows are NP-hardness results under
+deterministic reductions.
 
 In each reduction below,
 $\Phi$ is a $3$-CNF formula. The YES (satisfiable) case is $\Phi\in\SAT$,
@@ -320,32 +340,85 @@ Taking error zero in \cref{yao:bpp} answers Yao's original question by
 proving NP-hardness under his speaking and output rules. We do not establish
 a growing-error bound for the alternating model.
 
-For unrestricted protocols, the same constructions also give hardness for
-additive errors that grow with the table size.
+For unrestricted protocols, we can choose the gap as a function of the
+formula size. The larger the gap, the larger the table that the reduction
+must print. The next theorem expresses this tradeoff as an algorithmic
+implication: if an estimator's error is less than half the gap, its output
+decides satisfiability. Here $N$ counts variables in the formula, while $T$
+counts entries in the communication table.
 
-\begin{theorem}[Randomized growing-error hardness]
+\begin{theorem}[From approximation algorithms to $3$-SAT algorithms]
+\label{thm:time-tradeoff}
+There is an effective absolute integer $\mathsf A\ge2$ and, for each fixed
+clause-density bound $c_s$, an effective integer $C\ge1$ with the following
+property. Suppose a deterministic or
+bounded-error randomized polynomial-time estimator approximates $\D(M)$
+with additive error at most a nondecreasing function $a(T)$ on every
+sufficiently large explicit total Boolean table with $T$ entries.
+Let $k=k(N)\ge1$ be an integer function computable in time polynomial in
+$N+k(N)$. Choose either construction and its size bound:
+\[
+\begin{array}{c|c}
+\text{Construction} & S(N,k)\\ \hline
+\text{Randomized} & (N+2)^{C(k+1)}\\[2pt]
+\text{Deterministic} & (N+2)^{C\mathsf A^k}
+\end{array}
+\]
+If, for all sufficiently large $N$,
+\[
+2a\bigl(S(N,k(N))\bigr)<k(N),
+\]
+then $3$-SAT on $N$ variables and at most $c_sN$ clauses has an algorithm
+running in time $S(N,k(N))^{O(1)}$. It is deterministic when both the
+construction and the estimator are deterministic, and bounded-error
+randomized otherwise. The exponent may depend on the estimator and the
+algorithm computing $k$. It suffices for the estimator to work on square
+tables whose side length is a power of two.
+\end{theorem}
+
+The same statement applies to any proposed approximation error, without
+assuming that a particular $3$-SAT running time is optimal. To obtain an
+inapproximability conclusion, one can add a hypothesis excluding the
+resulting $3$-SAT algorithm. The next two corollaries give concrete error
+scales; the constant $1/8$ in the first uses the sharper size accounting
+for the randomized construction.
+
+\begin{corollary}[Randomized estimation and $3$-SAT running time]
 \label{thm:quantitative}
-Assume randomized sparse ETH and fix $0\le c<1/8$. No bounded-error randomized
-estimator running in time polynomial in $T$ estimates $\D(M)$ within
-additive error $c\log T/\log\log T$ on every sufficiently large explicit
-total Boolean table. This remains true for square tables whose side length
-is a power of two, since the reduction outputs such tables.
-\end{theorem}
+Fix $0\le c<1/8$. Suppose a bounded-error randomized polynomial-time
+estimator approximates $\D(M)$ within additive error
+$c\log T/\log\log T$ on every sufficiently large explicit total Boolean
+table with $T$ entries. Then, for every fixed $8c<\alpha<1$ and every
+fixed $c_s$, sparse $3$-SAT on $N$ variables and at most $c_sN$ clauses has
+a bounded-error randomized algorithm with worst-case running time
+$2^{O(N^\alpha)}$. It suffices for the estimator to work on square tables
+whose side length is a power of two.
+\end{corollary}
 
-Under deterministic ETH, we use a deterministic reduction to obtain a
-smaller growing-error bound against deterministic estimators.
+For the smaller error scale below, the deterministic construction gives
+a quasipolynomial-time algorithm for sparse $3$-SAT.
 
-\begin{theorem}[Deterministic growing-error hardness]
-\label{det:eth}
-There is an effective absolute constant $c_*>0$ such that deterministic ETH
-rules out every deterministic polynomial-time estimator that estimates
-$\D(M)$ within additive error $c_*\log\log T$ on every sufficiently large
-explicit total Boolean table.
-\end{theorem}
+\begin{corollary}[Deterministic estimation and $3$-SAT running time]
+\label{det:time}
+There is an effective absolute constant $c_*>0$ with the following property.
+If a deterministic polynomial-time estimator approximates $\D(M)$ within
+additive error $c_*\log\log T$ on every sufficiently large explicit total
+Boolean table, then, for every fixed $c_s$, $3$-SAT on $N$ variables and
+at most $c_sN$ clauses has a deterministic algorithm running in time
+$2^{O((\log N)^2)}$. It suffices for the estimator to work on square tables
+whose side length is a power of two.
+\end{corollary}
 
-The proofs of \cref{intro:deterministic,det:eth} appear in
-\cref{sec:deterministic-endpoints}. We prove \cref{thm:quantitative} in
-\cref{sec:reduction}, and \cref{yao:main,yao:bpp} together at the end of
+Thus the first growing-error guarantee would require a $3$-SAT algorithm
+faster than the newly announced bounds by a fixed power in the exponent;
+the second would require quasipolynomial time. These consequences do not
+assert that such algorithms are impossible. \Cref{sec:time-tradeoff}
+also explains how to choose $k$ for other proposed $3$-SAT time bounds.
+
+The proofs of \cref{intro:deterministic,det:time} appear in
+\cref{sec:deterministic-endpoints}. We prove
+\cref{thm:time-tradeoff,thm:quantitative} in \cref{sec:time-tradeoff}, and
+\cref{yao:main,yao:bpp} together at the end of
 \cref{sec:alternating}. The next section explains the ideas behind these proofs.
 
 \section{Technical overview}
@@ -425,24 +498,27 @@ $v$ in bin 2, and the single auxiliary item in bin 4, leaving bin 3 empty.
 \label{fig:bin-protocol}
 \end{figure}
 
-The full construction uses several labeled copies of these items.
-For each edge in each copy, a binary vector over all items marks the
-active items of that copy with 1 and every other item with 0. We index these
+The full construction uses $4s$ labeled groups of items, each containing a
+copy of the graph's items. For each edge in each group, a binary vector over all items marks the
+active items of that group with 1 and every other item with 0. We index these
 vectors by $\alpha$. In the NO case, every assignment of items to bins has a
 constant fraction of indices at which one bin contains two active items and
 a third item that is inactive there, even after deleting a small fraction of
-the items (\cref{src:item-witness}). We call such a triple a
-\emph{collision}. The inactive third item comes from another copy. There
-are $4s$ copies but only $s$ bins, and at most $s$ copies can have a bin
-containing items of no other copy. Hence for most copies the bin holding an
-active pair also holds an item of another copy, which is inactive at that index.
+the items (\cref{src:item-witness}). We say there is a \emph{collision}
+at such an index. The inactive third item comes from another group. There
+are $4s$ groups but only $s$ bins, and at most $s$ groups can have a bin
+containing items of no other group. Hence for most groups the bin holding an
+active pair also holds an item of another group, which is inactive at that index.
 The reduction never computes an
 assignment. Instead, the lower-bound proof extracts one from any proposed
 short protocol.
 
 The communication matrix has rows $(i,u)$, indexed by an
-item $i$ and a base row $u$ of $R$. Bob's columns come from two families;
-we describe the first now and the second where it is used. A column in the
+item $i$ and a base row $u$ of $R$, together with additional rows described
+below. Against the first family of Bob's columns, these additional rows
+force a short protocol to identify a bin before Bob speaks. The second
+family turns a collision into an extra position that the protocol must handle.
+A column in the
 first family consists of a list $\xi=(\xi_1,\ldots,\xi_{s+1})$ of columns
 of $R$ shared by all bins and, for each bin $p\in\{1,\ldots,s\}$, an index
 $\alpha_p$ and a list $\gamma_p$ of $2s-1$ columns of $R$. At each index
@@ -465,8 +541,9 @@ without a coloring or bin assignment.
 
 The other rows are \emph{template rows} $(p,z)$. Here $p$ is a bin and
 $z$ is a tuple with one entry $z_\alpha=(r,u)$ for each index $\alpha$,
-where $r\in\{1,\ldots,s-2\}$ and $u$ is a row of $R$. Against a column with
-$z_{\alpha_p}=(r,u)$, the entry is $R(u,\gamma_{p,r})$, so template rows
+where $r\in\{1,\ldots,s-2\}$ and $u$ is a row of $R$. Bob's column supplies
+the index $\alpha_p$. Writing $z_{\alpha_p}=(r,u)$, the entry is
+$R(u,\gamma_{p,r})$, so template rows
 use only the first $s-2$ entries of each list $\gamma_p$. We obtain the matrix
 on these rows from $R$ by three interlaces, across the $s-2$ positions,
 across the indices, and across the bins, transposing between successive
@@ -502,8 +579,10 @@ case and $C$ for every graph.
 
 \subsection{Why the reduction rules out every short protocol}
 
-To prove hardness, we must show that no protocol of cost $C-1$, whatever
-its pattern of interaction, exists for a NO graph. From any such protocol we
+We prove that the NO-case lower bound survives deletion of a small fraction
+of the row and column weight, so that it can be reused in later rounds.
+Suppose a protocol of cost $C-1$, with any pattern of interaction, computes
+the remaining matrix. From such a protocol we
 extract a single bin assignment by grouping Alice's rows according to the
 first $\log s$ bits, which are sent before Bob can reveal any index. For a NO graph, this fixed assignment must contain
 collisions.
@@ -579,7 +658,7 @@ By the interlacing lower bound, at a node reached after $r$ bits from Bob,
 the remaining budget suffices for at most $q_22^{-r}$ index sets. The
 stopping nodes form a prefix-free set, so by Kraft's inequality these
 capacities sum to at most $q_2$. The initial count is $q_2$, minus the
-few indices whose template or diagonal inputs were mostly deleted, plus
+few indices at which too many template rows or second-family columns were deleted, plus
 the number of collision indices, which outnumber those deleted ones.
 It therefore exceeds $q_2$. Thus some branch needs more
 communication than the proposed protocol allows. \Cref{lem:collision-tracking} proves this counting argument, and
@@ -622,7 +701,7 @@ that bit.
 Let $N$ be the transpose of the source matrix. Alice now holds a row of
 $N$, which is a column of one of the two families above, and we speak of
 first-family and second-family rows. Bob holds a template or item row.
-The first interlace $\Int{w}{N}$ uses $w=s^8$ copies of $N$: Alice holds a
+The first interlace $\Int{w}{N}$ uses $w$ copies of $N$: Alice holds a
 copy index of $\log w$ bits and a row of $N$, and Bob holds one template or
 item row for each copy. We follow each path of a proposed protocol of cost
 $C+\log w-1$ until Bob sends his first bit or Alice has sent $\log w$ bits,
@@ -645,36 +724,27 @@ first-family rows of its copy, so most of the missing rows are
 second-family rows. The initial deletion is small, so most of this weight
 survives. Since only Alice has spoken, each surviving row lies at
 exactly one other stopping node, and we show that the other stopping nodes
-cannot hold all of it (\cref{fig:reference-destinations}). Measured in complete copies of $N$,
-the surviving missing rows weigh more than $\eta w/2$. The few unassigned
-nodes can receive at most $\eta w/16$ of this weight. An assigned node
-that held much of another copy's second-family rows would itself become
-hard, so the other assigned nodes receive less than $\eta w/32$. This proves the cost
-$C+\log w$ whenever a $1-\delta_U$ fraction of the rows and a
-$\theta=1/(512Q)$ fraction of the columns remain, for parameters $Q$ and
-$\delta_U=s^{-10}/16$ used below. Transposing the resulting matrix gives a
-matrix $W$ with cost $C+\log w$ on every subtable keeping a $\theta$ fraction
-of its rows and a $1-\delta_U$ fraction of its columns. For subtables in
-which both sides may be small, the same argument gives the two deletion
-bounds of \cref{def:profile} only with value $C+\log w-1$
-(\cref{res:alignment}).
+cannot hold all of it (\cref{fig:reference-destinations}). The unassigned
+nodes can receive only a small total weight. An assigned node that held too many of another copy's
+second-family rows would itself require more than $C-1$ bits. Together,
+these bounds leave less room than the surviving rows need.
+After transposing, we obtain a matrix $W$ with lower bound $C+\log w$
+when a tiny fraction of its rows and almost all of its columns remain.
+The two deletion bounds of \cref{def:profile}, which also allow many
+columns to be deleted, hold with value $C+\log w-1$ (\cref{res:alignment}).
 
 \paragraph{Recovering that bit in the deletion guarantee.}
-The last interlace is $(\Int{Q}{W})^{\mathsf T}$ for $Q=s^{24}$, and it
+The last interlace is $(\Int{Q}{W})^{\mathsf T}$ for a sufficiently large $Q$, and it
 uses both guarantees for $W$. We analyze $\Int{Q}{W}$ before the final
-transpose. A restriction tested by the deletion bounds keeps a set of
-tuples of weight $\ge\rho$, that is, of logarithmic weight loss
-$\le\log(1/\rho)$, and row weight $\ge(3/5)2^{-j}$ for the test
-$j\in\{0,1\}$. By averaging, using $Q\delta_U=s^{14}/16\ge80\log(1/\rho)$,
-we find that more than $Q2^{-j}/2+\log(1/\rho)/\delta_U$ of the $Q$ copies
-keep row weight at least $Q2^{-j}\theta$. We project the retained tuples
-onto these copies. The loss of at most $\log(1/\rho)$ is spread over
-more than $\log(1/\rho)/\delta_U$ copies, so by averaging some single copy
-has loss less than $\delta_U$ (\cref{cl:projection}). That copy alone keeps more than a $1-\delta_U$
-fraction of $W$'s columns, so the full-cost bound for $W$ applies to it. An induction over the protocol's messages
-maintains this property. Each Alice bit halves the number of copies needed.
-Each Bob bit increases the logarithmic loss by one, and the surplus of
-copies is large enough to cover this increase (\cref{cl:defect-induction}). In either case a protocol one bit below the
+transpose. Averaging the retained row weight gives many copies with
+enough rows to use the lower bound for $W$. Projecting the retained tuples
+onto these copies leaves at least one copy with almost all its columns:
+the logarithmic loss $\log(1/\rho)$ cannot be large in every copy
+(\cref{cl:projection}). The full-cost bound for $W$ applies to that copy.
+An induction over the protocol's messages maintains the comparison.
+Each Alice bit halves the number of copies needed. Each Bob bit increases
+the logarithmic loss by one; choosing enough copies at the outset covers
+these increases (\cref{cl:defect-induction}). In either case a protocol one bit below the
 claimed cost is impossible. \Cref{cl:bridge}
 proves this for full products of tuples, and \cref{det:restore} for the
 explicit lists described below.
@@ -728,7 +798,8 @@ counts under the full product. The proof is
 a moment estimate, showing that too many disjoint sets of positions with
 substantially changed counts would force the retained set to have less than
 its stated weight. Our proofs simply ignore the exceptional positions, so each interlace
-needs many more positions than can be exceptional. For full products we use
+needs many more positions than can be exceptional. Writing $n$ for the
+number of graph vertices, for full products we use
 the deletion threshold $\rho\approx1/n$ and $s=\Theta(\log n)$. The
 conditioning events in the proof then have weight about $\rho^8$, and the
 bound allows about $n^{5/64}$ exceptional positions, far more than $s$. We
@@ -742,7 +813,7 @@ this small loss still leaves enough weight for the deletion bounds. Thus the low
 preserve independence, and the arguments for the graph lower bound and the
 two deletion bounds apply to the explicit lists.
 
-For an alphabet of size $m$, each list has at most $(1+qm)^{D}$ tuples,
+If the base input set has $m$ labels, each list has at most $(1+qm)^{D}$ tuples,
 and their rational weights have polynomial bit length (\cref{det:code}). Hence each
 round runs in time polynomial in the source graph size $n$ and the encoding
 length of the current matrix,
@@ -750,10 +821,12 @@ and the exponent does not depend on the round. After $k$ rounds, the encoding
 length and the running time are therefore at most $n^{A^{O(k)}}$, for an
 absolute constant $A>1$. Thus every fixed gap gives a polynomial-time
 reduction, and choosing $k>2a$ proves hardness for additive error $a$
-(\cref{det:reduction,intro:deterministic}). For deterministic ETH, we take
-$k=\Theta(\log N)$ rounds for a sparse formula on $N$ variables. The
-construction time stays $2^{o(N)}$ and $\log\log T=O(k)$, which gives the
-$\log\log T$ error scale (\cref{det:eth}).
+(\cref{det:reduction,intro:deterministic}). Taking only
+$k=\Theta(\log\log N)$ rounds for a sparse formula on $N$ variables makes
+the construction quasipolynomial in $N$, while $\log\log T=O(k)$.
+An estimator with a sufficiently small constant times $\log\log T$ error
+would therefore decide sparse $3$-SAT in quasipolynomial time
+(\cref{det:time}).
 
 \subsection{Two further consequences of keeping fewer inputs}
 
@@ -783,10 +856,12 @@ sample need only preserve the gap, since no further amplification follows. Each 
 most its width, so the rank after $k$ rounds is at most $2^{d_0+kh}$
 (\cref{prop:iteration}). For a sparse formula on $N$ variables the graph has
 $N^{1+o(1)}$ vertices and $h=(1+o(1))\log N$,
-so we take $k\approx N/\log^2N$, which gives $\log T=(4+o(1))k\log N$, that is,
-$k=(1/4+o(1))\log T/\log\log T$. An estimate within additive error $a$ separates
-the two cases only if the gap exceeds $2a$, which gives every fixed $c<1/8$ in
-\cref{thm:quantitative}.
+so taking $k\approx N^\alpha/\log N$ gives
+$\log T=(4+o(1))k\log N$ and
+$k=(\alpha/4+o(1))\log T/\log\log T$.
+The construction then takes time $2^{O(N^\alpha)}$.
+An estimate within additive error $c\log T/\log\log T$ distinguishes the
+two cases whenever $\alpha>8c$, giving \cref{thm:quantitative}.
 
 \paragraph{Strict alternation uses its own encoding.}
 The coloring protocol above sends messages of $\log s$ bits. Making it
@@ -828,8 +903,9 @@ promise then gives an edge whose vertices all have the same rule. Each
 vertex keeps at least a $2^{-s}$ fraction of all address tuples, so by the
 AM--GM inequality there is a coordinate at which the addresses of these
 tuples, summed over the $s^2$ vertices of the edge, take many distinct
-values. Paired with the vertices' positions in the edge, they give
-$2^{m-t+1}$ distinct array positions, for a protocol of depth $2m-1$. On
+values. Set $m=b+3t-3$ and suppose the protocol has depth $2m-1$.
+Paired with the vertices' positions in the edge, these addresses give
+$2^{m-t+1}$ distinct array positions. On
 all these rows Alice's first $t$ bits are the same function of Bob's bits.
 
 We follow the protocol, keeping at each Bob turn the larger set of array labels
@@ -843,10 +919,13 @@ in which each prescribed pattern on $r$ positions occurs in at most a
 $2^{-r}+\varepsilon$ fraction of the arrays, where $\varepsilon\le2^{-4m}$
 (\cref{yao:array-list}). A union bound over the answer
 patterns then shows that the arrays consistent with some pattern are fewer
-than the arrays that survive (\cref{yao:small-bias-escape,yao:lift}). Enumerating the list gives a
-deterministic polynomial-size table for each fixed gap. Changing the
-starter or the output convention costs at most two bits
-(\cref{yao:comparison}), so the result transfers to Yao's convention.
+than the arrays that survive (\cref{yao:small-bias-escape,yao:lift}). The NO cost is therefore at least
+$2m=2b+6t-6$, exceeding the YES bound $2b+4t+2$ by $2t-8$.
+This gap is for Alice-first protocols with public output. Allowing either
+starter and receiver-only output reduces it by at most two bits
+(\cref{yao:comparison}). Choosing $t$ sufficiently large and enumerating the
+array list therefore gives a deterministic polynomial-size table for every
+fixed gap in Yao's convention.
 
 \section{Related work and formal verification}
 
@@ -916,13 +995,16 @@ arguments. A public proof inspector~\cite{beyondlibrary2026inspector}
 gives the statements and formal proofs.
 
 A companion Lean development formalizes the constructions and hardness
-results in this version, relative to explicit interfaces for the cited
-source reductions and the stated complexity assumptions. The public proof
-inspector~\cite{interlacing2026inspector} links the manuscript's statements
-to their Lean proofs and explains definitions and Lean commands. The
-companion repository~\cite{interlacing2026lean} provides the sources,
-reproducible build instructions, and a record of the assumptions and
-verification checks.
+results of version 42, relative to explicit interfaces for the cited source
+reductions and its stated complexity assumptions. Those constructions are
+unchanged here. This version replaces the ETH-based consequences by direct
+statements about $3$-SAT running time; these reformulated consequences have
+not yet been added to the formalization. The public proof
+inspector~\cite{interlacing2026inspector} displays version 42 and links its
+statements to their Lean proofs, with explanations of definitions and Lean
+commands. The companion repository~\cite{interlacing2026lean} provides the
+sources, reproducible build instructions, and a record of the assumptions
+and verification checks.
 
 The \hyperref[sec:ai-methodology]{AI methodology statement} at the end of
 the paper describes how AI tools were used to develop and check the
@@ -983,17 +1065,13 @@ designates one player whose input determines the answer. Stopping is
 still public and correctness is required on every input.
 \end{definition}
 
-We base the growing-error results on the following assumptions about the
-time needed to solve sparse $3$-SAT.
-
-\begin{definition}\label{def:reth}
-Randomized sparse ETH asserts that, for some fixed constant $c_s$, no
-bounded-error randomized algorithm decides $3$-SAT on $N$ variables and
-at most $c_sN$ clauses in worst-case time $2^{o(N)}$. Deterministic sparse
-ETH makes the corresponding assertion for deterministic algorithms.
-We use this deterministic form, related to the usual formulation by
-sparsification~\cite{impagliazzo2001ksat,impagliazzo2001strongly}.
-\end{definition}
+Our quantitative statements use sparse $3$-SAT: the input has $N$ variables
+and at most $c_sN$ clauses, where $c_s$ is fixed in advance. Running times
+are worst-case bounds, including all random tapes for randomized algorithms;
+bounded error means success probability at least $2/3$ on every formula.
+Constants may depend on $c_s$ and on the estimator. We do not apply a
+sparsification step with an uncharged exponential cost: all stated running
+times refer directly to these sparse inputs.
 
 All communication protocols in this paper are deterministic and exact.
 Only estimators and randomized reductions use random bits. All logarithms
@@ -1188,6 +1266,10 @@ weights, without division by $q$.
 The full product is the list with labels $Y^q$, identity decoder and
 product weights. For a label set $K$ and a set $J\subseteq[q]$, write
 $\pi_JK=\{z(\ell)_J:\ell\in K\}$ for the projection of its decoded tuples.
+
+To apply a lower bound to a few surviving blocks, we project the retained
+column tuples onto those blocks. The next observation realizes the
+projected tuples as actual columns of the restriction.
 
 \begin{observation}[Restrictions projected to a set of blocks]\label{obs:representatives}
 Let $G$ be a restriction of an interlace of $R$, on the full product or on
@@ -1384,7 +1466,7 @@ $s=\operatorname{pow}_2(2^{16}(L+1))$. \Cref{lem:full-schedule} shows that
 these choices meet the constraints above once $n$ exceeds an effective
 constant. In the explicit case, we take $\rho=s^{-4}$ for a sufficiently
 large dyadic $s$ with $s^4\ge n$. \Cref{sec:parameters} verifies the
-numerical requirements shared by both cases, namely the margins
+numerical requirements shared by both cases, namely the bounds
 \eqref{eq:width-margins}, and the additional conditions of each case. All
 these choices are fixed across rounds.
 
@@ -1684,19 +1766,16 @@ cannot have the same exclusive bin, so at most \(s\) groups are discarded.
 In each of the more than \(2s\) remaining groups, every chosen
 bin also contains a retained item from another group. That item is inactive
 at the chosen coordinate. We have therefore found more than
-\(\gamma s|E|\) witnesses with two active items and one inactive item.
+\(\gamma s|E|\) coordinates with a collision.
 Since \(q_0<8s|E|\), their fraction after padding exceeds
 \(\gamma/8\), and hence the stated \(\zeta=\gamma/24\).
 Uniform repetition to width \(q_2\) preserves that fraction.
 \end{proof}
 
-To bound the remaining communication, we consider interlace restrictions
-that retain enough blocks of large base row weight and some column
-weight. In the next lemma, $u$ is a dyadic block parameter. The restriction
-keeps at least $9u/16$ blocks, each of base row weight at least $ux$, and its
-retained column weight may be as small as $2^{-u/1024}$. When the retained
-tuple labels weigh at least $9/25$, we use \cref{det:exact} instead, which
-also applies to explicit lists.
+The next estimate is used to prove the template-layer deletion bounds
+below for full-product interlaces. For explicit lists we instead use
+\cref{det:exact}. Both applications are in the appendix; the collision
+argument uses the resulting template-layer bounds.
 
 \begin{lemma}\label{lem:many-product-blocks}
 Suppose $\RP{M}{x}{H}$ holds for a rationally weighted matrix $M$, where
@@ -1736,8 +1815,9 @@ The proof is in \cref{sec:initial-template-proofs}, after the initial-matrix
 proof (p.~\pageref{proof:src:profiles}).
 
 Three proofs below follow retained input sets along a protocol prefix and
-count them at the protocol-tree nodes where the prefix stops. We isolate
-this count in the next lemma.
+count them where the prefix stops. A mark lets a set count twice until it
+splits into two sets. In the collision application, the mark records the
+extra lower bound supplied by a collision.
 
 \begin{lemma}[Kraft count]\label{lem:kraft-count}
 Let $q$ be a power of two, and let $V$ be a set of nodes of a binary protocol
@@ -1772,7 +1852,7 @@ satisfy $2qx\le1/8$.
 Suppose a protocol with at most
 $H+\log q$ bits left has $q-b$ indices, each with a retained set of
 list inputs of weight at least $3/4$. Each set consists of inputs with that
-fixed index. Mark $w_0>b$ of these sets as collision witnesses.
+fixed index. Mark $w_0>b$ of these sets.
 Assume the following lower bounds, where all set weights are computed from
 the original input weights.
 \begin{enumerate}
@@ -1924,7 +2004,7 @@ $\mathcal D$-inputs at index \(\alpha\) have weight greater than \(1/2\) in \(\G
 
 We now apply \cref{lem:collision-tracking} with $q=q_2$ and $H=H_1$.
 Its $q_2-b$ indices are those outside $B_j$, and its $w_0>3b$ marked sets are
-those at the indices in $U_j\setminus B_j$. The margins
+those at the indices in $U_j\setminus B_j$. The numerical bounds
 \eqref{eq:width-margins} give $q_2x\le10^{-4}$, hence $2q_2x\le1/8$.
 We now verify its hypotheses (i), (ii) and (iii).
 
@@ -2017,7 +2097,7 @@ selected by the prefix and discard its exceptional coordinates, as follows.
 \begin{theorem}[Surviving blocks after conditioning]\label{det:rareboost}
 Suppose $d\ge2$, $\RP{M}{x}{d}$, and an exactly $8192$-wise independent
 tuple list has weights $\nu$ and the base-column weights as marginal. Let $\nu(Y)\ge v>0$,
-choose the exceptional set from \cref{det:conditioning} with any cap
+choose the exceptional set from \cref{det:conditioning} with any error bound
 $0<\tau\le1$, and let an integer $a\ge1$ satisfy $2^ax\le1$. If a restriction
 retains at least $2^{a-1}+1$ blocks indexed outside that exceptional set, each of base row weight at least
 $2^ax$, and a column set $K\subseteq Y$ with $(\nu\mid Y)(K)\ge1/2$, then
@@ -2038,6 +2118,10 @@ $\Omega$ has weight $\lambda=255/256$ and $\mathcal D$ has weight $\mu=1/256$.
 \paragraph{Common hypotheses.}
 In this section we use only the following hypotheses, where $H_1,H_2,C$ are as in
 \eqref{eq:source-costs} and $H_1,H_2\ge2$.
+To bound arriving weight in \cref{res:incoming}, we will fix the
+type/bin/item sequence and the base-label sequence by averaging.
+The independence in (H3) leaves the template-label weights unchanged
+until we condition on the retained template inputs.
 \begin{enumerate}
 \item[(H1)] The per-copy deletion bounds $\RP{A}{x}{H_1}$,
 $\RP{R_{\rm temp}}{x}{H_2}$ and $\RP{N_{\rm ref}}{x}{C-1}$.
@@ -2073,9 +2157,6 @@ weights on $\mathcal K^w$, so pulling back preserves the weights of retained
 sets and the entries and depth of protocols. We never need to enumerate
 this auxiliary representation. In the explicit case the complete sequences are the
 actual indexed input labels (\cref{det:construction,det:flat}).
-The proof of \cref{res:incoming} fixes the first two sequences by averaging and
-only then conditions on the template-label sequence, whose weights before that
-step are the original ones.
 
 By \cref{det:conditioning} with $v=\theta$ and $\tau=\eta/2$, conditioning on
 a tuple event of weight at least $\theta$ makes at most $e(\theta,\eta/2)$
@@ -2092,7 +2173,7 @@ stopping nodes to all but at most $E_{\rm exc}$ copies (\cref{res:destinations})
 Under the common hypotheses above, suppose a restriction of $U$ retains row
 weight at least $1-\delta_U$ and a tuple event $Y'$ of original weight at least
 $\theta$, with a protocol of depth at most $C+\log w-1$.
-Apply \cref{det:conditioning} to this one event with cap $\eta/2$, removing
+Apply \cref{det:conditioning} to this one event with error bound $\eta/2$, removing
 at most $E_{\rm exc}/2$ copies. At an Alice node of depth $r$, put
 $\kappa=w2^{-r}$ and follow each remaining set of $\Omega$-rows from one copy,
 of normalized weight at least $2\kappa x$, into every child retaining weight
@@ -2158,7 +2239,10 @@ so the assigned nodes correspond to distinct copies. The sum of $\kappa$
 over all other stopping nodes is bounded as claimed.
 \end{proof}
 
-The next two bounds on arriving $\mathcal D$-weight are proved in
+Rows displaced from their copy's assigned node must reach either an
+unassigned node or a node assigned to another copy. We use the first bound
+for unassigned nodes and the second for nodes assigned to another copy.
+Their proofs are in
 \cref{sec:incoming-bound-proof,sec:foreign-bound-proof}, respectively.
 
 \begin{lemma}\label{res:incoming}
@@ -2249,7 +2333,7 @@ By \cref{res:destinations} and $E_{\rm exc}<w/4$ from \cref{lem:common-schedule}
 at least $w-E_{\rm exc}\ge3w/4$ copies
 have assigned nodes, each with only $C-1$ bits left. These copies lie outside
 the exceptional set, so conditioning on $Y'$ with
-cap $\eta/2$ gives each of them a column projection of original
+error bound $\eta/2$ gives each of them a column projection of original
 weight at least $1-\eta/2$, which gives a restriction of $N$
 (\cref{obs:representatives}). By \cref{src:near-full}, the assigned node must miss more than
 $\eta$ of the row weight in its assigned copy.
@@ -2294,7 +2378,7 @@ the interlace of $N_{\rm ref}=N[\Omega,\mathcal K]$. The average retained
 weight on $\Omega$, normalized within $\Omega$, is at least
 $\beta'_j=(\beta_j-(1-\lambda))/\lambda$.
 We put $\kappa=w2^{-j}$ and apply \cref{det:conditioning} to $Y$ with
-cap one. If $m$ copies have coordinates outside the exceptional set and
+error bound one. If $m$ copies have coordinates outside the exceptional set and
 retain normalized weight on $\Omega$ at least $\kappa x$,
 block averaging gives $w\beta'_j\le m+e(\theta)+w\kappa x$ and hence
 \[
@@ -2343,8 +2427,8 @@ full-product and the explicit case.
 In the construction encoding the graph, let
 $h=2\log s+\log q_2+\log w+\log Q$ and suppose
 $|\mathcal I|\le2sq_2$. Then $\rank(R^+)\le2^h\rank(R)$.
-The same bound holds if any word alphabet is replaced by an indexed list
-of legal words, including products of such lists.
+The same bound holds if any tuple set is replaced by an indexed list
+of tuples from that set, including products of such lists.
 \end{lemma}
 \begin{proof}
 A width-$t$ interlace stacks $t$ blocks obtained by selecting or repeating
@@ -2358,7 +2442,7 @@ After the outer interlaces, rank subadditivity gives
 \rank(R^+)\le wQ(sq_1q_2+|\mathcal I|)\rank(R)
 \le wQsq_2(q_1+2)\rank(R)=2^h\rank(R),
 \]
-using $q_1+2=s$. Restricting word lists, duplicating indexed labels, and
+using $q_1+2=s$. Restricting tuple lists, duplicating indexed labels, and
 transposing preserve this argument.
 \end{proof}
 
@@ -2374,7 +2458,7 @@ We first prove (ii), so let the graph be NO, $\D(R)=d\ge3$ and
 $\RP{R}{\rho}{d}$. By \cref{src:profiles}, the per-copy deletion
 bounds and the collision bound hold. The construction has exact marginals (in
 the explicit case, those of $S_{\rm g}$ and $\mathcal J_{\rm g}$ in
-\cref{det:construction}), and \cref{lem:common-schedule} gives the margins
+\cref{det:construction}), and \cref{lem:common-schedule} gives the numerical bounds
 \eqref{eq:width-margins}. Hence these bounds meet the
 hypotheses of \cref{src:near-full}, so $\D(N)=C$ even after we delete at most
 $\eta$ of each input set's weight. This gives (H1) and (H2) of
@@ -2489,7 +2573,7 @@ To prove the lower bounds, we fix $j\in\{0,1\}$ and a restriction of $R^+$ retai
 $\ge\phi$ and column weight $\ge(3/5)2^{-j}$. After undoing the transpose, the retained
 columns form a label event $Y$ of weight at least $\phi$, and the within-block
 weights of the retained rows average at least $(3/5)2^{-j}$ over the $Q$ blocks. We apply
-\cref{det:conditioning} to $Y$ with cap $\delta/2$ and put
+\cref{det:conditioning} to $Y$ with error bound $\delta/2$ and put
 \[
 e=e(\phi,\delta/2),\qquad k=Q2^{-j},\qquad a=\log k.
 \]
@@ -2544,8 +2628,11 @@ same cost for $R^+$. Taking $U=C$ proves equality.
 \section{Deterministic gap tables}\label{sec:deterministic}
 \label{sec:deterministic_amplification}
 
-After \(k\) rounds, the explicit-list construction below gives a deterministic
-gap of \(k\) bits. \Cref{det:reduction} states its costs and encoding bound.
+The shared amplification proof applies to explicit lists once their
+marginal weights and independence properties are verified. We now construct
+these lists and bound their encoding length, making each round a deterministic
+polynomial-time operation. \Cref{det:reduction} gives the resulting gap and
+encoding bound after \(k\) rounds.
 
 The subscript $\rm g$ marks parameters and matrices of the explicit-list
 construction. We choose a
@@ -2578,9 +2665,9 @@ After defining the lists below, we prove this corollary in
 \subsection{Replacing products by explicit lists}
 
 A coordinate of a tuple in one small list can itself be a label of another
-small list. The next lemma shows that decoding such nested labels gives
-the product weights on every small set of coordinates. This remains true after we
-fix positive-weight labels of other, independent complete lists.
+small list. The next lemma shows that decoding such nested labels preserves
+the product weights on every small set of coordinates. It also records why
+fixing independently weighted labels of other lists does not change these weights.
 As in \cref{sec:models}, inputs with the same decoded value keep separate
 labels and weights.
 
@@ -2590,10 +2677,10 @@ with marginal \(\mu_Z\). Choose labels of this inner list at \(q_{\rm out}\) pos
 an exactly \(8192\)-wise independent outer list whose marginal equals the
 inner label weights.
 Then the decoded coordinates, indexed by outer--inner pairs, are exactly
-\(8192\)-wise independent with marginal \(\mu_Z\). If this complete outer list
-is independent of finitely many other complete lists, fixing any
-positive-weight joint value of those lists leaves its decoded original weights
-unchanged.
+\(8192\)-wise independent with marginal \(\mu_Z\). If the outer-list label
+has product weights with the tuple of labels from finitely many other lists,
+fixing those other labels at any joint value of positive weight leaves its
+decoded weights unchanged.
 \end{lemma}
 
 \begin{proof}
@@ -2602,8 +2689,8 @@ outer position. Outer independence factors their joint weight over
 these groups, and inner independence factors each group into its prescribed
 coordinate marginals. Each factorization involves at most $8192$ coordinates,
 as both independence hypotheses require.
-Since the outer list is independent of the other complete lists, fixing their
-values does not change these weights.
+Fixing the other labels leaves the outer-label weights unchanged, and hence
+also leaves their decoded weights unchanged.
 \end{proof}
 
 \begin{definition}\label{det:construction}
@@ -2636,11 +2723,17 @@ the map defining $\mathcal D$: the tail and all repeated labels use the same
 $\gamma$. This defines $B_{\rm raw,g}$, its transpose $N_{\rm g}$, and its
 normalized restriction $N_{\rm ref,g}$ to inputs with the $\Omega$ family tag.
 
-To interlace \(w_{\rm g}\) copies of \(N_{\rm g}\), we use three independent
-complete sequences of length \(w_{\rm g}\), each exactly \(8192\)-wise independent.
+The lower-bound proof fixes the type/bin/item sequence and the base-label
+sequence before restricting the template labels; the latter must still have
+their original weights, as required by (H3).
+To interlace \(w_{\rm g}\) copies of \(N_{\rm g}\), we therefore use three
+tuple lists with product weights between their labels. Each list consists
+of sequences of length \(w_{\rm g}\) and is exactly \(8192\)-wise independent
+under its label weights.
 Type/bin/item labels have the weights induced by those labels in the raw rows,
 base labels have weights \(\mu_X\), and template labels have the \(S_{\rm g}\)
-weights. At each position, the type label in the first sequence determines whether the
+weights. We enumerate the Cartesian product of these three label sets.
+At each position, the type label in the first sequence determines whether the
 decoded row is a template row \((p,z)\), from the bin and template labels, or a row
 \((i,u)\) indexed by an item, from the item and base labels. Since the three sequences
 are independent and each is exactly \(8192\)-wise independent, their
@@ -2649,20 +2742,19 @@ independent tuple list with the raw-row marginal. Interlacing \(N_{\rm g}\) on
 this list defines \(U_{\rm g}\). Set \(W_{\rm g}=U_{\rm
 g}^{\mathsf T}\). We interlace \(W_{\rm g}\) at width \(Q_{\rm g}\) using
 \(\mathsf{Code}_{8192}\) with its column weights and then transpose to obtain \(R_{\rm
-g}^{+}\). We store the complete-list products, rational weights, and index labels
-explicitly, and we keep inputs with equal decoded values separate.
+g}^{+}\). We store all input labels and rational weights explicitly, keeping inputs with
+equal decoded values separate.
 \end{definition}
 
 As in \cref{obs:representatives}, we obtain projected restrictions from
 chosen representatives. The per-copy deletion bounds and the collision
-bound for this construction are the explicit case of \cref{src:profiles}. They
-need a separate proof, via \cref{det:conditioning,det:rareboost}, because the
-retained events here can have weight as small as $x_{\rm g}$, which is much smaller
-than the weights of the events in the proof for $W$. Given these bounds, the collision and stopping-node
-arguments of \cref{src:near-full} and \cref{sec:internal-interlace} apply to the
-indexed construction without change.
+bound are the explicit case of \cref{src:profiles}. Their proofs use
+\cref{det:conditioning,det:rareboost} to handle retained events of weight
+as small as $x_{\rm g}$. With these bounds, the collision and stopping-node
+arguments of \cref{src:near-full,sec:internal-interlace} apply to the
+indexed construction.
 
-\subsection{Iteration, encoding size and deterministic ETH}
+\subsection{Iteration, encoding size and deterministic running time}
 \label{sec:deterministic-endpoints}
 
 To prove \cref{det:amplifier}, we need only add the encoding bound to the
@@ -2672,7 +2764,7 @@ explicit case of \cref{thm:amplifier}.
 \phantomsection\label{proof:det:amplifier}
 We suppress the subscript $\rm g$. Each width is a fixed polynomial
 in $\mathsf N$. Therefore the fixed number of calls to \cref{det:code}, all of order
-$8192$, and the products of complete lists take time bounded by a fixed polynomial
+$8192$, and enumeration of the Cartesian products of their label sets take time bounded by a fixed polynomial
 in $\mathsf N$ and the encoding length of $R$. The indexed labels and rational
 weights needed by the next round have encoding length within the same bound.
 
@@ -2745,7 +2837,7 @@ Computing the public threshold and the parameters takes time within the same bou
 \end{proof}
 
 We now derive \cref{intro:deterministic} by taking a fixed number $k$ of rounds,
-and \cref{det:eth} by taking $k=\Theta(\log N)$ rounds for a sparse formula on
+and \cref{det:time} by taking $k=\Theta(\log\log N)$ rounds for a sparse formula on
 $N$ variables.
 
 \begin{proof}[Proof of \cref{intro:deterministic}]
@@ -2760,13 +2852,13 @@ The resulting public threshold separates cost $\le B_k^{\rm g}$ from
 cost exactly $B_k^{\rm g}+k$, on a square table with power-of-two side.
 \end{proof}
 
-\begin{proof}[Proof of \cref{det:eth}]
-\phantomsection\label{proof:det:eth}
+\begin{proof}[Proof of \cref{det:time}]
+\phantomsection\label{proof:det:time}
 We choose the number $k$ of rounds so that the gap $k$ exceeds twice the
 allowed error $c_*\log\log T$. At the same time, $k$ must be small enough that the
-construction and the estimator run in time subexponential in the size of the sparse formula.
+construction and the estimator run in quasipolynomial time in the size of the sparse formula.
 Let $\mathsf A$ be the effective power of two from \cref{det:reduction}, and
-set $c_*=1/(8\log\mathsf A)$. Suppose, for contradiction, that such an estimator exists.
+set $c_*=1/(8\log\mathsf A)$. Suppose such an estimator exists.
 For a sparse formula on $N$ variables, \cref{src:gap-colouring} and
 \cref{lem:generated-schedule} give a value
 $\mathsf N=s_{\rm g}^4\ge\max\{N,|V(G)|\}$ satisfying the parameter conditions.
@@ -2774,30 +2866,32 @@ Since $|V(G)|\le N(\log(N+2))^p$ for the fixed $p$ of
 \cref{src:gap-colouring}, we have $\mathsf N=N^{O(1)}$.
 For sufficiently large $N$, we choose
 \[
-k=\floor{\frac{\floor{\log N}}{2\log\mathsf A}}.
+k=\floor{\frac{\log\log N}{\log\mathsf A}}.
 \]
-Then $k=\Theta(\log N)$ and $\mathsf A^k\le\sqrt N$. The square output of
+Then $k=\Theta(\log\log N)$ and $\mathsf A^k\le\log N$. The square output of
 \cref{det:reduction} has threshold $B_k^{\rm g}$ and $T$ entries, where
 \[
 N^2\le T\le\mathsf N^{C_0\mathsf A^k},\qquad
 \log\log T\le k\log\mathsf A+O(\log\log N).
 \]
-For sufficiently large $N$, the second bound is at most $2k\log\mathsf A$.
+For sufficiently large $N$, the second bound is at most $3k\log\mathsf A$:
+indeed it is at most $2\log\log N+O(1)$, whereas
+$k\log\mathsf A=\log\log N+O(1)$.
 Consequently
 \[
-2c_*\log\log T\le k/2<k.
+2c_*\log\log T\le 3k/4<k.
 \]
 Comparing the estimate with the public midpoint
 $B_k^{\rm g}+k/2$ therefore decides satisfiability.
 Both construction and the estimator's fixed polynomial running time in $T$
 are bounded by
 \[
-2^{O(\sqrt N\log N)}=2^{o(N)}.
+2^{O((\log N)^2)}.
 \]
 The estimator's guarantee holds for all sufficiently large tables, so it applies here because $T\ge N^2$.
 For the finitely many remaining values of $N$, including those with $k<1$,
 exhaustive search over assignments decides satisfiability.
-This contradicts the sparse ETH assumption in \cref{def:reth}.
+This proves the claimed deterministic running-time implication.
 \end{proof}
 
 %% ---- section: alternation ----
@@ -3096,14 +3190,69 @@ output has cost $\ge H_k$. Decoding the inputs gives cost $\le H_k$ on every
 tape, so the cost is then exactly $B_k+k$.
 \end{proof}
 
-For the growing-error result, the number of rounds grows with the formula size.
+\subsection{From an approximation algorithm to a $3$-SAT algorithm}
+\label{sec:time-tradeoff}
+
+We now combine the two constructions with an estimator, proving the general
+implication stated in \cref{thm:time-tradeoff}. Each construction produces
+a known threshold $B$ and a gap $k$. Its size bound determines which
+approximation errors are small enough to distinguish the two cases.
+
+\begin{proof}[Proof of \cref{thm:time-tradeoff}]
+\phantomsection\label{proof:thm:time-tradeoff}
+Apply \cref{src:gap-colouring}, then \cref{thm:uniform-reduction} in the
+randomized case or \cref{det:reduction} in the deterministic case. Since
+the source graph and the deterministic size parameter are $N^{O(1)}$, a
+fixed $C$ bounds both the table size $T$ and construction time by the
+chosen $S(N,k)$. The constant $\mathsf A$ is the absolute constant from
+\cref{det:reduction}. The tables tend to infinity with $N$.
+
+Because $a$ is nondecreasing, $a(T)\le a(S(N,k))<k/2$. An accurate
+estimate is therefore below the midpoint $B+k/2$ on a YES output and
+above it on a successful NO output. If the estimator is randomized,
+repeat this comparison independently a constant number of times and take
+the majority answer, reducing its error below $1/100$. The randomized
+construction adds failure probability at most $1/50$; the deterministic
+construction adds none. Thus the combined algorithm has error less than
+$1/3$ whenever randomness is used, and is exact otherwise.
+
+Construction, computing $k$, estimation, and comparison with the binary
+rational midpoint all take time $S(N,k)^{O(1)}$: in particular,
+$S(N,k)\ge N+k$ absorbs the assumed polynomial cost of computing $k$.
+Exhaustive search handles the finitely many smaller sizes.
+\end{proof}
+
+To read this in terms of a proposed $3$-SAT running time $R(N)=2^{g(N)}$,
+suppose $g(N)/\log(N+2)$ grows without bound and the chosen number of rounds
+can be computed within the stated time. A budget $2^{O(g(N))}$ allows
+\[
+\begin{aligned}
+k&=\Theta\!\left(\frac{g(N)}{\log(N+2)}\right)
+&&\text{in the randomized construction},\\
+k&=\Theta\!\left(\log\frac{g(N)}{\log(N+2)}\right)
+&&\text{in the deterministic construction}.
+\end{aligned}
+\]
+The constant in the second choice is chosen so that
+$\mathsf A^k\log(N+2)=O(g(N))$.
+Accuracy better than half this gap, at the corresponding table sizes,
+therefore yields a $3$-SAT algorithm within that budget. If such a $3$-SAT
+algorithm is excluded by an explicit hypothesis, the same statement gives
+inapproximability. To quantify a further improvement over a known algorithm,
+choose a smaller target budget $R$. The theorem does not treat the best
+known upper bound as optimal.
+
+For \cref{thm:quantitative}, we use the exact sample size rather than
+the coarser bound $S(N,k)$. This gives the coefficient $1/8$ in the
+randomized error bound; the algorithmic implication is the same.
 
 \begin{proof}[Proof of \cref{thm:quantitative}]
 \phantomsection\label{proof:thm:quantitative}
 Suppose a bounded-error randomized polynomial-time estimator achieves additive
 error $a(T)=c\log T/\log\log T$ for some fixed $0\le c<1/8$ on every
-sufficiently large square table of power-of-two side length. We obtain a
-bounded-error $2^{o(N)}$ algorithm for sparse $3$-SAT.
+sufficiently large square table of power-of-two side length. Fix
+$8c<\alpha<1$. We obtain a bounded-error $2^{O(N^\alpha)}$ algorithm for
+sparse $3$-SAT.
 
 For a formula with $N$ variables, \cref{src:gap-colouring} produces a source
 graph with $n$ vertices, where
@@ -3116,7 +3265,9 @@ Thus the graph is above the fixed cutoff for every sufficiently large $N$, and
 \[
 L=\ceil{\log n}=\log N+O(\log\log N).
 \]
-We choose $k=\floor{N/\ceil{\log N}^{2}}$. By
+Choose a fixed rational $\beta$ with $8c<\beta<\alpha$, and put
+$k=\floor{N^\beta/\ceil{\log N}}$. This integer is computable in polynomial
+time, using an integer root for the fixed rational power. By
 \cref{lem:full-schedule,cl:seed}, $h=L+O(\log L)$ and $d_0=O(\log L)$, so
 \[
 B_k=d_0+kh=(1+o(1))k\log N.
@@ -3127,8 +3278,8 @@ $\log m=2B_k+k+O(\log(B_k+1))$. Hence the printed size satisfies
 \begin{align}
 \log T&=2\log m=4B_k+2k+O(\log(B_k+1))
              =(4+o(1))k\log N,\label{eq:quantitative-size}\\
-\log\log T&=(1+o(1))\log N,
-\qquad k=\left(\frac14+o(1)\right)\frac{\log T}{\log\log T}.
+\log\log T&=(\beta+o(1))\log N,
+\qquad k=\left(\frac\beta4+o(1)\right)\frac{\log T}{\log\log T}.
 \end{align}
 Consequently $k>2a(T)$ for all sufficiently large $N$. The table already has
 the square power-of-two form required by the assumed estimator.
@@ -3143,13 +3294,12 @@ fails with probability at most $1/50$, so the decision error is less than
 $3/100<1/3$.
 
 Both construction time and random-bit usage are
-$n^{O(k+1)}=2^{o(N)}$ on every tape. The estimator also takes
-$2^{o(N)}$ time because
-$\log T=O(N/\log N)$. For all sufficiently large $N$, we have $k\ge1$, the graph is above the fixed cutoff, and $T$ meets the estimator's size threshold.
+$n^{O(k+1)}=2^{O(N^\beta)}$ on every tape. The estimator also takes
+$2^{O(N^\beta)}$ time because $\log T=O(N^\beta)$.
+For all sufficiently large $N$, we have $k\ge1$, the graph is above the fixed cutoff, and $T$ meets the estimator's size threshold.
 The finitely many smaller values of $N$ are decided by exhaustive search within
-a fixed bound. This contradicts randomized sparse
-ETH. In particular, an estimator working on all explicit total tables is also
-impossible.
+a fixed bound. Since $\beta<\alpha$, the total running time is
+$2^{O(N^\alpha)}$, as claimed.
 \end{proof}
 
 \section{Strictly alternating protocols}\label{sec:alternation}
@@ -3411,6 +3561,9 @@ with fixed alternating bits. At the final Alice node, her row and the transcript
 determine the old output leaf, so we replace her last bit by that output. This
 uses no extra bit and, since $m>t$, preserves her first $t$ responses.
 
+We stop with about $\log m$ turns per player remaining, so that Bob's
+remaining response rules require fewer bits to describe than there are
+surviving array positions.
 Put $h=\ceil{\log m}\le m-t$ and $Q=2^h$. The inequality follows from
 $m\le2(m-t)\le2^{m-t}$. We follow the first $2(m-h)-1$ messages and keep the
 Bob child with more column labels and the Alice child with more rows.
@@ -3558,28 +3711,32 @@ alternation.
 \section{Remaining approximation questions}
 \label{sec:conclusion}
 
-We obtained fixed-error NP-hardness in both models and growing-error hardness
-for unrestricted protocols. In both models, what limits these results is how fast
-the explicit table grows with the requested gap. A milder dependence
-would give stronger approximation lower bounds.
+We obtained fixed-error NP-hardness in both models and algorithmic implications
+for growing errors in the unrestricted model. The quantitative consequences
+depend on how fast the explicit table grows with the requested gap. Smaller
+tables would give faster SAT algorithms from the same approximation guarantee,
+and stronger inapproximability under assumptions excluding those SAT algorithms.
 
 For unrestricted protocols, our deterministic construction outputs a table
-of size at most $N^{2^{O(k)}}$ for an $N$-variable formula and gap $k$
+of size at most $N^{2^{O(k)}}$ for an $N$-variable sparse formula and gap $k$
 (\cref{det:reduction}). Can smaller lists preserve the restriction bounds needed for the
 next round, or can another construction improve the $\log\log T$ error scale?
 
 For strict alternation, a construction whose size and running time depend
 more mildly on the gap could let the gap grow with the table size, giving
-growing-error hardness in Yao's model as well.
+analogous approximation-to-SAT implications in Yao's model.
 
 
 \appendix
 \section{Interlacing estimates and the initial matrix}\label{sec:interlacing-details}
 \label{sec:interlacing_details}
 
-In this appendix we prove the interlacing estimates
-\cref{lem:many-product-blocks,cl:bridge}. We also prove \cref{cl:seed} for the
-initial matrix and \cref{src:profiles} for the template layers.
+We first prove the projection and small-block estimates used in
+\cref{sec:surviving-block-proofs}. The surviving-block bound proved there
+then supplies the separation theorem and the column-loss induction below.
+We use these estimates to prove \cref{lem:many-product-blocks,cl:bridge},
+and finish with the initial matrix and template-layer bounds
+(\cref{cl:seed,src:profiles}).
 
 \subsection{Projecting column tuples and retained weight}
 
@@ -3802,7 +3959,7 @@ with
 \[
 \Delta_1(\pi_JK)\le\frac{p-1/2}{p}\delta<\delta.
 \]
-Since \(2^{-v}\ge1-v\) for \(0\le v\le1\), applied with \(v=\Delta_1(\pi_JK)\), the projected column density is
+Since \(2^{-v}\ge1-v\) for \(0\le v\le1\), applied with \(v=\Delta_1(\pi_JK)\), the projected column weight is
 greater than \(1-\delta\). The block in \(J\) retains row weight
 \(\ge\theta\), so the hypothesis gives cost at least \(C\).
 
@@ -3820,8 +3977,9 @@ There is one further base case, \((a,e,p)=(3,1,5)\). Its loss is
 Its column weight therefore exceeds \(9/25\), and \cref{det:exact} with $a=3$
 applies to these five blocks, giving $C+2=C+3-1$ bits.
 
-For \((a,e)=(1,0)\), a singleton projection has loss
-\(\le(p-1)\delta/p<\delta\), so its column density exceeds \(1-\delta\).
+We also handle the Bob-first case of \((a,e)=(1,0)\) now;
+its Alice-first case is covered by the general step below. A singleton projection has loss
+\(\le(p-1)\delta/p<\delta\), so its column weight exceeds \(1-\delta\).
 Its rows retain weight \(\ge2\theta\ge\theta\), so the hypothesis gives
 cost at least \(C\ge3\) and the restriction is nonconstant. After a Bob bit,
 the denser child has a two-coordinate projection of loss at most
@@ -3833,8 +3991,7 @@ valid state has \(a\ge2\), \(p\ge3\), and base row weight \(\ge4\theta\). Some
 three-coordinate projection has loss \(\le3\delta+4/3\), so by the
 three-copy bound the restriction is not constant.
 
-Consider a restriction in such a non-base state and the first bit of a
-protocol for it. If Alice
+Consider any remaining case and the first bit of a protocol for it. If Alice
 speaks, we assign every block to a child retaining at least half its row weight. For
 child \(i\in\{0,1\}\), let \(p_i\) be the number of assigned blocks and let
 \(L_i\) be the loss after projecting the retained column set onto those
@@ -4051,7 +4208,7 @@ $q\beta\le m+qt$ of \cref{sec:models} gives the following lower bounds for $m/u$
 \frac35-q_2x,\qquad
 \frac{2^j(\beta_j-(1-\lambda))}{\lambda}-sx.
 \]
-All three exceed $9/16$ by the margins of \cref{lem:common-schedule}, which
+All three exceed $9/16$ by the numerical bounds of \cref{lem:common-schedule}, which
 both parameter schedules satisfy. They also give the row thresholds
 $u\rho\le s\rho\le1$ and $ux\le\max\{q_2x,sx\}\le1$, and $u\ge s/2\ge16$
 since $s\ge256$.
@@ -4079,7 +4236,8 @@ H_2+\log s-j=C-1-j,
 \]
 which are the three asserted pairs of deletion bounds.
 
-Finally, the first $q_1$ positions and three distinct tail positions give
+It remains to prove the collision bound for the interlace on $\Gamma$.
+The first $q_1$ positions and three distinct tail positions give
 $q_1+3=s+1=(2s)/2+1$ blocks. By hypothesis, each retains base row weight
 $\ge x_{\rm cap}=2s\rho$, and the retained list labels have weight greater
 than $1/2>9/25$. In either case the list $\Gamma$ is exactly eight-wise
@@ -4099,6 +4257,10 @@ the $\mathcal D$-inputs have total weight $\mu=1/256$, and the template rows
 and the $\Omega$-inputs each have total weight $\lambda=255/256$.
 
 \subsection{Two template inputs at one stopping node}
+
+The next lemma uses the transposed orientation: its rows
+are template-label pairs, and its two column families come from one
+copy's $\Omega$-inputs and another copy's $\mathcal D$-inputs.
 
 At the node assigned to copy $i$, an $\Omega$-input of copy $i$ reads the
 template label at coordinate $i$, and a $\mathcal D$-input of another copy $j$
@@ -4280,12 +4442,13 @@ Here $C_{128}=(2^{14}/(\lambda-1/2)^2)^{128}$ is the fixed constant
 of \eqref{eq:common-budgets}, and the last inequality is a row of \eqref{eq:width-margins}.
 Thus $Y^*$ intersects the event $\sum_i d_iT_i\ge D_0/2$ in weight
 $\ge\theta/4$.
-We average over the complete sequences of type, bin, and item labels and of base labels, and fix a
+We average over the type/bin/item sequence and the base-label sequence, and fix a
 configuration whose retained set $Z$ of template-label sequences has original weight
 $\ge\theta/4$ and whose template positions have total weight
 $\sum_i d_iT_i\ge D_0/2$.
-Since the three sequences are independent, fixing only the first two leaves the template-label sequence with its original
-exactly $8192$-wise independent $J$ coordinates $z_{i,\alpha}$. We apply
+By (H3), fixing those two sequences leaves the template-label sequence
+with its original weights and exactly $8192$-wise independent
+$J$ coordinates $z_{i,\alpha}$. We apply
 \cref{det:conditioning} to $Z$ with $\tau=1$, which removes at most
 $e(\theta/4)\le sq_2$ coordinates.
 
@@ -4336,7 +4499,7 @@ exceeds $\mu\delta_i$. Then the node receives a set of inputs labeled by $\mathc
 weight $\mu\delta$ for some $\delta>\delta_i$.
 
 Both copy indices lie outside the exceptional set for $Y'$, and only Alice has spoken before
-reaching the assigned node. By \cref{det:conditioning} with cap $\eta/2$, the projection of $Y'$ onto
+reaching the assigned node. By \cref{det:conditioning} with error bound $\eta/2$, the projection of $Y'$ onto
 coordinates $i$ and $j$ has original product weight $\ge1-\eta/2>99/100$.
 We restrict to the event that both coordinates are template rows. This event
 has weight $\lambda^2$, so the
@@ -4348,7 +4511,7 @@ We average over the two bin labels and fix a pair of bins attaining this relativ
 weight. Their retained pairs of template labels form a set $P_*\subseteq S^2$ of original
 product weight $\ge a_{\min}$. The chosen bin at $i$ becomes the distinguished bin. The
 projection at coordinate $i$, which lies outside the exceptional set, loses at most $\eta/2$ of its row weight
-by the same cap, while each bin has weight $\lambda/s$,
+by the same error bound, while each bin has weight $\lambda/s$,
 so every other
 bin retains weight at least
 \[
@@ -4471,7 +4634,7 @@ For an exactly eight-wise independent list,
 \]
 For an exactly $8192$-wise independent list, let $K\subseteq Y$ with
 $\nu(Y)\ge v>0$, and choose the pairs outside the exceptional set from
-\cref{det:conditioning}, with any cap $0<\tau\le1$. Then
+\cref{det:conditioning}, with any error bound $0<\tau\le1$. Then
 \[
 (\nu\mid Y)(K)<\frac1{4m}\qquad(m\ge16).
 \]
@@ -4559,7 +4722,7 @@ following.
 $\nu(K)\ge(9/25)2^{-b}$.
 \item[(C)] The list is exactly $8192$-wise independent with weights $\nu$,
 $\nu(Y)\ge v>0$, the exceptional set is chosen from \cref{det:conditioning}
-with cap $0<\tau\le1$, the retained blocks have indices outside that set,
+with error bound $0<\tau\le1$, the retained blocks have indices outside that set,
 $K\subseteq Y$, and $(\nu\mid Y)(K)\ge2^{-b-1}$.
 \end{enumerate}
 Then the restriction requires at least $d+1$ bits.
@@ -4818,11 +4981,11 @@ e(v,\tau)
 \end{aligned}
 \end{equation}
 
-\begin{lemma}[Common numerical margins]\label{lem:common-schedule}
+\begin{lemma}[Common numerical bounds]\label{lem:common-schedule}
 There is an effective dyadic constant $s_0$, depending only on the fixed
 graph promise, such that the recipe in \cref{def:amplification-parameters}
 with $n\le\rho^{-1}$, $\rho\le s^{-4}$, and $s\ge s_0$ satisfies all source
-and internal-interlace margins listed in \eqref{eq:width-margins} below. The choice of
+and internal-interlace bounds listed in \eqref{eq:width-margins} below. The choice of
 $s_0$ is independent of the base matrix and the number of rounds.
 \end{lemma}
 
@@ -4870,7 +5033,7 @@ e(\theta)\le e(\theta,\eta/2)=\frac{E_{\rm exc}}2
 \le\frac{\eta w}{64s}<\frac w{128}.
 \]
 Here $e(\theta)=e(\theta,1)\le e(\theta,\eta/2)$ because $e(v,\tau)$ is
-nonincreasing in the error cap $\tau$.
+nonincreasing in the error bound $\tau$.
 
 The remaining fixed-fraction checks appear in the proofs that use them.
 For each, we list the table rows it uses and derive here only the bounds that
@@ -4891,7 +5054,7 @@ from the display above.
 The row $s\eta$ gives $4096\eta sn\le\delta_v n/16$ and
 $4096\eta s(s-3)\le(s-3)/16<s/2$. The rows $s\eta$ and $sq_1/q_2$ give
 $8sq_1+4s\eta q_2/\mu\le(1/16+2^{-14})\zeta q_2<\zeta q_2/4$.
-\item \emph{Row thresholds and template margins.} The rows $s^2\rho$, $s\eta$
+\item \emph{Row and template thresholds.} The rows $s^2\rho$, $s\eta$
 and $\max\{q_2x,sx,wx\}$ give $2s\rho\le1/8$, $2wx+\eta/(16\lambda)<1$,
 $2sx\le10^{-3}$, and hence $999/1000-2(s-1)x>998/1000$ in the proof of
 \cref{src:near-full} and
@@ -4937,7 +5100,7 @@ satisfies $u\ge s/2$. Since $\log(1/x)=8L$,
 u\ge2^{15}(L+1)>4096\log(1/x),
 \]
 which gives the full-product block threshold
-$x\ge2^{-u/1024}$. The common margins give the required block counts
+$x\ge2^{-u/1024}$. The common numerical bounds give the required block counts
 and row-weight bounds. For the final interlace the remaining checks are
 \[
 0<\delta_U=\frac1{16s^{10}}<\frac1{64},\qquad
@@ -5146,7 +5309,8 @@ Its running time and complete output length are polynomial in $n2^r$.
 In this proof only, let $R=2^d$ be the least power of two with $R\ge n2^r$.
 Construction~3 and Proposition~3 of \citet{alon1992smallbias} enumerate
 $R^2$ labeled $n$-bit arrays whose nonempty parities have bias
-$\le(n-1)/R\le2^{-r}$. The parity-to-pattern conversion
+$\le(n-1)/R\le2^{-r}$, where bias is the absolute expectation of the
+$\{\pm1\}$-valued parity. The parity-to-pattern conversion
 \cite[Lemma~1]{alon1992smallbias} cited above then gives the displayed bound
 for every nonempty $I$ and every $z$, and the case $I=\varnothing$ is immediate.
 

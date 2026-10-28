@@ -3,16 +3,16 @@
   "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
   "archive_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/archive/bff03274f57796d986e788f95e0d553a71312936.zip",
   "input_hashes": {
-    "paper_source": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
-    "paper_pdf": "503ad21a1a2c385350697fef9655eb260db1f6966179952f72ba6d8932ebac10",
-    "paper_aux": "fe8cc4120ad8d1e0057b65f1f68b3728e63c9a28c22a2b18e5b0012f00b3557b",
-    "mapping": "12ba750fa315b5c7f225522ab2c61d25ebd8f62d5e6e265cb3ba787f8f28b198",
+    "paper_source": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
+    "paper_pdf": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+    "paper_aux": "46cff425ba6dfe1b7b764e77e09625f246ed14a53c7141d1fb8720747773e955",
+    "mapping": "96786718a34cd99a3ea088866bc39993358b2794d1ef355ba5c6ecbfb1a7c86d",
     "module_inventory": "4e5c4e483a4b2906865825afc0055ddad34be1d3d44d6a72f929780dee52396c",
-    "endpoints": "92828fc7d508d109c33c33e22a691044612e03e0de58c0066ae83e52c5c1b22c",
-    "explanations": "27163571eba4cf2e92587dd27fe1d97e972e56bd900069c074826357c4a2ede1",
-    "references": "6b94fecc586f68128b2e136f1fce08e474095ee9dd11235c86fba91f0d70f878"
+    "endpoints": "8a646426b616af7e1241e34f51f6e1baa11609fdbe0c14e2b8fe572c9b58acea",
+    "explanations": "587045b9da5d0ed003c9b75142ae2813b32c89a8c95c1d71592b31cd22cbe9b4",
+    "references": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31"
   },
-  "bound_mapping_sha256": "12ba750fa315b5c7f225522ab2c61d25ebd8f62d5e6e265cb3ba787f8f28b198",
+  "bound_mapping_sha256": "96786718a34cd99a3ea088866bc39993358b2794d1ef355ba5c6ecbfb1a7c86d",
   "build": {
     "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
     "canonical_checked_build_complete": true,
@@ -24,25 +24,18 @@
   },
   "publication_performed_by_runner": false,
   "mapping_transformation": {
-    "base_bound_mapping_sha256": "f819c6385b5faf93eb71fc7f145b2867543f7803504e964477c20d3982d4b8a3",
-    "changed_fields": [
-      "paper.source_sha256",
-      "paper.pdf_sha256",
-      "verification.source_sha256",
-      "verification.scope",
-      "verification.editorial_amendment",
-      "statements.source_line",
-      "statements.tex",
-      "statements.scope_note"
+    "base_bound_mapping_sha256": "12ba750fa315b5c7f225522ab2c61d25ebd8f62d5e6e265cb3ba787f8f28b198",
+    "removed_statement_ids": [
+      "def:reth",
+      "det:eth"
     ],
-    "statements_unchanged": false,
-    "formal_statement_ids_changed": [
-      "yao:array-list",
-      "yao:finite-field-list",
-      "yao:small-bias-escape"
+    "pending_statement_ids": [
+      "det:time",
+      "thm:quantitative",
+      "thm:time-tradeoff"
     ],
-    "provider_links_and_statuses_unchanged": true,
-    "statement_records_sha256": "37565d3cce1c0caccd6be9bc79062569f6815457596a91c0dfc35301b77095aa"
+    "retained_formal_correspondence_count": 63,
+    "notes": "Construction 6 is narrowed to fixed gaps; construction 8 lists source inputs without ETH hypotheses."
   },
   "editorial_amendment": {
     "kind": "weight explanations and uniform counting presentation",
@@ -92,5 +85,24 @@
       "yao:finite-field-list": "finite_field_list provides a nonempty R^2 label carrier, the uniform pattern bound, and the stated polynomial output and runtime bounds."
     },
     "note": "The displayed statements use uniform label counts. The original checked-build and coverage receipts remain pinned to their original source; the existing broader or equivalent Lean statements support these presentation changes. No new proof build is claimed."
+  },
+  "publication_mode": "partial manuscript correspondence",
+  "displayed_manuscript_version": "v43",
+  "checked_lean_release": "v42",
+  "presentation_amendment": {
+    "kind": "v43 manuscript presentation with partial Lean correspondence",
+    "displayed_source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
+    "displayed_pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+    "prior_release_binding_sha256": "51b50b2bfec9151b1786ee72d0573af4c6b0a40af5f23d4f7e649ee289f4ccc9",
+    "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+    "pending_statement_ids": [
+      "det:time",
+      "thm:quantitative",
+      "thm:time-tradeoff"
+    ],
+    "carried_formal_statements": 63,
+    "new_lean_build_performed": false,
+    "proof_sources_unchanged": true,
+    "correspondence_review_sha256": "df17a96c1c98b1cee8d93ce5afa6f32c9b8b0f72f871804414868b0b8247335a"
   }
 }

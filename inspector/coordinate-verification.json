@@ -1,6 +1,6 @@
 {
-  "source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
-  "pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+  "source_sha256": "a598f87d665345584393445d4fb849e0571bc2848cf039665d130308fb758592",
+  "pdf_sha256": "d1ae12ce29d114af1b23e1f2038bad3955d1f5b94d71fb08b77e1b72f4dab43d",
   "references_sha256": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31",
   "page_count": 74,
   "character_geometry_identical": true,
@@ -9,392 +9,392 @@
       "page": 4,
       "point": [
         506.751,
-        260.377
+        399.69
       ]
     },
     "yao:main": {
       "page": 4,
       "point": [
         426.321,
-        146.957
+        284.516
       ]
     },
     "yao:bpp": {
-      "page": 5,
+      "page": 4,
       "point": [
         103.637,
-        654.844
-      ]
-    },
-    "thm:time-tradeoff": {
-      "page": 5,
-      "point": [
-        495.745,
-        308.927
+        133.806
       ]
     },
     "thm:quantitative": {
       "page": 5,
       "point": [
         410.379,
-        156.59
+        591.681
       ]
     },
     "det:time": {
-      "page": 6,
+      "page": 5,
       "point": [
         156.467,
-        681.943
+        465.355
       ]
     },
     "def:table-estimation": {
       "page": 14,
       "point": [
         207.879,
-        135.26
+        492.139
       ]
     },
     "yao:model": {
-      "page": 15,
+      "page": 14,
       "point": [
         187.243,
-        641.295
+        352.263
       ]
     },
     "def:interlace": {
-      "page": 16,
+      "page": 15,
       "point": [
         168.584,
-        409.266
+        103.396
       ]
     },
     "def:exact-tuples": {
-      "page": 17,
+      "page": 16,
       "point": [
         467.292,
-        427.85
+        90.389
       ]
     },
     "obs:representatives": {
       "page": 17,
       "point": [
         467.006,
-        234.578
+        539.32
       ]
     },
     "def:profile": {
-      "page": 18,
+      "page": 17,
       "point": [
         478.518,
-        643.416
+        284.895
       ]
     },
     "src:gap-colouring": {
-      "page": 18,
+      "page": 17,
       "point": [
         455.808,
-        441.674
+        72.0
       ]
     },
     "thm:amplifier": {
       "page": 18,
       "point": [
         339.433,
-        117.244
+        392.821
       ]
     },
     "cl:seed": {
-      "page": 19,
+      "page": 18,
       "point": [
         151.175,
-        562.718
+        179.584
       ]
     },
     "prop:iteration": {
-      "page": 19,
+      "page": 18,
       "point": [
         151.174,
-        449.941
+        72.0
       ]
     },
     "def:amplification-parameters": {
       "page": 19,
       "point": [
         486.501,
-        82.334
+        363.95
       ]
     },
     "def:source-matrix": {
       "page": 21,
       "point": [
         418.173,
-        316.803
+        602.839
       ]
     },
     "src:item-witness": {
       "page": 22,
       "point": [
         336.534,
-        364.91
+        626.577
       ]
     },
     "src:upper": {
       "page": 22,
       "point": [
         444.305,
-        306.33
+        567.997
       ]
     },
     "lem:many-product-blocks": {
       "page": 23,
       "point": [
         120.787,
-        230.533
+        474.321
       ]
     },
     "src:profiles": {
-      "page": 24,
+      "page": 23,
       "point": [
         486.697,
-        681.943
+        258.331
       ]
     },
     "lem:kraft-count": {
-      "page": 24,
+      "page": 23,
       "point": [
         131.064,
-        544.102
+        118.456
       ]
     },
     "lem:collision-tracking": {
       "page": 24,
       "point": [
         209.021,
-        188.342
+        409.153
       ]
     },
     "src:near-full": {
-      "page": 25,
+      "page": 24,
       "point": [
         259.944,
-        551.034
+        120.988
       ]
     },
     "det:conditioning": {
       "page": 27,
       "point": [
         440.843,
-        459.233
+        695.492
       ]
     },
     "det:exact": {
       "page": 27,
       "point": [
         190.737,
-        229.694
+        465.953
       ]
     },
     "det:rareboost": {
       "page": 27,
       "point": [
         242.068,
-        89.818
+        326.077
       ]
     },
     "res:destinations": {
-      "page": 29,
+      "page": 28,
       "point": [
         315.556,
-        532.902
+        105.554
       ]
     },
     "res:incoming": {
-      "page": 30,
+      "page": 29,
       "point": [
         481.63,
-        681.943
+        262.715
       ]
     },
     "res:foreign": {
-      "page": 30,
+      "page": 29,
       "point": [
         343.177,
-        607.821
+        188.593
       ]
     },
     "res:alignment": {
       "page": 30,
       "point": [
         145.411,
-        150.687
+        320.326
       ]
     },
     "cl:bridge": {
-      "page": 32,
+      "page": 31,
       "point": [
         410.904,
-        619.377
+        156.245
       ]
     },
     "lem:amplifier-rank": {
-      "page": 32,
+      "page": 31,
       "point": [
         420.514,
-        533.699
+        72.0
       ]
     },
     "det:code": {
       "page": 33,
       "point": [
         338.884,
-        273.076
+        465.041
       ]
     },
     "det:restore": {
-      "page": 34,
+      "page": 33,
       "point": [
         158.629,
-        584.438
+        101.211
       ]
     },
     "det:amplifier": {
       "page": 35,
       "point": [
         134.844,
-        449.468
+        556.181
       ]
     },
     "det:flat": {
       "page": 35,
       "point": [
         281.491,
-        246.236
+        353.634
       ]
     },
     "det:construction": {
       "page": 36,
       "point": [
         276.152,
-        399.675
+        505.803
       ]
     },
     "det:reduction": {
-      "page": 37,
+      "page": 36,
       "point": [
         421.106,
-        607.695
+        72.0
       ]
     },
     "def:compatibility": {
       "page": 38,
       "point": [
         241.788,
-        228.564
+        339.289
       ]
     },
     "obs:compatible-protocol": {
       "page": 38,
       "point": [
         502.293,
-        167.991
+        278.716
       ]
     },
     "thm:rank-count": {
       "page": 39,
       "point": [
         382.844,
-        243.13
+        307.768
       ]
     },
     "thm:compression": {
       "page": 40,
       "point": [
         381.173,
-        383.169
+        474.947
       ]
     },
     "lem:sample-access": {
       "page": 41,
       "point": [
         448.87,
-        508.521
+        605.42
       ]
     },
     "thm:uniform-reduction": {
       "page": 41,
       "point": [
         434.796,
-        295.121
+        393.08
+      ]
+    },
+    "thm:time-tradeoff": {
+      "page": 42,
+      "point": [
+        495.745,
+        514.766
       ]
     },
     "yao:comparison": {
-      "page": 43,
+      "page": 44,
       "point": [
         361.615,
-        99.315
+        627.874
       ]
     },
     "yao:source": {
       "page": 44,
       "point": [
         230.342,
-        367.81
+        221.796
       ]
     },
     "def:alternating-table": {
-      "page": 44,
+      "page": 45,
       "point": [
         171.273,
-        72.0
+        544.107
       ]
     },
     "prop:alternating-upper": {
       "page": 45,
       "point": [
         343.048,
-        250.939
+        72.0
       ]
     },
     "yao:small-bias-escape": {
       "page": 46,
       "point": [
         379.254,
-        227.34
+        72.0
       ]
     },
     "yao:array-list": {
       "page": 47,
       "point": [
         342.529,
-        362.03
+        240.087
       ]
     },
     "yao:lift": {
-      "page": 47,
+      "page": 48,
       "point": [
         504.329,
-        128.511
+        667.966
       ]
     },
     "cl:projection": {
-      "page": 49,
+      "page": 50,
       "point": [
         244.278,
-        89.44
+        681.943
       ]
     },
     "lem:small-blocks": {
       "page": 50,
       "point": [
         455.545,
-        194.42
+        145.738
       ]
     },
     "cl:separation": {
       "page": 51,
       "point": [
         501.318,
-        384.657
+        344.01
       ]
     },
     "cl:defect-induction": {

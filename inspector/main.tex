@@ -12,7 +12,7 @@
 \makeatletter
 \def\theHALG@line{\thealgorithm.\arabic{ALG@line}}
 \makeatother
-\hypersetup{hidelinks,pdftitle={Interlacing and Additive Inapproximability of Deterministic Communication Complexity}}
+\hypersetup{hidelinks,pdftitle={NP-Hardness and Additive Inapproximability of Deterministic Communication Complexity}}
 \usetikzlibrary{arrows.meta,positioning,calc,matrix,fit,backgrounds}
 \theoremstyle{plain} \newtheorem{theorem}{Theorem}[section]
 \newaliascnt{lemma}{theorem} \newtheorem{lemma}[lemma]{Lemma}
@@ -62,7 +62,7 @@
 \crefname{assumption}{Assumption}{Assumptions}
 
 \begin{document}
-\title{Interlacing and Additive Inapproximability of Deterministic Communication Complexity}
+\title{NP-Hardness and Additive Inapproximability of Deterministic Communication Complexity}
 \author{Serge Gaspers\thanks{University of New South Wales} \and
 Tao Zixu He\thanks{University of Massachusetts Amherst} \and
 Simon Mackenzie\footnotemark[1]}
@@ -75,35 +75,36 @@ Simon Mackenzie\footnotemark[1]}
 \begin{abstract}
 Given the full truth table of a Boolean function whose input is split
 between two players, how hard is it to determine the minimum number of
-bits they must exchange to compute it? This is a fundamental question in
-meta-complexity, which asks how hard it is to determine the complexity of
-a function from its explicit description.
+bits they must exchange to compute it? We prove that computing
+deterministic communication complexity is NP-hard. Our exact-hardness
+result for the standard model was obtained independently and concurrently
+with Hirahara, Ilango and Loff. This paper includes that result and
+develops its construction to prove NP-hardness of approximation within
+every fixed additive error. We also establish exact and fixed-error
+NP-hardness in Yao's original model, where the players alternate after
+every bit and only the receiver of the last bit needs to determine the
+answer. This resolves Yao's 1979 question under his original conventions.
 
-We prove that approximating deterministic communication complexity
-within any fixed additive error is NP-hard under deterministic
-polynomial-time reductions. This strengthens the NP-hardness of exact
-computation, which we proved in earlier versions of this paper and which
-Hirahara, Ilango and Loff proved independently and concurrently. Our approximation result
-holds both in the standard model, where the conversation determines who
-speaks next, and when the players alternate after every bit. In the
-latter case, hardness holds even when only the receiver of the last bit
-needs to determine the answer, resolving Yao's original question from
-1979.
+Our standard-model reduction uses interlacing to turn a graph-coloring
+obstruction into an extra bit of communication. We make this gap
+repeatable by preserving lower bounds under restrictions of the input
+sets. Replacing large tuple spaces by short explicit weighted lists then
+keeps the reduction polynomial in size for every fixed gap. Strict
+alternation requires a separate encoding.
 
-For the standard model, we prove a general algorithmic implication: a
-polynomial-time approximation algorithm yields an algorithm for $3$-SAT
-on $N$ variables and $O(N)$ clauses whose running time depends explicitly
-on the allowed additive error. This
-tradeoff requires no running-time hypothesis about $3$-SAT. For example,
-a polynomial-time randomized estimator with error $c\log T/\log\log T$,
-where $T$ is the number of table entries and $0\le c<1/8$, would give a
-bounded-error algorithm for such formulas in time
-$2^{O(N^\alpha)}$ for every fixed $8c<\alpha<1$. A deterministic
-polynomial-time estimator with error $c_*\log\log T$, for an effective
-absolute constant $c_*>0$, would give a deterministic $3$-SAT algorithm
-in time $2^{O((\log N)^2)}$ on such formulas. In all cases the communication
-protocols remain deterministic.
+For the standard model, we also give explicit implications from
+approximation algorithms to faster algorithms for sparse $3$-SAT,
+without assuming a running-time lower bound for satisfiability. A
+polynomial-time randomized estimator with error
+$c\log T/\log\log T$, where $T$ is the number of table entries and
+$0\le c<1/8$, yields a bounded-error $3$-SAT algorithm on $N$ variables
+and $O(N)$ clauses in time $2^{O(N^\alpha)}$ for every fixed
+$8c<\alpha<1$. A deterministic polynomial-time estimator with error
+$c_*\log\log T$, for an effective absolute constant $c_*>0$, yields a
+deterministic algorithm in time $2^{O((\log N)^2)}$ on such formulas.
+The communication protocols being measured remain deterministic.
 \end{abstract}
+
 \end{titlepage}
 \setcounter{page}{1}
 \hypersetup{pageanchor=true}
@@ -119,26 +120,30 @@ indices. The deterministic communication complexity $\D(M)$ is the
 smallest worst-case number of bits used by any such protocol.
 
 We study how hard it is to estimate $\D(M)$ when the algorithm receives
-the \emph{whole table} as input. Yao asked how hard it is to compute the optimum exactly
-when he introduced communication complexity in 1979~\cite{yao1979distributed}.
-Earlier versions of this paper~\cite{gaspers-he-mackenzie-npcc}, and
-independently and concurrently Hirahara, Ilango and
-Loff~\cite{hirahara2025communication}, proved NP-hardness in the standard
-model, where the conversation determines who speaks next and a player may
-send several consecutive bits.
+the \emph{whole table} as input. Yao posed the exact-computation problem
+when he introduced communication complexity in
+1979~\cite{yao1979distributed}.
 
-This version goes further in two ways. We prove that allowing any fixed
-additive error does not remove the hardness. We also treat the model in which Yao
-posed his original question, which the earlier results did not cover:
-there the players alternate after every bit, and the receiver of the last
-bit determines the answer. We prove that this model is also hard, for
-exact computation and for every fixed additive error. This settles Yao's
-question.
+We prove that computing deterministic communication complexity is
+NP-hard, and that this remains true when any fixed additive error is
+allowed. The exact NP-hardness result for the standard model was first
+presented in earlier versions of this
+work~\cite{gaspers-he-mackenzie-npcc}, independently and concurrently
+with Hirahara, Ilango and Loff~\cite{hirahara2025communication}.
+The present paper includes that result and develops the construction
+into a polynomial-time reduction for every fixed additive gap.
+
+We also prove exact and fixed-error NP-hardness in Yao's original
+model: the players alternate after every bit, and only the receiver
+of the last bit needs to determine the answer. The earlier
+exact-hardness results did not cover these speaking and output
+conventions. Our alternating construction therefore resolves Yao's
+question in the model in which it was posed.
 
 \paragraph{The challenge of approximation.}
-The exact-hardness reduction maps a formula to a table whose optimal cost
-is one bit larger when the formula is unsatisfiable than when it is
-satisfiable. The natural way to enlarge this gap is to combine several such
+The exact-hardness reduction separates a satisfiable-case upper bound
+from an unsatisfiable-case lower bound by one bit. To tolerate additive
+error $a$, we need a gap larger than $2a$. The natural way to enlarge this gap is to combine several such
 problems. However, a protocol for the combined problem may share
 communication among them, so their costs need not add, and the lower bound
 must hold against every such protocol.
@@ -166,51 +171,40 @@ bits, an alternating protocol must let the other player speak in between,
 so the two optimum costs can differ.
 
 \paragraph{The interlacing program.}
-We combine communication problems in a way for which we can prove lower
-bounds against every protocol of nearly optimal cost, whatever its order
-of speaking. Let Alice hold a row $x$ and an index
-$i\in\{1,\ldots,q\}$, and let Bob hold a tuple $(y_1,\ldots,y_q)$ of
-columns. Their task is to compute $M(x,y_i)$: Alice chooses which of Bob's
-columns matters, but Bob does not know her choice. We call this operation
-\emph{interlacing}.
+Suppose Alice and Bob must compute $M(x,y)$, where Alice knows $x$ and
+Bob knows $y$. Interlacing gives Bob several possible inputs
+$y_1,\ldots,y_q$, while Alice receives an index $i$ specifying which
+one matters. Their task is now to compute $M(x,y_i)$. Alice's index acts
+as a one-step pointer into Bob's tuple, as in pointer
+chasing~\cite{nisan1993rounds}.
 
-Alice's index acts as a one-step pointer into Bob's tuple, as in pointer
-chasing~\cite{nisan1993rounds}. The interlacing framework
-proves lower bounds for the smaller tables that remain after each message.
-After any partial conversation, we record which of Alice's rows remain,
-grouped by her index $i$, and which of Bob's tuples remain.
-With sufficiently strong lower bounds on restrictions of $M$, the method
-forces a nearly optimal protocol to begin by having Alice identify her
+There is a natural protocol: Alice sends $i$, and the players then compute
+$M(x,y_i)$ using a protocol for $M$. But is communicating the index an
+unavoidable extra cost? Perhaps Bob could speak first, or the players could
+exchange information about the index and the answer together, saving bits.
+
+The interlacing framework provides a method for ruling out such savings.
+It follows the inputs that remain possible after each message and
+establishes lower bounds for the remaining communication problem. For
+suitable starting matrices, this analysis forces an optimal protocol to
+begin with Alice identifying her
 index~\cite{mackenzie2025refuting,gaspers-he-mackenzie-npcc}.
-Stating the bounds for restrictions lets us use them after messages have
-eliminated inputs. To repeat the construction, we must restore the required
-restriction bounds at each step; \cref{sec:overview} explains how.
+The resulting control over arbitrary protocols is what makes interlacing
+useful in our hardness reductions.
 
-Mackenzie and Saffidine developed the interlacing framework, in work first
-circulated in 2024~\cite{mackenzie2025refuting}, to refute the exact
-direct-sum conjecture. That conjecture asserted that solving several
-independent instances together requires the sum of their individual
-communication costs. In earlier versions of this paper, first circulated
-in 2025, we used interlacing to prove that computing $\D(M)$ exactly is
-NP-hard. Already there the input sets can be too large: if Bob can hold
-any tuple of $q$ columns from a set $Y$, his input set has size $|Y|^q$,
-which is not polynomial once $q$ grows with the formula. We therefore
-restricted Bob to a polynomial-size family of tuples for which the
-lower-bound proof still works.
+Interlacing was developed by Mackenzie and
+Saffidine~\cite{mackenzie2025refuting} to refute the exact direct-sum
+conjecture, and underlies our original NP-hardness
+reduction~\cite{gaspers-he-mackenzie-npcc}.
+That reduction already had to replace large tuple spaces by
+polynomial-size input sets. Repeating the construction creates a
+stronger requirement: each round must preserve the restriction lower
+bounds needed by the next one. An intermediate version obtained
+additive inapproximability under ETH using subexponential-time
+constructions~\cite{gaspers2026interlacingeth}.
 
-For approximation we need a larger gap, so we apply interlacing
-repeatedly. Each new table must again have the lower bounds on subtables
-that the next step uses. In an intermediate
-version of this paper~\cite{gaspers2026interlacingeth}, we carried out this
-repeated enlargement and, under the Exponential Time Hypothesis (ETH), ruled out every fixed additive error
-and also additive errors growing with the table size. However, we only
-showed that its fixed-gap constructions run in subexponential time. This is
-enough for hardness under ETH but not for NP-hardness.
+\paragraph{Polynomial-size gap amplification.}
 
-\paragraph{From ETH-hardness to NP-hardness.}
-In this version we combine the encoding from the exact NP-hardness proof
-and the interlacing lower bounds with new ways to keep the input sets
-small.
 Our deterministic construction keeps explicit input sets of polynomial
 size at every amplification step, so every fixed gap is constructed in
 deterministic polynomial time. Our randomized construction keeps all inputs
@@ -241,19 +235,13 @@ In both conventions, the bits exchanged must determine when the
 conversation has ended.
 
 \paragraph{From approximation to satisfiability algorithms.}
-The Exponential Time Hypothesis (ETH) asserts that $3$-SAT requires
-exponential time in the number of variables. Recent independent releases
-by Anthropic and OpenAI announce deterministic subexponential algorithms
-for counting satisfying assignments, and hence for deciding
-$3$-SAT~\cite{anthropic2026subexponential,openai2026ethfalse}. On formulas
-with $N$ variables and $O(N)$ clauses, both manuscripts give time
-$2^{O(N/\sqrt{\log N})}$. We do not rely on these new proofs: instead, we
-state exactly how a communication-cost estimator would speed up $3$-SAT.
-This formulation remains meaningful as satisfiability algorithms improve.
-A known algorithm supplies an upper bound on running time, not a lower
-bound; any inapproximability conclusion must therefore specify which
-further improvement for $3$-SAT it excludes. Our fixed-error NP-hardness
-results do not require any running-time hypothesis.
+For errors growing with the table size, we state unconditional
+algorithmic implications: an estimator for communication complexity
+would yield a $3$-SAT algorithm with an explicitly bounded running time.
+These tradeoffs do not assume ETH or any other running-time lower bound
+for satisfiability. An inapproximability conclusion follows upon assuming
+that the resulting $3$-SAT algorithm does not exist. The fixed-error
+NP-hardness results need no such assumption.
 
 \subsection{Results}
 \label{sec:results}
@@ -340,48 +328,14 @@ Taking error zero in \cref{yao:bpp} answers Yao's original question by
 proving NP-hardness under his speaking and output rules. We do not establish
 a growing-error bound for the alternating model.
 
-For unrestricted protocols, we can choose the gap as a function of the
-formula size. The larger the gap, the larger the table that the reduction
-must print. The next theorem expresses this tradeoff as an algorithmic
-implication: if an estimator's error is less than half the gap, its output
-decides satisfiability. Here $N$ counts variables in the formula, while $T$
-counts entries in the communication table.
-
-\begin{theorem}[From approximation algorithms to $3$-SAT algorithms]
-\label{thm:time-tradeoff}
-There is an effective absolute integer $\mathsf A\ge2$ and, for each fixed
-clause-density bound $c_s$, an effective integer $C\ge1$ with the following
-property. Suppose a deterministic or
-bounded-error randomized polynomial-time estimator approximates $\D(M)$
-with additive error at most a nondecreasing function $a(T)$ on every
-sufficiently large explicit total Boolean table with $T$ entries.
-Let $k=k(N)\ge1$ be an integer function computable in time polynomial in
-$N+k(N)$. Choose either construction and its size bound:
-\[
-\begin{array}{c|c}
-\text{Construction} & S(N,k)\\ \hline
-\text{Randomized} & (N+2)^{C(k+1)}\\[2pt]
-\text{Deterministic} & (N+2)^{C\mathsf A^k}
-\end{array}
-\]
-If, for all sufficiently large $N$,
-\[
-2a\bigl(S(N,k(N))\bigr)<k(N),
-\]
-then $3$-SAT on $N$ variables and at most $c_sN$ clauses has an algorithm
-running in time $S(N,k(N))^{O(1)}$. It is deterministic when both the
-construction and the estimator are deterministic, and bounded-error
-randomized otherwise. The exponent may depend on the estimator and the
-algorithm computing $k$. It suffices for the estimator to work on square
-tables whose side length is a power of two.
-\end{theorem}
-
-The same statement applies to any proposed approximation error, without
-assuming that a particular $3$-SAT running time is optimal. To obtain an
-inapproximability conclusion, one can add a hypothesis excluding the
-resulting $3$-SAT algorithm. The next two corollaries give concrete error
-scales; the constant $1/8$ in the first uses the sharper size accounting
-for the randomized construction.
+For unrestricted protocols, choosing the gap as a function of the formula
+size gives an explicit tradeoff between approximation error and the
+running time of the resulting $3$-SAT algorithm
+(\cref{thm:time-tradeoff}). Here $N$ counts variables in the formula and
+$T$ counts entries in the communication table. The following two
+consequences illustrate the randomized and deterministic regimes; the
+constant $1/8$ uses the sharper size bound for the randomized
+construction.
 
 \begin{corollary}[Randomized estimation and $3$-SAT running time]
 \label{thm:quantitative}
@@ -409,28 +363,65 @@ $2^{O((\log N)^2)}$. It suffices for the estimator to work on square tables
 whose side length is a power of two.
 \end{corollary}
 
-Thus the first growing-error guarantee would require a $3$-SAT algorithm
-faster than the newly announced bounds by a fixed power in the exponent;
-the second would require quasipolynomial time. These consequences do not
-assert that such algorithms are impossible. \Cref{sec:time-tradeoff}
-also explains how to choose $k$ for other proposed $3$-SAT time bounds.
+These consequences quantify the improvement in satisfiability algorithms
+that the corresponding estimators would yield.
+\Cref{sec:time-tradeoff} gives the general tradeoff and explains how to
+choose the gap for other running-time bounds.
 
 The proofs of \cref{intro:deterministic,det:time} appear in
 \cref{sec:deterministic-endpoints}. We prove
 \cref{thm:time-tradeoff,thm:quantitative} in \cref{sec:time-tradeoff}, and
 \cref{yao:main,yao:bpp} together at the end of
-\cref{sec:alternating}. The next section explains the ideas behind these proofs.
+\cref{sec:alternating}. \Cref{sec:overview} explains the ideas behind these proofs.
 
+\subsection{Formal verification and proof dependencies}
+\label{sec:formal-verification}
+
+A companion Lean development provides machine-checked proofs for the
+constructions and hardness statements covered by its statement
+correspondence~\cite{interlacing2026lean}. Its formal statements use
+explicit interfaces for the cited source reductions and record their
+hypotheses.
+The public proof inspector~\cite{interlacing2026inspector} links manuscript
+statements to the corresponding Lean declarations and exposes their
+definitions and hypotheses. The repository provides the source, build
+instructions, and verification records.
+
+Communication lower bounds, explicit constructions, and bounds on output
+size and running time are distinct proof obligations. The scope of the
+formalization is determined by the statements proved in the companion
+development and the external interfaces they assume. The fixed-error
+NP-hardness results and the implications from estimation to $3$-SAT
+algorithms stated above do not assume ETH. A running-time hypothesis is
+needed only to turn a growing-error implication into an
+inapproximability conclusion.
+
+The earlier direct-sum construction of Mackenzie and
+Saffidine~\cite{mackenzie2025refuting} has separately been formalized in
+Lean~\cite{moakhar2026beyond}; its statements and proofs are available in
+a public inspector~\cite{beyondlibrary2026inspector}.
+
+ChatGPT and Codex were used in proof development and checking;
+the \hyperref[sec:ai-methodology]{AI methodology statement}
+describes their roles.
+
+\clearpage
 \section{Technical overview}
 \label{sec:overview}
 
-We first encode a hard graph-coloring problem into a
-communication table. The reduction computes a number $C$ from the graph
-and the base matrix. A proper three-coloring gives a protocol of cost
-$C-1$, and without one every protocol needs at least $C$ bits. We then
-explain how to enlarge this one-bit gap while keeping the matrices
-polynomial in size, and finally describe the different encoding we use for
-strict alternation.
+Our reduction turns a coloring obstruction into one extra bit of
+communication. A proper coloring gives a protocol of a known cost $C-1$.
+Conversely, interlacing forces every protocol of that cost to commit to
+a partition of Alice's inputs before Bob reveals which constraint is
+being tested. In the NO case, the extracted assignment violates a
+constraint, forcing an additional bit. The difficulty is to prove this
+against arbitrary interaction, and then to repeat the construction
+without losing either the lower bound or polynomial output size.
+
+We explain three steps: the one-bit gap, the lower bounds under input
+deletion that make the gap repeatable, and the explicit short input lists
+that make every fixed number of rounds a polynomial-time reduction.
+Strict alternation requires a different encoding, described last.
 
 \subsection{Constructing the source matrix}
 
@@ -470,33 +461,10 @@ of them share a bin. Since every vertex of our source graph
 lies on an edge, no vertex can share a bin with an auxiliary item, and the
 vertices share the remaining three bins, exactly as in three-coloring.
 
-Each item $i$ gives a family of Alice's possible inputs: the pairs $(i,u)$
-with $u$ a row of $R$. A coloring partitions these inputs according to the
-bin of their item. Naming the bin need not identify the item, and does not reveal
-Alice's row of $R$. \Cref{fig:bin-protocol} illustrates this grouping.
-For $s=4$ and the path $u$--$v$--$w$, put $u$ and $w$ together in bin 1,
-$v$ in bin 2, and the single auxiliary item in bin 4, leaving bin 3 empty.
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[>=Stealth,font=\small,
-  vertex/.style={circle,draw,minimum size=7mm,inner sep=1pt}]
-\node[vertex,draw=aliceblue,fill=aliceblue!10] (bin-u) at (0,0) {$u$};
-\node[vertex] (bin-v) at (1.3,0) {$v$};
-\node[vertex,draw=aliceblue,fill=aliceblue!10] (bin-w) at (2.6,0) {$w$};
-\draw (bin-u) -- (bin-v) -- (bin-w);
-\node[below=2mm of bin-u] {bin 1};
-\node[below=2mm of bin-v] {bin 2};
-\node[below=2mm of bin-w] {bin 1};
-\draw[->,semithick] (3.4,0) -- (4.7,0);
-\node[draw=aliceblue,rounded corners=2pt,align=center,
-  text width=5cm,inner sep=6pt] at (7.6,0)
-  {\textbf{Alice's rows in bin 1}\\[3pt]
-   $(u,x)$ or $(w,x)$, with $x$ any row of $R$};
-\end{tikzpicture}
-\caption{Naming bin 1 leaves both $u$ and $w$ possible, with any base row $x$.}
-\label{fig:bin-protocol}
-\end{figure}
+Each item $i$ gives a family of Alice's possible inputs: the pairs
+$(i,u)$ with $u$ a row of $R$. A coloring partitions these inputs by the
+bin of their item. Naming the bin need not identify Alice's item and
+does not reveal her row of $R$.
 
 The full construction uses $4s$ labeled groups of items, each containing a
 copy of the graph's items. For each edge in each group, a binary vector over all items marks the
@@ -513,69 +481,99 @@ The reduction never computes an
 assignment. Instead, the lower-bound proof extracts one from any proposed
 short protocol.
 
-The communication matrix has rows $(i,u)$, indexed by an
-item $i$ and a base row $u$ of $R$, together with additional rows described
-below. Against the first family of Bob's columns, these additional rows
-force a short protocol to identify a bin before Bob speaks. The second
-family turns a collision into an extra position that the protocol must handle.
-A column in the
-first family consists of a list $\xi=(\xi_1,\ldots,\xi_{s+1})$ of columns
-of $R$ shared by all bins and, for each bin $p\in\{1,\ldots,s\}$, an index
-$\alpha_p$ and a list $\gamma_p$ of $2s-1$ columns of $R$. At each index
-$\alpha$, list the $s-1$ active items in a fixed public order of all items
-and let $\pi_\alpha(i)\in\{1,\ldots,s-1\}$ be the position of $i$ in this
-list; this numbering does not depend on any bin assignment. The entry for
-row $(i,u)$ is
-\[
-\begin{cases}
-R(u,\xi_{\pi_\alpha(i)}),&
-  \text{if $\alpha_1=\cdots=\alpha_s=\alpha$ for some $\alpha$ at which $i$ is active},\\
-R(u,\xi_{s+1}),&\text{otherwise}.
-\end{cases}
-\]
-Thus active items use distinct positions when the chosen indices agree,
-and in every other case these rows use position $s+1$. Hence the
-inactive item in a NO-case triple matters, since together with the two active
-items it gives a third distinct position. The matrix can be written down
-without a coloring or bin assignment.
+The matrix has two kinds of Alice inputs. An \emph{item row} consists
+of an item $i$ and a row $u$ of the base matrix $R$. The other inputs,
+called \emph{template rows}, are grouped into $s$ bins and are obtained
+from $R$ by nested interlaces. Their purpose is to force every protocol
+of cost at most $C-1$ to begin with $\log s$ consecutive bits from Alice.
+These bits determine a bin before Bob reveals any index.
 
-The other rows are \emph{template rows} $(p,z)$. Here $p$ is a bin and
-$z$ is a tuple with one entry $z_\alpha=(r,u)$ for each index $\alpha$,
-where $r\in\{1,\ldots,s-2\}$ and $u$ is a row of $R$. Bob's column supplies
-the index $\alpha_p$. Writing $z_{\alpha_p}=(r,u)$, the entry is
-$R(u,\gamma_{p,r})$, so template rows
-use only the first $s-2$ entries of each list $\gamma_p$. We obtain the matrix
-on these rows from $R$ by three interlaces, across the $s-2$ positions,
-across the indices, and across the bins, transposing between successive
-interlaces. A template row ignores the other components
-of Bob's column, so these components only create repeated columns. The last $s+1$ entries
-of each list $\gamma_p$ are used only by the second column family. We show
-below that the template rows force every protocol of cost below $C$ to
-begin with $\log s$ consecutive bits from Alice, even though the protocol
-may choose who speaks first.
-\Cref{def:source-matrix} gives the complete entry rule.
+Bob's columns have two families. The first supplies a separate index
+and list of base columns for each bin, together with shared base-column
+data; it enforces the initial $\log s$ bits. The second uses the same
+index $\alpha$ and the same list of base columns in every bin. At this
+index, the template rows use $s-2$ positions of the list, active items
+use distinct additional positions, and inactive items use one further
+common position. Thus two active items and one inactive item in the
+same bin expose $s+1$ positions.
+
+\paragraph{Defining the table without a coloring.}
+A template row carries its bin label $p$ and a tuple $z$. For each
+index $\alpha$, the tuple specifies a pair $z_\alpha=(r,u)$: a position
+$r\in\{1,\ldots,s-2\}$ and a base row $u$. Bob's first-family column
+supplies $(\alpha_p,\gamma_p)$ for each bin, where $\gamma_p$ is a list
+of $2s-1$ base columns. The entry is $R(u,\gamma_{p,r})$, with
+$(r,u)=z_{\alpha_p}$. Thus each template row uses only its own bin's
+data. Letting these data vary independently gives the outer interlace
+that forces Alice's initial messages.
+
+The tuple $z$ is important. If a template row carried just one pair
+$(r,u)$, its entry after the bin was chosen would not depend on Bob's
+index $\alpha_p$. The template subproblem would no longer require that
+index to be communicated. Instead, $z$ supplies a separate pair for
+each index: Bob selects which part of Alice's input matters, and then
+Alice's position $r$ selects which part of Bob's list matters. The
+players are left with one instance of $R$. These successive selections
+are the nested interlaces, with transposition exchanging the players'
+roles between levels.
+
+The outer bin choice adds another interlace, since Bob has independent
+data for every bin. We must prove that any sufficiently short protocol
+starts by resolving that choice; specifying a short protocol that does
+so would not suffice. Once the prefix is forced, the item rows fall
+into the same parts as the template rows, and a bin assignment can be
+extracted from them.
+
+An item row $(i,u)$ has no bin label: the reduction cannot use a
+coloring to assign it one. Bob therefore also holds a shared list
+$\xi=(\xi_1,\ldots,\xi_{s+1})$. For each index $\alpha$, give the active
+items distinct positions $\pi_\alpha(i)$ in a fixed public order.
+If all Bob's indices agree on $\alpha$ and item $i$ is active there,
+the entry is $R(u,\xi_{\pi_\alpha(i)})$; otherwise it is
+$R(u,\xi_{s+1})$. These rules use only the graph and the two inputs.
+In the coloring protocol, the bin and index identify an active item,
+and Bob can check agreement of his indices privately to select the
+appropriate base column.
+
+The second family sets every bin's index to the same $\alpha$ and every
+list to the same $\gamma$, with
+$\xi=(\gamma_{s-1},\ldots,\gamma_{2s-1})$.
+The template and item rows now read positions of one common list.
+A single protocol must handle both families, and before Bob speaks,
+Alice's messages depend only on her row. Consequently, the partition
+forced by the first family is also the partition tested by the second.
+
+The second family has separate labels and a fixed positive share of
+the column weight. In the full-product construction, its columns
+already occur in the first family but may have very small total
+weight there. The separate weight prevents a small deletion from
+removing all collision tests. \Cref{def:source-matrix} gives the full
+entry rules and weights.
 
 \paragraph{A coloring gives a protocol.}
-Fix a proper three-coloring of the graph and the bin assignment it induces,
-which places the auxiliary items in the remaining bins. Alice first names her bin
-$p$. Bob sends the index $\alpha_p$ from his column, in $\log q_2$ bits,
-where $q_2$, a power of two, is the number of indices. For a template row,
-Alice identifies its position. Otherwise, she reports whether her item is
-active at that index. Her message has $s$ possible values:
+Fix the bin assignment supplied by a proper three-coloring. Alice names
+her bin $p$, using $\log s$ bits, and Bob sends its index $\alpha_p$,
+using $\log q_2$ bits, where the number $q_2$ of indices is a power of two.
+Alice then sends one of
 \[
-\underbrace{s-2}_{\text{positions used by template rows}}
-\quad+\quad\underbrace{1}_{\text{active item}}
-\quad+\quad\underbrace{1}_{\text{inactive item}}.
+\underbrace{s-2}_{\text{template positions}}
+\quad+\quad
+\underbrace{1}_{\text{active item}}
+\quad+\quad
+\underbrace{1}_{\text{inactive item}}
+=s
 \]
-For an active item, Bob knows which item it is, since under the coloring
-it is the only active item in that bin. He can also check whether his
-indices agree, so the protocol is correct on every column. The players
-then solve one instance of $R$ at the selected column of $\xi$ or
-$\gamma_p$. The two Alice messages each cost $\log s$ bits, so the protocol
-costs $C-1:=d+2\log s+\log q_2$. Without a coloring, Alice can name the
-position of her active item explicitly, which costs one more bit.
-These are the two upper bounds of \cref{src:upper}: cost $C-1$ in the YES
-case and $C$ for every graph.
+possible messages. An active item is uniquely determined by its bin and
+the index, since a proper coloring puts at most one active item in each
+bin. Bob can therefore identify the selected base column from his input,
+and the players finish by running a protocol for $R$.
+
+The two Alice messages each cost $\log s$ bits, giving total cost
+$C-1:=d+2\log s+\log q_2$. For an arbitrary graph, Alice can instead name
+her active item's position explicitly. This uses at most $2s-1$ message
+values and costs one additional bit. Thus the table always has a
+cost-$C$ protocol, and a coloring saves one bit
+(\cref{src:upper}).
 
 \subsection{Why the reduction rules out every short protocol}
 
@@ -588,11 +586,13 @@ first $\log s$ bits, which are sent before Bob can reveal any index. For a NO gr
 collisions.
 
 \paragraph{A short protocol fixes a bin assignment.}
-Group the template rows by their bin $p$. A first-family column contains a
-pair $(\alpha_p,\gamma_p)$ for each bin, every combination of these pairs
-occurs, and a template row $(p,z)$ depends only on the pair of its own bin.
-On template rows the matrix is therefore an $s$-fold interlace whose
-blocks are the bins. Within one bin, the template rows already require
+Group the template rows by their bin $p$. In the first column family,
+Bob supplies a separate index and list of base columns for every bin,
+and every combination occurs. A template row in bin $p$ depends only
+on the data for that bin. On template rows the matrix is therefore an
+$s$-fold interlace whose blocks are the bins.
+
+Within one bin, the template rows already require
 $d+\log q_2+\log s$ bits, by two applications of the interlacing lower
 bound (\cref{src:profiles}). Of the $C-1$ available bits, only $\log s$
 remain to tell the bins apart. Suppose Bob sends a bit while $u$ bins are
@@ -604,9 +604,8 @@ Alice's bits sent more than half of the $u$ bins to one side, that side
 would need more bits than remain. The
 separation theorem (\cref{cl:separation}) therefore forces the first
 $\log s$ bits to be Alice's and to split the bins evenly. Grouping her rows
-by these $\log s$ bits gives $s$ parts, one for each bin. Each part contains
-more than $99.8\%$ of the weight of the template rows of its bin, and only a
-negligible fraction of those of every other bin.
+by these $\log s$ bits gives $s$ parts, one for each bin. Each part contains almost all the template-row weight of one bin
+and very little of the weight of the others.
 
 We now discard the few items that lost more than half of the weight of
 their rows to the initial deletion, and
@@ -621,17 +620,22 @@ Thus any proposed short protocol determines an assignment with such triples,
 which a proper coloring would avoid.
 
 \paragraph{A collision gives an extra position.}
-We use the second family of columns to convert a collision into an extra
-position. Each such column
-uses the same index $\alpha$ in every bin and a single list $\gamma$ of $2s-1$
-columns of $R$. That is, each $\gamma_p$ equals $\gamma$, and $\xi$ consists of the
-last $s+1$ entries of $\gamma$. We fix a collision at index $\alpha$ and
-restrict Bob to the columns of this family with that index. The template
-rows of the collision's bin read the first $s-2$ entries of $\gamma$, the
-two active items read two distinct entries among the next $s$, and the
-inactive item reads the last entry. These are $s+1$ distinct positions of
-one list, one more than the $s$ positions that the YES
-protocol can handle.
+Restrict Bob to the second column family at a collision index $\alpha$.
+All bins now use the same index and the same list of base columns.
+Within the collision's bin, the template rows and the three items read
+\[
+\underbrace{s-2}_{\text{template positions}}
+\quad+\quad
+\underbrace{2}_{\text{distinct active positions}}
+\quad+\quad
+\underbrace{1}_{\text{inactive position}}
+=s+1
+\]
+distinct positions. The inactive item is essential: two active items
+alone would give only $(s-2)+2=s$ positions. Since $s$ is a power of two,
+naming one of $s+1$ positions needs one more bit than naming one of $s$.
+To obtain the communication lower bound, we must show that interaction
+cannot bypass this obstruction.
 
 \paragraph{Why collisions force more communication.}
 The extra position explains the gap, but counting positions alone does not
@@ -645,187 +649,197 @@ collisions occurred at only a few indices, Bob could isolate them on a
 branch with a larger budget. We therefore need collisions at a constant
 fraction of all indices.
 
-For each index $\alpha$, we follow the set of Bob's inputs with that index
-through Bob's messages until Alice next speaks, keeping the part of larger
-weight at each Bob bit. We count each such set once, and a second time
-while it still keeps more than half of its weight at a
-collision index, since then the three items and the template rows still
-require the extra bit (\cref{src:profiles}). If a Bob bit splits a collision
-set into two parts that both keep enough weight, each part counts once,
-preserving the total. This happens at most once per index.
+We track the retained list inputs through Bob's messages and stop when
+Alice next speaks. Each usable index initially contributes one tracked
+set; a collision contributes an additional mark, recording its extra
+bit. An unmarked set follows a child retaining at least half its weight.
+A marked set either retains its mark on one child or splits into two
+unmarked sets. In the latter case its contribution changes from two to
+one plus one. Thus the total count is preserved.
 
-By the interlacing lower bound, at a node reached after $r$ bits from Bob,
-the remaining budget suffices for at most $q_22^{-r}$ index sets. The
-stopping nodes form a prefix-free set, so by Kraft's inequality these
-capacities sum to at most $q_2$. The initial count is $q_2$, minus the
-few indices at which too many template rows or second-family columns were deleted, plus
-the number of collision indices, which outnumber those deleted ones.
-It therefore exceeds $q_2$. Thus some branch needs more
-communication than the proposed protocol allows. \Cref{lem:collision-tracking} proves this counting argument, and
-\cref{src:near-full} applies it to the source matrix. Together with the
-protocol obtained from a proper coloring, this gives the one-bit YES/NO gap. Interlacing
-makes the lower bound from the graph encoding hold for \emph{every}
-protocol, whatever its pattern of interaction.
+A stopping node reached after $r$ Bob bits can accommodate a count of at
+most $q_2 2^{-r}$ within its remaining communication budget. The stopping
+nodes are prefix-free, so Kraft's inequality bounds their total capacity
+by $q_2$. Initially, however, the count exceeds $q_2$: the collision
+indices outnumber the indices lost to the initial input deletions.
+This contradiction gives the NO lower bound
+(\cref{lem:collision-tracking,src:near-full}). Together with the coloring
+protocol, it yields the one-bit gap against every protocol, whatever
+its pattern of interaction.
 
-\subsection{From exact hardness to a gap that can be enlarged repeatedly}
+\subsection{Making the one-bit gap repeatable}
 
-To exclude a fixed additive error, we need to enlarge that gap. It is not
-enough to use the output as a new base matrix $R$. The construction
-needs lower bounds for the subtables of $R$ that remain after
-messages, and a hard matrix may contain easy submatrices. For example, in $R(u,y_i)$, restricting Bob's inputs to tuples
-with all $y_i$ equal removes the need to learn $i$.
+A one-bit gap does not automatically yield a larger gap. Using the output
+as the next base matrix requires lower bounds on the restrictions that
+remain after messages, and a hard matrix can have easy restrictions.
+For example, restricting Bob's tuples in $R(u,y_i)$ to those with all
+coordinates equal removes the need to learn $i$.
 
-We therefore record lower bounds after input deletion using the fixed
-input weights. Most of the total row weight is assigned to template rows,
-and a fixed smaller share to item rows. These shares do not depend on how many
-rows each family contains, so the bounds on deletion do not depend on that
-imbalance. We require each base matrix $R$ of cost $d$ used in a round
-to satisfy the following, for a small fixed threshold $\rho$: every
-restriction retaining row weight $\ge\rho$ and column weight $\ge3/5$ has
-cost $\ge d$, and if the column weight is only $\ge3/10$, the cost is
-$\ge d-1$.
-The second threshold is half the first because after one bit from Bob the
-heavier branch keeps at least half of the column weight, while the lower
-bound may drop by one. We call these two requirements the
-\emph{deletion bounds}.
-They are stated formally in \cref{def:profile}.
-
-The graph construction gives its NO lower bound $C$ only when all but a
-fraction $\eta=s^{-2}$ of the row weight and of the column weight remain.
-Two further interlaces turn this into the two deletion bounds needed for
-another round. The first keeps the bound valid when one side retains only a
-tiny fraction of its weight, at the price of one bit, and the second recovers
-that bit.
-
-\paragraph{Preserving the graph lower bound across copies.}
-Let $N$ be the transpose of the source matrix. Alice now holds a row of
-$N$, which is a column of one of the two families above, and we speak of
-first-family and second-family rows. Bob holds a template or item row.
-The first interlace $\Int{w}{N}$ uses $w$ copies of $N$: Alice holds a
-copy index of $\log w$ bits and a row of $N$, and Bob holds one template or
-item row for each copy. We follow each path of a proposed protocol of cost
-$C+\log w-1$ until Bob sends his first bit or Alice has sent $\log w$ bits,
-padding shorter paths with fixed Alice bits, and call the nodes where we
-stop \emph{stopping nodes}. Restricted to its first-family rows, each copy
-satisfies deletion bounds with value $C-1$ at a smaller row threshold
-(\cref{src:profiles}). The interlacing lower bound therefore again forces
-Alice's bits to separate the copies. All but a few copies keep almost all
-their first-family rows at distinct stopping nodes, and we \emph{assign}
-each such node to its copy.
-
-At an assigned node only $C-1$ bits remain. Bob has not yet spoken, so his
-tuples are still those of the initial restriction. By
-\cref{det:conditioning}, their projection onto every copy outside a few
-exceptional ones keeps a $1-\eta/2$ fraction of $N$'s columns, and we choose
-the assigned copies outside these exceptions. Since $N$ costs $C$
-whenever a $1-\eta$ fraction of each side remains, the node must miss more
-than an $\eta$ fraction of its copy's rows. The node keeps almost all
-first-family rows of its copy, so most of the missing rows are
-second-family rows. The initial deletion is small, so most of this weight
-survives. Since only Alice has spoken, each surviving row lies at
-exactly one other stopping node, and we show that the other stopping nodes
-cannot hold all of it (\cref{fig:reference-destinations}). The unassigned
-nodes can receive only a small total weight. An assigned node that held too many of another copy's
-second-family rows would itself require more than $C-1$ bits. Together,
-these bounds leave less room than the surviving rows need.
-After transposing, we obtain a matrix $W$ with lower bound $C+\log w$
-when a tiny fraction of its rows and almost all of its columns remain.
-The two deletion bounds of \cref{def:profile}, which also allow many
-columns to be deleted, hold with value $C+\log w-1$ (\cref{res:alignment}).
-
-\paragraph{Recovering that bit in the deletion guarantee.}
-The last interlace is $(\Int{Q}{W})^{\mathsf T}$ for a sufficiently large $Q$, and it
-uses both guarantees for $W$. We analyze $\Int{Q}{W}$ before the final
-transpose. Averaging the retained row weight gives many copies with
-enough rows to use the lower bound for $W$. Projecting the retained tuples
-onto these copies leaves at least one copy with almost all its columns:
-the logarithmic loss $\log(1/\rho)$ cannot be large in every copy
-(\cref{cl:projection}). The full-cost bound for $W$ applies to that copy.
-An induction over the protocol's messages maintains the comparison.
-Each Alice bit halves the number of copies needed. Each Bob bit increases
-the logarithmic loss by one; choosing enough copies at the outset covers
-these increases (\cref{cl:defect-induction}). In either case a protocol one bit below the
-claimed cost is impossible. \Cref{cl:bridge}
-proves this for full products of tuples, and \cref{det:restore} for the
-explicit lists described below.
-
-One complete round, consisting of the source construction and the two
-interlaces, has the following guarantee. For a known overhead $h$, the YES upper bound
-increases by $h$, the NO cost increases by exactly $h+1$ (the YES
-protocol plus one bit is always available), and the two deletion bounds
-are restored. Let $R_k$ be the matrix after $k$ rounds, starting from
-a matrix of cost $d_0$. By induction,
+We therefore maintain a stronger invariant in the NO case. Using the
+fixed positive rational input weights, for a threshold $\rho$ fixed
+across amplification rounds, require
 \[
- \text{YES: }\D(R_k)\le d_0+kh,
- \qquad
- \text{NO: }\D(R_k)=d_0+kh+k,
+\begin{array}{c|c|c}
+\text{retained row weight}&\text{retained column weight}
+   &\text{communication lower bound}\\ \hline
+\ge\rho&\ge3/5&d\\
+\ge\rho&\ge3/10&d-1 .
+\end{array}
 \]
-and the threshold $d_0+kh$ can be computed without knowing whether the
-graph is colorable.
+The threshold $\rho$ may depend on the source size. We call these the
+\emph{deletion bounds} (\cref{def:profile}). The second column threshold
+is half the first: after Bob sends one bit, the heavier branch retains
+at least half the column weight, and the allowed lower bound drops by
+one. The YES upper bounds do not require this invariant.
+
+The graph construction supplies its extra bit only on restrictions
+retaining almost all the weight on both sides. The deletion bounds
+needed for another round allow most of the rows and a constant
+fraction of the columns to disappear. Two further interlaces close
+this gap.
+
+\paragraph{Preserving the extra bit after input deletion.}
+Transpose the source matrix to $N$, so its two column families become
+row families, and form $\Int{w}{N}$. Alice holds a copy index and a row
+of that copy; Bob holds one column for each copy. Consider a restriction
+retaining almost all row weight but only a small specified fraction of
+the tuple weight. Suppose it has a protocol of cost $C+\log w-1$, one
+bit less than naming a copy and running the cost-$C$ protocol for $N$.
+
+Pad shorter paths with fixed Alice bits, and stop each path just before
+Bob's first bit or just after Alice has sent $\log w$ bits, whichever
+comes first.
+The first-family rows force almost all their weight in most copies to
+reach distinct stopping nodes, one assigned to each such copy. These
+nodes are reached after $\log w$ Alice bits, leaving $C-1$ bits.
+Bob has not spoken, so his tuple set is still the initial restriction.
+Projection estimates show that almost every copy still has almost
+all its columns available. If its assigned node also kept almost all
+its rows, the source lower bound would require $C$ further bits.
+The node must therefore miss a substantial amount of its copy's rows.
+
+Almost all first-family weight is already at the assigned nodes, and
+little weight was deleted initially. Summing over the assigned copies
+therefore forces substantial surviving second-family weight to lie
+elsewhere. Since only Alice has spoken, every surviving row reaches
+exactly one stopping node. It must reach either another copy's
+assigned node or a node with no assigned copy.
+
+Neither group can receive enough weight. An assigned node already
+contains the hard first-family rows of its own copy; receiving too
+much second-family weight from other copies would force its cost
+above the remaining budget. The unassigned nodes have only a small
+total capacity. The combined receiving bound is smaller than the
+weight that must be displaced, giving a contradiction
+(\cref{res:alignment}). Transposing the resulting matrix exchanges
+the two retained-weight conditions, yielding $W$ with its full lower
+bound when a small fraction of rows and almost all columns remain.
+
+\paragraph{Recovering the bit in the deletion bounds.}
+The matrix $W$ also satisfies the desired deletion bounds for constant
+retained column weight, but one bit below its full cost. A final
+interlace combines this guarantee with the full-cost bound just proved.
+For full products, a tuple set of retained weight $v$ cannot have small
+projections at too many coordinates. If its projection onto coordinate
+$i$ has original weight $p_i$, containment in the product of its
+projections gives
+\[
+v\le\prod_i p_i,
+\qquad\text{hence}\qquad
+\sum_i\log(1/p_i)\le\log(1/v).
+\]
+Among sufficiently many usable copies, at least one therefore retains
+almost all its columns, allowing the full-cost bound for $W$ to apply.
+
+Finding one such copy alone would recover only the cost of $W$; we
+must also account for the bits needed to identify a copy. An induction
+over messages does this. At an Alice bit, sufficiently many row blocks
+remain on one branch. At a Bob bit, keeping the heavier tuple set
+increases its logarithmic loss by at most one. Choosing enough copies
+at the outset accommodates these losses. The deletion bounds control
+the intermediate restrictions, and the full-cost bound closes the
+remaining one-bit deficit (\cref{cl:bridge}). For the explicit lists,
+the conditioning argument described next supplies the required
+projection control instead of the full-product inequality
+(\cref{det:restore}).
+
+Consequently, one complete round has a known overhead $h$ and satisfies
+the following guarantee. In the YES case,
+\[
+\D(R^+)\le\D(R)+h.
+\]
+In the NO case, if $\D(R)=d\ge3$ and $R$ satisfies the deletion bounds
+at value $d$, then
+\[
+\D(R^+)=d+h+1,
+\]
+and $R^+$ satisfies the same deletion bounds at value $d+h+1$
+(\cref{thm:amplifier}). This restoration is what makes iteration
+possible. Starting from a matrix of known cost $d_0$ satisfying the
+deletion bounds gives
+\[
+\text{YES: }\D(R_k)\le d_0+kh,
+\qquad
+\text{NO: }\D(R_k)=d_0+kh+k.
+\]
+The threshold $d_0+kh$ is computable without deciding whether the graph
+is colorable.
 
 \subsection{Keeping the deterministic construction polynomial}
 
 Allowing every tuple of $q$ columns from a set $Y$ creates $|Y|^q$ inputs.
-We replace each such product by an explicit list of polynomially many
-tuples. Unequal rational weights let this short list preserve the counts
-needed by the lower bounds. Every lower bound above inspects at most
-eight positions of a tuple at a time, and the conditioning step below needs
-groups of such sets, so we fix $D=8192$. For every set of at most $D$
-positions and every assignment of columns to those positions, the total
-weight of the listed tuples that match the assignment equals its weight
-under the full product. These counting identities are called
-\emph{limited independence}. The algorithm constructs and enumerates the
-entire list; it does not draw a random tuple from it.
+We replace each product by an explicit list of polynomially many tuples
+with positive rational weights. For an absolute constant $D$, the list
+has exactly the same joint weights as the full product on every set of
+at most $D$ coordinates. This is \emph{limited independence}. We build
+and enumerate the entire list deterministically; the weights do not
+represent random choices made by the reduction.
 
-We construct the list by extending tuples one coordinate at a time,
-using linear dependences among the zero--one vectors that record which
-counts each tuple contributes to. Adjusting weights along these dependences
-lets us remove tuples while preserving the required counts (\cref{det:code});
-giving the remaining tuples equal weight would generally lose those identities.
-We compute the
-table entries from the listed tuples by the same entry rules as for full
-products, so the upper-bound protocol is preserved. The lower
-bound needs more work, because a message can create dependencies. For
-example, keeping only the tuples whose first two coordinates agree destroys
-their independence.
+The construction extends tuples one coordinate at a time and removes
+tuples by adjusting their weights. Associate with each tuple a zero--one
+vector recording the assignments it realizes on every set of at most
+$D$ coordinates, together with a coordinate recording total weight.
+The required joint weights specify the weighted sum of these vectors.
+If the list is longer than the vector dimension, a linear dependence
+lets us change the weights without changing that sum. Since total
+weight is fixed, the change has both positive and negative components;
+we can continue until one tuple has weight zero and remove it, keeping
+all other weights nonnegative. Compressing after each new coordinate
+keeps the intermediate lists short, avoiding enumeration of an
+exponentially large product. \Cref{det:code} proves the support and rational
+bit-length bounds. The original entry rules still apply to every listed
+tuple, so the upper-bound protocols are preserved.
 
-We deal with this using a conditioning lemma (\cref{det:conditioning}).
-Fix a retained set of tuples of weight $\ge v$, and renormalize the weights
-on it. Then there is a set of $\mathrm{poly}(1/v)$ exceptional positions
-such that, on every set of at most eight positions avoiding it, the
-renormalized counts are within total variation $v^{\Omega(1)}$ of the
-counts under the full product. The proof is
-a moment estimate, showing that too many disjoint sets of positions with
-substantially changed counts would force the retained set to have less than
-its stated weight. Our proofs simply ignore the exceptional positions, so each interlace
-needs many more positions than can be exceptional. Writing $n$ for the
-number of graph vertices, for full products we use
-the deletion threshold $\rho\approx1/n$ and $s=\Theta(\log n)$. The
-conditioning events in the proof then have weight about $\rho^8$, and the
-bound allows about $n^{5/64}$ exceptional positions, far more than $s$. We
-therefore take $\rho=s^{-4}$ and $s=\Theta(n^{1/4})$ in the explicit
-construction, which reduces the bound to about $s^{5/16}$.
+The lower bound is subtler: conditioning on earlier messages can destroy
+independence. For example, retaining only tuples whose first two
+coordinates agree makes those coordinates dependent. Our conditioning
+lemma shows that, after retaining any event of weight at least $v$,
+there are only $\mathrm{poly}(1/v)$ exceptional coordinates. On every
+set of at most eight other coordinates, the conditional distribution
+is close in total variation to the original product distribution
+(\cref{det:conditioning}). A moment bound proves this: too many
+disjoint sets of coordinates with substantially changed distributions
+would contradict the weight of the conditioning event.
 
-At nonexceptional positions, projecting the surviving tuples gives actual
-columns of the restricted matrix. Their weight under the original base
-weights is at least their renormalized weight minus $v^{\Omega(1)}$, and
-this small loss still leaves enough weight for the deletion bounds. Thus the lower-bound proof never assumes that messages
-preserve independence, and the arguments for the graph lower bound and the
-two deletion bounds apply to the explicit lists.
+We choose the interlacing widths and deletion thresholds so that enough
+coordinates remain outside the exceptional set. Projecting onto these
+coordinates gives actual inputs of the retained matrix, with enough
+weight to apply the deletion bounds. Thus the proof accounts for the
+dependencies created by messages.
 
-If the base input set has $m$ labels, each list has at most $(1+qm)^{D}$ tuples,
-and their rational weights have polynomial bit length (\cref{det:code}). Hence each
-round runs in time polynomial in the source graph size $n$ and the encoding
-length of the current matrix,
-and the exponent does not depend on the round. After $k$ rounds, the encoding
-length and the running time are therefore at most $n^{A^{O(k)}}$, for an
-absolute constant $A>1$. Thus every fixed gap gives a polynomial-time
-reduction, and choosing $k>2a$ proves hardness for additive error $a$
-(\cref{det:reduction,intro:deterministic}). Taking only
-$k=\Theta(\log\log N)$ rounds for a sparse formula on $N$ variables makes
+If the base input set has $m$ labels, each list has at most
+$(1+qm)^D$ tuples, and its rational weights have polynomial bit length
+(\cref{det:code}). Each round therefore takes time polynomial in the
+source graph size $n$ and the encoding length of the current matrix,
+with an exponent independent of the round. After $k$ rounds, size and
+running time are at most $n^{O(A^k)}$ for an absolute constant $A>1$.
+Every fixed gap therefore gives a deterministic polynomial-time
+reduction (\cref{det:reduction,intro:deterministic}).
+
+A suitable choice of $k=\Theta(\log\log N)$ for sparse formulas makes
 the construction quasipolynomial in $N$, while $\log\log T=O(k)$.
-An estimator with a sufficiently small constant times $\log\log T$ error
-would therefore decide sparse $3$-SAT in quasipolynomial time
+An estimator with a sufficiently small constant times $\log\log T$
+error would therefore decide sparse $3$-SAT in quasipolynomial time
 (\cref{det:time}).
 
 \subsection{Two further consequences of keeping fewer inputs}
@@ -844,8 +858,9 @@ sample must defeat every protocol of depth one less than the NO cost
 simultaneously. We call a set of columns \emph{compatible} with a protocol
 and a set of rows if the protocol is correct on them. Over all protocols of
 depth $t$ and all row sets, a matrix of real rank $r$ has at most
-$2^{(r+1)\ceil{\log(r+2)}2^{t+1}}$ inclusion-maximal compatible column sets
-(\cref{thm:rank-count}). For row sets of weight $\ge3/5$, the
+$2^{O(r\log(r+2)\,2^t)}$ inclusion-maximal compatible column sets
+(\cref{thm:rank-count}). The count depends on rank and protocol depth,
+not on the original number of input labels. For row sets of weight $\ge3/5$, the
 deletion bounds give each compatible column set weight $<3/5$. A union
 bound over these sets then shows that, with high probability,
 $m=\Theta(r\log r\cdot2^t)$ random columns are not all contained in any
@@ -863,71 +878,51 @@ The construction then takes time $2^{O(N^\alpha)}$.
 An estimate within additive error $c\log T/\log\log T$ distinguishes the
 two cases whenever $\alpha>8c$, giving \cref{thm:quantitative}.
 
-\paragraph{Strict alternation uses its own encoding.}
-The coloring protocol above sends messages of $\log s$ bits. Making it
-alternate by inserting dummy turns roughly doubles its cost and destroys the
-gap. For the alternating result we therefore start from a different
-communication matrix. Its source is a hypergraph produced by the reduction of Guruswami
-and Lee~\cite{guruswami2018balanced}, whose edges are sets of $s^2$
-vertices for a power of two $s$. If the formula is satisfiable, the
-hypergraph has an $s$-coloring in which every edge contains at least $s-1$
-vertices of every color. Otherwise every coloring with at most $2^s$ colors
-has an edge all of whose vertices have the same color (\cref{yao:source}). Alice holds a vertex and a
-tuple of $s/2$ \emph{addresses}, each an edge index. Bob holds an edge with
-its vertices in a fixed order, a coordinate selecting one of Alice's
-addresses, and a Boolean array indexed by pairs of an edge index and a
-position in an edge. The selected address gives the array row and the
-vertex's position in Bob's edge gives its column. The answer is the array
-bit there, or zero if the vertex lies outside the edge
+\paragraph{Strict alternation needs a different encoding.}
+The coloring protocol above uses consecutive bits from the same player.
+Inserting dummy turns can cost more than the gap, so it does not give
+hardness under strict alternation.
+
+We instead start from the hypergraph-coloring reduction of Guruswami and
+Lee~\cite{guruswami2018balanced}. For a power of two $s$, each edge has
+$s^2$ vertices. In the YES case there is an $s$-coloring in which every
+edge contains at least $s-1$ vertices of every color. In the NO case,
+every coloring with at most $2^s$ colors has a monochromatic edge
+(\cref{yao:source}).
+
+Alice holds a vertex and a tuple of edge addresses. Bob holds an edge,
+a coordinate selecting one address, and a Boolean array. The selected
+address and the vertex's position in Bob's edge identify the array bit
+to output; the output is zero if the vertex is outside the edge
 (\cref{def:alternating-table}).
+Write $s=2^t$, and let $b$ bits name an edge. In the YES case,
+the players exchange the color, address and edge information in
+alternating turns. The coloring leaves at most $2s-1$ candidate
+vertices of Alice's color in Bob's edge, giving total cost
+$2b+4t+2$ (\cref{prop:alternating-upper}).
 
-In the YES case at least $s-1$ positions of an edge are taken by each of
-the $s-1$ colors other than that of Alice's vertex, so at most $2s-1$
-positions have her color. Write $s=2^t$, and let $b$
-bits name an edge. These facts give a short alternating protocol
-(\cref{prop:alternating-upper}), in which the players alternate single
-bits throughout. Alice sends her color while Bob sends his coordinate, and
-then Bob sends his edge while Alice sends the selected address. Next Alice
-sends, in $t+1$ bits, the rank of her vertex among the vertices of her
-color in the edge (or a code for ``outside''), alternating with $t+1$ dummy
-bits of Bob. Finally Bob sends the answer. The cost is $(2t-1)+2b+2(t+1)+1=2b+4t+2$.
-For the lower bound, we fix the number $t$ of early Alice turns as a
-constant depending on the desired gap. For a fixed row of Alice, we record
-her bit after every possible sequence of Bob's earlier bits during her
-first $t$ turns. This takes $1+2+\cdots+2^{t-1}=2^t-1$ bits, so there are at
-most $2^{2^t-1}\le2^s$ such response rules. Counting only the transcript
-on one input would not suffice, since Bob can choose his messages based on
-the whole array. We color each vertex by a rule used by the largest number of
-its address tuples, which is at least a $2^{-s}$ fraction of them. The NO
-promise then gives an edge whose vertices all have the same rule. Each
-vertex keeps at least a $2^{-s}$ fraction of all address tuples, so by the
-AM--GM inequality there is a coordinate at which the addresses of these
-tuples, summed over the $s^2$ vertices of the edge, take many distinct
-values. Set $m=b+3t-3$ and suppose the protocol has depth $2m-1$.
-Paired with the vertices' positions in the edge, these addresses give
-$2^{m-t+1}$ distinct array positions. On
-all these rows Alice's first $t$ bits are the same function of Bob's bits.
+For the NO lower bound, record Alice's responses to \emph{every}
+possible sequence of Bob's earlier bits during her first $t$ turns.
+There are at most $2^{2^t-1}\le2^s$ such response rules. Assign each
+vertex a rule used by many of its address tuples. The NO promise gives
+a monochromatic edge, so many rows sharing one early response rule
+must still identify many different array positions. Counting only the
+transcript of one interaction would not suffice, because Bob's
+messages may depend on his entire array.
 
-We follow the protocol, keeping at each Bob turn the larger set of array labels
-and at each later Alice turn the larger set of rows. Each choice keeps at least
-half of the corresponding set. When $\lceil\log m\rceil$ pairs of turns remain, at least
-$2^{\lceil\log m\rceil+1}$ positions and a $2^{-m}$ fraction of the arrays
-survive, and the remaining turns can produce at most
-$2^{2^{\lceil\log m\rceil}-1}$ answer patterns on these positions. We
-construct an explicit list of arrays, of polynomial size for each fixed $t$,
-in which each prescribed pattern on $r$ positions occurs in at most a
-$2^{-r}+\varepsilon$ fraction of the arrays, where $\varepsilon\le2^{-4m}$
-(\cref{yao:array-list}). A union bound over the answer
-patterns then shows that the arrays consistent with some pattern are fewer
-than the arrays that survive (\cref{yao:small-bias-escape,yao:lift}). The NO cost is therefore at least
-$2m=2b+6t-6$, exceeding the YES bound $2b+4t+2$ by $2t-8$.
-This gap is for Alice-first protocols with public output. Allowing either
-starter and receiver-only output reduces it by at most two bits
-(\cref{yao:comparison}). Choosing $t$ sufficiently large and enumerating the
-array list therefore gives a deterministic polynomial-size table for every
-fixed gap in Yao's convention.
+We construct a polynomial-size explicit list of arrays in which no
+prescribed pattern on many positions occurs too often. Following a
+hypothetical short protocol while retaining large sets of rows and
+arrays leaves more possible arrays than its remaining response
+patterns can cover
+(\cref{yao:array-list,yao:small-bias-escape,yao:lift}).
+This gives a NO lower bound of $2b+6t-6$, and hence a gap of $2t-8$.
+Allowing either starter and receiver-only output loses at most two
+bits (\cref{yao:comparison}). Choosing $t$ as a sufficiently large
+constant therefore gives a deterministic polynomial-time reduction
+for every fixed gap in Yao's convention.
 
-\section{Related work and formal verification}
+\section{Related work}
 
 \paragraph{Which optimization problem is hard?}
 For explicitly given total tables, Kushilevitz and Weinreb proved that
@@ -953,7 +948,7 @@ results for the unrestricted
 model~\cite{gaspers-he-mackenzie-npcc,hirahara2025communication} left open
 both hardness with one bit of additive error and Yao's original
 alternating model, as Hirahara, Ilango and Loff
-noted~\cite{hirahara2025communication}. We resolve both.
+noted~\cite{hirahara2025communication}. Our fixed-gap theorems resolve both questions.
 
 \paragraph{Ingredients of the constructions.}
 For the unrestricted reductions, we obtain hard graph-coloring instances
@@ -984,31 +979,7 @@ keeping its cost high relative to the new input length. In contrast, our
 sampling theorem (\cref{thm:compression}) keeps the number of bits above a
 prescribed bound, and we prove it directly.
 
-\subsection{Formal verification}
-\label{sec:formal-verification}
 
-Soltani Moakhar
-et~al.~\cite{moakhar2026beyond} have formalized in Lean the direct-sum
-result of Mackenzie and Saffidine, as stated in their corrected full
-version~\cite{mackenzie2025refuting}, together with its supporting
-arguments. A public proof inspector~\cite{beyondlibrary2026inspector}
-gives the statements and formal proofs.
-
-A companion Lean development formalizes the constructions and hardness
-results of version 42, relative to explicit interfaces for the cited source
-reductions and its stated complexity assumptions. Those constructions are
-unchanged here. This version replaces the ETH-based consequences by direct
-statements about $3$-SAT running time; these reformulated consequences have
-not yet been added to the formalization. The public proof
-inspector~\cite{interlacing2026inspector} displays version 42 and links its
-statements to their Lean proofs, with explanations of definitions and Lean
-commands. The companion repository~\cite{interlacing2026lean} provides the
-sources, reproducible build instructions, and a record of the assumptions
-and verification checks.
-
-The \hyperref[sec:ai-methodology]{AI methodology statement} at the end of
-the paper describes how AI tools were used to develop and check the
-constructions.
 
 \paragraph{Reading guide.}
 \Cref{sec:models} fixes the communication conventions and the use of input
@@ -1020,6 +991,7 @@ alternating construction. The appendices contain the remaining interlacing
 estimates, list algorithms, parameter checks and coloring reductions.
 
 
+\clearpage
 \section{Preliminaries}
 \label{sec:models}
 
@@ -3197,6 +3169,35 @@ We now combine the two constructions with an estimator, proving the general
 implication stated in \cref{thm:time-tradeoff}. Each construction produces
 a known threshold $B$ and a gap $k$. Its size bound determines which
 approximation errors are small enough to distinguish the two cases.
+
+\begin{theorem}[From approximation algorithms to $3$-SAT algorithms]
+\label{thm:time-tradeoff}
+There is an effective absolute integer $\mathsf A\ge2$ and, for each fixed
+clause-density bound $c_s$, an effective integer $C\ge1$ with the following
+property. Suppose a deterministic or
+bounded-error randomized polynomial-time estimator approximates $\D(M)$
+with additive error at most a nondecreasing function $a(T)$ on every
+sufficiently large explicit total Boolean table with $T$ entries.
+Let $k=k(N)\ge1$ be an integer function computable in time polynomial in
+$N+k(N)$. Choose either construction and its size bound:
+\[
+\begin{array}{c|c}
+\text{Construction} & S(N,k)\\ \hline
+\text{Randomized} & (N+2)^{C(k+1)}\\[2pt]
+\text{Deterministic} & (N+2)^{C\mathsf A^k}
+\end{array}
+\]
+If, for all sufficiently large $N$,
+\[
+2a\bigl(S(N,k(N))\bigr)<k(N),
+\]
+then $3$-SAT on $N$ variables and at most $c_sN$ clauses has an algorithm
+running in time $S(N,k(N))^{O(1)}$. It is deterministic when both the
+construction and the estimator are deterministic, and bounded-error
+randomized otherwise. The exponent may depend on the estimator and the
+algorithm computing $k$. It suffices for the estimator to work on square
+tables whose side length is a power of two.
+\end{theorem}
 
 \begin{proof}[Proof of \cref{thm:time-tradeoff}]
 \phantomsection\label{proof:thm:time-tradeoff}

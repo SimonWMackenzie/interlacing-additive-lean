@@ -3,16 +3,16 @@
   "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
   "archive_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/archive/bff03274f57796d986e788f95e0d553a71312936.zip",
   "input_hashes": {
-    "paper_source": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
-    "paper_pdf": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
-    "paper_aux": "46cff425ba6dfe1b7b764e77e09625f246ed14a53c7141d1fb8720747773e955",
-    "mapping": "96786718a34cd99a3ea088866bc39993358b2794d1ef355ba5c6ecbfb1a7c86d",
+    "paper_source": "a598f87d665345584393445d4fb849e0571bc2848cf039665d130308fb758592",
+    "paper_pdf": "d1ae12ce29d114af1b23e1f2038bad3955d1f5b94d71fb08b77e1b72f4dab43d",
+    "paper_aux": "ff0981f741ed0ce9a28ffab2869d8a3cf390464df814e4bd57c6efabfa90784e",
+    "mapping": "471682dafdc5b2fd6c5ec3fa63deb63164c16a8f85e5352be59e0e3ac8bba01d",
     "module_inventory": "4e5c4e483a4b2906865825afc0055ddad34be1d3d44d6a72f929780dee52396c",
-    "endpoints": "8a646426b616af7e1241e34f51f6e1baa11609fdbe0c14e2b8fe572c9b58acea",
-    "explanations": "587045b9da5d0ed003c9b75142ae2813b32c89a8c95c1d71592b31cd22cbe9b4",
+    "endpoints": "7629c8f5e8288dc1f306dd85873930858ceabf714d9ca84e1b6eed701196e4f4",
+    "explanations": "56417d2b7b6938af7959a34e961ce2642be35ac2d96b1dcefa3cdf01b28ad2cb",
     "references": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31"
   },
-  "bound_mapping_sha256": "96786718a34cd99a3ea088866bc39993358b2794d1ef355ba5c6ecbfb1a7c86d",
+  "bound_mapping_sha256": "471682dafdc5b2fd6c5ec3fa63deb63164c16a8f85e5352be59e0e3ac8bba01d",
   "build": {
     "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
     "canonical_checked_build_complete": true,
@@ -90,19 +90,41 @@
   "displayed_manuscript_version": "v43",
   "checked_lean_release": "v42",
   "presentation_amendment": {
-    "kind": "v43 manuscript presentation with partial Lean correspondence",
-    "displayed_source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
-    "displayed_pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
-    "prior_release_binding_sha256": "51b50b2bfec9151b1786ee72d0573af4c6b0a40af5f23d4f7e649ee289f4ccc9",
+    "kind": "Author v43 replacement; unchanged formal statements and proofs",
+    "displayed_source_sha256": "a598f87d665345584393445d4fb849e0571bc2848cf039665d130308fb758592",
+    "displayed_pdf_sha256": "d1ae12ce29d114af1b23e1f2038bad3955d1f5b94d71fb08b77e1b72f4dab43d",
+    "prior_source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
+    "prior_pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+    "prior_release_binding_sha256": "c417837cce8192d9ea6fe1643702eea24c9e37f6a466d7ff55fb014a72c32747",
+    "previous_bound_mapping_sha256": "96786718a34cd99a3ea088866bc39993358b2794d1ef355ba5c6ecbfb1a7c86d",
     "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
     "pending_statement_ids": [
       "det:time",
       "thm:quantitative",
       "thm:time-tradeoff"
     ],
-    "carried_formal_statements": 63,
+    "unchanged_formal_statements": 66,
+    "unchanged_proof_bodies": 53,
     "new_lean_build_performed": false,
     "proof_sources_unchanged": true,
-    "correspondence_review_sha256": "df17a96c1c98b1cee8d93ce5afa6f32c9b8b0f72f871804414868b0b8247335a"
-  }
+    "correspondence_review_sha256": "b4a910645b754d8ffe0f6e7341c3fcfdf4fc5423fa1c6d0ac316f75da75882ce"
+  },
+  "presentation_history": [
+    {
+      "kind": "v43 manuscript presentation with partial Lean correspondence",
+      "displayed_source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
+      "displayed_pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+      "prior_release_binding_sha256": "51b50b2bfec9151b1786ee72d0573af4c6b0a40af5f23d4f7e649ee289f4ccc9",
+      "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+      "pending_statement_ids": [
+        "det:time",
+        "thm:quantitative",
+        "thm:time-tradeoff"
+      ],
+      "carried_formal_statements": 63,
+      "new_lean_build_performed": false,
+      "proof_sources_unchanged": true,
+      "correspondence_review_sha256": "df17a96c1c98b1cee8d93ce5afa6f32c9b8b0f72f871804414868b0b8247335a"
+    }
+  ]
 }

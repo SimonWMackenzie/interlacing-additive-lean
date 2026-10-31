@@ -76,26 +76,25 @@ Simon Mackenzie\footnotemark[1]}
 Given the full truth table of a Boolean function whose input is split
 between two players, how hard is it to determine the minimum number of
 bits they must exchange to compute it? We prove that computing
-deterministic communication complexity is NP-hard. Our exact-hardness
-result for the standard model was obtained independently and concurrently
+deterministic communication complexity is NP-hard. This exact NP-hardness result, for the standard model was obtained independently and concurrently
 with Hirahara, Ilango and Loff. This paper includes that result and
 develops its construction to prove NP-hardness of approximation within
 every fixed additive error. We also establish exact and fixed-error
 NP-hardness in Yao's original model, where the players alternate after
 every bit and only the receiver of the last bit needs to determine the
-answer. This resolves Yao's 1979 question under his original conventions.
+answer. Yao asked in 1979 how hard it is to compute communication complexity,
+and our result answers his question under his original conventions.
 
-Our standard-model reduction uses interlacing to turn a graph-coloring
-obstruction into an extra bit of communication. We make this gap
-repeatable by preserving lower bounds under restrictions of the input
-sets. Replacing large tuple spaces by short explicit weighted lists then
-keeps the reduction polynomial in size for every fixed gap. Strict
-alternation requires a separate encoding.
+In the standard model, we encode a graph-coloring instance so that a
+non-colorable graph forces one extra bit of communication, and interlacing
+makes this lower bound hold against every protocol. Each message of a protocol restricts the possible inputs to a subtable. We prove lower bounds that still hold on such subtables, so the output of one round can serve as the input of the next. To keep the table polynomial
+for every fixed gap, we replace exponentially large sets of column tuples
+by short explicit weighted lists. Under strict alternation, simulating
+multi-bit messages would cost more than the gap, so we give a separate construction for this model.
 
-For the standard model, we also give explicit implications from
-approximation algorithms to faster algorithms for sparse $3$-SAT,
-without assuming a running-time lower bound for satisfiability. A
-polynomial-time randomized estimator with error
+For the standard model, we also show that accurate estimators would give
+faster algorithms for sparse $3$-SAT. A
+polynomial-time randomized estimator of communication complexity with additive error
 $c\log T/\log\log T$, where $T$ is the number of table entries and
 $0\le c<1/8$, yields a bounded-error $3$-SAT algorithm on $N$ variables
 and $O(N)$ clauses in time $2^{O(N^\alpha)}$ for every fixed
@@ -120,8 +119,12 @@ indices. The deterministic communication complexity $\D(M)$ is the
 smallest worst-case number of bits used by any such protocol.
 
 We study how hard it is to estimate $\D(M)$ when the algorithm receives
-the \emph{whole table} as input. Yao posed the exact-computation problem
-when he introduced communication complexity in
+the whole table as input. The table is total, meaning every entry is specified, and we write $T$ for its number
+of entries. An estimator runs in time measured in $T$ and outputs a number,
+not a protocol. A randomized estimator must meet its error guarantee with
+probability at least $2/3$ on every table, while the protocols whose cost it
+estimates remain deterministic. Yao posed the problem of computing $\D(M)$
+exactly from the table when he introduced communication complexity in
 1979~\cite{yao1979distributed}.
 
 We prove that computing deterministic communication complexity is
@@ -130,8 +133,6 @@ allowed. The exact NP-hardness result for the standard model was first
 presented in earlier versions of this
 work~\cite{gaspers-he-mackenzie-npcc}, independently and concurrently
 with Hirahara, Ilango and Loff~\cite{hirahara2025communication}.
-The present paper includes that result and develops the construction
-into a polynomial-time reduction for every fixed additive gap.
 
 We also prove exact and fixed-error NP-hardness in Yao's original
 model: the players alternate after every bit, and only the receiver
@@ -141,10 +142,12 @@ conventions. Our alternating construction therefore resolves Yao's
 question in the model in which it was posed.
 
 \paragraph{The challenge of approximation.}
-The exact-hardness reduction separates a satisfiable-case upper bound
-from an unsatisfiable-case lower bound by one bit. To tolerate additive
-error $a$, we need a gap larger than $2a$. The natural way to enlarge this gap is to combine several such
-problems. However, a protocol for the combined problem may share
+In the standard model, the exact-hardness reduction maps a $3$-CNF formula
+to a table whose optimal cost is one bit larger if the formula is
+unsatisfiable than if it is satisfiable. An estimate within additive error
+$a$ distinguishes the two cases only if their costs differ by more than
+$2a$. A natural way to enlarge the gap is to combine several such tables
+and hope that their one-bit gaps add up. However, a protocol for the combined problem may share
 communication among them, so their costs need not add, and the lower bound
 must hold against every such protocol.
 Combining problems also enlarges the truth table. Since the reduction
@@ -155,13 +158,6 @@ satisfiable and $\ge B+k$ otherwise. We call this an \emph{additive gap}
 of $k$ bits. We do not establish hardness of approximation within any
 fixed multiplicative factor above one.
 
-Our tables are total: every entry is specified. Write $T$ for their number
-of entries. The running time of an estimation algorithm is measured in $T$.
-Its output is a number, and it need not produce a protocol. A randomized estimator
-must meet its error guarantee with probability at least $2/3$ on every
-table. The protocols whose costs it estimates remain deterministic and must
-always answer correctly.
-
 \paragraph{Two rules for speaking.}
 In an \emph{unrestricted} protocol, the bits sent so far determine who
 speaks next, and the same player may send several consecutive bits. In a
@@ -170,36 +166,37 @@ bit. Where an unrestricted protocol lets one player send two consecutive
 bits, an alternating protocol must let the other player speak in between,
 so the two optimum costs can differ.
 
-\paragraph{The interlacing program.}
-Suppose Alice and Bob must compute $M(x,y)$, where Alice knows $x$ and
-Bob knows $y$. Interlacing gives Bob several possible inputs
-$y_1,\ldots,y_q$, while Alice receives an index $i$ specifying which
-one matters. Their task is now to compute $M(x,y_i)$. Alice's index acts
-as a one-step pointer into Bob's tuple, as in pointer
-chasing~\cite{nisan1993rounds}.
+\paragraph{Interlacing.}
+Interlacing combines $q$ copies of a matrix $M$ through a pointer. In the $q$-fold interlace $\Int{q}{M}$, Alice
+receives a row $x$ of $M$ together with an index $i\in\{1,\ldots,q\}$, and
+Bob receives a list $(y_1,\ldots,y_q)$ of $q$ columns of $M$, possibly
+with repetitions. The required output is $M(x,y_i)$.
+Alice's index acts as a one-step pointer into Bob's input, as in pointer
+chasing~\cite{nisan1993rounds}. \Cref{fig:lookup} shows the case $q=2$
+for a $2\times2$ matrix.
 
-There is a natural protocol: Alice sends $i$, and the players then compute
-$M(x,y_i)$ using a protocol for $M$. But is communicating the index an
-unavoidable extra cost? Perhaps Bob could speak first, or the players could
-exchange information about the index and the answer together, saving bits.
+There is a natural protocol: Alice sends $i$ using $\log q$ bits, and the
+players then run an optimal protocol for $M$ on $x$ and $y_i$, for a total
+of $\D(M)+\log q$ bits. But is communicating the index an unavoidable extra
+cost? Perhaps Bob could speak first, or the players could combine
+information about the index and the answer, saving bits.
 
-The interlacing framework provides a method for ruling out such savings.
-It follows the inputs that remain possible after each message and
-establishes lower bounds for the remaining communication problem. For
-suitable starting matrices, this analysis forces an optimal protocol to
-begin with Alice identifying her
-index~\cite{mackenzie2025refuting,gaspers-he-mackenzie-npcc}.
-The resulting control over arbitrary protocols is what makes interlacing
-useful in our hardness reductions.
+The interlacing framework rules out such savings when $M$ is robustly
+hard, that is, when every large subtable of $M$ is nearly as hard as $M$
+itself. Then any protocol that does not start by revealing Alice's index
+leaves a subproblem that is still too hard for the bits that remain, so
+the natural protocol is optimal~\cite{mackenzie2025refuting,gaspers-he-mackenzie-npcc}.
 
-Interlacing was developed by Mackenzie and
+The interlacing method for lower bounds was developed by Mackenzie and
 Saffidine~\cite{mackenzie2025refuting} to refute the exact direct-sum
 conjecture, and underlies our original NP-hardness
 reduction~\cite{gaspers-he-mackenzie-npcc}.
-That reduction already had to replace large tuple spaces by
-polynomial-size input sets. Repeating the construction creates a
-stronger requirement: each round must preserve the restriction lower
-bounds needed by the next one. An intermediate version obtained
+If $M$ has $n$ columns, Bob has $n^q$ possible lists. To keep its table
+polynomial, that reduction already replaced them by a polynomial-size
+family of lists.
+Repeating the construction needs more: the table produced by one round must
+again have lower bounds on its large subtables, so that the next round can
+use it as the base matrix $M$. An intermediate version obtained
 additive inapproximability under ETH using subexponential-time
 constructions~\cite{gaspers2026interlacingeth}.
 
@@ -398,7 +395,7 @@ inapproximability conclusion.
 
 The earlier direct-sum construction of Mackenzie and
 Saffidine~\cite{mackenzie2025refuting} has separately been formalized in
-Lean~\cite{moakhar2026beyond}; its statements and proofs are available in
+Lean by Moakhar et al~\cite{moakhar2026beyond}; its statements and proofs are available in
 a public inspector~\cite{beyondlibrary2026inspector}.
 
 ChatGPT and Codex were used in proof development and checking;
@@ -1399,9 +1396,17 @@ the induction continues.
 \section{Proof of amplification under input deletion}
 \label{sec:amplification-proof}
 
-We now prove \cref{thm:amplifier}. The graph gives a gap of one bit. Two
-further interlaces then make this gap survive input deletion and restore the
-deletion bounds.
+We now prove \cref{thm:amplifier}. The template bounds in
+\cref{src:profiles} force the initial prefix via \cref{cl:separation};
+the collision argument then gives \cref{src:near-full}, the near-full
+deletion bound for $N$. For $U$, the template bounds and
+\cref{det:conditioning,det:rareboost} give the stopping-node assignments
+of \cref{res:destinations}. The transfer bounds
+\cref{res:incoming,res:foreign}, together with source hardness, give
+\cref{res:alignment}: full cost when column deletion is small, and
+deletion bounds one bit below full cost. Finally, \cref{cl:bridge}
+for full products and \cref{det:restore} for explicit lists use these
+two conclusions to restore the deletion bounds at full cost.
 
 \subsection{One choice of widths and tolerances}
 
@@ -1585,56 +1590,109 @@ We will show that \(A\), \(R_{\rm temp}\) and \(N\) have NO-case lower bounds
 requires each position involved to retain base row weight at least
 \(x_{\rm cap}\) within its block.
 
-The following \(s=4\) example compares two bin assignments with the same
-active items. The endpoints \(u,v\) and auxiliary item \(a\) are active, while item
-\(h\), from another group, is inactive. At the depicted coordinate \(\alpha\), let \(\pi_\alpha(u)=1\) and
-\(\pi_\alpha(v)=2\). The rows of \(u,v\) use \(\gamma_3,\gamma_4\) on columns in the second family, while
-\(h\) uses the last entry \(\xi_{s+1}=\gamma_7\).
+The following example shows the extra position created by a collision.
+Fix \(s=4\) and a coordinate \(\alpha\) at which \(u,v\) are active
+and \(h\), from another group, is inactive. Suppose these three items
+lie in the same bin, with \(\pi_\alpha(u)=1\) and
+\(\pi_\alpha(v)=2\). On a \(\mathcal D\)-input, their rows use
+\(\gamma_3,\gamma_4,\gamma_7\), respectively. Together with the
+bin's \(s-2=2\) template positions, they expose \(s+1=5\) positions
+of the same list.
 
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[>=Stealth,font=\small,
- bin/.style={draw,rounded corners=2pt,minimum height=13mm},
- active/.style={circle,draw=answergreen,fill=answergreen!15,
-   minimum size=5.5mm,inner sep=0pt},
- inactive/.style={rectangle,draw=boborange,dashed,minimum size=5.5mm,
-   inner sep=0pt},
- target/.style={draw,rounded corners=2pt,fill=answergreen!4,
-   minimum width=9mm,minimum height=7mm,inner sep=2pt}]
-\node[font=\small\bfseries] at (2.2,1.55) {Assignment A};
-\node[font=\small\bfseries] at (9.6,1.55) {Assignment B};
-\foreach \x/\b/\wide in {0/1/22,1.85/2/12,3.3/3/12,4.75/4/12} {
-  \node[bin,minimum width=\wide mm] at (\x,0) {};
-  \node[font=\footnotesize] at (\x,.95) {bin \b};
-  \node[bin,minimum width=\wide mm] at (\x+7.4,0) {};
-  \node[font=\footnotesize] at (\x+7.4,.95) {bin \b};
-}
-\node[active] at (0,0) {$u$};
-\node[active] at (1.85,0) {$v$};
-\node[inactive] at (3.3,0) {$h$};
-\node[active] at (4.75,0) {$a$};
-\node[active] (u) at (6.8,0) {$u$};
-\node[active] (v) at (7.4,0) {$v$};
-\node[inactive] (h) at (8,0) {$h$};
-\node[active] at (12.15,0) {$a$};
-\node[target] (gu) at (6.5,-1.8) {$\gamma_3$};
-\node[target] (gv) at (7.4,-1.8) {$\gamma_4$};
-\node[target] (gh) at (8.3,-1.8) {$\gamma_7$};
-\draw[->,answergreen] (u.south) -- (gu.north);
-\draw[->,answergreen] (v.south) -- (gv.north);
-\draw[->,boborange,dashed] (h.south) -- (gh.north);
-\node[align=center,anchor=north] at (7.4,-2.35)
- {One bin, three distinct\\positions};
-\node[align=left,text width=57mm,anchor=north west,font=\footnotesize]
- at (-.95,-1.05)
- {Filled circles: active $u,v,a$.\\
-  Dashed square: inactive $h$.\\[3pt]
-  Activity stays fixed.};
+\begin{tikzpicture}[
+  >=Stealth,
+  font=\small,
+  collisioncell/.style={
+    draw=black!65, line width=.45pt,
+    minimum width=16mm, minimum height=8.5mm,
+    inner sep=0pt, outer sep=0pt
+  },
+  collisionactive/.style={
+    circle, draw=answergreen, fill=answergreen!12,
+    line width=.7pt, minimum size=6.5mm, inner sep=0pt
+  },
+  collisioninactive/.style={
+    rectangle, draw=boborange, fill=boborange!7, dashed,
+    line width=.7pt, minimum size=6.5mm, inner sep=0pt
+  }
+]
+
+% One bin: the template rows and all three witness items.
+\draw[rounded corners=3pt, line width=.65pt]
+  (-.4,1.15) rectangle (11.6,2.55);
+
+\node[font=\small\bfseries] at (5.6,2.92)
+  {One bin at a fixed coordinate \(\alpha\)};
+
+\node[
+  draw=aliceblue,
+  fill=aliceblue!7,
+  rounded corners=2pt,
+  line width=.65pt,
+  minimum width=27mm,
+  minimum height=8mm
+] (templates) at (1.6,1.78) {Template rows};
+
+\node[text=answergreen] at (4.8,2.28) {Active items};
+\node[collisionactive] (u) at (4.0,1.70) {\(u\)};
+\node[collisionactive] (v) at (5.6,1.70) {\(v\)};
+
+\node[text=boborange] at (10.4,2.28) {Inactive item};
+\node[collisioninactive] (h) at (10.4,1.70) {\(h\)};
+
+% Seven adjacent cells form one list, not seven bins.
+\node[collisioncell, fill=aliceblue!10]
+  (g1) at (0.8,0) {\(\gamma_1\)};
+\node[collisioncell, fill=aliceblue!10]
+  (g2) at (2.4,0) {\(\gamma_2\)};
+
+\node[collisioncell, fill=answergreen!12]
+  (g3) at (4.0,0) {\(\gamma_3\)};
+\node[collisioncell, fill=answergreen!12]
+  (g4) at (5.6,0) {\(\gamma_4\)};
+
+\node[collisioncell, fill=black!4, text=black!45]
+  (g5) at (7.2,0) {\(\gamma_5\)};
+\node[collisioncell, fill=black!4, text=black!45]
+  (g6) at (8.8,0) {\(\gamma_6\)};
+
+\node[collisioncell, fill=boborange!12]
+  (g7) at (10.4,0) {\(\gamma_7\)};
+
+% The arrows indicate which list positions these rows read.
+\draw[->, aliceblue, line width=.7pt]
+  (templates.south) -- (g1.north);
+\draw[->, aliceblue, line width=.7pt]
+  (templates.south) -- (g2.north);
+
+\draw[->, answergreen, line width=.7pt]
+  (u.south) -- (g3.north);
+\draw[->, answergreen, line width=.7pt]
+  (v.south) -- (g4.north);
+
+\draw[->, boborange, dashed, line width=.7pt]
+  (h.south) -- (g7.north);
+
+\node at (5.6,-.78)
+  {One shared list \(\gamma\) on a \(\mathcal D\)-input};
+
+\node[font=\normalsize] at (5.6,-1.68) {\(
+  \underbrace{2}_{\text{template}}
+  +\underbrace{2}_{\text{active}}
+  +\underbrace{1}_{\text{inactive}}
+  =\underbrace{5}_{\text{positions}}>4=s
+\)};
+
 \end{tikzpicture}
-\caption{The same active and inactive items can have different bin assignments.
-In assignment B, one bin contains the active endpoints \(u,v\) and the inactive
-item \(h\). Against a $\mathcal D$-input, their rows use three distinct positions of the same list.
-These are two illustrative assignments, not steps of a protocol.}
+\caption{A collision exposes \(s+1\) positions, illustrated for \(s=4\).
+On a \(\mathcal D\)-input with label \((\alpha,\gamma)\), the template
+rows in the depicted bin use positions \(1,2\), the active items
+\(u,v\) use positions \(3,4\), and the inactive item \(h\) uses
+position \(7\). Activity and the positions read are determined by
+\(\alpha\), independently of the bin assignment. Only the positions
+used by the displayed rows are highlighted; other items are omitted.}
 \label{fig:source-collision}
 \end{figure}
 
@@ -2894,6 +2952,8 @@ for which some assignment of bits to Bob's nodes makes the tree correct on every
 row in $U$. The assignment may depend on the column, but not on Alice's row.
 \end{definition}
 
+The following characterization is due to \citet[Lemma~3.2]{mackenzie2026condensation}.
+
 \begin{observation}[Short protocols as containments]\label{obs:compatible-protocol}
 For retained sets $U\subseteq X$, $V\subseteq Y$ and an integer $t\ge0$, with correctness on an empty restriction understood
 vacuously,
@@ -2903,16 +2963,6 @@ vacuously,
  V\subseteq G_P(U)\text{ for some depth-}t\text{ protocol tree }P\text{ of this kind}.
 \end{equation}
 \end{observation}
-
-\begin{proof}
-Given a protocol of depth at most $t$, we pad it with fixed dummy messages and
-extend Alice's maps to all rows. For each column in $V$, its Bob maps give an assignment as in
-\cref{def:compatibility}, so $V\subseteq G_P(U)$.
-Conversely, for each retained column we choose such an assignment at Bob's
-nodes. These
-assignments define Bob's maps for a correct protocol on $U\times V$. Empty
-restrictions satisfy both assertions vacuously.
-\end{proof}
 
 \Cref{fig:compatible-trees} uses two one-bit trees to show why leaf
 requirements combine by intersection at an Alice node and by union at a Bob
@@ -2984,14 +3034,15 @@ leaf may work, but his chosen leaf must answer both rows correctly.}
 \label{fig:compatible-trees}
 \end{figure}
 
-The count below uses the row-sum argument of Oum, S{\ae}ther and
+The count below follows from \citet[Lemma~4.3]{mackenzie2026condensation},
+using the row-sum argument of Oum, S{\ae}ther and
 Vatshelle~\cite[Theorem~4.2]{oum2014faster}: the columns on which selected
 Boolean rows all vanish are exactly the zero coordinates of the integer sum of
 those rows. Counting these sums instead of the row subsets gives a bound that depends
 only on the rank and not on the number of rows. As a result, the final sample can be small.
 
 \begin{theorem}[Counting the sets of columns]\label{thm:rank-count}
-Let $r,t$ be nonnegative integers. If a Boolean matrix $F$ has real rank at most
+Let $r\ge1$ and $t\ge0$ be integers. If a Boolean matrix $F$ has real rank at most
 $r$, then, over all depth-at-most-$t$ trees $P$ specified as in
 \cref{def:compatibility} and all retained row subsets $U$, there are at most
 \begin{equation}\label{eq:rank-count}
@@ -2999,32 +3050,12 @@ $r$, then, over all depth-at-most-$t$ trees $P$ specified as in
 \end{equation}
 distinct sets $G_P(U)$. Repeated row and column labels are allowed.
 \end{theorem}
-\begin{proof}
-We first count, for each leaf, the sets of columns on which its output is
-correct for every row whose path reaches that leaf. We then count how a tree can combine those sets.
 
-We stack the rows of $F$ and $\mathbf1-F$ into one Boolean matrix $A$. Its row
-space lies in the span of the rows of $F$ and the all-one vector, so its rank
-is at most $r+1$. By the row-sum bound of
-\cite[Theorem~4.2, with $d=1$]{oum2014faster}, a Boolean matrix of real
-rank at most $r+1$ has at most $(r+2)^{r+1}$ distinct common-zero column
-sets over all row subsets. To apply that bound, we view the matrix as a
-bipartite adjacency matrix: its common-zero sets are the complements of
-unions of neighborhoods. The count includes the empty row subset.
-
-These sets cover both leaf outputs. A leaf with output $0$ is correct where
-the selected rows of $F$ all vanish, and a leaf with output $1$ is correct where
-the selected rows of $\mathbf1-F$ all vanish. Write
-$a=(r+1)\ceil{\log(r+2)}\ge1$, so there are at most $2^a$ leaf conditions.
-At an Alice node the child conditions intersect, while at a Bob node they unite.
-The rows reaching a leaf are the retained rows consistent with Alice's messages
-on its path, so the count includes every retained row set and every choice of Alice's maps.
-After padding to depth $t$, the count is at most
-\[
-2^{2^t-1}(2^a)^{2^t}\le2^{a2^{t+1}}.
-\]
-The argument also covers rank zero and repeated row or column labels.
-\end{proof}
+Mackenzie's bound for depth exactly $t$ is $2^{B(r)2^t-1}$ with
+$B(r)=(r+1)\ceil{\log(r+1)}+2$. Since $B(r)\le2(r+1)\ceil{\log(r+2)}$ for
+$r\ge1$, and padding turns a tree of depth $t'<t$ into a depth-$t$ tree with the
+same sets $G_P(U)$, this gives \eqref{eq:rank-count}. Repeated labels are
+handled by passing to distinct values~\cite[Section~2]{mackenzie2026condensation}.
 
 \subsection{Sampling columns and then rows}
 \label{sec:sampling}
@@ -3036,7 +3067,7 @@ probability, the sampled columns preserve the assumed lower bound $H$ on every
 row set of original weight $\ge3/5$. We then analyze the independent row sample.
 
 \begin{theorem}[Sampling rows and columns]\label{thm:compression}
-Let $F:X\times Y\to\{0,1\}$ have real rank at most $r$, where $r\ge0$ is an
+Let $F:X\times Y\to\{0,1\}$ have real rank at most $r$, where $r\ge1$ is an
 integer, and let $\mu_X,\mu_Y$ be input distributions on nonempty finite indexed sets.
 Suppose an integer $H\ge1$ satisfies, for all $U\subseteq X$ and $V\subseteq Y$,
 \[
@@ -4134,10 +4165,9 @@ Since \(p_0\) is a power of two, \(a=\log p_0\) is an integer. Fix
 \(V\subseteq\{0,1\}^{p_0}\) with \(\card V\ge2^{p_0-L}\), and a retained column
 set \(J\subseteq[p_0]\) with \(\card J\ge\ceil{(3/5)2^{-j}p_0}\). Under uniform
 weights, these are the restrictions tested by \(\RP{R_0}{2^{-L}}{d_0}\). Let \(v\) be
-the dimension of the real span of \(V\). A \(v\)-dimensional subspace has \(v\)
-coordinate functionals whose restrictions form a basis, so projection to those
-\(v\) coordinates is injective on the subspace. Since the Boolean cube has at
-most \(2^v\) points in those coordinates, \(V\) has at most \(2^v\) points. The
+the dimension of the real span of \(V\). The matrix with row set \(V\) has
+rank \(v\), so by \citet[Lemma~4.1(1)]{mackenzie2026condensation} it has at most
+\(2^v\) distinct rows, that is, \(\card V\le2^v\). The
 lower bound on \(\card V\) therefore implies \(v\ge p_0-L\).
 
 Deleting the \(p_0-\card J\) coordinates outside \(J\) can lower the row rank by
@@ -4152,17 +4182,8 @@ The strict inequality follows from
 \]
 where \(p_0/40-L>0\) follows from \(p_0\ge64(L+1)\).
 
-Let \(F\) denote the restricted initial matrix. Consider a protocol for \(F\).
-The indicator of each 1-leaf rectangle has rank at most one, and the sum of
-these indicators is the restricted matrix, so there are at least \(r\)
-one-leaves. Let \(\mathbf1\) be the all-ones matrix, which has rank one. The
-complement of the restricted matrix therefore has rank at least \(r-1\), by
-\(\rank(\mathbf 1-F)\ge\rank(F)-\rank(\mathbf1)\), so there are at least \(r-1\)
-zero-leaves. Hence
-\[
-\#\text{leaves}\ge r+(r-1)=2r-1>2^{a-j}.
-\]
-A depth-\(t\) binary protocol has at most \(2^t\) leaves, so the restriction has
+By \citet[Lemma~4.1(2)]{mackenzie2026condensation}, a matrix of
+depth at most \(a-j\ge1\) has rank at most \(2^{a-j-1}\). Hence the restriction has
 depth at least \(a+1-j\). At \(j=0\), this gives \(\D(R_0)\ge a+1\). Conversely,
 Bob sends the column index in \(a\) bits and Alice sends the corresponding bit, so
 \(\D(R_0)\le a+1\), and hence \(\D(R_0)=a+1=d_0\). The unit-vector rows form the
@@ -4256,6 +4277,14 @@ assume the common hypotheses (H1)--(H4) of \cref{sec:internal-interlace} and
 drop the subscript $\rm g$ of the explicit construction. In each source copy,
 the $\mathcal D$-inputs have total weight $\mu=1/256$, and the template rows
 and the $\Omega$-inputs each have total weight $\lambda=255/256$.
+
+Transferred weights below are in units of one complete copy, whereas
+$\varepsilon_i$ is normalized within copy $i$'s $\Omega$-inputs.
+\Cref{det:conditioning} controls conditional marginals on at most eight
+nonexceptional coordinates; the projection inequality following it converts
+this control into bounds in the original product weights.
+Choosing retained representatives as in \cref{obs:representatives}
+realizes these projected tables as actual restrictions.
 
 \subsection{Two template inputs at one stopping node}
 
@@ -5204,9 +5233,9 @@ Her degree reduction makes the degree constant, preserves perfect
 completeness, and changes the size and the NO-case unsatisfied fraction by
 only constant factors~\cite[Lemma~1.7]{dinur2007pcp}.
 A constant-size Boolean encoding, followed by
-\cite[Lemma~11]{bogdanov2002lower}, gives bounded-occurrence $3$-SAT
+the reduction of \citet[Lemma~11]{bogdanov2002lower}, gives bounded-occurrence $3$-SAT
 with perfect completeness, a constant NO-case gap and almost-linear size. The gap-preserving reduction of
-\cite[Theorem~14 and its proof, pp.~98--99]{bogdanov2002lower}
+\citet[Theorem~14 and its proof, pp.~98--99]{bogdanov2002lower}
 then gives a bounded-degree graph of linear size.
 
 It remains to match the conventions of \cref{src:gap-colouring}. We remove isolated vertices and add a
@@ -5294,7 +5323,7 @@ there, with credit to Vazirani~\cite[Lemma~1 and Corollary~1]{alon1992smallbias}
 We use the following direct consequence and keep its seed labels explicit
 so that the reduction can print the full array list.
 
-\begin{lemma}\label{yao:finite-field-list}
+\begin{lemma}[Explicit nearly uniform arrays]\label{yao:finite-field-list}
 For integers $n,r\ge1$, a deterministic algorithm prints a nonempty labeled
 list $(w^\ell)_{\ell\in\mathcal L}$ of $n$-bit arrays satisfying
 \[
@@ -5305,29 +5334,12 @@ list $(w^\ell)_{\ell\in\mathcal L}$ of $n$-bit arrays satisfying
 Its running time and complete output length are polynomial in $n2^r$.
 \end{lemma}
 
-\begin{proof}[Proof of \cref{yao:finite-field-list}]
-\phantomsection\label{proof:yao:finite-field-list}
-In this proof only, let $R=2^d$ be the least power of two with $R\ge n2^r$.
-Construction~3 and Proposition~3 of \citet{alon1992smallbias} enumerate
-$R^2$ labeled $n$-bit arrays whose nonempty parities have bias
-$\le(n-1)/R\le2^{-r}$, where bias is the absolute expectation of the
-$\{\pm1\}$-valued parity. The parity-to-pattern conversion
-\cite[Lemma~1]{alon1992smallbias} cited above then gives the displayed bound
-for every nonempty $I$ and every $z$, and the case $I=\varnothing$ is immediate.
-
-Explicitly, the construction fixes a binary basis of the field $\mathbb F_R$,
-writes $\operatorname{vec}(z)\in\mathbb F_2^d$ for the coordinate vector of
-$z\in\mathbb F_R$, and uses the array
-$w^{u,y}(j)=\langle u,\operatorname{vec}(y^j)\rangle$ (inner product over
-$\mathbb F_2$, $0\le j<n$) for each $(u,y)\in\mathbb F_2^d\times\mathbb F_R$,
-with $y^0=1$.
-We enumerate all seeds and keep repeated arrays as distinct labels.
-A field representation can be found by enumerating degree-$d$ monic
-binary polynomials and checking their possible factors, in time polynomial
-in $R$. Field arithmetic and enumeration of the $R^2$ length-$n$ arrays
-also take polynomial time in $nR$. Since $R<2n2^r$, this proves the
-claimed printing and encoding bounds.
-\end{proof}
+To instantiate the construction, let $R$ be the least power of two with
+$R\ge n2^r$. The construction lists $R^2<4n^24^r$ arrays, indexed by
+$\mathbb F_2^{\log R}\times\mathbb F_R$, whose nonempty parities have bias at most
+$(n-1)/R\le2^{-r}$, and the bias-to-pattern conversion gives the displayed bound.
+A field representation of $\mathbb F_R$ can be found by exhaustive search in time
+polynomial in $R$, and we keep repeated arrays as distinct labels.
 
 Finally, we apply \cref{yao:finite-field-list} on the positions
 $\Omega_{\rm a}$ of \cref{def:alternating-table} with error $\epsilon_{\rm a}$,

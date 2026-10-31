@@ -1,6 +1,6 @@
 {
-  "source_sha256": "a598f87d665345584393445d4fb849e0571bc2848cf039665d130308fb758592",
-  "pdf_sha256": "d1ae12ce29d114af1b23e1f2038bad3955d1f5b94d71fb08b77e1b72f4dab43d",
+  "source_sha256": "d990fb9f07dd8cbec636a484cd43d63b8263c2950a4a431e73310282d3184fdf",
+  "pdf_sha256": "288697f9a64ed3caf43eb164ae249f94a4c0e5432f8ad7ba0e67de4bacb521b9",
   "references_sha256": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31",
   "page_count": 74,
   "character_geometry_identical": true,
@@ -114,105 +114,105 @@
       "page": 19,
       "point": [
         486.501,
-        363.95
+        300.083
       ]
     },
     "def:source-matrix": {
       "page": 21,
       "point": [
         418.173,
-        602.839
+        576.248
       ]
     },
     "src:item-witness": {
       "page": 22,
       "point": [
         336.534,
-        626.577
+        590.513
       ]
     },
     "src:upper": {
       "page": 22,
       "point": [
         444.305,
-        567.997
+        531.932
       ]
     },
     "lem:many-product-blocks": {
       "page": 23,
       "point": [
         120.787,
-        474.321
+        433.674
       ]
     },
     "src:profiles": {
       "page": 23,
       "point": [
         486.697,
-        258.331
+        217.683
       ]
     },
     "lem:kraft-count": {
       "page": 23,
       "point": [
         131.064,
-        118.456
+        77.808
       ]
     },
     "lem:collision-tracking": {
       "page": 24,
       "point": [
         209.021,
-        409.153
+        370.71
       ]
     },
     "src:near-full": {
       "page": 24,
       "point": [
         259.944,
-        120.988
+        81.793
       ]
     },
     "det:conditioning": {
       "page": 27,
       "point": [
         440.843,
-        695.492
+        621.27
       ]
     },
     "det:exact": {
       "page": 27,
       "point": [
         190.737,
-        465.953
+        391.731
       ]
     },
     "det:rareboost": {
       "page": 27,
       "point": [
         242.068,
-        326.077
+        251.855
       ]
     },
     "res:destinations": {
-      "page": 28,
+      "page": 29,
       "point": [
         315.556,
-        105.554
+        695.492
       ]
     },
     "res:incoming": {
       "page": 29,
       "point": [
         481.63,
-        262.715
+        199.551
       ]
     },
     "res:foreign": {
       "page": 29,
       "point": [
         343.177,
-        188.593
+        125.429
       ]
     },
     "res:alignment": {
@@ -289,112 +289,112 @@
       "page": 38,
       "point": [
         502.293,
-        278.716
+        256.2
       ]
     },
     "thm:rank-count": {
       "page": 39,
       "point": [
         382.844,
-        307.768
+        290.867
       ]
     },
     "thm:compression": {
       "page": 40,
       "point": [
         381.173,
-        474.947
+        636.687
       ]
     },
     "lem:sample-access": {
-      "page": 41,
+      "page": 40,
       "point": [
         448.87,
-        605.42
+        132.05
       ]
     },
     "thm:uniform-reduction": {
       "page": 41,
       "point": [
         434.796,
-        393.08
+        588.094
       ]
     },
     "thm:time-tradeoff": {
-      "page": 42,
+      "page": 41,
       "point": [
         495.745,
-        514.766
+        72.0
       ]
     },
     "yao:comparison": {
-      "page": 44,
+      "page": 43,
       "point": [
         361.615,
-        627.874
+        175.429
       ]
     },
     "yao:source": {
       "page": 44,
       "point": [
         230.342,
-        221.796
+        403.586
       ]
     },
     "def:alternating-table": {
-      "page": 45,
+      "page": 44,
       "point": [
         171.273,
-        544.107
+        84.62
       ]
     },
     "prop:alternating-upper": {
       "page": 45,
       "point": [
         343.048,
-        72.0
+        250.939
       ]
     },
     "yao:small-bias-escape": {
       "page": 46,
       "point": [
         379.254,
-        72.0
+        227.34
       ]
     },
     "yao:array-list": {
       "page": 47,
       "point": [
         342.529,
-        240.087
+        362.03
       ]
     },
     "yao:lift": {
-      "page": 48,
+      "page": 47,
       "point": [
         504.329,
-        667.966
+        128.511
       ]
     },
     "cl:projection": {
-      "page": 50,
+      "page": 49,
       "point": [
         244.278,
-        681.943
+        89.44
       ]
     },
     "lem:small-blocks": {
       "page": 50,
       "point": [
         455.545,
-        145.738
+        194.42
       ]
     },
     "cl:separation": {
       "page": 51,
       "point": [
         501.318,
-        344.01
+        384.657
       ]
     },
     "cl:defect-induction": {
@@ -408,21 +408,21 @@
       "page": 57,
       "point": [
         327.893,
-        441.345
+        518.076
       ]
     },
     "cl:two-stream": {
-      "page": 58,
+      "page": 57,
       "point": [
         474.207,
-        638.402
+        72.0
       ]
     },
     "lem:conditioning-moment": {
       "page": 61,
       "point": [
         442.997,
-        432.937
+        494.967
       ]
     },
     "lem:pair-projections": {
@@ -464,7 +464,7 @@
       "page": 71,
       "point": [
         392.425,
-        325.208
+        334.34
       ]
     }
   },

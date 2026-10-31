@@ -1256,7 +1256,7 @@
         h.style.width = ((b.x1-b.x0)*100)+"%"; h.style.height = ((b.y1-b.y0)*100)+"%";
         h.style.borderColor = "rgba("+c+",.92)"; h.style.background = "rgba("+c+",.14)";
         var chip = document.createElement("span"); chip.className = "chip"; chip.style.background = "rgba("+c+",.95)";
-        chip.textContent = (n.paper ? envShort(n.paper.env)+" "+n.paper.num+"  " : "") + nodeTitle(n);
+        chip.textContent = (n.paper && n.paper.name ? envShort(n.paper.env)+" "+n.paper.num+"  " : "") + nodeTitle(n);
         h.appendChild(chip);
         h.addEventListener("click", function(e){ e.stopPropagation(); selectStmt(id, false); });
         wrap.appendChild(h); if(!hlEls[id]) hlEls[id] = h;
@@ -1329,7 +1329,7 @@
       var b = document.createElement("button"); b.className = "prow"; b.dataset.id = p.id;
       var pg = document.createElement("span"); pg.className="pg"; pg.textContent = "p."+p.page;pg.title="PDF page "+p.page+" (including the title page)";
       var nm = document.createElement("span"); nm.className="nm";
-      nm.textContent = envShort(p.env)+" "+p.num+" · "+(n.title || p.name || p.id);
+      nm.textContent = p.env.charAt(0).toUpperCase()+p.env.slice(1)+" "+p.num+(p.name ? " · "+nodeTitle(n) : "");
       b.appendChild(pg); b.appendChild(nm);
       b.addEventListener("click", function(){ selectStmt(p.id, true); });
       plist.appendChild(b);

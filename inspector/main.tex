@@ -2952,9 +2952,7 @@ for which some assignment of bits to Bob's nodes makes the tree correct on every
 row in $U$. The assignment may depend on the column, but not on Alice's row.
 \end{definition}
 
-The following characterization is due to \citet[Lemma~3.2]{mackenzie2026condensation}.
-
-\begin{observation}[Short protocols as containments]\label{obs:compatible-protocol}
+\begin{observation}[Lemma~3.2 in \cite{mackenzie2026condensation}]\label{obs:compatible-protocol}
 For retained sets $U\subseteq X$, $V\subseteq Y$ and an integer $t\ge0$, with correctness on an empty restriction understood
 vacuously,
 \begin{equation}\label{eq:compatibility}
@@ -3034,14 +3032,13 @@ leaf may work, but his chosen leaf must answer both rows correctly.}
 \label{fig:compatible-trees}
 \end{figure}
 
-The count below follows from \citet[Lemma~4.3]{mackenzie2026condensation},
-using the row-sum argument of Oum, S{\ae}ther and
+Mackenzie proves the count below with the row-sum argument of Oum, S{\ae}ther and
 Vatshelle~\cite[Theorem~4.2]{oum2014faster}: the columns on which selected
 Boolean rows all vanish are exactly the zero coordinates of the integer sum of
 those rows. Counting these sums instead of the row subsets gives a bound that depends
 only on the rank and not on the number of rows. As a result, the final sample can be small.
 
-\begin{theorem}[Counting the sets of columns]\label{thm:rank-count}
+\begin{theorem}[Lemma~4.3 in \cite{mackenzie2026condensation}]\label{thm:rank-count}
 Let $r\ge1$ and $t\ge0$ be integers. If a Boolean matrix $F$ has real rank at most
 $r$, then, over all depth-at-most-$t$ trees $P$ specified as in
 \cref{def:compatibility} and all retained row subsets $U$, there are at most
@@ -5323,7 +5320,7 @@ there, with credit to Vazirani~\cite[Lemma~1 and Corollary~1]{alon1992smallbias}
 We use the following direct consequence and keep its seed labels explicit
 so that the reduction can print the full array list.
 
-\begin{lemma}[Explicit nearly uniform arrays]\label{yao:finite-field-list}
+\begin{lemma}[Construction~3, Proposition~3 and Corollary~1 in \cite{alon1992smallbias}]\label{yao:finite-field-list}
 For integers $n,r\ge1$, a deterministic algorithm prints a nonempty labeled
 list $(w^\ell)_{\ell\in\mathcal L}$ of $n$-bit arrays satisfying
 \[

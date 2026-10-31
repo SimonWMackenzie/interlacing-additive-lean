@@ -1,6 +1,6 @@
 {
-  "source_sha256": "d990fb9f07dd8cbec636a484cd43d63b8263c2950a4a431e73310282d3184fdf",
-  "pdf_sha256": "288697f9a64ed3caf43eb164ae249f94a4c0e5432f8ad7ba0e67de4bacb521b9",
+  "source_sha256": "f130159f0f15e5049f56c51c8d5ee17365cf2cb4b2902f8982531cc106095ded",
+  "pdf_sha256": "7d2a61d14c45ebac2a9d00f963a299b66814daa16764fa86b67c18ece2f23c9f",
   "references_sha256": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31",
   "page_count": 74,
   "character_geometry_identical": true,
@@ -289,14 +289,14 @@
       "page": 38,
       "point": [
         502.293,
-        256.2
+        278.716
       ]
     },
     "thm:rank-count": {
       "page": 39,
       "point": [
         382.844,
-        290.867
+        309.907
       ]
     },
     "thm:compression": {

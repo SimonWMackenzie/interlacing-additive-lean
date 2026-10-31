@@ -522,10 +522,10 @@
   "obs:compatible-protocol": {
     "id": "obs:compatible-protocol",
     "page": 38,
-    "x0": 0.11159640044168709,
-    "y0": 0.6149934710878314,
+    "x0": 0.11132352492388557,
+    "y0": 0.5865654222892992,
     "x1": 0.8893736795662275,
-    "y1": 0.6841809051205413,
+    "y1": 0.6557529333866003,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -536,9 +536,9 @@
     "id": "thm:rank-count",
     "page": 39,
     "x0": 0.11137903749553207,
-    "y0": 0.5311058506821141,
+    "y0": 0.5186273208772293,
     "x1": 0.8893444584865197,
-    "y1": 0.6404107219040996,
+    "y1": 0.616368996976602,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -549,9 +549,9 @@
     "id": "thm:compression",
     "page": 39,
     "x0": 0.11157843645881205,
-    "y0": 0.8344303477894176,
+    "y0": 0.8176247953164457,
     "x1": 0.8900046753727533,
-    "y1": 0.916757988207268,
+    "y1": 0.9039207997948232,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",
       "end": "exact source environment end",
@@ -847,9 +847,9 @@
   "yao:finite-field-list": {
     "id": "yao:finite-field-list",
     "page": 71,
-    "x0": 0.11177940617978963,
+    "x0": 0.1113790873608558,
     "y0": 0.47978010081281564,
-    "x1": 0.8872889101115706,
+    "x1": 0.8871721255233864,
     "y1": 0.5833879721285117,
     "extent": {
       "method": "invisible end destination, identical printed-character geometry",

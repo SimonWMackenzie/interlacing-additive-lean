@@ -1,0 +1,301 @@
+{
+  "scope": "All current v43 statement and construction-component correspondence rows are accepted with exact source/provider/review identities. Runtime endpoints have fresh production CurrentV43 build authority; retained providers keep their original checked authority. External source interfaces remain explicit. This metadata is separate from the root full-coverage receipt, public-package checks and any cold replay.",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
+  "build": {
+    "code_commit": "320c04e80da52ae0da02bb21068874baefbd5b0d",
+    "canonical_checked_build_complete": true,
+    "public_package_replay_complete": false,
+    "checked_build_receipt_sha256": "b33a028c8c8e7a7223417d5b1f21cdbe006f343b0aa7fba68d9392c4df1a41a8",
+    "checked_build_receipt_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/blob/320c04e80da52ae0da02bb21068874baefbd5b0d/PUBLISHED_CHECKED_BUILD.json",
+    "full_coverage_receipt_sha256": "283285509c512efc1c5daf05692abe3dc2e4660decc8aae1121246ea6e3262c4",
+    "source_manifest_sha256": "bbd0fbd5890cc5bab2aa87a21c553dd26e8a90b82d006570d4c2722d8e86d02d"
+  },
+  "displayed_manuscript_version": "v43",
+  "checked_lean_release": "v43",
+  "checked_manuscript_source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
+  "presentation_history": [
+    {
+      "kind": "v43 manuscript presentation with partial Lean correspondence",
+      "displayed_source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
+      "displayed_pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+      "prior_release_binding_sha256": "51b50b2bfec9151b1786ee72d0573af4c6b0a40af5f23d4f7e649ee289f4ccc9",
+      "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+      "pending_statement_ids": [
+        "det:time",
+        "thm:quantitative",
+        "thm:time-tradeoff"
+      ],
+      "carried_formal_statements": 63,
+      "new_lean_build_performed": false,
+      "proof_sources_unchanged": true,
+      "correspondence_review_sha256": "df17a96c1c98b1cee8d93ce5afa6f32c9b8b0f72f871804414868b0b8247335a"
+    },
+    {
+      "kind": "Author v43 replacement; unchanged formal statements and proofs",
+      "displayed_source_sha256": "a598f87d665345584393445d4fb849e0571bc2848cf039665d130308fb758592",
+      "displayed_pdf_sha256": "d1ae12ce29d114af1b23e1f2038bad3955d1f5b94d71fb08b77e1b72f4dab43d",
+      "prior_source_sha256": "b55aa3bc2a73fc8a18956b04c41d7392c6f9b918a142a690e82540aabfaf02be",
+      "prior_pdf_sha256": "6faf872da7a7cc216ea05846a3bbc454f07308f50bcc3d5f88dc9fd7b53fd88a",
+      "prior_release_binding_sha256": "c417837cce8192d9ea6fe1643702eea24c9e37f6a466d7ff55fb014a72c32747",
+      "previous_bound_mapping_sha256": "96786718a34cd99a3ea088866bc39993358b2794d1ef355ba5c6ecbfb1a7c86d",
+      "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+      "pending_statement_ids": [
+        "det:time",
+        "thm:quantitative",
+        "thm:time-tradeoff"
+      ],
+      "unchanged_formal_statements": 66,
+      "unchanged_proof_bodies": 53,
+      "new_lean_build_performed": false,
+      "proof_sources_unchanged": true,
+      "correspondence_review_sha256": "b4a910645b754d8ffe0f6e7341c3fcfdf4fc5423fa1c6d0ac316f75da75882ce"
+    },
+    {
+      "kind": "Author manuscript and consistent local result names",
+      "displayed_source_sha256": "d990fb9f07dd8cbec636a484cd43d63b8263c2950a4a431e73310282d3184fdf",
+      "displayed_pdf_sha256": "288697f9a64ed3caf43eb164ae249f94a4c0e5432f8ad7ba0e67de4bacb521b9",
+      "prior_source_sha256": "a598f87d665345584393445d4fb849e0571bc2848cf039665d130308fb758592",
+      "prior_pdf_sha256": "d1ae12ce29d114af1b23e1f2038bad3955d1f5b94d71fb08b77e1b72f4dab43d",
+      "prior_release_binding_sha256": "192e58e1b2f7a67465812dcae790c9dbd179b1b8e1ced684965cf422dbbaa780",
+      "previous_bound_mapping_sha256": "471682dafdc5b2fd6c5ec3fa63deb63164c16a8f85e5352be59e0e3ac8bba01d",
+      "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+      "pending_statement_ids": [
+        "det:time",
+        "thm:quantitative",
+        "thm:time-tradeoff"
+      ],
+      "unchanged_formal_bodies": 64,
+      "restricted_rank_premise_ids": [
+        "thm:compression",
+        "thm:rank-count"
+      ],
+      "names_derived_from_manuscript": true,
+      "human_proof_text": "Author removed three proofs and revised two; remaining 48 are unchanged.",
+      "new_lean_build_performed": false,
+      "proof_sources_unchanged": true,
+      "correspondence_review_sha256": "948a3fb986e5541ff1f665e32b67548be6ad5d76dc91b13b6ce9279a580d1b5a"
+    },
+    {
+      "kind": "Exact Overleaf restoration; preceding citation-name edit reverted",
+      "displayed_source_sha256": "f130159f0f15e5049f56c51c8d5ee17365cf2cb4b2902f8982531cc106095ded",
+      "displayed_pdf_sha256": "7d2a61d14c45ebac2a9d00f963a299b66814daa16764fa86b67c18ece2f23c9f",
+      "attachment_copied_byte_for_byte": true,
+      "prior_release_binding_sha256": "90d2d63969701cc95cf692c3f2ea4f54623663b6e8470a1521fc366559d85b60",
+      "previous_bound_mapping_sha256": "61613e0993ff792a9aa5d8fb5a8a887abf781456a72950d51c7a6eea3438b6fd",
+      "restored_name_mapping_sha256": "471682dafdc5b2fd6c5ec3fa63deb63164c16a8f85e5352be59e0e3ac8bba01d",
+      "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+      "pending_statement_ids": [
+        "det:time",
+        "thm:quantitative",
+        "thm:time-tradeoff"
+      ],
+      "unchanged_formal_bodies": 66,
+      "unchanged_proof_bodies": 50,
+      "new_lean_build_performed": false,
+      "proof_sources_unchanged": true,
+      "correspondence_review_sha256": "d66e8adcda1b9881cc573b0b1ba991bb85572fc200d9d7cba7382ffd6e55a5d3"
+    }
+  ],
+  "inherited_checked_build": {
+    "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+    "canonical_checked_build_complete": true,
+    "public_package_replay_complete": false,
+    "checked_build_receipt_sha256": "03e34e74316fb9fe87192921e09898974fb2d5da1d12174726c5bdfc325d982d",
+    "checked_build_receipt_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/blob/bff03274f57796d986e788f95e0d553a71312936/PUBLISHED_CHECKED_BUILD.json",
+    "full_coverage_receipt_sha256": "a2abbf982816f953952c38c98471bc144724e62b935b2e4eddbf97621f22cfdb",
+    "source_manifest_sha256": "e7498396e21d0320d3fcdd1e024908a58633b72336a8a7b22bd665b7444ea077"
+  },
+  "inherited_lean_archive_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/archive/bff03274f57796d986e788f95e0d553a71312936.zip",
+  "historical_v43_presentation_amendment": {
+    "kind": "November 2 author manuscript and AI methodology; reviewed correspondence retained",
+    "displayed_source_sha256": "bfde23b90f50785939095a6d37b7b247965ee6c45beaca9011a8963dec3cc9d6",
+    "displayed_pdf_sha256": "c08e612406a4c9f33b763d21b6f7a455e7b950739b812d28346ac09a2e890a8b",
+    "prior_source_sha256": "f130159f0f15e5049f56c51c8d5ee17365cf2cb4b2902f8982531cc106095ded",
+    "prior_pdf_sha256": "7d2a61d14c45ebac2a9d00f963a299b66814daa16764fa86b67c18ece2f23c9f",
+    "prior_release_binding_sha256": "f6bb1d1eb954770de46b9de6eb1d9e228b85af4d90b4030101aa9cc7283e9300",
+    "previous_bound_mapping_sha256": "2bee40caf71e73c16f72400967dc20aa15df66e8cfd866afe39bbcc28aef0673",
+    "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+    "pending_statement_ids": [
+      "det:time",
+      "thm:quantitative",
+      "thm:time-tradeoff"
+    ],
+    "changed_statement_ids": [
+      "cl:bridge",
+      "cl:projection",
+      "cl:separation",
+      "cl:two-stream",
+      "def:alternating-table",
+      "def:amplification-parameters",
+      "def:exact-tuples",
+      "def:source-matrix",
+      "def:table-estimation",
+      "det:amplifier",
+      "det:conditioning",
+      "det:construction",
+      "det:exact",
+      "det:flat",
+      "det:rareboost",
+      "det:reduction",
+      "det:restore",
+      "det:suffix",
+      "lem:amplifier-rank",
+      "lem:full-schedule",
+      "lem:generated-schedule",
+      "lem:many-product-blocks",
+      "lem:pair-projections",
+      "lem:sample-access",
+      "lem:small-blocks",
+      "obs:representatives",
+      "prop:iteration",
+      "res:destinations",
+      "res:foreign",
+      "res:incoming",
+      "res:paired",
+      "src:gap-colouring",
+      "src:near-full",
+      "thm:amplifier",
+      "thm:compression",
+      "thm:time-tradeoff",
+      "thm:uniform-reduction",
+      "yao:lift",
+      "yao:model",
+      "yao:small-bias-escape"
+    ],
+    "unchanged_statement_count": 26,
+    "correspondence_review_sha256": "4f3392c5af2b1e33ed50fbd74452ae9f52a22d76ec8fe5e1ed05723553071107",
+    "new_lean_build_performed": false,
+    "proof_sources_unchanged": true,
+    "human_proof_text": "Author supplied broad exposition revisions; retained links concern the reviewed mathematical statements, not byte-identical proof text."
+  },
+  "final_source_admission_review": {
+    "path": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
+    "bytes": 28061,
+    "sha256": "0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522"
+  },
+  "source_body_transfer": [
+    {
+      "id": "thm:time-tradeoff",
+      "prior_statement_line": 3229,
+      "current_statement_line": 3228,
+      "statement_body_sha256": "cc4573ad4a6271168d1b8301ffd9ebc094192754349768edb491d8ee886a0d27",
+      "prior_explicit_proof": {
+        "line": 3258,
+        "end_line": 3280,
+        "body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514"
+      },
+      "current_explicit_proof": {
+        "line": 3257,
+        "end_line": 3279,
+        "body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514"
+      },
+      "statement_and_proof_identical": true
+    },
+    {
+      "id": "thm:quantitative",
+      "prior_statement_line": 337,
+      "current_statement_line": 337,
+      "statement_body_sha256": "84936c7e174ce17e6e9b638d8d9a591778e5d8f596b3982db3526888875ef461",
+      "prior_explicit_proof": {
+        "line": 3306,
+        "end_line": 3360,
+        "body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61"
+      },
+      "current_explicit_proof": {
+        "line": 3305,
+        "end_line": 3359,
+        "body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61"
+      },
+      "statement_and_proof_identical": true
+    },
+    {
+      "id": "det:time",
+      "prior_statement_line": 353,
+      "current_statement_line": 353,
+      "statement_body_sha256": "d0c87a834cf5ea4524924fff713b29616b0dd7e9e0053a8941ee583e63a526b8",
+      "prior_explicit_proof": {
+        "line": 2910,
+        "end_line": 2952,
+        "body_sha256": "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754"
+      },
+      "current_explicit_proof": {
+        "line": 2909,
+        "end_line": 2951,
+        "body_sha256": "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754"
+      },
+      "statement_and_proof_identical": true
+    }
+  ],
+  "historical_editorial_amendment": {
+    "kind": "weight explanations and uniform counting presentation",
+    "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+    "previous_displayed_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
+    "displayed_source_sha256": "3df3e5cd1030717f576262cd3ddce62d8b03608fb4df03b954bf9253d4238c52",
+    "previous_displayed_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
+    "displayed_pdf_sha256": "503ad21a1a2c385350697fef9655eb260db1f6966179952f72ba6d8932ebac10",
+    "prior_release_binding_sha256": "e2b34853617ec8fe6c9cf4c4a9b1dd5c86daf5d1081cec304f77c818b27f7275",
+    "prior_editorial_amendment": {
+      "kind": "single-passage editorial correction",
+      "code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+      "original_source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
+      "displayed_source_sha256": "c4afdb2ebb567370de65ce16f4252b8a6a166b0315e2b173f77ffcdf1b00321b",
+      "original_pdf_sha256": "b49fad853dad8567ca70bacf9763ca1afd1b8d9267eb36b566a6bf415b08a036",
+      "displayed_pdf_sha256": "08158bf055ca66f69748ab643845a89f19b79f23976338a4f2c471784fe2086e",
+      "old_text": "Hence the cutoff is effective and valid at every larger size. Every width is a power of two with exponent\n$O(L)$, which gives the stated bit complexity.",
+      "new_text": "Hence the cutoff is effective and valid at every larger size. All widths except $q_1=s-2$ are powers of two\nwith exponents $O(L)$; forming those powers and subtracting two from $s$ gives the stated bit complexity.",
+      "exact_replacement_verified": true,
+      "formal_statements_unchanged": true,
+      "correspondence_records_unchanged": true,
+      "proof_sources_unchanged": true,
+      "new_lean_build_performed": false,
+      "prior_release_binding_sha256": "747d758cf95d0a9ae72da426d8f94d571ce9f1c7744296176822b47bca8430b1",
+      "note": "The original checked-build and full-coverage receipts retain their original source identity. This exact editorial amendment connects that source to the displayed manuscript."
+    },
+    "manuscript_edit_receipts": {
+      "H4_CLARIFICATION.json": "324f74fb79b52fc039c888c62c8145714df79ca975175fbd390243575982fcd5",
+      "WEIGHT_CLARIFICATION.json": "cd569b6e4cca595e82ff7b2c3f24a2b9bed0238cc2df5be83bd04f8af69ed9dd"
+    },
+    "formal_statement_changes": {
+      "yao:small-bias-escape": "Uniform specialization of the prior arbitrary-weight lemma; numerical hypotheses and conclusion unchanged.",
+      "yao:array-list": "Equivalent formulation by fractions of equally counted labels.",
+      "yao:finite-field-list": "Equivalent formulation by fractions of equally counted labels."
+    },
+    "formal_statements_unchanged": false,
+    "unchanged_formal_statement_count": 63,
+    "unchanged_proof_count": 51,
+    "changed_proof": "yao:small-bias-escape",
+    "headline_results_unchanged": true,
+    "proof_sources_unchanged": true,
+    "provider_links_and_statuses_unchanged": true,
+    "new_lean_build_performed": false,
+    "correspondence_review": {
+      "yao:small-bias-escape": "no_short_lookup_v42 accepts arbitrary FiniteLaw; specialize to FiniteLaw.uniform. uniform_prob_finset identifies each retained weight with its label count divided by the original label count.",
+      "yao:array-list": "public_array_pattern already uses uniform Fin(R^2); public_array_label_shape retains every label, including duplicate arrays.",
+      "yao:finite-field-list": "finite_field_list provides a nonempty R^2 label carrier, the uniform pattern bound, and the stated polynomial output and runtime bounds."
+    },
+    "note": "The displayed statements use uniform label counts. The original checked-build and coverage receipts remain pinned to their original source; the existing broader or equivalent Lean statements support these presentation changes. No new proof build is claimed."
+  },
+  "editorial_transfer_review": {
+    "path": "release-evidence/64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d/EDITORIAL_TRANSFER.json",
+    "bytes": 17477,
+    "sha256": "64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d"
+  },
+  "input_mapping_sha256": "b22dd47ad0252b4d19e3aefe998abe36fcad7980a69b5346eb92a4a74d5beec2",
+  "paper_source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
+  "paper_pdf_sha256": "d0b16530da79432a56490994b15e725415082cd4bd93e9803e2c07e2adb7ed2d",
+  "mapping_sha256": "5ad10380889dfd8e6acc63bde5e1aa98144ca834b528e64e384958bfde328d07",
+  "pending": [],
+  "mode": "reviewed mappings",
+  "module_count": 5249,
+  "declaration_count": 70746,
+  "compiler_index_count": 5249,
+  "missing_indexes": [],
+  "trace_issues": [],
+  "explanations_sha256": "68beb96702d838f2f73f7c80ab9fbf752d10e76d0466c3be4b9bad84210a572a",
+  "note": "Compiler reference arrows are source references, not kernel proof-term dependencies. Mapping status is supplied by the source-bound review; this website does not run Lean."
+}

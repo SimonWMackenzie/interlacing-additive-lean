@@ -373,11 +373,10 @@ The proofs of \cref{intro:deterministic,det:time} appear in
 \subsection{Formal verification and proof dependencies}
 \label{sec:formal-verification}
 
-A companion Lean development provides machine-checked proofs for the
-constructions and hardness statements covered by its statement
-correspondence~\cite{interlacing2026lean}. Its formal statements use
-explicit interfaces for the cited source reductions and record their
-hypotheses.
+A companion Lean development provides machine-checked proofs of our
+constructions and their consequences for communication complexity and
+$3$-SAT running time~\cite{interlacing2026lean}. The formal statements
+retain explicit hypotheses for the cited source reductions.
 The public proof inspector~\cite{interlacing2026inspector} links manuscript
 statements to the corresponding Lean declarations and exposes their
 definitions and hypotheses. The repository~\cite{interlacing2026lean}
@@ -5420,16 +5419,13 @@ development: completing proof details, finding and checking further
 arguments, extending the results to strict alternation, simplifying the
 proofs, and formalizing them in Lean.
 
-We used a mixture of OpenAI GPT models through ChatGPT Pro and Codex,
-together with Anthropic's Claude models. We supplied existing manuscripts,
-specific mathematical questions, and proposed arguments, and used the
-models to develop proofs, compare them with the literature, search for
-counterexamples, and check correctness. GPT and Claude also helped refine
-the writing, remove unclear terminology, and improve the order and
-explanation of the proofs. Separate model calls and delegated agents
-reviewed proposed arguments and their assumptions. This mathematical and
-editorial work was followed by AI-assisted Lean formalization, with
-further corrections and clarifications made as formal checking progressed.
+We used OpenAI GPT models through ChatGPT Pro and Codex, together with
+Anthropic's Claude models, to develop and check arguments, search for
+counterexamples, and compare proposed proofs with the literature. GPT and
+Claude also helped refine the writing and simplify the proofs by removing
+redundant cases, combining shared arguments, and reducing parameter
+bookkeeping. The inputs to this work included the authors' manuscripts,
+specific mathematical questions, and proposed arguments.
 
 The final sparsification approach was developed with AI assistance,
 including the connection to rank-sensitive counting: bounding the number
@@ -5444,37 +5440,23 @@ to the authors' sparsification objective and develop their application to
 the reduction. The contribution here is their use to retain the required
 communication lower bound in a much smaller table.
 
-ChatGPT Pro contributed substantive proposals for amplification followed
-by one final sampling step, and later for the bounded-independence and
-conditioning arguments used to keep explicit input lists small throughout
-the deterministic construction. AI assistance also helped develop the
-separate construction for strictly alternating protocols, including the
-application of the classical small-bias construction of Alon, Goldreich,
-H{\aa}stad and Peralta~\cite{alon1992smallbias}. Codex helped reconstruct
-and integrate these proposals, complete their supporting arguments, and
-check the parameter choices and running-time bounds. Claude contributed
-mathematical and editorial review. AI-assisted revisions also made proofs
-more direct by removing redundant coordinates and cases, combining shared
-arguments, replacing elaborate steps with elementary ones, and reducing
-parameter bookkeeping.
+AI assistance also contributed to amplification followed by a final
+sampling step, to the bounded-independence and conditioning arguments
+that keep the deterministic construction small, and to the separate
+construction for strictly alternating protocols. The latter uses the
+classical small-bias construction of Alon, Goldreich, H{\aa}stad and
+Peralta~\cite{alon1992smallbias}. ChatGPT Pro supplied substantive
+mathematical proposals; Codex helped complete their proofs and check the
+parameter choices and running-time bounds; Claude contributed
+mathematical and editorial review.
 
-Codex and Claude helped translate the arguments into precise Lean
-statements, implement proofs, and resolve compiler errors. For the
-running-time results, Codex implemented the SAT algorithms and proved
-their correctness, success probabilities, and time bounds. Separate
-agents reviewed the statements, proofs, and their correspondence with
-the manuscript before integration. The integrated development was
-compiled and its dependencies audited for unintended assumptions.
-Lean's kernel checked the formal proofs; model agreement and finite
-computational checks served as aids during development.
-
-The companion repository and proof
-inspector~\cite{interlacing2026lean,interlacing2026inspector} record the
-checked statements, their assumptions, and their correspondence with
-this version of the manuscript. The checked proofs include the general
-running-time implication in \cref{thm:time-tradeoff} and its quantitative
-corollaries, \cref{thm:quantitative,det:time}. The formal statements retain
-explicit hypotheses for the cited source reductions. The authors retain
+The mathematical and editorial work was followed by AI-assisted
+formalization in Lean. The companion repository~\cite{interlacing2026lean}
+provides the machine-checked statements and proofs, together with build
+instructions. The interactive proof inspector~\cite{interlacing2026inspector}
+connects the manuscript to those proofs and lets readers examine their
+definitions, hypotheses, and dependencies. Cited source reductions remain
+explicit hypotheses of the formal statements. The authors retain
 responsibility for the mathematical claims, the use and attribution of
 prior work, and the final text.
 

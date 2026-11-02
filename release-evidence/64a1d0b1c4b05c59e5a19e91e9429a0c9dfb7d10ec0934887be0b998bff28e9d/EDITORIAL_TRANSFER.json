@@ -1,0 +1,467 @@
+{
+  "date": "2026-11-02",
+  "reviewer": "/root/refresh_disclosure_release",
+  "prior_source_sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
+  "source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
+  "pdf_sha256": "d0b16530da79432a56490994b15e725415082cd4bd93e9803e2c07e2adb7ed2d",
+  "prior_source_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/blob/bf1060206d8c672521853a88ee23696219ab49a5/manuscript-v43/source/main.tex",
+  "formal_statements_unchanged": true,
+  "proof_blocks_unchanged": true,
+  "figures_unchanged": true,
+  "bibliography_unchanged": true,
+  "disclosure_only": true,
+  "formal_statement_count": 66,
+  "proof_count": 50,
+  "figure_count": 5,
+  "scope": "Only the introductory formal-verification paragraph and final AI methodology section changed. All statement and proof bodies and figures are identical to the accepted source. This review transfers existing accepted correspondence across those editorial changes; it does not claim a new mathematical proof review or Lean build.",
+  "statement_anchor_transfer": [
+    {
+      "id": "intro:deterministic",
+      "body_sha256": "907157068fcb012dda6e441fa6eecc74df33fabec33249259d27c4a38af51d9a",
+      "prior_line": 278,
+      "current_line": 278
+    },
+    {
+      "id": "yao:main",
+      "body_sha256": "9c10a4acf5558f7da6cd49883620cc423361f2325aab52d9f2cae8600985054c",
+      "prior_line": 294,
+      "current_line": 294
+    },
+    {
+      "id": "yao:bpp",
+      "body_sha256": "6a35253e7aa6960de6c694a38f8adfd09443b42c9ce55ccbabd5cb4bcc1536a5",
+      "prior_line": 315,
+      "current_line": 315
+    },
+    {
+      "id": "thm:quantitative",
+      "body_sha256": "84936c7e174ce17e6e9b638d8d9a591778e5d8f596b3982db3526888875ef461",
+      "prior_line": 337,
+      "current_line": 337
+    },
+    {
+      "id": "det:time",
+      "body_sha256": "d0c87a834cf5ea4524924fff713b29616b0dd7e9e0053a8941ee583e63a526b8",
+      "prior_line": 353,
+      "current_line": 353
+    },
+    {
+      "id": "def:table-estimation",
+      "body_sha256": "900fa3e4167ba0335386fa5d8aa9b4b49a27529b8b29a72388b27b12c217e33e",
+      "prior_line": 997,
+      "current_line": 996
+    },
+    {
+      "id": "yao:model",
+      "body_sha256": "49d9dbb403fe067c0449cae5e5786fee90e3331065396858843d1ecf85fb0c78",
+      "prior_line": 1018,
+      "current_line": 1017
+    },
+    {
+      "id": "def:interlace",
+      "body_sha256": "0eb83071459a1f7529d4364027750f52d33224a419a782621237fb06459b95e0",
+      "prior_line": 1121,
+      "current_line": 1120
+    },
+    {
+      "id": "def:exact-tuples",
+      "body_sha256": "c459ea01ad50609ac458e8cc3c5042c0ad20bf6f00298791fbd300c0f72e59b3",
+      "prior_line": 1215,
+      "current_line": 1214
+    },
+    {
+      "id": "obs:representatives",
+      "body_sha256": "b776a9e41c0a1548c2d9863916cd78548010cd2490415b0a21840f47e04e7479",
+      "prior_line": 1243,
+      "current_line": 1242
+    },
+    {
+      "id": "def:profile",
+      "body_sha256": "d632135b76607753101ca20edcca170e3bb395fbb523081820814bae9c0ff973",
+      "prior_line": 1276,
+      "current_line": 1275
+    },
+    {
+      "id": "src:gap-colouring",
+      "body_sha256": "c526013bc7b3cb1f861023d52221744c370add355c96c231bc23392689a57ef9",
+      "prior_line": 1297,
+      "current_line": 1296
+    },
+    {
+      "id": "thm:amplifier",
+      "body_sha256": "93ffd5c186cbd000c23c3c3a2a6df8d12daed13ca814235c5e74a68fedfb792c",
+      "prior_line": 1328,
+      "current_line": 1327
+    },
+    {
+      "id": "cl:seed",
+      "body_sha256": "8ede631e9c9467e24ff3b133e7dd882134003a4609de6a26aa459d2f2980b456",
+      "prior_line": 1366,
+      "current_line": 1365
+    },
+    {
+      "id": "prop:iteration",
+      "body_sha256": "747d7d67d846de9f6ac971a51ddacb2b6418faa33f40d49af0b8380598b617d7",
+      "prior_line": 1379,
+      "current_line": 1378
+    },
+    {
+      "id": "def:amplification-parameters",
+      "body_sha256": "e9a9f0518f45cd277e26f3233788513e8927920c4fadfce24c21fe0b276120f9",
+      "prior_line": 1422,
+      "current_line": 1421
+    },
+    {
+      "id": "def:source-matrix",
+      "body_sha256": "98f0bcc5dbaea19098040bbfa3339e2950f0155051da10e672cd9408c338af64",
+      "prior_line": 1467,
+      "current_line": 1466
+    },
+    {
+      "id": "src:item-witness",
+      "body_sha256": "c0013d7ae6c78e6bc96b7e7a1f9b307fea29a03d531c45ea3795c989b723aeea",
+      "prior_line": 1714,
+      "current_line": 1713
+    },
+    {
+      "id": "src:upper",
+      "body_sha256": "4976c6e68016ad20474081d56c3e13a104e4b285c944b336b258cd5b2d91a1a1",
+      "prior_line": 1731,
+      "current_line": 1730
+    },
+    {
+      "id": "lem:many-product-blocks",
+      "body_sha256": "2f742cc51003c03a5ab0459d85269beec7b0ada2ae77ed99cc7d49cc7015f9b8",
+      "prior_line": 1823,
+      "current_line": 1822
+    },
+    {
+      "id": "src:profiles",
+      "body_sha256": "cc86697ec20cbbbe9aae49481a307058ce79e514ae54cefe22bd5ba1d630c64a",
+      "prior_line": 1838,
+      "current_line": 1837
+    },
+    {
+      "id": "lem:kraft-count",
+      "body_sha256": "04df92c4177332f24743b0119449ae2a0a1fd162dcea2fbf5aa206d90a5afd02",
+      "prior_line": 1865,
+      "current_line": 1864
+    },
+    {
+      "id": "lem:collision-tracking",
+      "body_sha256": "6555a5667c2ac46fae31331339a5d911970ced4b58c1e40c3ed129c1a662c530",
+      "prior_line": 1893,
+      "current_line": 1892
+    },
+    {
+      "id": "src:near-full",
+      "body_sha256": "6b5ec09378669a6b31f2a807a5fed0ad7ac7111ff95e53e31b10cf8b881d19b8",
+      "prior_line": 1932,
+      "current_line": 1931
+    },
+    {
+      "id": "det:conditioning",
+      "body_sha256": "55edc67816723f537c0a0182683be80d06f6005ea88d3f291f25afb31b1ce41b",
+      "prior_line": 2097,
+      "current_line": 2096
+    },
+    {
+      "id": "det:exact",
+      "body_sha256": "0e071b253c0988e3eb33a7c7f5e546043dba0965623910b0b04935ddc4ff4efe",
+      "prior_line": 2131,
+      "current_line": 2130
+    },
+    {
+      "id": "det:rareboost",
+      "body_sha256": "886cdf28922acd51fbdf723dd327a9fe04913d687bc18320f24eb0276e672b60",
+      "prior_line": 2144,
+      "current_line": 2143
+    },
+    {
+      "id": "res:destinations",
+      "body_sha256": "3fe46176ac1b839d4aaa3bb5e8a984d90ef0b79dccf5596a9db5cc2bf14b8da2",
+      "prior_line": 2219,
+      "current_line": 2218
+    },
+    {
+      "id": "res:incoming",
+      "body_sha256": "00257ae89e87b22f863dbfa7f2005436d98320109e3120c8d85e53ecfa0b195b",
+      "prior_line": 2299,
+      "current_line": 2298
+    },
+    {
+      "id": "res:foreign",
+      "body_sha256": "f997bf907fec76de37bcd1cf92f6848430ac3618948c2e799f4757528a4419fa",
+      "prior_line": 2307,
+      "current_line": 2306
+    },
+    {
+      "id": "res:alignment",
+      "body_sha256": "95b145515dcb751061e26e2e35767dc5562f5185206cb60376cd59eb3ae544db",
+      "prior_line": 2370,
+      "current_line": 2369
+    },
+    {
+      "id": "cl:bridge",
+      "body_sha256": "c7865010b31fdb92df34543269cde7b1314fdede29d5492b47e66af2e287cc28",
+      "prior_line": 2460,
+      "current_line": 2459
+    },
+    {
+      "id": "lem:amplifier-rank",
+      "body_sha256": "21b02d609c04a1e07b8d5df866e2f95cd5c25920da8885de7f01794d633723c7",
+      "prior_line": 2478,
+      "current_line": 2477
+    },
+    {
+      "id": "det:code",
+      "body_sha256": "73ab588ac5415a97c6bfbb2ef866b7fa9d8e246917cd11a16ae53104a92efee8",
+      "prior_line": 2581,
+      "current_line": 2580
+    },
+    {
+      "id": "det:restore",
+      "body_sha256": "7618f1fb6f5d447548887fc76533242bfbe1af71013a08bd8c5fbb2d4b3e3b19",
+      "prior_line": 2603,
+      "current_line": 2602
+    },
+    {
+      "id": "det:amplifier",
+      "body_sha256": "4a1e437b40f599400f3abce901d25b9d306016f28856787b9618d56facfec650",
+      "prior_line": 2704,
+      "current_line": 2703
+    },
+    {
+      "id": "det:flat",
+      "body_sha256": "0b1192c369962cb6d042e4ad0e242307143979e645a6a3e8ae204c57d42bda46",
+      "prior_line": 2729,
+      "current_line": 2728
+    },
+    {
+      "id": "det:construction",
+      "body_sha256": "a9ef72eac17cab61304e1923e5612940060796bd635f06559995672d925e1788",
+      "prior_line": 2750,
+      "current_line": 2749
+    },
+    {
+      "id": "det:reduction",
+      "body_sha256": "e8767f0b21ef9ea19a581617a5cbd1fbae6459d10770e959bfa710dc49f48e59",
+      "prior_line": 2835,
+      "current_line": 2834
+    },
+    {
+      "id": "def:compatibility",
+      "body_sha256": "a561a6c864de61a7fc311f58060c99835498d95031c8c37c1809d3bc3649058f",
+      "prior_line": 2973,
+      "current_line": 2972
+    },
+    {
+      "id": "obs:compatible-protocol",
+      "body_sha256": "5ba9ad3ec793ed43c37630bd9a4d12f7fa05bf6faf02d9ae17718e67d36ccebf",
+      "prior_line": 2982,
+      "current_line": 2981
+    },
+    {
+      "id": "thm:rank-count",
+      "body_sha256": "dad0cf07a81b79bb2e4ebb610bf7c15d5365a7801068d14a23c50b1a1179873d",
+      "prior_line": 3068,
+      "current_line": 3067
+    },
+    {
+      "id": "thm:compression",
+      "body_sha256": "ceae01e5ff8a13846664046a020f5531ca2d2661ee0369fe2911af25e5e4b19a",
+      "prior_line": 3093,
+      "current_line": 3092
+    },
+    {
+      "id": "lem:sample-access",
+      "body_sha256": "6bc63db6156302d20695a789f732188b441c3ff5ea6765a564e5f670520dcc12",
+      "prior_line": 3164,
+      "current_line": 3163
+    },
+    {
+      "id": "thm:uniform-reduction",
+      "body_sha256": "fdafdbf8e8e9cf29adaeaf134a0eb4be1ae8a53f472536d8d15e4825ec06f625",
+      "prior_line": 3181,
+      "current_line": 3180
+    },
+    {
+      "id": "thm:time-tradeoff",
+      "body_sha256": "cc4573ad4a6271168d1b8301ffd9ebc094192754349768edb491d8ee886a0d27",
+      "prior_line": 3229,
+      "current_line": 3228
+    },
+    {
+      "id": "yao:comparison",
+      "body_sha256": "914a314ff48c617d5027f73f3bf12f9e12393426cdf8b127a4826c63ae43081d",
+      "prior_line": 3383,
+      "current_line": 3382
+    },
+    {
+      "id": "yao:source",
+      "body_sha256": "72b98c79bb5d5a191e4e1c84b02cbb0724783c4986e8ff0ff8cf6f07a6546c52",
+      "prior_line": 3415,
+      "current_line": 3414
+    },
+    {
+      "id": "def:alternating-table",
+      "body_sha256": "2630d95fd08441494b7fb7fe69c2891416198941f8a2555f1c2ea986a49c6bfa",
+      "prior_line": 3438,
+      "current_line": 3437
+    },
+    {
+      "id": "prop:alternating-upper",
+      "body_sha256": "ecee1c1c1da7d893dfb8376209a6b4e327c61c61afda3cb83dae4e9928dbde6b",
+      "prior_line": 3533,
+      "current_line": 3532
+    },
+    {
+      "id": "yao:small-bias-escape",
+      "body_sha256": "31495fb586f2cd5928a3391082eb1de297f9685656df4577339c93d7582f134d",
+      "prior_line": 3608,
+      "current_line": 3607
+    },
+    {
+      "id": "yao:array-list",
+      "body_sha256": "1f7e1b899ddc663a1c2d6807036b5863a2925c261fda1d0fec2cd49350664128",
+      "prior_line": 3665,
+      "current_line": 3664
+    },
+    {
+      "id": "yao:lift",
+      "body_sha256": "672ea5d01a25f66072ddc474aea1f09c70884618aabf29f8ef46a5cd40fe2df3",
+      "prior_line": 3682,
+      "current_line": 3681
+    },
+    {
+      "id": "cl:projection",
+      "body_sha256": "b6b0015460fd3a75d5020aea9eae4ccb6bb00d9fe3744dc4b1dc12ef72199510",
+      "prior_line": 3824,
+      "current_line": 3823
+    },
+    {
+      "id": "lem:small-blocks",
+      "body_sha256": "913a43e2cbc61f104d6f708677f58f171316b0cdb8830bef1b34364bfdcd142f",
+      "prior_line": 3886,
+      "current_line": 3885
+    },
+    {
+      "id": "cl:separation",
+      "body_sha256": "1aa4f0a2edf866d43500883670c8fdf357f404c78b12157c42f0ca49b5ff9228",
+      "prior_line": 3937,
+      "current_line": 3936
+    },
+    {
+      "id": "cl:defect-induction",
+      "body_sha256": "8c95ab106979137aad994775a9a42535e5b40d97da1af0e685e041f0732bdf55",
+      "prior_line": 3988,
+      "current_line": 3987
+    },
+    {
+      "id": "res:paired",
+      "body_sha256": "97c68b75e7c6ee7fcb1d2d5982295ded30189c0514f93992c1184a7be4529324",
+      "prior_line": 4340,
+      "current_line": 4339
+    },
+    {
+      "id": "cl:two-stream",
+      "body_sha256": "47d16f3eec990deb5c8d2f5624249f3b2dd59f354af76326f40718be2be19063",
+      "prior_line": 4387,
+      "current_line": 4386
+    },
+    {
+      "id": "lem:conditioning-moment",
+      "body_sha256": "1a6bb18c6c93043727ff717eab7ab6b2e41adc598495da28b52aa24b871b5b5c",
+      "prior_line": 4629,
+      "current_line": 4628
+    },
+    {
+      "id": "lem:pair-projections",
+      "body_sha256": "af8db6a68d57b5b8f0938b409c62ee21f624c4fad0bdfd103a149cf369f1319c",
+      "prior_line": 4696,
+      "current_line": 4695
+    },
+    {
+      "id": "det:suffix",
+      "body_sha256": "395d91e49040b57782c64469e3e2cbba97d3f0f273009363eef88294e454b4d1",
+      "prior_line": 4785,
+      "current_line": 4784
+    },
+    {
+      "id": "lem:common-schedule",
+      "body_sha256": "67447057f663566ffb9bfef2f78fafc1cbc816aba4cdb76653af445903243158",
+      "prior_line": 5062,
+      "current_line": 5061
+    },
+    {
+      "id": "lem:full-schedule",
+      "body_sha256": "fd470a23656a3c545dd90bc57d0cbab5d53d8a4b173ee8a59e68378978bf597c",
+      "prior_line": 5158,
+      "current_line": 5157
+    },
+    {
+      "id": "lem:generated-schedule",
+      "body_sha256": "c46a8148e8a9b86681a48eddcae727c7d8769be6bf960ce8c150bbc76cc13173",
+      "prior_line": 5208,
+      "current_line": 5207
+    },
+    {
+      "id": "yao:finite-field-list",
+      "body_sha256": "2cee428c6c70858b62a66e877508e8eab43ec759d2f59d731447f217c800388d",
+      "prior_line": 5376,
+      "current_line": 5375
+    }
+  ],
+  "proof_body_sha256": [
+    "df6712db532dbf5b9a55e30611b2ab14f433d1c319d03eefa1a096b24593b77c",
+    "f495f9bdb5bbbe7d506414df39289550684b1b482cb639bbf2d5203e951d5da4",
+    "6dcfbda0bd0c0d05d1dfd2e83d9596a6cfec506fc19c3715a91b9f36eba68e07",
+    "0197aa654541f2d040124ed3ca3035bdd2483900997e2291f9636a743b54bbe8",
+    "edd7cf076cb6c8613087cce188fa5300c03c5b7830e890291390a62949a52aba",
+    "9cdd49b41d8270db226878846bd47706091c48de8337134183f138740351ffac",
+    "0637c2e6d60e196d75eaf79ffd29046fa9ee31e660cd3f6e864950c37fa4e442",
+    "e40add0c42c43bca8ae811e184c480d99f493d4e2d85d11eefc9f12806a1c00f",
+    "eac095b6c3f76cab998d41b79581880a06ce10b8c133318f6a8e294c6a3e2854",
+    "de87578d04b7ccc8a4c66b9753766a4b101ce0bb2ac990b8011d5e3ec71842d2",
+    "6fcd0351d541ac5407d26296e141ed60441cd207612187c7b2692429e3a41f9b",
+    "cefab95e915513b530c55a44341b34e2e06e80c72206de9283aeb63a2f4a787c",
+    "c8ce63a63a06b1b98b4dcea90a41b78602e476b2c66fdf25f042597baae1fc3f",
+    "3a03cf9e9eb27f2164c3de36807442a7ce8a044187cbf8e5a808cddf976c90f7",
+    "778f76ea588cb52bee38cf7907c62412a4f77499f3baa4b7514662b3572c6b78",
+    "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754",
+    "8a478f43e91e05f6b15137419324ca795cd1ab0b9022b25afe94a57c0f459455",
+    "b29bbd67bbf34fac38e317e3a72009c131ac43257001d4e2d924219c8ff06286",
+    "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514",
+    "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61",
+    "19b5169716e7d702e100bff0d3f4c57b18d55766e36d9d37db766120b836a606",
+    "7b03e34e018e9f120d3aedbd53f54cd134b3d46775b4f79b2db393ab0a9f560b",
+    "6fd10a2777b54627160accfa5d7eb6ebf48a0a14ae965663f05710e674247110",
+    "d49d358d17e825cbd17086386970068a297bcf25d15c8a19e49ce17faddd2ead",
+    "1724f886b14172db3fd3a82a7facce90ee50949aa906682cc883d224a48fca25",
+    "17c2658a48cd162c60fe32dd02cefe7477f7c98439b28b672c449b1f83f82195",
+    "a2a9b9d0727e10061b4d854123aebf06987c36ceaaaa0815ae36d5229b2e9454",
+    "09aacbc1e1448978552d00f4ebd4f1e074edf8eb573196bacb1ab8d93212a67f",
+    "c4630f448a67dbe5b64eb8fb7dbadf352e8b3eb3df211951fa5b1ad944de5dd1",
+    "31102a774db2024fffb73f8d278f8371582acbf73d4b607e12285c5571f2919b",
+    "f2f9d8368c76312e729ebfcd0d29feebb36171c853eb20fb3c0919680869d6c4",
+    "40f16294bcf909ce0930086044ab22991d972c00dab28331f0d34f6819ed53fc",
+    "69a55f8e08f0d3ad1c1136558a8637553f189b02c2ac84631914c7a90acb77ce",
+    "9408b9456f5805a70aa6764b41a61192c12a113af3bff35946263bbc8caffccf",
+    "171c3d1818eb0d533d3ab1d6145b0f78ae64827807f74516ef18d86971652e82",
+    "166a1e69fbb52c9bc1bf45143518ebe68cc1e0362b388e6d8273766cad20ffea",
+    "ca5bcc515f00a984f82e860c5651bc6aa254d439f3a66dd99f65c505c4d37872",
+    "90f622778338f84d705947f3718e2cfd7dca6ae303c4ea86ba03806d77635315",
+    "78697ede5705cf4836a634e8684003bc5ffab1e59e936782a4bc61b49347c0b4",
+    "7017400e27c98913082bcb55e18ebb2f97c391e3532c6d9b6e9295c4c7fbf65c",
+    "f1b207fe4492bc60e3b9b9f40140aaacfa610b8b5314eada390f45c8ecc4eb79",
+    "c8a8fd0478c4f4ed7c92d935844553876cf7792639d6361e08e43696de0bc6c5",
+    "d02627eb84782398c1780760bcd2edc501adef7e001dbbbfd3551c990f43dec8",
+    "e6b430fea9893dac9dbe2b925c60b45c6fe7022032b4f980a6d3d03477b42633",
+    "e82d2000a0e79e8106b2edddc2b3d15890a2f4dfc19f832c440220102fbdbba5",
+    "aec78bfca7ec75b006fa34ce5b8aec00fe392925f8874188f2f29919642cfe38",
+    "94de5964aeb0a80b4f842cb6d06b63e0cecc2348f52392910b7527628ae43e58",
+    "93cc6b2a05fdf8d24239948fc2dfba285083ed77c8aeb2da80f53c4b76fd42d1",
+    "a5c9678a39c898793db4796a6349ed814f34eeb9022ebfaf91e940f870094322",
+    "ce8d1e840e0ef3ec1309a7c248781168476ff9a01bdaa2705e1f7f7a816ad4b7"
+  ]
+}

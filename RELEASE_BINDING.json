@@ -6,10 +6,10 @@
       "original_path": "manuscript-v43/V43_STATEMENT_MAP.json",
       "evidence_id": "manuscript-v43/V43_STATEMENT_MAP.json",
       "release_path": "manuscript-v43/V43_STATEMENT_MAP.json",
-      "sha256": "e9d0ce896166f4e58c78072a77a0bf676718474c9363b71ba57971055addb119",
-      "original_bytes": 1871352,
-      "public_sha256": "2524b82a115eda1262b9ae3ccb7a8d0d02116afd1a06fb68764cf50cc817dbda",
-      "public_bytes": 1742207,
+      "sha256": "55db75a9971ca50bc4cb56a5091cb57619953bc9f6838ec0e0d1f997f3db0fe2",
+      "original_bytes": 1894966,
+      "public_sha256": "e6dd7866dd005279288c91bc0217613a0e49399f90061c136d0fbcc68ebc9e1f",
+      "public_bytes": 1763166,
       "projection": "path_only_public_projection",
       "original_path_sha256": "d07b4ddcabc34431c193d6d5f00cf9fc8d501ed52460389cf489a77042236852"
     },
@@ -17,10 +17,10 @@
       "original_path": "FULL_COVERAGE_RECEIPT.json",
       "evidence_id": "FULL_COVERAGE_RECEIPT.json",
       "release_path": "FULL_COVERAGE_RECEIPT.json",
-      "sha256": "a0c29d23899e5b40b45764946e3d4f3219986e880039f68395f3423427cb65de",
-      "original_bytes": 4329,
-      "public_sha256": "19eaf8a3d5da916ed92a8fe3367a7183e6ea8efb26623414669993f2d179ba02",
-      "public_bytes": 4273,
+      "sha256": "f7180c07eb5eda28b4904b275d9ab31d5f9b14ca4e82f089cfecbf509e3b6cbe",
+      "original_bytes": 6301,
+      "public_sha256": "283285509c512efc1c5daf05692abe3dc2e4660decc8aae1121246ea6e3262c4",
+      "public_bytes": 6023,
       "projection": "path_only_public_projection",
       "original_path_sha256": "3dd3a0e2ce194202352ba78d0cb48478a89798cff8b89efc67a069eb33cf1ae2"
     },
@@ -67,6 +67,17 @@
       "public_bytes": 780,
       "projection": "path_only_public_projection",
       "original_path_sha256": "00e26df40720c027d80387e46fe48ddb89e97cd13fa18f2b41adb4f4599072c8"
+    },
+    {
+      "original_path": "release-evidence/64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d/EDITORIAL_TRANSFER.json",
+      "evidence_id": "release-evidence/64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d/EDITORIAL_TRANSFER.json",
+      "release_path": "release-evidence/64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d/EDITORIAL_TRANSFER.json",
+      "sha256": "64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d",
+      "original_bytes": 17477,
+      "public_sha256": "64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d",
+      "public_bytes": 17477,
+      "projection": "identity",
+      "original_path_sha256": "206c90a8f34444bbdedc9f1e1d3bae6c59773a7fcbbcedcbc6978f75cbd8b750"
     },
     {
       "original_path": "release-evidence/4e5c4e483a4b2906865825afc0055ddad34be1d3d44d6a72f929780dee52396c/CURRENT_IMPORT_CLOSURE_161.json",
@@ -177,6 +188,17 @@
       "public_bytes": 4258,
       "projection": "path_only_public_projection",
       "original_path_sha256": "80ee8e6ac7d821d8101d7c3d189213eb5a0a142f95401d6fdbdfa290c570f679"
+    },
+    {
+      "original_path": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
+      "evidence_id": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
+      "release_path": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
+      "sha256": "0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522",
+      "original_bytes": 28061,
+      "public_sha256": "c84f66650b429aa232a9b1f04563aefcadede7f17d60ecc4998050ab0814cb30",
+      "public_bytes": 27488,
+      "projection": "path_only_public_projection",
+      "original_path_sha256": "2546744bd5a0222865d27f1e07522d601c5016eb4e214f8b23b1d4e34f93e66e"
     },
     {
       "original_path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
@@ -539,7 +561,7 @@
       "public_sha256": "3b3120de46b664a7684de2044f10a04d3091d067ebd501699be9f7a99686c865",
       "public_bytes": 352,
       "projection": "identity",
-      "original_path_sha256": "84e3df31a7e004650adc53ce62327f9444a71c63fd58a998f46c95fdf81d97a9"
+      "original_path_sha256": "6269fa289cbd17be289619e83ce1ae47e72c86b098f8bafbf1f69ddf8b329028"
     },
     {
       "original_path": "release-evidence/3a6d178ca7460ff560072959097dcb3e1d8ada24fb401e2e7a2875b0f913ff24/ADMISSION_REVIEW.json",
@@ -776,10 +798,10 @@
       "original_path": "manuscript-v43/INSPECTOR_STATEMENTS.json",
       "evidence_id": "manuscript-v43/INSPECTOR_STATEMENTS.json",
       "release_path": "manuscript-v43/INSPECTOR_STATEMENTS.json",
-      "sha256": "a2e6806a06d4492d3277be97c9531e9782e11c2d7e1b76793f55f5f9699f459a",
-      "original_bytes": 396579,
-      "public_sha256": "d343fc0fa5619ed984d8e8b06c9f638127492a6a6c6797f61e1ef611895e0b63",
-      "public_bytes": 392613,
+      "sha256": "0f2e9b850c1c8e2eee5a1b83e427057691ab1fb5c712d05447efdff84340e85c",
+      "original_bytes": 396954,
+      "public_sha256": "b22dd47ad0252b4d19e3aefe998abe36fcad7980a69b5346eb92a4a74d5beec2",
+      "public_bytes": 392892,
       "projection": "path_only_public_projection",
       "original_path_sha256": "ddfbeae8652de22a672a06a852e8e5155d2c3da81c576c70a2c95b18326894c3"
     },
@@ -787,9 +809,9 @@
       "original_path": "manuscript-v43/SELECTED_STATEMENTS.v43.json",
       "evidence_id": "manuscript-v43/SELECTED_STATEMENTS.v43.json",
       "release_path": "manuscript-v43/SELECTED_STATEMENTS.v43.json",
-      "sha256": "ab28c47a5c378ae1febfbfd352d776491f55cd7efabd3a6489cda209898caeea",
+      "sha256": "42022bd6c71ceb8f4bf3edd1bbd5b5d76c049013e71946d94c91119b1ad92261",
       "original_bytes": 44271,
-      "public_sha256": "ab28c47a5c378ae1febfbfd352d776491f55cd7efabd3a6489cda209898caeea",
+      "public_sha256": "42022bd6c71ceb8f4bf3edd1bbd5b5d76c049013e71946d94c91119b1ad92261",
       "public_bytes": 44271,
       "projection": "identity",
       "original_path_sha256": "6cf7139b897286148b57da68262d75b40dfb27258a1bef0db99eb0245afc7a60"
@@ -798,18 +820,18 @@
       "original_path": "manuscript-v43/SOURCE_LOCK.json",
       "evidence_id": "manuscript-v43/SOURCE_LOCK.json",
       "release_path": "manuscript-v43/SOURCE_LOCK.json",
-      "sha256": "314fd4bab29dc0f102d1e71737821fe9b6d4fca6f62e7b291d84af38f9d9fde8",
-      "original_bytes": 8468,
-      "public_sha256": "fbbfaacba2850e7f85882763a4c859bc51059270e330e8512e533184571d3eeb",
-      "public_bytes": 8547,
+      "sha256": "7945e80332284984f8a4b20f35c56a05c4a7f7a817d6388fc7f7c35c176c0667",
+      "original_bytes": 9043,
+      "public_sha256": "e89ff6ec2029eb286b2524c982a562b5cb6be5c84f7722761bce0adf12d84bf4",
+      "public_bytes": 9028,
       "projection": "path_only_public_projection",
       "original_path_sha256": "106a062d8c5a6c4184d555a35997929d1eb7f8be9f9511cecbfa683e56dd96ee"
     },
     {
       "original_path": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
       "release_path": "manuscript-v43/source/main.tex",
-      "sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
-      "public_sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
+      "sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
+      "public_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
       "evidence_id": "papers/randomized-additive-hardness/versions/v43/source/main.tex"
     },
     {
@@ -822,15 +844,15 @@
     {
       "original_path": "papers/randomized-additive-hardness/versions/v43/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf",
       "release_path": "manuscript-v43/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf",
-      "sha256": "d41873487c67cfc37877216534a8721c4ed7fb64e23d5bd18a12509611255fb9",
-      "public_sha256": "d41873487c67cfc37877216534a8721c4ed7fb64e23d5bd18a12509611255fb9",
+      "sha256": "d0b16530da79432a56490994b15e725415082cd4bd93e9803e2c07e2adb7ed2d",
+      "public_sha256": "d0b16530da79432a56490994b15e725415082cd4bd93e9803e2c07e2adb7ed2d",
       "evidence_id": "papers/randomized-additive-hardness/versions/v43/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf"
     },
     {
       "original_path": "papers/randomized-additive-hardness/versions/v43/MANIFEST.json",
       "release_path": "manuscript-v43/MANIFEST.json",
-      "sha256": "d502361768054695261369b47698dd0f0959810e285112865e40055fa6828f0e",
-      "public_sha256": "d502361768054695261369b47698dd0f0959810e285112865e40055fa6828f0e",
+      "sha256": "dbede8a57021a145b52d71985bc8f32b24abdb5ab2d4f6dd4f72567ff2163658",
+      "public_sha256": "dbede8a57021a145b52d71985bc8f32b24abdb5ab2d4f6dd4f72567ff2163658",
       "evidence_id": "papers/randomized-additive-hardness/versions/v43/MANIFEST.json"
     },
     {

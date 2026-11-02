@@ -50910,8 +50910,8 @@
     },
     {
       "path": "FULL_COVERAGE_RECEIPT.json",
-      "sha256": "19eaf8a3d5da916ed92a8fe3367a7183e6ea8efb26623414669993f2d179ba02",
-      "bytes": 4273,
+      "sha256": "283285509c512efc1c5daf05692abe3dc2e4660decc8aae1121246ea6e3262c4",
+      "bytes": 6023,
       "role": "root_coverage_gate"
     },
     {
@@ -50928,8 +50928,8 @@
     },
     {
       "path": "RELEASE_BINDING.json",
-      "sha256": "6c7e3b7c86fe21a820e3826b75d8b43f0698d4ccd840b209c7ec38d6a490fc62",
-      "bytes": 80436,
+      "sha256": "03a448a17a8faa67992f290186652e12593165b921a0bde37ad90b518ebff23d",
+      "bytes": 82038,
       "role": "identity_binding"
     },
     {
@@ -51228,44 +51228,44 @@
     },
     {
       "path": "manuscript-v43/INSPECTOR_STATEMENTS.json",
-      "sha256": "d343fc0fa5619ed984d8e8b06c9f638127492a6a6c6797f61e1ef611895e0b63",
-      "bytes": 392613,
+      "sha256": "b22dd47ad0252b4d19e3aefe998abe36fcad7980a69b5346eb92a4a74d5beec2",
+      "bytes": 392892,
       "role": "inspector_navigation"
     },
     {
       "path": "manuscript-v43/MANIFEST.json",
-      "sha256": "d502361768054695261369b47698dd0f0959810e285112865e40055fa6828f0e",
+      "sha256": "dbede8a57021a145b52d71985bc8f32b24abdb5ab2d4f6dd4f72567ff2163658",
       "bytes": 739,
       "role": "v43_manuscript"
     },
     {
       "path": "manuscript-v43/SELECTED_STATEMENTS.v43.json",
-      "sha256": "ab28c47a5c378ae1febfbfd352d776491f55cd7efabd3a6489cda209898caeea",
+      "sha256": "42022bd6c71ceb8f4bf3edd1bbd5b5d76c049013e71946d94c91119b1ad92261",
       "bytes": 44271,
       "role": "source_statement_inventory"
     },
     {
       "path": "manuscript-v43/SOURCE_LOCK.json",
-      "sha256": "fbbfaacba2850e7f85882763a4c859bc51059270e330e8512e533184571d3eeb",
-      "bytes": 8547,
+      "sha256": "e89ff6ec2029eb286b2524c982a562b5cb6be5c84f7722761bce0adf12d84bf4",
+      "bytes": 9028,
       "role": "source_identity_lock"
     },
     {
       "path": "manuscript-v43/V43_STATEMENT_MAP.json",
-      "sha256": "2524b82a115eda1262b9ae3ccb7a8d0d02116afd1a06fb68764cf50cc817dbda",
-      "bytes": 1742207,
+      "sha256": "e6dd7866dd005279288c91bc0217613a0e49399f90061c136d0fbcc68ebc9e1f",
+      "bytes": 1763166,
       "role": "v43_correspondence"
     },
     {
       "path": "manuscript-v43/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf",
-      "sha256": "d41873487c67cfc37877216534a8721c4ed7fb64e23d5bd18a12509611255fb9",
-      "bytes": 1014404,
+      "sha256": "d0b16530da79432a56490994b15e725415082cd4bd93e9803e2c07e2adb7ed2d",
+      "bytes": 1012238,
       "role": "v43_manuscript"
     },
     {
       "path": "manuscript-v43/source/main.tex",
-      "sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
-      "bytes": 286206,
+      "sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
+      "bytes": 285085,
       "role": "v43_manuscript"
     },
     {
@@ -77747,6 +77747,12 @@
       "role": "release_tooling"
     },
     {
+      "path": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
+      "sha256": "c84f66650b429aa232a9b1f04563aefcadede7f17d60ecc4998050ab0814cb30",
+      "bytes": 27488,
+      "role": "review_evidence"
+    },
+    {
       "path": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
       "sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
       "bytes": 5564,
@@ -77966,6 +77972,12 @@
       "path": "release-evidence/634a1d6bd01750c3ca4b333350b56b752e60730ea6402ad6f76e8e16f5f5f20c/SOURCE_BLOCKS.json",
       "sha256": "634a1d6bd01750c3ca4b333350b56b752e60730ea6402ad6f76e8e16f5f5f20c",
       "bytes": 2788,
+      "role": "review_evidence"
+    },
+    {
+      "path": "release-evidence/64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d/EDITORIAL_TRANSFER.json",
+      "sha256": "64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d",
+      "bytes": 17477,
       "role": "review_evidence"
     },
     {

@@ -1,4 +1,4 @@
-Verified 5385 identity-pinned files, 5249 exact local modules, and {'source_blocks': 66, 'unnumbered_requirements': 8}.
+Verified 5387 identity-pinned files, 5249 exact local modules, and {'source_blocks': 66, 'unnumbered_requirements': 8}.
 Source identity and recorded correspondence do not replace the separately recorded build/audits or establish external source-interface fidelity.
 {
   "source_snapshot_sha256": "1e554f91d1c344f2aefa94e2d3691bd6112823230909e04b5415ca3db7b9cab1",
@@ -8,7 +8,7 @@ Source identity and recorded correspondence do not replace the separately record
   "prior_public_checked_build_sha256": "03e34e74316fb9fe87192921e09898974fb2d5da1d12174726c5bdfc325d982d",
   "historical_v40_fresh_replay_sha256": "90c8d3eaef3488bfffbe9a8d6e5c269ea08f1a583cdbadc4f03da4f988e8a261",
   "new_source_modules": 55,
-  "selected_source_lock_public_sha256": "fbbfaacba2850e7f85882763a4c859bc51059270e330e8512e533184571d3eeb",
+  "selected_source_lock_public_sha256": "e89ff6ec2029eb286b2524c982a562b5cb6be5c84f7722761bce0adf12d84bf4",
   "verification_tool_sha256": {
     "checked_build.py": "b1b94eabee31ab4b43c3a2e5f0623566b36be31670a99961394beab07609774c",
     "check_replay.py": "7a9ef2335842017bf36d2b70ed6c5768871493486b5cb9d1cad2b7529d15421d",

@@ -4,14 +4,14 @@
   "status": "complete_correspondence",
   "source": {
     "path": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-    "bytes": 286206,
-    "sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548"
+    "bytes": 285085,
+    "sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040"
   },
   "source_files": [
     {
       "path": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "bytes": 286206,
-      "sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548"
+      "bytes": 285085,
+      "sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040"
     },
     {
       "path": "papers/randomized-additive-hardness/versions/v43/source/references.bib",
@@ -21,8 +21,8 @@
   ],
   "pdf": {
     "path": "papers/randomized-additive-hardness/versions/v43/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf",
-    "bytes": 1014404,
-    "sha256": "d41873487c67cfc37877216534a8721c4ed7fb64e23d5bd18a12509611255fb9"
+    "bytes": 1012238,
+    "sha256": "d0b16530da79432a56490994b15e725415082cd4bd93e9803e2c07e2adb7ed2d"
   },
   "input_pins": [
     {
@@ -48,12 +48,12 @@
     {
       "path": "papers/randomized-additive-hardness/versions/v43/MANIFEST.json",
       "bytes": 739,
-      "sha256": "d502361768054695261369b47698dd0f0959810e285112865e40055fa6828f0e"
+      "sha256": "dbede8a57021a145b52d71985bc8f32b24abdb5ab2d4f6dd4f72567ff2163658"
     },
     {
       "path": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "bytes": 286206,
-      "sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548"
+      "bytes": 285085,
+      "sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040"
     },
     {
       "path": "lean-toolchain",
@@ -164,6 +164,16 @@
       "path": "private-provenance-refs/f3843426033fd876267264aada8521aeee7495ffe3d4e1d2133338d27c0ce888/prepare_final_admission.py",
       "bytes": 14176,
       "sha256": "dbb22a7030190a5c31fd94846aeedaddd88a8177d31ca10c6cd807d68d8eda94"
+    },
+    {
+      "path": "release-evidence/64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d/EDITORIAL_TRANSFER.json",
+      "bytes": 17477,
+      "sha256": "64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d"
+    },
+    {
+      "path": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
+      "bytes": 28061,
+      "sha256": "0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522"
     }
   ],
   "allowed_axioms": [
@@ -181,9 +191,9 @@
     "sha256": "4f3392c5af2b1e33ed50fbd74452ae9f52a22d76ec8fe5e1ed05723553071107"
   },
   "disclosure_review": {
-    "path": "release-evidence/6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50/DISCLOSURE_REVIEW_2026-11-02.json",
-    "bytes": 781,
-    "sha256": "6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50"
+    "path": "release-evidence/64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d/EDITORIAL_TRANSFER.json",
+    "bytes": 17477,
+    "sha256": "64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d"
   },
   "scope": "All current v43 statement and construction-component correspondence rows are accepted with exact source/provider/review identities. Runtime endpoints have fresh production CurrentV43 build authority; retained providers keep their original checked authority. External source interfaces remain explicit. This metadata is separate from the root full-coverage receipt, public-package checks and any cold replay."
 }

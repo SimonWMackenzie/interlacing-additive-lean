@@ -2,7 +2,7 @@
   "schema_version": 1,
   "version": "v43",
   "main": "main.tex",
-  "source_sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
+  "source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
   "active_source_files": [
     "main.tex"
   ],
@@ -92,8 +92,8 @@
       "environment": "definition",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 997,
-      "end_line": 1013,
+      "line": 996,
+      "end_line": 1012,
       "labels": [
         "def:table-estimation"
       ],
@@ -107,8 +107,8 @@
       "environment": "definition",
       "title": "Alternating costs",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1018,
-      "end_line": 1032,
+      "line": 1017,
+      "end_line": 1031,
       "labels": [
         "yao:model"
       ],
@@ -122,8 +122,8 @@
       "environment": "definition",
       "title": "Interlacing",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1121,
-      "end_line": 1131,
+      "line": 1120,
+      "end_line": 1130,
       "labels": [
         "def:interlace"
       ],
@@ -137,8 +137,8 @@
       "environment": "definition",
       "title": "Weighted lists of tuples",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1215,
-      "end_line": 1233,
+      "line": 1214,
+      "end_line": 1232,
       "labels": [
         "def:exact-tuples"
       ],
@@ -152,8 +152,8 @@
       "environment": "definition",
       "title": "Deletion bounds",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1276,
-      "end_line": 1288,
+      "line": 1275,
+      "end_line": 1287,
       "labels": [
         "def:profile"
       ],
@@ -167,8 +167,8 @@
       "environment": "theorem",
       "title": "Bounded-degree coloring source",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1297,
-      "end_line": 1312,
+      "line": 1296,
+      "end_line": 1311,
       "labels": [
         "src:gap-colouring"
       ],
@@ -182,8 +182,8 @@
       "environment": "theorem",
       "title": "Amplification under input deletion",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1328,
-      "end_line": 1352,
+      "line": 1327,
+      "end_line": 1351,
       "labels": [
         "thm:amplifier"
       ],
@@ -197,8 +197,8 @@
       "environment": "lemma",
       "title": "Initial matrix",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1366,
-      "end_line": 1375,
+      "line": 1365,
+      "end_line": 1374,
       "labels": [
         "cl:seed"
       ],
@@ -212,8 +212,8 @@
       "environment": "proposition",
       "title": "Iterated amplification",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1379,
-      "end_line": 1389,
+      "line": 1378,
+      "end_line": 1388,
       "labels": [
         "prop:iteration"
       ],
@@ -221,7 +221,7 @@
       "normalized_body_sha256": "ef4e7dd2bef213374334380a31b648dbd4612bee813b35c51611e67d3a4a7c2c",
       "following_proofs": [
         {
-          "line": 1390,
+          "line": 1389,
           "body_sha256": "df6712db532dbf5b9a55e30611b2ab14f433d1c319d03eefa1a096b24593b77c"
         }
       ]
@@ -232,8 +232,8 @@
       "environment": "definition",
       "title": "Amplification parameters",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1422,
-      "end_line": 1443,
+      "line": 1421,
+      "end_line": 1442,
       "labels": [
         "def:amplification-parameters"
       ],
@@ -247,8 +247,8 @@
       "environment": "definition",
       "title": "Source construction",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1467,
-      "end_line": 1576,
+      "line": 1466,
+      "end_line": 1575,
       "labels": [
         "def:source-matrix"
       ],
@@ -262,8 +262,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1714,
-      "end_line": 1725,
+      "line": 1713,
+      "end_line": 1724,
       "labels": [
         "src:item-witness"
       ],
@@ -277,8 +277,8 @@
       "environment": "proposition",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1731,
-      "end_line": 1736,
+      "line": 1730,
+      "end_line": 1735,
       "labels": [
         "src:upper"
       ],
@@ -286,11 +286,11 @@
       "normalized_body_sha256": "5fa23840a12ae8ff6efd0b5857fed44596a66a8cb42578be218c8164ccafe818",
       "following_proofs": [
         {
-          "line": 1738,
+          "line": 1737,
           "body_sha256": "f495f9bdb5bbbe7d506414df39289550684b1b482cb639bbf2d5203e951d5da4"
         },
         {
-          "line": 1777,
+          "line": 1776,
           "body_sha256": "6dcfbda0bd0c0d05d1dfd2e83d9596a6cfec506fc19c3715a91b9f36eba68e07"
         }
       ]
@@ -301,8 +301,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1823,
-      "end_line": 1829,
+      "line": 1822,
+      "end_line": 1828,
       "labels": [
         "lem:many-product-blocks"
       ],
@@ -316,8 +316,8 @@
       "environment": "lemma",
       "title": "Template-layer deletion bounds",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1838,
-      "end_line": 1855,
+      "line": 1837,
+      "end_line": 1854,
       "labels": [
         "src:profiles",
         "det:profiles"
@@ -332,8 +332,8 @@
       "environment": "lemma",
       "title": "Kraft count",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1865,
-      "end_line": 1872,
+      "line": 1864,
+      "end_line": 1871,
       "labels": [
         "lem:kraft-count"
       ],
@@ -341,7 +341,7 @@
       "normalized_body_sha256": "619ba68b1a11110206779d1a48dc8e07a49140e4e1bf50c987c5904086d5f907",
       "following_proofs": [
         {
-          "line": 1873,
+          "line": 1872,
           "body_sha256": "0197aa654541f2d040124ed3ca3035bdd2483900997e2291f9636a743b54bbe8"
         }
       ]
@@ -352,8 +352,8 @@
       "environment": "lemma",
       "title": "Following collision witnesses",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1893,
-      "end_line": 1912,
+      "line": 1892,
+      "end_line": 1911,
       "labels": [
         "lem:collision-tracking"
       ],
@@ -361,7 +361,7 @@
       "normalized_body_sha256": "ae3db9f5c4af78ddbb6a829d1aca9693c7bf3cc6e9f6e686692c7ae6d86fc1cc",
       "following_proofs": [
         {
-          "line": 1913,
+          "line": 1912,
           "body_sha256": "edd7cf076cb6c8613087cce188fa5300c03c5b7830e890291390a62949a52aba"
         }
       ]
@@ -372,8 +372,8 @@
       "environment": "theorem",
       "title": "Source hardness after deletion",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1932,
-      "end_line": 1945,
+      "line": 1931,
+      "end_line": 1944,
       "labels": [
         "src:near-full"
       ],
@@ -381,7 +381,7 @@
       "normalized_body_sha256": "d60b8dd0b1461c92465ae8281a900ff32319340fd9f2871ea1c169f5b1ad6722",
       "following_proofs": [
         {
-          "line": 1946,
+          "line": 1945,
           "body_sha256": "9cdd49b41d8270db226878846bd47706091c48de8337134183f138740351ffac"
         }
       ]
@@ -392,8 +392,8 @@
       "environment": "lemma",
       "title": "Conditioning outside exceptional coordinates",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2097,
-      "end_line": 2110,
+      "line": 2096,
+      "end_line": 2109,
       "labels": [
         "det:conditioning"
       ],
@@ -407,8 +407,8 @@
       "environment": "lemma",
       "title": "Surviving blocks in a tuple list",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2131,
-      "end_line": 2138,
+      "line": 2130,
+      "end_line": 2137,
       "labels": [
         "det:exact"
       ],
@@ -422,8 +422,8 @@
       "environment": "theorem",
       "title": "Surviving blocks after conditioning",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2144,
-      "end_line": 2152,
+      "line": 2143,
+      "end_line": 2151,
       "labels": [
         "det:rareboost"
       ],
@@ -437,8 +437,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2219,
-      "end_line": 2241,
+      "line": 2218,
+      "end_line": 2240,
       "labels": [
         "res:destinations"
       ],
@@ -446,7 +446,7 @@
       "normalized_body_sha256": "23b629965016d5eb1acbd527d1b6bb6424b00102e4b5d2825219db0fff3622b4",
       "following_proofs": [
         {
-          "line": 2242,
+          "line": 2241,
           "body_sha256": "0637c2e6d60e196d75eaf79ffd29046fa9ee31e660cd3f6e864950c37fa4e442"
         }
       ]
@@ -457,8 +457,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2299,
-      "end_line": 2305,
+      "line": 2298,
+      "end_line": 2304,
       "labels": [
         "res:incoming"
       ],
@@ -472,8 +472,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2307,
-      "end_line": 2316,
+      "line": 2306,
+      "end_line": 2315,
       "labels": [
         "res:foreign"
       ],
@@ -487,8 +487,8 @@
       "environment": "theorem",
       "title": "Lower bounds for $W$",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2370,
-      "end_line": 2377,
+      "line": 2369,
+      "end_line": 2376,
       "labels": [
         "res:alignment"
       ],
@@ -496,7 +496,7 @@
       "normalized_body_sha256": "3c1b7ee51ccfaf3aedc3d4f3d895f36e4f06aaac58e73690c1229d2974549d18",
       "following_proofs": [
         {
-          "line": 2378,
+          "line": 2377,
           "body_sha256": "e40add0c42c43bca8ae811e184c480d99f493d4e2d85d11eefc9f12806a1c00f"
         }
       ]
@@ -507,8 +507,8 @@
       "environment": "theorem",
       "title": "Restoring the deletion bounds",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2460,
-      "end_line": 2473,
+      "line": 2459,
+      "end_line": 2472,
       "labels": [
         "cl:bridge"
       ],
@@ -522,8 +522,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2478,
-      "end_line": 2484,
+      "line": 2477,
+      "end_line": 2483,
       "labels": [
         "lem:amplifier-rank"
       ],
@@ -531,11 +531,11 @@
       "normalized_body_sha256": "afee9d889c05b9e4e64cf4c5d4d1a07cbd10b19445dab5358d7e40bf8aff6fe7",
       "following_proofs": [
         {
-          "line": 2485,
+          "line": 2484,
           "body_sha256": "eac095b6c3f76cab998d41b79581880a06ce10b8c133318f6a8e294c6a3e2854"
         },
         {
-          "line": 2503,
+          "line": 2502,
           "body_sha256": "de87578d04b7ccc8a4c66b9753766a4b101ce0bb2ac990b8011d5e3ec71842d2"
         }
       ]
@@ -546,8 +546,8 @@
       "environment": "lemma",
       "title": "Small rational tuple lists",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2581,
-      "end_line": 2589,
+      "line": 2580,
+      "end_line": 2588,
       "labels": [
         "det:code"
       ],
@@ -561,8 +561,8 @@
       "environment": "theorem",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2603,
-      "end_line": 2623,
+      "line": 2602,
+      "end_line": 2622,
       "labels": [
         "det:restore"
       ],
@@ -570,7 +570,7 @@
       "normalized_body_sha256": "e75c732effecc4c26ebf0ad4d937c31e5482a03296b21872bcdb43a17280cb7b",
       "following_proofs": [
         {
-          "line": 2624,
+          "line": 2623,
           "body_sha256": "6fcd0351d541ac5407d26296e141ed60441cd207612187c7b2692429e3a41f9b"
         }
       ]
@@ -581,8 +581,8 @@
       "environment": "corollary",
       "title": "Explicit case",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2704,
-      "end_line": 2715,
+      "line": 2703,
+      "end_line": 2714,
       "labels": [
         "det:amplifier"
       ],
@@ -596,8 +596,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2729,
-      "end_line": 2738,
+      "line": 2728,
+      "end_line": 2737,
       "labels": [
         "det:flat"
       ],
@@ -605,7 +605,7 @@
       "normalized_body_sha256": "d60574ad43a68ea3e0b9c1d6cf2d4a103fc9d744acc1eaf917c2ea2e16d43cc4",
       "following_proofs": [
         {
-          "line": 2740,
+          "line": 2739,
           "body_sha256": "cefab95e915513b530c55a44341b34e2e06e80c72206de9283aeb63a2f4a787c"
         }
       ]
@@ -616,8 +616,8 @@
       "environment": "definition",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2750,
-      "end_line": 2801,
+      "line": 2749,
+      "end_line": 2800,
       "labels": [
         "det:construction"
       ],
@@ -625,7 +625,7 @@
       "normalized_body_sha256": "67fb9564046906dff4bee08fd861d47fabb83675b27a3d39b077fd133b9994eb",
       "following_proofs": [
         {
-          "line": 2818,
+          "line": 2817,
           "body_sha256": "c8ce63a63a06b1b98b4dcea90a41b78602e476b2c66fdf25f042597baae1fc3f"
         }
       ]
@@ -636,8 +636,8 @@
       "environment": "theorem",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2835,
-      "end_line": 2859,
+      "line": 2834,
+      "end_line": 2858,
       "labels": [
         "det:reduction"
       ],
@@ -645,15 +645,15 @@
       "normalized_body_sha256": "49f2d4564eb72cb44fcab9258257685ed27719d796d096150752ec7e2912a647",
       "following_proofs": [
         {
-          "line": 2861,
+          "line": 2860,
           "body_sha256": "3a03cf9e9eb27f2164c3de36807442a7ce8a044187cbf8e5a808cddf976c90f7"
         },
         {
-          "line": 2898,
+          "line": 2897,
           "body_sha256": "778f76ea588cb52bee38cf7907c62412a4f77499f3baa4b7514662b3572c6b78"
         },
         {
-          "line": 2910,
+          "line": 2909,
           "body_sha256": "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754"
         }
       ]
@@ -664,8 +664,8 @@
       "environment": "definition",
       "title": "Columns on which Bob can complete the protocol",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2973,
-      "end_line": 2980,
+      "line": 2972,
+      "end_line": 2979,
       "labels": [
         "def:compatibility"
       ],
@@ -679,8 +679,8 @@
       "environment": "theorem",
       "title": "Lemma~4.3 in \\cite{mackenzie2026condensation}",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3068,
-      "end_line": 3076,
+      "line": 3067,
+      "end_line": 3075,
       "labels": [
         "thm:rank-count",
         "eq:rank-count"
@@ -695,8 +695,8 @@
       "environment": "theorem",
       "title": "Sampling rows and columns",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3093,
-      "end_line": 3110,
+      "line": 3092,
+      "end_line": 3109,
       "labels": [
         "thm:compression"
       ],
@@ -704,7 +704,7 @@
       "normalized_body_sha256": "2bb9896907e81b9140c425637ef42bd3ba87d8d41c34b4f5eeacad3ec362cfc4",
       "following_proofs": [
         {
-          "line": 3111,
+          "line": 3110,
           "body_sha256": "8a478f43e91e05f6b15137419324ca795cd1ab0b9022b25afe94a57c0f459455"
         }
       ]
@@ -715,8 +715,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3164,
-      "end_line": 3172,
+      "line": 3163,
+      "end_line": 3171,
       "labels": [
         "lem:sample-access"
       ],
@@ -730,8 +730,8 @@
       "environment": "theorem",
       "title": "Randomized reduction",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3181,
-      "end_line": 3196,
+      "line": 3180,
+      "end_line": 3195,
       "labels": [
         "thm:uniform-reduction"
       ],
@@ -739,7 +739,7 @@
       "normalized_body_sha256": "aa4d7a480d72defde310acf1082a2a1ba1e02fd1a32a683d11e2f2a8b66de1dd",
       "following_proofs": [
         {
-          "line": 3198,
+          "line": 3197,
           "body_sha256": "b29bbd67bbf34fac38e317e3a72009c131ac43257001d4e2d924219c8ff06286"
         }
       ]
@@ -750,8 +750,8 @@
       "environment": "theorem",
       "title": "From approximation algorithms to $3$-SAT algorithms",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3229,
-      "end_line": 3256,
+      "line": 3228,
+      "end_line": 3255,
       "labels": [
         "thm:time-tradeoff"
       ],
@@ -759,11 +759,11 @@
       "normalized_body_sha256": "7a9499e39a98a88d6def90d78fcf703a8a643c395fdb4cbd55278bba84953893",
       "following_proofs": [
         {
-          "line": 3258,
+          "line": 3257,
           "body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514"
         },
         {
-          "line": 3306,
+          "line": 3305,
           "body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61"
         }
       ]
@@ -774,8 +774,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3383,
-      "end_line": 3390,
+      "line": 3382,
+      "end_line": 3389,
       "labels": [
         "yao:comparison"
       ],
@@ -783,7 +783,7 @@
       "normalized_body_sha256": "f1ec40a6304ab63dc4994f495ee6fbbfb34a50350bfd296572441d40ee3acd2f",
       "following_proofs": [
         {
-          "line": 3391,
+          "line": 3390,
           "body_sha256": "19b5169716e7d702e100bff0d3f4c57b18d55766e36d9d37db766120b836a606"
         }
       ]
@@ -794,8 +794,8 @@
       "environment": "proposition",
       "title": "Hypergraph coloring promise",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3415,
-      "end_line": 3428,
+      "line": 3414,
+      "end_line": 3427,
       "labels": [
         "yao:source"
       ],
@@ -809,8 +809,8 @@
       "environment": "definition",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3438,
-      "end_line": 3467,
+      "line": 3437,
+      "end_line": 3466,
       "labels": [
         "def:alternating-table"
       ],
@@ -824,8 +824,8 @@
       "environment": "proposition",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3533,
-      "end_line": 3539,
+      "line": 3532,
+      "end_line": 3538,
       "labels": [
         "prop:alternating-upper"
       ],
@@ -833,7 +833,7 @@
       "normalized_body_sha256": "c2914be82b184b8676aef08447bd9321a82eba6b7a63a8b83bc1ff93402e87ba",
       "following_proofs": [
         {
-          "line": 3540,
+          "line": 3539,
           "body_sha256": "7b03e34e018e9f120d3aedbd53f54cd134b3d46775b4f79b2db393ab0a9f560b"
         }
       ]
@@ -844,8 +844,8 @@
       "environment": "lemma",
       "title": "Lower bound for alternating protocols",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3608,
-      "end_line": 3618,
+      "line": 3607,
+      "end_line": 3617,
       "labels": [
         "yao:small-bias-escape"
       ],
@@ -853,7 +853,7 @@
       "normalized_body_sha256": "9a541a4d05f8d161012b2fe70f709bfc63c8364d07a69320be58eae3d4b2d0bb",
       "following_proofs": [
         {
-          "line": 3619,
+          "line": 3618,
           "body_sha256": "6fd10a2777b54627160accfa5d7eb6ebf48a0a14ae965663f05710e674247110"
         }
       ]
@@ -864,8 +864,8 @@
       "environment": "corollary",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3665,
-      "end_line": 3672,
+      "line": 3664,
+      "end_line": 3671,
       "labels": [
         "yao:array-list"
       ],
@@ -879,8 +879,8 @@
       "environment": "proposition",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3682,
-      "end_line": 3695,
+      "line": 3681,
+      "end_line": 3694,
       "labels": [
         "yao:lift"
       ],
@@ -888,11 +888,11 @@
       "normalized_body_sha256": "de6ccce7a07029ea88d025fa51be7380d2be0c10a89745bb201ca0b234ec00fc",
       "following_proofs": [
         {
-          "line": 3696,
+          "line": 3695,
           "body_sha256": "d49d358d17e825cbd17086386970068a297bcf25d15c8a19e49ce17faddd2ead"
         },
         {
-          "line": 3756,
+          "line": 3755,
           "body_sha256": "1724f886b14172db3fd3a82a7facce90ee50949aa906682cc883d224a48fca25"
         }
       ]
@@ -903,8 +903,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3824,
-      "end_line": 3840,
+      "line": 3823,
+      "end_line": 3839,
       "labels": [
         "cl:projection"
       ],
@@ -912,7 +912,7 @@
       "normalized_body_sha256": "b47e4ef4d09da5c5410a2c80930afa10fc7d1e76a2289239026c2713210c34f7",
       "following_proofs": [
         {
-          "line": 3842,
+          "line": 3841,
           "body_sha256": "17c2658a48cd162c60fe32dd02cefe7477f7c98439b28b672c449b1f83f82195"
         }
       ]
@@ -923,8 +923,8 @@
       "environment": "lemma",
       "title": "Small block bounds",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3886,
-      "end_line": 3900,
+      "line": 3885,
+      "end_line": 3899,
       "labels": [
         "lem:small-blocks"
       ],
@@ -932,7 +932,7 @@
       "normalized_body_sha256": "9a6ab3dba13c4610cdd4ef2ee171bd8fc143f4c1582b68dbe4b251a7ff259345",
       "following_proofs": [
         {
-          "line": 3901,
+          "line": 3900,
           "body_sha256": "a2a9b9d0727e10061b4d854123aebf06987c36ceaaaa0815ae36d5229b2e9454"
         }
       ]
@@ -943,8 +943,8 @@
       "environment": "theorem",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3937,
-      "end_line": 3949,
+      "line": 3936,
+      "end_line": 3948,
       "labels": [
         "cl:separation"
       ],
@@ -952,7 +952,7 @@
       "normalized_body_sha256": "22b1d776a7d6ad243d002c1fec51d2ca21f2d5764d1c93db56a243bb4d3f90fc",
       "following_proofs": [
         {
-          "line": 3951,
+          "line": 3950,
           "body_sha256": "09aacbc1e1448978552d00f4ebd4f1e074edf8eb573196bacb1ab8d93212a67f"
         }
       ]
@@ -963,8 +963,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 3988,
-      "end_line": 4000,
+      "line": 3987,
+      "end_line": 3999,
       "labels": [
         "cl:defect-induction"
       ],
@@ -972,23 +972,23 @@
       "normalized_body_sha256": "fd0ae4a2fd70ec6495506fe9ca31802bf20a106fca08d5e4b6b6ad17687926c0",
       "following_proofs": [
         {
-          "line": 4002,
+          "line": 4001,
           "body_sha256": "c4630f448a67dbe5b64eb8fb7dbadf352e8b3eb3df211951fa5b1ad944de5dd1"
         },
         {
-          "line": 4123,
+          "line": 4122,
           "body_sha256": "31102a774db2024fffb73f8d278f8371582acbf73d4b607e12285c5571f2919b"
         },
         {
-          "line": 4149,
+          "line": 4148,
           "body_sha256": "f2f9d8368c76312e729ebfcd0d29feebb36171c853eb20fb3c0919680869d6c4"
         },
         {
-          "line": 4197,
+          "line": 4196,
           "body_sha256": "40f16294bcf909ce0930086044ab22991d972c00dab28331f0d34f6819ed53fc"
         },
         {
-          "line": 4235,
+          "line": 4234,
           "body_sha256": "69a55f8e08f0d3ad1c1136558a8637553f189b02c2ac84631914c7a90acb77ce"
         }
       ]
@@ -999,8 +999,8 @@
       "environment": "lemma",
       "title": "Two template inputs",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 4340,
-      "end_line": 4360,
+      "line": 4339,
+      "end_line": 4359,
       "labels": [
         "res:paired"
       ],
@@ -1008,7 +1008,7 @@
       "normalized_body_sha256": "97162be459fa087c1ffd3686c23d98961ebeb6f547811bdd77377390fe9c1415",
       "following_proofs": [
         {
-          "line": 4362,
+          "line": 4361,
           "body_sha256": "9408b9456f5805a70aa6764b41a61192c12a113af3bff35946263bbc8caffccf"
         }
       ]
@@ -1019,8 +1019,8 @@
       "environment": "lemma",
       "title": "Moment bound",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 4629,
-      "end_line": 4643,
+      "line": 4628,
+      "end_line": 4642,
       "labels": [
         "lem:conditioning-moment"
       ],
@@ -1028,11 +1028,11 @@
       "normalized_body_sha256": "91c7102700b5a8a93360f150a60f806dc206e890198b9740348b282e8ecd148d",
       "following_proofs": [
         {
-          "line": 4644,
+          "line": 4643,
           "body_sha256": "90f622778338f84d705947f3718e2cfd7dca6ae303c4ea86ba03806d77635315"
         },
         {
-          "line": 4663,
+          "line": 4662,
           "body_sha256": "78697ede5705cf4836a634e8684003bc5ffab1e59e936782a4bc61b49347c0b4"
         }
       ]
@@ -1043,8 +1043,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 4696,
-      "end_line": 4712,
+      "line": 4695,
+      "end_line": 4711,
       "labels": [
         "lem:pair-projections"
       ],
@@ -1052,7 +1052,7 @@
       "normalized_body_sha256": "11cfa602c2cd2d927b64865dcfdea3542c1d6323a48a5e3759886f26b6033aad",
       "following_proofs": [
         {
-          "line": 4713,
+          "line": 4712,
           "body_sha256": "7017400e27c98913082bcb55e18ebb2f97c391e3532c6d9b6e9295c4c7fbf65c"
         }
       ]
@@ -1063,8 +1063,8 @@
       "environment": "lemma",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 4785,
-      "end_line": 4800,
+      "line": 4784,
+      "end_line": 4799,
       "labels": [
         "det:suffix"
       ],
@@ -1072,19 +1072,19 @@
       "normalized_body_sha256": "a395d2c256a9c597314fdfce0d841fb90f33b3a6c489802ae843101027683d44",
       "following_proofs": [
         {
-          "line": 4801,
+          "line": 4800,
           "body_sha256": "f1b207fe4492bc60e3b9b9f40140aaacfa610b8b5314eada390f45c8ecc4eb79"
         },
         {
-          "line": 4831,
+          "line": 4830,
           "body_sha256": "c8a8fd0478c4f4ed7c92d935844553876cf7792639d6361e08e43696de0bc6c5"
         },
         {
-          "line": 4871,
+          "line": 4870,
           "body_sha256": "d02627eb84782398c1780760bcd2edc501adef7e001dbbbfd3551c990f43dec8"
         },
         {
-          "line": 4931,
+          "line": 4930,
           "body_sha256": "e6b430fea9893dac9dbe2b925c60b45c6fe7022032b4f980a6d3d03477b42633"
         }
       ]
@@ -1095,8 +1095,8 @@
       "environment": "lemma",
       "title": "Common numerical bounds",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 5062,
-      "end_line": 5068,
+      "line": 5061,
+      "end_line": 5067,
       "labels": [
         "lem:common-schedule"
       ],
@@ -1104,7 +1104,7 @@
       "normalized_body_sha256": "318e6fa452c869a6976a55ed33fcb3638bc5e53767211c4bf057e0f8030cdd8d",
       "following_proofs": [
         {
-          "line": 5070,
+          "line": 5069,
           "body_sha256": "e82d2000a0e79e8106b2edddc2b3d15890a2f4dfc19f832c440220102fbdbba5"
         }
       ]
@@ -1115,8 +1115,8 @@
       "environment": "lemma",
       "title": "Parameters for full products",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 5158,
-      "end_line": 5171,
+      "line": 5157,
+      "end_line": 5170,
       "labels": [
         "lem:full-schedule"
       ],
@@ -1124,7 +1124,7 @@
       "normalized_body_sha256": "8a2bff42d33eded34e91c5dde632bc8ede52ef884e1e209ab6b32b9a73cec09b",
       "following_proofs": [
         {
-          "line": 5173,
+          "line": 5172,
           "body_sha256": "aec78bfca7ec75b006fa34ce5b8aec00fe392925f8874188f2f29919642cfe38"
         }
       ]
@@ -1135,8 +1135,8 @@
       "environment": "lemma",
       "title": "Parameters for explicit lists",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 5208,
-      "end_line": 5222,
+      "line": 5207,
+      "end_line": 5221,
       "labels": [
         "lem:generated-schedule"
       ],
@@ -1144,15 +1144,15 @@
       "normalized_body_sha256": "2c045e6143c280159a083db141a8a0944dd440c25cf62e150c1fe4584d79bd59",
       "following_proofs": [
         {
-          "line": 5224,
+          "line": 5223,
           "body_sha256": "94de5964aeb0a80b4f842cb6d06b63e0cecc2348f52392910b7527628ae43e58"
         },
         {
-          "line": 5275,
+          "line": 5274,
           "body_sha256": "93cc6b2a05fdf8d24239948fc2dfba285083ed77c8aeb2da80f53c4b76fd42d1"
         },
         {
-          "line": 5314,
+          "line": 5313,
           "body_sha256": "a5c9678a39c898793db4796a6349ed814f34eeb9022ebfaf91e940f870094322"
         }
       ]
@@ -1163,8 +1163,8 @@
       "environment": "lemma",
       "title": "Construction~3, Proposition~3 and Corollary~1 in \\cite{alon1992smallbias}",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 5376,
-      "end_line": 5385,
+      "line": 5375,
+      "end_line": 5384,
       "labels": [
         "yao:finite-field-list"
       ],
@@ -1172,7 +1172,7 @@
       "normalized_body_sha256": "ef3f8f3e293c33f91260873f5988f93924b5603e095eeb3f12315b1a94b6f704",
       "following_proofs": [
         {
-          "line": 5398,
+          "line": 5397,
           "body_sha256": "ce8d1e840e0ef3ec1309a7c248781168476ff9a01bdaa2705e1f7f7a816ad4b7"
         }
       ]
@@ -1185,8 +1185,8 @@
       "environment": "observation",
       "title": "Restrictions projected to a set of blocks",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 1243,
-      "end_line": 1258,
+      "line": 1242,
+      "end_line": 1257,
       "labels": [
         "obs:representatives"
       ],
@@ -1200,8 +1200,8 @@
       "environment": "observation",
       "title": "Lemma~3.2 in \\cite{mackenzie2026condensation}",
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 2982,
-      "end_line": 2990,
+      "line": 2981,
+      "end_line": 2989,
       "labels": [
         "obs:compatible-protocol",
         "eq:compatibility"
@@ -1216,8 +1216,8 @@
       "environment": "claim",
       "title": null,
       "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
-      "line": 4387,
-      "end_line": 4410,
+      "line": 4386,
+      "end_line": 4409,
       "labels": [
         "cl:two-stream"
       ],
@@ -1225,15 +1225,15 @@
       "normalized_body_sha256": "33788996c5cb66d56c332c89adab81e128499493754700e499b8f7d23d11cd50",
       "following_proofs": [
         {
-          "line": 4412,
+          "line": 4411,
           "body_sha256": "171c3d1818eb0d533d3ab1d6145b0f78ae64827807f74516ef18d86971652e82"
         },
         {
-          "line": 4484,
+          "line": 4483,
           "body_sha256": "166a1e69fbb52c9bc1bf45143518ebe68cc1e0362b388e6d8273766cad20ffea"
         },
         {
-          "line": 4561,
+          "line": 4560,
           "body_sha256": "ca5bcc515f00a984f82e860c5651bc6aa254d439f3a66dd99f65c505c4d37872"
         }
       ]

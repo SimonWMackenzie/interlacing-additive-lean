@@ -1,0 +1,472 @@
+{
+  "source_sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
+  "pdf_sha256": "d41873487c67cfc37877216534a8721c4ed7fb64e23d5bd18a12509611255fb9",
+  "references_sha256": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31",
+  "page_count": 76,
+  "character_geometry_identical": true,
+  "endpoints": {
+    "intro:deterministic": {
+      "page": 4,
+      "point": [
+        506.751,
+        442.583
+      ]
+    },
+    "yao:main": {
+      "page": 4,
+      "point": [
+        426.321,
+        334.13
+      ]
+    },
+    "yao:bpp": {
+      "page": 4,
+      "point": [
+        103.637,
+        172.926
+      ]
+    },
+    "thm:quantitative": {
+      "page": 5,
+      "point": [
+        410.379,
+        641.295
+      ]
+    },
+    "det:time": {
+      "page": 5,
+      "point": [
+        156.467,
+        514.969
+      ]
+    },
+    "def:table-estimation": {
+      "page": 14,
+      "point": [
+        265.576,
+        494.251
+      ]
+    },
+    "yao:model": {
+      "page": 14,
+      "point": [
+        329.364,
+        358.6
+      ]
+    },
+    "def:interlace": {
+      "page": 15,
+      "point": [
+        168.584,
+        78.19
+      ]
+    },
+    "def:exact-tuples": {
+      "page": 16,
+      "point": [
+        467.292,
+        90.389
+      ]
+    },
+    "obs:representatives": {
+      "page": 17,
+      "point": [
+        436.061,
+        496.837
+      ]
+    },
+    "def:profile": {
+      "page": 17,
+      "point": [
+        478.518,
+        235.478
+      ]
+    },
+    "src:gap-colouring": {
+      "page": 18,
+      "point": [
+        455.808,
+        637.752
+      ]
+    },
+    "thm:amplifier": {
+      "page": 18,
+      "point": [
+        339.433,
+        291.241
+      ]
+    },
+    "cl:seed": {
+      "page": 18,
+      "point": [
+        151.175,
+        72.0
+      ]
+    },
+    "prop:iteration": {
+      "page": 19,
+      "point": [
+        220.457,
+        623.341
+      ]
+    },
+    "def:amplification-parameters": {
+      "page": 19,
+      "point": [
+        234.212,
+        144.151
+      ]
+    },
+    "def:source-matrix": {
+      "page": 21,
+      "point": [
+        418.173,
+        410.726
+      ]
+    },
+    "src:item-witness": {
+      "page": 22,
+      "point": [
+        336.534,
+        345.149
+      ]
+    },
+    "src:upper": {
+      "page": 22,
+      "point": [
+        444.305,
+        273.02
+      ]
+    },
+    "lem:many-product-blocks": {
+      "page": 23,
+      "point": [
+        179.856,
+        117.465
+      ]
+    },
+    "src:profiles": {
+      "page": 24,
+      "point": [
+        486.697,
+        533.696
+      ]
+    },
+    "lem:kraft-count": {
+      "page": 24,
+      "point": [
+        131.064,
+        396.515
+      ]
+    },
+    "lem:collision-tracking": {
+      "page": 25,
+      "point": [
+        209.021,
+        689.194
+      ]
+    },
+    "src:near-full": {
+      "page": 25,
+      "point": [
+        393.055,
+        389.93
+      ]
+    },
+    "det:conditioning": {
+      "page": 27,
+      "point": [
+        440.843,
+        260.321
+      ]
+    },
+    "det:exact": {
+      "page": 28,
+      "point": [
+        223.341,
+        681.943
+      ]
+    },
+    "det:rareboost": {
+      "page": 28,
+      "point": [
+        361.411,
+        542.067
+      ]
+    },
+    "res:destinations": {
+      "page": 29,
+      "point": [
+        510.316,
+        336.324
+      ]
+    },
+    "res:incoming": {
+      "page": 30,
+      "point": [
+        241.275,
+        425.305
+      ]
+    },
+    "res:foreign": {
+      "page": 30,
+      "point": [
+        343.177,
+        351.183
+      ]
+    },
+    "res:alignment": {
+      "page": 31,
+      "point": [
+        145.411,
+        328.127
+      ]
+    },
+    "cl:bridge": {
+      "page": 32,
+      "point": [
+        254.914,
+        126.307
+      ]
+    },
+    "lem:amplifier-rank": {
+      "page": 33,
+      "point": [
+        491.057,
+        681.943
+      ]
+    },
+    "det:code": {
+      "page": 34,
+      "point": [
+        338.884,
+        465.041
+      ]
+    },
+    "det:restore": {
+      "page": 34,
+      "point": [
+        158.629,
+        101.211
+      ]
+    },
+    "det:amplifier": {
+      "page": 36,
+      "point": [
+        244.29,
+        533.517
+      ]
+    },
+    "det:flat": {
+      "page": 36,
+      "point": [
+        457.265,
+        333.825
+      ]
+    },
+    "det:construction": {
+      "page": 37,
+      "point": [
+        242.365,
+        492.254
+      ]
+    },
+    "det:reduction": {
+      "page": 38,
+      "point": [
+        421.106,
+        687.426
+      ]
+    },
+    "def:compatibility": {
+      "page": 39,
+      "point": [
+        241.788,
+        310.298
+      ]
+    },
+    "obs:compatible-protocol": {
+      "page": 39,
+      "point": [
+        502.293,
+        249.725
+      ]
+    },
+    "thm:rank-count": {
+      "page": 40,
+      "point": [
+        382.844,
+        297.613
+      ]
+    },
+    "thm:compression": {
+      "page": 41,
+      "point": [
+        492.869,
+        634.819
+      ]
+    },
+    "lem:sample-access": {
+      "page": 41,
+      "point": [
+        522.916,
+        80.703
+      ]
+    },
+    "thm:uniform-reduction": {
+      "page": 42,
+      "point": [
+        434.796,
+        509.498
+      ]
+    },
+    "thm:time-tradeoff": {
+      "page": 43,
+      "point": [
+        495.745,
+        635.388
+      ]
+    },
+    "yao:comparison": {
+      "page": 44,
+      "point": [
+        361.615,
+        85.766
+      ]
+    },
+    "yao:source": {
+      "page": 45,
+      "point": [
+        230.342,
+        317.912
+      ]
+    },
+    "def:alternating-table": {
+      "page": 46,
+      "point": [
+        171.273,
+        646.595
+      ]
+    },
+    "prop:alternating-upper": {
+      "page": 46,
+      "point": [
+        343.048,
+        167.455
+      ]
+    },
+    "yao:small-bias-escape": {
+      "page": 47,
+      "point": [
+        407.266,
+        107.412
+      ]
+    },
+    "yao:array-list": {
+      "page": 48,
+      "point": [
+        342.529,
+        285.804
+      ]
+    },
+    "yao:lift": {
+      "page": 48,
+      "point": [
+        504.329,
+        72.0
+      ]
+    },
+    "cl:projection": {
+      "page": 51,
+      "point": [
+        432.479,
+        681.943
+      ]
+    },
+    "lem:small-blocks": {
+      "page": 51,
+      "point": [
+        455.545,
+        147.305
+      ]
+    },
+    "cl:separation": {
+      "page": 52,
+      "point": [
+        501.318,
+        305.255
+      ]
+    },
+    "cl:defect-induction": {
+      "page": 53,
+      "point": [
+        502.15,
+        488.774
+      ]
+    },
+    "res:paired": {
+      "page": 58,
+      "point": [
+        327.893,
+        399.38
+      ]
+    },
+    "cl:two-stream": {
+      "page": 59,
+      "point": [
+        474.207,
+        594.906
+      ]
+    },
+    "lem:conditioning-moment": {
+      "page": 62,
+      "point": [
+        442.997,
+        285.087
+      ]
+    },
+    "lem:pair-projections": {
+      "page": 63,
+      "point": [
+        219.411,
+        303.987
+      ]
+    },
+    "det:suffix": {
+      "page": 64,
+      "point": [
+        295.753,
+        144.142
+      ]
+    },
+    "lem:common-schedule": {
+      "page": 68,
+      "point": [
+        347.199,
+        292.517
+      ]
+    },
+    "lem:full-schedule": {
+      "page": 70,
+      "point": [
+        333.817,
+        578.73
+      ]
+    },
+    "lem:generated-schedule": {
+      "page": 70,
+      "point": [
+        232.157,
+        84.408
+      ]
+    },
+    "yao:finite-field-list": {
+      "page": 73,
+      "point": [
+        392.425,
+        573.878
+      ]
+    }
+  },
+  "method": "Zero-width pdfdest markers in private source copy; every printed character/bbox identical to canonical PDF"
+}

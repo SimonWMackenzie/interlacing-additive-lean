@@ -1,0 +1,58 @@
+Independent review verdict: ACCEPTED for the exact core snapshot.
+Date: 2 November 2026.
+
+The mixed branch actually constructs the deterministic table and its midpoint,
+then invokes the same amplified randomized estimator used by its success law.
+No desired SAT output or completed caller execution is assumed as a premise.
+
+Reviewed core files and SHA256 identities:
+  Request.lean    c3a3fb6174be302f4d83c02d56f8fde5d7ddf745a78ae46a34ba829f6d7be682
+  Resource.lean   16e64c94aba4375e3e0ca73fc44a27b5c232014b1d106607c04cd632facac362
+  Accounting.lean e0a8eca8d7e53803766db7fdc2a1741384b872d54a7b41c106b986ca3309982b
+  Caller.lean     b47cab573e5319ba093b8fb536e0777896ec9557163f8a22cd12eb31b7ee2f40
+  Charge.lean     c30a615d25cc61d83fda17f45c9fb7a6cde5378f748e3c16ee1e3e1886568130
+  DeterministicFront.lean  6a3bd915b95ee09913110934e0d4ba8b98f68de68ae112be41382c7d8e8cc80b
+  DeterministicCaller.lean fc2032b1e7720eccf6b577a086e72a0dca848bd66142183ab63aae1dba2e19d3
+
+All twelve frozen modules/dependencies were replayed independently with Lean
+4.30.0. Their recorded axiom audits contain only propext, Classical.choice,
+and Quot.sound. Frozen snapshots and all source hashes are in this directory
+and frozen-sha256.json. The live author files still matched these hashes when
+checked after snapshotting.
+
+Statement and execution checks:
+1. The physical request is the actual source request:
+   natField(2*threshold+K) ++ actual_run.squareWord.
+   This is also the request consumed by the probability and correctness claims.
+2. randomEstimator A is extracted once from the common family before selecting
+   the formula, round count, source request, or either random tape. The caller
+   consistently uses this same amplified classifier.
+3. The routed requester works on every raw word; sparse sufficiently large
+   encoded formulas are restored exactly before computing the supplied gap.
+4. The resource machine really runs that requester and fixed unary arithmetic
+   for cR*(request.length+1)^dR. It is not an assumed or semantic tape producer.
+5. The exact carrier is 4*input.length+2*required_random_bits+4. In particular,
+   zero random-bit coefficient and zero degree cause no empty-carrier problem.
+6. finiteMachine physically preserves the supplied random tape during request
+   construction, cuts the necessary prefix, and runs the classifier. Its fair
+   tape law is on exactly those same finite tapes and outputs.
+7. Accounting includes carrier printing, all copying/framing, and requester
+   recomputation inside the actual caller. Charge has fixed constants before
+   each input and target resource S; it imposes no polynomial bound on gap
+   values in the original input length.
+
+No correctness findings. The generic full-cost result is deliberately
+conditional on bounds for the actual requester clock and input length.
+These five files alone do not discharge the eventual sparse-source S bound,
+finite-small-input handling, or a final all-input algorithmic implication.
+Bounds/Sparse/Endpoint are a separate review extension, not covered here.
+
+Replay evidence:
+  replay-results.json records the first six successful replays and an import
+  path failure before Resource elaboration.
+  replay-results-prefix-fixed.json records successful replay of Resource,
+  Accounting, DeterministicFront, DeterministicCaller, Caller, and Charge.
+  IMPORT_PATH_FAILURE.txt explains the private-prefix repair. No source edit
+  was needed for that infrastructure failure.
+
+Production integration and shared builds remain the root's responsibility.

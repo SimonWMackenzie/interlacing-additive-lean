@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-02",
+  "reviewer": "/root",
+  "prior_source_sha256": "bfde23b90f50785939095a6d37b7b247965ee6c45beaca9011a8963dec3cc9d6",
+  "source_sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
+  "formal_statements_unchanged": true,
+  "proof_blocks_unchanged": true,
+  "disclosure_only": true,
+  "scope": "Only the last two AI-methodology paragraphs changed. Authorship credit, mathematical statements, proofs, figures, bibliography, and preceding prose are unchanged.",
+  "accepted_runtime_review": "release-evidence/1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb/review-deterministic-final-correspondence-REVIEW_THREE_STATEMENTS.md",
+  "formal_statements": 66,
+  "source_body_evidence": "tools/BASELINE_SOURCE_BLOCKS.json"
+}

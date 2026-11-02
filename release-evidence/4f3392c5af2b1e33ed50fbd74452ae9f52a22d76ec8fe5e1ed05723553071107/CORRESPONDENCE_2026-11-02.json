@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-02",
+  "scope": "Bounded statement-correspondence review for manuscript presentation, not a new independent proof audit or Lean replay.",
+  "prior_public_commit": "078010d3db8589f9c2381c4b8506b6794cbe75bb",
+  "prior_source_sha256": "f130159f0f15e5049f56c51c8d5ee17365cf2cb4b2902f8982531cc106095ded",
+  "source_sha256": "bfde23b90f50785939095a6d37b7b247965ee6c45beaca9011a8963dec3cc9d6",
+  "pdf_sha256": "c08e612406a4c9f33b763d21b6f7a455e7b950739b812d28346ac09a2e890a8b",
+  "same_formal_label_set": true,
+  "formal_statements": 66,
+  "identical_statement_count": 26,
+  "changed_statement_ids": [
+    "cl:bridge",
+    "cl:projection",
+    "cl:separation",
+    "cl:two-stream",
+    "def:alternating-table",
+    "def:amplification-parameters",
+    "def:exact-tuples",
+    "def:source-matrix",
+    "def:table-estimation",
+    "det:amplifier",
+    "det:conditioning",
+    "det:construction",
+    "det:exact",
+    "det:flat",
+    "det:rareboost",
+    "det:reduction",
+    "det:restore",
+    "det:suffix",
+    "lem:amplifier-rank",
+    "lem:full-schedule",
+    "lem:generated-schedule",
+    "lem:many-product-blocks",
+    "lem:pair-projections",
+    "lem:sample-access",
+    "lem:small-blocks",
+    "obs:representatives",
+    "prop:iteration",
+    "res:destinations",
+    "res:foreign",
+    "res:incoming",
+    "res:paired",
+    "src:gap-colouring",
+    "src:near-full",
+    "thm:amplifier",
+    "thm:compression",
+    "thm:time-tradeoff",
+    "thm:uniform-reduction",
+    "yao:lift",
+    "yao:model",
+    "yao:small-bias-escape"
+  ],
+  "proof_blocks": 50,
+  "identical_proof_blocks": 3,
+  "changed_proof_blocks": 47,
+  "retained_links_supported": true,
+  "additional_pending_ids": [],
+  "pending_statement_ids": [
+    "det:time",
+    "thm:quantitative",
+    "thm:time-tradeoff"
+  ],
+  "checked_lean_release": "v42",
+  "checked_code_commit": "bff03274f57796d986e788f95e0d553a71312936",
+  "new_lean_build_performed": false,
+  "independent_reviewer": "inspector_nov2_correspondence",
+  "review_findings": [
+    {
+      "id": "src:near-full",
+      "finding": "Adds RP(R,rho,d) explicitly to the final construction-instantiation sentence; generic conclusion retains its existing deletion/collision hypotheses."
+    },
+    {
+      "id": "cl:two-stream",
+      "finding": "Names common hypotheses H1-H4 explicitly; these constrain the existing source specialization."
+    },
+    {
+      "id": "det:reduction",
+      "finding": "Explicit caller scale s_g and square output already covered by actual_reduction.",
+      "lean_anchor": "CurrentAdditive.V42UniversalReduction.actual_reduction",
+      "lean_file": "papers/randomized-additive-hardness/formalization/current-v27/lean/CurrentAdditive/V42UniversalReduction.lean",
+      "lines": "24-34"
+    },
+    {
+      "id": "lem:sample-access",
+      "finding": "Specifies full-product iteration and compression sample size; existing complete legal sampled labels, entries and every-tape resource bounds apply.",
+      "lean_anchor": "CurrentAdditive.V42ZeroAccess.sample_access_all"
+    },
+    {
+      "id": "lem:amplifier-rank",
+      "finding": "Clarifies product tuple sets versus indexed lists; existing generated embedding and rank anchors apply."
+    },
+    {
+      "id": "remaining changed statements and proofs",
+      "finding": "Clarifications and expanded existing arguments, including support elimination, common-coordinate selection, conditioning, and midpoint/runtime accounting. No stronger unsupported conclusion found."
+    }
+  ]
+}

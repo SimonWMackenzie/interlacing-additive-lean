@@ -1,4 +1,4 @@
-"""Fresh CurrentV42 source build, both audits, provider pins and source checks.
+"""Fresh CurrentV43 source build, both audits, provider pins and source checks.
 
 External pinned toolchain/package caches can be reused. This runner refuses
 all existing project objects, creates logs/receipt, and never deletes files.
@@ -24,13 +24,13 @@ def run(root=ROOT):
     logs = root/"build-logs"
     logs.mkdir()
     receipt = {"schema_version": 2, "status": "running", "started_utc": now(),
-               "target": "CurrentV42", "source_manifest_sha256": sha(root/"SOURCE_MANIFEST.json"),
+               "target": "CurrentV43", "source_manifest_sha256": sha(root/"SOURCE_MANIFEST.json"),
                "full_coverage_receipt_sha256": sha(root/"FULL_COVERAGE_RECEIPT.json"),
                "project_build_initially_empty": True,
                "lake_artifact_cache": "disabled with LAKE_ARTIFACT_CACHE=false for every subprocess",
                "project_modules_compiled_from_source": manifest["project_module_count"],
                "external_objects": "Pinned toolchain and package cached objects reused; external objects not freshly rebuilt.",
-               "v42_correspondence": "Independent source-bound root gate, distinct from this proof replay.",
+               "v43_correspondence": "Independent source-bound root gate, distinct from this proof replay.",
                "commands": []}
     def save():
         write(root/"REPLAY.json", receipt)
@@ -59,7 +59,7 @@ def run(root=ROOT):
                     "provider_inventory_sha256": sha(logs/"PROVIDER_INVENTORY.json")})
     check_receipt(root, receipt)
     save()
-    print("Fresh CurrentV42 project build, effective/raw proof audits, complete providers and source identities passed.")
+    print("Fresh CurrentV43 project build, effective/raw proof audits, complete providers and source identities passed.")
 
 if __name__ == "__main__":
     try:

@@ -1,7 +1,7 @@
-import CurrentV42
+import CurrentV43
 import Lean.Util.CollectAxioms
 
-/-! Run only after the root has completed its shared CurrentV42 build.
+/-! Run only after the root has completed its shared CurrentV43 build.
 This records the complete imported provider closure, including meta imports.
 It does not certify manuscript correspondence or fresh project compilation. -/
 open Lean Elab Command

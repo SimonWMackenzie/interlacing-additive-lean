@@ -1,0 +1,23 @@
+{
+  "version": "v43",
+  "sources": [
+    {
+      "path": "source/main.tex",
+      "sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
+      "bytes": 286206
+    },
+    {
+      "path": "source/references.bib",
+      "sha256": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31",
+      "bytes": 16921
+    }
+  ],
+  "source_fingerprint": "4e6af3582ee72112c9caa536804054d0488c7f8c4e82a060a7ea22145485643f",
+  "output": {
+    "path": "output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf",
+    "sha256": "d41873487c67cfc37877216534a8721c4ed7fb64e23d5bd18a12509611255fb9"
+  },
+  "build_diagnostics": [],
+  "invisible_build_anchor": true,
+  "mathematical_certification": false
+}

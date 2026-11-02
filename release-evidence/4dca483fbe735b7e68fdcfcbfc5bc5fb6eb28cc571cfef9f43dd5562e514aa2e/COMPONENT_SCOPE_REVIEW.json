@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_sha256": "bfde23b90f50785939095a6d37b7b247965ee6c45beaca9011a8963dec3cc9d6",
+  "pdf_sha256": "c08e612406a4c9f33b763d21b6f7a455e7b950739b812d28346ac09a2e890a8b",
+  "review_author": "/root",
+  "prepared_by": "/root/v43_inventory_tools",
+  "tool_author": "/root/v43_inventory_tools",
+  "scope": "Root-reviewed restriction of retained construction-component scope only. No new runtime theorem correspondence or canonical proof admission.",
+  "root_acceptance": {
+    "author": "/root",
+    "channel": "collaboration.followup_task",
+    "message": "Root verified semantic source changes for construction rows6/8 as planned; prepare private source-bound COMPONENT_SCOPE_REVIEW.json with exact old/newtext/dependencies, accepted provider subset row6 first7 plus D/PermittedEstimator, row8 first4 (no old ETH). Record root acceptance as this message, preserve your separate tool author role. Run actual integration on latest generated-provider-subsets into new private generated-components-reviewed and validate. No pending runtime promotion. Also review release candidate tooling compatibility and advise concise install path list; production root-only."
+  },
+  "input_pins": [
+    {
+      "path": "private-provenance-refs/18b53b9728e82bb31f4d568e693abeedd5e831dab57f8073a75e0fbf627fd59e/V43_STATEMENT_MAP.json",
+      "bytes": 1810200,
+      "sha256": "d1cc8feb539160ceb1f4a627e203cb67968e37a58451dac483bde0104abe0fd9"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v42/V42_STATEMENT_MAP.json",
+      "bytes": 1626223,
+      "sha256": "609ec2973ac3807af9201b5813f596e1e0343ce40061f3a681b4c1c7125abf59"
+    }
+  ],
+  "runtime_decisions": [],
+  "component_scope_decisions": [
+    {
+      "id": "unnumbered:6",
+      "old_requirement": "Separate fixed-gap NP, deterministic ETH and randomized sparse-ETH endpoint models",
+      "old_derived_from": [
+        "intro:deterministic",
+        "det:eth",
+        "thm:quantitative",
+        "def:reth",
+        "def:table-estimation"
+      ],
+      "new_requirement": "From fixed cost gaps to fixed-error hardness",
+      "new_derived_from": [
+        "intro:deterministic",
+        "def:table-estimation"
+      ],
+      "scope_note": "Retained checked component only. This entry does not prove any new v43 runtime implication. Checked fixed-gap construction and fixed-additive consequence relative to the named source reductions and CNF hardness input.",
+      "accepted": true,
+      "accepted_declaration_names": [
+        "CurrentAdditive.V42FixedEndpoints.fixed_gap_reduction",
+        "CurrentAdditive.V42SourcePhysical.requestSource_polytime",
+        "CurrentAdditive.V42ActualSource.word_target",
+        "CurrentAdditive.V39GeneratedConstruction.StoredMatrix.squareWord_target",
+        "CurrentAdditive.V42FixedEndpoints.fixed_gap_npHard",
+        "CurrentAdditive.V42FixedEndpoints.fixed_additive_np_subset_p",
+        "CurrentAdditive.V42FixedEndpoints.fixed_additive_square_inP",
+        "Workspace.Types.CommComplexity.D",
+        "CurrentAdditive.V39PermittedNumericalExtraction.PermittedEstimator"
+      ]
+    },
+    {
+      "id": "unnumbered:8",
+      "old_requirement": "Source-fidelity and final certification",
+      "old_derived_from": [
+        "src:gap-colouring",
+        "yao:source",
+        "def:reth"
+      ],
+      "new_requirement": "The source assumptions and the tables they produce",
+      "new_derived_from": [
+        "src:gap-colouring",
+        "yao:source"
+      ],
+      "scope_note": "Retained checked component only. This entry does not prove any new v43 runtime implication. The graph and hypergraph source reductions and the named CNF hardness input are explicit external inputs. Lean checks the construction relative to these inputs; it does not prove their external source theorems.",
+      "accepted": true,
+      "accepted_declaration_names": [
+        "EthInapproximability.CurrentPaper.EncodedETHSource.DinurReduction",
+        "EthInapproximability.CurrentPaper.EncodedETHSource.BOTReduction",
+        "CurrentAdditive.SmallBias.V42.literal_cnf_fixed_gap_reduction",
+        "CurrentAdditive.SmallBias.V42.selectedInstance_costs"
+      ]
+    }
+  ]
+}

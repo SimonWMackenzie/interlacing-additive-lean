@@ -4,13 +4,14 @@ This is not a Lean build. Current compilation/audits and provider checks are
 separate gates, recorded by checked_build.py or the optional cold replay.py.
 """
 from collections import Counter
+from admission_contract import check_delta
 import argparse
 from release_common import (ROOT, LIBRARIES, check_coverage, check_pin, module_path,
                             need, original_digest, read, sha)
 
 def verify(root=ROOT):
     manifest = read(root/"SOURCE_MANIFEST.json")
-    need(manifest.get("schema_version") == 2 and manifest.get("target") == "CurrentV42", "Wrong release manifest")
+    need(manifest.get("schema_version") == 2 and manifest.get("target") == "CurrentV43", "Wrong release manifest")
     entries = manifest["files"]
     need(len({e["path"] for e in entries}) == len(entries), "Duplicate manifest path")
     need(len({e["path"].casefold() for e in entries}) == len(entries), "Case-colliding manifest paths")
@@ -27,9 +28,8 @@ def verify(root=ROOT):
     need(actual == {e["path"] for e in project}, "Unexpected/missing local Lean source")
     need(len(set(manifest["external_modules"])) == manifest["external_module_count"] and
          set(manifest["external_providers"]) == set(manifest["external_modules"]), "External provider census mismatch")
-    admitted = read(root/"papers/randomized-additive-hardness/formalization/current-v42/ADMITTED_MODULES.json")["modules"]
-    new = {e["module"]: e for e in project if e["module"].startswith("CurrentAdditive.V42")}
-    need(set(new) == {e["module"] for e in admitted}, "Unadmitted/missing current-source proof module")
+    admitted = read(root/"papers/randomized-additive-hardness/formalization/current-v43/ADMITTED_MODULES.json")["modules"]
+    new = check_delta(read(root/"archive/v42/SOURCE_MANIFEST.json"), project, admitted)
     bindings = {b["original_path"]: b for b in read(root/"RELEASE_BINDING.json")["identity_bindings"]}
     for item in admitted:
         need(new[item["module"]]["sha256"] == item["sha256"], "Admission source identity mismatch")
@@ -39,10 +39,10 @@ def verify(root=ROOT):
     gate = read(root/"FULL_COVERAGE_RECEIPT.json")
     need(gate.get("status") == "passed" and gate.get("correspondence_complete") is True and
          gate.get("unresolved_obligations") == [], "Full-coverage gate has not passed")
-    expected = {"source_sha256": sha(root/"manuscript-v42/source/main.tex"),
-                "coverage_sha256": original_digest(root, "manuscript-v42/V42_STATEMENT_MAP.json"),
-                "admitted_manifest_sha256": original_digest(root, "papers/randomized-additive-hardness/formalization/current-v42/ADMITTED_MODULES.json"),
-                "aggregate_sha256": sha(root/"papers/randomized-additive-hardness/formalization/current-v42/lean/CurrentV42.lean")}
+    expected = {"source_sha256": sha(root/"manuscript-v43/source/main.tex"),
+                "coverage_sha256": original_digest(root, "manuscript-v43/V43_STATEMENT_MAP.json"),
+                "admitted_manifest_sha256": original_digest(root, "papers/randomized-additive-hardness/formalization/current-v43/ADMITTED_MODULES.json"),
+                "aggregate_sha256": sha(root/"papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43.lean")}
     need(all(gate.get(k) == v for k,v in expected.items()), "Stale full-coverage gate")
     required = {"inventory_complete", "source_correspondence", "declaration_anchors", "independent_review"}
     need(required <= {c["name"] for c in gate["checks"]}, "Missing full-coverage checks")
@@ -55,7 +55,7 @@ def verify(root=ROOT):
     result = check_coverage(root, manifest)
     published = root/"PUBLISHED_REPLAY.json"
     status = read(root/"release-status.json")
-    need(status.get("v42_correspondence_checked") is True, "Release status does not identify the passed source-bound coverage gate")
+    need(status.get("v43_correspondence_checked") is True, "Release status does not identify the passed source-bound coverage gate")
     need(status.get("full_coverage_receipt_sha256") == sha(root/"FULL_COVERAGE_RECEIPT.json"),
          "Release status binds stale full-coverage evidence")
     if status.get("source_manifest_sha256"):

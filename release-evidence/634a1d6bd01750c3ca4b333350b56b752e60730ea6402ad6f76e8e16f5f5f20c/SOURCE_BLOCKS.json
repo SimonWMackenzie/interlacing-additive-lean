@@ -1,0 +1,75 @@
+{
+  "review_scope": "only three new runtime statement/proof blocks; no re-review of retained 51 correspondence rows",
+  "source_sha256": "bfde23b90f50785939095a6d37b7b247965ee6c45beaca9011a8963dec3cc9d6",
+  "rows": [
+    {
+      "id": "thm:time-tradeoff",
+      "kind": "formal",
+      "environment": "theorem",
+      "title": "From approximation algorithms to $3$-SAT algorithms",
+      "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
+      "line": 3229,
+      "end_line": 3256,
+      "labels": [
+        "thm:time-tradeoff"
+      ],
+      "body_sha256": "cc4573ad4a6271168d1b8301ffd9ebc094192754349768edb491d8ee886a0d27",
+      "normalized_body_sha256": "7a9499e39a98a88d6def90d78fcf703a8a643c395fdb4cbd55278bba84953893",
+      "following_proofs": [
+        {
+          "line": 3258,
+          "body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514"
+        },
+        {
+          "line": 3306,
+          "body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61"
+        }
+      ],
+      "explicit_proof": {
+        "line": 3258,
+        "end_line": 3280,
+        "body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514"
+      }
+    },
+    {
+      "id": "thm:quantitative",
+      "kind": "formal",
+      "environment": "corollary",
+      "title": "Randomized estimation and $3$-SAT running time",
+      "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
+      "line": 337,
+      "end_line": 347,
+      "labels": [
+        "thm:quantitative"
+      ],
+      "body_sha256": "84936c7e174ce17e6e9b638d8d9a591778e5d8f596b3982db3526888875ef461",
+      "normalized_body_sha256": "e72f93647e4338682d4b01231b1a774c196f7fbab5a2ea5f5f021b297e405f8e",
+      "following_proofs": [],
+      "explicit_proof": {
+        "line": 3306,
+        "end_line": 3360,
+        "body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61"
+      }
+    },
+    {
+      "id": "det:time",
+      "kind": "formal",
+      "environment": "corollary",
+      "title": "Deterministic estimation and $3$-SAT running time",
+      "source": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
+      "line": 353,
+      "end_line": 362,
+      "labels": [
+        "det:time"
+      ],
+      "body_sha256": "d0c87a834cf5ea4524924fff713b29616b0dd7e9e0053a8941ee583e63a526b8",
+      "normalized_body_sha256": "4805e532c37f6e9a6d8b8bd11bc9be08e9c47ef0e52a3dd1dd305b8dd3c62cd4",
+      "following_proofs": [],
+      "explicit_proof": {
+        "line": 2910,
+        "end_line": 2952,
+        "body_sha256": "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754"
+      }
+    }
+  ]
+}

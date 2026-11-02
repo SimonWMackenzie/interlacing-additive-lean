@@ -12,7 +12,7 @@ from release_common import ROOT, check_pin, need, read, sha, write
 
 COMMANDS = [
     ("source-before", ["python", "verify_release.py"]),
-    ("build", ["lake", "build", "CurrentV42"]),
+    ("build", ["lake", "build", "CurrentV43"]),
     ("axiom-audit", ["lake", "env", "lean", "AxiomAudit.lean"]),
     ("raw-audit", ["lake", "env", "lean", "RawProofAudit.lean"]),
     ("providers", ["python", "check_replay.py", "build-logs/raw-audit.log"]),
@@ -46,19 +46,20 @@ def check_receipt(root, receipt, published=False):
 
 def check(root, raw_audit_log, manifest_path=None, output_path=None):
     text = raw_audit_log.read_text(encoding="utf-8-sig", errors="replace")
-    pattern = (r"RAW_ROW_COUNTS owners=(\d+) v42Owners=(\d+) rows=(\d+) theorems=(\d+) "
+    pattern = (r"RAW_ROW_COUNTS owners=(\d+) targetOwners=(\d+) rows=(\d+) theorems=(\d+) "
                r"identical=(\d+) different=(\d+) actualDependencies=(\d+); standard3; no unsafe; kernelMissing=0")
     conclusions = re.findall(pattern, text)
     need(len(conclusions) == 1 and text.count("RAW_PROOF_AUDIT_COMPLETE") == 1,
          "Missing/duplicate raw proof audit conclusion")
-    owners, v42owners, rows, theorems, identical, different, dependencies = map(int, conclusions[0])
-    need(owners > 0 and v42owners > 0 and rows > 0 and 0 < theorems <= rows and identical+different == rows,
+    owners, targetowners, rows, theorems, identical, different, dependencies = map(int, conclusions[0])
+    need(owners > 0 and targetowners > 0 and rows > 0 and 0 < theorems <= rows and identical+different == rows,
          "Inconsistent raw proof row counts")
     manifest = read(manifest_path or root/"SOURCE_MANIFEST.json")
     project = {e["module"] for e in manifest["files"] if e.get("role") == "checked_proof_source"}
-    owned = {m for m in project if m == "CurrentV42" or m.startswith("CurrentV42.") or
+    owned = {m for m in project if m == "CurrentV43" or m.startswith("CurrentV43.") or
+             m == "CurrentV42" or m.startswith("CurrentV42.") or
              m == "CurrentAdditive" or m.startswith("CurrentAdditive.")}
-    need(owners == len(owned) and v42owners == len([m for m in project if m.startswith("CurrentAdditive.V42")]),
+    need(owners == len(owned) and targetowners == len([m for m in project if (m == "CurrentV43" or m.startswith("CurrentV43."))]),
          "Raw audit did not cover the exact target-owned module set")
     pairs = re.findall(r"RAW_ROW_RESOLVED\|([^|\r\n]+)\|([^\r\n]+)", text)
     need(len(pairs) == len({m for m,_ in pairs}), "Duplicate resolved module")

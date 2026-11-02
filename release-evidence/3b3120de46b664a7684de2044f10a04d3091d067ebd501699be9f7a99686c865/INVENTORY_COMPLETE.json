@@ -1,0 +1,10 @@
+{
+  "source_identity": "passed",
+  "declaration_anchor_identity": "passed",
+  "source_blocks": 66,
+  "unique_accepted_anchors": 247,
+  "open_statement_or_unnumbered_links": 0,
+  "open_ids": [],
+  "correspondence_complete": true,
+  "scope": "Identity/evidence check only; no compiler, semantic review, cold replay or publication performed."
+}

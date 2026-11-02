@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "verification_mode": "production_incremental_authority",
+  "target": "CurrentV43",
+  "started_utc": "2026-11-02T08:24:35.622488+00:00",
+  "commands": [
+    {
+      "name": "build",
+      "command": [
+        "lake",
+        "build",
+        "CurrentV43"
+      ],
+      "started_utc": "2026-11-02T08:24:35.622930+00:00",
+      "log": "papers/randomized-additive-hardness/formalization/current-v43/verification/production-2026-11-02/build.log",
+      "exit_code": 0,
+      "finished_utc": "2026-11-02T08:24:41.866148+00:00",
+      "log_sha256": "0fcd12dc00dfb8fb4d7d742886db0ff2237b0d23ab734f23880a121fc9a05f61"
+    },
+    {
+      "name": "capture-closure",
+      "command": [
+        "private-provenance-refs/b8f125db33a4429ba83506b47ff7a538ccf4b5c13a2832d7f21d0e90e806d029/python.exe",
+        "-B",
+        "papers/randomized-additive-hardness/formalization/current-v43/tools/capture_current_closure.py",
+        "--root",
+        "private-provenance-refs/7e087228604ccdb21ebca36e3d4a2b35ead9a11efab2751641c356a33f93b6a5/Communication Complexity (Local)",
+        "--data-dir",
+        "papers/randomized-additive-hardness/formalization/current-v43/verification/production-2026-11-02",
+        "--output-name",
+        "SOURCE_MANIFEST.json"
+      ],
+      "started_utc": "2026-11-02T08:24:41.873954+00:00",
+      "log": "papers/randomized-additive-hardness/formalization/current-v43/verification/production-2026-11-02/capture-closure.log",
+      "exit_code": 0,
+      "finished_utc": "2026-11-02T08:24:54.365698+00:00",
+      "log_sha256": "627b08f0475e4b9c3e6e44191573fa050f594865375527891696fd988f076198"
+    },
+    {
+      "name": "axiom-audit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "papers/randomized-additive-hardness/formalization/current-v43/AxiomAudit.lean"
+      ],
+      "started_utc": "2026-11-02T08:24:55.546333+00:00",
+      "log": "papers/randomized-additive-hardness/formalization/current-v43/verification/production-2026-11-02/axiom-audit.log",
+      "exit_code": 0,
+      "finished_utc": "2026-11-02T08:25:19.005366+00:00",
+      "log_sha256": "26ce859b9c3c0437c9ade49d078840f94370b799927843a06e7cc19b01f3d542"
+    },
+    {
+      "name": "raw-audit",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "papers/randomized-additive-hardness/formalization/current-v43/RawProofAudit.lean"
+      ],
+      "started_utc": "2026-11-02T08:25:19.005995+00:00",
+      "log": "papers/randomized-additive-hardness/formalization/current-v43/verification/production-2026-11-02/raw-audit.log",
+      "exit_code": 0,
+      "finished_utc": "2026-11-02T08:25:45.765878+00:00",
+      "log_sha256": "fce82ae241369dd48e64bffdff4b148f3ca3d6337ac3720cc8d96cf10774c55a"
+    },
+    {
+      "name": "release-inventory",
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "papers/randomized-additive-hardness/formalization/current-v43/ReleaseInventory.lean"
+      ],
+      "started_utc": "2026-11-02T08:25:45.768765+00:00",
+      "log": "papers/randomized-additive-hardness/formalization/current-v43/verification/production-2026-11-02/release-inventory.log",
+      "exit_code": 0,
+      "finished_utc": "2026-11-02T08:26:09.965380+00:00",
+      "log_sha256": "927427f8afe057531abc17ed5ce44147cb41435b13f611ada8ebd13069a6206a"
+    }
+  ],
+  "input_sha256": {
+    "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43.lean": "5811f60ee4ec40a1eafd12d33f65a4b6e6c3e42cd39e58f129477020496c0611",
+    "papers/randomized-additive-hardness/formalization/current-v43/AxiomAudit.lean": "3f6501e6c7fbb05a18087013952d21e23fdbc6f8878b41930f1a44a593e2b6de",
+    "papers/randomized-additive-hardness/formalization/current-v43/RawProofAudit.lean": "d48c817f97ca0c6217527370127e31421c1e9f0dd8da929f6dc28dccc4095c16",
+    "papers/randomized-additive-hardness/formalization/current-v43/ReleaseInventory.lean": "98adf45c9c170b88fc24799be8c4ef5e344acea5063817103ae6a83b4da1ef06",
+    "papers/randomized-additive-hardness/formalization/current-v43/tools/capture_current_closure.py": "df277ca7325f2f51b346e5d9fd502faf2ae23e33241b3a207bdaa3b6ef31a9d7",
+    "papers/randomized-additive-hardness/formalization/current-v43/tools/inventory_common.py": "b8e09310480b596b67808254bc32ae8c2b80c428971a6c87cde092469edfed42",
+    "papers/randomized-additive-hardness/formalization/current-v43/tools/inventory_config.py": "2930158330c83d2bf11a1e0578d90a0aa71a3d9be4755931c5360dfbcb43a304",
+    "papers/randomized-additive-hardness/versions/v43/source/main.tex": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
+    "papers/randomized-additive-hardness/versions/v43/source/references.bib": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31",
+    "papers/randomized-additive-hardness/versions/v43/MANIFEST.json": "d502361768054695261369b47698dd0f0959810e285112865e40055fa6828f0e",
+    "lean-toolchain": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
+    "lake-manifest.json": "04dbf24af77f6d3c2aed0610d0fb1aebcd588b61e5271c0774e5af9e972846d6",
+    "lakefile.toml": "e83fe8edb8169cb3cd28020a0708f438c8d8ef610fb0c98022e2181079c16cb2"
+  },
+  "fresh_project_replay": false,
+  "public_package_replay_complete": false,
+  "scope": "Final production aggregate build and effective/raw audits, complete provider output and exact compiled-source closure. Existing project/dependency objects may be reused. This is not manuscript correspondence or a public-package verification receipt.",
+  "source_manifest_sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200",
+  "finished_utc": "2026-11-02T08:26:11.251287+00:00",
+  "source_snapshot_sha256": "c68e19bdec8f24c76db85247cd3aecb20f10795534cfffcf9a50fafe90a86e07"
+}

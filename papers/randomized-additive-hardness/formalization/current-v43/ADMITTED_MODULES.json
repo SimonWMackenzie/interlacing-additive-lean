@@ -1,0 +1,674 @@
+{
+  "modules": [
+    {
+      "module": "CurrentV43.TimeTradeoff.Numerics",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/Numerics.lean",
+      "sha256": "6acb56159c5ffce9b01cb67dda09963945f703fafea4080e1fe87469d3ff5d4e",
+      "reviewed_private_sha256": "6acb56159c5ffce9b01cb67dda09963945f703fafea4080e1fe87469d3ff5d4e",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/2e1630ec40ad11ec592563d68f78ef5dc5d692a8fe28212426369cd7d46e7cae/review-rate-REVIEW_NUMERICS.md",
+      "review_sha256": "2e1630ec40ad11ec592563d68f78ef5dc5d692a8fe28212426369cd7d46e7cae",
+      "scope": "Independently reviewed component only; final endpoint and production build acceptance remain separate."
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.Accuracy",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/Accuracy.lean",
+      "sha256": "158a1585e19915c1fbce290c3e613618f5f8a8a174c25bc33518291942e31577",
+      "reviewed_private_sha256": "3ea2a6304d863ae1d0ea5c506e2070e07a6146cdcd2328526e3fc9ff4579615a",
+      "adaptation": {
+        "import V43TimeTradeoff.Numerics": "import CurrentV43.TimeTradeoff.Numerics"
+      },
+      "review": "release-evidence/ccb215dd1606720d554e94f6d8ffd5e6157b6c4dba99b1f7a8af0b5445f95201/review-composition-REVIEW.md",
+      "review_sha256": "ccb215dd1606720d554e94f6d8ffd5e6157b6c4dba99b1f7a8af0b5445f95201",
+      "scope": "Independently reviewed component only; final endpoint and production build acceptance remain separate."
+    },
+    {
+      "module": "CurrentV43.RandomizedArithmetic",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/RandomizedArithmetic.lean",
+      "sha256": "0f3d9110b1d2e38c9874a20225e2f6d9a30fe64c76a4e3a62382ddd20fe5893d",
+      "reviewed_private_sha256": "0f3d9110b1d2e38c9874a20225e2f6d9a30fe64c76a4e3a62382ddd20fe5893d",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/c39028e545fa6d6fdb57f08366146efd95c2855ef011b1f398f5ce9627680beb/review-rate-REVIEW_RANDOMIZED_RATE.md",
+      "review_sha256": "c39028e545fa6d6fdb57f08366146efd95c2855ef011b1f398f5ce9627680beb",
+      "scope": "Independently reviewed component only; final endpoint and production build acceptance remain separate."
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.SourceBounds",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/SourceBounds.lean",
+      "sha256": "a7e8a4816f9faf608c32f0d767093bf48f5a4634bf6e0980b06ee03166d71d7f",
+      "reviewed_private_sha256": "646afb1b56b0d389c4f4ae9ea9ef1b87061f70f084dc1776d153488414894cee",
+      "adaptation": {
+        "import V43TimeTradeoff.Accuracy": "import CurrentV43.TimeTradeoff.Accuracy"
+      },
+      "review": "release-evidence/97a5d118885782b91a2354e5072afd6e0ff5e5a3b16b3a19a739abc793b54e89/review-composition-REVIEW_SOURCE_BOUNDS.md",
+      "review_sha256": "97a5d118885782b91a2354e5072afd6e0ff5e5a3b16b3a19a739abc793b54e89",
+      "scope": "Independently reviewed proof at the exact scope in the linked review; production build and final release acceptance remain separate."
+    },
+    {
+      "module": "CurrentV43.PowerMachine",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/PowerMachine.lean",
+      "sha256": "e569493d11bcc29d402095831ec66e6a13b9918fe1b65aebc25962ca68ee42a4",
+      "reviewed_private_sha256": "e569493d11bcc29d402095831ec66e6a13b9918fe1b65aebc25962ca68ee42a4",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/bb35657ad28f4223098dc5902e073e3b6cabfed1180e94c74ca0629aa9cc77e8/power-schedule-review-REPORT.md",
+      "review_sha256": "bb35657ad28f4223098dc5902e073e3b6cabfed1180e94c74ca0629aa9cc77e8",
+      "scope": "Independently reviewed proof at the exact scope in the linked review; production build and final release acceptance remain separate."
+    },
+    {
+      "module": "CurrentV43.ResourcePower",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/ResourcePower.lean",
+      "sha256": "d593936e25bbd194defa8a7303e4959143577e0cb56b82629de0b77a033d1fb1",
+      "reviewed_private_sha256": "d593936e25bbd194defa8a7303e4959143577e0cb56b82629de0b77a033d1fb1",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/bb35657ad28f4223098dc5902e073e3b6cabfed1180e94c74ca0629aa9cc77e8/power-schedule-review-REPORT.md",
+      "review_sha256": "bb35657ad28f4223098dc5902e073e3b6cabfed1180e94c74ca0629aa9cc77e8",
+      "scope": "Independently reviewed proof at the exact scope in the linked review; production build and final release acceptance remain separate."
+    },
+    {
+      "module": "CurrentV43.DeterministicRate",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/DeterministicRate.lean",
+      "sha256": "0fcb84e9eb6b89bdb0061765adc1b72013712c83bf9f71f82b5dac30872ef624",
+      "reviewed_private_sha256": "0fcb84e9eb6b89bdb0061765adc1b72013712c83bf9f71f82b5dac30872ef624",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/79d8a14fa888aed004bcbe9cf557e404ed24b315c58be21758caba1dea370870/review-deterministic-REVIEW.md",
+      "review_sha256": "79d8a14fa888aed004bcbe9cf557e404ed24b315c58be21758caba1dea370870",
+      "scope": "Independently reviewed proof at the exact scope in the linked review; production build and final release acceptance remain separate."
+    },
+    {
+      "module": "CurrentV43.DeterministicRateReal",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/DeterministicRateReal.lean",
+      "sha256": "f6d17b17698a596df9827b0339f15bd60263fa36f140a6025415aea418790b75",
+      "reviewed_private_sha256": "835e7d77cd6de98aba160036d8d586f4ff45e05f600b7f89500b88ae3b2dd05c",
+      "adaptation": {
+        "import V43DeterministicRate": "import CurrentV43.DeterministicRate"
+      },
+      "review": "release-evidence/79d8a14fa888aed004bcbe9cf557e404ed24b315c58be21758caba1dea370870/review-deterministic-REVIEW.md",
+      "review_sha256": "79d8a14fa888aed004bcbe9cf557e404ed24b315c58be21758caba1dea370870",
+      "scope": "Independently reviewed proof at the exact scope in the linked review; production build and final release acceptance remain separate."
+    },
+    {
+      "module": "CurrentV43.Parametric.Source",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Parametric/Source.lean",
+      "sha256": "cd402174082883d3f64b3f4a9e5067ceeacf4f6feefac46ed3ed297f1a0e65f5",
+      "reviewed_private_sha256": "cd402174082883d3f64b3f4a9e5067ceeacf4f6feefac46ed3ed297f1a0e65f5",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/aea8840b883f98a2a1b5f03ef2164e35860caf0063625f5cd1274f7914fec458/review-composition-REVIEW_CALLER_REVISION2.md",
+      "review_sha256": "aea8840b883f98a2a1b5f03ef2164e35860caf0063625f5cd1274f7914fec458",
+      "scope": "Independently reviewed component; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Parametric.Carrier",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Parametric/Carrier.lean",
+      "sha256": "ba5d13e62390b9c74ebf555e5066f511de359cf668bc1ad844035136c86fa477",
+      "reviewed_private_sha256": "615b0d01f3c03a204b7eb96e51a2c7b91da2253a68945373b2294afc16fce149",
+      "adaptation": {
+        "import V43Parametric.Source": "import CurrentV43.Parametric.Source"
+      },
+      "review": "release-evidence/aea8840b883f98a2a1b5f03ef2164e35860caf0063625f5cd1274f7914fec458/review-composition-REVIEW_CALLER_REVISION2.md",
+      "review_sha256": "aea8840b883f98a2a1b5f03ef2164e35860caf0063625f5cd1274f7914fec458",
+      "scope": "Independently reviewed component; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Parametric.Caller",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Parametric/Caller.lean",
+      "sha256": "1ceb2704fa40770a61e3fb05a4964ed047b14e2a9e4e634c0e456fc62db2533e",
+      "reviewed_private_sha256": "d4d94541252eb47d0cc202210cb9957e2bb1fcb1ce73883a5014a06d18099f3e",
+      "adaptation": {
+        "import V43Parametric.Carrier": "import CurrentV43.Parametric.Carrier"
+      },
+      "review": "release-evidence/aea8840b883f98a2a1b5f03ef2164e35860caf0063625f5cd1274f7914fec458/review-composition-REVIEW_CALLER_REVISION2.md",
+      "review_sha256": "aea8840b883f98a2a1b5f03ef2164e35860caf0063625f5cd1274f7914fec458",
+      "scope": "Independently reviewed component; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.PowerSchedule",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/PowerSchedule.lean",
+      "sha256": "4d3b480f64bcaef3c13e0bb6460def6410a22ca3472fe06737b503852d11177e",
+      "reviewed_private_sha256": "4d3b480f64bcaef3c13e0bb6460def6410a22ca3472fe06737b503852d11177e",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/43333ccfe80419d28144c9dad01863e63799fb9f7a7e5cb9c8be38d45de3508c/deterministic-review-power-schedule-REVIEW.md",
+      "review_sha256": "43333ccfe80419d28144c9dad01863e63799fb9f7a7e5cb9c8be38d45de3508c",
+      "scope": "Independently reviewed component; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.PowerSchedulePaid",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/PowerSchedulePaid.lean",
+      "sha256": "45165cef5e4658c92eda5bf19c24a3892846164378b79935f385947867ddf30d",
+      "reviewed_private_sha256": "03e6d3d2ee9d3373d3f898474b0ecb6512933833028eb0f071354e5d67132d52",
+      "adaptation": {
+        "import V43PowerSchedule": "import CurrentV43.PowerSchedule"
+      },
+      "review": "release-evidence/43333ccfe80419d28144c9dad01863e63799fb9f7a7e5cb9c8be38d45de3508c/deterministic-review-power-schedule-REVIEW.md",
+      "review_sha256": "43333ccfe80419d28144c9dad01863e63799fb9f7a7e5cb9c8be38d45de3508c",
+      "scope": "Independently reviewed component; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.SourceCorrectness",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/SourceCorrectness.lean",
+      "sha256": "7114b3e21329eb6a9b33372ddd097e77869ac2923849559febc6d6ca74d2b666",
+      "reviewed_private_sha256": "5b9b6eaa561664a310e585896ca49a27847017743b45663e383db45cf61ad9a8",
+      "adaptation": {
+        "import V43TimeTradeoff.SourceBounds": "import CurrentV43.TimeTradeoff.SourceBounds"
+      },
+      "review": "release-evidence/4f196dcf4c57fcaf75872dd0b457848542f891dbb49460110afab2edc033d185/review-composition-REVIEW_GENERAL_CORRECTNESS.md",
+      "review_sha256": "4f196dcf4c57fcaf75872dd0b457848542f891dbb49460110afab2edc033d185",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.DeterministicFront",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/DeterministicFront.lean",
+      "sha256": "0258425d350df3dec93f8f546166ecc3895170d2de3745a3317de42516043746",
+      "reviewed_private_sha256": "6a3bd915b95ee09913110934e0d4ba8b98f68de68ae112be41382c7d8e8cc80b",
+      "adaptation": {
+        "import V43Parametric.Source": "import CurrentV43.Parametric.Source",
+        "import V43TimeTradeoff.SourceBounds": "import CurrentV43.TimeTradeoff.SourceBounds"
+      },
+      "review": "release-evidence/4f196dcf4c57fcaf75872dd0b457848542f891dbb49460110afab2edc033d185/review-composition-REVIEW_GENERAL_CORRECTNESS.md",
+      "review_sha256": "4f196dcf4c57fcaf75872dd0b457848542f891dbb49460110afab2edc033d185",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.ErrorNonnegative",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/ErrorNonnegative.lean",
+      "sha256": "f869f9d8d69495bf9767b7bd74f11abba6546740a3de47670e1e2278cd293aa0",
+      "reviewed_private_sha256": "5690e1adc9e1a66321c41e565004f3fbb1085d823583226326ea7e5fbad85ee6",
+      "adaptation": {
+        "import V43TimeTradeoff.SourceCorrectness": "import CurrentV43.TimeTradeoff.SourceCorrectness"
+      },
+      "review": "release-evidence/4f196dcf4c57fcaf75872dd0b457848542f891dbb49460110afab2edc033d185/review-composition-REVIEW_GENERAL_CORRECTNESS.md",
+      "review_sha256": "4f196dcf4c57fcaf75872dd0b457848542f891dbb49460110afab2edc033d185",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Parametric.Resource",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Parametric/Resource.lean",
+      "sha256": "8102078e0b16c7b530594995113ae48e83fe979d8b8bd03aa9ebecaa8e883a32",
+      "reviewed_private_sha256": "6c97f483aa56384e86e95441b7c0250dddee1654116aa3005112686be275af91",
+      "adaptation": {
+        "import V43Parametric.Carrier": "import CurrentV43.Parametric.Carrier"
+      },
+      "review": "release-evidence/b3756f80aba0eefbd103ed812ea810a9e0be3dc70d35078240647fc77dd865b6/review-deterministic-shared-SHARED_REVIEW.md",
+      "review_sha256": "b3756f80aba0eefbd103ed812ea810a9e0be3dc70d35078240647fc77dd865b6",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Parametric.Algorithm",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Parametric/Algorithm.lean",
+      "sha256": "d3116d9d788f04c8694d98de43ce65ffde2a7825e66164af4849ad1191981b06",
+      "reviewed_private_sha256": "32da3962cf8b2f0e850b9e0616574c3ca4d512f7e16eef0afa85932933dae214",
+      "adaptation": {
+        "import V43Parametric.Carrier": "import CurrentV43.Parametric.Carrier"
+      },
+      "review": "release-evidence/b3756f80aba0eefbd103ed812ea810a9e0be3dc70d35078240647fc77dd865b6/review-deterministic-shared-SHARED_REVIEW.md",
+      "review_sha256": "b3756f80aba0eefbd103ed812ea810a9e0be3dc70d35078240647fc77dd865b6",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Parametric.Timing",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Parametric/Timing.lean",
+      "sha256": "fcb42ddae9f121ccf1b35b32ec69b873b48ff2153d17f5703de4b7a1e35878a6",
+      "reviewed_private_sha256": "0371765ff762140952d1722cb496a0b3c83f0f86ab4f48fa1025724bfc6d2417",
+      "adaptation": {
+        "import V43Parametric.Caller": "import CurrentV43.Parametric.Caller"
+      },
+      "review": "release-evidence/b3756f80aba0eefbd103ed812ea810a9e0be3dc70d35078240647fc77dd865b6/review-deterministic-shared-SHARED_REVIEW.md",
+      "review_sha256": "b3756f80aba0eefbd103ed812ea810a9e0be3dc70d35078240647fc77dd865b6",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Request",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/MixedCaller/Request.lean",
+      "sha256": "c3a3fb6174be302f4d83c02d56f8fde5d7ddf745a78ae46a34ba829f6d7be682",
+      "reviewed_private_sha256": "c3a3fb6174be302f4d83c02d56f8fde5d7ddf745a78ae46a34ba829f6d7be682",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb/unary-power-review-mixed-CORE_REVIEW.txt",
+      "review_sha256": "b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Resource",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/MixedCaller/Resource.lean",
+      "sha256": "59672a24638c4a237152c712d7f8b93c6b829826e95d9a1ba109cacfe922fbbf",
+      "reviewed_private_sha256": "16e64c94aba4375e3e0ca73fc44a27b5c232014b1d106607c04cd632facac362",
+      "adaptation": {
+        "import V43Parametric.Carrier": "import CurrentV43.Parametric.Carrier"
+      },
+      "review": "release-evidence/b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb/unary-power-review-mixed-CORE_REVIEW.txt",
+      "review_sha256": "b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Accounting",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/MixedCaller/Accounting.lean",
+      "sha256": "e0a8eca8d7e53803766db7fdc2a1741384b872d54a7b41c106b986ca3309982b",
+      "reviewed_private_sha256": "e0a8eca8d7e53803766db7fdc2a1741384b872d54a7b41c106b986ca3309982b",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb/unary-power-review-mixed-CORE_REVIEW.txt",
+      "review_sha256": "b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.DeterministicCaller",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/DeterministicCaller.lean",
+      "sha256": "11b9f20d13f9fe5a1f494ee28e9248f7e36aa1ee3a0150c8beb4beb13d40c8e0",
+      "reviewed_private_sha256": "fc2032b1e7720eccf6b577a086e72a0dca848bd66142183ab63aae1dba2e19d3",
+      "adaptation": {
+        "import V43TimeTradeoff.DeterministicFront": "import CurrentV43.TimeTradeoff.DeterministicFront"
+      },
+      "review": "release-evidence/4f196dcf4c57fcaf75872dd0b457848542f891dbb49460110afab2edc033d185/review-composition-REVIEW_GENERAL_CORRECTNESS.md",
+      "review_sha256": "4f196dcf4c57fcaf75872dd0b457848542f891dbb49460110afab2edc033d185",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Caller",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/MixedCaller/Caller.lean",
+      "sha256": "64d46aec47484559f50f0ba471e728389efd508d48bbd3985df034cfd123afc1",
+      "reviewed_private_sha256": "b47cab573e5319ba093b8fb536e0777896ec9557163f8a22cd12eb31b7ee2f40",
+      "adaptation": {
+        "import V43TimeTradeoff.DeterministicCaller": "import CurrentV43.TimeTradeoff.DeterministicCaller"
+      },
+      "review": "release-evidence/b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb/unary-power-review-mixed-CORE_REVIEW.txt",
+      "review_sha256": "b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Charge",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/MixedCaller/Charge.lean",
+      "sha256": "c30a615d25cc61d83fda17f45c9fb7a6cde5378f748e3c16ee1e3e1886568130",
+      "reviewed_private_sha256": "c30a615d25cc61d83fda17f45c9fb7a6cde5378f748e3c16ee1e3e1886568130",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb/unary-power-review-mixed-CORE_REVIEW.txt",
+      "review_sha256": "b5926a46737bad9699f99e68b4090debc09841c61d53a225ac363040baa0cdbb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.ResourceFit",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/ResourceFit.lean",
+      "sha256": "9c25e1b2fe9dd777761eaaf160fadb79d5f15fda08272f0079e890c3a1ddf478",
+      "reviewed_private_sha256": "3edc07026331be48d0a0e1e0a174e4d1014bb57dc0b94bc06cb288be10a63c7f",
+      "adaptation": {
+        "import V43Parametric.Source": "import CurrentV43.Parametric.Source",
+        "import V43Parametric.Carrier": "import CurrentV43.Parametric.Carrier",
+        "import V43TimeTradeoff.SourceBounds": "import CurrentV43.TimeTradeoff.SourceBounds"
+      },
+      "review": "release-evidence/5780e98f01f65caf18e0562f967863d591ac734031666141c3f53714abae19cc/review-deterministic-shared-FIT_REVIEW.md",
+      "review_sha256": "5780e98f01f65caf18e0562f967863d591ac734031666141c3f53714abae19cc",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Parametric.Probability",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Parametric/Probability.lean",
+      "sha256": "03f7f1da4092a441e79eb47ff24e14f361664abbfd04e4045aff274c88d5c946",
+      "reviewed_private_sha256": "25e664a5c9e9db0155b6bea41f183313be03784066aff4a8bc3839b3978a7e58",
+      "adaptation": {
+        "import V43Parametric.Caller": "import CurrentV43.Parametric.Caller"
+      },
+      "review": "release-evidence/62b6f27283627ef490fb03a3c22ca35c146ea1386647e284372de9dd248c474c/review-composition-REVIEW_RANDOMIZED_CONSTRUCTION_JOIN.md",
+      "review_sha256": "62b6f27283627ef490fb03a3c22ca35c146ea1386647e284372de9dd248c474c",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.RequestClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/RequestClock.lean",
+      "sha256": "97fff69ce5c8781e63ff5da046688d2ba98275b7caf792c72bf214b89e4095a7",
+      "reviewed_private_sha256": "a252929ff7dc8d26c03fc67806320a5d2655a7013221a745c5ab1ea389f9f475",
+      "adaptation": {
+        "import V43TimeTradeoff.DeterministicCaller": "import CurrentV43.TimeTradeoff.DeterministicCaller"
+      },
+      "review": "release-evidence/227506423ae1814b62473016146c60725883ccd6ae13ac30f861539efdb3179d/review-final-det-REVIEW.md",
+      "review_sha256": "227506423ae1814b62473016146c60725883ccd6ae13ac30f861539efdb3179d",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.DeterministicEndpoint",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/DeterministicEndpoint.lean",
+      "sha256": "d2ea9e2d4061cb0dd26e58c5f90e9d74db45d23f2b069dfb942f89e88e8b3f62",
+      "reviewed_private_sha256": "048a918dc0dac1d769393a7cab424ecb3b6196773d343563d6c79e0a957f2663",
+      "adaptation": {
+        "import V43TimeTradeoff.RequestClock": "import CurrentV43.TimeTradeoff.RequestClock",
+        "import V43TimeTradeoff.ErrorNonnegative": "import CurrentV43.TimeTradeoff.ErrorNonnegative"
+      },
+      "review": "release-evidence/227506423ae1814b62473016146c60725883ccd6ae13ac30f861539efdb3179d/review-final-det-REVIEW.md",
+      "review_sha256": "227506423ae1814b62473016146c60725883ccd6ae13ac30f861539efdb3179d",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.CommonConstants",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/TimeTradeoff/CommonConstants.lean",
+      "sha256": "6c7fe45dabad6c877ee61b6d3dd0231fe905e6f1c579513cf0b47b80601953a3",
+      "reviewed_private_sha256": "5bc57bc8b705afeefd273575bd03825c5ef3c869ed95c934e8dcc6a66a088774",
+      "adaptation": {
+        "import V43TimeTradeoff.DeterministicEndpoint": "import CurrentV43.TimeTradeoff.DeterministicEndpoint"
+      },
+      "review": "release-evidence/227506423ae1814b62473016146c60725883ccd6ae13ac30f861539efdb3179d/review-final-det-REVIEW.md",
+      "review_sha256": "227506423ae1814b62473016146c60725883ccd6ae13ac30f861539efdb3179d",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Bounds",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/MixedCaller/Bounds.lean",
+      "sha256": "ba6b75cea28f21c61b2c212062d826408d9388175dce1bd5a9d03c2dee32eb18",
+      "reviewed_private_sha256": "238f7bdd0a0c3f7a79712e5d6ffca58aa0ed369925e6a351e0dc9f1ed559bd31",
+      "adaptation": {
+        "import V43TimeTradeoff.ErrorNonnegative": "import CurrentV43.TimeTradeoff.ErrorNonnegative"
+      },
+      "review": "release-evidence/50d9e6afa72133888eaa43fa49109727c1de83177710a4acd9445ff2fe8c4d75/unary-power-review-mixed-ENDPOINT_REVIEW.txt",
+      "review_sha256": "50d9e6afa72133888eaa43fa49109727c1de83177710a4acd9445ff2fe8c4d75",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Sparse",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/MixedCaller/Sparse.lean",
+      "sha256": "e591b0f6dbab7e211ad0d7bc76e86f82ddfcd1c3131d6b6bd2fb1833247086c1",
+      "reviewed_private_sha256": "3975588fad1ea79e91b5fe49af7fb94d3919d9b7862dcf5f0b4e522c4f161c48",
+      "adaptation": {
+        "import V43TimeTradeoff.RequestClock": "import CurrentV43.TimeTradeoff.RequestClock"
+      },
+      "review": "release-evidence/50d9e6afa72133888eaa43fa49109727c1de83177710a4acd9445ff2fe8c4d75/unary-power-review-mixed-ENDPOINT_REVIEW.txt",
+      "review_sha256": "50d9e6afa72133888eaa43fa49109727c1de83177710a4acd9445ff2fe8c4d75",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Endpoint",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/MixedCaller/Endpoint.lean",
+      "sha256": "6a3b3f996b8334e93a28399722e96a614345b1a3f4219bc1661b6fdfc3fe0766",
+      "reviewed_private_sha256": "11d437c75fb4ba9a2496a288a32e7b0ac444d41cf19643e98d12209571b671eb",
+      "adaptation": {
+        "import V43Parametric.Algorithm": "import CurrentV43.Parametric.Algorithm"
+      },
+      "review": "release-evidence/50d9e6afa72133888eaa43fa49109727c1de83177710a4acd9445ff2fe8c4d75/unary-power-review-mixed-ENDPOINT_REVIEW.txt",
+      "review_sha256": "50d9e6afa72133888eaa43fa49109727c1de83177710a4acd9445ff2fe8c4d75",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.MixedCaller.LargerBound",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/MixedCaller/LargerBound.lean",
+      "sha256": "76d8081343f288c720e9bd96cec04bb80c0169149e280a22528485ed3b558664",
+      "reviewed_private_sha256": "76d8081343f288c720e9bd96cec04bb80c0169149e280a22528485ed3b558664",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/50d9e6afa72133888eaa43fa49109727c1de83177710a4acd9445ff2fe8c4d75/unary-power-review-mixed-ENDPOINT_REVIEW.txt",
+      "review_sha256": "50d9e6afa72133888eaa43fa49109727c1de83177710a4acd9445ff2fe8c4d75",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.ResourceClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/ResourceClock.lean",
+      "sha256": "6b5a906f3eb976fb01b47f53b46a246e170d2dd204d1721eed22c2cc6483e557",
+      "reviewed_private_sha256": "4e6ec1c150774e84c1c36a14bf56de79bd89325750de624d30c54375706d925b",
+      "adaptation": {
+        "import V43TimeTradeoff.SourceBounds": "import CurrentV43.TimeTradeoff.SourceBounds",
+        "import V43Parametric.Caller": "import CurrentV43.Parametric.Caller"
+      },
+      "review": "release-evidence/eee4f658b66ff1e628495969972581a826f9c4be26f6bf3f4768f01d8ee153cf/review-deterministic-shared-CLOCK_TOTAL_REVIEW.md",
+      "review_sha256": "eee4f658b66ff1e628495969972581a826f9c4be26f6bf3f4768f01d8ee153cf",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.ResourceTotal",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/ResourceTotal.lean",
+      "sha256": "6913c46d11502356e021787e7360e0d03730d9094d7a15333e2081cef8a91e36",
+      "reviewed_private_sha256": "846de204da1838d38d3426c831033add65c6dab5b02ef7b2e56d0379f1a3c9b3",
+      "adaptation": {
+        "import V43ResourceClock": "import CurrentV43.ResourceClock",
+        "import V43ResourceFit": "import CurrentV43.ResourceFit",
+        "import V43Parametric.Resource": "import CurrentV43.Parametric.Resource",
+        "import V43Parametric.Timing": "import CurrentV43.Parametric.Timing",
+        "import V43Parametric.Algorithm": "import CurrentV43.Parametric.Algorithm"
+      },
+      "review": "release-evidence/eee4f658b66ff1e628495969972581a826f9c4be26f6bf3f4768f01d8ee153cf/review-deterministic-shared-CLOCK_TOTAL_REVIEW.md",
+      "review_sha256": "eee4f658b66ff1e628495969972581a826f9c4be26f6bf3f4768f01d8ee153cf",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.Source",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Source.lean",
+      "sha256": "31e39ebfadcaa833c8572f5823abfaeda83d46942f4001ede9699b51fe169cca",
+      "reviewed_private_sha256": "fe79a9e0f9849c927d6df629c3c9eff750bc582a3b43ae686e856e800e05b333",
+      "adaptation": {
+        "import V43RandomizedRate": "import CurrentV43.RandomizedArithmetic"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.Parameters",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Parameters.lean",
+      "sha256": "c307bb4ed306b1c608f49844032060c18ee22c5285ca5615e57890463af70ef8",
+      "reviewed_private_sha256": "ee4624fa8f99e0d2ce91139cd5d87f780e5b8560ddd1d9a48dcf7160fc258577",
+      "adaptation": {
+        "import V43RandomizedSource": "import CurrentV43.Randomized.Source"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.Router",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Router.lean",
+      "sha256": "4cb1cb4d54820e2df1d1c352f9667698bffee05f1919bc57c387416a6d517531",
+      "reviewed_private_sha256": "40af7ca44ae69b4e11e28ede81c00afbb8b7241911b08774e1a0a69f99a63ed7",
+      "adaptation": {
+        "import V43RandomizedSource": "import CurrentV43.Randomized.Source",
+        "import V43Parametric.Carrier": "import CurrentV43.Parametric.Carrier"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.Clock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Clock.lean",
+      "sha256": "0f7b5ae2108086bcec91eddcbe22ff932df75ebc305f76393bbda8f05bb6eba7",
+      "reviewed_private_sha256": "03b52ff2d93373dfaf0d49a1fabeb560c5dcc4f7e1d2ba5b2828ab69af268e87",
+      "adaptation": {
+        "import V43RandomizedSource": "import CurrentV43.Randomized.Source",
+        "import V43PowerSchedulePaid": "import CurrentV43.PowerSchedulePaid"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.Algorithm",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Algorithm.lean",
+      "sha256": "f05ea786b2cde2c3319a4f49f6d5d6614ce789504a0f89da7b1c14ac65ad5281",
+      "reviewed_private_sha256": "aa6d02ebbddc9dd278feaf1b84b6735faa188dc3063ff9f063f6c20c1a5de4b6",
+      "adaptation": {
+        "import V43RandomizedRouter": "import CurrentV43.Randomized.Router",
+        "import V43RandomizedParameters": "import CurrentV43.Randomized.Parameters",
+        "import V43Parametric.Algorithm": "import CurrentV43.Parametric.Algorithm",
+        "import V43Parametric.Timing": "import CurrentV43.Parametric.Timing"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.OuterClock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/OuterClock.lean",
+      "sha256": "cd8f956fc68b22fc5c63156eaf96f50bf300b94451f504f98e14933ee019b66d",
+      "reviewed_private_sha256": "53f1ee8dc455764a494841bff033a05d1e26845160d5ae0bd7b3c49614d27f25",
+      "adaptation": {
+        "import V43RandomizedAlgorithm": "import CurrentV43.Randomized.Algorithm",
+        "import V43RandomizedClock": "import CurrentV43.Randomized.Clock"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.Concrete",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Concrete.lean",
+      "sha256": "75957f2b3278ea0259b65ca95808235a9b3cebc94baeb02665512a85776792d8",
+      "reviewed_private_sha256": "5930cb5e1513243a266b07e8a2b302dc5a3839dcc598ad269c87ac5013cb30fb",
+      "adaptation": {
+        "import V43RandomizedAlgorithm": "import CurrentV43.Randomized.Algorithm",
+        "import V43RandomizedClock": "import CurrentV43.Randomized.Clock",
+        "import V43PowerSchedulePaid": "import CurrentV43.PowerSchedulePaid",
+        "import V43ResourceFit": "import CurrentV43.ResourceFit",
+        "import V43Parametric.Resource": "import CurrentV43.Parametric.Resource"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.Probability",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Probability.lean",
+      "sha256": "b22da9f50b59da987737332d7bbf29e325a047740ab36e097ac81c04aa782771",
+      "reviewed_private_sha256": "a69d35af4bf4660928cc0d6b84997a9e610c24e28c6b57d7a23c974f06440f4e",
+      "adaptation": {
+        "import V43RandomizedParameters": "import CurrentV43.Randomized.Parameters",
+        "import V43Parametric.Probability": "import CurrentV43.Parametric.Probability"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.AlgorithmLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/AlgorithmLaw.lean",
+      "sha256": "98011dbf49c772b254472f70c4378c3b30f3726a780cf867b0a5babfff4437cc",
+      "reviewed_private_sha256": "14963fb8d6b914f1663561558851ce60fdd32a61b75967625ba2f65e10bd8e51",
+      "adaptation": {
+        "import V43RandomizedAlgorithm": "import CurrentV43.Randomized.Algorithm",
+        "import V43RandomizedProbability": "import CurrentV43.Randomized.Probability"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.ConcreteLaw",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/ConcreteLaw.lean",
+      "sha256": "54520318a1dbcccd3c2e6b985576d1f0ec342887e6f238b369761681e5abb302",
+      "reviewed_private_sha256": "21bf80fb3038acb98e5da7720f7f36d3ce3752fc6853dba7ffcdc18ba39bafca",
+      "adaptation": {
+        "import V43RandomizedConcrete": "import CurrentV43.Randomized.Concrete",
+        "import V43RandomizedAlgorithmLaw": "import CurrentV43.Randomized.AlgorithmLaw"
+      },
+      "review": "release-evidence/12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb/review-composition-REVIEW_RANDOMIZED_SUPPORT_CLOSURE.md",
+      "review_sha256": "12795d345f2255cf2c0e31fcd39603705997f4b007aef1922e0a64a3972531fb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Estimator",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/GeneralRandom/Estimator.lean",
+      "sha256": "4f8b651217b0fb4cb66f0bf45d2355556e9688cf7fd3aa1eb8474cda0ef8e1a9",
+      "reviewed_private_sha256": "8e3e554a94985fc0b18e4c9e8974777431e5e6cdedd2fa6bc254b36b59de70ad",
+      "adaptation": {
+        "import V43TimeTradeoff.ErrorNonnegative": "import CurrentV43.TimeTradeoff.ErrorNonnegative",
+        "import V43RandomizedParameters": "import CurrentV43.Randomized.Parameters"
+      },
+      "review": "release-evidence/bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30/review-composition-REVIEW_GENERIC_RANDOMIZED_ENDPOINT.md",
+      "review_sha256": "bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Source",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/GeneralRandom/Source.lean",
+      "sha256": "d062029880bad1cb9ead4445f9ad849e340e9ed7a063eca8e55e5f3262054f4c",
+      "reviewed_private_sha256": "9fab623c225e37fd5571b1f2bf116e77596bf6aec72ba3f409dc49c0f5455cea",
+      "adaptation": {
+        "import GeneralRandom.Estimator": "import CurrentV43.GeneralRandom.Estimator",
+        "import V43Parametric.Source": "import CurrentV43.Parametric.Source"
+      },
+      "review": "release-evidence/bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30/review-composition-REVIEW_GENERIC_RANDOMIZED_ENDPOINT.md",
+      "review_sha256": "bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Algorithm",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/GeneralRandom/Algorithm.lean",
+      "sha256": "324a4fad0af0caed00253884ff6c7e6e4f951dd52a5233742ee3bcf2fa4332e8",
+      "reviewed_private_sha256": "d740426bdbda6d0746ddb762c7bfb397ac754e667348afff43dd7c19e7b61c39",
+      "adaptation": {
+        "import GeneralRandom.Source": "import CurrentV43.GeneralRandom.Source",
+        "import V43RandomizedAlgorithmLaw": "import CurrentV43.Randomized.AlgorithmLaw",
+        "import V43ResourceFit": "import CurrentV43.ResourceFit",
+        "import V43Parametric.Resource": "import CurrentV43.Parametric.Resource"
+      },
+      "review": "release-evidence/bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30/review-composition-REVIEW_GENERIC_RANDOMIZED_ENDPOINT.md",
+      "review_sha256": "bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Clock",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/GeneralRandom/Clock.lean",
+      "sha256": "10e783fab1353f26feda0ce56c7644f88c2a88ddd6c636a84a336ec2c81b9952",
+      "reviewed_private_sha256": "924b4bbcc8fbad331442e755ff863ef10a096560d3266afb43bbc4ed02a8776d",
+      "adaptation": {
+        "import GeneralRandom.Algorithm": "import CurrentV43.GeneralRandom.Algorithm",
+        "import V43ResourceTotal": "import CurrentV43.ResourceTotal"
+      },
+      "review": "release-evidence/bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30/review-composition-REVIEW_GENERIC_RANDOMIZED_ENDPOINT.md",
+      "review_sha256": "bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Endpoint",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/GeneralRandom/Endpoint.lean",
+      "sha256": "23bdd8f71840840a690458b87e7be822469756483547e9dd8a8b2e1cc541fe59",
+      "reviewed_private_sha256": "c7f820fc07ef1850b317385ea2e688b5e3993f0322ad195103f9d12a61423fbb",
+      "adaptation": {
+        "import GeneralRandom.Clock": "import CurrentV43.GeneralRandom.Clock"
+      },
+      "review": "release-evidence/bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30/review-composition-REVIEW_GENERIC_RANDOMIZED_ENDPOINT.md",
+      "review_sha256": "bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.Runtime",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Runtime.lean",
+      "sha256": "5ae1f86bc3cb625b6eeced17b3040832b0be82c5ebff06f6bbc107feeaa7eee8",
+      "reviewed_private_sha256": "3b58fe48088297459ec39ad20c22732d23112875bc76fd0eb692b465e259a569",
+      "adaptation": {
+        "import V43RandomizedConcrete": "import CurrentV43.Randomized.Concrete",
+        "import V43RandomizedOuterClock": "import CurrentV43.Randomized.OuterClock",
+        "import V43ResourceTotal": "import CurrentV43.ResourceTotal"
+      },
+      "review": "release-evidence/80f93f8d652e4fc1d5830fff706ca8d2ec99b52e93bc109c315d1cbf78627d81/review-composition-REVIEW_RANDOMIZED_FINAL_ENDPOINT.md",
+      "review_sha256": "80f93f8d652e4fc1d5830fff706ca8d2ec99b52e93bc109c315d1cbf78627d81",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.Randomized.Endpoint",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Endpoint.lean",
+      "sha256": "4cbec31d01c6634d9105adb680e2e6f75d7f4e895940f222b75c465b8a3ef88a",
+      "reviewed_private_sha256": "9dd3ef4ea78ff2d55651a0e536ed84ff2db5fa96febb4e27a491c4bab99e703f",
+      "adaptation": {
+        "import V43RandomizedConcreteLaw": "import CurrentV43.Randomized.ConcreteLaw",
+        "import V43RandomizedRuntime": "import CurrentV43.Randomized.Runtime"
+      },
+      "review": "release-evidence/80f93f8d652e4fc1d5830fff706ca8d2ec99b52e93bc109c315d1cbf78627d81/review-composition-REVIEW_RANDOMIZED_FINAL_ENDPOINT.md",
+      "review_sha256": "80f93f8d652e4fc1d5830fff706ca8d2ec99b52e93bc109c315d1cbf78627d81",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    },
+    {
+      "module": "CurrentV43.General.Main",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/General/Main.lean",
+      "sha256": "7729e308fe688ce09a6b12435f2cfccef2b94861fc3285face98e9457c273e9e",
+      "reviewed_private_sha256": "4ebf10dbe0e84921c4fb281d0d0036e158804a0c248d8ff4bcdeecc21b6a1adf",
+      "adaptation": {
+        "import V43TimeTradeoff.CommonConstants": "import CurrentV43.TimeTradeoff.CommonConstants",
+        "import GeneralRandom.Endpoint": "import CurrentV43.GeneralRandom.Endpoint"
+      },
+      "review": "release-evidence/1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb/review-deterministic-final-correspondence-REVIEW_THREE_STATEMENTS.md",
+      "review_sha256": "1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb",
+      "scope": "Independently reviewed at the scope in the linked review; final endpoint release acceptance is separate."
+    }
+  ],
+  "superseded_development_admissions": [
+    {
+      "module": "CurrentV43.Parametric.Source",
+      "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Parametric/Source.lean",
+      "sha256": "51248906443499f7a04d6b72ec66629e5e69e49d86a633d61b9876163ef0c15d",
+      "reviewed_private_sha256": "51248906443499f7a04d6b72ec66629e5e69e49d86a633d61b9876163ef0c15d",
+      "adaptation": "Byte-identical",
+      "review": "release-evidence/ccb215dd1606720d554e94f6d8ffd5e6157b6c4dba99b1f7a8af0b5445f95201/review-composition-REVIEW.md",
+      "review_sha256": "ccb215dd1606720d554e94f6d8ffd5e6157b6c4dba99b1f7a8af0b5445f95201",
+      "scope": "Independently reviewed component only; final endpoint and production build acceptance remain separate."
+    }
+  ]
+}

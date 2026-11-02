@@ -1,0 +1,68 @@
+Independent review verdict: ACCEPTED for the exact endpoint extension.
+Date: 2 November 2026. This extends, and does not replace, CORE_REVIEW.txt.
+
+Pinned mixed additions:
+  Bounds.lean      238f7bdd0a0c3f7a79712e5d6ffca58aa0ed369925e6a351e0dc9f1ed559bd31
+  Sparse.lean      3975588fad1ea79e91b5fe49af7fb94d3919d9b7862dcf5f0b4e522c4f161c48
+  Endpoint.lean    11d437c75fb4ba9a2496a288a32e7b0ac444d41cf19643e98d12209571b671eb
+  LargerBound.lean 76d8081343f288c720e9bd96cec04bb80c0169149e280a22528485ed3b558664
+
+The seven original extension modules/dependencies and the added LargerBound
+module all passed independent replay with private imports before production
+imports. Additional dependencies are SourceCorrectness, ErrorNonnegative,
+RequestClock, and the input-dependent finite fair-tape Algorithm interface.
+Their exact hashes are in endpoint-frozen-sha256.json. All recorded audits
+use only propext, Classical.choice, and Quot.sound.
+
+No correctness findings.
+
+Endpoint substance checked:
+1. The request clock is derived from source routing, the actual gap program,
+   actual graph construction and the literal deterministic request builder.
+   G.paid is used only after routing preserves each sufficiently large
+   original sparse formula. No bound of gap(N) by a fixed polynomial in N
+   is inserted.
+2. The actual table's size is bounded by declaredSize, and its entries exceed
+   the accuracy cutoff eventually. Those obligations and error nonnegativity
+   are discharged from the source theorems and ordinary estimator accuracy.
+   They are not final theorem assumptions or completed-decider premises.
+3. Small sparse inputs are sent through the existing physically implemented
+   finite router. The routed formula remains sparse, is sufficiently large,
+   and has exactly the original formula's satisfiability. The actual gap
+   program and estimator run on that same routed formula and request.
+4. The returned FairBitAlgorithm records a real all-raw-input carrier printer
+   and one fixed finite caller, with a run for every tape of its printed
+   length. totalTime pays carrier printing, one unit per fair bit, linear
+   input/tape framing, and every caller transition.
+5. The original formula, not the routed large replacement, controls the
+   eventual runtime bound. Once the original input is large, routing is the
+   identity; the bound is c*S(N,gap(N))^d in its original variable count.
+6. The final existence quantifiers return one algorithm for all sparse
+   formulas. Its correctness and runtime refer to that same algorithm.
+   Error is at most 1/3 and runtime is eventually S^O(1).
+7. LargerBound enlarges the source constant before choosing the estimator or
+   schedule. Monotonicity transfers the strict error-size condition from
+   the larger S to the actual source bound; runtime transfers back upward.
+
+Independent same-object audit:
+EndpointAudit.completed_implication_with_same_physical_machines compiled
+and has only the standard three axioms. It packages the final enlarged-S
+implication with real carrier-printer execution on every raw word and real
+caller execution on every finite tape, all for the same existential F.
+
+Precise scope: this accepts the deterministic-construction/randomized-
+estimator branch in the explicit input-dependent finite fair-tape model,
+relative to the existing Dinur/BOT source parameters, an actual paid gap
+Schedule, and the stated permitted-estimator accuracy assumption. It does
+not assert an ETH hypothesis, a global input-polynomial random-tape bound,
+another branch's completion, or production/publication verification.
+
+Evidence:
+  endpoint-frozen-sha256.json
+  endpoint-replay-results.json
+  endpoint-final-replay-results.json
+  endpoint-axiom-audit.json
+  EndpointAudit.lean and EndpointAudit.log
+  ENDPOINT_RECEIPT.json
+
+Production integration and shared gates remain the root's responsibility.

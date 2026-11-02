@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "version": "v43",
+  "status": "complete_correspondence",
+  "source": {
+    "path": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
+    "bytes": 286206,
+    "sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548"
+  },
+  "source_files": [
+    {
+      "path": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
+      "bytes": 286206,
+      "sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/versions/v43/source/references.bib",
+      "bytes": 16921,
+      "sha256": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31"
+    }
+  ],
+  "pdf": {
+    "path": "papers/randomized-additive-hardness/versions/v43/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf",
+    "bytes": 1014404,
+    "sha256": "d41873487c67cfc37877216534a8721c4ed7fb64e23d5bd18a12509611255fb9"
+  },
+  "input_pins": [
+    {
+      "path": "release-evidence/a02a95dc58599688f5940916aace950cefd5a1bf58dce4ed11fcdba9e2a4aa47/SOURCE_LOCK.json",
+      "bytes": 21921,
+      "sha256": "a02a95dc58599688f5940916aace950cefd5a1bf58dce4ed11fcdba9e2a4aa47"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v42/V42_STATEMENT_MAP.json",
+      "bytes": 1626223,
+      "sha256": "609ec2973ac3807af9201b5813f596e1e0343ce40061f3a681b4c1c7125abf59"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/inspector-v43/INSPECTOR_STATEMENTS.json",
+      "bytes": 383802,
+      "sha256": "06c1a48bfffce6fe5877c16f91659db2b07ad20c388922d36f8dd4802b0db1a7"
+    },
+    {
+      "path": "release-evidence/4f3392c5af2b1e33ed50fbd74452ae9f52a22d76ec8fe5e1ed05723553071107/CORRESPONDENCE_2026-11-02.json",
+      "bytes": 3601,
+      "sha256": "4f3392c5af2b1e33ed50fbd74452ae9f52a22d76ec8fe5e1ed05723553071107"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/versions/v43/MANIFEST.json",
+      "bytes": 739,
+      "sha256": "d502361768054695261369b47698dd0f0959810e285112865e40055fa6828f0e"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/versions/v43/source/main.tex",
+      "bytes": 286206,
+      "sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 25,
+      "sha256": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325"
+    },
+    {
+      "path": "lake-manifest.json",
+      "bytes": 3171,
+      "sha256": "04dbf24af77f6d3c2aed0610d0fb1aebcd588b61e5271c0774e5af9e972846d6"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 1081,
+      "sha256": "e83fe8edb8169cb3cd28020a0708f438c8d8ef610fb0c98022e2181079c16cb2"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v43/tools/capture_current_closure.py",
+      "bytes": 4002,
+      "sha256": "df277ca7325f2f51b346e5d9fd502faf2ae23e33241b3a207bdaa3b6ef31a9d7"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v43/tools/integrate_reviewed_statuses.py",
+      "bytes": 4303,
+      "sha256": "133b772853b1ae1c629e5f16ca63299080651c37c275c34148b76c0b6e54e29b"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v43/tools/inventory_common.py",
+      "bytes": 6670,
+      "sha256": "b8e09310480b596b67808254bc32ae8c2b80c428971a6c87cde092469edfed42"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v43/tools/inventory_config.py",
+      "bytes": 787,
+      "sha256": "2930158330c83d2bf11a1e0578d90a0aa71a3d9be4755931c5360dfbcb43a304"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v43/tools/refresh_inventory.py",
+      "bytes": 11235,
+      "sha256": "f441068e7fdb2f516765371175f51f2506ff24f365528cb503b581d55dc0b46e"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v43/tools/run_tooling_checks.py",
+      "bytes": 7404,
+      "sha256": "eb91ac8001c4055368717729dc4b026f2052953cfdecdb0679d4b92b35021049"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v43/tools/validate_inventory.py",
+      "bytes": 10791,
+      "sha256": "ac3337e8385c67e352e4a05cbf4f4cb4906b789fa3031f8bac665c2590ee9c40"
+    },
+    {
+      "path": "papers/randomized-additive-hardness/formalization/current-v43/tools/BASELINE_SOURCE_BLOCKS.json",
+      "bytes": 46465,
+      "sha256": "59312f8b4ee37f02482c53dd0f6c12a41fafc412e15ab6c79c188a6ad592e207"
+    },
+    {
+      "path": "release-evidence/6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50/DISCLOSURE_REVIEW_2026-11-02.json",
+      "bytes": 781,
+      "sha256": "6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50"
+    },
+    {
+      "path": "release-evidence/3a6d178ca7460ff560072959097dcb3e1d8ada24fb401e2e7a2875b0f913ff24/ADMISSION_REVIEW.json",
+      "bytes": 27298,
+      "sha256": "3a6d178ca7460ff560072959097dcb3e1d8ada24fb401e2e7a2875b0f913ff24"
+    },
+    {
+      "path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
+      "bytes": 2649197,
+      "sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200"
+    },
+    {
+      "path": "release-evidence/292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973/RECEIPT.json",
+      "bytes": 6180,
+      "sha256": "292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973"
+    },
+    {
+      "path": "release-evidence/1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb/REVIEW_THREE_STATEMENTS.md",
+      "bytes": 10916,
+      "sha256": "1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb"
+    },
+    {
+      "path": "release-evidence/41454c59210269c2041169f75f8100b5243712e81d357e4f59fb679ff1fc987f/RECEIPT_THREE_STATEMENTS.json",
+      "bytes": 7975,
+      "sha256": "41454c59210269c2041169f75f8100b5243712e81d357e4f59fb679ff1fc987f"
+    },
+    {
+      "path": "release-evidence/634a1d6bd01750c3ca4b333350b56b752e60730ea6402ad6f76e8e16f5f5f20c/SOURCE_BLOCKS.json",
+      "bytes": 2788,
+      "sha256": "634a1d6bd01750c3ca4b333350b56b752e60730ea6402ad6f76e8e16f5f5f20c"
+    },
+    {
+      "path": "release-evidence/1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb/review-deterministic-final-correspondence-REVIEW_THREE_STATEMENTS.md",
+      "bytes": 10916,
+      "sha256": "1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb"
+    },
+    {
+      "path": "release-evidence/4dca483fbe735b7e68fdcfcbfc5bc5fb6eb28cc571cfef9f43dd5562e514aa2e/COMPONENT_SCOPE_REVIEW.json",
+      "bytes": 4292,
+      "sha256": "4dca483fbe735b7e68fdcfcbfc5bc5fb6eb28cc571cfef9f43dd5562e514aa2e"
+    },
+    {
+      "path": "release-evidence/4c245bc3fe1f9b88b0dab429f8aba0ff2e95ed81bc077b0800867ecc465985e6/COMPONENT_SCOPE_REVIEW_FINAL_SOURCE.json",
+      "bytes": 4282,
+      "sha256": "4c245bc3fe1f9b88b0dab429f8aba0ff2e95ed81bc077b0800867ecc465985e6"
+    },
+    {
+      "path": "private-provenance-refs/f3843426033fd876267264aada8521aeee7495ffe3d4e1d2133338d27c0ce888/prepare_final_admission.py",
+      "bytes": 14176,
+      "sha256": "dbb22a7030190a5c31fd94846aeedaddd88a8177d31ca10c6cd807d68d8eda94"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "proof_coverage_accepted": true,
+  "pdf_bound": true,
+  "manuscript_manifest_bound": true,
+  "prior_source_lock_preserved": "release-evidence/a02a95dc58599688f5940916aace950cefd5a1bf58dce4ed11fcdba9e2a4aa47/SOURCE_LOCK.json",
+  "november_correspondence_review": {
+    "path": "release-evidence/4f3392c5af2b1e33ed50fbd74452ae9f52a22d76ec8fe5e1ed05723553071107/CORRESPONDENCE_2026-11-02.json",
+    "bytes": 3601,
+    "sha256": "4f3392c5af2b1e33ed50fbd74452ae9f52a22d76ec8fe5e1ed05723553071107"
+  },
+  "disclosure_review": {
+    "path": "release-evidence/6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50/DISCLOSURE_REVIEW_2026-11-02.json",
+    "bytes": 781,
+    "sha256": "6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50"
+  },
+  "scope": "All current v43 statement and construction-component correspondence rows are accepted with exact source/provider/review identities. Runtime endpoints have fresh production CurrentV43 build authority; retained providers keep their original checked authority. External source interfaces remain explicit. This metadata is separate from the root full-coverage receipt, public-package checks and any cold replay."
+}

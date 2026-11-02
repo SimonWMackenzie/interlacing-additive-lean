@@ -2,20 +2,20 @@
   "status": "source_package_with_canonical_checked_incremental_build",
   "publication_performed_by_preparation_tool": false,
   "public_package_replay_complete": false,
-  "v42_correspondence_checked": true,
-  "source_sha256": "ec8af5767eccc1184e7a1b5f88979ab0a7ee9be60d91be4e61ec80aa66861f78",
-  "full_coverage_receipt_sha256": "a2abbf982816f953952c38c98471bc144724e62b935b2e4eddbf97621f22cfdb",
+  "v43_correspondence_checked": true,
+  "source_sha256": "e3d5b1ec1ef0a11e1e27ee5ee4258a7a9d88e193cf9f0d580cbf97764d779548",
+  "full_coverage_receipt_sha256": "19eaf8a3d5da916ed92a8fe3367a7183e6ea8efb26623414669993f2d179ba02",
   "canonical_checked_build_complete": true,
-  "qualification": "Existing unchanged inherited project objects reused; canonical CurrentV42 build, complete effective/raw audits and exact source/object/provider/dependency checks passed. Optional fresh project-source replay remains available and is not asserted here. External source-interface fidelity remains qualified.",
-  "source_manifest_sha256": "e7498396e21d0320d3fcdd1e024908a58633b72336a8a7b22bd665b7444ea077",
+  "qualification": "Existing unchanged inherited project objects reused; canonical CurrentV43 build, complete effective/raw audits and exact source/object/provider/dependency checks passed. Optional fresh project-source replay remains available and is not asserted here. External source-interface fidelity remains qualified.",
+  "source_manifest_sha256": "1c561e0cc2456104c64bc215ac1c37bab57ffa1dd6d311f3d66ec2e577e579b6",
   "canonical_checked_build": {
     "receipt": "PUBLISHED_CHECKED_BUILD.json",
-    "receipt_sha256": "03e34e74316fb9fe87192921e09898974fb2d5da1d12174726c5bdfc325d982d",
+    "receipt_sha256": "91045f1292da412199e80dcc398852e034c139782ef59d425b993b53962f3f93",
     "verification_mode": "canonical_checked_incremental",
     "project_build_initially_empty": false,
     "fresh_project_replay": false,
     "project_sources_cold_rebuilt": false,
-    "unchanged_prior_source_modules": 5032,
-    "checked_source_module_count": 5194
+    "unchanged_prior_source_modules": 5194,
+    "checked_source_module_count": 5249
   }
 }

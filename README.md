@@ -1,71 +1,69 @@
-# Interlacing and additive inapproximability: Lean companion
+# v43 Lean companion: communication complexity and 3-SAT running time
 
-This source snapshot accompanies the exact v42 manuscript of *Interlacing and
-Additive Inapproximability of Deterministic Communication Complexity*, by Serge
-Gaspers, Tao Zixu He, and Simon Mackenzie. The paper studies the difficulty of
-estimating the deterministic communication cost of an explicit Boolean table.
-Randomized constructions and estimators do not change that communication model.
+This source snapshot accompanies v43 of *NP-Hardness and Additive
+Inapproximability of Deterministic Communication Complexity*, by Serge Gaspers,
+Tao Zixu He and Simon Mackenzie.
 
-Explore the paper alongside its Lean proofs in the
-[interactive proof inspector](https://simonwmackenzie.github.io/interlacing-additive-lean/inspector/),
-with statement highlights, source search, and explanations of definitions and
-Lean commands.
+Start with the [interactive paper and Lean inspector](https://simonwmackenzie.github.io/interlacing-additive-lean/inspector/).
+It connects highlighted manuscript statements to their checked Lean sources and
+explains the recorded verification and assumptions. It displays a verification
+snapshot; it does not execute Lean in the browser.
 
-Read the [manuscript](manuscript-v42/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v42.pdf),
-[single TeX source](manuscript-v42/source/main.tex),
-[bibliography](manuscript-v42/source/references.bib), and
-[source-to-Lean map](manuscript-v42/V42_STATEMENT_MAP.json).
-The aggregate is [CurrentV42.lean](papers/randomized-additive-hardness/formalization/current-v42/lean/CurrentV42.lean).
+The v43 additions prove the general implication from a communication-cost
+estimator to an algorithm for sparse 3-SAT, and its two explicit running-time
+corollaries. The general result covers deterministic and randomized estimators
+with either construction. All 54 added proof modules were independently
+reviewed, integrated, production-compiled and included in the effective and
+raw-proof audits. The three runtime results have independently reviewed
+correspondence with the current manuscript. Earlier checked components are
+retained with their original evidence.
 
-The independent source-correspondence evidence is bound by
-[FULL_COVERAGE_RECEIPT.json](FULL_COVERAGE_RECEIPT.json). This is distinct from
-the package build: [release-status.json](release-status.json) identifies the
-accepted verification mode. [PUBLISHED_CHECKED_BUILD.json](PUBLISHED_CHECKED_BUILD.json),
-when present, records a canonical `CurrentV42` build with unchanged inherited
-project objects reused, complete effective/raw audits, and exact source,
-object, provider and dependency checks. It is not a cold source rebuild.
-When present,
-[PUBLISHED_REPLAY.json](PUBLISHED_REPLAY.json) and `published-build-logs/` preserve
-the separate fresh project-source replay. A staging package without an accepted
-build-and-audit receipt is not a completed release.
+- [Manuscript PDF](manuscript-v43/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf),
+  [LaTeX source](manuscript-v43/source/main.tex) and
+  [bibliography](manuscript-v43/source/references.bib).
+- [Statement-to-Lean map](manuscript-v43/V43_STATEMENT_MAP.json) and
+  [exact source lock](manuscript-v43/SOURCE_LOCK.json).
+- [CurrentV43 aggregate](papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43.lean)
+  and [new-module admissions](papers/randomized-additive-hardness/formalization/current-v43/ADMITTED_MODULES.json).
+- [Source-correspondence receipt](FULL_COVERAGE_RECEIPT.json),
+  [source manifest](SOURCE_MANIFEST.json) and [package verification status](release-status.json).
 
-To perform the optional cold project-source reproduction in a fresh checkout:
+From this repository root, check the supplied identities and evidence with:
 
 ```sh
 python verify_release.py
-lake exe cache get
-python replay.py
 ```
 
-See [BUILD.md](BUILD.md) for the exact scope and cache boundary. The manifest
-records the exact imported local source closure, including inherited libraries
-and meta-imports. Only `CurrentAdditive` and `CurrentV42` own the audited rows;
-their actual transitive proof dependencies may use only `propext`,
-`Classical.choice`, and `Quot.sound`. The audit also inspects generated raw
-rows whose expressions differ from their effective declarations.
+[BUILD.md](BUILD.md) gives the canonical checked-build and optional cold-replay
+commands. `PUBLISHED_CHECKED_BUILD.json`, when recorded, binds the canonical
+incremental build, both audits and complete source/provider/object checks to
+this exact package. Unchanged inherited project objects are reused. A separate
+`PUBLISHED_REPLAY.json`, when recorded, certifies a fresh compilation of every
+imported local project module. The package status states which checks passed;
+an incremental build is not a cold replay. Pinned external toolchain and
+dependency objects may be reused in either mode.
 
-External source-reduction records, literal-CNF hardness and deterministic or
-randomized ETH hypotheses remain explicit in the theorem interfaces. The
-release does not construct those external source theorems or certify that
-their records faithfully represent the cited papers. Some inherited sources
-contain unused citation axioms. Those assertions are not part of the release's
-checked theorem dependency claims.
+The cited Dinur and BOT reductions remain explicit source interfaces. Their
+published-source fidelity retains the inherited author-owned qualification;
+the formalization does not construct those external records. The three direct
+runtime implications use no ETH assumption. Historical hardness and
+strict-alternation results retain their own explicit hypotheses, including
+selected-language identities where required.
 
-Lean source paths match the development repository. [RELEASE_BINDING.json](RELEASE_BINDING.json)
-translates the manuscript namespace and binds the public provenance copies.
-Those copies replace private path locations by relative evidence IDs while
-preserving source hashes and review conclusions. Original private hashes and
-projected public hashes are distinct. Original private receipts are archived
-locally. Canonical incremental verification and optional fresh reproduction
-retain distinct public receipts and cache boundaries.
-Earlier [v40 manuscript files](manuscript-v40/source/main.tex) remain frozen.
-The old README, source manifest and replay receipts under `archive/v40/` refer
-only to that earlier release, and their original relative paths are historical.
-The unimported helper under `historical-coverage-supplements/` remains reference
-material outside the current build.
+The effective and raw audits cover the imported CurrentAdditive, CurrentV42
+and CurrentV43 rows and their transitive proof dependencies, permitting only
+`propext`, `Classical.choice` and `Quot.sound`. Raw rows whose expressions differ
+from their effective declarations are checked separately. Unused inherited
+citation assertions are outside the checked theorem dependency claims.
+
+The source manifest records the complete imported local proof closure,
+including meta imports. RELEASE_BINDING.json distinguishes original evidence
+hashes from hashes of public path projections. Lean proof bytes and their
+root-relative paths are preserved. The v40 and v42 manuscript snapshots and
+historical metadata retain their original scope; their receipts do not certify
+new source states.
 
 The separate Beyond the Library formalization of the corrected
 Mackenzie–Saffidine direct-sum result has its own
 [public inspector](https://beyondthelibrary.github.io/formal_archive/p/Refuting/).
-Original notices and dependency licenses are retained; no blanket license is
-added by packaging this development.
+Original project notices and dependency licenses are retained.

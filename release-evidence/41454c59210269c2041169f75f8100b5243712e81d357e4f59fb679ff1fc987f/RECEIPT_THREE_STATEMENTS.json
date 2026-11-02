@@ -1,0 +1,187 @@
+{
+  "review": "independent_three_runtime_statement_correspondence_and_unified_join",
+  "recorded_utc": "2026-11-02T08:20:34.980003+00:00",
+  "reviewer": "v43_deterministic_review",
+  "status": "accepted_for_root_integration_and_source_bound_gates",
+  "source_sha256": "bfde23b90f50785939095a6d37b7b247965ee6c45beaca9011a8963dec3cc9d6",
+  "reviewed_statement_count": 3,
+  "retained_prior_51_rows_reaudited": false,
+  "rows": [
+    {
+      "id": "thm:time-tradeoff",
+      "status": "verified_correspondence",
+      "statement_body_sha256": "cc4573ad4a6271168d1b8301ffd9ebc094192754349768edb491d8ee886a0d27",
+      "statement_lines": [
+        3229,
+        3256
+      ],
+      "proof_body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514",
+      "proof_lines": [
+        3258,
+        3280
+      ],
+      "recommended_declaration_names": [
+        "CurrentV43.General.time_tradeoff",
+        "CurrentV43.General.four_cases"
+      ]
+    },
+    {
+      "id": "thm:quantitative",
+      "status": "verified_correspondence",
+      "statement_body_sha256": "84936c7e174ce17e6e9b638d8d9a591778e5d8f596b3982db3526888875ef461",
+      "statement_lines": [
+        337,
+        347
+      ],
+      "proof_body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61",
+      "proof_lines": [
+        3306,
+        3360
+      ],
+      "recommended_declaration_names": [
+        "CurrentV43.RandomizedRate.quantitative_algorithm",
+        "CurrentV43.RandomizedRate.quantitative_square_algorithm"
+      ]
+    },
+    {
+      "id": "det:time",
+      "status": "verified_correspondence",
+      "statement_body_sha256": "d0c87a834cf5ea4524924fff713b29616b0dd7e9e0053a8941ee583e63a526b8",
+      "statement_lines": [
+        353,
+        362
+      ],
+      "proof_body_sha256": "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754",
+      "proof_lines": [
+        2910,
+        2952
+      ],
+      "recommended_declaration_names": [
+        "CurrentAdditive.V43DeterministicRate.deterministic_estimation_to_sparse3SAT_real",
+        "CurrentAdditive.V43DeterministicRate.deterministic_estimation_to_sparse3SAT"
+      ]
+    }
+  ],
+  "new_join_module": "General.Main",
+  "accepted_declaration_names": [
+    "CurrentV43.General.amplification",
+    "CurrentV43.General.sizeConstant",
+    "CurrentV43.General.amplification_ge",
+    "CurrentV43.General.sizeConstant_pos",
+    "CurrentV43.General.randomizedBound",
+    "CurrentV43.General.deterministicBound",
+    "CurrentV43.General.GapCondition",
+    "CurrentV43.General.DeterministicOutcome",
+    "CurrentV43.General.RandomizedOutcome",
+    "CurrentV43.General.FourCases",
+    "CurrentV43.General.four_cases",
+    "CurrentV43.General.time_tradeoff"
+  ],
+  "new_join_source_sha256": "4ebf10dbe0e84921c4fb281d0d0036e158804a0c248d8ff4bcdeecc21b6a1adf",
+  "new_join_replay_exit": 0,
+  "literal_join_audit_exit": 0,
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "no_duplicate_component_replays": true,
+  "remaining_explicit_boundaries": [
+    "approved DinurReduction and BOTReduction interfaces with existing author-owned source fidelity qualification",
+    "implemented paid positive gap schedule and permitted estimator model",
+    "explicit finite fair-tape model; no monolithic probabilistic transition-system construction claimed"
+  ],
+  "proof_variations": [
+    "Corollary1.4 uses proved computable dyadic schedule, not literal finite equality to paper integer-root recipe",
+    "Physical deterministic source proves eventual table growth from graph floor rather than literal N^2 lower bound",
+    "Weaker source vertex lower floor suffices and preserves sharp randomized coefficient"
+  ],
+  "blocking_findings": [],
+  "evidence": [
+    {
+      "path": "private-provenance-refs/85675c8f5394f7c7908d2854f1a5779ef0ac647ae03e70c607607e1be5b88db4/REVIEW.md",
+      "sha256": "227506423ae1814b62473016146c60725883ccd6ae13ac30f861539efdb3179d"
+    },
+    {
+      "path": "private-provenance-refs/497680e454dcd66c4a9f2f09e0423fee63c9ed62020a345b377f350108f7a815/RECEIPT.json",
+      "sha256": "9fd66dbdc211d269205a728eb7d8ce54b0b1b4e9565cedefb867b71c35a8c09d"
+    },
+    {
+      "path": "private-provenance-refs/b6d4b4d918fe0ffa1fa167dfd8d24c335fadf4353cdc43cdc94b36baabf801d7/ENDPOINT_REVIEW.txt",
+      "sha256": "50d9e6afa72133888eaa43fa49109727c1de83177710a4acd9445ff2fe8c4d75"
+    },
+    {
+      "path": "private-provenance-refs/d836dfeba278f5c800361dc7e596a87b81596a5b4351c19a8da3fe4745203e37/ENDPOINT_RECEIPT.json",
+      "sha256": "b86950c377d5b0d07750e411dadeed36dfd3a49497d697f7f68b9951d303323e"
+    },
+    {
+      "path": "private-provenance-refs/1bad5dc278e451f18544f48ccc9262aa826d58d48e42c29326d311d78ae89da8/REVIEW_GENERIC_RANDOMIZED_ENDPOINT.md",
+      "sha256": "bc3df592918b2d522a1c250a6c883d41cafe7117882a929316fcc92d1101fb30"
+    },
+    {
+      "path": "private-provenance-refs/65ccb22f16e5253f62b56d70b248d47e5d7b842bd727e11d2bb28bcaa5649be4/RECEIPT.json",
+      "sha256": "4c63bbe8e9bca0be26e2d1fc1cd650092baa68ca1530b38909a28e6b7f2b4f2f"
+    },
+    {
+      "path": "private-provenance-refs/fecbcc9fde2b3be8fd14d655904bc6b6607a3ce0876f3a6cec5b50517e86e8bb/REVIEW_RANDOMIZED_FINAL_ENDPOINT.md",
+      "sha256": "80f93f8d652e4fc1d5830fff706ca8d2ec99b52e93bc109c315d1cbf78627d81"
+    },
+    {
+      "path": "private-provenance-refs/290563346eea3d6623b62d3b0094b0879998fa9edf443952963ffe5db3fa1309/FINAL_RECEIPT.json",
+      "sha256": "fde0d786939ba7590586afdd942ac94fdcc7502410983d8e87d8c217ff4384d4"
+    },
+    {
+      "path": "private-provenance-refs/acd9dc537b772505d794c78bcfd283cf77bb66907e44b59978756e5c02cd6940/REVIEW.md",
+      "sha256": "79d8a14fa888aed004bcbe9cf557e404ed24b315c58be21758caba1dea370870"
+    },
+    {
+      "path": "private-provenance-refs/032b3c0fb5e4421377e55e4832ff5a0ee246e0290865ecefda52e27bdb006cac/RECEIPT.json",
+      "sha256": "36143ccfa6bbd349bfd79a74e675793ebce2f678ffb4ab6b2050a28735ddd308"
+    },
+    {
+      "path": "release-evidence/634a1d6bd01750c3ca4b333350b56b752e60730ea6402ad6f76e8e16f5f5f20c/SOURCE_BLOCKS.json",
+      "sha256": "634a1d6bd01750c3ca4b333350b56b752e60730ea6402ad6f76e8e16f5f5f20c"
+    },
+    {
+      "path": "release-evidence/1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb/REVIEW_THREE_STATEMENTS.md",
+      "sha256": "1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb"
+    },
+    {
+      "path": "private-provenance-refs/1582627b507cb512940b9e35368443cf7a21caf7c7c20221faf65d6a2441e096/FROZEN_BRANCH_SOURCE_CHECK.json",
+      "sha256": "fe8585e462151bb353a035bf496b3ee7a0430ff7f1ae9a905090a0e8e1daa703"
+    },
+    {
+      "path": "private-provenance-refs/7fef9665aa8a091719d3c9316cd31cfa89628d00fdebbd5d7031a812e1b2b00c/Main.lean",
+      "sha256": "4ebf10dbe0e84921c4fb281d0d0036e158804a0c248d8ff4bcdeecc21b6a1adf"
+    },
+    {
+      "path": "private-provenance-refs/75561fd6831b40ab8035d6bb85ddb74094a0a14ac2c70d2ab26cd34e3ad21436/Main-replay.log",
+      "sha256": "d960d524da41e9b65f950b10a1269ad046bf8fd90f1eff29d4a59dedb860e259"
+    },
+    {
+      "path": "private-provenance-refs/f6f28ad0ae229095d564bc512f248ff19cda75a02ce2ba940032166d591adb7c/LiteralJoinAudit.lean",
+      "sha256": "193a4e56571f8fd908c325bcd30ad4f66b71e1d4c8e0d1d91047515bb23f57fe"
+    },
+    {
+      "path": "private-provenance-refs/c65ddd0b65d9c48de3ce8d53aed806ccb2c7b25b2d6ca0aac7efc17be434b6e6/LiteralJoinAudit-replay.log",
+      "sha256": "e5720d707d0dbb163dec973e0d470511f6d0e42174f98735d3c1c3e69a0d2dad"
+    },
+    {
+      "path": "private-provenance-refs/22541d662c71274bf07dc9f2957995c2c02b24f7d2029413be6175d760909fb5/AUTHOR_MAIN_MANIFEST.json",
+      "sha256": "450ede7850bb7f19ea9cc168c48303dda4b4bb2b09be89cd3689b15374c5ae07"
+    },
+    {
+      "path": "private-provenance-refs/9c69e4efac889e5e967a0c744534da8104a06bfa49ebf4195c2fc87746712af6/MAIN_LEAN_PATH.txt",
+      "sha256": "d56cd82560e22ab56b1bce25c570f4df419004e480b1043f031c1a8574997108"
+    }
+  ],
+  "remaining_root_gates": [
+    "production integration and aggregate dependency build",
+    "transitive production axiom audit",
+    "source-bound FULL_COVERAGE receipt and any final source refresh"
+  ],
+  "production_changed": false,
+  "shared_build_run": false,
+  "git_run": false,
+  "max_private_compilers": 1
+}

@@ -2,7 +2,7 @@
 
 This is NOT a fresh project-source replay. Existing project objects are required.
 All supplied sources, providers, object hashes, dependency pins, audits and prior
-v40 fresh-release provenance are checked. Use replay.py for a cold project build.
+v42 checked-release provenance and the historical v40 replay identity are checked. Use replay.py for a cold project build.
 """
 from datetime import datetime, timezone
 from collections import Counter
@@ -23,29 +23,34 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 def unchanged_prior(package,manifest):
-    old_manifest=package/"archive/v40/SOURCE_MANIFEST.json"
-    old_receipt=package/"archive/v40/PUBLISHED_REPLAY.json"
+    """Reuse every unchanged v42 provider, retaining its incremental evidence."""
+    from admission_contract import check_delta
+    old_manifest=package/"archive/v42/SOURCE_MANIFEST.json"
+    old_receipt=package/"archive/v42/PUBLISHED_CHECKED_BUILD.json"
     previous,receipt=read(old_manifest),read(old_receipt)
+    need(previous.get("target")=="CurrentV42", "Wrong prior checked release")
     prior=[e for e in previous["files"] if e.get("role")=="checked_proof_source"]
-    counts=dict(Counter(e["module"].split(".")[0] for e in prior))
-    need(prior and len({e["module"] for e in prior})==len(prior) and
-         counts==previous["project_module_counts"] and
-         receipt.get("project_source_module_count")==len(prior),
-         "Prior v40 source census disagrees with its accepted fresh receipt")
-    need(receipt.get("status")=="passed" and receipt.get("project_build_initially_empty") is True and
-         receipt.get("source_manifest_sha256")==sha(old_manifest) and receipt.get("commands") and
-         all(r.get("exit_code")==0 for r in receipt["commands"]), "Missing accepted prior v40 fresh-project provenance")
-    current={e["module"]:e for e in manifest["files"] if e.get("role")=="checked_proof_source"}
-    need(all(e["module"] in current and current[e["module"]]["path"]==e["path"] and
-             current[e["module"]]["sha256"]==e["sha256"] and current[e["module"]]["bytes"]==e["bytes"]
-             for e in prior), "Inherited v40 source changed or left closure; this bounded reuse path requires separate review")
-    return {"unchanged_prior_source_modules":len(prior),"prior_public_source_manifest_sha256":sha(old_manifest),
-            "prior_public_fresh_replay_sha256":sha(old_receipt)}
+    current=[e for e in manifest["files"] if e.get("role")=="checked_proof_source"]
+    admissions=read(package/OWNER/"ADMITTED_MODULES.json")["modules"]
+    check_delta(previous,current,admissions)
+    need(receipt.get("status")=="passed" and
+         receipt.get("verification_mode")=="canonical_checked_incremental" and
+         receipt.get("source_manifest_sha256")==sha(old_manifest) and
+         receipt.get("commands") and all(c.get("exit_code")==0 for c in receipt["commands"]),
+         "Prior v42 checked provenance missing/changed")
+    old_binding=read(package/"archive/v42/PUBLISHED_CHECKED_EVIDENCE_BINDING.json")
+    for entry in old_binding["identity_bindings"]:
+        check_pin(package,{"path":"archive/v42/"+entry["release_path"],"sha256":entry["public_sha256"]})
+    return {"unchanged_prior_source_modules":len(prior),
+            "prior_public_source_manifest_sha256":sha(old_manifest),
+            "prior_public_checked_build_sha256":sha(old_receipt),
+            "historical_v40_fresh_replay_sha256":sha(package/"archive/v40/PUBLISHED_REPLAY.json")}
+
 
 def source_match(root, package):
     manifest=verify(package)
     tools={}
-    for filename in ("checked_build.py","check_replay.py","release_common.py","verify_release.py"):
+    for filename in ("checked_build.py","check_replay.py","release_common.py","verify_release.py","admission_contract.py"):
         need(sha(ROOT/filename)==sha(package/filename), "Executing verification helper differs from package: "+filename)
         tools[filename]=sha(package/filename)
     modules=[e for e in manifest["files"] if e.get("role")=="checked_proof_source"]
@@ -56,7 +61,7 @@ def source_match(root, package):
     for relative in ("lean-toolchain","lake-manifest.json"):
         need(sha(root/relative)==sha(package/relative), "Checked dependency/toolchain identity differs")
     config=(root/"lakefile.toml").read_text(encoding="utf-8-sig")
-    config,count=re.subn(r"^defaultTargets\s*=.*$",'defaultTargets = ["CurrentV42"]',config,flags=re.M)
+    config,count=re.subn(r"^defaultTargets\s*=.*$",'defaultTargets = ["CurrentV43"]',config,flags=re.M)
     need(count==1 and config==(package/"lakefile.toml").read_text(encoding="utf-8-sig"),
          "Checked Lake configuration differs beyond default target; resource settings are not interchangeable")
     admission=OWNER+"ADMITTED_MODULES.json"
@@ -67,9 +72,9 @@ def source_match(root, package):
                                      separators=(",",":")).encode("utf-8")).hexdigest()
     result={"source_snapshot_sha256":snapshot,"source_module_count":len(modules),
         **inherited,"new_source_modules":len(modules)-inherited["unchanged_prior_source_modules"],
-        "selected_source_lock_public_sha256":sha(package/"manuscript-v42/SOURCE_LOCK.json"),
+        "selected_source_lock_public_sha256":sha(package/"manuscript-v43/SOURCE_LOCK.json"),
         "verification_tool_sha256":tools,
-        "prior_source_lock_identity_pins":[e for e in read(package/"manuscript-v42/SOURCE_LOCK.json").get("input_pins",[])
+        "prior_source_lock_identity_pins":[e for e in read(package/"manuscript-v43/SOURCE_LOCK.json").get("input_pins",[])
                                          if e["path"].split("/")[-1] in {"SOURCE_LOCK.json","SELECTED_SOURCE_LOCK.json"}]}
     print(json.dumps(result,indent=2))
     return result
@@ -81,8 +86,8 @@ def check_checked_receipt(package, receipt, evidence, published=False):
     need(receipt.get("source_manifest_sha256")==sha(package/"SOURCE_MANIFEST.json") and
          receipt.get("full_coverage_receipt_sha256")==sha(package/"FULL_COVERAGE_RECEIPT.json"), "Checked build binds another source/coverage package")
     commands=receipt.get("commands",[])
-    need(len(commands)==3 and commands[0]["command"]==["lake","build","CurrentV42"] and
-         all(r.get("exit_code")==0 for r in commands), "Missing/failed canonical CurrentV42 commands")
+    need(len(commands)==3 and commands[0]["command"]==["lake","build","CurrentV43"] and
+         all(r.get("exit_code")==0 for r in commands), "Missing/failed canonical CurrentV43 commands")
     for record,filename in zip(commands[1:],("AxiomAudit.lean","RawProofAudit.lean")):
         command=record["command"]
         need(len(command)==4 and command[:3]==["lake","env","lean"] and
@@ -93,7 +98,7 @@ def check_checked_receipt(package, receipt, evidence, published=False):
          all(r.get("exit_code")==0 for r in checks), "Missing/failed complete identity/provider checks")
     need(receipt["source_before"]==receipt["source_after"], "Checked sources/provenance changed during build")
     need(receipt["source_before"].get("verification_tool_sha256")=={filename:sha(package/filename) for filename in
-         ("checked_build.py","check_replay.py","release_common.py","verify_release.py")},
+         ("checked_build.py","check_replay.py","release_common.py","verify_release.py","admission_contract.py")},
          "Checked receipt identifies different verification helper code")
     manifest=read(package/"SOURCE_MANIFEST.json")
     inherited=unchanged_prior(package,manifest)
@@ -114,10 +119,10 @@ def check_checked_receipt(package, receipt, evidence, published=False):
          {e["module"] for e in objects["providers"]}==project|set(manifest["external_modules"]) and
          all(re.fullmatch(r"[0-9a-f]{64}",e["olean_sha256"]) for e in objects["providers"]),
          "Incomplete checked object/provider inventory")
-    prior=package/"archive/v40/SOURCE_MANIFEST.json"
-    prior_receipt=package/"archive/v40/PUBLISHED_REPLAY.json"
+    prior=package/"archive/v42/SOURCE_MANIFEST.json"
+    prior_receipt=package/"archive/v42/PUBLISHED_CHECKED_BUILD.json"
     need(receipt["source_before"]["prior_public_source_manifest_sha256"]==sha(prior) and
-         receipt["source_before"]["prior_public_fresh_replay_sha256"]==sha(prior_receipt), "Prior fresh-release provenance drift")
+         receipt["source_before"]["prior_public_checked_build_sha256"]==sha(prior_receipt), "Prior checked-release provenance drift")
     if published:
         binding=read(package/"PUBLISHED_CHECKED_EVIDENCE_BINDING.json")
         for entry in binding["identity_bindings"]:
@@ -133,7 +138,7 @@ def run(root, package, output):
     output.mkdir(parents=True)
     receipt={"schema_version":1,"status":"running","verification_mode":"canonical_checked_incremental",
         "fresh_project_replay":False,"project_build_initially_empty":False,"project_sources_cold_rebuilt":False,
-        "scope":"Existing project objects reused; CurrentV42 build plus complete current effective/raw audits and exact source/provider/object/pin checks. Independently admitted new components retain their production-build evidence. No cold rebuild claim.",
+        "scope":"Existing project objects reused; CurrentV43 build plus complete current effective/raw audits and exact source/provider/object/pin checks. Independently admitted new components retain their production-build evidence. No cold rebuild claim.",
         "source_manifest_sha256":sha(package/"SOURCE_MANIFEST.json"),
         "full_coverage_receipt_sha256":sha(package/"FULL_COVERAGE_RECEIPT.json"),
         "lake_artifact_cache":"disabled with LAKE_ARTIFACT_CACHE=false for build/audit subprocesses",
@@ -159,7 +164,7 @@ def run(root, package, output):
     save()
     try:
         receipt["source_before"]=operation("source-before",lambda:source_match(root,package));save()
-        commands=[("build",["lake","build","CurrentV42"]),
+        commands=[("build",["lake","build","CurrentV43"]),
                   ("axiom-audit",["lake","env","lean",str(package/"AxiomAudit.lean")]),
                   ("raw-audit",["lake","env","lean",str(package/"RawProofAudit.lean")])]
         for name,command in commands:
@@ -179,7 +184,7 @@ def run(root, package, output):
     except BaseException:
         receipt.update({"status":"failed","finished_utc":now()});save()
         raise
-    print("Canonical incremental CurrentV42 build, complete audits and source/object/provider checks passed; no cold rebuild performed.")
+    print("Canonical incremental CurrentV43 build, complete audits and source/object/provider checks passed; no cold rebuild performed.")
 
 if __name__=="__main__":
     p=argparse.ArgumentParser(description=__doc__)

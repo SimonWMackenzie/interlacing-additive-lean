@@ -2,9 +2,9 @@
   "lean_version": "Lean (version 4.30.0, x86_64-w64-windows-gnu, commit d024af099ca4bf2c86f649261ebf59565dc8c622, Release)",
   "toolchain_sha256": "54727eec5cba149c18842e6deb5c41b369d66455c93ce135d7d5347c782b2325",
   "dependency_manifest_sha256": "04dbf24af77f6d3c2aed0610d0fb1aebcd588b61e5271c0774e5af9e972846d6",
-  "project_modules": 5194,
-  "raw_rows": 59743,
-  "raw_theorems": 39493,
+  "project_modules": 5249,
+  "raw_rows": 60676,
+  "raw_theorems": 40150,
   "raw_different_rows": 2,
   "raw_actual_dependencies": 103,
   "providers": [
@@ -18913,6 +18913,336 @@
       "provider_kind": "project",
       "olean_sha256": "87780ee061708831d410f71e37c61b8a6ec6c63f82c0fcd586e02506852045ca",
       "bytes": 20640
+    },
+    {
+      "module": "CurrentV43",
+      "provider_kind": "project",
+      "olean_sha256": "f10591c22cac4770893edd2bb004978409f9520fab6c28f01fc4acf87581bb44",
+      "bytes": 8016
+    },
+    {
+      "module": "CurrentV43.DeterministicRate",
+      "provider_kind": "project",
+      "olean_sha256": "af2fdb840083ca738191ecda826a0e9ea3d4d73523989f4cde048700ad958377",
+      "bytes": 1014528
+    },
+    {
+      "module": "CurrentV43.DeterministicRateReal",
+      "provider_kind": "project",
+      "olean_sha256": "1cca19c88c2d52085e00c07546b96de962a93079b227f9aa9a4afc0773c1dea7",
+      "bytes": 232608
+    },
+    {
+      "module": "CurrentV43.General.Main",
+      "provider_kind": "project",
+      "olean_sha256": "0255469ded2058bfb16d225f7e6bebd43e8ea5b794319144b44f5bf900e76e40",
+      "bytes": 75464
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Algorithm",
+      "provider_kind": "project",
+      "olean_sha256": "c49c45ae34da68a619837f0a8a604aa32b78481d3ef72c33ec15d2e92e84dc2b",
+      "bytes": 250096
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Clock",
+      "provider_kind": "project",
+      "olean_sha256": "9784c74e6013b82bda578f9a0cfaf75cbc7783092d8232af45de7e32ea9356bf",
+      "bytes": 383872
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Endpoint",
+      "provider_kind": "project",
+      "olean_sha256": "73c9dbfb1b9e4f555a21a769a9f63eade6267c9a03772ff517b51b05e176c1f1",
+      "bytes": 49024
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Estimator",
+      "provider_kind": "project",
+      "olean_sha256": "8be35834bb5e0383c67edaaffd81d8d3e50f8c8e8ab8fb1df7eaa71e5ca1b4d4",
+      "bytes": 210752
+    },
+    {
+      "module": "CurrentV43.GeneralRandom.Source",
+      "provider_kind": "project",
+      "olean_sha256": "7f4be0c617403e07c663d2f010c6f75f174be6b71cf56d624f84697828d433b9",
+      "bytes": 282952
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Accounting",
+      "provider_kind": "project",
+      "olean_sha256": "a0083398891db7e303e5a4cb5176754c62a55cacb3c2f3fcb50b467b42606136",
+      "bytes": 75528
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Bounds",
+      "provider_kind": "project",
+      "olean_sha256": "284e4b3f7b5d844e8a18e5c42afa5e22ff67f6e2b192e68493a2a0afd5697131",
+      "bytes": 258552
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Caller",
+      "provider_kind": "project",
+      "olean_sha256": "0c92a034519ae46947a86bce83ad7e12bebe6cd64c4f8fe28c5993697bad7b78",
+      "bytes": 71296
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Charge",
+      "provider_kind": "project",
+      "olean_sha256": "6fe14d6d9f9f98258ee4a92b28d26c7c21e9a98276571f3276c37c26d1853297",
+      "bytes": 193368
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Endpoint",
+      "provider_kind": "project",
+      "olean_sha256": "077771129c2fb47bf500bfa7d498cf7136a47a69aaaf44c7bbb1adfeca220ea9",
+      "bytes": 778792
+    },
+    {
+      "module": "CurrentV43.MixedCaller.LargerBound",
+      "provider_kind": "project",
+      "olean_sha256": "b82a7a2afdc9f9e4facd7451c7b47ae3a10a832f114cc7de2855b3d22a601cab",
+      "bytes": 73744
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Request",
+      "provider_kind": "project",
+      "olean_sha256": "5cbd35d71a6c7b1c55b6d5c38836e15573bc19cf0fbcd028135bc06a44800984",
+      "bytes": 165168
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Resource",
+      "provider_kind": "project",
+      "olean_sha256": "b0557ade84b6551db2ce0d35c11ca865adf7a4b4856db886ef901f91a637be95",
+      "bytes": 165048
+    },
+    {
+      "module": "CurrentV43.MixedCaller.Sparse",
+      "provider_kind": "project",
+      "olean_sha256": "62e04ac4fc8753f1f1489fd6d8213dd51e346d28a26a87b1bb008866e4411e41",
+      "bytes": 332560
+    },
+    {
+      "module": "CurrentV43.Parametric.Algorithm",
+      "provider_kind": "project",
+      "olean_sha256": "387292f6841c1f18711361b80a169b527c7767d70f9a55b81051bbe5f8c80e8b",
+      "bytes": 162832
+    },
+    {
+      "module": "CurrentV43.Parametric.Caller",
+      "provider_kind": "project",
+      "olean_sha256": "f7007cf6546687caedf1ebb596b9a47f307ab03fcfe442f4a487e720bf26899d",
+      "bytes": 149800
+    },
+    {
+      "module": "CurrentV43.Parametric.Carrier",
+      "provider_kind": "project",
+      "olean_sha256": "4f7c020862698babd9095bd8cecda56b11473f5cfad1d2b2abe444837f7b5a22",
+      "bytes": 282040
+    },
+    {
+      "module": "CurrentV43.Parametric.Probability",
+      "provider_kind": "project",
+      "olean_sha256": "86984864f345fce92f9717ff56e5b380d561135462a27838b93317ea6c3044e2",
+      "bytes": 150864
+    },
+    {
+      "module": "CurrentV43.Parametric.Resource",
+      "provider_kind": "project",
+      "olean_sha256": "6634c807af875cc45e51aee3c7a6655c52fd0aecf2f4810268e7f25dae57b096",
+      "bytes": 77568
+    },
+    {
+      "module": "CurrentV43.Parametric.Source",
+      "provider_kind": "project",
+      "olean_sha256": "a373246985fd86d2e38a8ffc74fca7defcf5cb2f191f357c2f201093a9e17900",
+      "bytes": 136240
+    },
+    {
+      "module": "CurrentV43.Parametric.Timing",
+      "provider_kind": "project",
+      "olean_sha256": "9a4d7fabe1d3f92f90cbc93ced8380bc9fc37065b60d2a23bc8a075d4d2cb377",
+      "bytes": 201952
+    },
+    {
+      "module": "CurrentV43.PowerMachine",
+      "provider_kind": "project",
+      "olean_sha256": "8a19ec7f511c0b35a037ccc96679f8f3b28bda13740ab9db880cdc3f869e6202",
+      "bytes": 1556240
+    },
+    {
+      "module": "CurrentV43.PowerSchedule",
+      "provider_kind": "project",
+      "olean_sha256": "34eadc0f8d36f107c69a3dd79496b57542012926b9c691303e69efcf7c90b4ee",
+      "bytes": 357568
+    },
+    {
+      "module": "CurrentV43.PowerSchedulePaid",
+      "provider_kind": "project",
+      "olean_sha256": "e1da59e5b00727f5cc7b56ea1f16c4837d34bb29e2f7d6ac753f0f73aee81fb7",
+      "bytes": 301416
+    },
+    {
+      "module": "CurrentV43.Randomized.Algorithm",
+      "provider_kind": "project",
+      "olean_sha256": "73d1e11be515071b4b4eb4fcbe329200253f0736cb1df37576afd0426276144e",
+      "bytes": 262152
+    },
+    {
+      "module": "CurrentV43.Randomized.AlgorithmLaw",
+      "provider_kind": "project",
+      "olean_sha256": "1de6db30d9cd51c06ac41b5dd36b60550bcf6cc111a8df3a6bb97210ba2fe825",
+      "bytes": 44328
+    },
+    {
+      "module": "CurrentV43.Randomized.Clock",
+      "provider_kind": "project",
+      "olean_sha256": "0d0457d618f98cd7d71ba7801d358f06caf3b8b97ba900293605c31d81609894",
+      "bytes": 373424
+    },
+    {
+      "module": "CurrentV43.Randomized.Concrete",
+      "provider_kind": "project",
+      "olean_sha256": "67997f6ee7236dd50f054e0e212171a6921418c42f45d3f690079231e563f1fc",
+      "bytes": 43368
+    },
+    {
+      "module": "CurrentV43.Randomized.ConcreteLaw",
+      "provider_kind": "project",
+      "olean_sha256": "e2f8920c0303f214811ef63cc8263ccfe41e1b29d04ef9965d0e7e89567b7c62",
+      "bytes": 209480
+    },
+    {
+      "module": "CurrentV43.Randomized.Endpoint",
+      "provider_kind": "project",
+      "olean_sha256": "d7a2d014e51bc42f75edd25a067f611dfcf677f9e0d795b83f921ea4ff9ea967",
+      "bytes": 106912
+    },
+    {
+      "module": "CurrentV43.Randomized.OuterClock",
+      "provider_kind": "project",
+      "olean_sha256": "6dbd55781ca0e1d3434466af2eca8c7ec191ebdbafddbc8604edbaf1f28b4cad",
+      "bytes": 356720
+    },
+    {
+      "module": "CurrentV43.Randomized.Parameters",
+      "provider_kind": "project",
+      "olean_sha256": "a230ad86d50a26f5bf39d2f41d0a7aa560720d6fdb921f00bb75ada83827f651",
+      "bytes": 11696
+    },
+    {
+      "module": "CurrentV43.Randomized.Probability",
+      "provider_kind": "project",
+      "olean_sha256": "c5382297400f766386264da5d478fc3299cc4f93190c09817b7a617e81022f11",
+      "bytes": 26040
+    },
+    {
+      "module": "CurrentV43.Randomized.Router",
+      "provider_kind": "project",
+      "olean_sha256": "fadaa7cc26b975c209fee639b90750a60bd6b4f2d08f18caaab03f432ee8c1a8",
+      "bytes": 44152
+    },
+    {
+      "module": "CurrentV43.Randomized.Runtime",
+      "provider_kind": "project",
+      "olean_sha256": "d674b03fe3c0c3cd29c82b097902a15b54cdae079f00d70d1316480a564a4bee",
+      "bytes": 133864
+    },
+    {
+      "module": "CurrentV43.Randomized.Source",
+      "provider_kind": "project",
+      "olean_sha256": "d578ca869501a483594650baf853e3e6b31a0cd524e1baf440ced38874527842",
+      "bytes": 184936
+    },
+    {
+      "module": "CurrentV43.RandomizedArithmetic",
+      "provider_kind": "project",
+      "olean_sha256": "e1f7435334a6d068f8b3c67953bf741720144774a259c1b45a1e005d2d904900",
+      "bytes": 1751120
+    },
+    {
+      "module": "CurrentV43.ResourceClock",
+      "provider_kind": "project",
+      "olean_sha256": "a3dbb126cfb17a26b4efe304d3c980d7a10422d32ac951c554c6f690ec379bcf",
+      "bytes": 174656
+    },
+    {
+      "module": "CurrentV43.ResourceFit",
+      "provider_kind": "project",
+      "olean_sha256": "daad50680052ca6afbf4e68886df46cbdd77b8ede997d8a1fd90ddf784362e08",
+      "bytes": 549688
+    },
+    {
+      "module": "CurrentV43.ResourcePower",
+      "provider_kind": "project",
+      "olean_sha256": "14621a32ce39f244d99fea75e1d50d468ad4ff7950414a65f3cec15b87736072",
+      "bytes": 1433488
+    },
+    {
+      "module": "CurrentV43.ResourceTotal",
+      "provider_kind": "project",
+      "olean_sha256": "3883d692ec7d7350bc7cc1384b6adb11d28e3a3c46ece83204e46c58f45bd5f9",
+      "bytes": 326704
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.Accuracy",
+      "provider_kind": "project",
+      "olean_sha256": "a5da4eb61996e722d94827696d141fdebafe3a9dd1b61095146f5e90688b66d5",
+      "bytes": 281040
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.CommonConstants",
+      "provider_kind": "project",
+      "olean_sha256": "3fc286bb2d9eccb366e32d7170591529a85cc285f120f55a3ba36269f4cbe373",
+      "bytes": 113096
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.DeterministicCaller",
+      "provider_kind": "project",
+      "olean_sha256": "ec2bacf92c7c94eeb1fb3f178ab5e96042d9970b8b45054118d59767cd2a048f",
+      "bytes": 79776
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.DeterministicEndpoint",
+      "provider_kind": "project",
+      "olean_sha256": "1a8afdfd563ef27ecf8a3847b1be0953fac93eef4e9bb9d08aeb8c6816e71d3f",
+      "bytes": 172536
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.DeterministicFront",
+      "provider_kind": "project",
+      "olean_sha256": "e8ec2f8ae275b66c8f03eea807046c98ba18f34a0e594e9af1e898771ca3198d",
+      "bytes": 385064
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.ErrorNonnegative",
+      "provider_kind": "project",
+      "olean_sha256": "63540a1c65c16f0620cff41184d83287e6facc2be3a6094df07d5ae7905f3bbb",
+      "bytes": 57968
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.Numerics",
+      "provider_kind": "project",
+      "olean_sha256": "241f0156d61570c8bce92d2bbb44ebaa646892e740cd1fe4b5fd36ea76681da1",
+      "bytes": 446336
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.RequestClock",
+      "provider_kind": "project",
+      "olean_sha256": "2852f0fc8481ae8662ffaf53b8216686ad5152e32b65dba25ec7922376c95320",
+      "bytes": 463800
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.SourceBounds",
+      "provider_kind": "project",
+      "olean_sha256": "51b31a9036bb1572be48677bd953a89b6367b568285803f9552d98df124bc2f8",
+      "bytes": 389944
+    },
+    {
+      "module": "CurrentV43.TimeTradeoff.SourceCorrectness",
+      "provider_kind": "project",
+      "olean_sha256": "95432f361b8ed66a2667825e0267310f25ce56dd3abff93ec84d833ddcdafdf1",
+      "bytes": 106832
     },
     {
       "module": "EthBridge.Arith",

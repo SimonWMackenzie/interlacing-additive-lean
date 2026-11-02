@@ -5,14 +5,15 @@ import json
 
 ROOT = Path(__file__).resolve().parent
 ACCEPTED = {"verified_correspondence", "external_input", "definition_correspondence"}
-PAPER_PREFIX = "papers/randomized-additive-hardness/versions/v42/"
-OWNER = "papers/randomized-additive-hardness/formalization/current-v42/"
+PAPER_PREFIX = "papers/randomized-additive-hardness/versions/v43/"
+OWNER = "papers/randomized-additive-hardness/formalization/current-v43/"
 LIBRARIES = {
     "Workspace": "vendor/npc-cc", "NPCC": "vendor/npc-cc", "EthBridge": "vendor/npc-cc",
     "LegacyNPCC": "src", "EthInapproximability": "src",
     "Paper2": "papers/randomized-additive-hardness/formalization/lean",
     "CurrentAdditive": "papers/randomized-additive-hardness/formalization/current-v27/lean",
     "CurrentV42": "papers/randomized-additive-hardness/formalization/current-v42/lean",
+    "CurrentV43": "papers/randomized-additive-hardness/formalization/current-v43/lean",
 }
 
 def need(condition, message):
@@ -64,7 +65,7 @@ def check_pin(root, item):
 
 def binding_path(relative):
     """Translate only the manuscript namespace; Lean source paths stay exact."""
-    return "manuscript-v42/"+relative[len(PAPER_PREFIX):] if relative.startswith(PAPER_PREFIX) else relative
+    return "manuscript-v43/"+relative[len(PAPER_PREFIX):] if relative.startswith(PAPER_PREFIX) else relative
 
 def original_digest(root, relative):
     """Original private identity, distinct from projected public byte identity."""
@@ -72,25 +73,38 @@ def original_digest(root, relative):
     matches = [b for b in binding["identity_bindings"] if b["release_path"] == relative]
     return matches[0]["sha256"] if matches else sha(root/relative)
 
+def authority_target(kind):
+    targets = {"current_v43_build": "CurrentV43", "current_v42_build": "CurrentV42"}
+    need(kind in targets, "Unsupported build authority kind: " + str(kind))
+    return targets[kind]
+
+
 def check_coverage(root, manifest):
-    coverage = read(root/"manuscript-v42/V42_STATEMENT_MAP.json")
-    source = root/"manuscript-v42/source/main.tex"
-    need(coverage.get("version") == "v42" and coverage.get("source_sha256") == sha(source),
+    coverage = read(root/"manuscript-v43/V43_STATEMENT_MAP.json")
+    source = root/"manuscript-v43/source/main.tex"
+    need(coverage.get("version") == "v43" and coverage.get("source_sha256") == sha(source),
          "Coverage is bound to a different source")
     rows = coverage["blocks"]+coverage["unnumbered_requirements"]
     need(rows and len({r["id"] for r in rows}) == len(rows), "Empty or duplicate coverage rows")
-    inventory = read(root/"manuscript-v42/SELECTED_STATEMENTS.v42.json")
+    inventory = read(root/"manuscript-v43/SELECTED_STATEMENTS.v43.json")
     need(inventory["source_sha256"] == sha(source), "Stale source-statement inventory")
     blocks = sorted(inventory["formal_blocks"]+inventory["auxiliary_blocks"], key=lambda b:b["line"])
     need([b["id"] for b in blocks] == [b["id"] for b in coverage["blocks"]], "Map omits/reorders inventoried source blocks")
     for block, row in zip(blocks, coverage["blocks"]):
         need(all(row.get(k) == v for k,v in block.items()), "Changed source block in correspondence map: "+block["id"])
-    lock = read(root/"manuscript-v42/SOURCE_LOCK.json")
+    lock = read(root/"manuscript-v43/SOURCE_LOCK.json")
     need(lock["source"]["sha256"] == sha(source) and lock.get("pdf_bound") and
          lock.get("manuscript_manifest_bound"), "Source/PDF/manifest lock is incomplete")
     need(all(r["status"] in ACCEPTED for r in rows), "Pending/unmapped manuscript obligations")
     need(coverage.get("correspondence_complete") is True,
          "Coverage global completion flag is stale; freeze it only after all independent rows close")
+    required_runtime = {"thm:time-tradeoff", "thm:quantitative", "det:time"}
+    runtime = {r["id"]:r for r in rows if r["id"] in required_runtime}
+    need(set(runtime)==required_runtime, "Missing v43 runtime statement")
+    for row in runtime.values():
+        need(row["status"]=="verified_correspondence" and row.get("accepted_declarations") and
+             all(d.get("build_authority",{}).get("kind")=="current_v43_build" for d in row["accepted_declarations"]),
+             "Runtime endpoint lacks new source-bound checked proof: "+row["id"])
     project = {e["path"]: e for e in manifest["files"] if e.get("role") == "checked_proof_source"}
     bindings = read(root/"RELEASE_BINDING.json")["identity_bindings"]
     mapped = {e["original_path"]: e for e in bindings}
@@ -123,7 +137,7 @@ def check_coverage(root, manifest):
                 need(receipt.get("source_manifest_sha256", "").lower() == authority["manifest"]["sha256"],
                      "Imported build receipt does not bind its source manifest")
                 commands = receipt.get("commands", receipt.get("gates", []))
-                target = "CurrentV42" if authority["kind"] == "current_v42_build" else "CurrentAdditive"
+                target = authority_target(authority["kind"])
                 command_text = json.dumps(commands)
                 need(receipt.get("status") in (None, "passed") and commands and
                      all(c.get("exit_code") == 0 for c in commands) and
@@ -140,15 +154,15 @@ def check_coverage(root, manifest):
             prior = authority_cache[key].get(decl["source"])
             need(prior and prior["sha256"].lower() == decl["source_sha256"],
                  "Accepted source outside recorded imported build: "+decl["name"])
-    inspector_path = root/"manuscript-v42/INSPECTOR_STATEMENTS.json"
+    inspector_path = root/"manuscript-v43/INSPECTOR_STATEMENTS.json"
     need(inspector_path.is_file(), "Missing final inspector statement data")
     inspector = read(inspector_path)
-    pdf = root/"manuscript-v42/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v42.pdf"
+    pdf = root/"manuscript-v43/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf"
     need(lock["pdf"]["sha256"] == sha(pdf), "Source lock PDF identity changed")
-    paper_manifest = read(root/"manuscript-v42/MANIFEST.json")
+    paper_manifest = read(root/"manuscript-v43/MANIFEST.json")
     for item in paper_manifest["sources"]:
-        check_pin(root/"manuscript-v42", item)
-    check_pin(root/"manuscript-v42", paper_manifest["output"])
+        check_pin(root/"manuscript-v43", item)
+    check_pin(root/"manuscript-v43", paper_manifest["output"])
     need(inspector["paper"]["source_sha256"] == sha(source) and inspector["paper"]["pdf_sha256"] == sha(pdf),
          "Stale inspector manuscript identity")
     need([s["id"] for s in inspector["statements"]] == [r["id"] for r in rows],

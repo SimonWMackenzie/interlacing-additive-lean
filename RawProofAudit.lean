@@ -1,7 +1,7 @@
-import CurrentV42
+import CurrentV43
 import Lean.Util.CollectAxioms
 
-/-! Check all actual rows owned by CurrentAdditive or CurrentV42, including
+/-! Check all actual rows owned by CurrentAdditive, CurrentV42 or CurrentV43, including
 private/generated rows. Check the effective declarations and all transitive
 proof dependencies. When a raw row differs from its effective declaration,
 inspect its actual type/value dependencies separately. Only propext,
@@ -15,7 +15,7 @@ set_option maxHeartbeats 0
 set_option linter.style.longLine false
 
 def releaseOwned (owner : Name) : Bool :=
-  (`CurrentAdditive).isPrefixOf owner || (`CurrentV42).isPrefixOf owner
+  (`CurrentAdditive).isPrefixOf owner || (`CurrentV42).isPrefixOf owner || (`CurrentV43).isPrefixOf owner
 
 def rawRowKind : ConstantInfo → Nat
   | .axiomInfo _ => 0 | .defnInfo _ => 1 | .thmInfo _ => 2
@@ -39,7 +39,7 @@ run_cmd do
   let env ← getEnv
   let allowed := #[``propext, ``Classical.choice, ``Quot.sound]
   let mut owners := 0
-  let mut v42Owners := 0
+  let mut targetOwners := 0
   let mut rows := 0
   let mut theorems := 0
   let mut identical := 0
@@ -48,7 +48,7 @@ run_cmd do
   for owner in env.header.moduleNames do
     if releaseOwned owner then
       owners := owners+1
-      if owner.toString.startsWith "CurrentAdditive.V42" then v42Owners := v42Owners+1
+      if (`CurrentV43).isPrefixOf owner then targetOwners := targetOwners+1
       let some idx := env.getModuleIdx? owner | throwError "Missing owner {owner}"
       let md := env.header.moduleData[idx.toNat]!
       unless md.constNames.size == md.constants.size do
@@ -77,9 +77,9 @@ run_cmd do
               count := count+1
           actualDeps := actualDeps+count
           logInfo m!"RAW_ROW_DIFFERENT|{owner}|{name}|kind={sameKind}|levels={sameLevels}|type={sameType}|value={sameValue}|actualDependencies={count}"
-  unless owners > 0 && v42Owners > 0 && rows > 0 && theorems > 0 && identical+different == rows do
+  unless owners > 0 && targetOwners > 0 && rows > 0 && theorems > 0 && identical+different == rows do
     throwError "Empty or inconsistent current proof-row inventory"
-  logInfo m!"RAW_ROW_COUNTS owners={owners} v42Owners={v42Owners} rows={rows} theorems={theorems} identical={identical} different={different} actualDependencies={actualDeps}; standard3; no unsafe; kernelMissing=0"
+  logInfo m!"RAW_ROW_COUNTS owners={owners} targetOwners={targetOwners} rows={rows} theorems={theorems} identical={identical} different={different} actualDependencies={actualDeps}; standard3; no unsafe; kernelMissing=0"
   for name in env.header.moduleNames do
     logInfo m!"RAW_ROW_RESOLVED|{name}|{← findOLean name}"
   logInfo "RAW_PROOF_AUDIT_COMPLETE"

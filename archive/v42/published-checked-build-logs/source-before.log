@@ -1,0 +1,29 @@
+Verified 5291 identity-pinned files, 5194 exact local modules, and {'source_blocks': 66, 'unnumbered_requirements': 8}.
+Source identity and recorded correspondence do not replace the separately recorded build/audits or establish external source-interface fidelity.
+{
+  "source_snapshot_sha256": "ee55aa515fbc8b68734a8837d9355f599221d1713fbf0b1eee25e167a4d9f1f1",
+  "source_module_count": 5194,
+  "unchanged_prior_source_modules": 5032,
+  "prior_public_source_manifest_sha256": "6db13269116a8f839151dec24e14e23cdb9b214e5b64fbe308739ebdfe2d67ee",
+  "prior_public_fresh_replay_sha256": "90c8d3eaef3488bfffbe9a8d6e5c269ea08f1a583cdbadc4f03da4f988e8a261",
+  "new_source_modules": 162,
+  "selected_source_lock_public_sha256": "b3e165b5dd8d1900d823310a7de3ae602cc905a36ac9ec52259863b6b9e73256",
+  "verification_tool_sha256": {
+    "checked_build.py": "f916920009c3d1fd5964ad05d8e5eede1af43421a9be9848932257d058cf77f9",
+    "check_replay.py": "4e56778fa49c9161dba05fe52c98b2b70e13f097646d8deff0c3d45f5f1477ea",
+    "release_common.py": "30bbbfcabf0d44bf1c66a0cc37d8bd67a87b0192f5007357ea949382203071d1",
+    "verify_release.py": "42d775c4fcf48453717f8148da9a6a31b1bf944f559bdb5093f1ee43ac927a81"
+  },
+  "prior_source_lock_identity_pins": [
+    {
+      "path": "release-evidence/05db9ff1f333920b78cf5b3565e08cbb252a9500dd91ea7ff42d02b2711b4dec/SOURCE_LOCK.json",
+      "bytes": 1004,
+      "sha256": "05db9ff1f333920b78cf5b3565e08cbb252a9500dd91ea7ff42d02b2711b4dec"
+    },
+    {
+      "path": "release-evidence/032af4b8cb738067d258bb8a92c908b28474aad3f134b3419b7d017bfbdc11f9/SELECTED_SOURCE_LOCK.json",
+      "bytes": 5798,
+      "sha256": "032af4b8cb738067d258bb8a92c908b28474aad3f134b3419b7d017bfbdc11f9"
+    }
+  ]
+}

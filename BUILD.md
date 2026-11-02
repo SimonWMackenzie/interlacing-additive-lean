@@ -1,20 +1,52 @@
-# Reproducing the source snapshot
+# Checking and reproducing this v43 source snapshot
 
-Install Lean through elan and Python 3.11 or later. `lean-toolchain` selects the
-toolchain and `lake-manifest.json` pins Mathlib and every fetched dependency.
-The canonical checked-build receipt and a cold project-source replay are
-different forms of evidence. The release status identifies which passed.
+Use Python 3.11 or later and the Lean toolchain selected by lean-toolchain.
+lake-manifest.json pins Mathlib and every fetched dependency. Run all commands
+below from the supplied package root unless another root is specified.
 
-The canonical route uses existing unchanged inherited project objects. It first
-checks every supplied proof source, the exact production configuration, admission
-registry, and prior v40 fresh-release source/receipt identities. It runs
-`lake build CurrentV42`, both complete audits and every provider/object/pin
-check, then checks the source package again. Every imported object is hashed.
-`PUBLISHED_CHECKED_BUILD.json` explicitly records
-`project_build_initially_empty: false` and `fresh_project_replay: false`.
-It does not claim all unchanged inherited project modules were cold rebuilt.
+First verify the source identities, full manuscript correspondence, declaration
+anchors, review bindings and any accepted build/replay evidence:
 
-For the optional cold project-source replay, run from a fresh checkout:
+```sh
+python verify_release.py
+```
+
+This source/evidence verifier does not compile Lean. Complete manuscript
+correspondence is separately recorded in FULL_COVERAGE_RECEIPT.json. The 54 v43
+proof additions and all three direct algorithmic results passed independent
+review and integrated production build/audit checks before packaging.
+
+## Canonical checked incremental build
+
+PUBLISHED_CHECKED_BUILD.json records this mode when accepted; release-status.json
+binds its exact identity. It reuses existing inherited project objects and does
+not claim a cold source rebuild.
+
+To repeat it against a matching development checkout that already has project
+objects, use the actual CLI below. Replace the two placeholder paths; OUTPUT
+must be a new directory outside the source package.
+
+```sh
+python checked_build.py --root MATCHING_DEVELOPMENT_CHECKOUT --source-package . --output NEW_CHECKED_BUILD_DIRECTORY
+```
+
+The runner checks exact sources, configuration, admissions and prior-release
+provenance; runs `lake build CurrentV43`, AxiomAudit.lean and RawProofAudit.lean;
+checks every resolved provider, object hash and dependency pin; then checks the
+sources again. Lake's artifact cache is disabled for its subprocesses. Production
+resource settings are preserved; only the public package's default target is
+changed to CurrentV43. Private compiler overrides are not supplied silently.
+
+The runner writes CHECKED_BUILD.json and logs to the selected output directory.
+It does not commit, publish or replace this package's accepted public receipt.
+PUBLISHED_CHECKED_EVIDENCE_BINDING.json distinguishes original receipt/log hashes
+from hashes of path-projected public evidence.
+
+## Optional cold project-source replay
+
+Use a separate fresh source checkout/copy with no local project objects in
+.lake/build, no local REPLAY.json and no local build-logs directory. Existing
+external toolchain and pinned dependency caches may be reused.
 
 ```sh
 python verify_release.py
@@ -22,70 +54,35 @@ lake exe cache get
 python replay.py
 ```
 
-That runner refuses existing project objects in `.lake/build`, existing local
-replay logs, and externally set Lean search paths. It disables Lake's artifact
-cache for every subprocess with `LAKE_ARTIFACT_CACHE=false`, builds `CurrentV42`,
-runs the effective-declaration and raw-proof audits, checks all active object
-providers and dependency source revisions, then rechecks the source package.
-It stops on a failed command and writes `REPLAY.json` and `build-logs/`.
-Nothing is deleted. Use another fresh checkout to repeat the replay.
+replay.py accepts no root argument: run it from the fresh package root. It
+refuses existing project objects or externally set LEAN_PATH, LEAN_SRC_PATH or
+LEAN_SYSROOT. It disables Lake's artifact cache, builds every imported local
+project module, runs both audits and the provider/pin checks, and verifies the
+source package before and after. It writes a new local REPLAY.json and
+build-logs; it never deletes existing evidence. Repeating this mode requires
+another fresh checkout.
 
-The package preserves the production-validated Lake options and exact
-source-local resource settings; only its default target changes to `CurrentV42`.
-`RESOURCE_LIMITS.json` records these settings. Private compiler flags are not
-silently added to the fresh replay: that replay must succeed using the supplied
-sources and configuration.
+PUBLISHED_REPLAY.json and published-build-logs, when present, are separately
+accepted public cold-replay evidence. A successful local replay does not replace
+them automatically. Cached external objects are explicitly distinguished from
+the freshly compiled local project modules.
 
-Pinned toolchain objects and fetched external package objects can be reused.
-All imported local project modules must be compiled in a fresh replay checkout.
-The receipt states this distinction and records the observed module count;
-there is no fixed historical count. `PROVIDER_INVENTORY.json` records hashes of
-the actual object files, the toolchain identity and dependency manifest.
-These hashes identify the objects used; they do not prove cached external
-objects were compiled locally from source.
+## Audit and assumption scope
 
-`AxiomAudit.lean` checks every effective declaration owned by imported
-`CurrentAdditive` and `CurrentV42` modules and its transitive proof axioms.
-`RawProofAudit.lean` additionally checks all actual generated rows owned by
-those modules. If a raw row differs from the effective declaration, it checks
-the actual type/proof expressions and their dependencies. Counts are observed
-and cross-checked against the release's imported owner set. The audit permits
-only `propext`, `Classical.choice`, and `Quot.sound` as proof dependencies and
-rejects unsafe owned declarations or missing checked dependencies.
+AxiomAudit.lean checks effective declarations owned by imported CurrentAdditive,
+CurrentV42 and CurrentV43 modules and their transitive proof axioms.
+RawProofAudit.lean also examines their actual generated/private rows. Where raw
+and effective expressions differ, it checks the raw type and proof dependencies.
+Only propext, Classical.choice and Quot.sound are permitted in audited proof
+dependencies; unsafe owned declarations and missing checked dependencies fail.
 
-The complete provider inventory includes inherited `Paper2`,
-`EthInapproximability`, `LegacyNPCC`, `Workspace`, `NPCC`, and `EthBridge` modules.
-Reachable dependencies of the audited proof rows are checked transitively.
-An unused inherited citation assertion is not promoted into the release's
-checked theorem scope merely because its file is supplied for reproducibility.
+All inherited local providers are included in SOURCE_MANIFEST.json. Reachable
+proof dependencies are audited transitively; unused inherited citation assertions
+are not promoted into the checked theorem scope. Exact source-reduction,
+language and complexity premises remain visible in theorem interfaces. The
+three direct runtime implications do not assume ETH. External Dinur/BOT record
+fidelity remains qualified separately from compilation and manuscript matching.
 
-`verify_release.py` checks file identities, exact local Lean source paths,
-the admitted v42 module registry and review hashes, every accepted declaration
-anchor, all formal and unnumbered coverage rows, and the independent coverage
-gate bindings. Those identity checks do not replace the independent statement
-reviews or establish fidelity of external source-theorem records.
-
-Canonical checked-build evidence is kept in `PUBLISHED_CHECKED_BUILD.json` and
-`published-checked-build-logs/`, with explicit path-projection bindings in
-`PUBLISHED_CHECKED_EVIDENCE_BINDING.json`. Original private receipt/log hashes
-and distinct public hashes are retained. These files do not assert a fresh replay.
-
-Optional published fresh-replay evidence is kept in `PUBLISHED_REPLAY.json` and
-`published-build-logs/`. Machine paths are projected to relative provenance IDs;
-original/private and public/projected hashes are separately recorded in
-`PUBLISHED_EVIDENCE_BINDING.json`. Executables, flags, exit codes and audit
-conclusions are retained. Original private logs remain archived locally.
-Your replay creates separate local files and does not
-overwrite that evidence. Historical v40 receipts under `archive/v40/` are
-preserved verbatim and do not certify the current source.
-
-Historical private build-authority receipts bind their original manifest hash,
-which is not the hash of a projected manifest. They preserve the attestation
-trace and do not replace the current canonical checks or optional fresh public replay. Five already-public legacy
-path comments in inherited source files have exact hash/line exceptions under
-`PUBLIC_PATH_EXCEPTIONS.json`; those nonpersonal comments are preserved with
-the proof bytes. New personal paths, attachment locations and credential data
-are rejected during preparation.
-
-Mathlib and the other fetched dependencies retain their own licenses, including
-Apache-2.0 and the Cli package's MIT license. Original project notices remain.
+The source verifier, independent correspondence reviews, canonical incremental
+check, optional cold replay and website deployment are distinct evidence. A
+website view or successful artifact download does not replace a Lean build.

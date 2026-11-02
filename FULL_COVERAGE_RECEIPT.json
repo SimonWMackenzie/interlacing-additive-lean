@@ -3,8 +3,8 @@
   "date": "2026-11-02",
   "correspondence_complete": true,
   "unresolved_obligations": [],
-  "source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
-  "coverage_sha256": "55db75a9971ca50bc4cb56a5091cb57619953bc9f6838ec0e0d1f997f3db0fe2",
+  "source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
+  "coverage_sha256": "ff2a672836cdcd9706a52abe6484f048797445e9ed86d8d14dd599f788679379",
   "admitted_manifest_sha256": "389ae4c0aac7fc133853cc838da8153681b704ee68e39988bb84df5e1f3843ad",
   "aggregate_sha256": "5811f60ee4ec40a1eafd12d33f65a4b6e6c3e42cd39e58f129477020496c0611",
   "statement_counts": {
@@ -53,6 +53,16 @@
           "path": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
           "bytes": 28061,
           "sha256": "0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522"
+        },
+        {
+          "path": "release-evidence/44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426/EDITORIAL_TRANSFER.json",
+          "bytes": 17512,
+          "sha256": "44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426"
+        },
+        {
+          "path": "release-evidence/945cba3d4c4bd55be5fea28d4d93c6611cad529f5e42d2991f4c3d4f6c0c0cb0/TRANSFER_TRANSFER_ADMISSION_REVIEW.json",
+          "bytes": 28285,
+          "sha256": "945cba3d4c4bd55be5fea28d4d93c6611cad529f5e42d2991f4c3d4f6c0c0cb0"
         }
       ]
     },
@@ -105,24 +115,34 @@
           "path": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
           "bytes": 28061,
           "sha256": "0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522"
+        },
+        {
+          "path": "release-evidence/44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426/EDITORIAL_TRANSFER.json",
+          "bytes": 17512,
+          "sha256": "44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426"
+        },
+        {
+          "path": "release-evidence/945cba3d4c4bd55be5fea28d4d93c6611cad529f5e42d2991f4c3d4f6c0c0cb0/TRANSFER_TRANSFER_ADMISSION_REVIEW.json",
+          "bytes": 28285,
+          "sha256": "945cba3d4c4bd55be5fea28d4d93c6611cad529f5e42d2991f4c3d4f6c0c0cb0"
         }
       ]
     }
   ],
-  "scope": "Current v43 correspondence after a strictly editorial disclosure revision. All previously accepted mathematical statements, proof bodies, providers and proof-build authority are unchanged. New source identity and declaration anchors checked separately. Cited source reductions remain explicit; no cold replay or publication is claimed.",
+  "scope": "Current v43 correspondence after a strictly editorial one-sentence Overleaf merge. All previously accepted mathematical statements, proof bodies, providers and proof-build authority are unchanged. New source identity and declaration anchors checked separately. Cited source reductions remain explicit; no cold replay or publication is claimed.",
   "proof_variations": [
     "Corollary1.4 uses proved computable dyadic schedule, not literal finite equality to paper integer-root recipe",
     "Physical deterministic source proves eventual table growth from graph floor rather than literal N^2 lower bound",
     "Weaker source vertex lower floor suffices and preserves sharp randomized coefficient"
   ],
   "editorial_transfer_review": {
-    "path": "release-evidence/64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d/EDITORIAL_TRANSFER.json",
-    "bytes": 17477,
-    "sha256": "64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d"
+    "path": "release-evidence/44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426/EDITORIAL_TRANSFER.json",
+    "bytes": 17512,
+    "sha256": "44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426"
   },
   "prior_coverage_receipt": {
-    "path": "papers/randomized-additive-hardness/formalization/current-v43/verification/reader-facing-disclosure-2026-11-02/PRIOR_FULL_COVERAGE_RECEIPT.json",
-    "bytes": 4329,
-    "sha256": "a0c29d23899e5b40b45764946e3d4f3219986e880039f68395f3423427cb65de"
+    "path": "papers/randomized-additive-hardness/formalization/current-v43/verification/overleaf-merge-2026-11-03/PRIOR_FULL_COVERAGE_RECEIPT.json",
+    "bytes": 6301,
+    "sha256": "f7180c07eb5eda28b4904b275d9ab31d5f9b14ca4e82f089cfecbf509e3b6cbe"
   }
 }

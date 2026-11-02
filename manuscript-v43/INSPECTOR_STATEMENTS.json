@@ -2,8 +2,8 @@
   "paper": {
     "version": "v43",
     "title": "NP-Hardness and Additive Inapproximability of Deterministic Communication Complexity",
-    "source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
-    "pdf_sha256": "d0b16530da79432a56490994b15e725415082cd4bd93e9803e2c07e2adb7ed2d"
+    "source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
+    "pdf_sha256": "3427bd83cab3a55951dde2433cdec717e48e303a4b23aff9092b889f6b8b5ea7"
   },
   "statements": [
     {
@@ -3704,7 +3704,7 @@
       "Classical.choice",
       "Quot.sound"
     ],
-    "source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
+    "source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
     "build": {
       "production_incremental_build_complete": true,
       "canonical_checked_build_complete": true,
@@ -3715,7 +3715,7 @@
     },
     "displayed_manuscript_version": "v43",
     "checked_lean_release": "v43",
-    "checked_manuscript_source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
+    "checked_manuscript_source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
     "presentation_history": [
       {
         "kind": "v43 manuscript presentation with partial Lean correspondence",
@@ -3872,9 +3872,9 @@
       "human_proof_text": "Author supplied broad exposition revisions; retained links concern the reviewed mathematical statements, not byte-identical proof text."
     },
     "final_source_admission_review": {
-      "path": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
-      "bytes": 28061,
-      "sha256": "0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522"
+      "path": "release-evidence/945cba3d4c4bd55be5fea28d4d93c6611cad529f5e42d2991f4c3d4f6c0c0cb0/TRANSFER_TRANSFER_ADMISSION_REVIEW.json",
+      "bytes": 28285,
+      "sha256": "945cba3d4c4bd55be5fea28d4d93c6611cad529f5e42d2991f4c3d4f6c0c0cb0"
     },
     "source_body_transfer": [
       {
@@ -3979,9 +3979,9 @@
       "note": "The displayed statements use uniform label counts. The original checked-build and coverage receipts remain pinned to their original source; the existing broader or equivalent Lean statements support these presentation changes. No new proof build is claimed."
     },
     "editorial_transfer_review": {
-      "path": "release-evidence/64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d/EDITORIAL_TRANSFER.json",
-      "bytes": 17477,
-      "sha256": "64a1d0b1c4b05c59e5a19e91e9429a0c9dfb7d10ec0934887be0b998bff28e9d"
+      "path": "release-evidence/44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426/EDITORIAL_TRANSFER.json",
+      "bytes": 17512,
+      "sha256": "44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426"
     }
   },
   "shortcuts": [

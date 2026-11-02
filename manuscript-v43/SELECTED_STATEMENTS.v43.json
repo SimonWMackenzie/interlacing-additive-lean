@@ -2,7 +2,7 @@
   "schema_version": 1,
   "version": "v43",
   "main": "main.tex",
-  "source_sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
+  "source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
   "active_source_files": [
     "main.tex"
   ],

@@ -50910,8 +50910,8 @@
     },
     {
       "path": "FULL_COVERAGE_RECEIPT.json",
-      "sha256": "283285509c512efc1c5daf05692abe3dc2e4660decc8aae1121246ea6e3262c4",
-      "bytes": 6023,
+      "sha256": "5a820b3dcb06113228f5131e197b807756173ad65da1afa25687b2e8f4ceaef4",
+      "bytes": 7097,
       "role": "root_coverage_gate"
     },
     {
@@ -50928,8 +50928,8 @@
     },
     {
       "path": "RELEASE_BINDING.json",
-      "sha256": "03a448a17a8faa67992f290186652e12593165b921a0bde37ad90b518ebff23d",
-      "bytes": 82038,
+      "sha256": "81ae21814f6f4ab594dae31b632369c5dbdd9863550a8494455c835e7533dc88",
+      "bytes": 83667,
       "role": "identity_binding"
     },
     {
@@ -51228,44 +51228,44 @@
     },
     {
       "path": "manuscript-v43/INSPECTOR_STATEMENTS.json",
-      "sha256": "b22dd47ad0252b4d19e3aefe998abe36fcad7980a69b5346eb92a4a74d5beec2",
-      "bytes": 392892,
+      "sha256": "a2e73c81583fe0a98077e12266b7bcf3e86692e905c762ffdf81065c29fe9677",
+      "bytes": 392901,
       "role": "inspector_navigation"
     },
     {
       "path": "manuscript-v43/MANIFEST.json",
-      "sha256": "dbede8a57021a145b52d71985bc8f32b24abdb5ab2d4f6dd4f72567ff2163658",
+      "sha256": "56d4c6a71c867eb2635aa71b90d32110e944e5457b1806744af564358c2297ea",
       "bytes": 739,
       "role": "v43_manuscript"
     },
     {
       "path": "manuscript-v43/SELECTED_STATEMENTS.v43.json",
-      "sha256": "42022bd6c71ceb8f4bf3edd1bbd5b5d76c049013e71946d94c91119b1ad92261",
+      "sha256": "a161ebf1da4954b71f671445359d4b49efe4b3addc4f890e5f99d8841da40007",
       "bytes": 44271,
       "role": "source_statement_inventory"
     },
     {
       "path": "manuscript-v43/SOURCE_LOCK.json",
-      "sha256": "e89ff6ec2029eb286b2524c982a562b5cb6be5c84f7722761bce0adf12d84bf4",
-      "bytes": 9028,
+      "sha256": "cd9c6ab84f92ef4fbd1eeb30476872aba99f5bca872437f8c837e3c13fb536b2",
+      "bytes": 9783,
       "role": "source_identity_lock"
     },
     {
       "path": "manuscript-v43/V43_STATEMENT_MAP.json",
-      "sha256": "e6dd7866dd005279288c91bc0217613a0e49399f90061c136d0fbcc68ebc9e1f",
-      "bytes": 1763166,
+      "sha256": "12b873674fac60329eabd28d7b9827e5013af06a26c003a06a38bec972a09c6e",
+      "bytes": 1783910,
       "role": "v43_correspondence"
     },
     {
       "path": "manuscript-v43/output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf",
-      "sha256": "d0b16530da79432a56490994b15e725415082cd4bd93e9803e2c07e2adb7ed2d",
-      "bytes": 1012238,
+      "sha256": "3427bd83cab3a55951dde2433cdec717e48e303a4b23aff9092b889f6b8b5ea7",
+      "bytes": 1012239,
       "role": "v43_manuscript"
     },
     {
       "path": "manuscript-v43/source/main.tex",
-      "sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
-      "bytes": 285085,
+      "sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
+      "bytes": 285086,
       "role": "v43_manuscript"
     },
     {
@@ -77879,6 +77879,12 @@
       "role": "review_evidence"
     },
     {
+      "path": "release-evidence/44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426/EDITORIAL_TRANSFER.json",
+      "sha256": "44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426",
+      "bytes": 17512,
+      "role": "review_evidence"
+    },
+    {
       "path": "release-evidence/48e492cf190600b8d081325d3f052be205f0467651e9a03af0ff4fcaef1266f0/RESTORATION_REVIEW.md",
       "sha256": "48e492cf190600b8d081325d3f052be205f0467651e9a03af0ff4fcaef1266f0",
       "bytes": 4455,
@@ -78020,6 +78026,12 @@
       "path": "release-evidence/92ecbf293a7511b6ba2c36f4b74bbca4e089f0525ed3c1553f2cc463547ecdf2/REVIEW.json",
       "sha256": "94791222ee8f306226bd0df922dfffcf92bb2f51f285d593bedbec8406844db6",
       "bytes": 15730,
+      "role": "review_evidence"
+    },
+    {
+      "path": "release-evidence/945cba3d4c4bd55be5fea28d4d93c6611cad529f5e42d2991f4c3d4f6c0c0cb0/TRANSFER_TRANSFER_ADMISSION_REVIEW.json",
+      "sha256": "af731dbb2e48324a78edb6ddac3db832472d72bd2d9b2b2e4a8b5d55bba8f071",
+      "bytes": 27655,
       "role": "review_evidence"
     },
     {

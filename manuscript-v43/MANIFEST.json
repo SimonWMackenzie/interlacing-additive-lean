@@ -3,8 +3,8 @@
   "sources": [
     {
       "path": "source/main.tex",
-      "sha256": "53bb6a442bccb187b89b8f782751ff3932f8c9ed1a1e6ed6e3f96047de413040",
-      "bytes": 285085
+      "sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
+      "bytes": 285086
     },
     {
       "path": "source/references.bib",
@@ -12,10 +12,10 @@
       "bytes": 16921
     }
   ],
-  "source_fingerprint": "1a3d4757a2885751264bf047fd22f40a1d111a5ff45499cbfd8a823708cb24a7",
+  "source_fingerprint": "a609dc1fc67a19ade1d4d9b60d56498415eb6d94445a9de748c3b0c0b6af170c",
   "output": {
     "path": "output/INTERLACING_AND_ADDITIVE_INAPPROXIMABILITY_v43.pdf",
-    "sha256": "d0b16530da79432a56490994b15e725415082cd4bd93e9803e2c07e2adb7ed2d"
+    "sha256": "3427bd83cab3a55951dde2433cdec717e48e303a4b23aff9092b889f6b8b5ea7"
   },
   "build_diagnostics": [],
   "invisible_build_anchor": true,

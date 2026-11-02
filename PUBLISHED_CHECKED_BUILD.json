@@ -6,11 +6,11 @@
   "project_build_initially_empty": false,
   "project_sources_cold_rebuilt": false,
   "scope": "Existing project objects reused; CurrentV43 build plus complete current effective/raw audits and exact source/provider/object/pin checks. Independently admitted new components retain their production-build evidence. No cold rebuild claim.",
-  "source_manifest_sha256": "bbd0fbd5890cc5bab2aa87a21c553dd26e8a90b82d006570d4c2722d8e86d02d",
-  "full_coverage_receipt_sha256": "283285509c512efc1c5daf05692abe3dc2e4660decc8aae1121246ea6e3262c4",
+  "source_manifest_sha256": "485dce7abc1cdd5e7df2617f2c5cffff4ee51ccfbbb7f48e7fb54f4ca4e49cd7",
+  "full_coverage_receipt_sha256": "5a820b3dcb06113228f5131e197b807756173ad65da1afa25687b2e8f4ceaef4",
   "lake_artifact_cache": "disabled with LAKE_ARTIFACT_CACHE=false for build/audit subprocesses",
   "external_objects": "Pinned toolchain and package objects reused; not freshly rebuilt.",
-  "started_utc": "2026-11-02T09:37:16.593590+00:00",
+  "started_utc": "2026-11-02T16:30:27.511958+00:00",
   "commands": [
     {
       "command": [
@@ -19,24 +19,24 @@
         "CurrentV43"
       ],
       "log": "published-checked-build-logs/build.log",
-      "started_utc": "2026-11-02T09:37:18.937755+00:00",
+      "started_utc": "2026-11-02T16:30:29.697997+00:00",
       "exit_code": 0,
-      "finished_utc": "2026-11-02T09:37:24.685884+00:00",
-      "log_sha256": "5e054ee9047ae619ff675ecd887fc68b7fd97bfdf4f0ad863e4772b5d4b334e7",
-      "public_log_sha256": "5e054ee9047ae619ff675ecd887fc68b7fd97bfdf4f0ad863e4772b5d4b334e7"
+      "finished_utc": "2026-11-02T16:30:35.909080+00:00",
+      "log_sha256": "b8f71f8e9b6d7dd451d46c27422aefd90893871135800544f09f0ce3042eda88",
+      "public_log_sha256": "b8f71f8e9b6d7dd451d46c27422aefd90893871135800544f09f0ce3042eda88"
     },
     {
       "command": [
         "lake",
         "env",
         "lean",
-        "private-provenance-refs/7e087228604ccdb21ebca36e3d4a2b35ead9a11efab2751641c356a33f93b6a5/Communication Complexity (Local)\\scratch\\v43-reader-disclosure-20261102\\source-package\\AxiomAudit.lean"
+        "private-provenance-refs/7e087228604ccdb21ebca36e3d4a2b35ead9a11efab2751641c356a33f93b6a5/Communication Complexity (Local)\\scratch\\v43-publication-20261103\\source-package\\AxiomAudit.lean"
       ],
       "log": "published-checked-build-logs/axiom-audit.log",
-      "started_utc": "2026-11-02T09:37:24.693355+00:00",
+      "started_utc": "2026-11-02T16:30:35.916505+00:00",
       "audit_source_sha256": "af2213eae7e4e86be13bfd672e8d32e0e34f8496177498ddd7c8e9c7f3a58933",
       "exit_code": 0,
-      "finished_utc": "2026-11-02T09:37:46.042097+00:00",
+      "finished_utc": "2026-11-02T16:30:54.483841+00:00",
       "log_sha256": "aa1de0903855548db886b710f9f7b754a2556532aba2a3a0624e91c5ecb13d66",
       "public_log_sha256": "aa1de0903855548db886b710f9f7b754a2556532aba2a3a0624e91c5ecb13d66"
     },
@@ -45,13 +45,13 @@
         "lake",
         "env",
         "lean",
-        "private-provenance-refs/7e087228604ccdb21ebca36e3d4a2b35ead9a11efab2751641c356a33f93b6a5/Communication Complexity (Local)\\scratch\\v43-reader-disclosure-20261102\\source-package\\RawProofAudit.lean"
+        "private-provenance-refs/7e087228604ccdb21ebca36e3d4a2b35ead9a11efab2751641c356a33f93b6a5/Communication Complexity (Local)\\scratch\\v43-publication-20261103\\source-package\\RawProofAudit.lean"
       ],
       "log": "published-checked-build-logs/raw-audit.log",
-      "started_utc": "2026-11-02T09:37:46.042911+00:00",
+      "started_utc": "2026-11-02T16:30:54.484467+00:00",
       "audit_source_sha256": "3873223565d7482a529de48329c42caa3f8fa480566bab0ae0a663271af14d80",
       "exit_code": 0,
-      "finished_utc": "2026-11-02T09:38:09.166326+00:00",
+      "finished_utc": "2026-11-02T16:31:13.786600+00:00",
       "log_sha256": "7f03f47325dacee28c3ba1ef909f0d0c44e68a2ac4c81bf2c192a2de2d227fff",
       "public_log_sha256": "26a22d6c41548651323642a259a97991e5fff52b7e72dc638b2dea6c03e4fd56"
     }
@@ -61,19 +61,19 @@
       "name": "source-before",
       "operation": "source_match",
       "log": "published-checked-build-logs/source-before.log",
-      "started_utc": "2026-11-02T09:37:16.594185+00:00",
+      "started_utc": "2026-11-02T16:30:27.512407+00:00",
       "exit_code": 0,
-      "finished_utc": "2026-11-02T09:37:18.936787+00:00",
-      "log_sha256": "4f5d920404910ec7e89bf34e7df310e814d4a3df57321b0e58b06992b4ac870f",
-      "public_log_sha256": "4f5d920404910ec7e89bf34e7df310e814d4a3df57321b0e58b06992b4ac870f"
+      "finished_utc": "2026-11-02T16:30:29.697225+00:00",
+      "log_sha256": "63b9e2b637990b62a19a3428091325ab540432a0a62a51b7af0da1d68229a427",
+      "public_log_sha256": "63b9e2b637990b62a19a3428091325ab540432a0a62a51b7af0da1d68229a427"
     },
     {
       "name": "providers",
       "operation": "complete_provider_object_pin_check",
       "log": "published-checked-build-logs/providers.log",
-      "started_utc": "2026-11-02T09:38:09.169287+00:00",
+      "started_utc": "2026-11-02T16:31:13.789192+00:00",
       "exit_code": 0,
-      "finished_utc": "2026-11-02T09:38:20.198375+00:00",
+      "finished_utc": "2026-11-02T16:31:23.856892+00:00",
       "log_sha256": "13bfe0819d0d40366fc0003a49b13cd9c2e4e57b9ea389880f0b2dc99be5dc85",
       "public_log_sha256": "13bfe0819d0d40366fc0003a49b13cd9c2e4e57b9ea389880f0b2dc99be5dc85"
     },
@@ -81,11 +81,11 @@
       "name": "source-after",
       "operation": "source_match",
       "log": "published-checked-build-logs/source-after.log",
-      "started_utc": "2026-11-02T09:38:20.199114+00:00",
+      "started_utc": "2026-11-02T16:31:23.857536+00:00",
       "exit_code": 0,
-      "finished_utc": "2026-11-02T09:38:23.260004+00:00",
-      "log_sha256": "4f5d920404910ec7e89bf34e7df310e814d4a3df57321b0e58b06992b4ac870f",
-      "public_log_sha256": "4f5d920404910ec7e89bf34e7df310e814d4a3df57321b0e58b06992b4ac870f"
+      "finished_utc": "2026-11-02T16:31:26.104967+00:00",
+      "log_sha256": "63b9e2b637990b62a19a3428091325ab540432a0a62a51b7af0da1d68229a427",
+      "public_log_sha256": "63b9e2b637990b62a19a3428091325ab540432a0a62a51b7af0da1d68229a427"
     }
   ],
   "source_before": {
@@ -96,7 +96,7 @@
     "prior_public_checked_build_sha256": "03e34e74316fb9fe87192921e09898974fb2d5da1d12174726c5bdfc325d982d",
     "historical_v40_fresh_replay_sha256": "90c8d3eaef3488bfffbe9a8d6e5c269ea08f1a583cdbadc4f03da4f988e8a261",
     "new_source_modules": 55,
-    "selected_source_lock_public_sha256": "e89ff6ec2029eb286b2524c982a562b5cb6be5c84f7722761bce0adf12d84bf4",
+    "selected_source_lock_public_sha256": "cd9c6ab84f92ef4fbd1eeb30476872aba99f5bca872437f8c837e3c13fb536b2",
     "verification_tool_sha256": {
       "checked_build.py": "b1b94eabee31ab4b43c3a2e5f0623566b36be31670a99961394beab07609774c",
       "check_replay.py": "7a9ef2335842017bf36d2b70ed6c5768871493486b5cb9d1cad2b7529d15421d",
@@ -120,7 +120,7 @@
     "prior_public_checked_build_sha256": "03e34e74316fb9fe87192921e09898974fb2d5da1d12174726c5bdfc325d982d",
     "historical_v40_fresh_replay_sha256": "90c8d3eaef3488bfffbe9a8d6e5c269ea08f1a583cdbadc4f03da4f988e8a261",
     "new_source_modules": 55,
-    "selected_source_lock_public_sha256": "e89ff6ec2029eb286b2524c982a562b5cb6be5c84f7722761bce0adf12d84bf4",
+    "selected_source_lock_public_sha256": "cd9c6ab84f92ef4fbd1eeb30476872aba99f5bca872437f8c837e3c13fb536b2",
     "verification_tool_sha256": {
       "checked_build.py": "b1b94eabee31ab4b43c3a2e5f0623566b36be31670a99961394beab07609774c",
       "check_replay.py": "7a9ef2335842017bf36d2b70ed6c5768871493486b5cb9d1cad2b7529d15421d",
@@ -136,9 +136,9 @@
       }
     ]
   },
-  "finished_utc": "2026-11-02T09:38:23.260702+00:00",
+  "finished_utc": "2026-11-02T16:31:26.105489+00:00",
   "provider_inventory_sha256": "bc7de0da6ae0e59fc89c4b64fd0ccbc2fd8bc274e496f483b497a1940e02c628",
   "published_provider_inventory_sha256": "bc7de0da6ae0e59fc89c4b64fd0ccbc2fd8bc274e496f483b497a1940e02c628",
-  "original_receipt_sha256": "cfaa21477422fa6843ab55a5e4a6b64df87bc29528ed2f591c4aa5421a03b0cb",
+  "original_receipt_sha256": "f60b0f1853e5e8138456292fc555f9119c6ee920931a917b607d13d352f025cc",
   "provenance_projection": "Path-only public projection. Original private bytes are archived locally by SHA256; original hashes are historical identity references, not hashes of projected public bytes. Review conclusions, proof-source hashes, executables/options and exit codes are retained; path arguments are mapped. Current public SOURCE_MANIFEST plus its canonical checked-build or optional fresh-replay receipt supplies the distinct portable build evidence."
 }

@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
+  "pdf_sha256": "3427bd83cab3a55951dde2433cdec717e48e303a4b23aff9092b889f6b8b5ea7",
+  "prior_reviewed_source_sha256": "bfde23b90f50785939095a6d37b7b247965ee6c45beaca9011a8963dec3cc9d6",
+  "independent_statement_review": true,
+  "independent_reviewer": "/root/v43_deterministic_review",
+  "proof_author": "/root/v43_general_implication (General.Main); /root/v43_power_schedule (randomized-construction branches); /root/v43_mixed_caller (mixed branch); /root/v43_randomized_rate; /root/v43_deterministic_rate",
+  "prepared_by": "/root/v43_inventory_tools",
+  "root_semantic_admission_authority": "/root explicitly approved admission based on the independent correspondence reviews and passed production authority in the delegated final-metadata task.",
+  "proof_authors": {
+    "thm:time-tradeoff": "/root/v43_general_implication (General.Main); /root/v43_power_schedule (randomized-construction branches); /root/v43_mixed_caller (mixed branch)",
+    "thm:quantitative": "/root/v43_randomized_rate",
+    "det:time": "/root/v43_deterministic_rate"
+  },
+  "source_body_transfer": [
+    {
+      "id": "thm:time-tradeoff",
+      "prior_statement_line": 3229,
+      "current_statement_line": 3228,
+      "statement_body_sha256": "cc4573ad4a6271168d1b8301ffd9ebc094192754349768edb491d8ee886a0d27",
+      "prior_explicit_proof": {
+        "line": 3258,
+        "end_line": 3280,
+        "body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514"
+      },
+      "current_explicit_proof": {
+        "line": 3257,
+        "end_line": 3279,
+        "body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514"
+      },
+      "statement_and_proof_identical": true
+    },
+    {
+      "id": "thm:quantitative",
+      "prior_statement_line": 337,
+      "current_statement_line": 337,
+      "statement_body_sha256": "84936c7e174ce17e6e9b638d8d9a591778e5d8f596b3982db3526888875ef461",
+      "prior_explicit_proof": {
+        "line": 3306,
+        "end_line": 3360,
+        "body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61"
+      },
+      "current_explicit_proof": {
+        "line": 3305,
+        "end_line": 3359,
+        "body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61"
+      },
+      "statement_and_proof_identical": true
+    },
+    {
+      "id": "det:time",
+      "prior_statement_line": 353,
+      "current_statement_line": 353,
+      "statement_body_sha256": "d0c87a834cf5ea4524924fff713b29616b0dd7e9e0053a8941ee583e63a526b8",
+      "prior_explicit_proof": {
+        "line": 2910,
+        "end_line": 2952,
+        "body_sha256": "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754"
+      },
+      "current_explicit_proof": {
+        "line": 2909,
+        "end_line": 2951,
+        "body_sha256": "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754"
+      },
+      "statement_and_proof_identical": true
+    }
+  ],
+  "disclosure_review": {
+    "path": "release-evidence/6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50/DISCLOSURE_REVIEW_2026-11-02.json",
+    "bytes": 781,
+    "sha256": "6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50"
+  },
+  "frozen_correspondence_receipt": {
+    "path": "release-evidence/41454c59210269c2041169f75f8100b5243712e81d357e4f59fb679ff1fc987f/RECEIPT_THREE_STATEMENTS.json",
+    "bytes": 7975,
+    "sha256": "41454c59210269c2041169f75f8100b5243712e81d357e4f59fb679ff1fc987f"
+  },
+  "build_authority": {
+    "kind": "current_v43_build",
+    "manifest": {
+      "path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
+      "bytes": 2649197,
+      "sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200"
+    },
+    "receipt": {
+      "path": "release-evidence/292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973/RECEIPT.json",
+      "bytes": 6180,
+      "sha256": "292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973"
+    }
+  },
+  "proof_variations": [
+    "Corollary1.4 uses proved computable dyadic schedule, not literal finite equality to paper integer-root recipe",
+    "Physical deterministic source proves eventual table growth from graph floor rather than literal N^2 lower bound",
+    "Weaker source vertex lower floor suffices and preserves sharp randomized coefficient"
+  ],
+  "remaining_explicit_boundaries": [
+    "approved DinurReduction and BOTReduction interfaces with existing author-owned source fidelity qualification",
+    "implemented paid positive gap schedule and permitted estimator model",
+    "explicit finite fair-tape model; no monolithic probabilistic transition-system construction claimed"
+  ],
+  "evidence": [
+    {
+      "path": "release-evidence/1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb/REVIEW_THREE_STATEMENTS.md",
+      "bytes": 10916,
+      "sha256": "1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb"
+    },
+    {
+      "path": "release-evidence/41454c59210269c2041169f75f8100b5243712e81d357e4f59fb679ff1fc987f/RECEIPT_THREE_STATEMENTS.json",
+      "bytes": 7975,
+      "sha256": "41454c59210269c2041169f75f8100b5243712e81d357e4f59fb679ff1fc987f"
+    },
+    {
+      "path": "release-evidence/634a1d6bd01750c3ca4b333350b56b752e60730ea6402ad6f76e8e16f5f5f20c/SOURCE_BLOCKS.json",
+      "bytes": 2788,
+      "sha256": "634a1d6bd01750c3ca4b333350b56b752e60730ea6402ad6f76e8e16f5f5f20c"
+    },
+    {
+      "path": "release-evidence/1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb/review-deterministic-final-correspondence-REVIEW_THREE_STATEMENTS.md",
+      "bytes": 10916,
+      "sha256": "1caf7a02c5fa948c398bf8e9fdde7a1d29246431d6bd2755d5026f3901972bcb"
+    },
+    {
+      "path": "release-evidence/6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50/DISCLOSURE_REVIEW_2026-11-02.json",
+      "bytes": 781,
+      "sha256": "6b6ad1f03865d40e8d99f5dfd03425235b91db6a76e02cb1e8b4835c87b3cd50"
+    },
+    {
+      "path": "release-evidence/4dca483fbe735b7e68fdcfcbfc5bc5fb6eb28cc571cfef9f43dd5562e514aa2e/COMPONENT_SCOPE_REVIEW.json",
+      "bytes": 4292,
+      "sha256": "4dca483fbe735b7e68fdcfcbfc5bc5fb6eb28cc571cfef9f43dd5562e514aa2e"
+    },
+    {
+      "path": "release-evidence/4c245bc3fe1f9b88b0dab429f8aba0ff2e95ed81bc077b0800867ecc465985e6/COMPONENT_SCOPE_REVIEW_FINAL_SOURCE.json",
+      "bytes": 4282,
+      "sha256": "4c245bc3fe1f9b88b0dab429f8aba0ff2e95ed81bc077b0800867ecc465985e6"
+    }
+  ],
+  "runtime_decisions": [
+    {
+      "id": "thm:time-tradeoff",
+      "body_sha256": "cc4573ad4a6271168d1b8301ffd9ebc094192754349768edb491d8ee886a0d27",
+      "status": "verified_correspondence",
+      "status_text": "An estimator with nondecreasing additive error a and a positive gap computed in paid polynomial time in N+k gives one actual sparse 3-SAT algorithm whenever 2a(S(N,k))<k eventually. The same fixed construction constants support both size bounds and all four deterministic/randomized combinations. The algorithm has charged time polynomial in S; it is deterministic when both choices are deterministic, and bounded-error randomized otherwise. Accuracy on dyadic square tables suffices. The approved DinurReduction and BOTReduction (booleanOccurrence D) source interfaces remain explicit; their published-source fidelity remains the inherited author-owned qualification. No ETH assumption is used.",
+      "accepted_declarations": [
+        {
+          "name": "CurrentV43.General.time_tradeoff",
+          "module": "CurrentV43.General.Main",
+          "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/General/Main.lean",
+          "line": 116,
+          "declaration_text": "theorem time_tradeoff (D : DinurReduction) (B : BOTReduction (booleanOccurrence D)) :",
+          "source_sha256": "7729e308fe688ce09a6b12435f2cfccef2b94861fc3285face98e9457c273e9e",
+          "role": "independently_reviewed_v43_runtime_provider",
+          "in_prior_public_build": false,
+          "in_imported_build": true,
+          "build_authority": {
+            "kind": "current_v43_build",
+            "manifest": {
+              "path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
+              "bytes": 2649197,
+              "sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200"
+            },
+            "receipt": {
+              "path": "release-evidence/292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973/RECEIPT.json",
+              "bytes": 6180,
+              "sha256": "292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973"
+            }
+          },
+          "compiler_index": {
+            "path": ".lake/build/lib/lean/CurrentV43/General/Main.ilean",
+            "bytes": 18026,
+            "sha256": "85922f0d42069732b1d508af0b945c6bcad0d1af1ca35cdea33b5bde9a379fb3"
+          },
+          "compiler_range": [
+            111,
+            0,
+            117,
+            95,
+            115,
+            8,
+            115,
+            21
+          ]
+        },
+        {
+          "name": "CurrentV43.General.FourCases",
+          "module": "CurrentV43.General.Main",
+          "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/General/Main.lean",
+          "line": 73,
+          "declaration_text": "structure FourCases (Amp C cs : Nat) : Prop where",
+          "source_sha256": "7729e308fe688ce09a6b12435f2cfccef2b94861fc3285face98e9457c273e9e",
+          "role": "independently_reviewed_v43_runtime_provider",
+          "in_prior_public_build": false,
+          "in_imported_build": true,
+          "build_authority": {
+            "kind": "current_v43_build",
+            "manifest": {
+              "path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
+              "bytes": 2649197,
+              "sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200"
+            },
+            "receipt": {
+              "path": "release-evidence/292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973/RECEIPT.json",
+              "bytes": 6180,
+              "sha256": "292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973"
+            }
+          },
+          "compiler_index": {
+            "path": ".lake/build/lib/lean/CurrentV43/General/Main.ilean",
+            "bytes": 18026,
+            "sha256": "85922f0d42069732b1d508af0b945c6bcad0d1af1ca35cdea33b5bde9a379fb3"
+          },
+          "compiler_range": [
+            68,
+            0,
+            92,
+            48,
+            72,
+            10,
+            72,
+            19
+          ]
+        },
+        {
+          "name": "CurrentV43.General.four_cases",
+          "module": "CurrentV43.General.Main",
+          "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/General/Main.lean",
+          "line": 97,
+          "declaration_text": "theorem four_cases (D : DinurReduction) (B : BOTReduction (booleanOccurrence D)) (cs : Nat) :",
+          "source_sha256": "7729e308fe688ce09a6b12435f2cfccef2b94861fc3285face98e9457c273e9e",
+          "role": "independently_reviewed_v43_runtime_provider",
+          "in_prior_public_build": false,
+          "in_imported_build": true,
+          "build_authority": {
+            "kind": "current_v43_build",
+            "manifest": {
+              "path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
+              "bytes": 2649197,
+              "sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200"
+            },
+            "receipt": {
+              "path": "release-evidence/292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973/RECEIPT.json",
+              "bytes": 6180,
+              "sha256": "292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973"
+            }
+          },
+          "compiler_index": {
+            "path": ".lake/build/lib/lean/CurrentV43/General/Main.ilean",
+            "bytes": 18026,
+            "sha256": "85922f0d42069732b1d508af0b945c6bcad0d1af1ca35cdea33b5bde9a379fb3"
+          },
+          "compiler_range": [
+            94,
+            0,
+            109,
+            33,
+            96,
+            8,
+            96,
+            18
+          ]
+        }
+      ],
+      "proof_author": "/root/v43_general_implication (General.Main); /root/v43_power_schedule (randomized-construction branches); /root/v43_mixed_caller (mixed branch)",
+      "independent_reviewer": "/root/v43_deterministic_review",
+      "source_body_transfer": {
+        "id": "thm:time-tradeoff",
+        "prior_statement_line": 3229,
+        "current_statement_line": 3228,
+        "statement_body_sha256": "cc4573ad4a6271168d1b8301ffd9ebc094192754349768edb491d8ee886a0d27",
+        "prior_explicit_proof": {
+          "line": 3258,
+          "end_line": 3280,
+          "body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514"
+        },
+        "current_explicit_proof": {
+          "line": 3257,
+          "end_line": 3279,
+          "body_sha256": "f8c51a26cd4ef6c2b61e77986fca19e9b2cd4533dc7a41d3f378ce0de2c75514"
+        },
+        "statement_and_proof_identical": true
+      }
+    },
+    {
+      "id": "thm:quantitative",
+      "body_sha256": "84936c7e174ce17e6e9b638d8d9a591778e5d8f596b3982db3526888875ef461",
+      "status": "verified_correspondence",
+      "status_text": "For every 0<=c<1/8 and 8c<alpha<1, an estimator with additive error c log T/log log T yields one actual bounded-error sparse 3-SAT algorithm with charged worst-case time 2^{O(N^alpha)}, for each fixed clause density. Correctness holds on all sparse inputs, and accuracy on dyadic square tables suffices. The proved computable dyadic schedule is an alternative to the paper integer-root recipe, with the same full coefficient and exponent range. The approved DinurReduction and BOTReduction (booleanOccurrence D) source interfaces remain explicit; their published-source fidelity remains the inherited author-owned qualification. No ETH assumption is used.",
+      "accepted_declarations": [
+        {
+          "name": "CurrentV43.RandomizedRate.quantitative_algorithm",
+          "module": "CurrentV43.Randomized.Endpoint",
+          "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Endpoint.lean",
+          "line": 47,
+          "declaration_text": "theorem quantitative_algorithm (A : PermittedEstimator) (T₀ : ℕ)",
+          "source_sha256": "4cbec31d01c6634d9105adb680e2e6f75d7f4e895940f222b75c465b8a3ef88a",
+          "role": "independently_reviewed_v43_runtime_provider",
+          "in_prior_public_build": false,
+          "in_imported_build": true,
+          "build_authority": {
+            "kind": "current_v43_build",
+            "manifest": {
+              "path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
+              "bytes": 2649197,
+              "sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200"
+            },
+            "receipt": {
+              "path": "release-evidence/292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973/RECEIPT.json",
+              "bytes": 6180,
+              "sha256": "292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973"
+            }
+          },
+          "compiler_index": {
+            "path": ".lake/build/lib/lean/CurrentV43/Randomized/Endpoint.ilean",
+            "bytes": 11833,
+            "sha256": "6a1e6a0b007e653d0809d1887fc1c98d575fee49efa73f65266b497e34d06a58"
+          },
+          "compiler_range": [
+            44,
+            0,
+            57,
+            56,
+            46,
+            8,
+            46,
+            30
+          ]
+        },
+        {
+          "name": "CurrentV43.RandomizedRate.quantitative_square_algorithm",
+          "module": "CurrentV43.Randomized.Endpoint",
+          "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/Randomized/Endpoint.lean",
+          "line": 26,
+          "declaration_text": "theorem quantitative_square_algorithm (A : PermittedEstimator) (T₀ : ℕ)",
+          "source_sha256": "4cbec31d01c6634d9105adb680e2e6f75d7f4e895940f222b75c465b8a3ef88a",
+          "role": "independently_reviewed_v43_runtime_provider",
+          "in_prior_public_build": false,
+          "in_imported_build": true,
+          "build_authority": {
+            "kind": "current_v43_build",
+            "manifest": {
+              "path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
+              "bytes": 2649197,
+              "sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200"
+            },
+            "receipt": {
+              "path": "release-evidence/292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973/RECEIPT.json",
+              "bytes": 6180,
+              "sha256": "292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973"
+            }
+          },
+          "compiler_index": {
+            "path": ".lake/build/lib/lean/CurrentV43/Randomized/Endpoint.ilean",
+            "bytes": 11833,
+            "sha256": "6a1e6a0b007e653d0809d1887fc1c98d575fee49efa73f65266b497e34d06a58"
+          },
+          "compiler_range": [
+            20,
+            0,
+            42,
+            104,
+            25,
+            8,
+            25,
+            37
+          ]
+        }
+      ],
+      "proof_author": "/root/v43_randomized_rate",
+      "independent_reviewer": "/root/v43_deterministic_review",
+      "source_body_transfer": {
+        "id": "thm:quantitative",
+        "prior_statement_line": 337,
+        "current_statement_line": 337,
+        "statement_body_sha256": "84936c7e174ce17e6e9b638d8d9a591778e5d8f596b3982db3526888875ef461",
+        "prior_explicit_proof": {
+          "line": 3306,
+          "end_line": 3360,
+          "body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61"
+        },
+        "current_explicit_proof": {
+          "line": 3305,
+          "end_line": 3359,
+          "body_sha256": "9f3e8199005935c971c531099c038572ddbae7e02e2b2f82152ff5f9d5451a61"
+        },
+        "statement_and_proof_identical": true
+      }
+    },
+    {
+      "id": "det:time",
+      "body_sha256": "d0c87a834cf5ea4524924fff713b29616b0dd7e9e0053a8941ee583e63a526b8",
+      "status": "verified_correspondence",
+      "status_text": "An effective positive constant c_* is chosen before the estimator. A deterministic polynomial-time estimator with additive error c_* log log T yields one actual deterministic sparse 3-SAT algorithm with charged time 2^{O((log N)^2)}, for each fixed clause density. The real-log endpoint and dyadic-square companion give the two estimator-domain statements. The physical source uses a proved sufficient eventual table-growth bound. The approved DinurReduction and BOTReduction (booleanOccurrence D) source interfaces remain explicit; their published-source fidelity remains the inherited author-owned qualification. No ETH assumption is used.",
+      "accepted_declarations": [
+        {
+          "name": "CurrentAdditive.V43DeterministicRate.deterministic_estimation_to_sparse3SAT_real",
+          "module": "CurrentV43.DeterministicRateReal",
+          "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/DeterministicRateReal.lean",
+          "line": 57,
+          "declaration_text": "theorem deterministic_estimation_to_sparse3SAT_real :",
+          "source_sha256": "f6d17b17698a596df9827b0339f15bd60263fa36f140a6025415aea418790b75",
+          "role": "independently_reviewed_v43_runtime_provider",
+          "in_prior_public_build": false,
+          "in_imported_build": true,
+          "build_authority": {
+            "kind": "current_v43_build",
+            "manifest": {
+              "path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
+              "bytes": 2649197,
+              "sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200"
+            },
+            "receipt": {
+              "path": "release-evidence/292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973/RECEIPT.json",
+              "bytes": 6180,
+              "sha256": "292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973"
+            }
+          },
+          "compiler_index": {
+            "path": ".lake/build/lib/lean/CurrentV43/DeterministicRateReal.ilean",
+            "bytes": 18728,
+            "sha256": "3b46bcf93f81534fdcb528ff7c1aa5ccccef25e1acb3e61ccbb62c999c6ab3b7"
+          },
+          "compiler_range": [
+            54,
+            0,
+            77,
+            51,
+            56,
+            8,
+            56,
+            51
+          ]
+        },
+        {
+          "name": "CurrentAdditive.V43DeterministicRate.deterministic_estimation_to_sparse3SAT",
+          "module": "CurrentV43.DeterministicRate",
+          "source": "papers/randomized-additive-hardness/formalization/current-v43/lean/CurrentV43/DeterministicRate.lean",
+          "line": 453,
+          "declaration_text": "theorem deterministic_estimation_to_sparse3SAT :",
+          "source_sha256": "0fcb84e9eb6b89bdb0061765adc1b72013712c83bf9f71f82b5dac30872ef624",
+          "role": "independently_reviewed_v43_runtime_provider",
+          "in_prior_public_build": false,
+          "in_imported_build": true,
+          "build_authority": {
+            "kind": "current_v43_build",
+            "manifest": {
+              "path": "release-evidence/9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200/SOURCE_MANIFEST.json",
+              "bytes": 2649197,
+              "sha256": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200"
+            },
+            "receipt": {
+              "path": "release-evidence/292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973/RECEIPT.json",
+              "bytes": 6180,
+              "sha256": "292f548cb5fad54304b7dc41ee25797c086394990fd75590a7afe10c6101a973"
+            }
+          },
+          "compiler_index": {
+            "path": ".lake/build/lib/lean/CurrentV43/DeterministicRate.ilean",
+            "bytes": 91335,
+            "sha256": "6f825c1862feeaf3414775416fd2d85d16756ada283e40de11f8f7bd5b42c10b"
+          },
+          "compiler_range": [
+            449,
+            0,
+            466,
+            71,
+            452,
+            8,
+            452,
+            46
+          ]
+        }
+      ],
+      "proof_author": "/root/v43_deterministic_rate",
+      "independent_reviewer": "/root/v43_deterministic_review",
+      "source_body_transfer": {
+        "id": "det:time",
+        "prior_statement_line": 353,
+        "current_statement_line": 353,
+        "statement_body_sha256": "d0c87a834cf5ea4524924fff713b29616b0dd7e9e0053a8941ee583e63a526b8",
+        "prior_explicit_proof": {
+          "line": 2910,
+          "end_line": 2952,
+          "body_sha256": "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754"
+        },
+        "current_explicit_proof": {
+          "line": 2909,
+          "end_line": 2951,
+          "body_sha256": "da25624c2c336b894ad2e16799ff8682bb53d290ec1318edcf7600c4345b9754"
+        },
+        "statement_and_proof_identical": true
+      }
+    }
+  ],
+  "component_scope_decisions": [
+    {
+      "id": "unnumbered:6",
+      "old_requirement": "Separate fixed-gap NP, deterministic ETH and randomized sparse-ETH endpoint models",
+      "old_derived_from": [
+        "intro:deterministic",
+        "det:eth",
+        "thm:quantitative",
+        "def:reth",
+        "def:table-estimation"
+      ],
+      "new_requirement": "From fixed cost gaps to fixed-error hardness",
+      "new_derived_from": [
+        "intro:deterministic",
+        "def:table-estimation"
+      ],
+      "scope_note": "Retained checked component only. This entry does not prove any new v43 runtime implication. Checked fixed-gap construction and fixed-additive consequence relative to the named source reductions and CNF hardness input.",
+      "accepted": true,
+      "accepted_declaration_names": [
+        "CurrentAdditive.V42FixedEndpoints.fixed_gap_reduction",
+        "CurrentAdditive.V42SourcePhysical.requestSource_polytime",
+        "CurrentAdditive.V42ActualSource.word_target",
+        "CurrentAdditive.V39GeneratedConstruction.StoredMatrix.squareWord_target",
+        "CurrentAdditive.V42FixedEndpoints.fixed_gap_npHard",
+        "CurrentAdditive.V42FixedEndpoints.fixed_additive_np_subset_p",
+        "CurrentAdditive.V42FixedEndpoints.fixed_additive_square_inP",
+        "Workspace.Types.CommComplexity.D",
+        "CurrentAdditive.V39PermittedNumericalExtraction.PermittedEstimator"
+      ]
+    },
+    {
+      "id": "unnumbered:8",
+      "old_requirement": "Source-fidelity and final certification",
+      "old_derived_from": [
+        "src:gap-colouring",
+        "yao:source",
+        "def:reth"
+      ],
+      "new_requirement": "The source assumptions and the tables they produce",
+      "new_derived_from": [
+        "src:gap-colouring",
+        "yao:source"
+      ],
+      "scope_note": "Retained checked component only. This entry does not prove any new v43 runtime implication. The graph and hypergraph source reductions and the named CNF hardness input are explicit external inputs. Lean checks the construction relative to these inputs; it does not prove their external source theorems.",
+      "accepted": true,
+      "accepted_declaration_names": [
+        "EthInapproximability.CurrentPaper.EncodedETHSource.DinurReduction",
+        "EthInapproximability.CurrentPaper.EncodedETHSource.BOTReduction",
+        "CurrentAdditive.SmallBias.V42.literal_cnf_fixed_gap_reduction",
+        "CurrentAdditive.SmallBias.V42.selectedInstance_costs"
+      ]
+    }
+  ],
+  "fresh_project_replay": false,
+  "public_package_replay_complete": false,
+  "scope": "Existing independently accepted proof correspondence transferred only because all mathematical statements and proofs are identical. Original review and build evidence remain unchanged. Existing independently accepted proof correspondence transferred only because all mathematical statements and proofs are identical. Original review and build evidence remain unchanged. Private source-bound admission metadata. Root owns the final full-coverage receipt, release packaging and publication; no such completion is inferred here.",
+  "preparation_tool": {
+    "path": "private-provenance-refs/f3843426033fd876267264aada8521aeee7495ffe3d4e1d2133338d27c0ce888/prepare_final_admission.py",
+    "bytes": 14176,
+    "sha256": "dbb22a7030190a5c31fd94846aeedaddd88a8177d31ca10c6cd807d68d8eda94"
+  },
+  "prior_accepted_review": {
+    "path": "release-evidence/0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522/TRANSFER_ADMISSION_REVIEW.json",
+    "bytes": 28061,
+    "sha256": "0892f56e8385c934aa6edff71d2f3af5ab64ef195177b5de96391e90c8853522"
+  },
+  "editorial_transfer_review": {
+    "path": "release-evidence/44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426/EDITORIAL_TRANSFER.json",
+    "bytes": 17512,
+    "sha256": "44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426"
+  },
+  "editorial_transfer_prepared_by": "/root"
+}

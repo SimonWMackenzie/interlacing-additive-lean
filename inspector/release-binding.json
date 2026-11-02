@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
+  "archive_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/archive/fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65.zip",
+  "input_hashes": {
+    "paper_source": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
+    "paper_pdf": "3427bd83cab3a55951dde2433cdec717e48e303a4b23aff9092b889f6b8b5ea7",
+    "paper_aux": "6444e16e05a2f4b2995b53b0789f55a6407853535d3eea578d96c116b9b375b1",
+    "mapping": "a2e73c81583fe0a98077e12266b7bcf3e86692e905c762ffdf81065c29fe9677",
+    "module_inventory": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200",
+    "endpoints": "0ecf2584c37a466f6fdfa7861e999a70adfde0dbe7979573209c41cd9f8ffccc",
+    "explanations": "68beb96702d838f2f73f7c80ab9fbf752d10e76d0466c3be4b9bad84210a572a",
+    "references": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31"
+  },
+  "bound_mapping_sha256": "d0ba4efcfe101797f82dae9900ff9748b8df779da0323388ff7510f51d2ebc65",
+  "build": {
+    "code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
+    "canonical_checked_build_complete": true,
+    "public_package_replay_complete": false,
+    "checked_build_receipt_sha256": "139ec8ccfc34dc77595611a88c2c4ce60351e91581bfe71b3b7229a155a57452",
+    "checked_build_receipt_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/blob/fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65/PUBLISHED_CHECKED_BUILD.json",
+    "full_coverage_receipt_sha256": "5a820b3dcb06113228f5131e197b807756173ad65da1afa25687b2e8f4ceaef4",
+    "source_manifest_sha256": "485dce7abc1cdd5e7df2617f2c5cffff4ee51ccfbbb7f48e7fb54f4ca4e49cd7"
+  },
+  "publication_performed_by_runner": false,
+  "mapping_transformation": {
+    "changed_fields": [
+      "lean_archive_url",
+      "verification.build",
+      "verification.input_mapping_sha256"
+    ],
+    "archive_url_before": null,
+    "statements_unchanged": true,
+    "statement_records_sha256": "80b91506efa7ab983e03eb9935bf7e88c8cbcab97e8d23f37393132e9e5e477f"
+  }
+}

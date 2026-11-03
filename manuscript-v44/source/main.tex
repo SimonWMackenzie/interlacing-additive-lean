@@ -84,12 +84,13 @@ every bit and only the receiver of the last bit needs to determine the
 answer. Yao asked in 1979 how hard it is to compute communication complexity,
 and our result answers his question under his original conventions.
 
-In the standard model, we encode a graph-coloring instance so that a
-non-colorable graph forces one extra bit of communication, and interlacing
-makes this lower bound hold against every protocol. Each message of a protocol restricts the possible inputs to a subtable. We prove lower bounds that still hold on such subtables, so the output of one round can serve as the input of the next. To keep the table polynomial
-for every fixed gap, we replace exponentially large sets of column tuples
-by short explicit weighted lists. Under strict alternation, simulating
-multi-bit messages would cost more than the gap, so we give a separate construction for this model.
+For the standard model, our reduction starts from the known NP-hardness of
+graph $3$-coloring and encodes the graph in a communication matrix. We build
+on the interlacing lower-bound framework, strengthening the lower bounds
+so that the construction can be repeated. Each application increases the
+gap in communication cost by one bit. Carefully chosen inputs keep the
+final table polynomial in size for every fixed gap. Strict alternation
+uses a separate construction.
 
 For the standard model, we also show that accurate estimators would give
 faster algorithms for sparse $3$-SAT. A

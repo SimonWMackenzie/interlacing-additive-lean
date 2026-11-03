@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NP-Hardness and Additive Inapproximability of Deterministic Communication Complexity · Paper and Lean</title></head><body><p id="load-error" role="alert" hidden></p><p id="load-progress" role="status">Opening the manuscript and recorded Lean source…</p><script id="asset-versions">window.InspectorAssetHashes={"coordinate-verification.json":"ae9bf988c26ced9b9250db4153f4433ad63ad167f45ac60165adff2a3f7a58fe","extras.css":"dcdfebf38f114147c0a41af55f7a744bececcb20e1dfd2c473ea85349878c2a4","extras.js":"18ee300b6687a8e084edcf770fea85a80a89a6208157642d6f51fc646ecb83e8","main.tex":"ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119","pages/page-001.webp":"d7bda25cd04adc7383deda73e0453fab35586f4bfa9d5235a102acf7969564ac","pages/page-002.webp":"35043e174de536a4c615b571fd1ea628531a9d9873ffdd0575acd27f12d37f06","pages/page-003.webp":"152ce9fa57c2cfd735ae2415cdab91f66e3e77c5e2aa6707fff71425960d74d8","pages/page-004.webp":"4c17c9fcccfb5486d00a99504265b896b0ca3d4c69f9b269c94999f3c18da717","pages/page-005.webp":"b593cb216933aabccddb424dac2dbdf24795572a63f9032d2c9ae3336edb244b","pages/page-006.webp":"5118f5bfa04665e1de489d35e4f8d57374e2cbd9915f2d3f98364a0ee2d0087b","pages/page-007.webp":"830952f2cbda56010eeda6c38f90e6617790347d2014335e3067ed947e9f5b8e","pages/page-008.webp":"3591e0dd2eebbdf2333c71448791e8ea31bbc99addda1c8a4e8f3ca73a34b956","pages/page-009.webp":"519dee3441fdefbf4486072e5dabc2adf8609d76dd61fcb3b97ddf8a07901fc4","pages/page-010.webp":"e12fb9b51c891dcd44db89ce5d406954e493bcd7be99027bb095d511c9a595fe","pages/page-011.webp":"9522708c2f3cd6dc48747259e40748b572796a8e8cd7e4d5d60cf5cda24aaf31","pages/page-012.webp":"a595efb652e40a2d199da6bcab7be7ced78a88a90ebc6726bdb0d3b8cdf9c4da","pages/page-013.webp":"4a303db673bbf4c09c771e53bac6a5760d3eca68072959f2b9a8dd63fb1aa94d","pages/page-014.webp":"ede9300575f6087c911864b6fabc36e3dabe3508103e5902b736c5db8364a6e4","pages/page-015.webp":"02f25f3d1c780e52fc25b5c73be16ee37688344f6c5b169e9bbc672e72c575f6","pages/page-016.webp":"5305a7d788305f890cbfd17dd347f4768285a6c951897272bf0a57e77fbba046","pages/page-017.webp":"c447772f60990b4d470fb5f8d6e7750a0716788326b6387de4e497434a29cc55","pages/page-018.webp":"21d29d73c426a1df93fcc910fd356fe74b5dda11f19474f08bba8539863e3208","pages/page-019.webp":"8479a328589a291b22fc470d34785df11d63230478e1bd728263cf76244b0ea9","pages/page-020.webp":"ce5e80035ca7d60d41f13d04bac62a3dfa2207af9d50bd0274aa7f68c2d208c5","pages/page-021.webp":"ba39a571b027d5794ffc32472e2ec112b39662f60be645021e574a326dcaf6d1","pages/page-022.webp":"944247fcb07a70e538d4f54adfeb903d250114fe6d48bfa49029faa6b21d8cc1","pages/page-023.webp":"e1dd65aacbdc86991d7cb4cdde6a77f0aaf3cc6d006a9805fe2c5a3fdbfed9b0","pages/page-024.webp":"2ecd2f514ddf530c5d777d2a7efc4bb8dad5e6490bb215286b71f534d4eef5fc","pages/page-025.webp":"4b6ed064ffa52edb4136d9fb3b579633b3d736b44c8eb6864ca38112acf646c4","pages/page-026.webp":"2643d9db15f71900e96a1e63295ed3d19bb5b5cd4046a8eff30fd529e7f66fea","pages/page-027.webp":"adaf36d73f3ebe885cfd0b63bddd961dfcef624fab2fcf25091bedf90485a2c7","pages/page-028.webp":"d49faf236553ded264670fbe499d87039a83d403d255e6c9b8b240b385d180ef","pages/page-029.webp":"570caa46dba1f33921f918b2afcd3c6369e85915b7104decb8d1014953c12286","pages/page-030.webp":"b060a689d844b5f140cc6feff708ac098118430cba544b810c73e647281ba2bb","pages/page-031.webp":"279067c3e776658ad92c40c6b38bc953af52cb11d30d61c30ea2eb1d18bf9391","pages/page-032.webp":"4d8439cb66e8733d70acd9885e280be06e4fce67e04c107e7effd46333693e78","pages/page-033.webp":"af24370cc2795ae39bcf5c7229c11539a759a920096528558797b082b00b4359","pages/page-034.webp":"dcb3f355745a30c8c4f437a6a606be0482232dac2400ee5e4d49c19c1326311f","pages/page-035.webp":"d3b9e13b08769aba9b8bdb7812e56a7025a703ab607cc6c59bdf4ad5ea0b53fd","pages/page-036.webp":"54b9c97e215f41c2fb01403c973de62f22c04c296fd663016104725508b23d25","pages/page-037.webp":"1cd9f0ed601dd67f226c23ba59bc3c8de1f2f5b477ce89404de2e38a260027d0","pages/page-038.webp":"7c93f0e7cb9888174bf8d568d6758ef146b9606ca36073b92a9d5b0dfb296b05","pages/page-039.webp":"25ea312a565fce702366c81211cec0b4b6892d46112e15643baa7e93bc952a9e","pages/page-040.webp":"46df13f71e4c4406cee82406d9c08eaeb67256191bc37ef2396322bcb0521595","pages/page-041.webp":"3ec283f88a4ebb1334cf3f03ed23f685e2f3d2ff155af843b885f8059b881ec3","pages/page-042.webp":"4eea3d7e419cac81e24694cc9fc6af3e199cb952ac878da625fc8e18f85a846a","pages/page-043.webp":"d0efba4d7b6dcbcf081c38157e44d9ff25d7b88d7636ab36a54fbaa1c88b588d","pages/page-044.webp":"d67af828173f51e2654332d5695fd3aee64a392ab344202877d0542bbfa9ffd0","pages/page-045.webp":"fc715254b81d7736c57003bbf6e788071323bcfe25ce08660ec325376af6143d","pages/page-046.webp":"6d78584ec1c29ba13b662389a5892a26a9000cbe609ea32cf522c931a479d809","pages/page-047.webp":"3cb678ca678f0892929ad2632501023840d154528cdab4b0fec5e24d3f1cc603","pages/page-048.webp":"998bc49d4970681a89be61ec0f596a4c1912dde463620533e8f5f83f07b4c133","pages/page-049.webp":"beefa309a8f873b6edd1e239fd6b21c487bb2ed63a519e381473eecbaf731c71","pages/page-050.webp":"4194f1581ca828b430afb09ab19633085574a511e7c5cdaf1cb80ff60effefdd","pages/page-051.webp":"ce3f0df6c169767d37619e9dd5bef728b45cd1160f438155a1002214c8541e9a","pages/page-052.webp":"93bb461132ba75920b697e02356badd1d656e9c3d2f45e42e129ffc4920eb367","pages/page-053.webp":"c35e89213cb4acfa25b5404097b3e9c38f04b048a9d180760786ebc878501bf3","pages/page-054.webp":"463294cd6931d594a689ebbce995988d5fac7e86af545c49248101f1c2bee13c","pages/page-055.webp":"e73406a52430219097af4544be9b1edee4a39ce0cc637c0226711d5b30367f53","pages/page-056.webp":"ee4b2888544be4ca5344e823a44e46c2d4570db0ac1646499f96118a78b89b90","pages/page-057.webp":"c72230378d13549ac38de3fb4167a378e17ed4d72aaecae27ceab549097244b2","pages/page-058.webp":"e50cae2c542203b2142733e277d679c5103862d6cc6cb4190e678cb9858f027b","pages/page-059.webp":"7595da53852f8d6b1d085686ff694b1ca8894a570fc975848bd5685fa60ce998","pages/page-060.webp":"5a3caa6c576bc43493fb5c4db3826644246d132007d3d81de2e3a37ff5e8ccce","pages/page-061.webp":"94611ffb040c2cc855153f4077a0b12022b9b71deab8ef255dbedb066e5db05c","pages/page-062.webp":"f19d74897fd0b78e4fb8eed469ae8e6f32acac4352a19e9f3f2c6d1f1045a207","pages/page-063.webp":"8296461beab297e20574c924df6fdba4fdf98b15305ac13b238f05935cd980c0","pages/page-064.webp":"25b7f95e7cfaaa345c51ebf95e329c713367f17e53f24c2dc85636cefa06105c","pages/page-065.webp":"4331faf98dedda0454170ea870f71a8e4d3942debe2ff8e9d68523ad9a0c20e9","pages/page-066.webp":"3d8993c83c3c16eff294cbaa5b573f7bb9932c04904d07e016e15b11650a57ba","pages/page-067.webp":"75cd5dd9ad03d18bb61fbfa9b6750909ce9e064ef386911186fd004fc5adfa2f","pages/page-068.webp":"fd61ff43a6c782906489ef3bf0420006e06a18060ccfedf2f32005f608fadde7","pages/page-069.webp":"446e86b1e32800868e2de6df628d821d5859cca36e0c0ea265fe98270591ccc0","pages/page-070.webp":"e9d579faf3818378257e32ab21cee8bb6ec820a4e2f418b1909fcf0378be7e79","pages/page-071.webp":"e6532c2377f58d015f78eeec25d141eada912b6fc453d3312cd347d86df7d244","pages/page-072.webp":"c4f72c7a091a625e6b019ea0cf61eaffe4e0416fd25345ae804d8ccbc32fb9a3","pages/page-073.webp":"e7e4da536739329e28c841ed518f413611ce80b8ee55b5ea8ce718074c438304","pages/page-074.webp":"fd06e111a54181735fde00a1aebb656d57ddbad03e802ae9a2228e8f1a609991","pages/page-075.webp":"4397a73dfa27f05bf57dea4d21d760e0eb29a6bb4b6c0dddf0c3a0220e9d1eea","pages/page-076.webp":"b96abfef4fb99bd2eb9cecedf45763316b7f404cf8957af90646db8b3c066fa1","paper.pdf":"3427bd83cab3a55951dde2433cdec717e48e303a4b23aff9092b889f6b8b5ea7","payload.json":"354ccf5c43f1d49fdcb2776ddc8da75e058222e225a2effba6bfb77de113bb1c","payload.json.gz":"e5287c05e9a46ed03925a26478b5ff9d19474d11f5242341c3cf19be73b4eb3c","references.bib":"a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31","source-manifest.json":"345517a4f0dda1e22b356502617cfb1365f95751f4ea7e1f3463df7b229cfc05","trace-extents.json":"c049e9f68a0161a56eca6bce68cd82552c745c4c98218aba46d1db2809a241ef","verification.json":"7c0bc089ab88f50c8030193709e8393060366ce25d8c149366a8704c53e828d0"};</script><script src="extras.js?v=18ee300b6687a8e084edcf770fea85a80a89a6208157642d6f51fc646ecb83e8"></script><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NP-Hardness and Additive Inapproximability of Deterministic Communication Complexity · Paper and Lean</title></head><body><p id="load-error" role="alert" hidden></p><p id="load-progress" role="status">Opening the manuscript and recorded Lean source…</p><script id="asset-versions">window.InspectorAssetHashes={"coordinate-verification.json":"ae9bf988c26ced9b9250db4153f4433ad63ad167f45ac60165adff2a3f7a58fe","extras.css":"9df74dc1a16bbcb9f3cf40e9a86df01af056e5a7ad0dc357fa2e897549f8f9e8","extras.js":"92563cb4becc77aac178848cbc812b723a7b953842b9fd5f4e21db66a5888082","main.tex":"ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119","pages/page-001.webp":"d7bda25cd04adc7383deda73e0453fab35586f4bfa9d5235a102acf7969564ac","pages/page-002.webp":"35043e174de536a4c615b571fd1ea628531a9d9873ffdd0575acd27f12d37f06","pages/page-003.webp":"152ce9fa57c2cfd735ae2415cdab91f66e3e77c5e2aa6707fff71425960d74d8","pages/page-004.webp":"4c17c9fcccfb5486d00a99504265b896b0ca3d4c69f9b269c94999f3c18da717","pages/page-005.webp":"b593cb216933aabccddb424dac2dbdf24795572a63f9032d2c9ae3336edb244b","pages/page-006.webp":"5118f5bfa04665e1de489d35e4f8d57374e2cbd9915f2d3f98364a0ee2d0087b","pages/page-007.webp":"830952f2cbda56010eeda6c38f90e6617790347d2014335e3067ed947e9f5b8e","pages/page-008.webp":"3591e0dd2eebbdf2333c71448791e8ea31bbc99addda1c8a4e8f3ca73a34b956","pages/page-009.webp":"519dee3441fdefbf4486072e5dabc2adf8609d76dd61fcb3b97ddf8a07901fc4","pages/page-010.webp":"e12fb9b51c891dcd44db89ce5d406954e493bcd7be99027bb095d511c9a595fe","pages/page-011.webp":"9522708c2f3cd6dc48747259e40748b572796a8e8cd7e4d5d60cf5cda24aaf31","pages/page-012.webp":"a595efb652e40a2d199da6bcab7be7ced78a88a90ebc6726bdb0d3b8cdf9c4da","pages/page-013.webp":"4a303db673bbf4c09c771e53bac6a5760d3eca68072959f2b9a8dd63fb1aa94d","pages/page-014.webp":"ede9300575f6087c911864b6fabc36e3dabe3508103e5902b736c5db8364a6e4","pages/page-015.webp":"02f25f3d1c780e52fc25b5c73be16ee37688344f6c5b169e9bbc672e72c575f6","pages/page-016.webp":"5305a7d788305f890cbfd17dd347f4768285a6c951897272bf0a57e77fbba046","pages/page-017.webp":"c447772f60990b4d470fb5f8d6e7750a0716788326b6387de4e497434a29cc55","pages/page-018.webp":"21d29d73c426a1df93fcc910fd356fe74b5dda11f19474f08bba8539863e3208","pages/page-019.webp":"8479a328589a291b22fc470d34785df11d63230478e1bd728263cf76244b0ea9","pages/page-020.webp":"ce5e80035ca7d60d41f13d04bac62a3dfa2207af9d50bd0274aa7f68c2d208c5","pages/page-021.webp":"ba39a571b027d5794ffc32472e2ec112b39662f60be645021e574a326dcaf6d1","pages/page-022.webp":"944247fcb07a70e538d4f54adfeb903d250114fe6d48bfa49029faa6b21d8cc1","pages/page-023.webp":"e1dd65aacbdc86991d7cb4cdde6a77f0aaf3cc6d006a9805fe2c5a3fdbfed9b0","pages/page-024.webp":"2ecd2f514ddf530c5d777d2a7efc4bb8dad5e6490bb215286b71f534d4eef5fc","pages/page-025.webp":"4b6ed064ffa52edb4136d9fb3b579633b3d736b44c8eb6864ca38112acf646c4","pages/page-026.webp":"2643d9db15f71900e96a1e63295ed3d19bb5b5cd4046a8eff30fd529e7f66fea","pages/page-027.webp":"adaf36d73f3ebe885cfd0b63bddd961dfcef624fab2fcf25091bedf90485a2c7","pages/page-028.webp":"d49faf236553ded264670fbe499d87039a83d403d255e6c9b8b240b385d180ef","pages/page-029.webp":"570caa46dba1f33921f918b2afcd3c6369e85915b7104decb8d1014953c12286","pages/page-030.webp":"b060a689d844b5f140cc6feff708ac098118430cba544b810c73e647281ba2bb","pages/page-031.webp":"279067c3e776658ad92c40c6b38bc953af52cb11d30d61c30ea2eb1d18bf9391","pages/page-032.webp":"4d8439cb66e8733d70acd9885e280be06e4fce67e04c107e7effd46333693e78","pages/page-033.webp":"af24370cc2795ae39bcf5c7229c11539a759a920096528558797b082b00b4359","pages/page-034.webp":"dcb3f355745a30c8c4f437a6a606be0482232dac2400ee5e4d49c19c1326311f","pages/page-035.webp":"d3b9e13b08769aba9b8bdb7812e56a7025a703ab607cc6c59bdf4ad5ea0b53fd","pages/page-036.webp":"54b9c97e215f41c2fb01403c973de62f22c04c296fd663016104725508b23d25","pages/page-037.webp":"1cd9f0ed601dd67f226c23ba59bc3c8de1f2f5b477ce89404de2e38a260027d0","pages/page-038.webp":"7c93f0e7cb9888174bf8d568d6758ef146b9606ca36073b92a9d5b0dfb296b05","pages/page-039.webp":"25ea312a565fce702366c81211cec0b4b6892d46112e15643baa7e93bc952a9e","pages/page-040.webp":"46df13f71e4c4406cee82406d9c08eaeb67256191bc37ef2396322bcb0521595","pages/page-041.webp":"3ec283f88a4ebb1334cf3f03ed23f685e2f3d2ff155af843b885f8059b881ec3","pages/page-042.webp":"4eea3d7e419cac81e24694cc9fc6af3e199cb952ac878da625fc8e18f85a846a","pages/page-043.webp":"d0efba4d7b6dcbcf081c38157e44d9ff25d7b88d7636ab36a54fbaa1c88b588d","pages/page-044.webp":"d67af828173f51e2654332d5695fd3aee64a392ab344202877d0542bbfa9ffd0","pages/page-045.webp":"fc715254b81d7736c57003bbf6e788071323bcfe25ce08660ec325376af6143d","pages/page-046.webp":"6d78584ec1c29ba13b662389a5892a26a9000cbe609ea32cf522c931a479d809","pages/page-047.webp":"3cb678ca678f0892929ad2632501023840d154528cdab4b0fec5e24d3f1cc603","pages/page-048.webp":"998bc49d4970681a89be61ec0f596a4c1912dde463620533e8f5f83f07b4c133","pages/page-049.webp":"beefa309a8f873b6edd1e239fd6b21c487bb2ed63a519e381473eecbaf731c71","pages/page-050.webp":"4194f1581ca828b430afb09ab19633085574a511e7c5cdaf1cb80ff60effefdd","pages/page-051.webp":"ce3f0df6c169767d37619e9dd5bef728b45cd1160f438155a1002214c8541e9a","pages/page-052.webp":"93bb461132ba75920b697e02356badd1d656e9c3d2f45e42e129ffc4920eb367","pages/page-053.webp":"c35e89213cb4acfa25b5404097b3e9c38f04b048a9d180760786ebc878501bf3","pages/page-054.webp":"463294cd6931d594a689ebbce995988d5fac7e86af545c49248101f1c2bee13c","pages/page-055.webp":"e73406a52430219097af4544be9b1edee4a39ce0cc637c0226711d5b30367f53","pages/page-056.webp":"ee4b2888544be4ca5344e823a44e46c2d4570db0ac1646499f96118a78b89b90","pages/page-057.webp":"c72230378d13549ac38de3fb4167a378e17ed4d72aaecae27ceab549097244b2","pages/page-058.webp":"e50cae2c542203b2142733e277d679c5103862d6cc6cb4190e678cb9858f027b","pages/page-059.webp":"7595da53852f8d6b1d085686ff694b1ca8894a570fc975848bd5685fa60ce998","pages/page-060.webp":"5a3caa6c576bc43493fb5c4db3826644246d132007d3d81de2e3a37ff5e8ccce","pages/page-061.webp":"94611ffb040c2cc855153f4077a0b12022b9b71deab8ef255dbedb066e5db05c","pages/page-062.webp":"f19d74897fd0b78e4fb8eed469ae8e6f32acac4352a19e9f3f2c6d1f1045a207","pages/page-063.webp":"8296461beab297e20574c924df6fdba4fdf98b15305ac13b238f05935cd980c0","pages/page-064.webp":"25b7f95e7cfaaa345c51ebf95e329c713367f17e53f24c2dc85636cefa06105c","pages/page-065.webp":"4331faf98dedda0454170ea870f71a8e4d3942debe2ff8e9d68523ad9a0c20e9","pages/page-066.webp":"3d8993c83c3c16eff294cbaa5b573f7bb9932c04904d07e016e15b11650a57ba","pages/page-067.webp":"75cd5dd9ad03d18bb61fbfa9b6750909ce9e064ef386911186fd004fc5adfa2f","pages/page-068.webp":"fd61ff43a6c782906489ef3bf0420006e06a18060ccfedf2f32005f608fadde7","pages/page-069.webp":"446e86b1e32800868e2de6df628d821d5859cca36e0c0ea265fe98270591ccc0","pages/page-070.webp":"e9d579faf3818378257e32ab21cee8bb6ec820a4e2f418b1909fcf0378be7e79","pages/page-071.webp":"e6532c2377f58d015f78eeec25d141eada912b6fc453d3312cd347d86df7d244","pages/page-072.webp":"c4f72c7a091a625e6b019ea0cf61eaffe4e0416fd25345ae804d8ccbc32fb9a3","pages/page-073.webp":"e7e4da536739329e28c841ed518f413611ce80b8ee55b5ea8ce718074c438304","pages/page-074.webp":"fd06e111a54181735fde00a1aebb656d57ddbad03e802ae9a2228e8f1a609991","pages/page-075.webp":"4397a73dfa27f05bf57dea4d21d760e0eb29a6bb4b6c0dddf0c3a0220e9d1eea","pages/page-076.webp":"b96abfef4fb99bd2eb9cecedf45763316b7f404cf8957af90646db8b3c066fa1","paper.pdf":"3427bd83cab3a55951dde2433cdec717e48e303a4b23aff9092b889f6b8b5ea7","payload.json":"1e55599e66e6c457ec63bc9cee891d73e132f140478f593ec58936be8da3da6a","payload.json.gz":"30ea9f11b92b86f67dd582cf9275b7083ee993b095742916f091c3fbaade808e","references.bib":"a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31","source-manifest.json":"345517a4f0dda1e22b356502617cfb1365f95751f4ea7e1f3463df7b229cfc05","trace-extents.json":"c049e9f68a0161a56eca6bce68cd82552c745c4c98218aba46d1db2809a241ef","verification.json":"7c0bc089ab88f50c8030193709e8393060366ce25d8c149366a8704c53e828d0"};</script><script src="extras.js?v=92563cb4becc77aac178848cbc812b723a7b953842b9fd5f4e21db66a5888082"></script><style>
   :root{
     --ground:#0e1218; --panel:#151b24; --panel2:#1b2431; --line:#26313f;
     --ink:#dce3ec; --muted:#8a97a9; --faint:#5a6572;
@@ -350,7 +350,7 @@
       <button id="m-full">Everything</button>
       <button id="m-pidx" class="pindex-btn" style="border:0">📄 Trace the paper</button>
     </div>
-    <div class="routes" role="group" title="Which dependency arrows to draw between statements">
+    <div class="routes" role="group" title="Which reference arrows to draw between statements">
       <span class="rlbl">arrows</span>
       <button id="r-lean" class="on" title="Compiler-recorded source references, projected through helper declarations">Lean references</button>
       <button id="r-paper" title="Arrows show which statements the paper’s prose cites — the two routes differ in places">Paper citations</button>
@@ -450,7 +450,7 @@
       <aside class="tdetail" id="tdetail">
         <div class="tdetail-empty" id="tdEmpty">
           <div class="big">Formalization</div>
-          Click a highlighted statement in the paper (or a row on the left) to read its plain-English summary and linked Lean statement here — then jump to it in the dependency graph.
+          Click a highlighted statement in the paper (or a row on the left) to read its plain-English summary and linked Lean statement here — then jump to it in the reference graph.
         </div>
         <div class="tdetail-on" id="tdOn">
           <div class="td-head">
@@ -462,7 +462,7 @@
             <div class="summary" id="td-summary"></div>
             <div class="prov" id="td-prov"></div>
             <div class="sec"><div class="sec-t">Lean statement</div><div id="td-trust"></div><div class="codebox" id="td-code"></div><div class="gchips" id="td-chips"></div></div>
-            <button class="td-graph" id="td-graph">Open in dependency graph →</button>
+            <button class="td-graph" id="td-graph">Open in reference graph →</button>
           </div>
         </div>
       </aside>
@@ -579,7 +579,7 @@
   var route = "lean";
   var NW = 218, NH = 42;
   var nodeEls = {}, edgeEls = [];
-  var selId = null;
+  var selId = null, graphFocus = true, graphPositions = {}, graphGeometry = {width:600,height:400};
 
   // a node "belongs to" the paper route if it is a paper statement/def/axiom or has any
   // paper-route edge; Lean-only intermediates (no paper presence) are hidden on that route.
@@ -589,26 +589,17 @@
     nodeEls = {}; edgeEls = [];
     var defs=document.createElementNS(NS,"defs");defs.innerHTML='<marker id="dependency-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#8ba3cc"/></marker>';root.appendChild(defs);var gE = document.createElementNS(NS,"g"); root.appendChild(gE);
     var gN = document.createElementNS(NS,"g"); root.appendChild(gN);
-    var nodes = view === "spine" ? DATA.nodes.filter(function(n){return n.spine;}) : DATA.nodes;
-    // On the PAPER route, hide Lean-only nodes with no paper presence (e.g. the
-    // Reduction Gap Theorem, which the Lean proof factors through but the paper never
-    // states) so the paper route reads as a clean graph of the paper's own statements.
-    if(route === "paper") nodes = nodes.filter(onPaperNode);
-    var vis = {}; nodes.forEach(function(n){ vis[n.id]=1; });
-    // Both routes use edge sets built the SAME way (transitive-reduced + spine-contracted)
-    // so they are directly comparable — Lean = machine-proof deps, paper = the paper's
-    // dependency structure (definitions via notation + \cref'd lemmas).
-    var edges = route === "paper"
-      ? (view === "spine" ? DATA.edgesPaperSpine : DATA.edgesPaperFull)
-      : (view === "spine" ? DATA.edgesSpine : DATA.edgesFull);
-    var X = function(n){ return view === "spine" ? n.sx : n.x; };
-    var Y = function(n){ return view === "spine" ? n.sy : n.y; };
+    var model = window.ExplorerExtras.graphModel(DATA,view,route,graphFocus?selId:null);
+    var nodes=model.nodes, edges=model.edges;
+    graphPositions=model.positions;graphGeometry=model;
+    root.setAttribute("data-focused",String(model.focused));
+    var X=function(n){return graphPositions[n.id].x;};
+    var Y=function(n){return graphPositions[n.id].y;};
     edges.forEach(function(e){
       var a = byId[e[0]], b = byId[e[1]]; if(!a || !b) return;
-      if(!vis[e[0]] || !vis[e[1]]) return;  // only draw edges between visible nodes
       var p = document.createElementNS(NS,"path");
-      var x1 = X(a)+NW, y1 = Y(a)+NH/2, x2 = X(b), y2 = Y(b)+NH/2, mx = (x1+x2)/2;
-      p.setAttribute("d","M"+x1+" "+y1+" C"+mx+" "+y1+" "+mx+" "+y2+" "+x2+" "+y2);
+      p.setAttribute("d",window.ExplorerExtras.graphPath(graphPositions[a.id],graphPositions[b.id],edges.some(function(other){return other[0]===b.id&&other[1]===a.id;})));
+      p.setAttribute("data-from",a.id);p.setAttribute("data-to",b.id);
       p.setAttribute("class","edge");p.setAttribute("marker-end","url(#dependency-arrow)");
       gE.appendChild(p);
       edgeEls.push({el:p, from:e[0], to:e[1]});
@@ -616,7 +607,7 @@
     nodes.forEach(function(n){
       var g = document.createElementNS(NS,"g");
       g.setAttribute("class","node "+role(n)); g.setAttribute("tabindex","0"); g.setAttribute("role","button"); g.setAttribute("aria-label",nodeTitle(n)); g.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();select(n.id,true);}});
-      g.setAttribute("transform","translate("+X(n)+","+Y(n)+")");
+      g.setAttribute("transform","translate("+X(n)+","+Y(n)+")");g.setAttribute("data-id",n.id);
       var r = document.createElementNS(NS,"rect");
       r.setAttribute("width",NW); r.setAttribute("height",NH); r.setAttribute("rx",6);
       g.appendChild(r);
@@ -635,25 +626,23 @@
       var tooltip=document.createElementNS(NS,"title");tooltip.textContent=nodeTitle(n)+(n.summary?" — "+n.summary:"")+" ("+statusLabel(n)+")";g.appendChild(tooltip);gN.appendChild(g);
       nodeEls[n.id] = g;
     });
-    document.getElementById("s-shown").textContent = nodes.length;
+    document.getElementById("s-shown").textContent = nodes.length;window.ExplorerExtras.graphChanged(model);
   }
 
   // ================= pan / zoom =================
   var tx=0, ty=0, scale=1;
   function apply(){ root.setAttribute("transform","translate("+tx+","+ty+") scale("+scale+")"); }
-  function dims(){ return view==="spine" ? DATA.spine : DATA.full; }
+  function dims(){return graphGeometry;}
   function fit(){
-    var vw = svg.clientWidth, vh = svg.clientHeight, d = dims();
-    var sw = vw/(d.width+80), sh = vh/(d.height+80);
-    if(sw < 0.45 && sh > sw*1.6){
-      // wide ribbon: fit height, open at the foundations (left edge), pan right to the headline
-      scale = Math.max(.3, Math.min(sh, .95));
-      tx = 24; ty = (vh - d.height*scale)/2; apply();
-      return;
-    }
-    var s = Math.min(sw, sh);
-    scale = Math.max(.1, Math.min(s, 1.1));
-    tx = (vw - d.width*scale)/2; ty = (vh - d.height*scale)/2; apply();
+    var bounds=svg.getBoundingClientRect(),padding={left:18,right:18,top:18,bottom:18};
+    var controls=document.querySelector(".graph-controls");
+    if(controls){var top=controls.getBoundingClientRect();padding.top=Math.max(padding.top,top.bottom-bounds.top+12);}
+    document.querySelectorAll(".graphwrap .graph-explanation,.graphwrap .fab,.graphwrap .legend").forEach(function(item){
+      var box=item.getBoundingClientRect();if(box.width&&box.height)padding.bottom=Math.max(padding.bottom,bounds.bottom-box.top+12);
+    });
+    var result=window.ExplorerExtras.graphFit(graphGeometry.width,graphGeometry.height,svg.clientWidth,svg.clientHeight,padding);
+    if(!result)return;
+    scale=result.scale;tx=result.tx;ty=result.ty;apply();
   }
   // NB: do NOT setPointerCapture on the svg — in Chromium that re-targets the
   // subsequent click to the svg and swallows clicks on the node <g> children.
@@ -662,29 +651,32 @@
   var drag = null, moved = false;
   svg.addEventListener("pointerdown",function(e){ if(e.button && e.button!==0) return; drag={x:e.clientX,y:e.clientY,tx:tx,ty:ty}; moved=false; svg.classList.add("grabbing"); });
   window.addEventListener("pointermove",function(e){ if(!drag) return; var Z=uiZ(), dx=(e.clientX-drag.x)/Z, dy=(e.clientY-drag.y)/Z; if(!moved && (Math.abs(dx)+Math.abs(dy))>4) moved=true; if(moved){ tx=drag.tx+dx; ty=drag.ty+dy; apply(); } });
-  window.addEventListener("pointerup",function(){ if(!drag) return; drag=null; svg.classList.remove("grabbing"); });
+  function endGraphDrag(){drag=null;svg.classList.remove("grabbing");}
+  window.addEventListener("pointerup",endGraphDrag);
+  window.addEventListener("pointercancel",endGraphDrag);
+  window.addEventListener("blur",endGraphDrag);
   svg.addEventListener("wheel",function(e){
     e.preventDefault();
     var rect = svg.getBoundingClientRect(), Z = uiZ(), mx = (e.clientX-rect.left)/Z, my = (e.clientY-rect.top)/Z;
     var f = Math.exp(-e.deltaY*0.0015), ns = Math.max(.07, Math.min(scale*f, 3));
     tx = mx-(mx-tx)*(ns/scale); ty = my-(my-ty)*(ns/scale); scale = ns; apply();
   },{passive:false});
-  svg.addEventListener("click",function(){ if(moved) return; if(selId){ selId=null; clearHl(); showEmpty(); } });
+  svg.addEventListener("click",function(){ if(moved) return; if(selId){ selId=null;graphFocus=false;buildGraph();fit();clearHl();showEmpty();window.ExplorerExtras.navigationChanged(); } });
   function centerOn(n){
+    if(graphFocus){fit();return;}
     var vw = svg.clientWidth, vh = svg.clientHeight;
-    var X = view==="spine" ? n.sx : n.x, Y = view==="spine" ? n.sy : n.y;
+    var position=graphPositions[n.id];if(!position)return;var X=position.x,Y=position.y;
     if(X == null){ return; }
-    var s = Math.max(scale, 1); scale = s;
+    var s = Math.max(.85,Math.min(scale,1.2)); scale = s;
     tx = vw*0.42-(X+NW/2)*s; ty = vh/2-(Y+NH/2)*s; apply();
   }
 
   // ================= highlight (proof cone) =================
   function neighborhood(id){
-    var up={}, down={}, stack, cur;
-    var kd = route==="paper" ? "paperDeps" : "deps", ku = route==="paper" ? "paperDependents" : "dependents";
-    stack=[id]; while(stack.length){ cur=stack.pop(); (byId[cur][kd]||[]).forEach(function(d){ if(!up[d]){up[d]=1;stack.push(d);} }); }
-    stack=[id]; while(stack.length){ cur=stack.pop(); (byId[cur][ku]||[]).forEach(function(d){ if(!down[d]){down[d]=1;stack.push(d);} }); }
-    return {up:up, down:down};
+    var up={},down={},n=byId[id];if(!n)return {up:up,down:down};
+    (route==="paper"?(n.paperDeps||[]):(n.deps||[])).forEach(function(k){up[k]=1;});
+    (route==="paper"?(n.paperDependents||[]):(n.dependents||[])).forEach(function(k){down[k]=1;});
+    return {up:up,down:down};
   }
   function highlight(id){
     var nb = neighborhood(id); var keep={}; keep[id]=1;
@@ -692,7 +684,7 @@
     Object.keys(nb.down).forEach(function(k){keep[k]=1;});
     Object.keys(nodeEls).forEach(function(nid){ nodeEls[nid].classList.toggle("dim", !keep[nid]); });
     edgeEls.forEach(function(e){
-      var on = keep[e.from] && keep[e.to];
+      var on = e.from===id || e.to===id;
       e.el.classList.remove("hl","up","dim");
       if(!on){ e.el.classList.add("dim"); return; }
       if(nb.up[e.to] || (e.to===id && nb.up[e.from])) e.el.classList.add("up"); else e.el.classList.add("hl");
@@ -1299,23 +1291,24 @@
     var tdsm = document.getElementById("td-summary"), tdM = GLOSS.summaries && GLOSS.summaries[n.id];
     if(tdM) tdsm.innerHTML = tdM; else tdsm.textContent = n.summary || "";
     showLean("td-code", n);
-    renderTermExtras(n, "td"); window.ExplorerExtras.renderSources(n,"td-code");
+    renderTermExtras(n, "td"); window.ExplorerExtras.renderSources(n,"td-code");window.ExplorerExtras.navigationChanged();
   }
   var traceSized = false;
   function openTrace(id){
     buildTracer();
+    if(id&&byId[id])pq.value="";
     overlay.classList.add("on");
     renderPlist();
     if(!traceSized){ traceSized = true; requestAnimationFrame(function(){ fitPgw(); }); }
     var target = (id && byId[id] && TRACE.boxes[id]) ? id : selStmt;
     if(target){ requestAnimationFrame(function(){ requestAnimationFrame(function(){ selectStmt(target, true); }); }); }
   }
-  document.getElementById("o-close").addEventListener("click", function(){ overlay.classList.remove("on"); });
+  document.getElementById("o-close").addEventListener("click", function(){ overlay.classList.remove("on");if(selStmt)select(selStmt,graphFocus);fit();window.ExplorerExtras.navigationChanged(); });
   document.getElementById("m-pidx").addEventListener("click", function(){
     openTrace(selId && byId[selId] && TRACE.boxes[selId] ? selId : null);
   });
   document.getElementById("td-graph").addEventListener("click", function(){
-    if(selStmt){ overlay.classList.remove("on"); select(selStmt, true); }
+    if(selStmt){ overlay.classList.remove("on");select(selStmt,graphFocus);fit(); }
   });
 
   var pq = document.getElementById("pq");
@@ -1367,8 +1360,9 @@
   function select(id, center){
     var n = byId[id]; if(!n) return;
     // if node not in current view, switch to full view
-    if(view === "spine" && !n.spine) setView("full", true);
-    selId = id;
+    if(view === "spine" && !n.spine){view="full";document.getElementById("m-spine").classList.remove("on");document.getElementById("m-full").classList.add("on");}
+    selId = id;document.getElementById("q").value="";window.ExplorerExtras.renderGraphSearch([],"");
+    if(graphFocus||!nodeEls[id])buildGraph();
     empty.style.display = "none"; insp.classList.add("on");
     Object.keys(nodeEls).forEach(function(nid){ nodeEls[nid].classList.toggle("sel", nid === id); });
     highlight(id);
@@ -1417,50 +1411,45 @@
       texSec.style.display = "block";
     } else texSec.style.display = "none";
     var dc = document.getElementById("i-deps"); dc.innerHTML = "";
-    var deps = (n.deps||[]).filter(function(d){ return byId[d]; });
-    document.getElementById("i-deps-t").textContent = "Built from ("+deps.length+")";
+    var deps = (route==="paper"?(n.paperDeps||[]):(n.deps||[])).filter(function(d){ return byId[d]; });
+    document.getElementById("i-deps-t").textContent = "References ("+deps.length+")";
     if(deps.length) deps.forEach(function(d){ depRow(d,dc); });
-    else dc.innerHTML = '<div class="none">nothing — a foundation (definition or axiom)</div>';
-    var pdeps = (n.paperDeps||[]).filter(function(d){ return byId[d] && deps.indexOf(d)<0; });
-    if(pdeps.length){ paperNote(dc, "The paper’s prose additionally cites (the Lean proof routes differently):"); pdeps.forEach(function(d){ depRow(d,dc); }); }
+    else dc.innerHTML = '<div class="none">No references recorded for this item in this route.</div>';
+    var pdeps = (route==="paper"?[]:(n.paperDeps||[])).filter(function(d){ return byId[d] && deps.indexOf(d)<0; });
+    if(pdeps.length){ paperNote(dc, "Additional paper citations:"); pdeps.forEach(function(d){ depRow(d,dc); }); }
     var uc = document.getElementById("i-dependents"); uc.innerHTML = "";
-    var us = (n.dependents||[]).filter(function(d){ return byId[d]; });
-    document.getElementById("i-dependents-t").textContent = "Feeds into ("+us.length+")";
+    var us = (route==="paper"?(n.paperDependents||[]):(n.dependents||[])).filter(function(d){ return byId[d]; });
+    document.getElementById("i-dependents-t").textContent = "Referenced by ("+us.length+")";
     if(us.length) us.forEach(function(d){ depRow(d,uc); });
-    else if(n.id === "intro:deterministic") uc.innerHTML = '<div class="none">nothing — this is the headline</div>';
-    else if(n.leanTerminal && n.paper) uc.innerHTML = '<div class="none">nothing: neither the machine-checked assembly nor the paper’s prose cites this statement after it is proved — it stands as a self-contained, kernel-verified record.</div>';
-    else if(n.leanTerminal) uc.innerHTML = '<div class="none">nothing in the compiled proof — this was proved as scaffolding en route, and the final assembly took a different path. It remains a kernel-checked fact about the definitions.</div>';
-    else uc.innerHTML = '<div class="none">nothing here — its consumers are outside the current graph slice</div>';
-    var pus = (n.paperDependents||[]).filter(function(d){ return byId[d] && us.indexOf(d)<0; });
+    else uc.innerHTML = '<div class="none">No referring items recorded in this route.</div>';
+    var pus = (route==="paper"?[]:(n.paperDependents||[])).filter(function(d){ return byId[d] && us.indexOf(d)<0; });
     if(pus.length){ paperNote(uc, "In the paper’s prose it is cited by:"); pus.forEach(function(d){ depRow(d,uc); }); }
-    if(center) centerOn(n);
-    hideHint();
+    if(center||graphFocus) centerOn(n);
+    hideHint();window.ExplorerExtras.navigationChanged();
   }
 
   // ================= view toggle =================
-  function setView(v, keepSel){
-    if(view === v) return;
-    view = v;
-    document.getElementById("m-spine").classList.toggle("on", v==="spine");
-    document.getElementById("m-full").classList.toggle("on", v==="full");
-    var keep = keepSel ? selId : null;
-    selId = null;
-    buildGraph(); fit();
-    if(keep){ select(keep, true); }
-    else showEmpty();
+  function setView(v){
+    if(view===v)return;
+    view=v;document.getElementById("q").value="";window.ExplorerExtras.renderGraphSearch([],"");
+    document.getElementById("m-spine").classList.toggle("on",v==="spine");
+    document.getElementById("m-full").classList.toggle("on",v==="full");
+    if(selId&&v==="spine"&&!byId[selId].spine){selId=null;graphFocus=false;}
+    buildGraph();
+    if(selId)select(selId,graphFocus);else showEmpty();if(!selId||!graphFocus)fit();
+    window.ExplorerExtras.navigationChanged();
   }
   document.getElementById("m-spine").addEventListener("click",function(){ setView("spine"); });
   document.getElementById("m-full").addEventListener("click",function(){ setView("full"); });
 
   // ================= arrows route toggle (Lean proof structure vs paper's prose) =====
   function setRoute(r2){
-    if(route === r2) return;
-    route = r2;
-    document.getElementById("r-lean").classList.toggle("on", r2==="lean");
-    document.getElementById("r-paper").classList.toggle("on", r2==="paper");
-    var keep = selId; selId = null;
-    buildGraph();
-    if(keep) select(keep, false); else clearHl();
+    if(route===r2)return;
+    route=r2;document.getElementById("q").value="";window.ExplorerExtras.renderGraphSearch([],"");
+    document.getElementById("r-lean").classList.toggle("on",r2==="lean");
+    document.getElementById("r-paper").classList.toggle("on",r2==="paper");
+    buildGraph();if(selId)select(selId,graphFocus);else clearHl();if(!selId||!graphFocus)fit();
+    window.ExplorerExtras.navigationChanged();
   }
   document.getElementById("r-lean").addEventListener("click",function(){ setRoute("lean"); });
   document.getElementById("r-paper").addEventListener("click",function(){ setRoute("paper"); });
@@ -1487,16 +1476,14 @@
     return hay.indexOf(v) >= 0;
   }
   q.addEventListener("input",function(){
-    var v = q.value.trim().toLowerCase();
-    var shown = view==="spine" ? DATA.nodes.filter(function(n){return n.spine;}) : DATA.nodes;
-    if(!v){ clearHl(); return; }
-    var hit = null;
-    shown.forEach(function(n){
-      var m = match(n, v);
-      if(nodeEls[n.id]) nodeEls[n.id].classList.toggle("dim", !m);
-      if(m && !hit) hit = n;
-    });
-    if(hit) centerOn(hit);
+    var value=q.value.trim().toLowerCase();
+    if(!value){window.ExplorerExtras.renderGraphSearch([],"");if(selId)highlight(selId);else clearHl();window.ExplorerExtras.graphChanged(graphGeometry);return;}
+    var hits=DATA.nodes.filter(function(n){return match(n,value);});
+    window.ExplorerExtras.renderGraphSearch(hits,value);
+    Object.keys(nodeEls).forEach(function(id){nodeEls[id].classList.toggle("dim",!match(byId[id],value));});
+    edgeEls.forEach(function(edge){edge.el.classList.add("dim");});
+    var visible=hits.find(function(n){return !!nodeEls[n.id];});if(visible)centerOn(visible);
+    document.getElementById("graph-status").textContent=hits.length?hits.length+" matching items · press Enter to open the first":"No matching items";
   });
   q.addEventListener("keydown",function(e){
     if(e.key === "Enter"){
@@ -1507,15 +1494,15 @@
   });
   document.addEventListener("keydown",function(e){
     if(e.defaultPrevented || document.querySelector("dialog[open]")) return;
-    if(e.key === "/" && !e.target.closest("input,textarea,select,[contenteditable]") && document.activeElement !== q && document.activeElement !== pq){ e.preventDefault(); q.focus(); }
+    if(e.key === "/" && !e.target.closest("input,textarea,select,[contenteditable]") && document.activeElement !== q && document.activeElement !== pq){ e.preventDefault(); (overlay.classList.contains("on")?pq:q).focus(); }
     if(e.key === "Escape"){
-      if(overlay.classList.contains("on")){ overlay.classList.remove("on"); return; }
-      q.value=""; q.blur(); selId=null; clearHl(); showEmpty();
+      if(overlay.classList.contains("on")){ overlay.classList.remove("on");if(selStmt)select(selStmt,graphFocus);fit();window.ExplorerExtras.navigationChanged();return; }
+      q.value="";q.blur();selId=null;graphFocus=false;buildGraph();fit();clearHl();showEmpty();window.ExplorerExtras.navigationChanged();
       Object.keys(nodeEls).forEach(function(nid){ nodeEls[nid].classList.remove("dim"); });
     }
   });
 
-  document.getElementById("fit").addEventListener("click",function(){ selId=null; clearHl(); showEmpty(); fit(); });
+  document.getElementById("fit").addEventListener("click",fit);
   document.getElementById("headline").addEventListener("click",function(){ select("intro:deterministic", true); });
   document.getElementById("f-count").textContent = DATA.meta.nodes;
   document.getElementById("s-proved").textContent = DATA.meta.counts.proved || 0;
@@ -1587,7 +1574,19 @@
     setPgw(pgw * Math.exp(-e.deltaY * 0.0018));
   }, {passive:false});
 
-  window.ExplorerExtras.init({DATA:DATA,PAYLOAD:PAYLOAD,select:select,openTrace:openTrace,openWin:openWin,hlLean:hlLean});
+  function navigationState(){return {screen:overlay.classList.contains("on")?"paper":"graph",statement:overlay.classList.contains("on")?selStmt:selId,view:view,route:route,focus:graphFocus};}
+  function setGraphFocus(value){graphFocus=!!value;if(graphFocus&&!selId)selId=selStmt||DATA.paperIndex[0]?.id;buildGraph();if(selId)select(selId,graphFocus);if(!selId||!graphFocus)fit();window.ExplorerExtras.navigationChanged();}
+  function zoomGraph(factor){var x=svg.clientWidth/2,y=svg.clientHeight/2,next=Math.max(.025,Math.min(3,scale*factor));tx=x-(x-tx)*(next/scale);ty=y-(y-ty)*(next/scale);scale=next;apply();}
+  function restoreNavigation(state){
+    view=state.view;route=state.route;graphFocus=state.focus;
+    document.getElementById("m-spine").classList.toggle("on",view==="spine");document.getElementById("m-full").classList.toggle("on",view==="full");
+    document.getElementById("r-lean").classList.toggle("on",route==="lean");document.getElementById("r-paper").classList.toggle("on",route==="paper");
+    overlay.classList.remove("on");selId=state.statement;if(!selId)graphFocus=false;buildGraph();
+    if(selId)select(selId,graphFocus);else showEmpty();if(!selId||!graphFocus)fit();
+    if(state.screen==="paper")openTrace(state.statement);
+  }
+  window.ExplorerExtras.init({DATA:DATA,PAYLOAD:PAYLOAD,select:select,openTrace:openTrace,openWin:openWin,hlLean:hlLean,navigationState:navigationState,restoreNavigation:restoreNavigation,setGraphFocus:setGraphFocus,zoomGraph:zoomGraph});
+  new ResizeObserver(function(){if(!overlay.classList.contains("on"))fit();}).observe(svg);
   // ================= boot =================
   buildGraph(); fit(); renderPlist();
   window.ExplorerExtras.ready();
@@ -1602,4 +1601,4 @@
   }
 })().catch(function(error){document.getElementById("load-error").hidden=false;document.getElementById("load-error").textContent="The proof index could not be opened: "+error.message;});
 </script>
-<link rel="stylesheet" href="extras.css?v=dcdfebf38f114147c0a41af55f7a744bececcb20e1dfd2c473ea85349878c2a4"></body></html>
+<link rel="stylesheet" href="extras.css?v=9df74dc1a16bbcb9f3cf40e9a86df01af056e5a7ad0dc357fa2e897549f8f9e8"></body></html>

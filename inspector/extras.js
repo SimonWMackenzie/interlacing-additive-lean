@@ -7,6 +7,97 @@ window.ExplorerExtras = (() => {
   const el = (tag, cls, text) => {const e=document.createElement(tag);e.className=cls||'';if(text!==undefined)e.textContent=text;return e;};
   const escape = s => String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
   const sourceCache=new Map();
+  // The projected reference map can contain cycles: it is not a proof-order DAG.
+  // Work from the selected route's actual edges, never another route's coordinates.
+  function graphModel(data, view, route, selected) {
+    let nodes=data.nodes.filter(n=>view==='full'||n.spine);
+    if(route==='paper')nodes=nodes.filter(n=>n.paper||(n.paperDeps||[]).length||(n.paperDependents||[]).length||n.id===selected);
+    const ids=new Set(nodes.map(n=>n.id));
+    let edges=(route==='paper'?data.edgesPaperFull:data.edgesFull).filter(([a,b])=>a!==b&&ids.has(a)&&ids.has(b));
+    const positions={}, width=218, stepX=300, stepY=68;
+    if(selected&&ids.has(selected)){
+      edges=edges.filter(([a,b])=>a===selected||b===selected);
+      const incoming=new Set(edges.filter(e=>e[1]===selected).map(e=>e[0]));
+      const outgoing=new Set(edges.filter(e=>e[0]===selected).map(e=>e[1]));
+      const left=nodes.filter(n=>incoming.has(n.id));
+      const right=nodes.filter(n=>outgoing.has(n.id)&&!incoming.has(n.id));
+      nodes=nodes.filter(n=>n.id===selected||incoming.has(n.id)||outgoing.has(n.id));
+      const rows=Math.max(left.length,right.length,1), middle=46+(rows-1)*stepY/2;
+      positions[selected]={x:46+stepX,y:middle};
+      [left,right].forEach((group,column)=>group.forEach((n,i)=>{positions[n.id]={x:46+(column?2:0)*stepX,y:middle+(i-(group.length-1)/2)*stepY};}));
+    }else{
+      // A stable grid is deliberate. Source references include mutual references,
+      // so an invented topological order would suggest a false proof hierarchy.
+      const columns=Math.max(1,Math.ceil(Math.sqrt(nodes.length*1.45)));
+      nodes.forEach((n,i)=>{positions[n.id]={x:46+(i%columns)*stepX,y:46+Math.floor(i/columns)*stepY};});
+    }
+    if(selected&&nodes.length){const shift=Math.min(...nodes.map(n=>positions[n.id].x))-46;nodes.forEach(n=>{positions[n.id].x-=shift;});}
+    const right=Math.max(...nodes.map(n=>positions[n.id].x+width),264);
+    const bottom=Math.max(...nodes.map(n=>positions[n.id].y+42),160);
+    return {nodes,edges,positions,width:right+46,height:bottom+46,focused:!!(selected&&ids.has(selected))};
+  }
+  function graphPath(a,b,reverse=false){
+    const w=218,h=42,offset=reverse?5:0;
+    let x1,x2,y1=a.y+h/2-offset,y2=b.y+h/2-offset;
+    if(b.x>a.x){x1=a.x+w;x2=b.x;}
+    else if(b.x<a.x){x1=a.x;x2=b.x+w;y1+=2*offset;y2+=2*offset;}
+    else {x1=a.x+w;x2=b.x+w;const bend=x1+55;return `M${x1} ${y1} C${bend} ${y1} ${bend} ${y2} ${x2} ${y2}`;}
+    const middle=(x1+x2)/2;
+    return `M${x1} ${y1} C${middle} ${y1} ${middle} ${y2} ${x2} ${y2}`;
+  }
+  function graphFit(width,height,viewportWidth,viewportHeight,padding={left:20,right:20,top:50,bottom:90}){
+    if(viewportWidth<=0||viewportHeight<=0)return null;
+    const availableWidth=Math.max(1,viewportWidth-padding.left-padding.right);
+    const availableHeight=Math.max(1,viewportHeight-padding.top-padding.bottom);
+    const scale=Math.min(1.1,availableWidth/Math.max(width,1),availableHeight/Math.max(height,1));
+    return {scale,tx:padding.left+(availableWidth-width*scale)/2,ty:padding.top+(availableHeight-height*scale)/2};
+  }
+  function graphChanged(model){
+    if(!$('graph-status'))return;
+    const state=api.navigationState();
+    const selected=api.DATA.nodes.find(n=>n.id===state.statement);
+    $('graph-status').textContent=(model.focused?'Immediate references around '+(selected?.title||'the selected statement'):'Overview of '+model.nodes.length+' items')+' · '+model.edges.length+' arrows';
+    $('graph-focus').classList.toggle('on',model.focused);
+    $('graph-focus').setAttribute('aria-pressed',String(model.focused));
+    $('graph-overview').classList.toggle('on',!model.focused);
+    $('graph-overview').setAttribute('aria-pressed',String(!model.focused));
+    ['m-spine','m-full','r-lean','r-paper'].forEach(id=>$(id).setAttribute('aria-pressed',String($(id).classList.contains('on'))));
+  }
+  function encodeNavigation(state){
+    const hash=new URLSearchParams();
+    if(state.statement)hash.set('statement',state.statement);
+    hash.set('view',state.screen);hash.set('scope',state.view);hash.set('route',state.route);hash.set('focus',state.focus?'1':'0');
+    return '#'+hash.toString();
+  }
+  function decodeNavigation(hash,data){
+    const p=new URLSearchParams(hash.replace(/^#/,''));
+    const id=p.get('statement');
+    const screen=p.get('view')==='graph'?'graph':'paper';
+    return {statement:data.nodes.some(n=>n.id===id)?id:(screen==='paper'?(data.paperIndex[0]?.id||null):null),screen,view:p.get('scope')==='full'?'full':'spine',route:p.get('route')==='paper'?'paper':'lean',focus:p.get('focus')!=='0'};
+  }
+  let restoring=false, navigationPending=false;
+  function navigationChanged(){
+    if(!api||restoring||navigationPending)return;
+    navigationPending=true;
+    queueMicrotask(()=>{navigationPending=false;if(restoring)return;const hash=encodeNavigation(api.navigationState());if(location.hash!==hash)history.pushState(null,'',hash);});
+  }
+  function restoreNavigation(){
+    restoring=true;
+    api.restoreNavigation(decodeNavigation(location.hash,api.DATA));
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{restoring=false;history.replaceState(null,'',encodeNavigation(api.navigationState()));}));
+  }
+  function renderGraphSearch(hits,query){
+    const results=$('graph-search-results');if(!results)return;
+    results.replaceChildren();results.hidden=!query;
+    $('q').setAttribute('aria-expanded',String(!!query));
+    if(!query)return;
+    results.append(el('p','search-count',hits.length?hits.length+' matching items'+(hits.length>12?' · first 12 shown':''):'No matching items'));
+    hits.slice(0,12).forEach(n=>{
+      const item=button(n.title||n.id,()=>{api.select(n.id,true);results.hidden=true;});
+      const where=n.paper?n.paper.env+' '+n.paper.num+' · PDF page '+n.paper.page:'Construction entry';
+      item.append(el('small','',where));results.append(item);
+    });
+  }
   // A release's asset hashes prevent a fresh page from reusing an older
   // browser-cached PDF, rendered page, proof index, or Lean source module.
   const assetUrl = (path, digest) => {
@@ -25,6 +116,7 @@ window.ExplorerExtras = (() => {
     currentModule=module;if(!dialog.open)dialog.showModal();dialog.append($('gwrap'),$('ghover'));sourceSelect.value=module;
     sourceTitle.textContent=module+' · '+info.lines+' lines';
     sourceCode.textContent='Loading exact source…';
+    $('source-copy').textContent='Copy source';$('source-download').href=assetUrl(info.url,info.sha256);
     try {
       let text=sourceCache.get(module);
       if(text===undefined){const r=await fetch(assetUrl(info.url,info.sha256));if(!r.ok)throw Error('HTTP '+r.status);text=await r.text();sourceCache.set(module,text);}
@@ -35,7 +127,7 @@ window.ExplorerExtras = (() => {
       sourceCode.querySelector('.chosen-line')?.scrollIntoView({block:'center'});
       $('source-origin').textContent=info.file+' · SHA-256 '+info.sha256;
       $('source-download').href=assetUrl(info.url,info.sha256);
-    } catch(e) {sourceCode.textContent='Source could not be loaded: '+e.message;}
+    } catch(e) {if(currentModule===module)sourceCode.textContent='Source could not be loaded: '+e.message;}
   }
   function moduleList(filter='') {
     const selected=sourceSelect.value;sourceSelect.replaceChildren();
@@ -120,6 +212,33 @@ window.ExplorerExtras = (() => {
   }
   function init(a){
     api=a;createSourceViewer();
+    const graphControls=el('div','graph-controls');
+    const focus=button('Selected statement',()=>api.setGraphFocus(true));focus.id='graph-focus';focus.title='Show the selected statement and its immediate recorded references';
+    const overview=button('All links',()=>api.setGraphFocus(false));overview.id='graph-overview';overview.title='Show all recorded references in the chosen scope';
+    graphControls.append(focus,overview);
+    const status=el('span','', '');status.id='graph-status';status.setAttribute('role','status');graphControls.append(status);
+    document.querySelector('.graphwrap').prepend(graphControls);
+    const graphZoomOut=button('−',()=>api.zoomGraph(1/1.25));graphZoomOut.setAttribute('aria-label','Zoom reference graph out');
+    const graphZoomIn=button('+',()=>api.zoomGraph(1.25));graphZoomIn.setAttribute('aria-label','Zoom reference graph in');
+    document.querySelector('.fab').prepend(graphZoomOut,graphZoomIn);
+    const explanation=el('p','graph-explanation','Arrows point from a referenced item to the item that uses it. Mutual references are possible; this is a reference map, not a proof-order graph.');
+    document.querySelector('.graphwrap').append(explanation);
+    $('graph').setAttribute('aria-label','Recorded references between manuscript statements');
+    $('m-spine').textContent='Paper statements';$('m-full').textContent='All entries';$('m-full').title='Include the additional construction entries';
+    document.querySelector('.stats').title='Totals for all '+api.DATA.nodes.length+' paper and construction entries; shown counts the current graph';
+    $('q').placeholder='Find a statement or PDF page';
+    $('q').setAttribute('aria-label','Find a graph statement');$('pq').setAttribute('aria-label','Filter paper statements');
+    const searchResults=el('div','graph-search-results');searchResults.id='graph-search-results';searchResults.hidden=true;searchResults.setAttribute('aria-label','Graph search results');
+    $('q').parentElement.append(searchResults);$('q').setAttribute('aria-controls',searchResults.id);$('q').setAttribute('aria-expanded','false');
+    const clearSearch=button('×',()=>{$('q').value='';$('q').dispatchEvent(new Event('input'));$('q').focus();});clearSearch.setAttribute('aria-label','Clear graph search');$('q').after(clearSearch);
+    $('q').parentElement.addEventListener('keydown',event=>{
+      const items=[...searchResults.querySelectorAll('button')],current=items.indexOf(document.activeElement);
+      if(event.key==='ArrowDown'&&items.length){event.preventDefault();items[(current+1)%items.length].focus();}
+      if(event.key==='ArrowUp'&&items.length){event.preventDefault();items[(current-1+items.length)%items.length].focus();}
+      if(event.key==='Escape'&&!searchResults.hidden){event.preventDefault();event.stopPropagation();$('q').value='';$('q').dispatchEvent(new Event('input'));$('q').focus();}
+    });
+    document.addEventListener('click',event=>{if(!$('q').parentElement.contains(event.target)){searchResults.hidden=true;$('q').setAttribute('aria-expanded','false');}});
+    document.querySelector('.modes').setAttribute('role','group');
     new MutationObserver(records=>records.forEach(r=>r.addedNodes.forEach(node=>decorateTokens(node)))).observe($('gwrap'),{childList:true});
     const pageNote=el('span','','Page numbers include the title page.');
     pageNote.id='page-number-note';pageNote.title='All page links and filters use the PDF page number, counting the title page; the printed footer is one lower.';
@@ -150,10 +269,9 @@ window.ExplorerExtras = (() => {
   }
   function ready(){
     $('load-progress').hidden=true;
-    const hash=new URLSearchParams(location.hash.slice(1));const selected=hash.get('statement');
-    if(hash.get('view')==='graph'){if(selected)api.select(selected,true);}else api.openTrace(selected||api.DATA.paperIndex[0]?.id);
-    const observer=new MutationObserver(()=>{const id=$('td-id').textContent;if(id)history.replaceState(null,'','#statement='+encodeURIComponent(id));});
-    observer.observe($('td-id'),{childList:true,subtree:true});
+    restoreNavigation();
+    window.addEventListener('popstate',restoreNavigation);
+    window.addEventListener('hashchange',()=>{if(!restoring)restoreNavigation();});
   }
-  return {init,ready,renderSources,openSource,assetUrl};
+  return {init,ready,renderSources,openSource,assetUrl,graphModel,graphPath,graphFit,graphChanged,renderGraphSearch,navigationChanged,encodeNavigation,decodeNavigation};
 })();

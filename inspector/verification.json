@@ -5,7 +5,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "source_sha256": "e134fda5252f31bec357d6ced83c1ce233e9c39814e448ea7329da3a60d902d4",
+  "source_sha256": "3f6f21efb21fa4cd347921e12cb8bd4b31e29c0759f28ce863068e1c104376aa",
   "build": {
     "code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
     "canonical_checked_build_complete": true,
@@ -288,16 +288,16 @@
   "input_mapping_sha256": "a2e73c81583fe0a98077e12266b7bcf3e86692e905c762ffdf81065c29fe9677",
   "manuscript_correspondence": {
     "version": "v44",
-    "source_sha256": "e134fda5252f31bec357d6ced83c1ce233e9c39814e448ea7329da3a60d902d4",
-    "pdf_sha256": "b303cdb60c53416929b1d16a74e1d5f66aae146dfa541d4ad0a1257a183a2834",
-    "review_sha256": "431ed908e1795f5e7487163b516cd10ee1a432b921f362b695ab1c2fc21df535",
+    "source_sha256": "3f6f21efb21fa4cd347921e12cb8bd4b31e29c0759f28ce863068e1c104376aa",
+    "pdf_sha256": "d71e690bb1465c87553c97cc800169028ac30a59973d0e99428ba0508936b67d",
+    "review_sha256": "be2754070715a9fec5f05a86d79a70d5bf546ab153784c3254d391a1c54df673",
     "proof_code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
     "complete": true,
     "new_lean_compilation_performed": false
   },
-  "paper_source_sha256": "e134fda5252f31bec357d6ced83c1ce233e9c39814e448ea7329da3a60d902d4",
-  "paper_pdf_sha256": "b303cdb60c53416929b1d16a74e1d5f66aae146dfa541d4ad0a1257a183a2834",
-  "mapping_sha256": "704f8e52967dcaefd7ed7ca02341aafe452750d487c9e412e5d78bbc4e644578",
+  "paper_source_sha256": "3f6f21efb21fa4cd347921e12cb8bd4b31e29c0759f28ce863068e1c104376aa",
+  "paper_pdf_sha256": "d71e690bb1465c87553c97cc800169028ac30a59973d0e99428ba0508936b67d",
+  "mapping_sha256": "3d45ea4d44715463ee90be6f6f7d85b78191bfb6168b478ab20fc7303c216b80",
   "pending": [],
   "mode": "reviewed mappings",
   "module_count": 5249,

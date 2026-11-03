@@ -73,35 +73,31 @@ Simon Mackenzie\footnotemark[1]}
 
 \begin{abstract}
 Given the full truth table of a Boolean function whose input is split
-between two players, how hard is it to determine the minimum number of
-bits they must exchange to compute it? We prove that computing
-deterministic communication complexity is NP-hard. This exact NP-hardness result for the standard model was obtained independently and concurrently
-with Hirahara, Ilango and Loff. This paper includes that result and
-develops its construction to prove NP-hardness of approximation within
-every fixed additive error. We also establish exact and fixed-error
-NP-hardness in Yao's original model, where the players alternate after
-every bit and only the receiver of the last bit needs to determine the
-answer. Yao asked in 1979 how hard it is to compute communication complexity,
-and our result answers his question under his original conventions.
+between two players, we study the complexity of determining the minimum
+worst-case number of bits they must communicate to compute it. This is a
+basic meta-complexity question, posed by Yao in 1979.
 
-For the standard model, our reduction starts from the known NP-hardness of
-graph $3$-coloring and encodes the graph in a communication matrix. We build
-on the interlacing lower-bound framework, strengthening the lower bounds
-so that the construction can be repeated. Each application increases the
-gap in communication cost by one bit. Carefully chosen inputs keep the
-final table polynomial in size for every fixed gap. Strict alternation
-uses a separate construction.
+We prove NP-hardness of approximation within every fixed additive error
+for deterministic communication complexity, under deterministic
+polynomial-time reductions. The result holds both in the standard model
+and in Yao's original model, where the players alternate after every bit
+and only the receiver of the last bit must determine the answer. In
+particular, it resolves the exact computation question under Yao's original
+conventions. Earlier versions of this same paper established exact
+NP-hardness for the standard model, independently and concurrently with
+Hirahara, Ilango, and Loff.
 
-For the standard model, we also show that accurate estimators would give
-faster algorithms for sparse $3$-SAT. A
-polynomial-time randomized estimator of communication complexity with additive error
-$c\log T/\log\log T$, where $T$ is the number of table entries and
-$0\le c<1/8$, yields a bounded-error $3$-SAT algorithm on $N$ variables
-and $O(N)$ clauses in time $2^{O(N^\alpha)}$ for every fixed
-$8c<\alpha<1$. A deterministic polynomial-time estimator with error
-$c_*\log\log T$, for an effective absolute constant $c_*>0$, yields a
-deterministic algorithm in time $2^{O((\log N)^2)}$ on such formulas.
-The communication protocols being measured remain deterministic.
+In both models, a polynomial-time estimator with any fixed additive error
+would yield a polynomial-time $3$-SAT algorithm, deterministic or
+bounded-error randomized according to the estimator. For the standard
+model, we also give quantitative implications for errors that grow with
+the number $T$ of table entries. A bounded-error randomized polynomial-time
+estimator with additive error $c\log T/\log\log T$, for any fixed
+$0\le c<1/8$, yields a bounded-error randomized $3$-SAT algorithm on $N$
+variables and $O(N)$ clauses running in time $2^{O(N^\alpha)}$ for every
+fixed $8c<\alpha<1$. A deterministic polynomial-time estimator with additive
+error $c_*\log\log T$, for an effective absolute constant $c_*>0$, yields a
+deterministic algorithm running in time $2^{O((\log N)^2)}$ on such formulas.
 \end{abstract}
 
 \end{titlepage}

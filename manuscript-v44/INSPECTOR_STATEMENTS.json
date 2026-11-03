@@ -2,8 +2,8 @@
   "paper": {
     "version": "v44",
     "title": "NP-Hardness and Additive Inapproximability of Deterministic Communication Complexity",
-    "source_sha256": "e134fda5252f31bec357d6ced83c1ce233e9c39814e448ea7329da3a60d902d4",
-    "pdf_sha256": "b303cdb60c53416929b1d16a74e1d5f66aae146dfa541d4ad0a1257a183a2834"
+    "source_sha256": "3f6f21efb21fa4cd347921e12cb8bd4b31e29c0759f28ce863068e1c104376aa",
+    "pdf_sha256": "d71e690bb1465c87553c97cc800169028ac30a59973d0e99428ba0508936b67d"
   },
   "statements": [
     {
@@ -11,7 +11,7 @@
       "title": "Fixed communication gaps from satisfiability",
       "env": "theorem",
       "status": "verified",
-      "source_line": 278,
+      "source_line": 274,
       "tex": "\\begin{theorem}[Fixed gaps for unrestricted protocols]\n\\label{intro:deterministic}\nFor every fixed integer $k\\ge1$, a deterministic polynomial-time algorithm\nmaps a $3$-CNF formula $\\Phi$ to an explicit total Boolean table $M$ and an\ninteger $B$ such that\n\\[\n\\Phi\\in\\SAT\\ \\Longrightarrow\\ \\D(M)\\le B,\\qquad\n\\Phi\\notin\\SAT\\ \\Longrightarrow\\ \\D(M)\\ge B+k.\n\\]\nThe polynomial may depend on $k$. The table can be taken square with\npower-of-two side length.\n\\end{theorem}",
       "lean": [
         {
@@ -73,7 +73,7 @@
       "title": "Fixed gaps when Alice and Bob must alternate",
       "env": "theorem",
       "status": "verified",
-      "source_line": 294,
+      "source_line": 290,
       "tex": "\\begin{theorem}[Fixed gaps under strict alternation]\n\\label{yao:main}\nFor every fixed integer $k\\ge1$, a deterministic polynomial-time algorithm\nmaps a $3$-CNF formula $\\Phi$ to an explicit total Boolean table $M$ and an\ninteger $B$ such that\n\\[\n\\Phi\\in\\SAT\\ \\Longrightarrow\\ D_A^{\\mathrm{alt}}(M)\\le B,\\qquad\n\\Phi\\notin\\SAT\\ \\Longrightarrow\\ D_A^{\\mathrm{alt}}(M)\\ge B+k.\n\\]\nThe polynomial bounds on output size and running time may depend on $k$.\n\\end{theorem}",
       "lean": [
         {
@@ -100,7 +100,7 @@
       "title": "Hardness when only the final receiver outputs",
       "env": "corollary",
       "status": "verified",
-      "source_line": 315,
+      "source_line": 311,
       "tex": "\\begin{corollary}[Yao's output convention]\\label{yao:bpp}\nFor every fixed nonnegative additive error, a deterministic polynomial-time\nestimator of $Y_{\\mathrm{free}}(M)$ on all explicit total Boolean tables\nimplies $\\mathsf P=\\NP$, and a bounded-error randomized one implies\n$\\NP\\subseteq\\BPP$. The same conclusions hold for estimating the public-output\nalternating cost with Alice first, Bob first, or a starter chosen\nindependently of the inputs.\n\\end{corollary}",
       "lean": [
         {
@@ -161,7 +161,7 @@
       "scope_note": "For every 0<=c<1/8 and 8c<alpha<1, an estimator with additive error c log T/log log T yields one actual bounded-error sparse 3-SAT algorithm with charged worst-case time 2^{O(N^alpha)}, for each fixed clause density. Correctness holds on all sparse inputs, and accuracy on dyadic square tables suffices. The proved computable dyadic schedule is an alternative to the paper integer-root recipe, with the same full coefficient and exponent range. The approved DinurReduction and BOTReduction (booleanOccurrence D) source interfaces remain explicit; their published-source fidelity remains the inherited author-owned qualification. No ETH assumption is used.",
       "tex": "\\begin{corollary}[Randomized estimation and $3$-SAT running time]\n\\label{thm:quantitative}\nFix $0\\le c<1/8$. Suppose a bounded-error randomized polynomial-time\nestimator approximates $\\D(M)$ within additive error\n$c\\log T/\\log\\log T$ on every sufficiently large explicit total Boolean\ntable with $T$ entries. Then, for every fixed $8c<\\alpha<1$ and every\nfixed $c_s$, sparse $3$-SAT on $N$ variables and at most $c_sN$ clauses has\na bounded-error randomized algorithm with worst-case running time\n$2^{O(N^\\alpha)}$. It suffices for the estimator to work on square tables\nwhose side length is a power of two.\n\\end{corollary}",
       "env": "corollary",
-      "source_line": 337,
+      "source_line": 333,
       "dependencies": []
     },
     {
@@ -189,7 +189,7 @@
       "scope_note": "An effective positive constant c_* is chosen before the estimator. A deterministic polynomial-time estimator with additive error c_* log log T yields one actual deterministic sparse 3-SAT algorithm with charged time 2^{O((log N)^2)}, for each fixed clause density. The real-log endpoint and dyadic-square companion give the two estimator-domain statements. The physical source uses a proved sufficient eventual table-growth bound. The approved DinurReduction and BOTReduction (booleanOccurrence D) source interfaces remain explicit; their published-source fidelity remains the inherited author-owned qualification. No ETH assumption is used.",
       "tex": "\\begin{corollary}[Deterministic estimation and $3$-SAT running time]\n\\label{det:time}\nThere is an effective absolute constant $c_*>0$ with the following property.\nIf a deterministic polynomial-time estimator approximates $\\D(M)$ within\nadditive error $c_*\\log\\log T$ on every sufficiently large explicit total\nBoolean table, then, for every fixed $c_s$, $3$-SAT on $N$ variables and\nat most $c_sN$ clauses has a deterministic algorithm running in time\n$2^{O((\\log N)^2)}$. It suffices for the estimator to work on square tables\nwhose side length is a power of two.\n\\end{corollary}",
       "env": "corollary",
-      "source_line": 353,
+      "source_line": 349,
       "dependencies": []
     },
     {
@@ -197,7 +197,7 @@
       "title": "Tables, communication protocols, and estimation error",
       "env": "definition",
       "status": "definition",
-      "source_line": 997,
+      "source_line": 993,
       "tex": "\\begin{definition}\\label{def:table-estimation}\nA table $M:X\\times Y\\to\\{0,1\\}$ is total, and its input sets $X$ and $Y$ are\nfinite and nonempty sets of labels. Equal rows or columns may have different labels.\nIts size is $T=|X||Y|$.\nA deterministic public-output protocol is a binary tree whose internal\nnodes specify a speaker and a bit-valued function of that player's input\nand the preceding transcript. Each leaf has a fixed output, and the\nprotocol must compute every entry correctly. Its cost is its maximum\ndepth, charging every bit, including fixed bits. Local computation is free.\nWrite $\\D(M)$ for the least cost with unrestricted speaking order.\n\nAn additive-$a(T)$ estimator returns $\\widehat D(M)$ satisfying\n$|\\widehat D(M)-\\D(M)|\\le a(T)$. Its output must be comparable in polynomial time with any binary rational of bit length polynomial in $T$. A bounded-error\nrandomized estimator satisfies this guarantee with probability at least\n$2/3$ on every input. Polynomial time means worst-case time polynomial\nin $T$. Estimators for the alternating costs below follow the same conventions.\n\\end{definition}",
       "lean": [
         {
@@ -224,7 +224,7 @@
       "title": "Alternating protocols and who must know the answer",
       "env": "definition",
       "status": "definition",
-      "source_line": 1018,
+      "source_line": 1014,
       "tex": "\\begin{definition}[Alternating costs]\\label{yao:model}\nIn strict alternation the players speak one bit at a time, in turn.\nLet $D_A^{\\mathrm{alt}}$ and $D_B^{\\mathrm{alt}}$ be the minimum\npublic-output costs when Alice or Bob starts, respectively, and let\n$D_{\\mathrm{free}}^{\\mathrm{alt}}=\\min\\{D_A^{\\mathrm{alt}},D_B^{\\mathrm{alt}}\\}$.\nThe starter is chosen independently of the inputs. Every bit is charged,\nand stopping is public: the transcript determines whether communication\nhas ended.\n\nYao's receiver-output cost $Y_{\\mathrm{free}}$ permits the same choice of\nstarter, but the receiver of the last bit determines the answer from\nthat player's input and the transcript. A protocol of depth zero instead designates one\nplayer, who determines the answer from that player's own input alone. Stopping is\nstill public and correctness is required on every input.\n\\end{definition}",
       "lean": [
         {
@@ -258,7 +258,7 @@
       "title": "Interlacing copies of a matrix",
       "env": "definition",
       "status": "definition",
-      "source_line": 1121,
+      "source_line": 1117,
       "tex": "\\begin{definition}[Interlacing]\\label{def:interlace}\nFor a Boolean matrix $R:X\\times Y\\to\\{0,1\\}$,\nthe full $q$-fold interlace $\\Int{q}{R}$ has rows $(i,u)\\in[q]\\times X$,\ncolumns $(y_1,\\ldots,y_q)\\in Y^q$, and entry\n\\[\n\\Int{q}{R}((i,u),(y_1,\\ldots,y_q))=R(u,y_i).\n\\]\nWhen $R$ has normalized input weights $\\mu_X,\\mu_Y$, give row $(i,u)$\nweight $\\mu_X(u)/q$ and column $(y_1,\\ldots,y_q)$ weight\n$\\prod_{j=1}^q\\mu_Y(y_j)$.\n\\end{definition}",
       "lean": [
         {
@@ -306,7 +306,7 @@
       "title": "Weighted tuple lists with exact small projections",
       "env": "definition",
       "status": "definition",
-      "source_line": 1216,
+      "source_line": 1212,
       "tex": "\\begin{definition}[Weighted lists of tuples]\\label{def:exact-tuples}\nFix integers $q,D\\ge1$, the tuple length and the independence order. For a finite alphabet $Y$ with prescribed\nnormalized rational weights $\\mu$, an indexed tuple list consists of a\nfinite nonempty label set $\\mathcal L$, positive normalized rational\nweights $\\nu$ on its labels, and a decoder $z:\\mathcal L\\to Y^q$.\nFor $J\\subseteq[q]$, write $z(\\ell)_J$ for the restriction of $z(\\ell)$ to $J$.\nThe list is \\emph{exactly $D$-wise independent} if, for every $J$ with $|J|\\le D$,\nthe map $z_J:\\ell\\mapsto z(\\ell)_J$ induces the product weights $\\mu^J$. These induced\nweights are the marginal on $J$.\nNo independence on larger sets is required. A set of labels may contain one label\nbut not another with the same decoded tuple.\n\nFor a base matrix $R:X\\times Y\\to\\{0,1\\}$ with column weights $\\mu$,\nthe interlace on this list has a column for each label $\\ell$, with entry\n$R(u,z_i(\\ell))$ at row $(i,u)$. Rows keep the weights of \\cref{def:interlace}, and columns\nget the weights $\\nu$. For both kinds of interlace, \\emph{block} $i$ is the row set\n$\\{i\\}\\times X$, and we measure row weight within a block by the base row\nweights, without division by $q$.\n\\end{definition}",
       "lean": [
         {
@@ -333,7 +333,7 @@
       "title": "Recovering a smaller interlace from selected coordinates",
       "env": "observation",
       "status": "verified",
-      "source_line": 1244,
+      "source_line": 1240,
       "tex": "\\begin{observation}[Restrictions projected to a set of blocks]\\label{obs:representatives}\nLet $G$ be a restriction of an interlace of $R$, on the full product or on\na tuple list, with retained label set $K$, and let $J$ be a set of blocks.\nFor each $i\\in J$, the rows in block $i$ read only coordinate $i$ of the\ndecoded tuple. For each $w\\in\\pi_JK$, choose\na label $\\ell_w\\in K$ with $z(\\ell_w)_J=w$. Identifying $\\ell_w$ with $w$, the restriction of $G$ to these labels and to the\nretained rows of the blocks in $J$ is then the full-product interlace on $J$,\nrestricted to the columns $\\pi_JK$ and to the same rows. This matrix is a submatrix of $G$,\nso every communication lower bound for it holds for $G$. In that interlace,\nits column set has weight $\\mu^J(\\pi_JK)$, and each\nblock keeps its base row weights. If the marginal on $J$ is $\\mu^J$, as for\nfull products and for exactly $|J|$-wise independent lists, then\n$\\mu^J(\\pi_JK)\\ge\\nu(K)$, since $K\\subseteq z_J^{-1}(\\pi_JK)$. We never use\nthe weights of the chosen representatives, and we assert no independence of\nthe retained labels.\n\\end{observation}",
       "lean": [
         {
@@ -367,7 +367,7 @@
       "title": "Communication lower bounds that survive input deletion",
       "env": "definition",
       "status": "definition",
-      "source_line": 1277,
+      "source_line": 1273,
       "tex": "\\begin{definition}[Deletion bounds]\n\\label{def:profile}\nLet \\(F:X\\times Y\\to\\{0,1\\}\\) have positive normalized rational input weights. For\n\\(0<\\rho\\le1\\) and an integer \\(d\\), \\(F\\) satisfies the\n\\emph{deletion bounds} \\(\\RP{F}{\\rho}{d}\\) if, for every \\(j\\in\\{0,1\\}\\) and all \\(U\\subseteq X\\), \\(V\\subseteq\nY\\),\n\\[\n\\mu_X(U)\\ge\\rho\\ \\text{and}\\ \\mu_Y(V)\\ge(3/5)2^{-j} \\quad\\Longrightarrow\\quad\n\\D(F[U,V])\\ge d-j.\n\\]\nHere \\(F[U,V]\\) is the restriction of \\(F\\) to \\(U\\times V\\).\nNo matching upper bound is required.\n\\end{definition}",
       "lean": [
         {
@@ -387,7 +387,7 @@
       "title": "Graphs that separate satisfiable and unsatisfiable formulas",
       "env": "theorem",
       "status": "external",
-      "source_line": 1298,
+      "source_line": 1294,
       "tex": "\\begin{theorem}[Bounded-degree coloring source]\n\\label{src:gap-colouring}\nThere are constants \\(\\Delta\\ge1\\) and rational \\(\\gamma>0\\), and a\ndeterministic polynomial-time reduction from \\(3\\)-SAT to nonempty\nloopless multigraphs \\(G=(V,E)\\) with no isolated vertices and maximum degree at\nmost \\(\\Delta\\), such that:\n\\begin{enumerate}\n\\item a satisfiable formula produces a $3$-colorable graph;\n\\item an unsatisfiable formula produces a graph for which every $3$-coloring has at least \\(\\gamma|E|\\) monochromatic edge occurrences.\n\\end{enumerate}\nFor sparse formulas on \\(N\\ge1\\) variables, there is a fixed positive integer\n\\(p\\) such that the output satisfies, for \\(n=|V|\\),\n\\[\nN\\le |E|,\\qquad n,|E|\\le N(\\log(N+2))^p,\\qquad n/2\\le |E|\\le\\Delta n/2.\n\\]\n\\end{theorem}",
       "lean": [
         {
@@ -414,7 +414,7 @@
       "title": "One amplification round adds a bit to the gap",
       "env": "theorem",
       "status": "verified",
-      "source_line": 1329,
+      "source_line": 1325,
       "tex": "\\begin{theorem}[Amplification under input deletion]\n\\label{thm:amplifier}\nLet \\(G=(V,E)\\) be a YES or NO graph produced by \\cref{src:gap-colouring},\nand put \\(n=|V|\\). In either case there are a public row-weight threshold\n\\(\\rho\\), a public integer \\(h\\), and a deterministic, implicitly represented\nconstruction \\(R\\mapsto R^+\\) on base matrices \\(R\\) with positive normalized\nrational input weights. In the full-product case, \\(n\\) must exceed an\neffectively computable constant, \\(\\rho=2^{-L}\\) with \\(L=\\ceil{\\log n}\\), and\n\\(h=L+O_{\\Delta,\\gamma}(\\log L)\\). In the explicit case, \\(\\rho=1/\\mathsf N\\)\nand \\(h=10\\log\\mathsf N\\), with \\(\\mathsf N=s^4\\) for the power of two \\(s\\) of\n\\cref{lem:generated-schedule}. In both cases:\n\\begin{enumerate}\n\\item[(i)] On either source promise,\n\\[\n\\D(R^+)\\le\\D(R)+h+1,\n\\]\nand, if \\(G\\) is YES, the stronger bound \\(\\D(R^+)\\le\\D(R)+h\\) holds.\n\\item[(ii)] If \\(G\\) is NO and the base matrix \\(R\\) satisfies \\(\\D(R)=d\\ge3\\)\nand \\(\\RP{R}{\\rho}{d}\\), then\n\\[\n\\D(R^+)=d+h+1,\\qquad \\RP{R^+}{\\rho}{d+h+1}.\n\\]\n\\item[(iii)] On either source promise, \\(\\rank(R^+)\\le2^h\\rank(R)\\).\n\\end{enumerate}\n\\end{theorem}",
       "lean": [
         {
@@ -490,7 +490,7 @@
       "title": "An initial matrix with known cost and deletion bounds",
       "env": "lemma",
       "status": "verified",
-      "source_line": 1367,
+      "source_line": 1363,
       "tex": "\\begin{lemma}[Initial matrix]\\label{cl:seed}\nFor $L\\ge1$, let $p_0=\\operatorname{pow}_2(64(L+1))$ and\n$R_0(z,j)=z_j$ on $\\{0,1\\}^{p_0}\\times[p_0]$, with uniform input weights. Then\n\\[\nd_0:=\\log p_0+1,\\qquad \\D(R_0)=d_0,\\qquad\n\\rank(R_0)=p_0=2^{d_0-1},\\qquad \\RP{R_0}{2^{-L}}{d_0}.\n\\]\nFor $L=\\ceil{\\log n}$ and $n\\ge4$, the initial matrix has polynomial size in $n$\nand can be printed in polynomial time.\n\\end{lemma}",
       "lean": [
         {
@@ -559,7 +559,7 @@
       "title": "Repeating amplification widens the cost gap",
       "env": "proposition",
       "status": "verified",
-      "source_line": 1380,
+      "source_line": 1376,
       "tex": "\\begin{proposition}[Iterated amplification]\\label{prop:iteration}\nFix one case of \\cref{thm:amplifier}, whose threshold is $\\rho$ and whose\noverhead is $h$, and a source graph to which it applies. Iterate the theorem from the\nmatrix $R_0$ of \\cref{cl:seed} with $L=\\log(1/\\rho)$, an integer in both\ncases, using the same\nparameters in every round, and let $R_i$ be the matrix after $i\\ge0$ rounds.\nPut $B_i=d_0+ih$, $H_i=B_i+i$, and $r_i=2^{B_i-1}$. A YES graph\ngives $\\D(R_i)\\le B_i$. A NO graph gives\n$\\D(R_i)=H_i$ and $\\RP{R_i}{\\rho}{H_i}$. On either promise,\n$\\rank(R_i)\\le r_i$ and $\\D(R_i)\\le H_i$.\n\\end{proposition}",
       "lean": [
         {
@@ -621,7 +621,7 @@
       "title": "Widths and deletion thresholds for one round",
       "env": "definition",
       "status": "definition",
-      "source_line": 1423,
+      "source_line": 1419,
       "tex": "\\begin{definition}[Amplification parameters]\\label{def:amplification-parameters}\nLet $n=|V|$ be the number of vertices of the source graph. Choose powers of two $s,\\rho^{-1}$ with\n$n\\le\\rho^{-1}$, $\\rho\\le s^{-4}$, and $s\\ge s_0$, the effective constant\nof \\cref{lem:common-schedule}. Set\n\\[\n\\begin{gathered}\nq_1=s-2,\\qquad q_2=s^2/\\rho,\\qquad w=s^8,\\qquad Q=s^{24},\\\\\nx=\\rho^8,\\qquad \\eta=s^{-2},\\qquad\n\\theta=(512Q)^{-1},\\qquad \\delta_U=\\eta/(16w).\n\\end{gathered}\n\\]\nThe source construction of \\cref{def:source-matrix} has $q_1$ template\npositions and $q_2$ indices, and the two further interlaces have widths\n$w$ and $Q$. The deletion bounds of \\cref{src:profiles} for the matrices\n$A$, $R_{\\rm temp}$ and $N_{\\rm ref}$ of the source construction use\nrow-weight threshold $x$, and the lower bound for the source matrix $N$\nsurvives deleting an $\\eta$ fraction of each input set's weight\n(\\cref{src:near-full}). For the transpose $W$ of the first further interlace\n(\\cref{def:source-matrix}), $\\theta$ is the row-weight threshold of its\ndeletion bounds, and restrictions retaining row weight at least $\\theta$ and\ncolumn weight at least $1-\\delta_U$ keep the full cost (\\cref{res:alignment}).\n\\end{definition}",
       "lean": [
         {
@@ -648,7 +648,7 @@
       "title": "Encoding the graph in template and item rows",
       "env": "definition",
       "status": "definition",
-      "source_line": 1468,
+      "source_line": 1464,
       "tex": "\\begin{definition}[Source construction]\n\\label{def:source-matrix}\nLet \\(R:X\\times Y\\to\\{0,1\\}\\) have positive normalized rational input weights, and let\n\\(s\\ge4\\) be dyadic, meaning a power of two. Coordinates ranging over integer sets such as \\([q_2]\\) are uniform below,\nand product sets carry the product of the specified factor weights.\n\n\\smallskip\\noindent\\textit{Active items.}\nWe repeat the graph in several groups so that the proof can discard groups\nthat lose too many items.\nAn item is a vertex or auxiliary label in one of \\(4s\\) groups:\n\\(\\mathcal I=[4s]\\times(V\\sqcup[s-3])\\).\nEach edge occurrence in each group has a coordinate at which its two\nendpoints and the \\(s-3\\) auxiliary items of that group are \\emph{active}.\nAll other items are inactive there.\nPad these \\(4s|E|\\) coordinates with inactive coordinates to length\n\\(q_0=\\operatorname{pow}_2(4s|E|)\\), then repeat each coordinate\n\\(q_2/q_0\\) times, where \\(q_2\\) is a dyadic multiple of \\(q_0\\).\nWrite \\(v_i(\\alpha)\\in\\{0,1\\}\\) for the indicator that item \\(i\\) is active\nat index \\(\\alpha\\in[q_2]\\), and \\(\\pi_\\alpha\\) for the map numbering the at most\n\\(s-1\\) active items \\(1,2,\\ldots\\) in a fixed order on \\(\\mathcal I\\).\nNeither depends on any assignment of items to bins.\n\n\\smallskip\\noindent\\textit{Template interlaces.}\nRecall \\(q_1=s-2\\), which leaves two of the \\(s\\) values of Alice's last\nmessage in \\cref{src:upper} for active and inactive items.\nDefine\n\\[\n\\Gamma=Y^{2s-1},\\qquad J=[q_1]\\times X,\\qquad S=J^{q_2},\\qquad\nJ_2=[q_2]\\times\\Gamma.\n\\]\nThe template rows use the first \\(q_1\\) positions of a list\n\\(\\gamma\\in\\Gamma\\), and we reserve its last \\(s+1\\) positions for the item\nrows, since \\(q_1+s+1=2s-1\\). The two successive interlace matrices are\n\\[\nA(\\gamma,(r,u))=R(u,\\gamma_r),\\qquad\nR_{\\rm temp}(z,(\\alpha,\\gamma))=A(\\gamma,z_\\alpha).\n\\]\nThus $A$ has rows indexed by $\\Gamma$ and columns by $J$, and $R_{\\rm temp}$\nhas rows indexed by $S$ and columns by $J_2$. Moreover, $A^{\\mathsf T}$ is a\n$q_1$-fold interlace of $R$ with repeated column labels,\nand $R_{\\rm temp}^{\\mathsf T}$ is a $q_2$-fold interlace of $A$. A template label \\(z\\in S\\)\nis a tuple of pairs \\(z_\\alpha=(r,u)\\in J\\), one for each index \\(\\alpha\\).\nAgainst a list \\(\\gamma\\), the pair gives the entry \\(R(u,\\gamma_r)\\).\n\n\\smallskip\\noindent\\textit{Rows and entries of \\(B_{\\rm raw}\\).}\nThe matrix \\(B_{\\rm raw}\\) has template rows \\((p,z)\\), indexed by a bin\n\\(p\\in[s]\\) and a template label, and item rows \\((i,u)\\), indexed by an item\nand a base row:\n\\[\n\\mathcal K=([s]\\times S)\\sqcup(\\mathcal I\\times X).\n\\]\nWe give the template rows most of the weight, so that deleting an \\(\\eta\\)\nfraction of all row weight removes at most an \\(\\eta/\\lambda\\) fraction of theirs.\nSet \\(\\lambda=255/256\\) and \\(\\mu=1/256\\).\nTemplate rows have total weight \\(\\lambda\\), and vertex rows and auxiliary rows\neach have total weight \\(\\mu/2=1/512\\). Within each type, the bin or item is\nuniform and \\(z\\) or \\(u\\) has the weights of \\(S\\) or \\(X\\).\nFor a column \\(Z=(\\xi,j_1,\\ldots,j_s)\\), where \\(\\xi\\in Y^{s+1}\\) and\n\\(j_p=(\\alpha_p,\\gamma_p)\\in J_2\\), set\n\\[\nB_{\\rm raw}((p,z),Z)=R_{\\rm temp}(z,j_p),\n\\]\n\\[\nB_{\\rm raw}((i,u),Z)=\n \\begin{cases}\n R(u,\\xi_{\\pi_\\alpha(i)}),\n   &\\alpha_1=\\cdots=\\alpha_s=\\alpha,\\ v_i(\\alpha)=1,\\\\\n R(u,\\xi_{s+1}),&\\text{otherwise}.\n \\end{cases}\n\\]\nThus an item row uses its assigned position when the indices\n\\(\\alpha_1,\\ldots,\\alpha_s\\) agree and the item is active there, and otherwise\nit uses the last entry of the shared list.\n\n\\smallskip\\noindent\\textit{Two column families.}\nThe first column family \\(\\Omega=Y^{s+1}\\times J_2^s\\) has product weights.\nThe second column family is\n\\[\n\\mathcal D = \\{(\\operatorname{tail}(\\gamma),j,\\ldots,j):j=(\\alpha,\\gamma)\\in\nJ_2\\}, \\qquad \\operatorname{tail}(\\gamma)=(\\gamma_{q_1+1},\\ldots,\\gamma_{2s-1}),\n\\]\nwith the weights induced from \\(J_2\\). We give the two families\nthe weights\n\\[\n\\begin{array}{ccl}\n\\text{Family}&\\text{Weight}&\\text{Role}\\\\\n\\Omega&\\lambda&\\text{Force Alice's initial messages}\\\\\n\\mathcal D&\\mu&\\text{Read the three tail positions of a collision}.\n\\end{array}\n\\]\nThe two families have distinct labels even where their columns coincide,\nso each keeps its own weight. At every bin \\(p\\), the label \\(j_p\\) has the weights prescribed on \\(J_2\\) in\neither family. We call the columns of the two families \\emph{$\\Omega$-inputs} and\n\\emph{$\\mathcal D$-inputs}. After transposition they become rows, and we\nthen also call them \\emph{$\\Omega$-rows} and \\emph{$\\mathcal D$-rows}.\n\n\\smallskip\\noindent\\textit{The transpose and two further interlaces.}\nTranspose \\(B_{\\rm raw}\\), and restrict the transpose to the rows from the\nfirst column family:\n\\[\nN=B_{\\rm raw}^{\\mathsf T},\\qquad\nN_{\\rm ref}=N[\\Omega,\\mathcal K],\n\\]\nwhere the weights on \\(\\Omega\\) are normalized. The matrix \\(N_{\\rm ref}\\) is used only in\nthe lower-bound analysis. Finally set\n\\[\nU=\\Int{w}{N},\\qquad W=U^{\\mathsf T},\\qquad\nR^+=(\\Int{Q}{W})^{\\mathsf T}.\n\\]\n\\end{definition}",
       "lean": [
         {
@@ -696,7 +696,7 @@
       "title": "Graph coloring determines whether bins must collide",
       "env": "lemma",
       "status": "verified",
-      "source_line": 1715,
+      "source_line": 1711,
       "tex": "\\begin{lemma}\n\\label{src:item-witness}\nA YES graph admits an assignment of \\(\\mathcal I\\) to \\([s]\\) with at most one\nactive item in each bin at every coordinate. For a NO graph, delete fewer than\n\\((s/2)\\delta_v n\\) vertex items and fewer than \\(s/2\\) auxiliary items, where\n\\[\n\\delta_v=\\frac{\\gamma|E|}{2\\Delta n},\\qquad \\zeta=\\frac{\\gamma}{24}.\n\\]\nEvery assignment of the remaining items to the \\(s\\) bins then has at least\n\\(\\zeta q_2\\) coordinates at which one bin contains two active items and an\ninactive item.\n\\end{lemma}",
       "lean": [
         {
@@ -723,7 +723,7 @@
       "title": "A short protocol for the source matrix",
       "env": "proposition",
       "status": "verified",
-      "source_line": 1732,
+      "source_line": 1728,
       "tex": "\\begin{proposition}\n\\label{src:upper}\nIf \\(\\D(R)\\le y\\), then \\(\\D(N)\\le y+2\\log s+\\log q_2+1\\). For a YES graph, the\nfinal \\(+1\\) can be omitted. Both bounds remain valid after restricting either\ninput set.\n\\end{proposition}",
       "lean": [
         {
@@ -743,7 +743,7 @@
       "title": "Many surviving blocks force extra communication",
       "env": "lemma",
       "status": "verified",
-      "source_line": 1824,
+      "source_line": 1820,
       "tex": "\\begin{lemma}\\label{lem:many-product-blocks}\nSuppose $\\RP{M}{x}{H}$ holds for a rationally weighted matrix $M$, where\n$H\\ge3$. Let $u\\ge16$ be dyadic with $ux\\le1$. Every restriction of a\nfull-product interlace of $M$ retaining at least $9u/16$ blocks, each of base row weight at least\n$ux$, and a column set of weight at least $2^{-u/1024}$, has cost at least\n$H+\\log u$.\n\\end{lemma}",
       "lean": [
         {
@@ -777,7 +777,7 @@
       "title": "Deletion bounds for the template layers",
       "env": "lemma",
       "status": "verified",
-      "source_line": 1839,
+      "source_line": 1835,
       "tex": "\\begin{lemma}[Template-layer deletion bounds]\\label{src:profiles}\\label{det:profiles}\nConsider either case of \\cref{thm:amplifier}: the full-product construction of\n\\cref{def:source-matrix} with the parameters of \\cref{lem:full-schedule}, where\n$\\rho=2^{-L}$, or the explicit construction of \\cref{det:construction} with the\nparameters of \\cref{lem:generated-schedule}, where $\\rho=\\rho_{\\rm g}=1/\\mathsf N$\nand the subscript $\\rm g$ is suppressed. Suppose $\\D(R)=d\\ge3$ and $\\RP{R}{\\rho}{d}$,\nlet $x=\\rho^8$ be the block threshold, and define $H_1,H_2,C,x_{\\rm cap}$ by\n\\eqref{eq:source-costs}. Then\n\\[\n\\RP{A}{x}{H_1},\\qquad \\RP{R_{\\rm\ntemp}}{x}{H_2},\\qquad \\RP{N_{\\rm ref}}{x}{C-1}.\n\\]\nIn the interlace of $R$ on $\\Gamma$ (on $\\Gamma_{\\rm g}$ in the explicit case),\nthe first $q_1$ positions together with any three distinct tail positions\nrequire at least $H_1+1$ bits whenever every position retains base row weight\nat least $x_{\\rm cap}$ within its block and the retained set of list labels\nhas weight greater than $1/2$.\n\\end{lemma}",
       "lean": [
         {
@@ -818,7 +818,7 @@
       "title": "A binary tree cannot hide too many surviving objects",
       "env": "lemma",
       "status": "verified",
-      "source_line": 1866,
+      "source_line": 1862,
       "tex": "\\begin{lemma}[Kraft count]\\label{lem:kraft-count}\nLet $q$ be a power of two, and let $V$ be a set of nodes of a binary protocol\ntree, none an ancestor of another, all at depth at most $\\log q$. For $v\\in V$\nat depth $r_v$ put $\\kappa_v=q2^{-r_v}$. Suppose each node $v\\in V$ holds $h_v$\nobjects, $z_v\\le h_v$ of them marked, and $\\sum_{v\\in V}(h_v+z_v)>q$. Then some $v$\nhas $h_v+z_v>\\kappa_v$. For this $v$, if $\\kappa_v\\ge2$ then\n$h_v\\ge\\kappa_v/2+1$, and if $\\kappa_v=1$ then $h_v\\ge2$ or $h_v=z_v=1$.\n\\end{lemma}",
       "lean": [
         {
@@ -845,7 +845,7 @@
       "title": "Following collisions through a protocol tree",
       "env": "lemma",
       "status": "verified",
-      "source_line": 1894,
+      "source_line": 1890,
       "tex": "\\begin{lemma}[Following collision witnesses]\\label{lem:collision-tracking}\nLet $q\\ge2$ be dyadic, let $0\\le b<q$ be an integer, and let $x>0$\nsatisfy $2qx\\le1/8$.\nSuppose a protocol with at most\n$H+\\log q$ bits left has $q-b$ indices, each with a retained set of\nlist inputs of weight at least $3/4$. Each set consists of inputs with that\nfixed index. Mark $w_0>b$ of these sets.\nAssume the following lower bounds, where all set weights are computed from\nthe original input weights.\n\\begin{enumerate}\n\\item[(i)] Until Alice speaks, a set of retained lists at one index with weight at least $x$, against the\nunchanged set of Alice's inputs, costs at least $H>0$.\n\\item[(ii)] At the first Alice bit, one child retains a set of Alice's inputs on which,\nfor every dyadic $u\\ge2$ with $ux\\le1$, retained sets at any $u/2+1$ distinct indices, each\nof weight at least $ux$, cost at least $H+\\log u$.\n\\item[(iii)] A marked set retaining weight greater than $1/2$ costs at least\n$H+1$ before Alice speaks.\n\\end{enumerate}\nThen no such protocol exists.\n\\end{lemma}",
       "lean": [
         {
@@ -879,7 +879,7 @@
       "title": "The source matrix stays hard after small deletions",
       "env": "theorem",
       "status": "verified",
-      "source_line": 1933,
+      "source_line": 1929,
       "tex": "\\begin{theorem}[Source hardness after deletion]\\label{src:near-full}\nUse either the full-product construction of \\cref{def:source-matrix} or the\nexplicit-list construction of \\cref{det:construction}, with a NO graph and\n$\\D(R)=d\\ge3$, and define $H_1,H_2,C,x_{\\rm cap}$ by \\eqref{eq:source-costs}.\nSuppose the deletion bounds and the collision bound stated in\n\\cref{src:profiles} hold. Assume the numerical inequalities\n\\eqref{eq:width-margins} of \\cref{lem:common-schedule}, that the weights on $S$ give exact $8$-wise\nindependence with the prescribed weights on $J$ as marginal, and that the bin tuple $(j_1,\\ldots,j_s)$ of the $\\Omega$-inputs has\nexactly $8$-wise independent weights with the prescribed $J_2$ marginal.\nThen $\\D(N)=C$, and every restriction retaining at least $1-\\eta$ of each\ninput set's total weight has cost at least $C$. In either case of\n\\cref{thm:amplifier} with $\\RP{R}{\\rho}{d}$, these hypotheses follow from \\cref{src:profiles},\n\\cref{lem:common-schedule}, and the exact independence of the constructed weights.\n\\end{theorem}",
       "lean": [
         {
@@ -969,7 +969,7 @@
       "title": "Conditioning changes only a bounded exceptional set",
       "env": "lemma",
       "status": "verified",
-      "source_line": 2098,
+      "source_line": 2094,
       "tex": "\\begin{lemma}[Conditioning outside exceptional coordinates]\\label{det:conditioning}\nLet $\\nu$ be the normalized weights of an indexed exactly $8192$-wise independent tuple list\n(\\cref{def:exact-tuples}) on $Z^q$ with marginal $\\mu$, and let $0<v,\\tau\\le1$. For every event\n$Y$ of labels with $\\nu(Y)\\ge v$, there is a set $E\\subseteq[q]$, with\n$|E|\\le e(v,\\tau)$, such that\n\\[\nd_{\\rm TV}\\bigl((\\nu\\mid Y)_J,\\mu^J\\bigr)\\le\\varepsilon(v,\\tau)\n\\qquad\n(J\\subseteq[q]\\setminus E,\\ |J|\\le8).\n\\]\nHere total variation is the maximum absolute difference between the two\ndistributions' probabilities of an event. The reduction need not compute the\nevent or the exceptional set.\n\\end{lemma}",
       "lean": [
         {
@@ -989,7 +989,7 @@
       "title": "Surviving blocks in an exactly independent list",
       "env": "lemma",
       "status": "verified",
-      "source_line": 2132,
+      "source_line": 2128,
       "tex": "\\begin{lemma}[Surviving blocks in a tuple list]\\label{det:exact}\nSuppose $d\\ge2$ and $\\RP{M}{x}{d}$. Let an interlace of $M$ use a tuple list\nthat is exactly $8$-wise independent with the column weights of $M$ as marginal. If an integer\n$a\\ge1$ satisfies $2^ax\\le1$, and a restriction retains at least\n$2^{a-1}+1$ blocks, each of base row weight at least $2^ax$, together with a\nlabel set of total weight at least $9/25$, then the restricted\ninterlace has cost at least $d+a$.\n\\end{lemma}",
       "lean": [
         {
@@ -1009,7 +1009,7 @@
       "title": "Surviving blocks still force a lower bound after conditioning",
       "env": "theorem",
       "status": "verified",
-      "source_line": 2145,
+      "source_line": 2141,
       "tex": "\\begin{theorem}[Surviving blocks after conditioning]\\label{det:rareboost}\nSuppose $d\\ge2$ and $\\RP{M}{x}{d}$, and let an interlace of $M$ use an exactly $8192$-wise independent\ntuple list with weights $\\nu$ and the column weights of $M$ as marginal. Let $\\nu(Y)\\ge v>0$,\nchoose the exceptional set from \\cref{det:conditioning} with any error bound\n$0<\\tau\\le1$, and let an integer $a\\ge1$ satisfy $2^ax\\le1$. If a restriction\nretains at least $2^{a-1}+1$ blocks indexed outside that exceptional set, each of base row weight at least\n$2^ax$, and a column set $K\\subseteq Y$ with $(\\nu\\mid Y)(K)\\ge1/2$, then\nits cost is at least $d+a$.\n\\end{theorem}",
       "lean": [
         {
@@ -1036,7 +1036,7 @@
       "title": "Most copies reach distinct nodes before Bob speaks",
       "env": "lemma",
       "status": "verified",
-      "source_line": 2220,
+      "source_line": 2216,
       "tex": "\\begin{lemma}\\label{res:destinations}\nUnder the common hypotheses above, suppose a restriction of $U$ retains row\nweight at least $1-\\delta_U$ and a tuple event $Y'$ of original weight at least\n$\\theta$, and has a protocol of depth at most $C+\\log w-1$.\nApply \\cref{det:conditioning} to $Y'$ with $v=\\theta$ and error bound $\\eta/2$, and set aside\nthe at most $E_{\\rm exc}/2$ exceptional copies. At an Alice node of depth $r$, put\n$\\kappa=w2^{-r}$. Follow each tracked set of $\\Omega$-rows of one remaining copy,\nof normalized weight at least $2\\kappa x$, into every child in which it\nretains normalized weight at least $\\kappa x$. An unsplit row set\ncontributes one. Once a row set first splits into two children meeting the\nthreshold, each descendant contributes one-half. We add these\ncontributions at each node. They count row sets, not input weight.\n\nStop at the first node where Bob speaks or at depth $\\log w$, whichever comes first.\nThe latter stopping condition applies regardless of the next speaker.\nPaths that end earlier carry no row sets, and we extend them to depth\n$\\log w$ by fixed Alice bits. At a node where Bob\nfirst speaks with $\\kappa\\ge2$, the total contribution is at most $\\kappa/2$.\nA node at depth $\\log w$ has at most one row set. At least $w-E_{\\rm exc}$\nnodes at that depth are reached by unsplit row sets from distinct copies. Assign each\nsuch node to the copy of its row set. Over all other stopping nodes,\nthe sum of $\\kappa$ is at most $E_{\\rm exc}$.\n\\end{lemma}",
       "lean": [
         {
@@ -1112,7 +1112,7 @@
       "title": "One stopping node cannot receive too much diagonal weight",
       "env": "lemma",
       "status": "verified",
-      "source_line": 2300,
+      "source_line": 2296,
       "tex": "\\begin{lemma}\\label{res:incoming}\nFor the protocol and stopping nodes of \\cref{res:destinations}, the total\n$\\mathcal D$-weight, over all copies, reaching a stopping node of depth $r$ where Bob first\nspeaks before depth $\\log w$ is less than $2s\\kappa$, where $\\kappa=w2^{-r}$.\nAt a stopping node at depth $\\log w$ this weight is less than $2s$.\nWeight is measured in units of one complete copy of $N$.\n\\end{lemma}",
       "lean": [
         {
@@ -1153,7 +1153,7 @@
       "title": "A copy sends little diagonal weight to another copy's node",
       "env": "lemma",
       "status": "verified",
-      "source_line": 2308,
+      "source_line": 2304,
       "tex": "\\begin{lemma}\\label{res:foreign}\nIn the same protocol, for each copy $i$ with an assigned node, let\n$\\varepsilon_i$ be the normalized weight of copy $i$'s $\\Omega$-rows missing\nat that node. For every\nother copy $j$ with an assigned node, the $\\mathcal D$-rows of copy $j$ reaching\nthe node assigned to copy $i$ have total weight at most $\\mu\\delta_i$, where\n\\[\n \\delta_i=2q_2x+4\\varepsilon_i.\n\\]\n\\end{lemma}",
       "lean": [
         {
@@ -1236,7 +1236,7 @@
       "title": "The internal interlace gains its full index cost",
       "env": "theorem",
       "status": "verified",
-      "source_line": 2371,
+      "source_line": 2367,
       "tex": "\\begin{theorem}[Lower bounds for $W$]\\label{res:alignment}\nUnder the common hypotheses of \\cref{sec:internal-interlace},\n\\[\n \\D(W)=C+\\log w,\\qquad \\RP{W}{\\theta}{C+\\log w-1}.\n\\]\nEvery restriction of $W$ retaining row weight at least $\\theta$ and column\nweight at least $1-\\delta_U$ has cost at least $C+\\log w$.\n\\end{theorem}",
       "lean": [
         {
@@ -1270,7 +1270,7 @@
       "title": "A final full-product interlace restores the deletion bounds",
       "env": "theorem",
       "status": "verified",
-      "source_line": 2461,
+      "source_line": 2457,
       "tex": "\\begin{theorem}[Restoring the deletion bounds]\\label{cl:bridge}\nLet $W$ have $m\\ge1$ rows, $n\\ge1$ columns and $\\D(W)\\ge3$. Let $\\theta>0$ and $0<\\delta\\le1/64$. Assume that every\nrestriction retaining row weight at least $\\theta$ and column weight at least\n$1-\\delta$ has cost at least $\\D(W)$, and that $\\RP{W}{\\theta}{\\D(W)-1}$ holds.\nLet $b\\ge1$ be an integer and $Q=2^r$ a power of two with\n$Q\\delta\\ge80b$ and $Q\\theta\\le1/20$. Then $R^+=(\\Int{Q}{W})^{\\mathsf T}$\nsatisfies\n\\[\n\\D(R^+)=\\D(W)+r,\\qquad \\RP{R^+}{2^{-b}}{\\D(W)+r}.\n\\]\nIndependently of the lower-bound hypotheses, $\\D(W)\\le y$ implies\n$\\D(R^+)\\le y+r$. The matrix $R^+$ has exactly $n^Q$ rows\nand $Qm$ columns.\n\\end{theorem}",
       "lean": [
         {
@@ -1311,7 +1311,7 @@
       "title": "Bounding rank growth through amplification",
       "env": "lemma",
       "status": "verified",
-      "source_line": 2479,
+      "source_line": 2475,
       "tex": "\\begin{lemma}\\label{lem:amplifier-rank}\nIn the construction of \\cref{def:source-matrix}, let\n$h=2\\log s+\\log q_2+\\log w+\\log Q$ and suppose\n$|\\mathcal I|\\le2sq_2$. Then $\\rank(R^+)\\le2^h\\rank(R)$.\nThe same bound holds if any product set of tuples is replaced by an\nindexed list of tuples from that set, or by a product of such lists.\n\\end{lemma}",
       "lean": [
         {
@@ -1366,7 +1366,7 @@
       "title": "Constructing short weighted lists with exact independence",
       "env": "lemma",
       "status": "verified",
-      "source_line": 2582,
+      "source_line": 2578,
       "tex": "\\begin{lemma}[Small rational tuple lists]\\label{det:code}\nFix an integer independence order $\\mathsf D\\ge1$. Given normalized rational weights $\\mu$ on an alphabet of\nsize $m$ and an integer $q\\ge1$, a deterministic algorithm constructs an exactly\n$\\mathsf D$-wise independent tuple list $\\mathsf{Code}_{\\mathsf D}(q,\\mu)$ (\\cref{def:exact-tuples}) with\na label set of size at most $(1+qm)^{\\mathsf D}$.\nFor fixed $\\mathsf D$, the construction time, total output length and\nrational-weight bit lengths are polynomial in $q$, $m$ and the binary encoding\nlength of $\\mu$.\n\\end{lemma}",
       "lean": [
         {
@@ -1463,7 +1463,7 @@
       "title": "Restoring deletion bounds using an explicit tuple list",
       "env": "theorem",
       "status": "verified",
-      "source_line": 2604,
+      "source_line": 2600,
       "tex": "\\begin{theorem}\\label{det:restore}\nLet $0<\\phi\\le1$, $0<\\delta\\le1/64$ and $\\theta>0$. Suppose $W$, with input weights\n$\\mu_X,\\mu_Y$, satisfies $\\D(W)=C\\ge3$, $\\RP{W}{\\theta}{C-1}$, and\n\\[\n\\D(W[A,B])\\ge C \\quad\\text{whenever }\\mu_X(A)\\ge\\theta\n\\text{ and }\\mu_Y(B)\\ge1-\\delta.\n\\]\nLet $Q$ be a power of two satisfying\n\\[\nQ\\ge128\\bigl(e(\\phi,\\delta/2)+1\\bigr), \\qquad Q\\theta\\le1/20,\n\\]\nwhere $e(\\cdot,\\cdot)$, defined before \\cref{det:conditioning}, bounds the\nnumber of exceptional coordinates in that lemma.\nForm the $Q$-fold interlace of $W$ on any exactly $8192$-wise independent tuple list with\nmarginal $\\mu_Y$, and transpose it to obtain $R^+$. Then\n\\[\n\\D(R^+)=C+\\log Q, \\qquad \\RP{R^+}{\\phi}{C+\\log Q}.\n\\]\nIndependently of the lower-bound hypotheses, a protocol of depth $U$ for $W$\nyields one of depth $U+\\log Q$ for $R^+$.\n\\end{theorem}",
       "lean": [
         {
@@ -1497,7 +1497,7 @@
       "title": "A deterministic explicit amplification round",
       "env": "corollary",
       "status": "verified",
-      "source_line": 2705,
+      "source_line": 2701,
       "tex": "\\begin{corollary}[Explicit case]\\label{det:amplifier}\nFor the construction \\(R\\mapsto R_{\\rm g}^{+}\\) of \\cref{det:construction} with the\nparameters of \\cref{lem:generated-schedule}, parts (i) and (ii) of\n\\cref{thm:amplifier} hold with \\(L=L_{\\rm g}\\), so that \\(2^{-L}=\\rho_{\\rm g}\\), and with\n\\[\nh=h_{\\rm g}:=2\\log s_{\\rm g}+\\log q_{2,\\rm g}+\\log w_{\\rm g}+\\log Q_{\\rm g}\n=40\\log s_{\\rm g}=10\\log\\mathsf N.\n\\]\nThe construction is deterministic and runs in time polynomial in \\(\\mathsf N\\) and the\nexplicit rational encoding length of \\(R\\). Every row and column label of \\(R_{\\rm g}^{+}\\)\ndecodes to one of the full-product matrix \\(R^+\\), with the same entry at each decoded pair.\n\\end{corollary}",
       "lean": [
         {
@@ -1573,7 +1573,7 @@
       "title": "Nested tuple lists preserve independence on decoded positions",
       "env": "lemma",
       "status": "verified",
-      "source_line": 2730,
+      "source_line": 2726,
       "tex": "\\begin{lemma}\\label{det:flat}\nLet an inner indexed list (\\cref{def:exact-tuples}) on \\(Z^{q_{\\rm in}}\\) be exactly \\(8192\\)-wise independent\nwith marginal \\(\\mu_Z\\). Let an outer list on \\(q_{\\rm out}\\)-tuples of inner labels be\nexactly \\(8192\\)-wise independent with the inner label weights as marginal.\nThen the decoded coordinates, indexed by pairs in \\([q_{\\rm out}]\\times[q_{\\rm in}]\\), are exactly\n\\(8192\\)-wise independent with marginal \\(\\mu_Z\\). If the outer-list label\nhas product weights with the tuple of labels from finitely many other lists,\nfixing those other labels at any joint value of positive weight leaves the\nouter-label weights, and hence the conclusion above, unchanged.\n\\end{lemma}",
       "lean": [
         {
@@ -1614,7 +1614,7 @@
       "title": "Building the amplifier from explicit weighted lists",
       "env": "definition",
       "status": "definition",
-      "source_line": 2751,
+      "source_line": 2747,
       "tex": "\\begin{definition}\\label{det:construction}\nLet \\(R:X\\times Y\\to\\{0,1\\}\\) be a rationally weighted base matrix. With the\nparameter choices of \\cref{lem:generated-schedule}, construct the items\nand the indicators \\(v_i(\\alpha)\\) as in \\cref{def:source-matrix}.\nReplace the product alphabets \\(\\Gamma\\), \\(S\\), and \\(J_2^s\\) of that definition by the indexed\nlists \\(\\Gamma_{\\rm g}\\), \\(S_{\\rm g}\\), and \\(\\mathcal J_{\\rm g}\\) of\n\\cref{det:code}, defined by\n\\[\n\\Gamma_{\\rm g}=\\mathsf{Code}_{8192}(2s_{\\rm g}-1,\\mu_Y),\\qquad J_{\\rm\ng}=[q_{1,\\rm g}]\\times X,\\qquad S_{\\rm g}=\\mathsf{Code}_{8192}(q_{2,\\rm\ng},\\mu_{J_{\\rm g}}),\n\\]\n\\[\nJ_{2,\\rm g}=[q_{2,\\rm g}]\\times\\Gamma_{\\rm g},\\qquad \\mathcal J_{\\rm\ng}=\\mathsf{Code}_{8192}(s_{\\rm g},\\mu_{J_{2,\\rm g}}).\n\\]\nInteger factors are uniform, and all other factors have their base or indexed\nweights. On decoded labels set\n\\[\nA_{\\rm g}(\\gamma,(r,u))=R(u,\\gamma_r),\\qquad R_{\\rm temp,g}(z,(\\alpha,\\gamma))=A_{\\rm g}(\\gamma,z_\\alpha).\n\\]\nUse the raw entry rules, family tags, and type weights of\n\\cref{def:source-matrix}. For the family corresponding to $\\Omega$, the\ncolumn weights are the product of the weights of a $\\mathcal J_{\\rm g}$ label\nand the weights induced on the tail by $\\Gamma_{\\rm g}$. For the family\ncorresponding to $\\mathcal D$, the weights are induced from $J_{2,\\rm g}$ under\nthe map $j=(\\alpha,\\gamma)\\mapsto(\\operatorname{tail}(\\gamma),j,\\ldots,j)$ defining\n$\\mathcal D$. These rules define $B_{\\rm raw,g}$, its transpose $N_{\\rm g}$, and its\nnormalized restriction $N_{\\rm ref,g}$ to inputs with the $\\Omega$ family tag.\n\nThe lower-bound proof fixes the type/bin/item sequence and the base-label\nsequence before restricting the template labels, which must then still have\ntheir original weights, as required by (H3) of \\cref{sec:internal-interlace}.\nTo interlace \\(w_{\\rm g}\\) copies of \\(N_{\\rm g}\\), we therefore combine three\ntuple lists whose labels have product weights. Each list has\ntuples of length \\(w_{\\rm g}\\) and is exactly \\(8192\\)-wise independent,\nwith the following marginals.\nType/bin/item labels have the weights induced by the raw-row weights,\nbase labels have weights \\(\\mu_X\\), and template labels have the \\(S_{\\rm g}\\)\nweights. We enumerate the Cartesian product of these three label sets.\nAt each position, the type label in the first sequence determines whether the\ndecoded row is a template row \\((p,z)\\), from the bin and template labels, or a row\n\\((i,u)\\) indexed by an item, from the item and base labels. Since the three sequences\nare independent and each is exactly \\(8192\\)-wise independent, their\ncoordinatewise combination gives an exactly \\(8192\\)-wise\nindependent tuple list with the raw-row marginal. Interlacing \\(N_{\\rm g}\\) on\nthis combined list defines \\(U_{\\rm g}\\). Set \\(W_{\\rm g}=U_{\\rm\ng}^{\\mathsf T}\\). We interlace \\(W_{\\rm g}\\) at width \\(Q_{\\rm g}\\) on\n\\(\\mathsf{Code}_{8192}\\) with the column weights of \\(W_{\\rm g}\\) and then transpose to obtain \\(R_{\\rm\ng}^{+}\\). We store all input labels and rational weights explicitly, keeping inputs with\nequal decoded values separate.\n\\end{definition}",
       "lean": [
         {
@@ -1655,7 +1655,7 @@
       "title": "Printing an explicit table with a prescribed gap",
       "env": "theorem",
       "status": "verified",
-      "source_line": 2836,
+      "source_line": 2832,
       "tex": "\\begin{theorem}\\label{det:reduction}\nThere are effective absolute constants \\(\\mathsf A\\ge2\\) and \\(C_0>0\\) and a\ndeterministic algorithm with the following guarantee. Given a YES or NO\nsource graph \\(G\\) from \\cref{src:gap-colouring}, an integer \\(k\\ge1\\), and a power of two\n\\(s_{\\rm g}\\) such that \\(\\mathsf N=s_{\\rm g}^4\\ge|V(G)|\\) meets the parameter conditions\nof \\cref{lem:generated-schedule}, it produces an explicit total Boolean matrix\n\\(F_{G,k}\\) and a public integer \\(B_k^{\\rm g}\\) such that\n\\[\n\\text{YES: }\\D(F_{G,k})\\le B_k^{\\rm g},\\qquad \\text{NO: }\\D(F_{G,k})=B_k^{\\rm\ng}+k.\n\\]\nIts running time and full\nbinary output length are at most \\(\\mathsf N^{C_0\\mathsf A^k}\\). The constants\ndepend only on the fixed source reduction and construction. The output is\nsquare with power-of-two side length at least \\(\\mathsf N\\). The public threshold is\n\\[\nB_k^{\\rm g}=d_{0,\\rm g}+kh_{\\rm g},\n\\]\nwhere \\(d_{0,\\rm g}\\) is the cost of the initial matrix in \\cref{cl:seed}\nwith \\(L=L_{\\rm g}\\):\n\\[\nd_{0,\\rm g}=\\log\\operatorname{pow}_2(64(L_{\\rm g}+1))+1,\\qquad L_{\\rm\ng}=\\log\\mathsf N.\n\\]\n\\end{theorem}",
       "lean": [
         {
@@ -1717,7 +1717,7 @@
       "title": "Columns on which Bob can complete a partial protocol",
       "env": "definition",
       "status": "definition",
-      "source_line": 2974,
+      "source_line": 2970,
       "tex": "\\begin{definition}[Columns on which Bob can complete the protocol]\\label{def:compatibility}\nLet a depth-$t$ tree $P$ specify a complete binary tree of\ndepth $t$, the speaker at each internal node, all Alice maps (from her row to\nher bit at each of her nodes), and all leaf outputs. Bob's maps are unspecified. For a Boolean matrix\n$F:X\\times Y\\to\\{0,1\\}$ and $U\\subseteq X$, let $G_P(U)$ be the set of columns\nfor which some assignment of bits to Bob's nodes makes the tree correct on every\nrow in $U$. The assignment may depend on the column, but not on Alice's row.\n\\end{definition}",
       "lean": [
         {
@@ -1751,7 +1751,7 @@
       "title": "Short protocols are exactly compatible-column containments",
       "env": "observation",
       "status": "verified",
-      "source_line": 2983,
+      "source_line": 2979,
       "tex": "\\begin{observation}[Lemma~3.2 in \\cite{mackenzie2026condensation}]\\label{obs:compatible-protocol}\nFor retained sets $U\\subseteq X$, $V\\subseteq Y$ and an integer $t\\ge0$, with correctness on an empty restriction understood\nvacuously,\n\\begin{equation}\\label{eq:compatibility}\n \\D(F[U,V])\\le t\n \\quad\\Longleftrightarrow\\quad\n V\\subseteq G_P(U)\\text{ for some depth-}t\\text{ protocol tree }P\\text{ of this kind}.\n\\end{equation}\n\\end{observation}",
       "lean": [
         {
@@ -1785,7 +1785,7 @@
       "title": "Low rank limits the possible compatible-column sets",
       "env": "theorem",
       "status": "verified",
-      "source_line": 3069,
+      "source_line": 3065,
       "tex": "\\begin{theorem}[Lemma~4.3 in \\cite{mackenzie2026condensation}]\\label{thm:rank-count}\nLet $r\\ge1$ and $t\\ge0$ be integers. If a Boolean matrix $F$ has real rank at most\n$r$, then, over all depth-at-most-$t$ trees $P$ specified as in\n\\cref{def:compatibility} and all retained row subsets $U$, there are at most\n\\begin{equation}\\label{eq:rank-count}\n 2^{(r+1)\\ceil{\\log(r+2)}\\,2^{t+1}}\n\\end{equation}\ndistinct sets $G_P(U)$. Repeated row and column labels are allowed.\n\\end{theorem}",
       "lean": [
         {
@@ -1805,7 +1805,7 @@
       "title": "Sampling a smaller table while preserving its lower bound",
       "env": "theorem",
       "status": "verified",
-      "source_line": 3094,
+      "source_line": 3090,
       "tex": "\\begin{theorem}[Sampling rows and columns]\\label{thm:compression}\nLet $F:X\\times Y\\to\\{0,1\\}$ have real rank at most $r$, where $r\\ge1$ is an\ninteger, and let $\\mu_X,\\mu_Y$ be input distributions on nonempty finite indexed sets.\nSuppose an integer $H\\ge1$ satisfies, for all $U\\subseteq X$ and $V\\subseteq Y$,\n\\[\n\\mu_X(U)\\ge3/5,\\quad\\mu_Y(V)\\ge3/5\n\\quad\\Longrightarrow\\quad \\D(F[U,V])\\ge H.\n\\]\nPut\n\\[\nm=\\operatorname{pow}_2\\bigl(16(r+1)\\ceil{\\log(r+2)}\\,2^H\\bigr),\n\\]\nwhere $\\operatorname{pow}_2(u)$ is the least power of two at least $u$.\nDraw $m$ rows from $\\mu_X$ and $m$ columns from $\\mu_Y$, all independently, retaining separate indices for\nrepeated draws. The resulting $m\\times m$ matrix has cost at least $H$ except\nwith probability less than $1/100$. Every protocol for $F$ also computes the\nsampled matrix, so the sampled matrix has cost at most $\\D(F)$ on every sample outcome.\n\\end{theorem}",
       "lean": [
         {
@@ -1832,7 +1832,7 @@
       "title": "Generating samples and evaluating their entries efficiently",
       "env": "lemma",
       "status": "verified",
-      "source_line": 3165,
+      "source_line": 3161,
       "tex": "\\begin{lemma}\\label{lem:sample-access}\nLet $R_k$ be the matrix of \\cref{prop:iteration} in the full-product case, and let $m$ be the sample size of\n\\cref{thm:compression} with $r=r_k$ and $H=H_k$. An algorithm generates $m$ row and $m$ column labels of $R_k$\nand evaluates $R_k$ on all their pairs, using $n^{O(k+1)}$\ntime and random bits on every tape, with an absolute implied constant\nindependent of $k$. Every output label is an actual input of $R_k$, and the\nsample counts and tape length do not depend on the tape. The joint distribution of the generated labels is within total\nvariation less than $1/100$ of the ideal independent sample of \\cref{thm:compression}.\n\\end{lemma}",
       "lean": [
         {
@@ -1866,7 +1866,7 @@
       "title": "A randomized algorithm that prints a gap table",
       "env": "theorem",
       "status": "verified",
-      "source_line": 3182,
+      "source_line": 3178,
       "tex": "\\begin{theorem}[Randomized reduction]\\label{thm:uniform-reduction}\nThere is a randomized algorithm that, given a source graph on $n$ vertices above the fixed cutoff in \\cref{lem:full-schedule} and\nan integer $k\\ge1$, outputs a total Boolean matrix $M$ and an integer $B$.\nThe table is square with power-of-two side length. On every tape the algorithm\nuses $n^{O(k+1)}$ time and random bits, with an absolute implied\nconstant independent of $k$. For a YES source, $\\D(M)\\le B$ on every tape.\nFor a NO source,\n\\[\n\\Pr[\\D(M)=B+k]\\ge49/50.\n\\]\nHere $B=B_k$ and the tape-independent entry count is\n\\[\nm=\\operatorname{pow}_2\\bigl(16(r_k+1)\\ceil{\\log(r_k+2)}\\,2^{H_k}\\bigr),\n\\qquad T=m^2.\n\\]\n\\end{theorem}",
       "lean": [
         {
@@ -1913,7 +1913,7 @@
       "scope_note": "An estimator with nondecreasing additive error a and a positive gap computed in paid polynomial time in N+k gives one actual sparse 3-SAT algorithm whenever 2a(S(N,k))<k eventually. The same fixed construction constants support both size bounds and all four deterministic/randomized combinations. The algorithm has charged time polynomial in S; it is deterministic when both choices are deterministic, and bounded-error randomized otherwise. Accuracy on dyadic square tables suffices. The approved DinurReduction and BOTReduction (booleanOccurrence D) source interfaces remain explicit; their published-source fidelity remains the inherited author-owned qualification. No ETH assumption is used.",
       "tex": "\\begin{theorem}[From approximation algorithms to $3$-SAT algorithms]\n\\label{thm:time-tradeoff}\nThere is an effective absolute integer $\\mathsf A\\ge2$ and, for each fixed\nclause-density bound $c_s$, an effective integer $C\\ge1$ with the following\nproperty. Suppose a deterministic or\nbounded-error randomized polynomial-time estimator approximates $\\D(M)$\nwith additive error at most a nondecreasing function $a(T)$ on every\nsufficiently large explicit total Boolean table with $T$ entries.\nLet the gap $k=k(N)\\ge1$ be an integer function computable in time polynomial in\n$N+k(N)$. Choose either construction and its size bound:\n\\[\n\\begin{array}{c|c}\n\\text{Construction} & S(N,k)\\\\ \\hline\n\\text{Randomized} & (N+2)^{C(k+1)}\\\\[2pt]\n\\text{Deterministic} & (N+2)^{C\\mathsf A^k}\n\\end{array}\n\\]\nIf, for all sufficiently large $N$,\n\\[\n2a\\bigl(S(N,k(N))\\bigr)<k(N),\n\\]\nthen $3$-SAT on $N$ variables and at most $c_sN$ clauses has an algorithm\nrunning in time $S(N,k(N))^{O(1)}$. It is deterministic when both the\nconstruction and the estimator are deterministic, and bounded-error\nrandomized otherwise. The exponent may depend on the estimator and the\nalgorithm computing $k$. It suffices for the estimator to work on square\ntables whose side length is a power of two.\n\\end{theorem}",
       "env": "theorem",
-      "source_line": 3230,
+      "source_line": 3226,
       "dependencies": []
     },
     {
@@ -1921,7 +1921,7 @@
       "title": "Alternating output conventions differ by at most two bits",
       "env": "lemma",
       "status": "verified",
-      "source_line": 3384,
+      "source_line": 3380,
       "tex": "\\begin{lemma}\\label{yao:comparison}\nOn nonempty input sets, each cost\n$C\\in\\{D_A^{\\rm alt},D_B^{\\rm alt},D_{\\rm free}^{\\rm alt},Y_{\\rm free}\\}$\nsatisfies\n\\[\n|C(M)-D_A^{\\rm alt}(M)|\\le2.\n\\]\n\\end{lemma}",
       "lean": [
         {
@@ -1955,7 +1955,7 @@
       "title": "Hypergraphs with a coloring gap for strict alternation",
       "env": "proposition",
       "status": "external",
-      "source_line": 3416,
+      "source_line": 3412,
       "tex": "\\begin{proposition}[Hypergraph coloring promise]\\label{yao:source}\nFix an integer $t\\ge4$, and set\n\\[\ns_{\\rm a}=2^t,\\qquad K_{\\rm a}=s_{\\rm a}^2,\\qquad S_{\\rm a}=2^{s_{\\rm a}}.\n\\]\nThere is a deterministic polynomial-time reduction from $3$-SAT to\n$K_{\\rm a}$-uniform hypergraphs with nonempty vertex sets and distinct vertices\nin every edge such that:\n\\begin{enumerate}\n\\item a satisfiable formula has an $s_{\\rm a}$-coloring with at least $s_{\\rm a}-1$ vertices of every color in every edge;\n\\item an unsatisfiable formula has no proper $S_{\\rm a}$-coloring.\n\\end{enumerate}\nThe polynomial may depend on $t$.\n\\end{proposition}",
       "lean": [
         {
@@ -1982,7 +1982,7 @@
       "title": "A lookup table built from a hypergraph and Boolean arrays",
       "env": "definition",
       "status": "definition",
-      "source_line": 3439,
+      "source_line": 3435,
       "tex": "\\begin{definition}\\label{def:alternating-table}\nLet $\\mathcal H=(V,E)$ be a $K_{\\rm a}$-uniform source hypergraph as in\n\\cref{yao:source}, with a fixed ordering of the vertices in each edge. Set\n\\[\nq_{\\rm a}=2^{t-1}=s_{\\rm a}/2, \\qquad H_{\\rm a}=2^b=\\operatorname{pow}_2(\\max\\{1,|E|\\}).\n\\]\nIndex the\nedges by distinct $\\alpha\\in[H_{\\rm a}]$, and let $\\iota_\\alpha(v)$ be the\nposition of $v$ in that edge, or zero if $v$ is absent or the index is unused.\nAlice's address tuples are all of\n\\[\n\\mathcal C=[H_{\\rm a}]^{q_{\\rm a}},\n\\]\neach used once.\nFor any labeled Boolean array list $\\mathcal W=(w^\\ell)$ on\n\\[\n\\Omega_{\\rm a}=[H_{\\rm a}]\\times[K_{\\rm a}],\n\\]\ndefine\n\\[\nM_{\\rm a}((v,c),(g,\\alpha,\\ell)):=\n\\begin{cases}\nw^\\ell(c_g,\\iota_\\alpha(v)),&\\iota_\\alpha(v)>0,\\\\\n0,&\\iota_\\alpha(v)=0.\n\\end{cases}\n\\]\nRows are indexed by $(v,c)\\in V\\times\\mathcal C$. Column labels lie in\n$[q_{\\rm a}]\\times[H_{\\rm a}]\\times[|\\mathcal W|]$. Equal arrays retain their\nseparate labels.\n\\end{definition}",
       "lean": [
         {
@@ -2016,7 +2016,7 @@
       "title": "A balanced coloring gives a short alternating protocol",
       "env": "proposition",
       "status": "verified",
-      "source_line": 3534,
+      "source_line": 3530,
       "tex": "\\begin{proposition}\\label{prop:alternating-upper}\nFor the table of \\cref{def:alternating-table}, an $s_{\\rm a}$-coloring with at\nleast $s_{\\rm a}-1$ vertices of every color in every edge gives\n\\[\nD_A^{\\rm alt}(M_{\\rm a})\\le B_{\\rm a}.\n\\]\n\\end{proposition}",
       "lean": [
         {
@@ -2036,7 +2036,7 @@
       "title": "Nearly uniform arrays prevent short shared responses",
       "env": "lemma",
       "status": "verified",
-      "source_line": 3609,
+      "source_line": 3605,
       "tex": "\\begin{lemma}[Lower bound for alternating protocols]\\label{yao:small-bias-escape}\nLet $m,t$ be integers with $m\\ge2t\\ge2$. Suppose the nonempty labeled\narray list $\\mathcal W$ satisfies \\cref{eq:alternating-pattern} with\n$\\varepsilon\\le2^{-4m}$. If $J\\subseteq\\Omega$ has at least\n$2^{m-t+1}$ positions, then the matrix\n\\[\nL_J(j,\\ell):=w^\\ell(j)\n\\]\nhas no Alice-first alternating protocol of depth at most $2m-1$ in which all\nrows $j\\in J$ give Alice the same response rules for her first $t$ turns on every possible Bob history.\n\\end{lemma}",
       "lean": [
         {
@@ -2063,7 +2063,7 @@
       "title": "An explicit array list for the alternating reduction",
       "env": "corollary",
       "status": "verified",
-      "source_line": 3666,
+      "source_line": 3662,
       "tex": "\\begin{corollary}\\label{yao:array-list}\nFor every fixed $t\\ge4$, a nonempty labeled array list on $\\Omega_{\\rm a}$\nsatisfying \\cref{eq:alternating-pattern} with\n\\[\n\\epsilon_{\\rm a}:=2^{-4(b+3t)}\n\\]\ncan be generated in deterministic time polynomial in $H_{\\rm a}$.\n\\end{corollary}",
       "lean": [
         {
@@ -2111,7 +2111,7 @@
       "title": "Turning the hypergraph coloring gap into a cost gap",
       "env": "proposition",
       "status": "verified",
-      "source_line": 3683,
+      "source_line": 3679,
       "tex": "\\begin{proposition}\\label{yao:lift}\nUse the complete address list $\\mathcal C$ and the explicit array list of\n\\cref{yao:array-list} in $M_{\\rm a}$. A balanced coloring of $\\mathcal H$ as in\n\\cref{prop:alternating-upper} gives\n\\[\nD_A^{\\rm alt}(M_{\\rm a})\\le B_{\\rm a},\n\\]\nwhereas the absence of a proper $S_{\\rm a}$-coloring gives\n\\[\nD_A^{\\rm alt}(M_{\\rm a})\\ge B_{\\rm a}+2t-8.\n\\]\nFor each fixed $t$, the full table can be printed in deterministic time\npolynomial in $|V|+H_{\\rm a}$.\n\\end{proposition}",
       "lean": [
         {
@@ -2152,7 +2152,7 @@
       "title": "Projecting tuple coordinates limits the loss of column weight",
       "env": "lemma",
       "status": "verified",
-      "source_line": 3825,
+      "source_line": 3821,
       "tex": "\\begin{lemma}\\label{cl:projection}\nLet $K\\subseteq Y^p$ be nonempty, and write $\\pi_JK$ for its projection onto the\ncoordinates in $J\\subseteq[p]$. Then\n\\begin{align*}\n \\Delta_{\\card J}(\\pi_JK)&\\le\\Delta_p(K),\\\\\n \\Delta_{\\card{J_0}}(\\pi_{J_0}K)+\\Delta_{\\card{J_1}}(\\pi_{J_1}K)\n &\\le\\Delta_p(K) &&(J_0\\sqcup J_1=[p]).\n\\end{align*}\nFor every integer $1\\le l\\le p$, some $l$-element set $J$ satisfies\n\\[\n\\Delta_l(\\pi_JK)\\le\\frac lp\\Delta_p(K).\n\\]\nViewing $K$ as a column set of $\\Int{p}{M}$, the interlace on the blocks in\n$J$, restricted to the columns $\\pi_JK$ and to any retained rows of these\nblocks, is a submatrix of the restriction of $\\Int{p}{M}$ to these rows and the\ncolumns $K$, and each block keeps its row weights (\\cref{obs:representatives}).\n\\end{lemma}",
       "lean": [
         {
@@ -2193,7 +2193,7 @@
       "title": "Lower bounds for two or three surviving blocks",
       "env": "lemma",
       "status": "verified",
-      "source_line": 3887,
+      "source_line": 3883,
       "tex": "\\begin{lemma}[Small block bounds]\\label{lem:small-blocks}\nSuppose $\\RP{M}{x}{H}$ with $H\\ge2$. A restriction of a full-product interlace of $M$\nretaining the listed number of blocks, each of at least the listed base row weight,\nand a column set of at least the listed product weight has at least the listed cost\nwhenever the listed row weight is at most one.\n\\[\n\\begin{array}{c|c|c|c}\n\\text{blocks}&\\text{row weight per block}&\\text{product column weight}&\\text{cost}\\\\\n\\hline\n2&2x&9/50&H\\\\\n2&2x&9/25&H+1\\\\\n3&4x&9/50&H+1\n\\end{array}\n\\]\n\\end{lemma}",
       "lean": [
         {
@@ -2227,7 +2227,7 @@
       "title": "A short protocol must first identify Alice's block",
       "env": "theorem",
       "status": "verified",
-      "source_line": 3938,
+      "source_line": 3934,
       "tex": "\\begin{theorem}\\label{cl:separation}\nSuppose $\\RP{M}{\\rho}{d}$ with $d\\ge2$. Let $u\\ge2$ be dyadic and\n$1\\ge\\xi>2u\\rho$. Interlace $M$ at width $u$ using an exactly $8$-wise independent\ntuple list with the base-column marginal, as in \\cref{def:exact-tuples}.\nEvery restriction retaining base row weight at least $\\xi$ in every block\nand tuple-label weight at least $18/25$ has the following property: every\nprotocol of depth at most $d+\\log u$ for it begins with $\\log u$ Alice bits\nalong every path.\nThe $u$ nodes at depth $\\log u$ are in bijection with the blocks: each such\nnode retains more\nthan $\\xi-2(u-1)\\rho$ of its assigned block and less than $2\\rho$ of every\nother block. Full products are a special case, and fixed bits count as transmitted bits.\n\\end{theorem}",
       "lean": [
         {
@@ -2254,7 +2254,7 @@
       "title": "A lower bound from a budget for lost column weight",
       "env": "lemma",
       "status": "verified",
-      "source_line": 3989,
+      "source_line": 3985,
       "tex": "\\begin{lemma}\\label{cl:defect-induction}\nLet $C\\ge3$, $0<\\theta\\le1/4$, and $0<\\delta\\le1/64$.\nSuppose $\\RP{M}{\\theta}{C-1}$ (\\cref{def:profile}) and every restriction of $M$ retaining row\nweight at least $\\theta$ and column weight at least $1-\\delta$ has cost at least $C$.\nLet $e\\in\\{0,1\\}$, let $a\\ge2e$ be an integer with $2^a\\theta\\le1$, and let\n$p>2^{a-1}$ be an integer. If a restriction $G$ of $\\Int{p}{M}$ retains base\nrow weight at least $2^a\\theta$ in every block and its nonempty column set $K$ satisfies\n\\[\n\\Delta_p(K)\\le(p-2^{a-1})\\delta+\\frac{4e}{3},\n\\]\nthen $\\D(G)\\ge C+a-e$. Here $C$ is only a lower bound, and we do not assume\n$\\D(M)=C$.\n\\end{lemma}",
       "lean": [
         {
@@ -2281,7 +2281,7 @@
       "title": "Two independent template inputs require an extra bit",
       "env": "lemma",
       "status": "verified",
-      "source_line": 4341,
+      "source_line": 4337,
       "tex": "\\begin{lemma}[Two template inputs]\\label{res:paired}\nLet $A:\\Gamma\\times J\\to\\{0,1\\}$ satisfy $\\RP{A}{x}{H_1}$ with $H_1\\ge2$,\nand let $q_2$ be dyadic with $2q_2x\\le1/8$. Take two weighted lists $S_o,S_f$ of words in $J^{q_2}$, each\nexactly $8$-wise independent with the column weights of $A$ as marginal, and use\nproduct weights on $S_o\\times S_f$. Put $H_2=H_1+\\log q_2$ and give\n$J_2=[q_2]\\times\\Gamma$ the product of uniform index weights and the row weights of $A$ on $\\Gamma$.\nRows are pairs of template labels $(z_o,z_f)\\in S_o\\times S_f$. The columns form two separately tagged copies of $J_2$, with entries\n\\[\nA(\\gamma,(z_o)_\\alpha)\\quad\\text{and}\\quad\nA(\\gamma,(z_f)_\\alpha),\n\\]\nrespectively. The tags remain distinct even when the inner indices coincide.\nRetain a set of pairs of original product weight at least $49/64$, columns reading $z_o$\nof normalized weight at least $1-\\varepsilon$, and columns reading $z_f$ of\nnormalized weight at least $\\delta$, each tagged copy of $J_2$ having total weight one, where\n\\[\n\\varepsilon\\ge0,\\qquad 0<\\delta\\le1,\\qquad\n\\delta>2q_2x+\\varepsilon.\n\\]\nThen the retained matrix requires at least $H_2+1$ bits.\n\\end{lemma}",
       "lean": [
         {
@@ -2308,7 +2308,7 @@
       "title": "Reading another copy's template prevents a short protocol",
       "env": "claim",
       "status": "verified",
-      "source_line": 4388,
+      "source_line": 4384,
       "tex": "\\begin{claim}\\label{cl:two-stream}\nUse the source weights of \\cref{def:source-matrix} and the common hypotheses (H1)--(H4) of \\cref{sec:internal-interlace}, and put\n$\\lambda_0=2q_2x$, $\\tau_0=2sx$, $C=H_2+\\log s+1$, and\n\\[\na_{\\min}=\\frac{99/100+\\lambda^2-1}{\\lambda^2}.\n\\]\nRetain $\\Omega$-inputs of normalized weight at least\n$1-\\varepsilon$, and separately tagged $\\mathcal D$-inputs of another copy whose\nweight-preserving map $(\\operatorname{tail}(\\gamma),j,\\ldots,j)\\mapsto j$ to $J_2$\nhas retained image weight at least $\\delta$.\nNumber the bins so that the distinguished bin is bin one. This bin retains a set\n$P_*\\subseteq S^2$ of pairs $(z_o,z_f)$ of product weight at least $a_{\\min}$, and every other bin retains\na set of labels of $S$-weight at least $\\tau_0$. As in \\cref{def:source-matrix}, write a column in $\\Omega$ as\n$Z=(\\xi,j_1,\\ldots,j_s)$, where $\\xi\\in Y^{s+1}$ and $j_p=(\\alpha_p,\\gamma_p)\\in J_2$. Require entries\n\\[\n\\begin{array}{c|cc}\n & Z\\in\\Omega&\\text{other-copy image }(\\alpha,\\gamma)\\\\ \\hline\n(z_o,z_f)\\in P_*&A(\\gamma_1,(z_o)_{\\alpha_1})&A(\\gamma,(z_f)_\\alpha)\\\\\n(p,z),\\ p\\ne1&A(\\gamma_p,z_{\\alpha_p})&\\text{arbitrary}.\n\\end{array}\n\\]\nIf $\\varepsilon\\ge0$, $0<\\delta\\le1$, and $\\delta>\\lambda_0+4\\varepsilon$, then every such matrix\nrequires at least $C$ bits.\n\\end{claim}",
       "lean": [
         {
@@ -2349,7 +2349,7 @@
       "title": "A moment bound for weighted independent variables",
       "env": "lemma",
       "status": "verified",
-      "source_line": 4630,
+      "source_line": 4626,
       "tex": "\\begin{lemma}[Moment bound]\\label{lem:conditioning-moment}\nLet $r\\ge1$ be an integer. Suppose $X_1,\\ldots,X_m$ have mean zero,\n$|X_i|\\le1$, and every subfamily of at most $2r$ variables is independent.\nFor fixed coefficients $a_i\\in[0,1]$ with $W=\\sum_i a_i\\ge1$,\n\\[\n\\mathbb E\\left|\\sum_i a_iX_i\\right|^{2r}\\le(r^2W)^r.\n\\]\nUnit coefficients give the same bound with $W=m$, and the empty sum is zero.\nIn particular, centered indicators with $1024$-wise independence satisfy\n\\[\n\\mathbb E\\left|\\sum_iX_i\\right|^{1024}\\le(2^{18}m)^{512},\n\\qquad\n\\mathbb E\\left|\\sum_iX_i\\right|^{256}\\le(2^{14}m)^{128}.\n\\]\n\\end{lemma}",
       "lean": [
         {
@@ -2390,7 +2390,7 @@
       "title": "A retained label set must have a large two-coordinate projection",
       "env": "lemma",
       "status": "verified",
-      "source_line": 4697,
+      "source_line": 4693,
       "tex": "\\begin{lemma}\\label{lem:pair-projections}\nFix disjoint coordinate pairs $J_1,\\ldots,J_m$ of a tuple list with marginal\n$\\mu$ and label weights $\\nu$. Suppose a label set $K$ satisfies\n$\\mu^2(\\pi_{J_i}K)<9/25$ for every $i\\in[m]$.\nFor an exactly $8$-wise independent list,\n\\[\n\\nu(K)<\\frac2{m^2}<\\frac9{50m}\\qquad(m\\ge16).\n\\]\nFor an exactly $8192$-wise independent list, let $K\\subseteq Y$ with\n$\\nu(Y)\\ge v>0$, and choose the pairs outside the exceptional set from\n\\cref{det:conditioning}, with any error bound $0<\\tau\\le1$. Then\n\\[\n(\\nu\\mid Y)(K)<\\frac1{4m}\\qquad(m\\ge16).\n\\]\nThus a retained set of conditional weight at least $1/(4m)$ forces one of\nthese pairs to have product projection weight at least $9/25$.\n\\end{lemma}",
       "lean": [
         {
@@ -2424,7 +2424,7 @@
       "title": "Many retained blocks force an extra bit in the remaining protocol",
       "env": "lemma",
       "status": "verified",
-      "source_line": 4786,
+      "source_line": 4782,
       "tex": "\\begin{lemma}\\label{det:suffix}\nSuppose $d\\ge2$ and $\\RP{M}{x}{d}$, and let $b\\ge0$ be an integer with\n$2^{b+1}x\\le1$. Consider an interlace of $M$ on a tuple list whose marginal is\nthe column weights of $M$, and a restriction of it that retains at least $2^b+1$ blocks, each\nof base row weight at least $2^{b+1}x$, and a label set $K$. Assume one of the\nfollowing.\n\\begin{enumerate}\n\\item[(E)] The list is exactly $8$-wise independent with weights $\\nu$, and\n$\\nu(K)\\ge(9/25)2^{-b}$.\n\\item[(C)] The list is exactly $8192$-wise independent with weights $\\nu$,\n$\\nu(Y)\\ge v>0$, the exceptional set is chosen from \\cref{det:conditioning}\nwith error bound $0<\\tau\\le1$, the retained blocks have indices outside that set,\n$K\\subseteq Y$, and $(\\nu\\mid Y)(K)\\ge2^{-b-1}$.\n\\end{enumerate}\nThen the restriction requires at least $d+1$ bits.\n\\end{lemma}",
       "lean": [
         {
@@ -2451,7 +2451,7 @@
       "title": "One effective cutoff makes the numerical margins compatible",
       "env": "lemma",
       "status": "verified",
-      "source_line": 5063,
+      "source_line": 5059,
       "tex": "\\begin{lemma}[Common numerical bounds]\\label{lem:common-schedule}\nThere is an effective dyadic constant $s_0$, depending only on the fixed\ngraph promise, such that the recipe in \\cref{def:amplification-parameters}\nwith $n\\le\\rho^{-1}$, $\\rho\\le s^{-4}$, and $s\\ge s_0$ satisfies all source\nand internal-interlace bounds listed in \\eqref{eq:width-margins} below. The choice of\n$s_0$ is independent of the base matrix and the number of rounds.\n\\end{lemma}",
       "lean": [
         {
@@ -2499,7 +2499,7 @@
       "title": "Parameter choices for the full-product amplifier",
       "env": "lemma",
       "status": "verified",
-      "source_line": 5159,
+      "source_line": 5155,
       "tex": "\\begin{lemma}[Parameters for full products]\\label{lem:full-schedule}\nPut $L=\\ceil{\\log n}$, $\\rho=2^{-L}$, and\n$s=\\operatorname{pow}_2(2^{16}(L+1))$, and use the recipe of \\cref{def:amplification-parameters}.\nFor every sufficiently large source graph, these choices satisfy the hypotheses of\n\\cref{lem:common-schedule}, the numerical conditions for the full-product deletion bounds for the source matrices, and\nthe numerical hypotheses of \\cref{cl:bridge} with $b=L$ and $\\delta=\\delta_U$. The per-round overhead is\n\\[\nh=2\\log s+\\log q_2+\\log w+\\log Q=L+36\\log s=L+O(\\log L).\n\\]\nThere is an effective fixed cutoff beyond which also\n$L\\ge16$, $d_0\\le L$, and $h\\le7L$, where $d_0$ is the cost of the initial matrix in\n\\cref{cl:seed}. Computing the widths has polynomial bit complexity and\nuses neither the base matrix nor the number of rounds.\n\\end{lemma}",
       "lean": [
         {
@@ -2589,7 +2589,7 @@
       "title": "Polynomial-size parameters for explicit weighted lists",
       "env": "lemma",
       "status": "verified",
-      "source_line": 5209,
+      "source_line": 5205,
       "tex": "\\begin{lemma}[Parameters for explicit lists]\\label{lem:generated-schedule}\nAfter increasing the effective dyadic constant $s_0$ if necessary, every\ndyadic $s\\ge\\max\\{n^{1/4},s_0\\}$ satisfies the bounds below. Choose the least such $s$ and put\n$\\mathsf N=s^4$, $L_{\\rm g}=\\log\\mathsf N$, and $\\rho=\\mathsf N^{-1}$.\nWith these choices, the common recipe satisfies all numerical hypotheses of the explicit-list\nconstruction and of the final interlace in \\cref{det:restore}. Its overhead is\n\\[\nh_{\\rm g}=2\\log s+\\log q_2+\\log w+\\log Q\n=40\\log s=10L_{\\rm g}.\n\\]\nWith $\\mathsf N_0=s_0^4$, the padding satisfies\n$n\\le\\mathsf N<16\\max\\{n,\\mathsf N_0\\}$. Every width is polynomial in\n$\\mathsf N$. One round has a fixed polynomial cost in $\\mathsf N$ and the\ncomplete encoding of the base matrix, with exponent independent of the round number.\n\\end{lemma}",
       "lean": [
         {
@@ -2665,7 +2665,7 @@
       "title": "Constructing arrays with nearly uniform bit patterns",
       "env": "lemma",
       "status": "verified",
-      "source_line": 5377,
+      "source_line": 5373,
       "tex": "\\begin{lemma}[Construction~3, Proposition~3 and Corollary~1 in \\cite{alon1992smallbias}]\\label{yao:finite-field-list}\nFor integers $n,r\\ge1$, a deterministic algorithm prints a nonempty labeled\nlist $(w^\\ell)_{\\ell\\in\\mathcal L}$ of $n$-bit arrays satisfying\n\\[\n\\frac{|\\{\\ell\\in\\mathcal L:w^\\ell|_I=z\\}|}{|\\mathcal L|}\n\\le2^{-|I|}+2^{-r}\n\\qquad(I\\subseteq\\{0,\\ldots,n-1\\},\\ z\\in\\{0,1\\}^I).\n\\]\nIts running time and complete output length are polynomial in $n2^r$.\n\\end{lemma}",
       "lean": [
         {
@@ -3704,7 +3704,7 @@
       "Classical.choice",
       "Quot.sound"
     ],
-    "source_sha256": "e134fda5252f31bec357d6ced83c1ce233e9c39814e448ea7329da3a60d902d4",
+    "source_sha256": "3f6f21efb21fa4cd347921e12cb8bd4b31e29c0759f28ce863068e1c104376aa",
     "build": {
       "code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
       "canonical_checked_build_complete": true,
@@ -3987,9 +3987,9 @@
     "input_mapping_sha256": "a2e73c81583fe0a98077e12266b7bcf3e86692e905c762ffdf81065c29fe9677",
     "manuscript_correspondence": {
       "version": "v44",
-      "source_sha256": "e134fda5252f31bec357d6ced83c1ce233e9c39814e448ea7329da3a60d902d4",
-      "pdf_sha256": "b303cdb60c53416929b1d16a74e1d5f66aae146dfa541d4ad0a1257a183a2834",
-      "review_sha256": "431ed908e1795f5e7487163b516cd10ee1a432b921f362b695ab1c2fc21df535",
+      "source_sha256": "3f6f21efb21fa4cd347921e12cb8bd4b31e29c0759f28ce863068e1c104376aa",
+      "pdf_sha256": "d71e690bb1465c87553c97cc800169028ac30a59973d0e99428ba0508936b67d",
+      "review_sha256": "be2754070715a9fec5f05a86d79a70d5bf546ab153784c3254d391a1c54df673",
       "proof_code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
       "complete": true,
       "new_lean_compilation_performed": false

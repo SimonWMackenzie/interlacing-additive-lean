@@ -1,10 +1,10 @@
 {
   "files": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "coordinate-verification.json": "55b2c762433d764ba19ff962c3b68853126197b9ca24fbbd0904ecb815a0c60a",
+    "coordinate-verification.json": "e76eb8e1e45fd817e81cfaae58b21e4487ecb5fbd8a607ce4a0493a58d1130c5",
     "extras.css": "9df74dc1a16bbcb9f3cf40e9a86df01af056e5a7ad0dc357fa2e897549f8f9e8",
     "extras.js": "92563cb4becc77aac178848cbc812b723a7b953842b9fd5f4e21db66a5888082",
-    "index.html": "bf29b04459b8a5f729314ff360c8683410f2602a944f0a8b3915ffaacc038d3a",
+    "index.html": "fe9704ef18671b42cf64f995c486546f5a7a01c5de1d58e8e0c1b949909cb69a",
     "lean/CurrentAdditive/ActualFinalStreamRowNumbering.lean": "69fa397825454b2e124c89fa42487e2ec66f5d10669303a24a1941916ef0d1fd",
     "lean/CurrentAdditive/ActualInternalColumnNumbering.lean": "d45fea2817c50c649539ee85844ee34f7bf8c315b769bd07d629beef1407ee6c",
     "lean/CurrentAdditive/ActualNumberedSuccessorProfile.lean": "40739600514cc0342d5a5c83a278c730bab367b4bf0e1a7b79ab92cd6f080c6e",
@@ -5254,7 +5254,7 @@
     "lean/Workspace/Types/QProjection.lean": "48276146515509b57b2583bba53fa384241fbf2ef4bd7f16508f47276d8dfebd",
     "lean/Workspace/Types/Subgame.lean": "49c8f92a074de0230f1fc471df8a12a7d451b545b960d2118d9b555edd6cf7d4",
     "lean/Workspace/UpperBound.lean": "09ea6979e68710a5353b3d305935a6d67e0990cdeae7d965df13432c343bb3e2",
-    "main.tex": "129d4ec236efb054ab9b900d98a183794c01f900ff12fef67224aa1c7aede658",
+    "main.tex": "dd7a2fad2877e1b99602d5fc842a7ab9e4a0948e347eaa1016f9b99c824120c0",
     "pages/page-001.webp": "0f5e075b2a17e70e8b2d148c33f97a73f106613cc0a82b6841a36ae4e169abb6",
     "pages/page-002.webp": "35043e174de536a4c615b571fd1ea628531a9d9873ffdd0575acd27f12d37f06",
     "pages/page-003.webp": "6fa0a3b7661a21ed16eedf5e9d1abca376e12f439eaeb1199dd3a47bc5ff4bb7",
@@ -5325,19 +5325,19 @@
     "pages/page-068.webp": "fd61ff43a6c782906489ef3bf0420006e06a18060ccfedf2f32005f608fadde7",
     "pages/page-069.webp": "446e86b1e32800868e2de6df628d821d5859cca36e0c0ea265fe98270591ccc0",
     "pages/page-070.webp": "e9d579faf3818378257e32ab21cee8bb6ec820a4e2f418b1909fcf0378be7e79",
-    "pages/page-071.webp": "e6532c2377f58d015f78eeec25d141eada912b6fc453d3312cd347d86df7d244",
-    "pages/page-072.webp": "c4f72c7a091a625e6b019ea0cf61eaffe4e0416fd25345ae804d8ccbc32fb9a3",
+    "pages/page-071.webp": "2a8e9e78a9c2685289cec2fd37928b96b8b44528769ae3839153137bdc4b399d",
+    "pages/page-072.webp": "0e840ed78c8498c73880892dca83f72ae8064df5493970c5d85073f1794b35b0",
     "pages/page-073.webp": "e7e4da536739329e28c841ed518f413611ce80b8ee55b5ea8ce718074c438304",
     "pages/page-074.webp": "fd06e111a54181735fde00a1aebb656d57ddbad03e802ae9a2228e8f1a609991",
     "pages/page-075.webp": "7c56e0d21cc3c0aca376dfff44358d9ae2fb8e8a2b30cf5401a677e02611a853",
     "pages/page-076.webp": "e9afc4478db52cc3d758b8f64a1fca92f19c49607746635b39c6d9f7464143ae",
-    "paper.pdf": "ad552d135438c3b16446d108630e706c89281d28987ca47c58d37b41b8fa4a03",
-    "payload.json": "b8c0cc3c36163808d70e91999a95e98cc675f7400cab10f5d0f960565d567c5a",
-    "payload.json.gz": "302d1f46d3f397bc46ee310b1ad1af4e4b0c67bfb8e9f5db56c831fe77e73863",
+    "paper.pdf": "dbf6f602447520a9507d696461587ec931c80509638a89954accee93a2071a03",
+    "payload.json": "3ad965453f246e81b02085f5405015b2a17efe3b4cbecf94bcec0044de0841b2",
+    "payload.json.gz": "2cbb708f715862bfc82fd22f50ed5bebd0b59e554d8e90908c0dc4817d008ed6",
     "references.bib": "bbef1fce10ac6be635e4b902fc14dba9aa287298e967e8fb1cf191ad5044ba41",
-    "release-binding.json": "7097c298b654ac5964a4be915d174a53537e535986b9e5bbf02ed20d5b151d07",
+    "release-binding.json": "15c1fe17be2204212745e28866cded0d0ccf53ec7de891a7ca24d96a3ee23142",
     "source-manifest.json": "345517a4f0dda1e22b356502617cfb1365f95751f4ea7e1f3463df7b229cfc05",
     "trace-extents.json": "27a252dd129df6541281f276bef3ba6749c6b70a24d7dea82c4a3ac56f731006",
-    "verification.json": "78092355929e7b8a9f95626fe905e6520d7a8b74f4d1f44da2a2f6932ac50f7d"
+    "verification.json": "d241044a94b56388466e0ee8f77d328c5efb72d7065edafe197f36e0bda46b32"
   }
 }

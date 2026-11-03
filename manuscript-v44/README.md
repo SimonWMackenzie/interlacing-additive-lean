@@ -5,8 +5,8 @@ from manuscript statements to checked Lean declarations. The public inspector
 uses this PDF and source.
 
 The correspondence review covers all 66 formal statements and eight
-construction entries. The 50 proof bodies and technical construction text are
-unchanged from the accepted proof release. One statement has equivalent English
+construction entries. The proofs and technical construction text are
+unchanged apart from printing full author names in two citations. One statement has equivalent English
 wording about square tables; the reviewed change is recorded explicitly.
 
 The Lean proof code remains pinned to commit

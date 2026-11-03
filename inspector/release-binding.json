@@ -4,16 +4,16 @@
   "code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
   "archive_url": "https://github.com/SimonWMackenzie/interlacing-additive-lean/archive/fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65.zip",
   "input_hashes": {
-    "paper_source": "129d4ec236efb054ab9b900d98a183794c01f900ff12fef67224aa1c7aede658",
-    "paper_pdf": "ad552d135438c3b16446d108630e706c89281d28987ca47c58d37b41b8fa4a03",
+    "paper_source": "dd7a2fad2877e1b99602d5fc842a7ab9e4a0948e347eaa1016f9b99c824120c0",
+    "paper_pdf": "dbf6f602447520a9507d696461587ec931c80509638a89954accee93a2071a03",
     "paper_aux": "6444e16e05a2f4b2995b53b0789f55a6407853535d3eea578d96c116b9b375b1",
-    "mapping": "3c57fdb6e88c970c99f4da1d3446a7343d67511bfde77090181c75cd00d18c68",
+    "mapping": "2b16ad626d590201c7aa762f83102d7ba281cafbc822040e06fbf82e3514cf5b",
     "module_inventory": "9c3571054d6a6a173a2c837d4eded63fd7273c0e242d777099db90443f4e7200",
-    "endpoints": "e3c07adcb829378256a404702a910079d5d0ebff665fc9d8a01701e63fcaddf2",
+    "endpoints": "a6fa5436327af2b7d7c0348f03215a539c2bf749885310ba00f722ee04132c85",
     "explanations": "68beb96702d838f2f73f7c80ab9fbf752d10e76d0466c3be4b9bad84210a572a",
     "references": "bbef1fce10ac6be635e4b902fc14dba9aa287298e967e8fb1cf191ad5044ba41"
   },
-  "bound_mapping_sha256": "3c57fdb6e88c970c99f4da1d3446a7343d67511bfde77090181c75cd00d18c68",
+  "bound_mapping_sha256": "2b16ad626d590201c7aa762f83102d7ba281cafbc822040e06fbf82e3514cf5b",
   "build": {
     "code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
     "canonical_checked_build_complete": true,
@@ -27,7 +27,7 @@
   "manuscript_correspondence": {
     "passed": true,
     "baseline_source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
-    "source_sha256": "129d4ec236efb054ab9b900d98a183794c01f900ff12fef67224aa1c7aede658",
+    "source_sha256": "dd7a2fad2877e1b99602d5fc842a7ab9e4a0948e347eaa1016f9b99c824120c0",
     "formal_statements": [
       {
         "id": "intro:deterministic",
@@ -497,7 +497,13 @@
       "intro:deterministic"
     ],
     "equivalence": "The optional square table with power-of-two side length is expressed in equivalent English; all quantifiers, gap bounds and runtime claims are identical.",
-    "proof_bodies_exactly_unchanged": 50,
+    "proof_bodies_exactly_unchanged": 49,
+    "proof_bodies_unchanged_after_two_citation_format_changes": 50,
+    "proof_body_citation_formatting_change": {
+      "ordinal": 48,
+      "statement_id": "src:gap-colouring",
+      "change": "Only the two named Bogdanov citation commands gain a star to print every author name."
+    },
     "proof_body_sha256": [
       "df6712db532dbf5b9a55e30611b2ab14f433d1c319d03eefa1a096b24593b77c",
       "f495f9bdb5bbbe7d506414df39289550684b1b482cb639bbf2d5203e951d5da4",
@@ -546,12 +552,22 @@
       "e82d2000a0e79e8106b2edddc2b3d15890a2f4dfc19f832c440220102fbdbba5",
       "aec78bfca7ec75b006fa34ce5b8aec00fe392925f8874188f2f29919642cfe38",
       "94de5964aeb0a80b4f842cb6d06b63e0cecc2348f52392910b7527628ae43e58",
-      "93cc6b2a05fdf8d24239948fc2dfba285083ed77c8aeb2da80f53c4b76fd42d1",
+      "13e2abe7e4c18632900f07545a8bc15ac117c4fee0d11ea9d6a08c6d6f2c968b",
       "a5c9678a39c898793db4796a6349ed814f34eeb9022ebfaf91e940f870094322",
       "ce8d1e840e0ef3ec1309a7c248781168476ff9a01bdaa2705e1f7f7a816ad4b7"
     ],
-    "complete_technical_body_excluding_figures_unchanged": true,
-    "technical_body_sha256": "c838e198e346dccee513b016e9420dd28b89a5192689010b564c699441e686ca",
+    "complete_technical_body_excluding_figures_and_two_citation_format_changes_unchanged": true,
+    "citation_formatting_changes": [
+      {
+        "before": "\\citet[Lemma~11]{bogdanov2002lower}",
+        "after": "\\citet*[Lemma~11]{bogdanov2002lower}"
+      },
+      {
+        "before": "\\citet[Theorem~14 and its proof, pp.~98--99]{bogdanov2002lower}",
+        "after": "\\citet*[Theorem~14 and its proof, pp.~98--99]{bogdanov2002lower}"
+      }
+    ],
+    "technical_body_sha256": "fe0ce7ed5bdd0918b8868eb464b1dc995199f65bef05621820516c335d0b3a9b",
     "technical_body_boundaries": [
       "\\section{Preliminaries}",
       "\\section*{AI methodology}"
@@ -560,42 +576,42 @@
       {
         "id": "unnumbered:1",
         "accepted_status": "verified",
-        "evidence": "Entire technical body unchanged, including unenvironmented constructions and algorithms."
+        "evidence": "Entire technical body unchanged except two commands that print full author names; unenvironmented constructions and algorithms are unchanged."
       },
       {
         "id": "unnumbered:2",
         "accepted_status": "verified",
-        "evidence": "Entire technical body unchanged, including unenvironmented constructions and algorithms."
+        "evidence": "Entire technical body unchanged except two commands that print full author names; unenvironmented constructions and algorithms are unchanged."
       },
       {
         "id": "unnumbered:3",
         "accepted_status": "verified",
-        "evidence": "Entire technical body unchanged, including unenvironmented constructions and algorithms."
+        "evidence": "Entire technical body unchanged except two commands that print full author names; unenvironmented constructions and algorithms are unchanged."
       },
       {
         "id": "unnumbered:4",
         "accepted_status": "verified",
-        "evidence": "Entire technical body unchanged, including unenvironmented constructions and algorithms."
+        "evidence": "Entire technical body unchanged except two commands that print full author names; unenvironmented constructions and algorithms are unchanged."
       },
       {
         "id": "unnumbered:5",
         "accepted_status": "verified",
-        "evidence": "Entire technical body unchanged, including unenvironmented constructions and algorithms."
+        "evidence": "Entire technical body unchanged except two commands that print full author names; unenvironmented constructions and algorithms are unchanged."
       },
       {
         "id": "unnumbered:6",
         "accepted_status": "verified",
-        "evidence": "Entire technical body unchanged, including unenvironmented constructions and algorithms."
+        "evidence": "Entire technical body unchanged except two commands that print full author names; unenvironmented constructions and algorithms are unchanged."
       },
       {
         "id": "unnumbered:7",
         "accepted_status": "verified",
-        "evidence": "Entire technical body unchanged, including unenvironmented constructions and algorithms."
+        "evidence": "Entire technical body unchanged except two commands that print full author names; unenvironmented constructions and algorithms are unchanged."
       },
       {
         "id": "unnumbered:8",
         "accepted_status": "verified",
-        "evidence": "Entire technical body unchanged, including unenvironmented constructions and algorithms."
+        "evidence": "Entire technical body unchanged except two commands that print full author names; unenvironmented constructions and algorithms are unchanged."
       }
     ],
     "figure_math_unchanged": true,
@@ -603,7 +619,7 @@
     "preamble_macros_unchanged": true,
     "proof_declarations_statuses_and_external_hypotheses_unchanged": true,
     "new_lean_compilation_performed": false,
-    "pdf_sha256": "ad552d135438c3b16446d108630e706c89281d28987ca47c58d37b41b8fa4a03",
+    "pdf_sha256": "dbf6f602447520a9507d696461587ec931c80509638a89954accee93a2071a03",
     "references_sha256": "bbef1fce10ac6be635e4b902fc14dba9aa287298e967e8fb1cf191ad5044ba41",
     "proof_code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
     "accepted_map_sha256": "a2e73c81583fe0a98077e12266b7bcf3e86692e905c762ffdf81065c29fe9677",

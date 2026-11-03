@@ -1,14 +1,14 @@
 {
-  "source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
-  "pdf_sha256": "3427bd83cab3a55951dde2433cdec717e48e303a4b23aff9092b889f6b8b5ea7",
-  "references_sha256": "a87c11dc1ba5ada3b547a2cc189e70b41ffc994e7baddf202ee2b60ff1769f31",
+  "source_sha256": "129d4ec236efb054ab9b900d98a183794c01f900ff12fef67224aa1c7aede658",
+  "pdf_sha256": "ad552d135438c3b16446d108630e706c89281d28987ca47c58d37b41b8fa4a03",
+  "references_sha256": "bbef1fce10ac6be635e4b902fc14dba9aa287298e967e8fb1cf191ad5044ba41",
   "page_count": 76,
   "character_geometry_identical": true,
   "endpoints": {
     "intro:deterministic": {
       "page": 4,
       "point": [
-        506.751,
+        524.314,
         442.583
       ]
     },
@@ -219,7 +219,7 @@
       "page": 31,
       "point": [
         145.411,
-        328.127
+        336.536
       ]
     },
     "cl:bridge": {
@@ -345,28 +345,28 @@
       "page": 46,
       "point": [
         171.273,
-        646.595
+        647.149
       ]
     },
     "prop:alternating-upper": {
       "page": 46,
       "point": [
         343.048,
-        167.455
+        193.076
       ]
     },
     "yao:small-bias-escape": {
       "page": 47,
       "point": [
         407.266,
-        107.412
+        134.511
       ]
     },
     "yao:array-list": {
       "page": 48,
       "point": [
         342.529,
-        285.804
+        299.74
       ]
     },
     "yao:lift": {

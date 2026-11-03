@@ -1,0 +1,9 @@
+{
+  "version": "v44",
+  "source_sha256": "129d4ec236efb054ab9b900d98a183794c01f900ff12fef67224aa1c7aede658",
+  "references_sha256": "bbef1fce10ac6be635e4b902fc14dba9aa287298e967e8fb1cf191ad5044ba41",
+  "pdf_sha256": "ad552d135438c3b16446d108630e706c89281d28987ca47c58d37b41b8fa4a03",
+  "proof_code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
+  "correspondence_sha256": "2f20f3c84bb95ac738dd15022813df5d337a424309ae4dff8d17b8613b930547",
+  "new_lean_compilation_performed": false
+}

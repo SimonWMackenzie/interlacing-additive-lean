@@ -1,11 +1,11 @@
 {
-  "scope": "All current v43 statement and construction-component correspondence rows are accepted with exact source/provider/review identities. Runtime endpoints have fresh production CurrentV43 build authority; retained providers keep their original checked authority. External source interfaces remain explicit. This metadata is separate from the root full-coverage receipt, public-package checks and any cold replay.",
+  "scope": "The manuscript statements and constructions are linked to checked Lean proofs. The correspondence review checks the displayed manuscript against the accepted proof release; cited source reductions remain explicit hypotheses.",
   "axioms": [
     "propext",
     "Classical.choice",
     "Quot.sound"
   ],
-  "source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
+  "source_sha256": "129d4ec236efb054ab9b900d98a183794c01f900ff12fef67224aa1c7aede658",
   "build": {
     "code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
     "canonical_checked_build_complete": true,
@@ -15,7 +15,7 @@
     "full_coverage_receipt_sha256": "5a820b3dcb06113228f5131e197b807756173ad65da1afa25687b2e8f4ceaef4",
     "source_manifest_sha256": "485dce7abc1cdd5e7df2617f2c5cffff4ee51ccfbbb7f48e7fb54f4ca4e49cd7"
   },
-  "displayed_manuscript_version": "v43",
+  "displayed_manuscript_version": "v44",
   "checked_lean_release": "v43",
   "checked_manuscript_source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
   "presentation_history": [
@@ -286,9 +286,18 @@
     "sha256": "44aec47c09a954c6f550e39ec0ef0638ef343bee02c04cb1d60b276b26f97426"
   },
   "input_mapping_sha256": "a2e73c81583fe0a98077e12266b7bcf3e86692e905c762ffdf81065c29fe9677",
-  "paper_source_sha256": "ced96129f9058edc1d1a2286769ddb8e5e465c566efe9770cff99e0983357119",
-  "paper_pdf_sha256": "3427bd83cab3a55951dde2433cdec717e48e303a4b23aff9092b889f6b8b5ea7",
-  "mapping_sha256": "d0ba4efcfe101797f82dae9900ff9748b8df779da0323388ff7510f51d2ebc65",
+  "manuscript_correspondence": {
+    "version": "v44",
+    "source_sha256": "129d4ec236efb054ab9b900d98a183794c01f900ff12fef67224aa1c7aede658",
+    "pdf_sha256": "ad552d135438c3b16446d108630e706c89281d28987ca47c58d37b41b8fa4a03",
+    "review_sha256": "2f20f3c84bb95ac738dd15022813df5d337a424309ae4dff8d17b8613b930547",
+    "proof_code_commit": "fb9e87da52d95ba56e20b4ebb5fb4c8217f93a65",
+    "complete": true,
+    "new_lean_compilation_performed": false
+  },
+  "paper_source_sha256": "129d4ec236efb054ab9b900d98a183794c01f900ff12fef67224aa1c7aede658",
+  "paper_pdf_sha256": "ad552d135438c3b16446d108630e706c89281d28987ca47c58d37b41b8fa4a03",
+  "mapping_sha256": "3c57fdb6e88c970c99f4da1d3446a7343d67511bfde77090181c75cd00d18c68",
   "pending": [],
   "mode": "reviewed mappings",
   "module_count": 5249,

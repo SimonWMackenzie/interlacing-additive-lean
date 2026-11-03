@@ -8,7 +8,6 @@
 \usepackage{xcolor} \usepackage{algorithm} \usepackage{algpseudocode}
 \usepackage{aliascnt} \usepackage[numbers,sort&compress]{natbib}
 \usepackage{hyperref} \usepackage[nameinlink,capitalise,noabbrev]{cleveref}
-\usepackage{todonotes}
 \makeatletter
 \def\theHALG@line{\thealgorithm.\arabic{ALG@line}}
 \makeatother
@@ -76,7 +75,7 @@ Simon Mackenzie\footnotemark[1]}
 Given the full truth table of a Boolean function whose input is split
 between two players, how hard is it to determine the minimum number of
 bits they must exchange to compute it? We prove that computing
-deterministic communication complexity is NP-hard. This exact NP-hardness result, for the standard model was obtained independently and concurrently
+deterministic communication complexity is NP-hard. This exact NP-hardness result for the standard model was obtained independently and concurrently
 with Hirahara, Ilango and Loff. This paper includes that result and
 develops its construction to prove NP-hardness of approximation within
 every fixed additive error. We also establish exact and fixed-error
@@ -237,7 +236,7 @@ conversation has ended.
 For errors growing with the table size, we prove that an estimator for
 communication complexity would yield a $3$-SAT algorithm with an
 explicitly bounded running time.
-If one assumes that the resulting $3$-SAT algorithm does not exist, each
+If one assumes that such a $3$-SAT algorithm does not exist, each
 implication becomes an inapproximability result. The fixed-error
 NP-hardness results need no such assumption.
 
@@ -284,7 +283,7 @@ integer $B$ such that
 \Phi\in\SAT\ \Longrightarrow\ \D(M)\le B,\qquad
 \Phi\notin\SAT\ \Longrightarrow\ \D(M)\ge B+k.
 \]
-The polynomial may depend on $k$. The output may be square with
+The polynomial may depend on $k$. The table can be taken square with
 power-of-two side length.
 \end{theorem}
 
@@ -384,7 +383,8 @@ provides the source, build instructions, and verification records.
 
 The earlier direct-sum construction of Mackenzie and
 Saffidine~\cite{mackenzie2025refuting} has separately been formalized in
-Lean by Moakhar et al.~\cite{moakhar2026beyond}, with statements and proofs available in
+Lean by Soltani Moakhar, Gholami, Springer, JafariRaviz, and
+Hajiaghayi~\cite{moakhar2026beyond}, with statements and proofs available in
 a public inspector~\cite{beyondlibrary2026inspector}.
 
 OpenAI GPT models used through ChatGPT Pro and Codex, and Anthropic's
@@ -583,11 +583,11 @@ Within one bin, the template rows already require
 $d+\log q_2+\log s$ bits, by two applications of the interlacing lower
 bound (\cref{src:profiles}). Of the $C-1$ available bits, only $\log s$
 remain to tell the bins apart.
-Suppose Bob sends a bit while $u$ bins are still possible. His heavier
+Suppose Bob sends a bit while $\ell$ bins are still possible. His heavier
 child keeps every Alice row and at least half the column weight, so the interlacing
-bound for $u$ bins still demands $\log u$ extra bits,
+bound for $\ell$ bins still demands $\log \ell$ extra bits,
 one more than remain. Similarly, if one of Alice's bits kept half the
-weight of more than $u/2$ bins on one side, that side would need more bits
+weight of more than $\ell/2$ bins on one side, that side would need more bits
 than remain. The
 separation theorem (\cref{cl:separation}) therefore forces the first
 $\log s$ bits to be Alice's and to split the bins evenly. Grouping her rows
@@ -963,7 +963,7 @@ coordinate at a time and delete tuples without changing the joint
 weights of the values on every set of a bounded number of coordinates. For strict alternation, we need a short list of Boolean arrays on which
 no bit pattern at a few positions is much more frequent than for random
 arrays, and we take it from the small-bias construction of
-\citet{alon1992smallbias}.
+\citet*{alon1992smallbias}.
 
 Bounds on the number of column sets on which short protocols can be
 correct, expressed in terms of matrix rank, appear in graph algorithms~\cite{bui2010rankwidth,oum2014faster}
@@ -1152,8 +1152,6 @@ For each fixed $u\in\{a,b\}$, the rows $(1,u)$ and $(2,u)$ then coincide.
  nodes={minimum width=9mm,minimum height=6mm,inner sep=1pt},
  column 1/.style={nodes={minimum width=7mm}},
  column 2/.style={nodes={minimum width=6mm}},
- column 4/.style={nodes={fill=black!10}},
- column 5/.style={nodes={fill=black!10}},
  row 1/.style={nodes={font=\footnotesize}}] {
  u&i&(1,1)&(1,2)&(2,1)&(2,2)\\
  a&1&0&0&1&1\\
@@ -1181,13 +1179,16 @@ For each fixed $u\in\{a,b\}$, the rows $(1,u)$ and $(2,u)$ then coincide.
 \draw (after-1-1.south west) -- (after-1-4.south east);
 \draw[black!35] (before-3-1.south west) -- (before-3-6.south east);
 \draw[black!35] (after-3-1.south west) -- (after-3-4.south east);
-\draw[draw=answergreen,rounded corners=2pt]
- ([xshift=-1mm,yshift=-.6mm]after-2-3.north west) rectangle
- ([xshift=1mm,yshift=.6mm]after-3-4.south east);
-\draw[draw=answergreen,rounded corners=2pt]
- ([xshift=-1mm,yshift=-.6mm]after-4-3.north west) rectangle
- ([xshift=1mm,yshift=.6mm]after-5-4.south east);
-\node[right=3mm of after,align=left,font=\footnotesize] {identical rows\\for fixed $u$};
+\begin{scope}[on background layer]
+\fill[black!10] (before-1-4.north west) rectangle (before-5-5.south east);
+\fill[answergreen!12,rounded corners=2pt]
+ ([xshift=.8mm,yshift=-.8mm]after-2-3.north west) rectangle
+ ([xshift=-.8mm,yshift=.8mm]after-3-4.south east);
+\fill[answergreen!12,rounded corners=2pt]
+ ([xshift=.8mm,yshift=-.8mm]after-4-3.north west) rectangle
+ ([xshift=-.8mm,yshift=.8mm]after-5-4.south east);
+\end{scope}
+\node[right=3mm of after,align=left,font=\footnotesize,text=answergreen!70!black] {identical rows\\for fixed $u$};
 \node[below=3mm of before,font=\footnotesize] {Shaded columns are deleted.};
 \end{tikzpicture}
 \caption{Deleting columns with $y_1\ne y_2$ removes the dependence on
@@ -2323,31 +2324,31 @@ deleted $\mathcal D$-weight.
 \centering
 \begin{tikzpicture}[
   >=Stealth,font=\footnotesize,
-  box/.style={draw,rounded corners=2pt,align=center,inner sep=5pt,minimum height=12mm},
-  src/.style={box,text width=28mm},
-  dst/.style={box,text width=38mm},
+  box/.style={draw,rounded corners=2pt,align=center,inner sep=4pt,
+    text width=33mm,minimum height=13mm},
   flow/.style={->,semithick}]
-\node[src] (origin) at (0,0) {Rows from $\mathcal D$\\in copies with assigned nodes};
-\node[src,draw=black!55] (deleted) at (0,-1.75)
+\node[box] (origin) at (0,0) {Rows from $\mathcal D$\\in copies with assigned nodes};
+\node[box,draw=black!55] (deleted) at (0,-2)
   {Initially deleted\\$\sum_i a_i\le\eta/16$};
-\node[dst,draw=black!55] (own) at (4.7,1.6)
-  {Stay at their assigned node\\not counted in $P_i$};
-\node[dst,fill=aliceblue!6,draw=aliceblue] (outgoing) at (4.7,-.4)
+\node[box,draw=black!55] (own) at (4.9,1)
+  {Stay at their assigned node,\\not counted in $P_i$};
+\node[box,fill=aliceblue!6,draw=aliceblue] (outgoing) at (4.9,-1)
   {Reach other nodes\\[3pt] $\sum_iP_i>\eta w/2$};
-\node[dst] (other) at (10.1,.6)
+\node[box] (other) at (9.8,0)
   {Other assigned nodes\\total $\le\eta w/32$};
-\node[dst] (exceptional) at (10.1,-1.4)
-  {Nodes not assigned\\to a copy\\total $\le\eta w/16$};
-\coordinate (firstsplit) at (2.1,0);
+\node[box] (exceptional) at (9.8,-2)
+  {Nodes not assigned to a copy\\total $\le\eta w/16$};
+\coordinate (firstsplit) at (2.45,0);
 \draw[semithick] (origin.east) -- (firstsplit);
 \draw[flow,black!55] (origin.south) -- (deleted.north);
 \draw[flow,black!55] (firstsplit) |- (own.west);
 \draw[flow] (firstsplit) |- (outgoing.west);
-\coordinate (secondsplit) at (7.4,-.4);
+\coordinate (secondsplit) at (7.35,-1);
 \draw[semithick] (outgoing.east) -- (secondsplit);
 \draw[flow] (secondsplit) |- (other.west);
 \draw[flow] (secondsplit) |- (exceptional.west);
-\node[box,fill=black!4,text width=127mm] at (4.7,-3.75)
+\node[draw,rounded corners=2pt,align=center,inner sep=4pt,fill=black!4,
+  text width=131mm] at (4.9,-3.75)
   {\textbf{There is nowhere for all the outgoing weight to go.}\\[3pt]
    Required outgoing weight $>\eta w/2
    \;>\;3\eta w/32=\eta w/32+\eta w/16$
@@ -3491,13 +3492,13 @@ the column.
 \node[draw=aliceblue,fit=(bits-2-1),inner sep=0pt] {};
 \node[draw=boborange,fit=(bits-1-4),inner sep=0pt] {};
 \node[draw=answergreen,very thick,fit=(bits-2-4),inner sep=0pt] {};
-\node[data,draw=aliceblue,fill=aliceblue!5,text width=48mm,anchor=east]
- (address) at ([xshift=-17mm]bits-2-1.west)
+\node[data,draw=aliceblue,fill=aliceblue!5,text width=39mm,anchor=east]
+ (address) at ([xshift=-10mm]bits-2-1.west)
  {Alice's tuple: $c=(3,\boxed{1})$\\
   Bob selects $g=2$\\[2pt]
   Address: $c_g=1$};
-\node[data,draw=boborange,fill=boborange!5,text width=54mm,anchor=south]
- (position) at ([yshift=15mm]bits-1-4.north)
+\node[data,draw=boborange,fill=boborange!5,text width=45mm,anchor=south]
+ (position) at ([yshift=7mm]bits-1-4.north)
  {Bob's edge: $e_\alpha=(u,v,\boxed{z},r)$\\
   Alice's vertex: $z$\\[2pt]
   Position: $\iota_\alpha(z)=3$};

@@ -2,9 +2,9 @@
   "files": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "coordinate-verification.json": "e76eb8e1e45fd817e81cfaae58b21e4487ecb5fbd8a607ce4a0493a58d1130c5",
-    "extras.css": "9df74dc1a16bbcb9f3cf40e9a86df01af056e5a7ad0dc357fa2e897549f8f9e8",
-    "extras.js": "92563cb4becc77aac178848cbc812b723a7b953842b9fd5f4e21db66a5888082",
-    "index.html": "fe9704ef18671b42cf64f995c486546f5a7a01c5de1d58e8e0c1b949909cb69a",
+    "extras.css": "a8c0e23737172b2a83052c5a27301e3c424f51463d4f1d4f75764d82d794971b",
+    "extras.js": "adc3c6bcf57937e5bd51cf863dfec9776f93059633ed7bab3633844382dd2bd4",
+    "index.html": "739766444e5e371e04e694c547ec177a281a7ccf0891e99dacc1d0be8a021e30",
     "lean/CurrentAdditive/ActualFinalStreamRowNumbering.lean": "69fa397825454b2e124c89fa42487e2ec66f5d10669303a24a1941916ef0d1fd",
     "lean/CurrentAdditive/ActualInternalColumnNumbering.lean": "d45fea2817c50c649539ee85844ee34f7bf8c315b769bd07d629beef1407ee6c",
     "lean/CurrentAdditive/ActualNumberedSuccessorProfile.lean": "40739600514cc0342d5a5c83a278c730bab367b4bf0e1a7b79ab92cd6f080c6e",
